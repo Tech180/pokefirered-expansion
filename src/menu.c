@@ -57,7 +57,6 @@ static EWRAM_DATA u8 sPaletteNum = 0;
 static EWRAM_DATA u8 sYesNoWindowId = 0;
 static EWRAM_DATA u8 sTopBarWindowId = 0;
 static EWRAM_DATA u8 sMapNamePopupWindowId = 0;
-static EWRAM_DATA u8 sSecondaryPopupWindowId = 0;
 static EWRAM_DATA bool8 sScheduledBgCopiesToVram[4] = {FALSE};
 static EWRAM_DATA void *sTempTileDataBuffers[0x20] = {NULL};
 static EWRAM_DATA u16 sTempTileDataBufferCursor = {0};
@@ -437,12 +436,8 @@ void RemoveStartMenuWindow(void)
 u8 AddMapNamePopUpWindow(void)
 {
     if (sMapNamePopupWindowId == WINDOW_NONE)
-    {
-        if (OW_POPUP_GENERATION == GEN_5)
-            sMapNamePopupWindowId = AddWindowParameterized(0, 0, 0, 30, 3, 14, 0x107);
-        else
-            sMapNamePopupWindowId = AddWindowParameterized(0, 1, 1, 10, 3, 14, 0x107);
-    }
+        sMapNamePopupWindowId = AddWindowParameterized(0, 1, 1, 10, 3, 14, 0x107);
+
     return sMapNamePopupWindowId;
 }
 
@@ -941,7 +936,7 @@ void CreateYesNoMenuAtPos(const struct WindowTemplate *window, u8 fontId, u8 lef
     textSubPrinter.color.accent = GetFontAttribute(fontId, FONTATTR_COLOR_ACCENT);
     textSubPrinter.letterSpacing = GetFontAttribute(fontId, FONTATTR_LETTER_SPACING);
     textSubPrinter.lineSpacing = GetFontAttribute(fontId, FONTATTR_LINE_SPACING);
-    AddTextPrinter(&textSubPrinter, 0xFF, NULL);
+    AddTextPrinter(&textSubPrinter, TEXT_SKIP_DRAW, NULL);
     InitMenuNormal(sYesNoWindowId, fontId, left, top, GetFontAttribute(fontId, FONTATTR_MAX_LETTER_HEIGHT) + textSubPrinter.lineSpacing, 2, initialCursorPos);
 }
 
@@ -1303,14 +1298,12 @@ void ResetBgPositions(void)
 
 void DestroyYesNoMenu(void)
 {
-#if REVISION >= 0xA
-    if (sYesNoWindowId == 0xFF) return;
-#endif
+    if (sYesNoWindowId == WINDOW_NONE)
+        return;
+
     ClearStdWindowAndFrameToTransparent(sYesNoWindowId, TRUE);
     RemoveWindow(sYesNoWindowId);
-#if REVISION >= 0xA
-    sYesNoWindowId = 0xFF;
-#endif
+    sYesNoWindowId = WINDOW_NONE;
 }
 
 void MultichoiceGrid_PrintItems(u8 windowId, u8 fontId, u8 itemWidth, u8 itemHeight, u8 cols, u8 rows, const struct MenuAction *strs)
@@ -1475,8 +1468,6 @@ s8 Menu_ProcessGridInput(void)
 void InitPopupWindows(void)
 {
     sMapNamePopupWindowId = WINDOW_NONE;
-    if (OW_POPUP_GENERATION == GEN_5)
-        sSecondaryPopupWindowId = WINDOW_NONE;
 }
 
 u16 GetStandardFrameBaseTileNum(void)
@@ -1639,45 +1630,6 @@ void BufferSaveMenuText(enum SaveStat gameStatId, u8 *dest0, u8 color)
         *dest++ = nBadges + CHAR_0;
         *dest++ = EOS;
         break;
-    }
-}
-
-// BW map pop-ups
-u8 AddSecondaryPopUpWindow(void)
-{
-    if (sSecondaryPopupWindowId == WINDOW_NONE)
-        sSecondaryPopupWindowId = AddWindowParameterized(0, 0, 17, 30, 3, 14, 0x161);
-    return sSecondaryPopupWindowId;
-}
-
-u8 GetSecondaryPopUpWindowId(void)
-{
-    return sSecondaryPopupWindowId;
-}
-
-void RemoveSecondaryPopUpWindow(void)
-{
-    if (sSecondaryPopupWindowId != WINDOW_NONE)
-    {
-        RemoveWindow(sSecondaryPopupWindowId);
-        sSecondaryPopupWindowId = WINDOW_NONE;
-    }
-}
-
-void HBlankCB_DoublePopupWindow(void)
-{
-    u16 offset = gTasks[gPopupTaskId].data[2];
-    u16 scanline = REG_VCOUNT;
-
-    if (scanline < 80 || scanline > 160)
-    {
-        REG_BG0VOFS = offset;
-        if(OW_POPUP_BW_ALPHA_BLEND && !IsWeatherAlphaBlend())
-            REG_BLDALPHA = BLDALPHA_BLEND(15, 5);
-    }
-    else
-    {
-        REG_BG0VOFS = 512 - offset;
     }
 }
 

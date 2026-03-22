@@ -39,7 +39,7 @@ static void IntrDummy(void);
 extern void gInitialMainCB2(void);
 extern void CB2_FlashNotDetectedScreen(void);
 
-const u8 gGameVersion = GAME_VERSION;
+const enum GameVersion gGameVersion = GAME_VERSION;
 
 const u8 gGameLanguage = GAME_LANGUAGE; // English
 
@@ -193,9 +193,6 @@ static void InitMainCallbacks(void)
     gSaveBlock2Ptr = &gSaveblock2.block;
     gPokemonStoragePtr = &gPokemonStorage.block;
     gQuestLogPlaybackState = QL_PLAYBACK_STATE_STOPPED;
-#if REVISION >= 0xA
-    svc_SetSaveBlock2(&gSaveBlock2);
-#endif
 }
 
 static void CallCallbacks(void)
