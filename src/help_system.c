@@ -1,5 +1,4 @@
 #include "global.h"
-#include "gflib.h"
 #include "event_data.h"
 #include "event_scripts.h"
 #include "field_player_avatar.h"
@@ -9,8 +8,9 @@
 #include "overworld.h"
 #include "pokedex.h"
 #include "quest_log.h"
-#include "save.h"
 #include "save_location.h"
+#include "save.h"
+#include "sound.h"
 #include "strings.h"
 #include "constants/items.h"
 #include "constants/maps.h"
@@ -1831,7 +1831,7 @@ static bool8 IsInDungeonMap(void)
 {
     u8 i, j;
 
-    for (i = 0; i < NELEMS(sDungeonMaps); i++)
+    for (i = 0; i < ARRAY_COUNT(sDungeonMaps); i++)
     {
         for (j = 0; j < sDungeonMaps[i][2]; j++)
         {

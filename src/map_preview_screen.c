@@ -1,14 +1,16 @@
 #include "global.h"
-#include "gflib.h"
-#include "quest_log.h"
-#include "region_map.h"
-#include "menu.h"
+#include "event_data.h"
 #include "field_fadetransition.h"
 #include "field_weather.h"
-#include "script.h"
-#include "overworld.h"
-#include "event_data.h"
+#include "gpu_regs.h"
+#include "malloc.h"
 #include "map_preview_screen.h"
+#include "menu.h"
+#include "overworld.h"
+#include "palette.h"
+#include "quest_log.h"
+#include "region_map.h"
+#include "script.h"
 #include "constants/region_map_sections.h"
 #include "constants/weather.h"
 
@@ -382,7 +384,7 @@ bool32 MapHasPreviewScreen_HandleQLState2(u8 mapsec, u8 type)
 
 void MapPreview_InitBgs(void)
 {
-    InitBgsFromTemplates(0, sMapPreviewBgTemplate, NELEMS(sMapPreviewBgTemplate));
+    InitBgsFromTemplates(0, sMapPreviewBgTemplate, ARRAY_COUNT(sMapPreviewBgTemplate));
     ShowBg(0);
 }
 

@@ -1,21 +1,25 @@
 #include "global.h"
-#include "gflib.h"
 #include "dynamic_placeholder_text_util.h"
 #include "help_system.h"
-#include "link.h"
+#include "keyboard_text.h"
 #include "link_rfu.h"
+#include "link.h"
 #include "load_save.h"
+#include "malloc.h"
 #include "menu.h"
 #include "overworld.h"
+#include "palette.h"
 #include "quest_log.h"
 #include "save.h"
 #include "scanline_effect.h"
+#include "sound.h"
+#include "string_util.h"
 #include "strings.h"
 #include "task.h"
-#include "union_room_chat.h"
 #include "union_room_chat_display.h"
-#include "keyboard_text.h"
+#include "union_room_chat.h"
 #include "constants/songs.h"
+#include "sloopsvc.h"
 
 #define MESSAGE_BUFFER_NCHAR 15
 
@@ -810,6 +814,9 @@ static void ChatEntryRoutine_SendMessage(void)
     switch (sWork->routineState)
     {
     case 0:
+#if REVISION >= 0xA
+        svc_BadWordCheck(sWork->messageEntryBuffer);
+#endif
         if (!gReceivedRemoteLinkPlayers)
         {
             GoToRoutine(CHATNETRYROUTINE_HANDLE_INPUT);
@@ -1166,6 +1173,9 @@ static void RegisterTextAtRow(void)
 {
     u8 *src = UnionRoomChat_GetEndOfMessageEntryBuffer();
     StringCopy(sWork->registeredTexts[sWork->currentRow], src);
+#if REVISION >= 0xA
+    svc_BadWordCheck(sWork->registeredTexts[sWork->currentRow]);
+#endif
     sWork->changedRegisteredTexts = TRUE;
 }
 
