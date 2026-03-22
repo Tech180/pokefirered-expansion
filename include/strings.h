@@ -928,7 +928,7 @@ extern const u8 gDaycareText_GetAlongVeryWell[];
 extern const u8 gDaycareText_GetAlong[];
 extern const u8 gDaycareText_DontLikeOther[];
 extern const u8 gDaycareText_PlayOther[];
-extern const u8 gExpandedPlaceholder_Empty[];
+extern const u8 gText_EmptyString[];
 extern const u8 gText_HatchedFromEgg[];
 extern const u8 gText_NickHatchPrompt[];
 
@@ -1309,13 +1309,6 @@ extern const u8 gText_PokeSum_EggHatch_LongTime[];
 extern const u8 gText_PokeSum_EggHatch_SomeTime[];
 extern const u8 gText_PokeSum_EggHatch_Soon[];
 extern const u8 gText_PokeSum_EggHatch_AlmostReady[];
-extern const u8 gText_PokeSum_EggOrigin_DayCare[];
-extern const u8 gText_PokeSum_EggOrigin_Trade[];
-extern const u8 gText_PokeSum_EggOrigin_TravelingMan[];
-extern const u8 gText_PokeSum_EggOrigin_Trade[];
-extern const u8 gText_PokeSum_EggOrigin_NicePlace[];
-extern const u8 gText_PokeSum_EggOrigin_Spa[];
-extern const u8 gText_PokeSum_EggOrigin_Trade[];
 
 
 extern const u8 gText_BasePointsResetToZero[];

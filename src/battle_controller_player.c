@@ -1236,10 +1236,7 @@ static void SetLinkBattleEndCallbacks(enum BattlerId battler)
 // Despite handling link battles separately, this is only ever used by link battles
 void SetBattleEndCallbacks(enum BattlerId battler)
 {
-#if REVISION >= 0xA
-#else
     if (!gPaletteFade.active)
-#endif
     {
         if (gBattleTypeFlags & BATTLE_TYPE_LINK)
         {
@@ -1967,7 +1964,7 @@ static void PlayerHandleLoadMonSprite(enum BattlerId battler)
 enum TrainerPicID LinkPlayerGetTrainerPicId(u32 multiplayerId)
 {
     u8 gender = gLinkPlayers[multiplayerId].gender;
-    u8 version = gLinkPlayers[multiplayerId].version & 0xFF;
+    enum GameVersion version = gLinkPlayers[multiplayerId].version & 0xFF;
 
     return GetPlayerTrainerPic(gender, version);
 }

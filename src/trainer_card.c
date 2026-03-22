@@ -1946,7 +1946,7 @@ static void InitTrainerCardData(void)
 
 static u8 GetCardType(void)
 {
-    u8 version = sTrainerCardDataPtr == NULL ? gGameVersion : sTrainerCardDataPtr->trainerCard.version;
+    enum GameVersion version = sTrainerCardDataPtr == NULL ? gGameVersion : sTrainerCardDataPtr->trainerCard.version;
 
     switch (version)
     {

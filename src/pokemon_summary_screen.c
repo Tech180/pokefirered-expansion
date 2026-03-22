@@ -221,8 +221,8 @@ struct PokemonSummaryScreenData
     u8 ALIGNED(4) unk3248; /* 0x3248 */
     s16 ALIGNED(4) flipPagesBgHofs; /* 0x324C */
 
-    u16 moveTypes[5]; /* 0x3250 */
-    u16 moveIds[5]; /* 0x325A */
+    u16 moveTypes[MAX_MON_MOVES + 1]; /* 0x3250 */
+    u16 moveIds[MAX_MON_MOVES + 1]; /* 0x325A */
     u8 ALIGNED(4) numMoves; /* 0x3264 */
     u8 ALIGNED(4) isSwappingMoves; /* 0x3268 */
 
@@ -634,21 +634,38 @@ static const u32 sStarObjTiles[] = INCBIN_U32( "graphics/summary_screen/shiny_st
 static const u32 sBgTilemap_MovesInfoPage[] = INCBIN_U32( "graphics/summary_screen/moves_info_page.bin.smolTM");
 static const u32 sBgTilemap_MovesPage[] = INCBIN_U32( "graphics/summary_screen/moves_page.bin.smolTM");
 
-static const u8 *const sEggHatchTimeTexts[] = {
-    gText_PokeSum_EggHatch_LongTime,
-    gText_PokeSum_EggHatch_SomeTime,
-    gText_PokeSum_EggHatch_Soon,
-    gText_PokeSum_EggHatch_AlmostReady
+enum EggHatchTime
+{
+    EGG_HATCH_TIME_LONG,
+    EGG_HATCH_TIME_SOME,
+    EGG_HATCH_TIME_SOON,
+    EGG_HATCH_TIME_ALMOST_READY,
 };
 
-static const u8 *const sEggOriginTexts[] = {
-    gText_PokeSum_EggOrigin_DayCare,
-    gText_PokeSum_EggOrigin_Trade,
-    gText_PokeSum_EggOrigin_TravelingMan,
-    gText_PokeSum_EggOrigin_Trade,
-    gText_PokeSum_EggOrigin_NicePlace,
-    gText_PokeSum_EggOrigin_Spa,
-    gText_PokeSum_EggOrigin_Trade
+static const u8 *const sEggHatchTimeTexts[] =
+{
+    [EGG_HATCH_TIME_LONG]         = gText_PokeSum_EggHatch_LongTime,
+    [EGG_HATCH_TIME_SOME]         = gText_PokeSum_EggHatch_SomeTime,
+    [EGG_HATCH_TIME_SOON]         = gText_PokeSum_EggHatch_Soon,
+    [EGG_HATCH_TIME_ALMOST_READY] = gText_PokeSum_EggHatch_AlmostReady
+};
+
+enum EggOrigin
+{
+    EGG_ORIGIN_DAYCARE,
+    EGG_ORIGIN_TRADE,
+    EGG_ORIGIN_TRAVELING_MAN,
+    EGG_ORIGIN_NICE_PLACE,
+    EGG_ORIGIN_SPA,
+};
+
+static const u8 *const sEggOriginTexts[] =
+{
+    [EGG_ORIGIN_DAYCARE]       = COMPOUND_STRING("An odd POKéMON EGG found by the\nDAY-CARE couple."),
+    [EGG_ORIGIN_TRADE]         = COMPOUND_STRING("A peculiar POKéMON EGG obtained\nin a trade."),
+    [EGG_ORIGIN_TRAVELING_MAN] = COMPOUND_STRING("An odd POKéMON EGG obtained from\nthe traveling man."),
+    [EGG_ORIGIN_NICE_PLACE]    = COMPOUND_STRING("A wondrously peculiar POKéMON EGG\nobtained at a nice place."),
+    [EGG_ORIGIN_SPA]           = COMPOUND_STRING("An odd POKéMON EGG obtained from\nan old woman at the SPA."),
 };
 
 static const u8 sPrintMoveTextColors[][3] = {
@@ -2621,18 +2638,18 @@ static void BufferMonMoves(void)
 {
     u8 i;
 
-    for (i = 0; i < 4; i++)
+    for (i = 0; i < MAX_MON_MOVES; i++)
         BufferMonMoveI(i);
 
     if (sMonSummaryScreen->mode == PSS_MODE_SELECT_MOVE)
-        BufferMonMoveI(4);
+        BufferMonMoveI(MAX_MON_MOVES);
 }
 
 #define GetRightAlignXpos_NDigits(a, b) ((6 * (a)) - StringLength((b)) * 6)
 
 static void BufferMonMoveI(u8 i)
 {
-    if (i < 4)
+    if (i < MAX_MON_MOVES)
         sMonSummaryScreen->moveIds[i] = GetMonMoveBySlotId(&sMonSummaryScreen->currentMon, i);
 
     if (sMonSummaryScreen->moveIds[i] == 0)
@@ -2857,43 +2874,48 @@ u32 GetInfoPageFontIdForString(u8 *str, u32 x)
     return GetFontIdToFit(str, FONT_NORMAL, letterSpacing, maxTextWidth);
 }
 
+static enum EggHatchTime GetEggHatchTime(void)
+{
+    u8 eggCycles;
+
+    if (sMonSummaryScreen->isBadEgg)
+        return EGG_HATCH_TIME_LONG;
+
+    eggCycles = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_FRIENDSHIP);
+
+    if (eggCycles <= 5)
+        return EGG_HATCH_TIME_ALMOST_READY;
+    if (eggCycles <= 10)
+        return EGG_HATCH_TIME_SOON;
+    if (eggCycles <= 40)
+        return EGG_HATCH_TIME_SOME;
+
+    return EGG_HATCH_TIME_LONG;
+}
+
 static void PrintInfoPage(void)
 {
-    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 47, 19, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.speciesNameStrBuf);
+    const u8 *colors = sLevelNickTextColors[0];
+    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 47, 19, colors, TEXT_SKIP_DRAW, sMonSummaryScreen->summary.speciesNameStrBuf);
 
     if (!sMonSummaryScreen->isEgg)
     {
         u32 fontId;
 
         fontId = GetInfoPageFontIdForString(sMonSummaryScreen->summary.dexNumStrBuf, 47 + sMonSkillsPrinterXpos->unk00);
-        AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], fontId, 47 + sMonSkillsPrinterXpos->unk00, 5, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.dexNumStrBuf);
+        AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], fontId, 47 + sMonSkillsPrinterXpos->unk00, 5, colors, TEXT_SKIP_DRAW, sMonSummaryScreen->summary.dexNumStrBuf);
         fontId = GetInfoPageFontIdForString(sMonSummaryScreen->summary.otNameStrBuf, 47);
-        AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], fontId, 47, 49, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.otNameStrBuf);
+        AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], fontId, 47, 49, colors, TEXT_SKIP_DRAW, sMonSummaryScreen->summary.otNameStrBuf);
         fontId = GetInfoPageFontIdForString(sMonSummaryScreen->summary.unk306C, 47);
-        AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], fontId, 47, 64, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.unk306C);
+        AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], fontId, 47, 64, colors, TEXT_SKIP_DRAW, sMonSummaryScreen->summary.unk306C);
         fontId = GetInfoPageFontIdForString(sMonSummaryScreen->summary.itemNameStrBuf, 47);
-        AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], fontId, 47, 79, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.itemNameStrBuf);
+        AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], fontId, 47, 79, colors, TEXT_SKIP_DRAW, sMonSummaryScreen->summary.itemNameStrBuf);
     }
     else
     {
-        u8 eggCycles;
-        u8 hatchMsgIndex;
+        enum EggHatchTime hatchMsgIndex = GetEggHatchTime();
 
-        eggCycles = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_FRIENDSHIP);
-
-        if (eggCycles <= 5)
-            hatchMsgIndex = 3;
-        else if (eggCycles <= 10)
-            hatchMsgIndex = 2;
-        else if (eggCycles <= 40)
-            hatchMsgIndex = 1;
-        else
-            hatchMsgIndex = 0;
-
-        if (sMonSummaryScreen->isBadEgg)
-            hatchMsgIndex = 0;
-
-        AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 7, 45, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sEggHatchTimeTexts[hatchMsgIndex]);
+        AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 7, 45, colors, TEXT_SKIP_DRAW, sEggHatchTimeTexts[hatchMsgIndex]);
     }
 }
 
@@ -2930,13 +2952,13 @@ static void PrintMovesPage(void)
 {
     u8 i;
 
-    for (i = 0; i < 4; i++)
+    for (i = 0; i < MAX_MON_MOVES; i++)
         PokeSum_PrintMoveName(i);
 
     if (sMonSummaryScreen->curPageIndex == PSS_PAGE_MOVES_INFO)
     {
         if (sMonSummaryScreen->mode == PSS_MODE_SELECT_MOVE)
-            PokeSum_PrintMoveName(4);
+            PokeSum_PrintMoveName(MAX_MON_MOVES);
         else
             AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL,
                                          3, GetMoveNamePrinterYpos(4),
@@ -2952,7 +2974,7 @@ static void PokeSum_PrintMoveName(u8 i)
     u8 ppBonuses = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_PP_BONUSES);
     u8 maxPP = CalculatePPWithBonus(move, ppBonuses, i);
 
-    if (i == 4)
+    if (i == MAX_MON_MOVES)
         curPP = maxPP;
 
     AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 0, GetMoveNamePrinterYpos(i), sPrintMoveTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.moveNameStrBufs[i]);
@@ -3201,57 +3223,44 @@ static void PokeSum_PrintTrainerMemo_Mon(void)
         PokeSum_PrintTrainerMemo_Mon_NotHeldByOT();
 }
 
-static void PokeSum_PrintTrainerMemo_Egg(void)
+static enum EggOrigin GetEggOrigin(void)
 {
     u8 metLocation;
-    u8 version;
-    u8 chosenStrIndex = 0;
-
-    metLocation = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MET_LOCATION);
-
-    if (sMonSummaryScreen->monList.mons != gEnemyParty)
-    {
-        if (metLocation == METLOC_FATEFUL_ENCOUNTER || GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MODERN_FATEFUL_ENCOUNTER) == TRUE)
-            chosenStrIndex = 4;
-        else
-        {
-            version = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MET_GAME);
-
-            if (version != VERSION_LEAF_GREEN && version != VERSION_FIRE_RED)
-                chosenStrIndex = 1;
-            else if (metLocation == METLOC_SPECIAL_EGG)
-                chosenStrIndex = 2;
-
-            if (chosenStrIndex == 0 || chosenStrIndex == 2)
-                if (PokeSum_BufferOtName_IsEqualToCurrentOwner(&sMonSummaryScreen->currentMon) == FALSE)
-                    chosenStrIndex++;
-        }
-    }
-    else
-    {
-        if (metLocation == METLOC_FATEFUL_ENCOUNTER || GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MODERN_FATEFUL_ENCOUNTER) == TRUE)
-            chosenStrIndex = 4;
-        else
-        {
-            version = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MET_GAME);
-
-            if (version != VERSION_LEAF_GREEN && version != VERSION_FIRE_RED)
-            {
-                if (metLocation == METLOC_SPECIAL_EGG)
-                    chosenStrIndex = 5;
-            }
-            else if (metLocation == METLOC_SPECIAL_EGG)
-                chosenStrIndex = 2;
-
-            if (PokeSum_BufferOtName_IsEqualToCurrentOwner(&sMonSummaryScreen->currentMon) == FALSE)
-                chosenStrIndex++;
-        }
-    }
+    enum GameVersion version;
 
     if (sMonSummaryScreen->isBadEgg)
-        chosenStrIndex = 0;
+        return EGG_ORIGIN_DAYCARE;
 
-    AddTextPrinterParameterized4(sMonSummaryScreen->windowIds[POKESUM_WIN_TRAINER_MEMO], FONT_NORMAL, 0, 3, 0, 0, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sEggOriginTexts[chosenStrIndex]);
+    metLocation = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MET_LOCATION);
+    if (metLocation == METLOC_FATEFUL_ENCOUNTER || GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MODERN_FATEFUL_ENCOUNTER) == TRUE)
+        return EGG_ORIGIN_NICE_PLACE;
+
+    if (PokeSum_BufferOtName_IsEqualToCurrentOwner(&sMonSummaryScreen->currentMon) == FALSE)
+        return EGG_ORIGIN_TRADE;
+
+    version = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MET_GAME);
+    if (version != VERSION_LEAF_GREEN && version != VERSION_FIRE_RED)
+    {
+        if (sMonSummaryScreen->monList.mons != gEnemyParty)
+            return EGG_ORIGIN_TRADE;
+
+        if (metLocation == METLOC_SPECIAL_EGG)
+            return EGG_ORIGIN_SPA;
+
+        return EGG_ORIGIN_DAYCARE;
+    }
+
+    if (metLocation == METLOC_SPECIAL_EGG)
+        return EGG_ORIGIN_TRAVELING_MAN;
+
+    return EGG_ORIGIN_DAYCARE;
+}
+
+static void PokeSum_PrintTrainerMemo_Egg(void)
+{
+    enum EggOrigin eggOrigin = GetEggOrigin();
+
+    AddTextPrinterParameterized4(sMonSummaryScreen->windowIds[POKESUM_WIN_TRAINER_MEMO], FONT_NORMAL, 0, 3, 0, 0, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sEggOriginTexts[eggOrigin]);
 }
 
 static void PokeSum_PrintExpPoints_NextLv(void)
@@ -3366,7 +3375,7 @@ static void PokeSum_DrawMoveTypeIcons(void)
 
     FillWindowPixelBuffer(sMonSummaryScreen->windowIds[5], 0);
 
-    for (i = 0; i < 4; i++)
+    for (i = 0; i < MAX_MON_MOVES; i++)
     {
         if (sMonSummaryScreen->moveIds[i] == MOVE_NONE)
             continue;
@@ -3375,7 +3384,7 @@ static void PokeSum_DrawMoveTypeIcons(void)
     }
 
     if (sMonSummaryScreen->mode == PSS_MODE_SELECT_MOVE)
-        BlitMenuInfoIcon(sMonSummaryScreen->windowIds[5], sMonSummaryScreen->moveTypes[4] + 1, 3, GetMoveNamePrinterYpos(4));
+        BlitMenuInfoIcon(sMonSummaryScreen->windowIds[5], sMonSummaryScreen->moveTypes[MAX_MON_MOVES] + 1, 3, GetMoveNamePrinterYpos(MAX_MON_MOVES));
 }
 
 static void PokeSum_PrintPageHeaderText(u8 curPageIndex)
@@ -5606,7 +5615,7 @@ static bool32 PokeSum_IsMonBoldOrGentle(u8 nature)
 
 static bool32 CurrentMonIsFromGBA(void)
 {
-    u8 version = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MET_GAME);
+    enum GameVersion version = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_MET_GAME);
 
     if (version == VERSION_LEAF_GREEN
         || version == VERSION_FIRE_RED

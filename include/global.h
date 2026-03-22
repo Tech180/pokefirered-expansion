@@ -24,11 +24,6 @@
 #include "constants/moves.h"
 #include "config/save.h"
 
-// Prevent cross-jump optimization.
-#define BLOCK_CROSS_JUMP asm("");
-
-// to help in decompiling
-#define asm_unified(x) asm(".syntax unified\n" x "\n.syntax divided")
 #define NAKED __attribute__((naked))
 
 #if __STDC_VERSION__ < 202311L
@@ -38,8 +33,8 @@
 // IDE support
 #if defined(__APPLE__) || defined(__CYGWIN__) || defined(__INTELLISENSE__)
 // We define these when using certain IDEs to fool preproc
-#define _(x)        {x}
-#define __(x)       {x}
+#define _(x)        {0}
+#define __(x)       {0}
 #define INCBIN(...) {0}
 #define INCBIN_U8   INCBIN
 #define INCBIN_U16  INCBIN

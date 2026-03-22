@@ -347,12 +347,9 @@ static void Task_LinkupExchangeDataWithLeader(u8 taskId)
 
 static bool32 AnyConnectedPartnersPlayingRS(void)
 {
-    int i;
-    u16 version;
-
-    for (i = 0; i < GetLinkPlayerCount(); i++)
+    for (u32 i = 0; i < GetLinkPlayerCount(); i++)
     {
-        version = gLinkPlayers[i].version & 0xFF;
+        enum GameVersion version = gLinkPlayers[i].version & 0xFF;
         if (version == VERSION_RUBY || version == VERSION_SAPPHIRE)
             return TRUE;
     }
@@ -399,18 +396,15 @@ static void Task_LinkupCheckStatusAfterConfirm(u8 taskId)
 
 static void Task_LinkupAwaitTrainerCardData(u8 taskId)
 {
-    u8 i;
-    u16 version;
-
     if (CheckLinkErrored(taskId) == TRUE)
         return;
 
     if (GetBlockReceivedStatus() != GetSavedLinkPlayerCountAsBitFlags())
         return;
 
-    for (i = 0; i < GetLinkPlayerCount(); i++)
+    for (u32 i = 0; i < GetLinkPlayerCount(); i++)
     {
-        version = gLinkPlayers[i].version & 0xFF;
+        enum GameVersion version = gLinkPlayers[i].version & 0xFF;
         if (version != VERSION_FIRE_RED && version != VERSION_LEAF_GREEN)
         {
             const struct TrainerCardRSE * src = (const struct TrainerCardRSE *)gBlockRecvBuffer[i];
@@ -709,9 +703,6 @@ static void Task_StartWirelessCableClubBattle(u8 taskId)
             tState = 5;
         break;
     case 5:
-#if REVISION >= 0xA
-        if (!IsLinkTaskFinished()) break;
-#endif
         SetLinkStandbyCallback();
         tState = 6;
         break;
@@ -914,9 +905,6 @@ static void Task_StartWirelessTrade(u8 taskId)
             tState++;
         break;
     case 2:
-#if REVISION >= 0xA
-        if (!IsLinkTaskFinished()) break;
-#endif
         gSelectedTradeMonPositions[TRADE_PLAYER] = 0;
         gSelectedTradeMonPositions[TRADE_PARTNER] = 0;
         m4aMPlayAllStop();
@@ -986,11 +974,8 @@ bool32 GetSeeingLinkPlayerCardMsg(u8 linkPlayerIndex)
 void Task_WaitForLinkPlayerConnection(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
-#if REVISION >= 0xA
-    if (++task->tTimer > 480)
-#else
+
     if (++task->tTimer > 300)
-#endif
     {
         CloseLink();
         SetMainCallback2(CB2_LinkError);

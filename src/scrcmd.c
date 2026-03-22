@@ -53,7 +53,6 @@
 #include "constants/maps.h"
 #include "constants/menu.h"
 #include "constants/sound.h"
-#include "sloopsvc.h"
 
 typedef void (*NativeFunc)(struct ScriptContext *ctx);
 
