@@ -36,7 +36,7 @@ enum FieldEffect
     FLDEFF_TREE_DISGUISE,
     FLDEFF_MOUNTAIN_DISGUISE,
     FLDEFF_NPCFLY_OUT,
-    FLDEFF_FLY_OUT,
+    FLDEFF_USE_FLY,
     FLDEFF_FLY_IN,
     FLDEFF_QUESTION_MARK_ICON_AND_EMOTE,
     // FLDEFF_EMOTE, // shares a slot with FLDEFF_QUESTION_MARK_ICON
@@ -85,18 +85,24 @@ enum FieldEffect
     FLDEFF_SNOW_TRACKS_SPOT,
     FLDEFF_SNOW_TRACKS_BUG,
     FLDEFF_CAVE_DUST,
+    FLDEFF_USE_ROCK_CLIMB,
+    FLDEFF_ROCK_CLIMB_DUST,
     FLDEFF_COUNT,
 };
 
-#define NOT_IN_PARTY_MASK (1 << 12)
+#define SHOW_MON_NOT_IN_PARTY   (1 << 15)
+#define SHOW_MON_CRY_NO_DUCKING (1 << 31)
 
 #define FLDEFF_PAL_TAG_GENERAL_0          0x1004
 #define FLDEFF_PAL_TAG_GENERAL_1          0x1005
+#define FLDEFF_PAL_TAG_POKEBALL_GLOW      0x1007
 #define FLDEFF_PAL_TAG_GENERAL_2          0x1008
 #define FLDEFF_PAL_TAG_POKEBALL_TRAIL     0x1009
 #define FLDEFF_PAL_TAG_ASH                0x100D
 #define FLDEFF_PAL_TAG_SMALL_SPARKLE      0x100F
+#define FLDEFF_PAL_TAG_HOF_MONITOR        0x1010
 #define FLDEFF_PAL_TAG_CAVE_DUST          0x1012
+#define FLDEFF_PAL_TAG_DUST_CLOUD         0x1013
 
 // tile tags, for field effects that may have many copies on screen at once
 #define FLDEFF_TILE_TAG_SHADOW_SMALL        0x1400

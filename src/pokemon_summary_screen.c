@@ -101,8 +101,8 @@ static void BufferMonSkills(void);
 static void BufferMonMoves(void);
 static u8 StatusToAilment(u32 status);
 static void BufferMonMoveI(u8);
-static u16 GetMonMoveBySlotId(struct Pokemon * mon, u8 moveSlot);
-static u16 GetMonPpByMoveSlot(struct Pokemon * mon, u8 moveSlot);
+static enum Move GetMonMoveBySlotId(struct Pokemon *mon, u8 moveSlot);
+static u16 GetMonPpByMoveSlot(struct Pokemon *mon, u8 moveSlot);
 static void CreateShinyStarObj(u16, u16);
 static void CreatePokerusIconObj(u16, u16);
 static void PokeSum_CreateMonMarkingsSprite(void);
@@ -170,7 +170,7 @@ struct PokemonSummaryScreenData
 
     struct PokeSummary
     {
-        u8 ALIGNED(4) speciesNameStrBuf[POKEMON_NAME_LENGTH];
+        u8 ALIGNED(4) speciesNameStrBuf[POKEMON_NAME_LENGTH + 1];
         u8 ALIGNED(4) nicknameStrBuf[POKEMON_NAME_LENGTH + 1];
         u8 ALIGNED(4) otNameStrBuf[12];
         u8 ALIGNED(4) otNameStrBufs[2][12];
@@ -183,11 +183,11 @@ struct PokemonSummaryScreenData
         u8 ALIGNED(4) levelStrBuf[7];
         u8 ALIGNED(4) statValueStrBufs[NUM_STATS][30];
 
-        u8 ALIGNED(4) moveCurPpStrBufs[5][11];
-        u8 ALIGNED(4) moveMaxPpStrBufs[5][11];
-        u8 ALIGNED(4) moveNameStrBufs[5][MOVE_NAME_LENGTH + 1];
-        u8 ALIGNED(4) movePowerStrBufs[5][5];
-        u8 ALIGNED(4) moveAccuracyStrBufs[5][5];
+        u8 ALIGNED(4) moveCurPpStrBufs[MAX_MON_MOVES + 1][11];
+        u8 ALIGNED(4) moveMaxPpStrBufs[MAX_MON_MOVES + 1][11];
+        u8 ALIGNED(4) moveNameStrBufs[MAX_MON_MOVES + 1][MOVE_NAME_LENGTH + 1];
+        u8 ALIGNED(4) movePowerStrBufs[MAX_MON_MOVES + 1][5];
+        u8 ALIGNED(4) moveAccuracyStrBufs[MAX_MON_MOVES + 1][5];
 
         u8 ALIGNED(4) expPointsStrBuf[9];
         u8 ALIGNED(4) expToNextLevelStrBuf[9];
@@ -221,8 +221,8 @@ struct PokemonSummaryScreenData
     u8 ALIGNED(4) unk3248; /* 0x3248 */
     s16 ALIGNED(4) flipPagesBgHofs; /* 0x324C */
 
-    u16 moveTypes[MAX_MON_MOVES + 1]; /* 0x3250 */
-    u16 moveIds[MAX_MON_MOVES + 1]; /* 0x325A */
+    enum Type moveTypes[MAX_MON_MOVES + 1]; /* 0x3250 */
+    enum Move moveIds[MAX_MON_MOVES + 1]; /* 0x325A */
     u8 ALIGNED(4) numMoves; /* 0x3264 */
     u8 ALIGNED(4) isSwappingMoves; /* 0x3268 */
 
@@ -324,18 +324,18 @@ struct ShinyStarObjData
     u16 palTag; /* 0x06 */
 };
 
-static EWRAM_DATA struct PokemonSummaryScreenData * sMonSummaryScreen = NULL;
-static EWRAM_DATA struct Struct203B144 * sMonSkillsPrinterXpos = NULL;
-static EWRAM_DATA struct MoveSelectionCursor * sMoveSelectionCursorObjs[4] = {};
-static EWRAM_DATA struct MonStatusIconObj * sStatusIcon = NULL;
-static EWRAM_DATA struct HpBarObjs * sHpBarObjs = NULL;
-static EWRAM_DATA struct ExpBarObjs * sExpBarObjs = NULL;
-static EWRAM_DATA struct PokerusIconObj * sPokerusIconObj = NULL;
-static EWRAM_DATA struct ShinyStarObjData * sShinyStarObjData = NULL;
+static EWRAM_DATA struct PokemonSummaryScreenData *sMonSummaryScreen = NULL;
+static EWRAM_DATA struct Struct203B144 *sMonSkillsPrinterXpos = NULL;
+static EWRAM_DATA struct MoveSelectionCursor *sMoveSelectionCursorObjs[4] = {};
+static EWRAM_DATA struct MonStatusIconObj *sStatusIcon = NULL;
+static EWRAM_DATA struct HpBarObjs *sHpBarObjs = NULL;
+static EWRAM_DATA struct ExpBarObjs *sExpBarObjs = NULL;
+static EWRAM_DATA struct PokerusIconObj *sPokerusIconObj = NULL;
+static EWRAM_DATA struct ShinyStarObjData *sShinyStarObjData = NULL;
 EWRAM_DATA u8 gLastViewedMonIndex = 0;
 static EWRAM_DATA u8 sMoveSelectionCursorPos = 0;
 static EWRAM_DATA u8 sMoveSwapCursorPos = 0;
-static EWRAM_DATA struct MonPicBounceState * sMonPicBounceState = NULL;
+static EWRAM_DATA struct MonPicBounceState *sMonPicBounceState = NULL;
 EWRAM_DATA MainCallback gInitialSummaryScreenCallback = NULL; // stores callback from the first time the screen is opened from the party or PC menu
 
 extern const u32 gSummaryScreen_PageSkills_Tilemap[];
@@ -386,7 +386,7 @@ static const union AnimCmd sMoveSelectionCursorOamAnim_Blue[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd * const sMoveSelectionCursorOamAnimTable[] =
+static const union AnimCmd *const sMoveSelectionCursorOamAnimTable[] =
 {
     sMoveSelectionCursorOamAnim_Red,
     sMoveSelectionCursorOamAnim_Blue
@@ -455,7 +455,7 @@ static const union AnimCmd sStatusAilmentIconAnim_Blank[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd * const sStatusAilmentIconAnimTable[] =
+static const union AnimCmd *const sStatusAilmentIconAnimTable[] =
 {
     sStatusAilmentIconAnim_PSN,
     sStatusAilmentIconAnim_PRZ,
@@ -554,7 +554,7 @@ static const union AnimCmd sHpOrExpAnim_11[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd * const sHpOrExpBarAnimTable[] =
+static const union AnimCmd *const sHpOrExpBarAnimTable[] =
 {
     sHpOrExpAnim_0,
     sHpOrExpAnim_1,
@@ -594,7 +594,7 @@ static const union AnimCmd sPokerusIconObjAnim0[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd * const sPokerusIconObjAnimTable[] =
+static const union AnimCmd *const sPokerusIconObjAnimTable[] =
 {
     sPokerusIconObjAnim0
 };
@@ -624,7 +624,7 @@ static const union AnimCmd sStarObjAnim0[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd * const sStarObjAnimTable[] =
+static const union AnimCmd *const sStarObjAnimTable[] =
 {
     sStarObjAnim0
 };
@@ -982,7 +982,7 @@ static const s8 sEggPicShakeXDelta_AlmostReadyToHatch[] =
     2, 1, 1, 0, -1, -1, -2, 0, -2, -1, -1, 0, 1, 1, 2
 };
 
-static const u16 * const sHpBarPals[] =
+static const u16 *const sHpBarPals[] =
 {
     gSummaryScreen_HpExpBar_Pal,
     sPokeSummary_HpBarPalYellow,
@@ -1296,10 +1296,10 @@ void ShowPokemonSummaryScreen(void *party, u8 cursorPos, u8 lastIdx, MainCallbac
     SetMainCallback2(CB2_SetUpPSS);
 }
 
-void ShowSelectMovePokemonSummaryScreen(struct Pokemon *party, u8 cursorPos, MainCallback savedCallback, u16 move)
+void ShowSelectMovePokemonSummaryScreen(struct Pokemon *party, u8 cursorPos, MainCallback savedCallback, enum Move move)
 {
     ShowPokemonSummaryScreen(party, cursorPos, gPlayerPartyCount - 1, savedCallback, PSS_MODE_SELECT_MOVE);
-    sMonSummaryScreen->moveIds[4] = move;
+    sMonSummaryScreen->moveIds[MAX_MON_MOVES] = move;
 }
 
 static u8 PageFlipInputIsDisabled(u8 direction)
@@ -2597,8 +2597,8 @@ static void BufferStat(u8 stat)
 static void BufferMonSkills(void)
 {
     u8 level;
-    u16 type;
-    u16 species;
+    enum Ability ability;
+    enum Species species;
     u32 exp;
     u32 expToNextLevel;
 
@@ -2624,9 +2624,9 @@ static void BufferMonSkills(void)
     ConvertIntToDecimalStringN(sMonSummaryScreen->summary.expToNextLevelStrBuf, expToNextLevel, STR_CONV_MODE_LEFT_ALIGN, 7);
     sMonSkillsPrinterXpos->toNextLevel = GetNumberRightAlign63(sMonSummaryScreen->summary.expToNextLevelStrBuf);
 
-    type = GetAbilityBySpecies(GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPECIES), GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_ABILITY_NUM));
-    StringCopy(sMonSummaryScreen->summary.abilityNameStrBuf, gAbilitiesInfo[type].name);
-    StringCopy(sMonSummaryScreen->summary.abilityDescStrBuf, gAbilitiesInfo[type].description);
+    ability = GetAbilityBySpecies(GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPECIES), GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_ABILITY_NUM));
+    StringCopy(sMonSummaryScreen->summary.abilityNameStrBuf, gAbilitiesInfo[ability].name);
+    StringCopy(sMonSummaryScreen->summary.abilityDescStrBuf, gAbilitiesInfo[ability].description);
 
     sMonSummaryScreen->curMonStatusAilment = StatusToAilment(GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_STATUS));
     if (sMonSummaryScreen->curMonStatusAilment == AILMENT_NONE)
@@ -2652,7 +2652,7 @@ static void BufferMonMoveI(u8 i)
     if (i < MAX_MON_MOVES)
         sMonSummaryScreen->moveIds[i] = GetMonMoveBySlotId(&sMonSummaryScreen->currentMon, i);
 
-    if (sMonSummaryScreen->moveIds[i] == 0)
+    if (sMonSummaryScreen->moveIds[i] == MOVE_NONE)
     {
         StringCopy(sMonSummaryScreen->summary.moveNameStrBufs[i], gText_PokeSum_OneHyphen);
         StringCopy(sMonSummaryScreen->summary.moveCurPpStrBufs[i], gText_PokeSum_TwoHyphens);
@@ -2667,7 +2667,7 @@ static void BufferMonMoveI(u8 i)
     sMonSummaryScreen->moveTypes[i] = gMovesInfo[sMonSummaryScreen->moveIds[i]].type;
     StringCopy(sMonSummaryScreen->summary.moveNameStrBufs[i], gMovesInfo[sMonSummaryScreen->moveIds[i]].name);
 
-    if (i >= 4 && sMonSummaryScreen->mode == PSS_MODE_SELECT_MOVE)
+    if (i >= MAX_MON_MOVES && sMonSummaryScreen->mode == PSS_MODE_SELECT_MOVE)
     {
         ConvertIntToDecimalStringN(sMonSummaryScreen->summary.moveCurPpStrBufs[i],
                                    gMovesInfo[sMonSummaryScreen->moveIds[i]].pp, STR_CONV_MODE_LEFT_ALIGN, 3);
@@ -2825,10 +2825,13 @@ static void PrintMonLevelNickOnWindow2(const u8 * str)
 
     if (!sMonSummaryScreen->isEgg)
     {
+        u16 nicknameFont;
+
         if (sMonSummaryScreen->curPageIndex != PSS_PAGE_MOVES_INFO)
             AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_LVL_NICK], 2, 4, 2, sLevelNickTextColors[1], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.levelStrBuf);
 
-        AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_LVL_NICK], FONT_NORMAL, 40, 2, sLevelNickTextColors[1], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.nicknameStrBuf);
+        nicknameFont = GetFontIdToFit(sMonSummaryScreen->summary.nicknameStrBuf, FONT_NORMAL, 0, 60);
+        AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_LVL_NICK], nicknameFont, 40, 2, sLevelNickTextColors[1], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.nicknameStrBuf);
 
         if (GetMonGender(&sMonSummaryScreen->currentMon) == MON_FEMALE)
             AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_LVL_NICK], FONT_NORMAL, 105, 2, sLevelNickTextColors[3], 0, sMonSummaryScreen->summary.genderSymbolStrBuf);
@@ -2869,7 +2872,6 @@ u32 GetInfoPageFontIdForString(u8 *str, u32 x)
         maxTextWidth = 0;
     else
         maxTextWidth -= x;
-
 
     return GetFontIdToFit(str, FONT_NORMAL, letterSpacing, maxTextWidth);
 }
@@ -2970,7 +2972,7 @@ static void PokeSum_PrintMoveName(u8 i)
 {
     u8 colorIdx = 0;
     u8 curPP = GetMonPpByMoveSlot(&sMonSummaryScreen->currentMon, i);
-    u16 move = sMonSummaryScreen->moveIds[i];
+    enum Move move = sMonSummaryScreen->moveIds[i];
     u8 ppBonuses = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_PP_BONUSES);
     u8 maxPP = CalculatePPWithBonus(move, ppBonuses, i);
 
@@ -3686,7 +3688,7 @@ static void PokeSum_RemoveWindows(u8 curPageIndex)
 
 }
 
-static u8 PokeSum_BufferOtName_IsEqualToCurrentOwner(struct Pokemon * mon)
+static u8 PokeSum_BufferOtName_IsEqualToCurrentOwner(struct Pokemon *mon)
 {
     u8 multiplayerId;
     u32 trainerId = 0;
@@ -3871,9 +3873,9 @@ static void BufferSelectedMonData(struct Pokemon * mon)
     }
 }
 
-static u16 GetMonMoveBySlotId(struct Pokemon * mon, u8 moveSlot)
+static enum Move GetMonMoveBySlotId(struct Pokemon * mon, u8 moveSlot)
 {
-    u16 move;
+    enum Move move;
 
     switch (moveSlot)
     {
@@ -4216,9 +4218,7 @@ static void UpdateCurrentMonBufferFromPartyOrBox(struct Pokemon * mon)
 
 static u8 PokeSum_CanForgetSelectedMove(void)
 {
-    u16 move;
-
-    move = GetMonMoveBySlotId(&sMonSummaryScreen->currentMon, sMoveSelectionCursorPos);
+    enum Move move = GetMonMoveBySlotId(&sMonSummaryScreen->currentMon, sMoveSelectionCursorPos);
 
     if (CannotForgetMove(move) == TRUE && sMonSummaryScreen->mode != PSS_MODE_FORGET_MOVE)
         return FALSE;
@@ -4459,7 +4459,7 @@ static void SpriteCB_MonPicDummy(struct Sprite *sprite)
 static void PokeSum_CreateMonPicSprite(void)
 {
     u16 spriteId;
-    u16 species;
+    enum Species species;
     u32 personality;
     bool32 isShiny;
 
@@ -4567,7 +4567,7 @@ static void DestroyBallIconObj(void)
 
 static void PokeSum_CreateMonIconSprite(void)
 {
-    u16 species;
+    enum Species species;
     u32 personality;
 
     species = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPECIES_OR_EGG);
@@ -4592,8 +4592,7 @@ static void PokeSum_ShowOrHideMonIconSprite(bool8 invisible)
 
 static void PokeSum_DestroyMonIconSprite(void)
 {
-    u16 species;
-    species = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPECIES_OR_EGG);
+    enum Species species = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPECIES_OR_EGG);
     SafeFreeMonIconPalette(species);
     FreeAndDestroyMonIconSprite(&gSprites[sMonSummaryScreen->monIconSpriteId]);
 }
@@ -5022,7 +5021,7 @@ static void UpdateExpBarObjs(void)
     u32 exp;
     u32 totalExpToNextLevel;
     u32 curExpToNextLevel;
-    u16 species;
+    enum Species species;
     s64 pointsPerTile;
     s64 totalPoints;
     u8 animNum;

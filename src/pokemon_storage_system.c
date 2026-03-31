@@ -495,14 +495,17 @@ struct PokemonStorageSystemData
     const u16 *displayMonPalette;
     u32 displayMonPersonality;
     u16 displayMonSpecies;
-    u16 displayMonItemId;
+    enum Item displayMonItemId;
     u16 displayUnusedVar;
     bool8 setMosaic;
     u8 displayMonMarkings;
     u8 displayMonLevel;
     bool8 displayMonIsEgg;
     u8 displayMonNickname[POKEMON_NAME_LENGTH + 1];
-    u8 displayMonTexts[4][36]; // nickname, species name, gender and level, item name
+    u8 displayMonNameText[36];
+    u8 displayMonSpeciesName[36];
+    u8 displayMonGenderLvlText[36];
+    u8 displayMonItemName[36];
     bool8 (*monPlaceChangeFunc)(void);
     u8 monPlaceChangeState;
     u8 shiftBoxId;
@@ -538,7 +541,7 @@ struct PokemonStorageSystemData
     u8 inBoxMovingMode;
     u16 multiMoveWindowId;
     struct PokeStorageItemIcon itemIcons[MAX_ITEM_ICONS];
-    u16 movingItemId;
+    enum Item movingItemId;
     u16 itemInfoWindowOffset;
     u16 unusedField2;
     u16 displayMonPalOffset;
@@ -629,7 +632,7 @@ static void StartDisplayMonMosaic(void);
 static void SpriteCB_DisplayMonMosaic(struct Sprite *sprite);
 static bool8 IsDisplayMonMosaicActive(void);
 static void CreateDisplayMonSprite(void);
-static void LoadDisplayMonGfx(u16 species, u32 personality);
+static void LoadDisplayMonGfx(enum Species species, u32 personality);
 static void PrintDisplayMonInfo(void);
 static void UpdateWaveformAnimation(void);
 static void InitSupplementalTilemaps(void);
@@ -695,7 +698,7 @@ static void DestroyAllPartyMonIcons(void);
 static void DoReleaseMonComeBackAnim(void);
 static bool8 ResetReleaseMonSpritePtr(void);
 static void SetMovingMonPriority(u8 priority);
-static struct Sprite *CreateMonIconSprite(u16 species, u32 personality, s16 x, s16 y, u8 oamPriority, u8 subpriority);
+static struct Sprite *CreateMonIconSprite(enum Species species, u32 personality, s16 x, s16 y, u8 oamPriority, u8 subpriority);
 
 // Pokémon data
 static bool8 TryStorePartyMonInBox(u8 boxId);
@@ -767,7 +770,7 @@ static bool8 UpdateItemInfoWindowSlideIn(void);
 static bool8 UpdateItemInfoWindowSlideOut(void);
 static void InitItemInfoWindow(void);
 static void PrintItemDescription(void);
-static u16 GetMovingItem(void);
+static enum Item GetMovingItem(void);
 static bool8 IsActiveItemMoving(void);
 static bool8 IsItemIconAnimActive(void);
 static void MoveHeldItemWithPartyMenu(void);
@@ -776,7 +779,7 @@ static void MoveItemFromCursorToBag(void);
 static void Item_TakeMons(u8 cursorArea, u8 cursorPos);
 static void Item_GiveMovingToMon(u8 cursorArea, u8 cursorPos);
 static void Item_SwitchMonsWithMoving(u8 cursorArea, u8 cursorPos);
-static void InitItemIconInCursor(u16 item);
+static void InitItemIconInCursor(enum Item item);
 static void Item_FromMonToMoving(u8 cursorArea, u8 cursorPos);
 static void TryHideItemIconAtPos(u8 cursorArea, u8 cursorPos);
 static void TryLoadItemIconAtPos(u8 cursorArea, u8 cursorPos);
@@ -2369,7 +2372,7 @@ static void Task_OnSelectedMon(u8 taskId)
             PlaySE(SE_SELECT);
             if (gStorage->boxOption != OPTION_MOVE_ITEMS)
                 PrintStorageMessage(MSG_IS_SELECTED);
-            else if (IsActiveItemMoving() || gStorage->displayMonItemId != 0)
+            else if (IsActiveItemMoving() || gStorage->displayMonItemId != ITEM_NONE)
                 PrintStorageMessage(MSG_IS_SELECTED2);
             else
                 PrintStorageMessage(MSG_GIVE_TO_MON);
@@ -3554,7 +3557,7 @@ static void Task_ChangeScreen(u8 taskId)
 
 static void GiveChosenBagItem(void)
 {
-    u16 item = gSpecialVar_ItemId;
+    enum Item item = gSpecialVar_ItemId;
 
     if (item != ITEM_NONE)
     {
@@ -3734,7 +3737,7 @@ static void CreateDisplayMonSprite(void)
     }
 }
 
-static void LoadDisplayMonGfx(u16 species, u32 personality)
+static void LoadDisplayMonGfx(enum Species species, u32 personality)
 {
     if (gStorage->displayMonSprite == NULL)
         return;
@@ -3752,21 +3755,20 @@ static void LoadDisplayMonGfx(u16 species, u32 personality)
 
 static void PrintDisplayMonInfo(void)
 {
-    u16 i;
-    u16 y;
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
     if (gStorage->boxOption != OPTION_MOVE_ITEMS)
     {
-        for (i = 0, y = 0; i < 3; i++, y += 14)
-            AddTextPrinterParameterized(0, FONT_NORMAL, gStorage->displayMonTexts[i], i == 2 ? 10 : 6, y, TEXT_SKIP_DRAW, NULL);
-
-        AddTextPrinterParameterized(0, FONT_SMALL, gStorage->displayMonTexts[3], 6, y + 2, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(0, GetFontIdToFit(gStorage->displayMonNameText, FONT_NORMAL, 0, 70), gStorage->displayMonNameText, 6, 0, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(0, GetFontIdToFit(gStorage->displayMonSpeciesName, FONT_NORMAL, 0, 70), gStorage->displayMonSpeciesName, 6, 14, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(0, FONT_NORMAL, gStorage->displayMonGenderLvlText, 10, 28, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(0, GetFontIdToFit(gStorage->displayMonItemName, FONT_SMALL, 0, 66), gStorage->displayMonItemName, 6, 44, TEXT_SKIP_DRAW, NULL);
     }
     else
     {
-        AddTextPrinterParameterized(0, FONT_SMALL, gStorage->displayMonTexts[3], 6, 0, TEXT_SKIP_DRAW, NULL);
-        for (i = 0, y = 15; i < 3; i++, y += 14)
-            AddTextPrinterParameterized(0, FONT_NORMAL, gStorage->displayMonTexts[i], i == 2 ? 10 : 6, y, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(0, GetFontIdToFit(gStorage->displayMonItemName, FONT_SMALL, 0, 66), gStorage->displayMonItemName, 6, 0, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(0, GetFontIdToFit(gStorage->displayMonNameText, FONT_NORMAL, 0, 70), gStorage->displayMonNameText, 6, 15, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(0, GetFontIdToFit(gStorage->displayMonSpeciesName, FONT_NORMAL, 0, 70), gStorage->displayMonSpeciesName, 6, 29, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(0, FONT_NORMAL, gStorage->displayMonGenderLvlText, 10, 43, TEXT_SKIP_DRAW, NULL);
     }
 
     CopyWindowToVram(0, COPYWIN_GFX);
@@ -4039,7 +4041,7 @@ static void PrintStorageMessage(u8 id)
         if (IsActiveItemMoving())
             txtPtr = StringCopy(gStorage->itemName, GetMovingItemName());
         else
-            txtPtr = StringCopy(gStorage->itemName, gStorage->displayMonTexts[3]);
+            txtPtr = StringCopy(gStorage->itemName, gStorage->displayMonItemName);
 
         while (*(txtPtr - 1) == CHAR_SPACE)
             txtPtr--;
@@ -4170,7 +4172,7 @@ static u8 GetMonIconPriorityByCursorArea(void)
 void CreateMovingMonIcon(void)
 {
     u32 personality = GetMonData(&gStorage->movingMon, MON_DATA_PERSONALITY);
-    u16 species = GetMonData(&gStorage->movingMon, MON_DATA_SPECIES_OR_EGG);
+    enum Species species = GetMonData(&gStorage->movingMon, MON_DATA_SPECIES_OR_EGG);
     u8 priority = GetMonIconPriorityByCursorArea();
 
     gStorage->movingMonSprite = CreateMonIconSprite(species, personality, 0, 0, priority, 7);
@@ -4192,7 +4194,7 @@ static void InitBoxMonSprites(u8 boxId)
 {
     u8 boxPosition;
     u16 i, j, count;
-    u16 species;
+    enum Species species;
     u32 personality;
 
     count = 0;
@@ -4230,7 +4232,7 @@ static void InitBoxMonSprites(u8 boxId)
 
 void CreateBoxMonIconAtPos(u8 boxPosition)
 {
-    u16 species = GetCurrentBoxMonData(boxPosition, MON_DATA_SPECIES_OR_EGG);
+    enum Species species = GetCurrentBoxMonData(boxPosition, MON_DATA_SPECIES_OR_EGG);
 
     if (species != SPECIES_NONE)
     {
@@ -4483,7 +4485,7 @@ void SetBoxMonIconObjMode(u8 boxPosition, u8 objMode)
 static void CreatePartyMonsSprites(bool8 visible)
 {
     u16 i, count;
-    u16 species = GetMonData(&gPlayerParty[0], MON_DATA_SPECIES_OR_EGG);
+    enum Species species = GetMonData(&gPlayerParty[0], MON_DATA_SPECIES_OR_EGG);
     u32 personality = GetMonData(&gPlayerParty[0], MON_DATA_PERSONALITY);
 
     gStorage->partySprites[0] = CreateMonIconSprite(species, personality, 104, 64, 1, 12);
@@ -4833,7 +4835,7 @@ static void SpriteCB_HeldMon(struct Sprite *sprite)
     sprite->y = gStorage->cursorSprite->y + gStorage->cursorSprite->y2 + 4;
 }
 
-static u16 TryLoadMonIconTiles(u16 species, u32 personality)
+static u16 TryLoadMonIconTiles(enum Species species, u32 personality)
 {
     u16 i, offset;
 
@@ -4871,7 +4873,7 @@ static u16 TryLoadMonIconTiles(u16 species, u32 personality)
     return offset;
 }
 
-static void RemoveSpeciesFromIconList(u16 species)
+static void RemoveSpeciesFromIconList(enum Species species)
 {
     u16 i;
     bool8 hasFemale = FALSE;
@@ -4896,7 +4898,7 @@ static void RemoveSpeciesFromIconList(u16 species)
     }
 }
 
-static struct Sprite *CreateMonIconSprite(u16 species, u32 personality, s16 x, s16 y, u8 oamPriority, u8 subpriority)
+static struct Sprite *CreateMonIconSprite(enum Species species, u32 personality, s16 x, s16 y, u8 oamPriority, u8 subpriority)
 {
     u16 tileNum;
     u8 spriteId;
@@ -5547,7 +5549,7 @@ static void GetCursorCoordsByPos(u8 cursorArea, u8 cursorPosition, u16 *x, u16 *
     }
 }
 
-static u16 GetSpeciesAtCursorPosition(void)
+static enum Species GetSpeciesAtCursorPosition(void)
 {
     switch (sCursorArea)
     {
@@ -6138,7 +6140,7 @@ static bool8 TryHideReleaseMon(void)
 static void ReleaseMon(void)
 {
     u8 boxId;
-    u16 item = ITEM_NONE;
+    enum Item item = ITEM_NONE;
 
     DestroyReleaseMonIcon();
     if (sIsMonBeingMoved)
@@ -6341,7 +6343,7 @@ s16 CompactPartySlots(void)
 
     for (i = 0, last = 0; i < PARTY_SIZE; i++)
     {
-        u16 species = GetMonData(gPlayerParty + i, MON_DATA_SPECIES);
+        enum Species species = GetMonData(gPlayerParty + i, MON_DATA_SPECIES);
         if (species != SPECIES_NONE)
         {
             if (i != last)
@@ -6460,11 +6462,6 @@ static void ReshowDisplayMon(void)
         TrySetDisplayMonData();
 }
 
-#define displayMonNicknameText        displayMonTexts[0]
-#define displayMonSpeciesNameText     displayMonTexts[1]
-#define displayMonGenderAndLevelText  displayMonTexts[2]
-#define displayMonItemNameText        displayMonTexts[3]
-
 static void SetDisplayMonData(void *pokemon, u8 mode)
 {
     u8 *txtPtr;
@@ -6530,21 +6527,21 @@ static void SetDisplayMonData(void *pokemon, u8 mode)
     if (gStorage->displayMonSpecies == SPECIES_NONE)
     {
         StringFill(gStorage->displayMonNickname, CHAR_SPACE, 5);
-        StringFill(gStorage->displayMonNicknameText, CHAR_SPACE, 8);
-        StringFill(gStorage->displayMonSpeciesNameText, CHAR_SPACE, 8);
-        StringFill(gStorage->displayMonGenderAndLevelText, CHAR_SPACE, 8);
-        StringFill(gStorage->displayMonItemNameText, CHAR_SPACE, 8);
+        StringFill(gStorage->displayMonNameText, CHAR_SPACE, 8);
+        StringFill(gStorage->displayMonSpeciesName, CHAR_SPACE, 8);
+        StringFill(gStorage->displayMonGenderLvlText, CHAR_SPACE, 8);
+        StringFill(gStorage->displayMonItemName, CHAR_SPACE, 8);
     }
     else if (gStorage->displayMonIsEgg)
     {
         if (sanityIsBagEgg)
-            StringCopyPadded(gStorage->displayMonNicknameText, gStorage->displayMonNickname, CHAR_SPACE, 5);
+            StringCopyPadded(gStorage->displayMonNameText, gStorage->displayMonNickname, CHAR_SPACE, 5);
         else
-            StringCopyPadded(gStorage->displayMonNicknameText, gText_EggNickname, CHAR_SPACE, 8);
+            StringCopyPadded(gStorage->displayMonNameText, gText_EggNickname, CHAR_SPACE, 8);
 
-        StringFill(gStorage->displayMonSpeciesNameText, CHAR_SPACE, 8);
-        StringFill(gStorage->displayMonGenderAndLevelText, CHAR_SPACE, 8);
-        StringFill(gStorage->displayMonItemNameText, CHAR_SPACE, 8);
+        StringFill(gStorage->displayMonSpeciesName, CHAR_SPACE, 8);
+        StringFill(gStorage->displayMonGenderLvlText, CHAR_SPACE, 8);
+        StringFill(gStorage->displayMonItemName, CHAR_SPACE, 8);
     }
     else
     {
@@ -6552,15 +6549,15 @@ static void SetDisplayMonData(void *pokemon, u8 mode)
             gender = MON_GENDERLESS;
 
         // Buffer nickname
-        StringCopyPadded(gStorage->displayMonNicknameText, gStorage->displayMonNickname, CHAR_SPACE, 5);
+        StringCopyPadded(gStorage->displayMonNameText, gStorage->displayMonNickname, CHAR_SPACE, 5);
 
         // Buffer species name
-        txtPtr = gStorage->displayMonSpeciesNameText;
+        txtPtr = gStorage->displayMonSpeciesName;
         *(txtPtr)++ = CHAR_SLASH;
         StringCopyPadded(txtPtr, gSpeciesInfo[gStorage->displayMonSpecies].speciesName, CHAR_SPACE, 5);
 
         // Buffer gender and level
-        txtPtr = gStorage->displayMonGenderAndLevelText;
+        txtPtr = gStorage->displayMonGenderLvlText;
         *(txtPtr)++ = EXT_CTRL_CODE_BEGIN;
         *(txtPtr)++ = EXT_CTRL_CODE_COLOR_HIGHLIGHT_SHADOW;
         switch (gender)
@@ -6600,16 +6597,11 @@ static void SetDisplayMonData(void *pokemon, u8 mode)
 
         // Buffer item name
         if (gStorage->displayMonItemId != ITEM_NONE)
-            StringCopyPadded(gStorage->displayMonItemNameText, GetItemName(gStorage->displayMonItemId), CHAR_SPACE, 8);
+            StringCopyPadded(gStorage->displayMonItemName, GetItemName(gStorage->displayMonItemId), CHAR_SPACE, 8);
         else
-            StringFill(gStorage->displayMonItemNameText, CHAR_SPACE, 8);
+            StringFill(gStorage->displayMonItemName, CHAR_SPACE, 8);
     }
 }
-
-#undef displayMonNicknameText
-#undef displayMonSpeciesNameText
-#undef displayMonGenderAndLevelText
-#undef displayMonItemNameText
 
 static u8 HandleInput_InBox(void)
 {
@@ -7204,7 +7196,7 @@ static bool8 SetSelectionMenuTexts(void)
 
 static bool8 SetMenuTextsForMon(void)
 {
-    u16 species = GetSpeciesAtCursorPosition();
+    enum Species species = GetSpeciesAtCursorPosition();
 
     switch (gStorage->boxOption)
     {
@@ -8003,7 +7995,7 @@ static void MultiMove_DeselectRow(u8 row, u8 minColumn, u8 maxColumn)
 static void MultiMove_SetIconToBg(u8 x, u8 y)
 {
     u8 position = x + (IN_BOX_COLUMNS * y);
-    u16 species = GetCurrentBoxMonData(position, MON_DATA_SPECIES_OR_EGG);
+    enum Species species = GetCurrentBoxMonData(position, MON_DATA_SPECIES_OR_EGG);
     u32 personality = GetCurrentBoxMonData(position, MON_DATA_PERSONALITY);
 
     if (species != SPECIES_NONE)
@@ -8017,7 +8009,7 @@ static void MultiMove_SetIconToBg(u8 x, u8 y)
 static void MultiMove_ClearIconFromBg(u8 x, u8 y)
 {
     u8 position = x + (IN_BOX_COLUMNS * y);
-    u16 species = GetCurrentBoxMonData(position, MON_DATA_SPECIES_OR_EGG);
+    enum Species species = GetCurrentBoxMonData(position, MON_DATA_SPECIES_OR_EGG);
 
     if (species != SPECIES_NONE)
         FillWindowPixelRect8Bit(gStorage->multiMoveWindowId, PIXEL_FILL(0), 24 * x, 24 * y, 32, 32);
@@ -8348,7 +8340,7 @@ static void TryHideItemIconAtPos(u8 cursorArea, u8 cursorPos)
 static void Item_FromMonToMoving(u8 cursorArea, u8 cursorPos)
 {
     u8 id;
-    u16 item;
+    enum Item item;
 
     if (gStorage->boxOption != OPTION_MOVE_ITEMS)
         return;
@@ -8372,7 +8364,7 @@ static void Item_FromMonToMoving(u8 cursorArea, u8 cursorPos)
     gStorage->movingItemId = gStorage->displayMonItemId;
 }
 
-static void InitItemIconInCursor(u16 item)
+static void InitItemIconInCursor(enum Item item)
 {
     const u32 *tiles = GetItemIconPic(item);
     const u16 *pal = GetItemIconPalette(item);
@@ -8389,7 +8381,7 @@ static void InitItemIconInCursor(u16 item)
 static void Item_SwitchMonsWithMoving(u8 cursorArea, u8 cursorPos)
 {
     u8 id;
-    u16 item;
+    enum Item item;
 
     if (gStorage->boxOption != OPTION_MOVE_ITEMS)
         return;
@@ -8440,7 +8432,7 @@ static void Item_GiveMovingToMon(u8 cursorArea, u8 cursorPos)
 static void Item_TakeMons(u8 cursorArea, u8 cursorPos)
 {
     u8 id;
-    u16 item;
+    enum Item item;
 
     if (gStorage->boxOption != OPTION_MOVE_ITEMS)
         return;
@@ -8527,7 +8519,7 @@ static const u8 *GetMovingItemName(void)
     return GetItemName(gStorage->movingItemId);
 }
 
-static u16 GetMovingItem(void)
+static enum Item GetMovingItem(void)
 {
     return gStorage->movingItemId;
 }
