@@ -8,6 +8,7 @@
 #include "event_object_movement.h"
 #include "event_scripts.h"
 #include "field_control_avatar.h"
+#include "field_effect.h"
 #include "field_player_avatar.h"
 #include "field_poison.h"
 #include "field_screen_effect.h"
@@ -666,6 +667,9 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
         MsgSetSignpost();
         return EventScript_PokecenterSign;
     }
+    if (MetatileBehavior_IsRockClimbable(metatileBehavior) == TRUE && !IsRockClimbActive())
+        return EventScript_UseRockClimb;
+
     return NULL;
 }
 
@@ -1212,7 +1216,7 @@ static const struct BgEvent *GetBackgroundEventAtPosition(struct MapHeader *mapH
     return NULL;
 }
 
-bool8 dive_warp(struct MapPosition *position, u16 metatileBehavior)
+bool8 TryDoDiveWarp(struct MapPosition *position, u16 metatileBehavior)
 {
     if (gMapHeader.mapType == MAP_TYPE_UNDERWATER && !MetatileBehavior_IsUnableToEmerge(metatileBehavior))
     {
