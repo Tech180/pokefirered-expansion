@@ -1018,7 +1018,7 @@ const u8 gStatStageRatios[MAX_STAT_STAGE + 1][2] =
 
 // The classes used by other players in the Union Room.
 // These should correspond with the overworld graphics in sUnionRoomObjGfxIds
-const u16 gUnionRoomFacilityClasses[NUM_UNION_ROOM_CLASSES * GENDER_COUNT] =
+const enum FacilityClass gUnionRoomFacilityClasses[NUM_UNION_ROOM_CLASSES * GENDER_COUNT] =
 {
     // Male classes
     FACILITY_CLASS_COOLTRAINER_M,
@@ -1091,7 +1091,7 @@ static const struct SpriteTemplate sTrainerBackSpriteTemplate =
 };
 
 #define NUM_SECRET_BASE_CLASSES 5
-static const u8 sSecretBaseFacilityClasses[GENDER_COUNT][NUM_SECRET_BASE_CLASSES] =
+static const enum FacilityClass sSecretBaseFacilityClasses[GENDER_COUNT][NUM_SECRET_BASE_CLASSES] =
 {
     [MALE] = {
         FACILITY_CLASS_YOUNGSTER,
@@ -1473,7 +1473,7 @@ static bool32 IsValidGender(u32 gender)
     }
 }
 
-u32 GetMonPersonality(enum Species species, u8 gender, u8 nature, u8 unownLetter)
+u32 GetMonPersonality(enum Species species, u8 gender, enum Nature nature, u8 unownLetter)
 {
     u32 personality, actualLetter;
 
@@ -1710,7 +1710,7 @@ static void CreateEventMon(struct Pokemon *mon, enum Species species, u8 level, 
     SetMonData(mon, MON_DATA_MODERN_FATEFUL_ENCOUNTER, &isModernFatefulEncounter);
 }
 
-enum TrainerPicID GetUnionRoomTrainerPic(void)
+static enum FacilityClass GetUnionRoomTrainerFacilityClass(void)
 {
     u8 linkId;
     u32 arrId;
@@ -1722,22 +1722,22 @@ enum TrainerPicID GetUnionRoomTrainerPic(void)
 
     arrId = gLinkPlayers[linkId].trainerId % NUM_UNION_ROOM_CLASSES;
     arrId |= gLinkPlayers[linkId].gender * NUM_UNION_ROOM_CLASSES;
-    return FacilityClassToPicIndex(gUnionRoomFacilityClasses[arrId]);
+
+    return gUnionRoomFacilityClasses[arrId];
+}
+
+enum TrainerPicID GetUnionRoomTrainerPic(void)
+{
+    enum FacilityClass facilityClass = GetUnionRoomTrainerFacilityClass();
+
+    return FacilityClassToPicIndex(facilityClass);
 }
 
 enum TrainerClassID GetUnionRoomTrainerClass(void)
 {
-    u8 linkId;
-    u32 arrId;
+    enum FacilityClass facilityClass = GetUnionRoomTrainerFacilityClass();
 
-    if (gBattleTypeFlags & BATTLE_TYPE_RECORDED_LINK)
-        linkId = gRecordedBattleMultiplayerId ^ 1;
-    else
-        linkId = GetMultiplayerId() ^ 1;
-
-    arrId = gLinkPlayers[linkId].trainerId % NUM_UNION_ROOM_CLASSES;
-    arrId |= gLinkPlayers[linkId].gender * NUM_UNION_ROOM_CLASSES;
-    return gFacilityClassToTrainerClass[gUnionRoomFacilityClasses[arrId]];
+    return gFacilityClassToTrainerClass[facilityClass];
 }
 
 void CreateEnemyEventMon(void)
@@ -1805,7 +1805,7 @@ void CalculateMonStats(struct Pokemon *mon)
     s32 level = GetLevelFromMonExp(mon);
     s32 newMaxHP;
 
-    u8 nature = GetMonData(mon, MON_DATA_HIDDEN_NATURE);
+    enum Nature nature = GetMonData(mon, MON_DATA_HIDDEN_NATURE);
 
     SetMonData(mon, MON_DATA_LEVEL, &level);
 
@@ -2955,7 +2955,7 @@ u32 GetBoxMonData3(struct BoxPokemon *boxMon, s32 field, u8 *data)
         }
         case MON_DATA_HIDDEN_NATURE:
         {
-            u32 nature = GetNatureFromPersonality(boxMon->personality);
+            enum Nature nature = GetNatureFromPersonality(boxMon->personality);
             retVal = nature ^ boxMon->hiddenNatureModifier;
             break;
         }
@@ -3387,8 +3387,8 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
         }
         case MON_DATA_HIDDEN_NATURE:
         {
-            u32 nature = GetNatureFromPersonality(boxMon->personality);
-            u32 hiddenNature;
+            enum Nature nature = GetNatureFromPersonality(boxMon->personality);
+            enum Nature hiddenNature;
             SET8(hiddenNature);
             boxMon->hiddenNatureModifier = nature ^ hiddenNature;
             break;
@@ -3620,21 +3620,19 @@ void CreateSecretBaseEnemyParty(struct SecretBase *secretBaseRecord)
 
 enum TrainerPicID GetSecretBaseTrainerPicIndex(void)
 {
-    u8 facilityClass = sSecretBaseFacilityClasses[gBattleResources->secretBase->gender][gBattleResources->secretBase->trainerId[0] % NUM_SECRET_BASE_CLASSES];
+    enum FacilityClass facilityClass = sSecretBaseFacilityClasses[gBattleResources->secretBase->gender][gBattleResources->secretBase->trainerId[0] % NUM_SECRET_BASE_CLASSES];
     return gFacilityClassToPicIndex[facilityClass];
 }
 
 enum TrainerClassID GetSecretBaseTrainerClass(void)
 {
-    u8 facilityClass = sSecretBaseFacilityClasses[gBattleResources->secretBase->gender][gBattleResources->secretBase->trainerId[0] % NUM_SECRET_BASE_CLASSES];
+    enum FacilityClass facilityClass = sSecretBaseFacilityClasses[gBattleResources->secretBase->gender][gBattleResources->secretBase->trainerId[0] % NUM_SECRET_BASE_CLASSES];
     return gFacilityClassToTrainerClass[facilityClass];
 }
 
 bool8 IsPlayerPartyAndPokemonStorageFull(void)
 {
-    s32 i;
-
-    for (i = 0; i < PARTY_SIZE; i++)
+    for (u32 i = 0; i < PARTY_SIZE; i++)
         if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) == SPECIES_NONE)
             return FALSE;
 
@@ -4594,12 +4592,12 @@ u8 *UseStatIncreaseItem(enum Item itemId)
     return gDisplayedStringBattle;
 }
 
-u8 GetNature(struct Pokemon *mon)
+enum Nature GetNature(struct Pokemon *mon)
 {
     return GetMonData(mon, MON_DATA_PERSONALITY, 0) % NUM_NATURES;
 }
 
-u8 GetNatureFromPersonality(u32 personality)
+enum Nature GetNatureFromPersonality(u32 personality)
 {
     return personality % NUM_NATURES;
 }
@@ -4619,17 +4617,17 @@ u32 GetGMaxTargetSpecies(u32 species)
 bool32 DoesMonMeetAdditionalConditions(struct Pokemon *mon, const struct EvolutionParam *params, struct Pokemon *tradePartner, u32 partyId, bool32 *canStopEvo, enum EvoState evoState)
 {
     u32 i, j;
-    u32 heldItem = GetMonData(mon, MON_DATA_HELD_ITEM);
+    enum Item heldItem = GetMonData(mon, MON_DATA_HELD_ITEM);
     u32 gender = GetMonGender(mon);
     u32 friendship = GetMonData(mon, MON_DATA_FRIENDSHIP, 0);
     u32 attack = GetMonData(mon, MON_DATA_ATK, 0);
     u32 defense = GetMonData(mon, MON_DATA_DEF, 0);
     u32 personality = GetMonData(mon, MON_DATA_PERSONALITY, 0);
     u16 upperPersonality = personality >> 16;
-    u32 weather = GetCurrentWeather();
-    u32 nature = GetNature(mon);
+    enum Weather weather = GetCurrentWeather();
+    enum Nature nature = GetNature(mon);
     bool32 removeHoldItem = FALSE;
-    u32 removeBagItem = ITEM_NONE;
+    enum Item removeBagItem = ITEM_NONE;
     u32 removeBagItemCount = 0;
     u32 evolutionTracker = GetMonData(mon, MON_DATA_EVOLUTION_TRACKER, 0);
     u32 partnerSpecies, partnerHeldItem;
@@ -4841,6 +4839,8 @@ bool32 DoesMonMeetAdditionalConditions(struct Pokemon *mon, const struct Evoluti
             case NATURE_QUIRKY:
                 currentCondition = TRUE;
                 break;
+            default:
+                break;
             }
             break;
         case IF_LOW_KEY_NATURE:
@@ -4859,6 +4859,8 @@ bool32 DoesMonMeetAdditionalConditions(struct Pokemon *mon, const struct Evoluti
             case NATURE_GENTLE:
             case NATURE_CAREFUL:
                 currentCondition = TRUE;
+                break;
+            default:
                 break;
             }
             break;
@@ -4929,7 +4931,7 @@ bool32 DoesMonMeetAdditionalConditions(struct Pokemon *mon, const struct Evoluti
         {
             if (removeHoldItem)
             {
-                u32 heldItem = ITEM_NONE;
+                enum Item heldItem = ITEM_NONE;
                 SetMonData(mon, MON_DATA_HELD_ITEM, &heldItem);
             }
 
@@ -5433,18 +5435,18 @@ s32 GetBattlerMultiplayerId(u16 id)
     return multiplayerId;
 }
 
-u8 GetTrainerEncounterMusicId(u16 trainerOpponentId)
+enum TrainerEncounterMusic GetTrainerEncounterMusicId(enum TrainerID trainerId)
 {
-    u32 sanitizedTrainerId = SanitizeTrainerId(trainerOpponentId);
+    enum TrainerID sanitizedTrainerId = SanitizeTrainerId(trainerId);
     enum DifficultyLevel difficulty = GetTrainerDifficultyLevel(sanitizedTrainerId);
 
     if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
-        return GetTrainerEncounterMusicIdInBattlePyramid(trainerOpponentId);
+        return GetTrainerEncounterMusicIdInBattlePyramid(trainerId);
     else
         return gTrainers[difficulty][sanitizedTrainerId].encounterMusic;
 }
 
-u16 ModifyStatByNature(u8 nature, u16 stat, enum Stat statIndex)
+u16 ModifyStatByNature(enum Nature nature, u16 stat, enum Stat statIndex)
 {
     // Don't modify HP, Accuracy, or Evasion by nature
     if (statIndex <= STAT_HP || statIndex > NUM_NATURE_STATS || gNaturesInfo[nature].statUp == gNaturesInfo[nature].statDown)
@@ -5943,13 +5945,13 @@ bool8 IsMonSpriteNotFlipped(enum Species species)
 
 s8 GetMonFlavorRelation(struct Pokemon *mon, enum Flavor flavor)
 {
-    u8 nature = GetNature(mon);
+    enum Nature nature = GetNature(mon);
     return gPokeblockFlavorCompatibilityTable[nature * FLAVOR_COUNT + flavor];
 }
 
 s8 GetFlavorRelationByPersonality(u32 personality, enum Flavor flavor)
 {
-    u8 nature = GetNatureFromPersonality(personality);
+    enum Nature nature = GetNatureFromPersonality(personality);
     return gPokeblockFlavorCompatibilityTable[nature * FLAVOR_COUNT + flavor];
 }
 
@@ -6297,7 +6299,7 @@ u8 GetOpposingLinkMultiBattlerId(bool8 rightSide, u8 multiplayerId)
     return i;
 }
 
-enum TrainerPicID FacilityClassToPicIndex(u16 facilityClass)
+enum TrainerPicID FacilityClassToPicIndex(enum FacilityClass facilityClass)
 {
     return gFacilityClassToPicIndex[facilityClass];
 }

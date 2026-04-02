@@ -314,7 +314,7 @@ static const struct UCoords8 sTrainerPicOffsets[2][GENDER_COUNT] =
     },
 };
 
-static const u8 sTrainerPicFacilityClasses[][2] =
+static const enum FacilityClass sTrainerPicFacilityClasses[][2] =
 {
     [CARD_TYPE_FRLG] =
     {
@@ -328,7 +328,7 @@ static const u8 sTrainerPicFacilityClasses[][2] =
     },
 };
 
-static const u8 sLinkTrainerPicFacilityClasses[GENDER_COUNT][NUM_LINK_TRAINER_CARD_CLASSES] =
+static const enum FacilityClass sLinkTrainerPicFacilityClasses[GENDER_COUNT][NUM_LINK_TRAINER_CARD_CLASSES] =
 {
     [MALE] =
     {

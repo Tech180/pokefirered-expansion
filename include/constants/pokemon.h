@@ -29,52 +29,58 @@ enum __attribute__((packed)) Type
 };
 
 // Pokémon egg groups
-#define EGG_GROUP_NONE                0
-#define EGG_GROUP_MONSTER             1
-#define EGG_GROUP_WATER_1             2
-#define EGG_GROUP_BUG                 3
-#define EGG_GROUP_FLYING              4
-#define EGG_GROUP_FIELD               5
-#define EGG_GROUP_FAIRY               6
-#define EGG_GROUP_GRASS               7
-#define EGG_GROUP_HUMAN_LIKE          8
-#define EGG_GROUP_WATER_3             9
-#define EGG_GROUP_MINERAL             10
-#define EGG_GROUP_AMORPHOUS           11
-#define EGG_GROUP_WATER_2             12
-#define EGG_GROUP_DITTO               13
-#define EGG_GROUP_DRAGON              14
-#define EGG_GROUP_NO_EGGS_DISCOVERED  15
+enum EggGroup
+{
+    EGG_GROUP_NONE,
+    EGG_GROUP_MONSTER,
+    EGG_GROUP_WATER_1,
+    EGG_GROUP_BUG,
+    EGG_GROUP_FLYING,
+    EGG_GROUP_FIELD,
+    EGG_GROUP_FAIRY,
+    EGG_GROUP_GRASS,
+    EGG_GROUP_HUMAN_LIKE,
+    EGG_GROUP_WATER_3,
+    EGG_GROUP_MINERAL,
+    EGG_GROUP_AMORPHOUS,
+    EGG_GROUP_WATER_2,
+    EGG_GROUP_DITTO,
+    EGG_GROUP_DRAGON,
+    EGG_GROUP_NO_EGGS_DISCOVERED,
+};
 
 #define EGG_GROUPS_PER_MON            2
 
 // Pokémon natures
-#define NATURE_HARDY    0 // Neutral
-#define NATURE_LONELY   1 // +Atk -Def
-#define NATURE_BRAVE    2 // +Atk -Speed
-#define NATURE_ADAMANT  3 // +Atk -SpAtk
-#define NATURE_NAUGHTY  4 // +Atk -SpDef
-#define NATURE_BOLD     5 // +Def -Atk
-#define NATURE_DOCILE   6 // Neutral
-#define NATURE_RELAXED  7 // +Def -Speed
-#define NATURE_IMPISH   8 // +Def -SpAtk
-#define NATURE_LAX      9 // +Def -SpDef
-#define NATURE_TIMID    10 // +Speed -Atk
-#define NATURE_HASTY    11 // +Speed -Def
-#define NATURE_SERIOUS  12 // Neutral
-#define NATURE_JOLLY    13 // +Speed -SpAtk
-#define NATURE_NAIVE    14 // +Speed - SpDef
-#define NATURE_MODEST   15 // +SpAtk -Atk
-#define NATURE_MILD     16 // +SpAtk -Def
-#define NATURE_QUIET    17 // +SpAtk -Speed
-#define NATURE_BASHFUL  18 // Neutral
-#define NATURE_RASH     19 // +SpAtk -SpDef
-#define NATURE_CALM     20 // +SpDef -Atk
-#define NATURE_GENTLE   21 // +SpDef -Def
-#define NATURE_SASSY    22 // +SpDef -Speed
-#define NATURE_CAREFUL  23 // +SpDef -SpAtk
-#define NATURE_QUIRKY   24 // Neutral
-#define NUM_NATURES     25
+enum Nature
+{
+    NATURE_HARDY,     // Neutral
+    NATURE_LONELY,    // +Atk -Def
+    NATURE_BRAVE,     // +Atk -Speed
+    NATURE_ADAMANT,   // +Atk -SpAtk
+    NATURE_NAUGHTY,   // +Atk -SpDef
+    NATURE_BOLD,      // +Def -Atk
+    NATURE_DOCILE,    // Neutral
+    NATURE_RELAXED,   // +Def -Speed
+    NATURE_IMPISH,    // +Def -SpAtk
+    NATURE_LAX,       // +Def -SpDef
+    NATURE_TIMID,     // +Speed -Atk
+    NATURE_HASTY,     // +Speed -Def
+    NATURE_SERIOUS,   // Neutral
+    NATURE_JOLLY,     // +Speed -SpAtk
+    NATURE_NAIVE,     // +Speed - SpDef
+    NATURE_MODEST,    // +SpAtk -Atk
+    NATURE_MILD,      // +SpAtk -Def
+    NATURE_QUIET,     // +SpAtk -Speed
+    NATURE_BASHFUL,   // Neutral
+    NATURE_RASH,      // +SpAtk -SpDef
+    NATURE_CALM,      // +SpDef -Atk
+    NATURE_GENTLE,    // +SpDef -Def
+    NATURE_SASSY,     // +SpDef -Speed
+    NATURE_CAREFUL,   // +SpDef -SpAtk
+    NATURE_QUIRKY,    // Neutral
+    NUM_NATURES,
+};
 
 #define NATURE_RANDOM            NUM_NATURES
 #define NATURE_MAY_SYNCHRONIZE   NUM_NATURES + 1

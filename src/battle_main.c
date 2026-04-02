@@ -1889,9 +1889,9 @@ static u32 GeneratePartyHash(const struct Trainer *trainer, u32 i)
     return Crc32B(buffer, n);
 }
 
-void ModifyPersonalityForNature(u32 *personality, u32 newNature)
+void ModifyPersonalityForNature(u32 *personality, enum Nature newNature)
 {
-    u32 nature = GetNatureFromPersonality(*personality);
+    enum Nature nature = GetNatureFromPersonality(*personality);
     s32 diff = abs((s32)nature - (s32)newNature);
     s32 sign = (nature > newNature) ? 1 : -1;
     if (diff > NUM_NATURES / 2)
@@ -5913,6 +5913,8 @@ enum Type GetDynamicMoveType(struct Pokemon *mon, enum Move move, enum BattlerId
                 return TYPE_ICE;
             case WEATHER_SANDSTORM:
                 return TYPE_ROCK;
+            default:
+                break;
             }
             return moveType;
         }
@@ -6027,6 +6029,8 @@ enum Type GetDynamicMoveType(struct Pokemon *mon, enum Move move, enum BattlerId
             case WEATHER_FOG_DIAGONAL:
                 if (B_OVERWORLD_FOG >= GEN_8)
                     return TYPE_FAIRY;
+                break;
+            default:
                 break;
             }
             return moveType;

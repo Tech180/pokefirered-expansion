@@ -126,7 +126,7 @@ static void PokeSum_PrintTrainerMemo_Mon(void);
 static void PokeSum_PrintTrainerMemo_Egg(void);
 static bool32 MapSecIsInKantoOrSevii(u8 mapSec);
 static bool32 IsMultiBattlePartner(void);
-static bool32 PokeSum_IsMonBoldOrGentle(u8 nature);
+static bool32 PokeSum_IsMonBoldOrGentle(enum Nature nature);
 static void PokeSum_PrintTrainerMemo_Mon_NotHeldByOT(void);
 static bool32 CurrentMonIsFromGBA(void);
 static u8 PokeSum_BufferOtName_IsEqualToCurrentOwner(struct Pokemon * mon);
@@ -2492,7 +2492,7 @@ static void ApplyNatureColor(u8 *str, u8 stat)
     const u8 blue[] = _("{COLOR 7}");
     const u8 red[] = _("{COLOR 1}");
     const u8 none[] = _("");
-    u8 nature = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_HIDDEN_NATURE);
+    enum Nature nature = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_HIDDEN_NATURE);
     u8 tmp[20];
 
     StringCopy(tmp, str);
@@ -3048,7 +3048,7 @@ static void PokeSum_PrintTrainerMemo(void)
 
 static void PokeSum_PrintTrainerMemo_Mon_HeldByOT(void)
 {
-    u8 nature;
+    enum Nature nature;
     u8 level;
     u8 metLocation;
     u8 levelStr[5];
@@ -3122,7 +3122,7 @@ static void PokeSum_PrintTrainerMemo_Mon_HeldByOT(void)
 
 static void PokeSum_PrintTrainerMemo_Mon_NotHeldByOT(void)
 {
-    u8 nature;
+    enum Nature nature;
     u8 level;
     u8 metLocation;
     u8 levelStr[5];
@@ -5604,12 +5604,9 @@ static void PokeSum_TryPlayMonCry(void)
     }
 }
 
-static bool32 PokeSum_IsMonBoldOrGentle(u8 nature)
+static bool32 PokeSum_IsMonBoldOrGentle(enum Nature nature)
 {
-    if (nature == NATURE_BOLD || nature == NATURE_GENTLE)
-        return TRUE;
-
-    return FALSE;
+    return nature == NATURE_BOLD || nature == NATURE_GENTLE;
 }
 
 static bool32 CurrentMonIsFromGBA(void)

@@ -50,7 +50,7 @@ static void DoNothing(void);
 static void ApplyFogBlend(u8 blendCoeff, u32 blendColor);
 static bool8 LightenSpritePaletteInFog(u8 paletteIndex);
 
-EWRAM_DATA struct Weather gWeather = {0};
+EWRAM_DATA struct FieldWeather gWeather = {0};
 EWRAM_DATA static u8 ALIGNED(2) sFieldEffectPaletteColorMapTypes[32] = {0};
 
 static const u8 *sPaletteColorMapTypes;
@@ -112,7 +112,7 @@ static const u16 sDroughtWeatherColors[][0x1000] = {
     INCBIN_U16("graphics/weather/drought/colors_5.bin"),
 };
 
-struct Weather *const gWeatherPtr = &gWeather;
+struct FieldWeather *const gWeatherPtr = &gWeather;
 
 static const struct WeatherCallbacks sWeatherFuncs[] =
 {
@@ -211,7 +211,7 @@ void StartWeather(void)
     }
 }
 
-void SetNextWeather(u8 weather)
+void SetNextWeather(enum Weather weather)
 {
     if (weather != WEATHER_RAIN && weather != WEATHER_RAIN_THUNDERSTORM && weather != WEATHER_DOWNPOUR)
     {
@@ -244,7 +244,7 @@ static void UpdateWeatherForms(void)
     }
 }
 
-void SetCurrentAndNextWeather(u8 weather)
+void SetCurrentAndNextWeather(enum Weather weather)
 {
     PlayRainStoppingSoundEffect();
     gWeatherPtr->currWeather = weather;
@@ -252,7 +252,7 @@ void SetCurrentAndNextWeather(u8 weather)
     UpdateWeatherForms();
 }
 
-static void UNUSED SetCurrentAndNextWeatherNoDelay(u8 weather)
+static void UNUSED SetCurrentAndNextWeatherNoDelay(enum Weather weather)
 {
     PlayRainStoppingSoundEffect();
     gWeatherPtr->currWeather = weather;
@@ -1033,7 +1033,7 @@ bool8 Weather_UpdateBlend(void)
     return FALSE;
 }
 
-u8 GetCurrentWeather(void)
+enum Weather GetCurrentWeather(void)
 {
     return gWeatherPtr->currWeather;
 }
@@ -1130,6 +1130,8 @@ void SlightlyDarkenPalsInWeather(u16 *palbuf, u16 *unused, u32 size)
     case WEATHER_SHADE:
     case WEATHER_DOWNPOUR:
         BlendPalettesAt(palbuf, RGB_BLACK, 3, size);
+        break;
+    default:
         break;
     }
 }
