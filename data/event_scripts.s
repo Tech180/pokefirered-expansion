@@ -1,5 +1,6 @@
 #include "config/general.h"
 #include "config/battle.h"
+#include "config/overworld.h"
 #include "constants/global.h"
 #include "constants/flags.h"
 #include "constants/apprentice.h"
@@ -1169,11 +1170,11 @@ EventScript_OutOfCenterPartyHeal::
 	fadescreenswapbuffers FADE_FROM_BLACK
 	return
 
-EventScript_WallTownMap::
+EventScript_RegionMap::
 	lockall
 	msgbox Text_ATownMap
 	fadescreen FADE_TO_BLACK
-	special ShowTownMap
+	special FieldShowRegionMap
 	waitstate
 	releaseall
 	end

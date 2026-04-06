@@ -1,11 +1,12 @@
 #include "global.h"
-#include "script.h"
+#include "dexnav.h"
 #include "event_data.h"
 #include "mystery_gift.h"
 #include "random.h"
+#include "script.h"
 #include "trainer_see.h"
-#include "constants/maps.h"
 #include "constants/map_scripts.h"
+#include "constants/maps.h"
 #include "constants/script_commands.h"
 
 extern void ResetContextNpcTextColor(void); // field_specials
@@ -211,6 +212,7 @@ u32 ScriptPeekWord(struct ScriptContext *ctx)
 void LockPlayerFieldControls(void)
 {
     sLockFieldControls = TRUE;
+    EndDexNavSearch();
 }
 
 void UnlockPlayerFieldControls(void)
@@ -333,6 +335,9 @@ void ScriptContext_SetupScript(const u8 *ptr)
     InitScriptContext(&sGlobalScriptContext, gScriptCmdTable, gScriptCmdTableEnd);
     SetupBytecodeScript(&sGlobalScriptContext, ptr);
     LockPlayerFieldControls();
+    if (OW_FOLLOWERS_SCRIPT_MOVEMENT)
+        FlagSet(FLAG_SAFE_FOLLOWER_MOVEMENT);
+
     sGlobalScriptContextStatus = CONTEXT_RUNNING;
 }
 

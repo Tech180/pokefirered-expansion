@@ -6,11 +6,16 @@
 #define P_SUMMARY_SCREEN_RENAME          TRUE   // If TRUE, an option to change Pokémon nicknames replaces the cancel prompt on the summary screen info page.
 
 // IV/EV settings
-#define P_SUMMARY_SCREEN_IV_EV_INFO      FALSE  // If TRUE, will allow player to cycle through the Stats, IVs, and EVs in the summary screen skills page.
+#define P_SUMMARY_SCREEN_IV_EV_INFO      TRUE   // If TRUE, will allow player to cycle through the Stats, IVs, and EVs in the summary screen skills page.
 #define P_SUMMARY_SCREEN_IV_EV_BOX_ONLY  FALSE  // If TRUE, will allow player to cycle through the Stats, IVs, and EVs in the summary screen skills page, but only in the PC storage box.
 #define P_SUMMARY_SCREEN_IV_HYPERTRAIN   TRUE   // If TRUE, stats that have been hyper trained will show as 31/S when viewing them in the summary screen
-#define P_SUMMARY_SCREEN_IV_EV_TILESET   FALSE  // If TRUE, loads an alternate tileset to allow changing the "STATS" label in the summary screen skills page. Note: if it's still loading the alternate tileset after changing this and recompiling, you may need a `make clean` before compilation.
-#define P_SUMMARY_SCREEN_IV_EV_VALUES    FALSE  // If TRUE, will show the actual IV value instead of the letter grade.
+#define P_SUMMARY_SCREEN_IV_EV_TILESET   TRUE   // If TRUE, loads an alternate tileset to allow changing the "STATS" label in the summary screen skills page. Note: if it's still loading the alternate tileset after changing this and recompiling, you may need a `make clean` before compilation.
+
+// IV settings
+#define P_SUMMARY_SCREEN_IV_NUMBER       0      // Shows IVs as numbers in the summary screen skills page.
+#define P_SUMMARY_SCREEN_IV_GRADE        1      // Shows IVs as letter grades in the summary screen skills page.
+#define P_SUMMARY_SCREEN_IV_TEXT         2      // Shows IVs as text in the summary screen skills page (e.g. "Decent", "Pretty Good", etc.)
+#define P_SUMMARY_SCREEN_IV_DISPLAY      P_SUMMARY_SCREEN_IV_TEXT // Change this to one of the above options to set what shows in the summary screen for IVs.
 /*
 LETTER GRADE GUIDE:
 
@@ -38,7 +43,7 @@ Info taken from https://bulbapedia.bulbagarden.net/wiki/Stats_judge.
 #define P_ENABLE_ALL_LEVEL_UP_MOVES      FALSE   // If TRUE, it enables the Pokémon to learn all level up moves, regardless of its level.
 
 // TM Relearner
-#define P_TM_MOVES_RELEARNER             TRUE    // If TRUE, enables machine move relearner.
+#define P_TM_MOVES_RELEARNER             FALSE   // If TRUE, enables machine move relearner.
 #define P_ENABLE_ALL_TM_MOVES            FALSE   // If TRUE, it enables the Pokémon to learn all TMs its compatible with, regardless of it being in the bag.
 
 // Relearner flags - Redundant if P_ENABLE_MOVE_RELEARNERS is TRUE, but still added here incase you don't want all relearners unlocked at the same time.

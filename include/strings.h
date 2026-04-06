@@ -1263,12 +1263,6 @@ extern const u8 gText_LevelUp_Speed[];
 extern const u8 gText_LevelUp_Minus[];
 extern const u8 gText_LevelUp_Plus[];
 
-// field_player_avatar
-extern const u8 gText_OhABite[];
-extern const u8 gText_PokemonOnHook[];
-extern const u8 gText_NotEvenANibble[];
-extern const u8 gText_ItGotAway[];
-
 // pokemon_summary_screen
 extern const u8 gText_PokeSum_PageName_KnownMoves[];
 extern const u8 gText_PokeSum_Controls_PickSwitch[];
@@ -1302,7 +1296,10 @@ extern const u8 gText_PokeSum_PageName_PokemonInfo[];
 extern const u8 gText_PokeSum_Controls_PageCancel[];
 extern const u8 gText_PokeSum_Controls_Cancel[];
 extern const u8 gText_PokeSum_PageName_PokemonSkills[];
-extern const u8 gText_PokeSum_Controls_PageJudge[];
+extern const u8 gText_PokeSum_Controls_Page[];
+extern const u8 gText_PokeSum_Controls_PageStats[];
+extern const u8 gText_PokeSum_Controls_PageEVs[];
+extern const u8 gText_PokeSum_Controls_PageIVs[];
 extern const u8 gText_PokeSum_Controls_PickDelete[];
 extern const u8 gText_PokeSum_HmMovesCantBeForgotten[];
 extern const u8 gText_PokeSum_EggHatch_LongTime[];

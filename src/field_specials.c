@@ -375,7 +375,7 @@ u8 GetLeadMonFriendship(void)
         return 0;
 }
 
-void ShowTownMap(void)
+void FieldShowRegionMap(void)
 {
     InitRegionMapWithExitCB(REGIONMAP_TYPE_WALL, CB2_ReturnToFieldContinueScriptPlayMapMusic);
 }

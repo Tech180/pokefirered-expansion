@@ -17,7 +17,7 @@
 #include "link.h"
 #include "map_preview_screen.h"
 #include "metatile_behavior.h"
-#include "metatile_behavior.h"
+#include "oras_dowse.h"
 #include "overworld.h"
 #include "palette.h"
 #include "script.h"
@@ -689,6 +689,7 @@ static void Task_Teleport2Warp(u8 taskId)
     case 0:
         FreezeObjectEvents();
         LockPlayerFieldControls();
+        EndORASDowsing();
         task->data[0]++;
         break;
     case 1:
@@ -774,6 +775,7 @@ static void Task_DoorWarp(u8 taskId)
             ObjectEventSetHeldMovement(followerObject, MOVEMENT_ACTION_ENTER_POKEBALL);
         }
         task->tDoorTask = FieldAnimateDoorOpen(*xp, *yp - 1);
+        EndORASDowsing();
         task->tState = DOORWARP_START_WALK_UP;
         break;
     case DOORWARP_START_WALK_UP:

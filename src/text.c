@@ -1275,7 +1275,7 @@ void TextPrinterClearDownArrow(struct TextPrinter *textPrinter)
 
 bool32 TextPrinterWaitAutoMode(struct TextPrinter *textPrinter)
 {
-    if (textPrinter->autoScrollDelay == 120)
+    if (textPrinter->autoScrollDelay == NUM_FRAMES_AUTO_SCROLL_DELAY)
     {
         textPrinter->autoScrollDelay = 0;
         return TRUE;

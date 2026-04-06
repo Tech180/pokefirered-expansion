@@ -3,7 +3,7 @@
 
 // Movement config
 #define OW_RUNNING_INDOORS          GEN_LATEST  // In Gen4+, players are allowed to run indoors.
-#define SLOW_MOVEMENT_ON_STAIRS     FALSE       // If enabled, the player will move slower up/down stairs like in FR
+#define SLOW_MOVEMENT_ON_STAIRS     TRUE        // If enabled, the player will move slower up/down stairs like in FR
 
 // Other settings
 #define OW_POISON_DAMAGE                GEN_LATEST // In Gen4, Pokémon no longer faint from Poison in the overworld. In Gen5+, they no longer take damage at all.
@@ -135,6 +135,6 @@
 #define OW_FIELD_MOVES_WITHOUT_HMS  TRUE    // If TRUE, field moves can be used without having a Pokémon with the required move.
 #define OW_BATTLE_FRONTIER          TRUE    // If TRUE, enables the Battle Frontier.
 #define OW_HOF_EVENT_TICKETS        FALSE   // If TRUE, enables event tickets after hall of fame.
-#define OW_MAP_POPUP_EMERALD        TRUE   // If TRUE, emerald-style map popups are used.
+#define OW_MAP_POPUP_EMERALD        FALSE   // If TRUE, emerald-style map popups are used.
 
 #endif // GUARD_CONFIG_OVERWORLD_H

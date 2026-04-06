@@ -2,7 +2,7 @@
 #include "battle_pyramid.h"
 #include "event_data.h"
 #include "gpu_regs.h"
-#include "map_name_popup_expansion.h"
+#include "map_name_popup_emerald.h"
 #include "palette.h"
 #include "region_map.h"
 #include "string_util.h"
@@ -18,6 +18,7 @@
 
 #define FLOOR_ROOFTOP 127
 
+static void ShowMapNamePopupFRLG(bool32 palIntoFadedBuffer);
 static void Task_MapNamePopup(u8 taskId);
 static u16 MapNamePopupCreateWindow(bool32 palIntoFadedBuffer);
 static void MapNamePopupPrintMapNameOnWindow(u16 windowId);
@@ -57,32 +58,33 @@ static const u8 *const sBattlePyramid_MapHeaderStrings[FRONTIER_STAGES_PER_CHALL
 
 void ShowMapNamePopup(bool32 palIntoFadedBuffer)
 {
-    u8 taskId;
+    if (FlagGet(FLAG_DONT_SHOW_MAP_NAME_POPUP))
+        return;
 
     if (OW_MAP_POPUP_EMERALD)
-    {
-        ShowMapNamePopupExpansion();
-        return;
-    }
+        ShowMapNamePopupEmerald();
+    else
+        ShowMapNamePopupFRLG(palIntoFadedBuffer);
+}
 
-    if (FlagGet(FLAG_DONT_SHOW_MAP_NAME_POPUP) != TRUE)
+static void ShowMapNamePopupFRLG(bool32 palIntoFadedBuffer)
+{
+    u8 taskId = FindTaskIdByFunc(Task_MapNamePopup);
+
+    if (taskId == TASK_NONE)
     {
-        taskId = FindTaskIdByFunc(Task_MapNamePopup);
-        if (taskId == TASK_NONE)
-        {
-            taskId = CreateTask(Task_MapNamePopup, 90);
-            ChangeBgX(0,  0x0000, 0);
-            ChangeBgY(0, -0x1081, 0);
-            gTasks[taskId].tState = 0;
-            gTasks[taskId].tPos = 0;
-            gTasks[taskId].tPalIntoFadedBuffer = palIntoFadedBuffer;
-        }
-        else
-        {
-            if (gTasks[taskId].tState != 4)
-                gTasks[taskId].tState = 4;
-            gTasks[taskId].tReshow = TRUE;
-        }
+        taskId = CreateTask(Task_MapNamePopup, 90);
+        ChangeBgX(0,  0x0000, 0);
+        ChangeBgY(0, -0x1081, 0);
+        gTasks[taskId].tState = 0;
+        gTasks[taskId].tPos = 0;
+        gTasks[taskId].tPalIntoFadedBuffer = palIntoFadedBuffer;
+    }
+    else
+    {
+        if (gTasks[taskId].tState != 4)
+            gTasks[taskId].tState = 4;
+        gTasks[taskId].tReshow = TRUE;
     }
 }
 
@@ -171,7 +173,7 @@ void HideMapNamePopUpWindow(void)
 
     if (OW_MAP_POPUP_EMERALD)
     {
-        HideMapNamePopUpExpansionWindow();
+        HideMapNamePopUpEmeraldWindow();
         return;
     }
 
