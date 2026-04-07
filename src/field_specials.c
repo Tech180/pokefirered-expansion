@@ -750,12 +750,6 @@ bool8 IsMonOTNameNotPlayers(void)
         return TRUE;
 }
 
-// Used to nop all the unused specials from RS
-void NullFieldSpecial(void)
-{
-
-}
-
 void DoPicboxCancel(void)
 {
     DeactivateSingleTextPrinter(0, WINDOW_TEXT_PRINTER);

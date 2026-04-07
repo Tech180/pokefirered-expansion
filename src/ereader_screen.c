@@ -38,6 +38,20 @@ COMMON_DATA struct EReaderData gEReaderData = {0};
 extern const u8 gMultiBootProgram_EReader_Start[];
 extern const u8 gMultiBootProgram_EReader_End[];
 
+static const u8 sJPText_ReceiveMysteryGiftWithEReader[] = _("");
+static const u8 sJPText_SelectConnectFromEReaderMenu[] = _("");
+static const u8 sJPText_SelectConnectWithGBA[] = _("");
+static const u8 sJPText_LinkIsIncorrect[] = _("");
+static const u8 sJPText_CardReadingHasBeenHalted[] = _("");
+static const u8 sJPText_Connecting[] = _("");
+static const u8 sJPText_ConnectionErrorCheckLink[] = _("");
+static const u8 sJPText_ConnectionErrorTryAgain[] = _("");
+static const u8 sJPText_AllowEReaderToLoadCard[] = _("");
+static const u8 sJPText_ConnectionComplete[] = _("");
+static const u8 sJPText_NewTrainerHasComeToSevii[] = _("");
+static const u8 sJPText_PleaseWaitAMoment[] = _("");
+static const u8 sJPText_WriteErrorUnableToSaveData[] = _("");
+
 static void EReader_Load(struct EReaderData *eReader, size_t size, const void *data)
 {
     vu16 imeBak = REG_IME;
@@ -291,7 +305,7 @@ static void Task_EReader(u8 taskId)
     switch (data->state)
     {
     case ER_STATE_START:
-        if (PrintMysteryGiftMenuMessage(&data->textState, gJPText_ReceiveMysteryGiftWithEReader))
+        if (PrintMysteryGiftMenuMessage(&data->textState, sJPText_ReceiveMysteryGiftWithEReader))
             data->state = ER_STATE_INIT_LINK;
         break;
     case ER_STATE_INIT_LINK:
@@ -313,9 +327,9 @@ static void Task_EReader(u8 taskId)
             data->state = ER_STATE_LOAD_CARD;
         break;
     case ER_STATE_MSG_SELECT_CONNECT:
-        if (PrintMysteryGiftMenuMessage(&data->textState, gJPText_SelectConnectFromEReaderMenu))
+        if (PrintMysteryGiftMenuMessage(&data->textState, sJPText_SelectConnectFromEReaderMenu))
         {
-            AddTextPrinterToWindow1(gJPText_SelectConnectWithGBA);
+            AddTextPrinterToWindow1(sJPText_SelectConnectWithGBA);
             ResetTimer(&data->timer);
             data->state = ER_STATE_MSG_SELECT_CONNECT_WAIT;
         }
@@ -365,11 +379,11 @@ static void Task_EReader(u8 taskId)
         }
         break;
     case ER_STATE_INCORRECT_LINK:
-        if (PrintMysteryGiftMenuMessage(&data->textState, gJPText_LinkIsIncorrect))
+        if (PrintMysteryGiftMenuMessage(&data->textState, sJPText_LinkIsIncorrect))
             data->state = ER_STATE_MSG_SELECT_CONNECT;
         break;
     case ER_STATE_CONNECTING:
-        AddTextPrinterToWindow1(gJPText_Connecting);
+        AddTextPrinterToWindow1(sJPText_Connecting);
         EReader_Load(&gEReaderData, gMultiBootProgram_EReader_End - gMultiBootProgram_EReader_Start, gMultiBootProgram_EReader_Start);
         data->state = ER_STATE_TRANSFER;
         break;
@@ -387,7 +401,7 @@ static void Task_EReader(u8 taskId)
         else if (data->status == TRANSFER_SUCCESS)
         {
             ResetTimer(&data->timer);
-            AddTextPrinterToWindow1(gJPText_PleaseWaitAMoment);
+            AddTextPrinterToWindow1(sJPText_PleaseWaitAMoment);
             data->state = ER_STATE_TRANSFER_SUCCESS;
         }
         else // TRANSFER_CANCELED
@@ -401,7 +415,7 @@ static void Task_EReader(u8 taskId)
         break;
     case ER_STATE_LOAD_CARD_START:
         OpenEReaderLink();
-        AddTextPrinterToWindow1(gJPText_AllowEReaderToLoadCard);
+        AddTextPrinterToWindow1(sJPText_AllowEReaderToLoadCard);
         data->state = ER_STATE_LOAD_CARD;
         break;
     case ER_STATE_LOAD_CARD:
@@ -411,7 +425,7 @@ static void Task_EReader(u8 taskId)
             // Running
             break;
         case RECV_SUCCESS:
-            AddTextPrinterToWindow1(gJPText_Connecting);
+            AddTextPrinterToWindow1(sJPText_Connecting);
             data->state = ER_STATE_WAIT_RECV_CARD;
             break;
         case RECV_CANCELED:
@@ -459,7 +473,7 @@ static void Task_EReader(u8 taskId)
     case ER_STATE_SAVE:
         if (CEReaderTool_SaveTrainerTower((struct EReaderTrainerTowerSet *)data->buffer))
         {
-            AddTextPrinterToWindow1(gJPText_ConnectionComplete);
+            AddTextPrinterToWindow1(sJPText_ConnectionComplete);
             ResetTimer(&data->timer);
             data->state = ER_STATE_SUCCESS_MSG;
         }
@@ -469,7 +483,7 @@ static void Task_EReader(u8 taskId)
     case ER_STATE_SUCCESS_MSG:
         if (UpdateTimer(&data->timer, 120))
         {
-            AddTextPrinterToWindow1(gJPText_NewTrainerHasComeToSevii);
+            AddTextPrinterToWindow1(sJPText_NewTrainerHasComeToSevii);
             PlayFanfare(MUS_OBTAIN_ITEM);
             data->state = ER_STATE_SUCCESS_END;
         }
@@ -479,19 +493,19 @@ static void Task_EReader(u8 taskId)
             data->state = ER_STATE_END;
         break;
     case ER_STATE_CANCELED_CARD_READ:
-        if (PrintMysteryGiftMenuMessage(&data->textState, gJPText_CardReadingHasBeenHalted))
+        if (PrintMysteryGiftMenuMessage(&data->textState, sJPText_CardReadingHasBeenHalted))
             data->state = ER_STATE_END;
         break;
     case ER_STATE_LINK_ERROR:
-        if (PrintMysteryGiftMenuMessage(&data->textState, gJPText_ConnectionErrorCheckLink))
+        if (PrintMysteryGiftMenuMessage(&data->textState, sJPText_ConnectionErrorCheckLink))
             data->state = ER_STATE_START;
         break;
     case ER_STATE_LINK_ERROR_TRY_AGAIN:
-        if (PrintMysteryGiftMenuMessage(&data->textState, gJPText_ConnectionErrorTryAgain))
+        if (PrintMysteryGiftMenuMessage(&data->textState, sJPText_ConnectionErrorTryAgain))
             data->state = ER_STATE_START;
         break;
     case ER_STATE_SAVE_FAILED:
-        if (PrintMysteryGiftMenuMessage(&data->textState, gJPText_WriteErrorUnableToSaveData))
+        if (PrintMysteryGiftMenuMessage(&data->textState, sJPText_WriteErrorUnableToSaveData))
             data->state = ER_STATE_START;
         break;
     case ER_STATE_END:
