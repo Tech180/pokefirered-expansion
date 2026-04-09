@@ -2563,6 +2563,14 @@ enum EscapeRopeWarpInState
     ESCAPE_ROPE_WARP_IN_SPIN,
 };
 
+enum EscapeRopeWarpFollowerState
+{
+    ESCAPE_ROPE_FOLLOWER_WAIT_FOR_PLAYER,
+    ESCAPE_ROPE_FOLLOWER_REAPPEAR,
+    ESCAPE_ROPE_FOLLOWER_FACE_PLAYER,
+    ESCAPE_ROPE_FOLLOWER_END,
+};
+
 // Task data for Task_EscapeRopeWarpIn
 #define tState         data[0]
 #define tMovingState   data[1]
@@ -2575,7 +2583,7 @@ enum EscapeRopeWarpInState
 #define tCurrentDir    data[8]
 #define tSpinDelay     data[9]
 #define tNumTurns      data[10]
-#define tState2        data[11]
+#define tFollowerState data[11]
 #define tStartDir   data[15]
 
 
@@ -2655,17 +2663,17 @@ static void EscapeRopeWarpInEffect_Init(struct Task *task)
     PlaySE(SE_WARP_OUT);
     task->tStartDir = GetPlayerFacingDirection();
     task->tState = ESCAPE_ROPE_WARP_IN_SPIN;
-    task->tState2 = 0;
+    task->tFollowerState = ESCAPE_ROPE_FOLLOWER_WAIT_FOR_PLAYER;
 
 }
 
 static void EscapeRopeWarpInEffect_Spin(struct Task *task)
 {
     struct ObjectEvent *playerObj = &gObjectEvents[gPlayerAvatar.objectEventId];
+    struct ObjectEvent *followerObj = &gObjectEvents[GetFollowerNPCObjectId()];
     bool32 moving = WarpInObjectEventDownwards(playerObj, &task->tMovingState, &task->tOffsetY, &task->tPriority, &task->tSubpriority, &task->tSubspriteMode);
 
     playerObj->invisible = FALSE;
-    // TODO: Follower NPC?
     if (task->tTimer < 8)
     {
         task->tTimer++;
@@ -2678,7 +2686,33 @@ static void EscapeRopeWarpInEffect_Spin(struct Task *task)
             task->tSpinEnded = TRUE;
     }
 
-    if (!moving && task->tCurrentDir == task->tStartDir && ObjectEventCheckHeldMovementStatus(playerObj) == TRUE)
+    if (!moving && task->tCurrentDir == task->tStartDir && ObjectEventCheckHeldMovementStatus(playerObj) == TRUE && task->tFollowerState == ESCAPE_ROPE_FOLLOWER_WAIT_FOR_PLAYER)
+        task->tFollowerState = ESCAPE_ROPE_FOLLOWER_REAPPEAR;
+
+    if (task->tFollowerState == ESCAPE_ROPE_FOLLOWER_REAPPEAR)
+    {
+        if (FNPC_NPC_FOLLOWER_SHOW_AFTER_LEAVE_ROUTE)
+            FollowerNPCReappearAfterLeaveMap(followerObj, playerObj);
+
+        task->tFollowerState = ESCAPE_ROPE_FOLLOWER_FACE_PLAYER;
+    }
+
+    if (task->tFollowerState == ESCAPE_ROPE_FOLLOWER_FACE_PLAYER)
+    {
+        if (PlayerHasFollowerNPC() && ObjectEventClearHeldMovementIfFinished(followerObj))
+        {
+            if (FNPC_NPC_FOLLOWER_SHOW_AFTER_LEAVE_ROUTE)
+                FollowerNPCFaceAfterLeaveMap();
+
+            task->tFollowerState = ESCAPE_ROPE_FOLLOWER_END;
+        }
+        else if (!PlayerHasFollowerNPC())
+        {
+            task->tFollowerState = ESCAPE_ROPE_FOLLOWER_END;
+        }
+    }
+
+    if (task->tFollowerState == ESCAPE_ROPE_FOLLOWER_END)
     {
         playerObj->invisible = FALSE;
         playerObj->fixedPriority = FALSE;
@@ -2699,6 +2733,7 @@ static void EscapeRopeWarpInEffect_Spin(struct Task *task)
 #undef tCurrentDir
 #undef tSpinDelay
 #undef tNumTurns
+#undef tFollowerState
 #undef tStartDir
 
 enum TeleportWarpOutState
@@ -2821,6 +2856,13 @@ enum TeleportWarpInState
     TELEPORT_WARP_IN_SPIN_GROUND,
 };
 
+enum TeleportWarpFollowerState
+{
+    TELEPORT_FOLLOWER_WAIT_FOR_PLAYER,
+    TELEPORT_FOLLOWER_FACE_PLAYER,
+    TELEPORT_FOLLOWER_END,
+};
+
 static void (*const sTeleportWarpInFieldEffectFuncs[])(struct Task *) =
 {
     [TELEPORT_WARP_IN_INIT]        = TeleportWarpInFieldEffect_Init,
@@ -2840,14 +2882,15 @@ static void FieldCallback_TeleportWarpIn(void)
     CreateTask(Task_TeleportWarpIn, 0);
 }
 
-#define tState      data[0]
-#define tFallOffset data[1]
-#define tSpinTimer2 data[1] // reused
-#define tSpinTimer  data[2]
-#define tSpinCount  data[2] // reused
-#define tSetTrigger data[13]
-#define tSubsprMode data[14]
-#define tStartDir   data[15]
+#define tState         data[0]
+#define tFallOffset    data[1]
+#define tSpinTimer2    data[1] // reused
+#define tSpinTimer     data[2]
+#define tSpinCount     data[2] // reused
+#define tFollowerState data[3]
+#define tSetTrigger    data[13]
+#define tSubsprMode    data[14]
+#define tStartDir      data[15]
 
 static void Task_TeleportWarpIn(u8 taskId)
 {
@@ -2910,23 +2953,49 @@ static void TeleportWarpInFieldEffect_SpinEnter(struct Task *task)
         task->tState = TELEPORT_WARP_IN_SPIN_GROUND;
         task->tSpinTimer2 = 1;
         task->tSpinCount = 0;
+        task->tFollowerState = TELEPORT_FOLLOWER_WAIT_FOR_PLAYER;
     }
 }
 
 static void TeleportWarpInFieldEffect_SpinGround(struct Task *task)
 {
-    struct ObjectEvent * objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
-    if ((--task->tSpinTimer2) == 0)
+    struct ObjectEvent *player = &gObjectEvents[gPlayerAvatar.objectEventId];
+    struct ObjectEvent *follower = &gObjectEvents[GetFollowerNPCObjectId()];
+
+    if ((--task->tSpinTimer2) == 0 && task->tFollowerState == TELEPORT_FOLLOWER_WAIT_FOR_PLAYER)
     {
-        ObjectEventTurn(objectEvent, sSpinDirections[objectEvent->facingDirection]);
+        ObjectEventTurn(player, sSpinDirections[player->facingDirection]);
         task->tSpinTimer2 = 8;
-        if ((++task->tSpinCount) > 4 && task->tSubsprMode == objectEvent->facingDirection)
+        if ((++task->tSpinCount) > 4 && task->tSubsprMode == player->facingDirection)
         {
-            UnlockPlayerFieldControls();
-            CameraObjectReset();
-            UnfreezeObjectEvents();
-            DestroyTask(FindTaskIdByFunc(Task_TeleportWarpIn));
+            if (FNPC_NPC_FOLLOWER_SHOW_AFTER_LEAVE_ROUTE)
+                FollowerNPCReappearAfterLeaveMap(follower, player);
+
+            task->tFollowerState = TELEPORT_FOLLOWER_FACE_PLAYER;
         }
+    }
+
+    if (task->tFollowerState == TELEPORT_FOLLOWER_FACE_PLAYER)
+    {
+        if (PlayerHasFollowerNPC() && ObjectEventClearHeldMovementIfFinished(follower))
+        {
+            if (FNPC_NPC_FOLLOWER_SHOW_AFTER_LEAVE_ROUTE)
+                FollowerNPCFaceAfterLeaveMap();
+
+            task->tFollowerState = TELEPORT_FOLLOWER_END;
+        }
+        else if (!PlayerHasFollowerNPC())
+        {
+            task->tFollowerState = TELEPORT_FOLLOWER_END;
+        }
+    }
+
+    if (task->tFollowerState == TELEPORT_FOLLOWER_END)
+    {
+        UnlockPlayerFieldControls();
+        CameraObjectReset();
+        UnfreezeObjectEvents();
+        DestroyTask(FindTaskIdByFunc(Task_TeleportWarpIn));
     }
 }
 
@@ -2935,6 +3004,7 @@ static void TeleportWarpInFieldEffect_SpinGround(struct Task *task)
 #undef tSpinTimer2
 #undef tSpinTimer
 #undef tSpinCount
+#undef tFollowerState
 #undef tSetTrigger
 #undef tSubsprMode
 #undef tStartDir

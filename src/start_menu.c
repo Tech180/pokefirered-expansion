@@ -1047,7 +1047,11 @@ static u8 SaveConfirmInputCallback(void)
     switch (Menu_ProcessInputNoWrapClearOnChoose())
     {
     case 0:
-        if ((gSaveFileStatus != SAVE_STATUS_EMPTY && gSaveFileStatus != SAVE_STATUS_CORRUPT) || !gDifferentSaveFile)
+        if (SKIP_SAVE_CONFIRMATION)
+            sSaveDialogCallback = SaveSavingMessageCallback;
+        else if (gSaveFileStatus != SAVE_STATUS_EMPTY && gSaveFileStatus != SAVE_STATUS_CORRUPT)
+            sSaveDialogCallback = SaveFileExistsCallback;
+        else if (!gDifferentSaveFile)
             sSaveDialogCallback = SaveFileExistsCallback;
         else
             sSaveDialogCallback = SaveSavingMessageCallback;
