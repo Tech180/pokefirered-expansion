@@ -215,7 +215,6 @@ extern const u8 gText_LinkStandby[];
 extern const u8 gText_BattleMenu[];
 extern const u8 gText_WhatWillPkmnDo[];
 extern const u8 gText_NewLine[];
-extern const u8 gText_Space2[];
 
 // battle_controller_pokedude
 extern const u8 Pokedude_Text_SpeedierBattlerGoesFirst[];
@@ -1382,7 +1381,6 @@ extern const u8 gText_CommaSpace[];
 extern const u8 gText_NewLine[];
 extern const u8 gText_LineBreak[];
 extern const u8 gText_Space[];
-extern const u8 gText_Space2[];
 extern const u8 gText_Are[];
 extern const u8 gText_Are2[];
 extern const u8 gText_123Dot[][3];
