@@ -133,6 +133,9 @@ static void CreateBerryPouchSprite(void);
 static void StartBerryPouchSpriteWobbleAnim(void);
 static void SpriteCB_BerryPouchWaitWobbleAnim(struct Sprite *sprite);
 
+static const u8 sText_Var1CantBeHeldHere[] = _("The {STR_VAR_1} can't be held\nhere.");
+static const u8 sText_TheBerryPouchWillBePutAway[] = _("The BERRY POUCH will be\nput away.");
+
 static const struct BgTemplate sBgTemplates[] =
 {
     {
@@ -187,11 +190,11 @@ static const struct YesNoFuncTable sYesNoFuncs_Sell =
 
 static const struct MenuAction sContextMenuActions[] =
 {
-    {gMenuText_Use,  {Task_BerryPouch_Use}},
-    {gMenuText_Toss, {Task_BerryPouch_Toss}},
-    {gMenuText_Give, {Task_BerryPouch_Give}},
-    {gOtherText_Exit, {Task_BerryPouch_Exit}},
-    {gString_Dummy,   {NULL}}
+    {gText_Use,  {Task_BerryPouch_Use}},
+    {gText_Toss, {Task_BerryPouch_Toss}},
+    {gText_Give, {Task_BerryPouch_Give}},
+    {gText_Exit, {Task_BerryPouch_Exit}},
+    {gText_EmptyString,   {NULL}}
 };
 
 static const u8 sOptions_UseGiveTossExit[] = {
@@ -802,7 +805,7 @@ static void BerryPouchSetArrowCursorAt(u8 y, u8 colorIdx)
     }
     else
     {
-        BerryPouchPrint(0, FONT_NORMAL, gText_SelectorArrow2, 1, y, 0, 0, 0, colorIdx);
+        BerryPouchPrint(0, FONT_NORMAL, gText_SelectorArrow, 1, y, 0, 0, 0, colorIdx);
     }
 }
 
@@ -812,7 +815,7 @@ static void PrintSelectedBerryDescription(s32 itemIdx)
     if (itemIdx != sResources->listMenuNumItems)
         str = GetItemDescription(GetBagItemId(POCKET_BERRIES, itemIdx));
     else
-        str = gText_TheBerryPouchWillBePutAway;
+        str = sText_TheBerryPouchWillBePutAway;
     FillWindowPixelBuffer(1, PIXEL_FILL(0));
     BerryPouchPrint(1, FONT_NORMAL, str, 0, 2, 2, 0, 0, 0);
 }
@@ -1338,7 +1341,7 @@ static void Task_ContextMenu_FromPartyGiveMenu(u8 taskId)
     if (!IsHoldingItemAllowed(gSpecialVar_ItemId))
     {
         CopyItemName(gSpecialVar_ItemId, gStringVar1);
-        StringExpandPlaceholders(gStringVar4, gText_Var1CantBeHeldHere);
+        StringExpandPlaceholders(gStringVar4, sText_Var1CantBeHeldHere);
         DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, gStringVar4, Task_WaitButtonBeforeDialogueWindowDestruction);
     }
     else

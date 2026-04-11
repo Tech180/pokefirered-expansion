@@ -102,6 +102,12 @@ static u8 ItemPc_GetOrCreateSubwindow(u8 idx);
 static void ItemPc_DestroySubwindow(u8 idx);
 static void ItemPc_PrintOnWindow5WithContinueTask(u8 taskId, const u8 * str, TaskFunc taskFunc);
 
+static const u8 sText_WithdrewQuantItem[] = _("Withdrew {STR_VAR_2}\n{STR_VAR_1}(s).");
+static const u8 sText_WithdrawItem[] = _("WITHDRAW\nITEM");
+static const u8 sText_ReturnToPC[] = _("Return to the PC.");
+static const u8 sText_NoMoreRoomInBag[] = _("There is no more\nroom in the BAG.");
+static const u8 sText_WithdrawHowMany[] = _("Withdraw how many\n{STR_VAR_1}(s)?");
+
 static const struct BgTemplate sBgTemplates[2] = {
     {
         .bg = 0,
@@ -118,8 +124,8 @@ static const struct BgTemplate sBgTemplates[2] = {
 
 static const struct MenuAction sItemPcSubmenuOptions[] = {
     {gText_Withdraw,          {.void_u8 = Task_ItemPcWithdraw}},
-    {gMenuText_Give,         {.void_u8 = Task_ItemPcGive}},
-    {gFameCheckerText_Cancel, {.void_u8 = Task_ItemPcCancel}}
+    {gText_Give,         {.void_u8 = Task_ItemPcGive}},
+    {gText_Cancel, {.void_u8 = Task_ItemPcCancel}}
 };
 
 static const u8 sTextColors[][3] = {
@@ -490,7 +496,7 @@ static void ItemPc_BuildListMenuTemplate(void)
         sListMenuItems[i].name = GetItemName(gSaveBlock1Ptr->pcItems[i].itemId);
         sListMenuItems[i].id = i;
     }
-    sListMenuItems[i].name = gFameCheckerText_Cancel;
+    sListMenuItems[i].name = gText_Cancel;
     sListMenuItems[i].id = -2;
 
     gMultiuseListMenuTemplate.items = sListMenuItems;
@@ -567,7 +573,7 @@ static void ItemPc_MoveCursorFunc(s32 itemIndex, bool8 onInit, struct ListMenu *
         else
         {
             AddPcItemIconSprite(ITEMS_COUNT, sStateDataPtr->itemMenuIconSlot);
-            desc = gText_ReturnToPC;
+            desc = sText_ReturnToPC;
         }
         RemovePcItemIconSprite(itemId, sStateDataPtr->itemMenuIconSlot ^ 1);
         sStateDataPtr->itemMenuIconSlot ^= 1;
@@ -609,13 +615,13 @@ static void ItemPc_PrintOrRemoveCursorAt(u8 y, u8 colorIdx)
     }
     else
     {
-        ItemPc_AddTextPrinterParameterized(0, FONT_NORMAL, gText_SelectorArrow2, 0, y, 0, 0, 0, colorIdx);
+        ItemPc_AddTextPrinterParameterized(0, FONT_NORMAL, gText_SelectorArrow, 0, y, 0, 0, 0, colorIdx);
     }
 }
 
 static void ItemPc_PrintWithdrawItem(void)
 {
-    ItemPc_AddTextPrinterParameterized(2, FONT_SMALL, gText_WithdrawItem, 0, 1, 0, 1, 0, 0);
+    ItemPc_AddTextPrinterParameterized(2, FONT_SMALL, sText_WithdrawItem, 0, 1, 0, 1, 0, 0);
 }
 
 static void ItemPc_PlaceTopMenuScrollIndicatorArrows(void)
@@ -941,7 +947,7 @@ static void ItemPc_DoWithdraw(u8 taskId)
     {
         CopyItemName(itemId, gStringVar1);
         ConvertIntToDecimalStringN(gStringVar2, tItemCount, STR_CONV_MODE_LEFT_ALIGN, MAX_ITEM_DIGITS);
-        StringExpandPlaceholders(gStringVar4, gText_WithdrewQuantItem);
+        StringExpandPlaceholders(gStringVar4, sText_WithdrewQuantItem);
         windowId = ItemPc_GetOrCreateSubwindow(2);
         AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar4, 0, 2, 0, NULL);
         gTasks[taskId].func = Task_ItemPcWaitButtonAndFinishWithdrawMultiple;
@@ -949,7 +955,7 @@ static void ItemPc_DoWithdraw(u8 taskId)
     else
     {
         windowId = ItemPc_GetOrCreateSubwindow(2);
-        AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_NoMoreRoomInBag, 0, 2, 0, NULL);
+        AddTextPrinterParameterized(windowId, FONT_NORMAL, sText_NoMoreRoomInBag, 0, 2, 0, NULL);
         gTasks[taskId].func = Task_ItemPcWaitButtonWithdrawMultipleFailed;
     }
 }
@@ -996,7 +1002,7 @@ static void ItemPc_WithdrawMultipleInitWindow(u16 slotId)
     enum Item itemId = ItemPc_GetItemIdBySlotId(slotId);
 
     CopyItemName(itemId, gStringVar1);
-    StringExpandPlaceholders(gStringVar4, gText_WithdrawHowMany);
+    StringExpandPlaceholders(gStringVar4, sText_WithdrawHowMany);
     AddTextPrinterParameterized(ItemPc_GetOrCreateSubwindow(1), FONT_NORMAL, gStringVar4, 0, 2, 0, NULL);
     ConvertIntToDecimalStringN(gStringVar1, 1, STR_CONV_MODE_LEADING_ZEROS, MAX_ITEM_DIGITS);
     StringExpandPlaceholders(gStringVar4, gText_xVar1);

@@ -1395,7 +1395,7 @@ void PlayTrainerEncounterMusic(void)
 static const u8 *ReturnEmptyStringIfNull(const u8 *string)
 {
     if (string == NULL)
-        return gString_Dummy;
+        return gText_EmptyString;
     else
         return string;
 }

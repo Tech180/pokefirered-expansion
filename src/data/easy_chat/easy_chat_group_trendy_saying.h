@@ -8,7 +8,6 @@ static const u8 sEasyChatWord_YeehawExcl[] = _("YEEHAW!");
 static const u8 sEasyChatWord_Mega[] = _("MEGA");
 static const u8 sEasyChatWord_1HitKOExcl[] = _("1-HIT KO!");
 static const u8 sEasyChatWord_Destiny[] = _("DESTINY");
-static const u8 sEasyChatWord_Cancel[] = _("CANCEL");
 static const u8 sEasyChatWord_New[] = _("NEW");
 static const u8 sEasyChatWord_Flatten[] = _("FLATTEN");
 static const u8 sEasyChatWord_Kidding[] = _("KIDDING");
@@ -22,7 +21,6 @@ static const u8 sEasyChatWord_Upbeat[] = _("UPBEAT");
 static const u8 sEasyChatWord_Modern[] = _("MODERN");
 static const u8 sEasyChatWord_SmellYa[] = _("SMELL YA");
 static const u8 sEasyChatWord_Bang[] = _("BANG");
-static const u8 sEasyChatWord_Knockout[] = _("KNOCKOUT");
 static const u8 sEasyChatWord_Hassle[] = _("HASSLE");
 static const u8 sEasyChatWord_Winner[] = _("WINNER");
 static const u8 sEasyChatWord_Fever[] = _("FEVER");
@@ -80,7 +78,7 @@ static const struct EasyChatWordInfo sEasyChatGroup_TrendySaying[] = {
         .enabled = FALSE
     },
     {
-        .text = sEasyChatWord_Cancel,
+        .text = gText_Cancel,
         .alphabeticalOrder = 15,
         .enabled = FALSE
     },
@@ -150,7 +148,7 @@ static const struct EasyChatWordInfo sEasyChatGroup_TrendySaying[] = {
         .enabled = FALSE
     },
     {
-        .text = sEasyChatWord_Knockout,
+        .text = gText_Knockout,
         .alphabeticalOrder = 18,
         .enabled = FALSE
     },

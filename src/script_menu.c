@@ -89,10 +89,13 @@ static const u8 sText_ThreeIsland[] = _("THREE ISLAND");
 static const u8 sText_SeviiIslands[] = _("SEVII ISLANDS");
 static const u8 sText_NavelRock[] = _("NAVEL ROCK");
 static const u8 sText_BirthIsland[] = _("BIRTH ISLAND");
-static const u8 sText_Retire[] = _("RETIRE");
-static const u8 sText_Other[] = _("OTHER");
 static const u8 sText_NoThanks[] = _("NO THANKS");
 static const u8 sText_Quit[] = _("QUIT");
+static const u8 sText_SomeoneSPc[] = _("SOMEONE'S PC");
+static const u8 sText_BillsPc[] = _("BILL'S PC");
+static const u8 sText_PlayersPc[] = _("{PLAYER}'s PC");
+static const u8 sText_LogOff[] = _("LOG OFF");
+static const u8 sText_ProfOaksPc[] = _("PROF. OAK's PC");
 
 static const struct DynamicListMenuEventCollection sDynamicListMenuEventCollections[] =
 {
@@ -181,7 +184,7 @@ static const struct MenuAction sMultichoiceList_TrainerSchoolWhiteboard[] = {
     { COMPOUND_STRING("PAR") },
     { COMPOUND_STRING("BRN") },
     { COMPOUND_STRING("FRZ") },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_YesNoInfo[] = {
@@ -195,53 +198,53 @@ static const struct MenuAction sMultichoiceList_SingleDoubleMultiInfoExit[] = {
     { gText_DoubleBattle },
     { gText_MultiBattle },
     { gText_Info },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_ChallengeInfoExit[] = {
     { COMPOUND_STRING("Make a challenge.") },
     { gText_Info },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_RooftopB1F[] = {
     { gText_Rooftop },
     { gText_B1F },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_Helix[] = {
     { sText_HelixFossil },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_Dome[] = {
     { sText_DomeFossil },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_Amber[] = {
     { sText_OldAmber },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_HelixAmber[] = {
     { sText_HelixFossil },
     { sText_OldAmber },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_DomeAmber[] = {
     { sText_DomeFossil },
     { sText_OldAmber },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_CeladonVendingMachine[] = {
     { COMPOUND_STRING("FRESH WATER{CLEAR_TO 0x57}{FONT_SMALL}¥200") },
     { COMPOUND_STRING("SODA POP{CLEAR_TO 0x57}{FONT_SMALL}¥300") },
     { COMPOUND_STRING("LEMONADE{CLEAR_TO 0x57}{FONT_SMALL}¥350") },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_GameCornerTMPrizes[] = {
@@ -265,7 +268,7 @@ static const struct MenuAction sMultichoiceList_GameCornerBattleItemPrizes[] = {
 static const struct MenuAction sMultichoiceList_GameCornerCoinPurchaseCounter[] = {
     { COMPOUND_STRING("{FONT_SMALL} 50 COINS{CLEAR_TO 0x45}¥1,000") },
     { COMPOUND_STRING("{FONT_SMALL}500 COINS{CLEAR_TO 0x40}¥10,000") },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_DeptStoreElevator[] = {
@@ -274,47 +277,47 @@ static const struct MenuAction sMultichoiceList_DeptStoreElevator[] = {
     { gText_3F },
     { gText_2F },
     { gText_1F },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_ThirstyGirlFreshWater[] = {
     { sText_FreshWater },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_ThirstyGirlSodaPop[] = {
     { sText_SodaPop },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_ThirstyGirlFreshWaterSodaPop[] = {
     { sText_FreshWater },
     { sText_SodaPop },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_ThirstyGirlLemonade[] = {
     { sText_Lemonade },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_ThirstyGirlFreshWaterLemonade[] = {
     { sText_FreshWater },
     { sText_Lemonade },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_ThirstyGirlSodaPopLemonade[] = {
     { sText_SodaPop },
     { sText_Lemonade },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_ThirstyGirlFreshWaterSodaPopLemonade[] = {
     { sText_FreshWater },
     { sText_SodaPop },
     { sText_Lemonade },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_Eeveelutions[] = {
@@ -350,14 +353,14 @@ static const struct MenuAction sMultichoiceList_GameCornerPokemonPrizes[] = {
 static const struct MenuAction sMultichoiceList_TradeCenter_Colosseum[] = {
     { sText_TradeCenter },
     { sText_Colosseum },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_RocketHideoutElevator[] = {
     { gText_B1F },
     { gText_B2F },
     { gText_B4F },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_LinkedDirectUnion[] = {
@@ -370,38 +373,38 @@ static const struct MenuAction sMultichoiceList_LinkedDirectUnion[] = {
 static const struct MenuAction sMultichoiceList_Island23[] = {
     { sText_TwoIsland },
     { sText_ThreeIsland },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_Island13[] = {
     { sText_OneIsland },
     { sText_ThreeIsland },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_Island12[] = {
     { sText_OneIsland },
     { sText_TwoIsland },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_TradeColosseumCrush[] = {
     { sText_TradeCenter },
     { sText_Colosseum },
     { gText_BerryCrush },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_TradeColosseum_2[] = {
     { sText_TradeCenter },
     { sText_Colosseum },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_PokejumpDodrio[] = {
     { gText_PokemonJump },
     { COMPOUND_STRING("DODRIO BERRY-PICKING") },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_Mushrooms[] = {
@@ -412,74 +415,74 @@ static const struct MenuAction sMultichoiceList_Mushrooms[] = {
 static const struct MenuAction sMultichoiceList_SeviiNavel[] = {
     { sText_SeviiIslands },
     { sText_NavelRock },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_SeviiBirth[] = {
     { sText_SeviiIslands },
     { sText_BirthIsland },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_SeviiNavelBirth[] = {
     { sText_SeviiIslands },
     { sText_NavelRock },
     { sText_BirthIsland },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_Seagallop123[] = {
     { sText_OneIsland },
     { sText_TwoIsland },
     { sText_ThreeIsland },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_SeagallopV23[] = {
     { sText_Vermilion },
     { sText_TwoIsland },
     { sText_ThreeIsland },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_SeagallopV13[] = {
     { sText_Vermilion },
     { sText_OneIsland },
     { sText_ThreeIsland },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_SeagallopV12[] = {
     { sText_Vermilion },
     { sText_OneIsland },
     { sText_TwoIsland },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_SeagallopVermilion[] = {
     { sText_Vermilion },
-    { gOtherText_Exit }
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_JoinOrLead[] = {
     {COMPOUND_STRING("JOIN GROUP")},
     {COMPOUND_STRING("BECOME LEADER")},
-    {gOtherText_Exit}
+    {gText_Exit}
 };
 
 static const struct MenuAction sMultichoiceList_TrainerTowerMode[] = {
-    { gOtherText_Single },
-    { gOtherText_Double },
-    { gOtherText_Knockout },
-    { gOtherText_Mixed },
-    { gOtherText_Exit }
+    { gText_Single },
+    { gText_Double },
+    { gText_Knockout },
+    { gText_Mixed },
+    { gText_Exit }
 };
 
 static const struct MenuAction sMultichoiceList_FrontierRules[] =
 {
     {COMPOUND_STRING("TWO STYLES")},
-    {COMPOUND_STRING("LV. 50")},
-    {COMPOUND_STRING("OPEN LEVEL")},
+    {gText_Lv50},
+    {gText_OpenLevel},
     {COMPOUND_STRING("{PKMN} TYPE & NO.")},
     {COMPOUND_STRING("HOLD ITEMS")},
     {gText_Exit},
@@ -514,7 +517,7 @@ static const struct MenuAction sMultichoiceList_BattleFactoryRules[] =
     {COMPOUND_STRING("SWAP: PARTNER")},
     {COMPOUND_STRING("SWAP: NUMBER")},
     {COMPOUND_STRING("SWAP: NOTES")},
-    {COMPOUND_STRING("OPEN LEVEL")},
+    {gText_OpenLevel},
     {gText_Exit},
 };
 
@@ -523,27 +526,27 @@ static const struct MenuAction sMultichoiceList_GoOnRecordRestRetire[] =
     {sText_GoOn},
     {gText_Record},
     {gText_Rest},
-    {sText_Retire},
+    {gText_Retire},
 };
 
 static const struct MenuAction sMultichoiceList_GoOnRestRetire[] =
 {
     {sText_GoOn},
     {gText_Rest},
-    {sText_Retire},
+    {gText_Retire},
 };
 
 static const struct MenuAction sMultichoiceList_GoOnRecordRetire[] =
 {
     {sText_GoOn},
     {gText_Record},
-    {sText_Retire},
+    {gText_Retire},
 };
 
 static const struct MenuAction sMultichoiceList_GoOnRetire[] =
 {
     {sText_GoOn},
-    {sText_Retire},
+    {gText_Retire},
 };
 
 static const struct MenuAction sMultichoiceList_BattleArenaRules[] =
@@ -570,7 +573,7 @@ static const struct MenuAction sMultichoiceList_TourneyWithRecord[] =
     {sText_ReadyToStart},
     {gText_Record},
     {gText_Rest},
-    {sText_Retire},
+    {gText_Retire},
 };
 
 static const struct MenuAction sMultichoiceList_TourneyNoRecord[] =
@@ -579,7 +582,7 @@ static const struct MenuAction sMultichoiceList_TourneyNoRecord[] =
     {sText_Tourney_Tree},
     {sText_ReadyToStart},
     {gText_Rest},
-    {sText_Retire},
+    {gText_Retire},
 };
 
 static const struct MenuAction sMultichoiceList_BattlePalaceRules[] =
@@ -746,8 +749,8 @@ const u8 *const gStdStrings[] = {
     [STDSTRING_POKEBALLS_POCKET] = COMPOUND_STRING("POKé BALLS POCKET"),
     [STDSTRING_TM_CASE]          = gText_TMCase,
     [STDSTRING_BERRY_POUCH]      = gText_BerryPouch,
-    [STDSTRING_SINGLE]           = gOtherText_Single,
-    [STDSTRING_DOUBLE]           = gOtherText_Double,
+    [STDSTRING_SINGLE]           = gText_Single,
+    [STDSTRING_DOUBLE]           = gText_Double,
     [STDSTRING_MULTI]            = COMPOUND_STRING("MULTI"),
     [STDSTRING_MULTI_LINK]       = sText_MultiLink,
     [STDSTRING_BATTLE_DOME]      = gText_BattleDome,
@@ -1396,7 +1399,7 @@ static void CreatePCMultichoice(void)
     u8 numItems;
     u8 windowId;
 
-    switch (GetStringTilesWide(gText_SPc))
+    switch (GetStringTilesWide(sText_PlayersPc))
     {
     default:
         if (FlagGet(FLAG_SYS_POKEDEX_GET))
@@ -1415,9 +1418,9 @@ static void CreatePCMultichoice(void)
         numItems = 5;
         windowId = CreateWindowFromRect(0, 0, windowWidth, 10);
         SetStandardWindowBorderStyle(windowId, FALSE);
-        AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_ProfOakSPc, cursorWidth, 34, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(windowId, FONT_NORMAL, sText_ProfOaksPc, cursorWidth, 34, TEXT_SKIP_DRAW, NULL);
         AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_HallOfFame, cursorWidth, 50, TEXT_SKIP_DRAW, NULL);
-        AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_LogOff, cursorWidth, 66, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(windowId, FONT_NORMAL, sText_LogOff, cursorWidth, 66, TEXT_SKIP_DRAW, NULL);
     }
     else
     {
@@ -1429,17 +1432,17 @@ static void CreatePCMultichoice(void)
         windowId = CreateWindowFromRect(0, 0, windowWidth, numItems * 2);
         SetStandardWindowBorderStyle(windowId, FALSE);
         if (FlagGet(FLAG_SYS_POKEDEX_GET))
-            AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_ProfOakSPc, cursorWidth, 34, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(windowId, FONT_NORMAL, sText_ProfOaksPc, cursorWidth, 34, TEXT_SKIP_DRAW, NULL);
 
-        AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_LogOff, cursorWidth, 2 + 16 * (numItems - 1), TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(windowId, FONT_NORMAL, sText_LogOff, cursorWidth, 2 + 16 * (numItems - 1), TEXT_SKIP_DRAW, NULL);
     }
 
     if (FlagGet(FLAG_SYS_NOT_SOMEONES_PC))
-        AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_BillSPc, cursorWidth, 2 , TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(windowId, FONT_NORMAL, sText_BillsPc, cursorWidth, 2 , TEXT_SKIP_DRAW, NULL);
     else
-        AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_SomeoneSPc, cursorWidth, 2 , TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(windowId, FONT_NORMAL, sText_SomeoneSPc, cursorWidth, 2 , TEXT_SKIP_DRAW, NULL);
 
-    StringExpandPlaceholders(gStringVar4, gText_SPc);
+    StringExpandPlaceholders(gStringVar4, sText_PlayersPc);
     PrintPlayerNameOnWindow(windowId, gStringVar4, cursorWidth, 18);
     InitMenuNormal(windowId, FONT_NORMAL, 0, 2, 16, numItems, 0);
     InitMultichoiceCheckWrap(FALSE, numItems, windowId, MULTI_NONE);
@@ -1735,9 +1738,9 @@ void DrawSeagallopDestinationMenu(void)
         if (destinationId == SEAGALLOP_SEVEN_ISLAND + 1)
             destinationId = SEAGALLOP_VERMILION_CITY;
     }
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, sText_Other, cursorWidth, i * 16 + 2, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_Other, cursorWidth, i * 16 + 2, TEXT_SKIP_DRAW, NULL);
     i++;
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, gOtherText_Exit, cursorWidth, i * 16 + 2, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_Exit, cursorWidth, i * 16 + 2, TEXT_SKIP_DRAW, NULL);
     InitMenuNormal(windowId, FONT_NORMAL, 0, 2, 16, numItems, 0);
     InitMultichoiceCheckWrap(FALSE, numItems, windowId, MULTI_NONE);
     ScheduleBgCopyTilemapToVram(0);

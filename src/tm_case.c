@@ -114,6 +114,11 @@ static EWRAM_DATA struct {
     u16 scrollOffset;
 } * sPokedudeBagBackup = NULL;
 
+extern const u8 gPokedudeText_TMTypes[];
+extern const u8 gPokedudeText_ReadTMDescription[];
+
+static const u8 sText_TMCaseWillBePutAway[] = _("The TM CASE will be\nput away.");
+
 static EWRAM_DATA void *sTilemapBuffer = NULL;
 static EWRAM_DATA struct ListMenuItem * sListMenuItemsBuffer = NULL;
 static EWRAM_DATA u8 (* sListMenuStringsBuffer)[29] = NULL;
@@ -217,9 +222,9 @@ static void (*const sSelectTMActionTasks[])(u8 taskId) = {
 };
 
 static const struct MenuAction sMenuActions[] = {
-    [TMCASE_ACTION_USE]  = {gMenuText_Use,  {Action_Use}  },
-    [TMCASE_ACTION_GIVE] = {gMenuText_Give, {Action_Give} },
-    [TMCASE_ACTION_EXIT] = {gOtherText_Exit, {Action_Exit} },
+    [TMCASE_ACTION_USE]  = {gText_Use,  {Action_Use}  },
+    [TMCASE_ACTION_GIVE] = {gText_Give, {Action_Give} },
+    [TMCASE_ACTION_EXIT] = {gText_Exit, {Action_Exit} },
 };
 
 static const u8 sMenuActionIndices_Field[] = {TMCASE_ACTION_USE, TMCASE_ACTION_GIVE, TMCASE_ACTION_EXIT};
@@ -728,7 +733,7 @@ static void List_ItemPrintFunc(u8 windowId, u32 itemIndex, u8 y)
             }
             else
             {
-                StringCopy(gStringVar4, gText_EmptyString3);
+                StringCopy(gStringVar4, gText_EmptyString);
             }
             TMCase_Print(windowId, FONT_SMALL, gStringVar4, 126, y, 0, 0, TEXT_SKIP_DRAW, COLOR_DARK);
         }
@@ -746,7 +751,7 @@ static void PrintDescription(s32 itemIndex)
     if (itemIndex != LIST_CANCEL)
         str = GetItemDescription(GetBagItemId(POCKET_TM_HM, itemIndex));
     else
-        str = gText_TMCaseWillBePutAway;
+        str = sText_TMCaseWillBePutAway;
 
     FillWindowPixelBuffer(WIN_DESCRIPTION, 0);
     TMCase_Print(WIN_DESCRIPTION, FONT_NORMAL, str, 2, 3, 1, 0, 0, COLOR_LIGHT);
@@ -775,7 +780,7 @@ static void PrintListCursorAtRow(u8 y, u8 colorIdx)
     }
     else
     {
-        TMCase_Print(WIN_LIST, FONT_NORMAL, gText_SelectorArrow2, 0, y, 0, 0, 0, colorIdx);
+        TMCase_Print(WIN_LIST, FONT_NORMAL, gText_SelectorArrow, 0, y, 0, 0, 0, colorIdx);
     }
 }
 

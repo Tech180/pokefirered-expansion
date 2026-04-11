@@ -65,6 +65,13 @@ struct EggHatchData
     u8 textColor[3];
 };
 
+static const u8 sText_HatchedFromEgg[] = _("{STR_VAR_1} hatched from the EGG!");
+static const u8 sText_NickHatchPrompt[] = _("Would you like to nickname the newly\nhatched {STR_VAR_1}?");
+static const u8 sText_GetAlongVeryWell[] = _("The two seem to get along\nvery well.");
+static const u8 sText_GetAlong[] = _("The two seem to get along.");
+static const u8 sText_DontLikeOther[] = _("The two don't seem to like\neach other much.");
+static const u8 sText_PlayOther[] = _("The two prefer to play with other\nPOKéMON than each other.");
+
 // this file's functions
 static void ClearDaycareMonMail(struct DayCareMail *mail);
 static void SetInitialEggData(struct Pokemon *mon, enum Species species, struct DayCare *daycare);
@@ -113,7 +120,7 @@ static const struct ListMenuItem sLevelMenuItems[] =
 {
     {gText_EmptyString, 0},
     {gText_EmptyString, 1},
-    {gOtherText_Exit, DAYCARE_LEVEL_MENU_EXIT}
+    {gText_Exit, DAYCARE_LEVEL_MENU_EXIT}
 };
 
 static const struct ListMenuTemplate sDaycareListMenuLevelTemplate =
@@ -158,13 +165,12 @@ static const struct {
 
 static const u8 *const sCompatibilityMessages[] =
 {
-    gDaycareText_GetAlongVeryWell,
-    gDaycareText_GetAlong,
-    gDaycareText_DontLikeOther,
-    gDaycareText_PlayOther
+    sText_GetAlongVeryWell,
+    sText_GetAlong,
+    sText_DontLikeOther,
+    sText_PlayOther
 };
 
-static const u8 sNewLineText[] = _("\n");
 static const u8 sJapaneseEggNickname[] = _("タマゴ"); // "tamago" ("egg" in Japanese)
 
 static const u16 sEggPalette[] = INCBIN_U16("graphics/pokemon/egg/normal.gbapal");
@@ -1687,15 +1693,15 @@ static u8 *AppendGenderSymbol(u8 *name, u8 gender)
     if (gender == MON_MALE)
     {
         if (!NameHasGenderSymbol(name, MON_MALE))
-            return StringAppend(name, gText_MaleSymbol4);
+            return StringAppend(name, gText_MaleSymbol);
     }
     else if (gender == MON_FEMALE)
     {
         if (!NameHasGenderSymbol(name, MON_FEMALE))
-            return StringAppend(name, gText_FemaleSymbol4);
+            return StringAppend(name, gText_FemaleSymbol);
     }
 
-    return StringAppend(name, gText_GenderlessSymbol);
+    return StringAppend(name, gText_EmptyString);
 }
 
 static u8 *AppendMonGenderSymbol(u8 *name, struct BoxPokemon *boxMon)
@@ -1716,10 +1722,10 @@ static void UNUSED GetDaycareLevelMenuText(struct DayCare *daycare, u8 *dest)
     }
 
     StringCopy(dest, monNames[0]);
-    StringAppend(dest, sNewLineText);
+    StringAppend(dest, gText_Newline);
     StringAppend(dest, monNames[1]);
-    StringAppend(dest, sNewLineText);
-    StringAppend(dest, gOtherText_Exit);
+    StringAppend(dest, gText_Newline);
+    StringAppend(dest, gText_Exit);
 }
 
 static void UNUSED GetDaycareLevelMenuLevelText(struct DayCare *daycare, u8 *dest)
@@ -1735,7 +1741,7 @@ static void UNUSED GetDaycareLevelMenuLevelText(struct DayCare *daycare, u8 *des
         level = GetLevelAfterDaycareSteps(&daycare->mons[i].mon, daycare->mons[i].steps);
         ConvertIntToDecimalStringN(text, level, STR_CONV_MODE_LEFT_ALIGN, 3);
         StringAppend(dest, text);
-        StringAppend(dest, sNewLineText);
+        StringAppend(dest, gText_Newline);
     }
 }
 
@@ -2244,7 +2250,7 @@ static void CB2_EggHatch_1(void)
         break;
     case 5:
         GetMonNickname(&gPlayerParty[sEggHatchData->eggPartyID], gStringVar1);
-        StringExpandPlaceholders(gStringVar4, gText_HatchedFromEgg);
+        StringExpandPlaceholders(gStringVar4, sText_HatchedFromEgg);
         EggHatchPrintMessage(sEggHatchData->windowId, gStringVar4, 0, 3, 0xFF);
         PlayFanfare(MUS_EVOLVED);
         sEggHatchData->CB2_state++;
@@ -2261,7 +2267,7 @@ static void CB2_EggHatch_1(void)
         break;
     case 8:
         GetMonNickname(&gPlayerParty[sEggHatchData->eggPartyID], gStringVar1);
-        StringExpandPlaceholders(gStringVar4, gText_NickHatchPrompt);
+        StringExpandPlaceholders(gStringVar4, sText_NickHatchPrompt);
         EggHatchPrintMessage(sEggHatchData->windowId, gStringVar4, 0, 2, 1);
         sEggHatchData->CB2_state++;
         break;

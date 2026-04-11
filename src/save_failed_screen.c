@@ -30,6 +30,10 @@ static bool32 WipeSectors(u32 damagedSectors);
 static void DecompressAndRenderGlyph(u8 fontId, u16 glyph, struct Bitmap *srcBlit, struct Bitmap *destBlit, u8 *destBuffer, u8 x, u8 y, u8 width, u8 height);
 static void HelpSystemRenderText(u8 fontId, u8 * dest, const u8 * src, u8 x, u8 y, u8 width, u8 height);
 
+static const u8 sText_SaveFailedCheckingBackup[] = _("Save failed.\nChecking the backup memory‥\nPlease wait.\n“Time required:\nabout 1 minute”");
+static const u8 sText_BackupMemoryDamaged[] = _("The backup memory is damaged or\nthe game's battery has run dry.\nThe game can be played, but its\nprogress cannot be saved.\n“Please press the A Button.”");
+static const u8 sText_SaveCompletePressA[] = _("Save completed.\n“Please press the A Button.”");
+
 static const u16 sSaveFailedScreenPals[] = INCBIN_U16("graphics/interface/save_failed_screen.gbapal");
 
 void DoSaveFailedScreen(u8 saveType)
@@ -67,7 +71,7 @@ static void CB2_SaveFailedScreen(void)
         break;
     case 3:
         ClearMapBuffer();
-        PrintTextOnSaveFailedScreen(gText_SaveFailedCheckingBackup);
+        PrintTextOnSaveFailedScreen(sText_SaveFailedCheckingBackup);
         UpdateMapBufferWithText();
         sSaveFailedScreenState = 4;
         break;
@@ -83,12 +87,12 @@ static void CB2_SaveFailedScreen(void)
         if (TryWipeDamagedSectors() == TRUE)
         {
             gSaveAttemptStatus = SAVE_STATUS_OK;
-            PrintTextOnSaveFailedScreen(gText_SaveCompletePressA);
+            PrintTextOnSaveFailedScreen(sText_SaveCompletePressA);
         }
         else
         {
             gSaveAttemptStatus = SAVE_STATUS_ERROR;
-            PrintTextOnSaveFailedScreen(gText_BackupMemoryDamaged);
+            PrintTextOnSaveFailedScreen(sText_BackupMemoryDamaged);
         }
         sSaveFailedScreenState = 6;
         break;
@@ -319,19 +323,19 @@ static void HelpSystemRenderText(u8 fontId, u8 * dest, const u8 * src, u8 x, u8 
                 {
                     if (FlagGet(FLAG_SYS_NOT_SOMEONES_PC) == TRUE)
                     {
-                        if (gString_Bill[i] == EOS)
+                        if (gText_Bill[i] == EOS)
                         {
                             break;
                         }
-                        DecompressAndRenderGlyph(fontId, gString_Bill[i], &srcBlit, &destBlit, dest, x, y, width, height);
+                        DecompressAndRenderGlyph(fontId, gText_Bill[i], &srcBlit, &destBlit, dest, x, y, width, height);
                     }
                     else
                     {
-                        if (gString_Someone[i] == EOS)
+                        if (gText_Someone[i] == EOS)
                         {
                             break;
                         }
-                        DecompressAndRenderGlyph(fontId, gString_Someone[i], &srcBlit, &destBlit, dest, x, y, width, height);
+                        DecompressAndRenderGlyph(fontId, gText_Someone[i], &srcBlit, &destBlit, dest, x, y, width, height);
                     }
                     if (fontId == FONT_SMALL)
                     {

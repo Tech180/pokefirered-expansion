@@ -239,6 +239,24 @@ static void Swap_ActionMon(u8);
 static void Swap_ActionCancel(u8);
 static void Swap_ActionPkmnForSwap(u8);
 
+static const u8 sText_Others[] = _("OTHERS");
+static const u8 sText_RentalPkmn2[] = _("RENTAL POKéMON");
+static const u8 sText_SelectFirstPkmn[] = _("Select the first POKéMON.");
+static const u8 sText_SelectSecondPkmn[] = _("Select the second POKéMON.");
+static const u8 sText_SelectThirdPkmn[] = _("Select the third POKéMON.");
+static const u8 sText_Rent[] = _("RENT");
+static const u8 sText_TheseThreePkmnOkay[] = _("Are these three POKéMON OK?");
+static const u8 sText_CantSelectSamePkmn[] = _("Can't select same {PKMN}.");
+static const u8 sText_PkmnSwap[] = _("POKéMON SWAP");
+static const u8 sText_SelectPkmnToSwap[] = _("Select POKéMON to swap.");
+static const u8 sText_SelectPkmnToAccept[] = _("Select POKéMON to accept.");
+static const u8 sText_Swap[] = _("SWAP");
+static const u8 sText_Rechoose[] = _("RECHOOSE");
+static const u8 sText_QuitSwapping[] = _("Quit swapping?");
+static const u8 sText_PkmnForSwap[] = _("{PKMN} FOR SWAP");
+static const u8 sText_AcceptThisPkmn[] = _("Accept this POKéMON?");
+static const u8 sText_SamePkmnInPartyAlready[] = _("Same {PKMN} in party already.");
+
 static EWRAM_DATA u8 *sSelectMenuTilesetBuffer = NULL;
 static EWRAM_DATA u8 *sSelectMonPicBgTilesetBuffer = NULL;
 static EWRAM_DATA u8 *sSelectMenuTilemapBuffer = NULL;
@@ -1802,7 +1820,7 @@ static void Select_ErasePopupMenu(u8 windowId)
 static void Select_PrintRentalPkmnString(void)
 {
     FillWindowPixelBuffer(SELECT_WIN_TITLE, PIXEL_FILL(0));
-    AddTextPrinterParameterized(SELECT_WIN_TITLE, FONT_NORMAL, gText_RentalPkmn2, 2, 1, 0, NULL);
+    AddTextPrinterParameterized(SELECT_WIN_TITLE, FONT_NORMAL, sText_RentalPkmn2, 2, 1, 0, NULL);
     CopyWindowToVram(SELECT_WIN_TITLE, COPYWIN_FULL);
 }
 
@@ -1826,13 +1844,13 @@ static void Select_PrintSelectMonString(void)
 
     FillWindowPixelBuffer(SELECT_WIN_INFO, PIXEL_FILL(0));
     if (sFactorySelectScreen->selectingMonsState == 1)
-        str = gText_SelectFirstPkmn;
+        str = sText_SelectFirstPkmn;
     else if (sFactorySelectScreen->selectingMonsState == 2)
-        str = gText_SelectSecondPkmn;
+        str = sText_SelectSecondPkmn;
     else if (sFactorySelectScreen->selectingMonsState == 3)
-        str = gText_SelectThirdPkmn;
+        str = sText_SelectThirdPkmn;
     else
-        str = gText_TheseThreePkmnOkay;
+        str = sText_TheseThreePkmnOkay;
 
     AddTextPrinterParameterized(SELECT_WIN_INFO, FONT_NORMAL, str, 2, 5, 0, NULL);
     CopyWindowToVram(SELECT_WIN_INFO, COPYWIN_GFX);
@@ -1841,7 +1859,7 @@ static void Select_PrintSelectMonString(void)
 static void Select_PrintCantSelectSameMon(void)
 {
     FillWindowPixelBuffer(SELECT_WIN_INFO, PIXEL_FILL(0));
-    AddTextPrinterParameterized(SELECT_WIN_INFO, FONT_NORMAL, gText_CantSelectSamePkmn, 2, 5, 0, NULL);
+    AddTextPrinterParameterized(SELECT_WIN_INFO, FONT_NORMAL, sText_CantSelectSamePkmn, 2, 5, 0, NULL);
     CopyWindowToVram(SELECT_WIN_INFO, COPYWIN_GFX);
 }
 
@@ -1855,9 +1873,9 @@ static void Select_PrintMenuOptions(void)
     if (selectedId != 0)
         AddTextPrinterParameterized3(SELECT_WIN_OPTIONS, FONT_NORMAL, 7, 17, sMenuOptionTextColors, 0, gText_Deselect);
     else
-        AddTextPrinterParameterized3(SELECT_WIN_OPTIONS, FONT_NORMAL, 7, 17, sMenuOptionTextColors, 0, gText_Rent);
+        AddTextPrinterParameterized3(SELECT_WIN_OPTIONS, FONT_NORMAL, 7, 17, sMenuOptionTextColors, 0, sText_Rent);
 
-    AddTextPrinterParameterized3(SELECT_WIN_OPTIONS, FONT_NORMAL, 7, 33, sMenuOptionTextColors, 0, gText_Others2);
+    AddTextPrinterParameterized3(SELECT_WIN_OPTIONS, FONT_NORMAL, 7, 33, sMenuOptionTextColors, 0, sText_Others);
     CopyWindowToVram(SELECT_WIN_OPTIONS, COPYWIN_FULL);
 }
 
@@ -1865,8 +1883,8 @@ static void Select_PrintYesNoOptions(void)
 {
     PutWindowTilemap(SELECT_WIN_YES_NO);
     FillWindowPixelBuffer(SELECT_WIN_YES_NO, PIXEL_FILL(0));
-    AddTextPrinterParameterized3(SELECT_WIN_YES_NO, FONT_NORMAL, 7, 1, sMenuOptionTextColors, 0, gText_Yes2);
-    AddTextPrinterParameterized3(SELECT_WIN_YES_NO, FONT_NORMAL, 7, 17, sMenuOptionTextColors, 0, gText_No2);
+    AddTextPrinterParameterized3(SELECT_WIN_YES_NO, FONT_NORMAL, 7, 1, sMenuOptionTextColors, 0, gText_Yes);
+    AddTextPrinterParameterized3(SELECT_WIN_YES_NO, FONT_NORMAL, 7, 17, sMenuOptionTextColors, 0, gText_No);
     CopyWindowToVram(SELECT_WIN_YES_NO, COPYWIN_FULL);
 }
 
@@ -2472,7 +2490,7 @@ static void Swap_AskQuitSwapping(u8 taskId)
 {
     if (gTasks[taskId].tState == 0)
     {
-        Swap_PrintOnInfoWindow(gText_QuitSwapping);
+        Swap_PrintOnInfoWindow(sText_QuitSwapping);
         sFactorySwapScreen->monSwapped = FALSE;
         gTasks[taskId].tState = STATE_YESNO_SHOW;
         gTasks[taskId].tFollowUpTaskPtrHi = (u32)(Swap_HandleQuitSwappingResponse) >> 16;
@@ -2504,7 +2522,7 @@ static void Swap_AskAcceptMon(u8 taskId)
     if (gTasks[taskId].tState == 0)
     {
         OpenMonPic(&sFactorySwapScreen->monPic.bgSpriteId, &sFactorySwapScreen->monPicAnimating, TRUE);
-        Swap_PrintOnInfoWindow(gText_AcceptThisPkmn);
+        Swap_PrintOnInfoWindow(sText_AcceptThisPkmn);
         sFactorySwapScreen->monSwapped = TRUE;
         gTasks[taskId].tState = STATE_YESNO_SHOW;
         gTasks[taskId].tFollowUpTaskPtrHi = (u32)(Swap_HandleAcceptMonResponse) >> 16;
@@ -3097,9 +3115,9 @@ static void Swap_Task_ScreenInfoTransitionIn(u8 taskId)
         break;
     case 7:
         if (!sFactorySwapScreen->inEnemyScreen)
-            Swap_PrintOnInfoWindow(gText_SelectPkmnToSwap);
+            Swap_PrintOnInfoWindow(sText_SelectPkmnToSwap);
         else
-            Swap_PrintOnInfoWindow(gText_SelectPkmnToAccept);
+            Swap_PrintOnInfoWindow(sText_SelectPkmnToAccept);
         if (sFactorySwapScreen->cursorPos < FRONTIER_PARTY_SIZE)
             gSprites[sFactorySwapScreen->cursorSpriteId].invisible = FALSE;
         Swap_PrintMonCategory();
@@ -3293,7 +3311,7 @@ static void CB2_InitSwapScreen(void)
         gMain.state++;
         break;
     case 7:
-        Swap_PrintOnInfoWindow(gText_SelectPkmnToSwap);
+        Swap_PrintOnInfoWindow(sText_SelectPkmnToSwap);
         PutWindowTilemap(SWAP_WIN_INFO);
         gMain.state++;
         break;
@@ -3699,7 +3717,7 @@ static void Swap_EraseActionFadeWindow(void)
 static void Swap_PrintPkmnSwap(void)
 {
     FillWindowPixelBuffer(SWAP_WIN_TITLE, PIXEL_FILL(1));
-    AddTextPrinterParameterized(SWAP_WIN_TITLE, FONT_NORMAL, gText_PkmnSwap, 2, 1, 0, NULL);
+    AddTextPrinterParameterized(SWAP_WIN_TITLE, FONT_NORMAL, sText_PkmnSwap, 2, 1, 0, NULL);
     CopyWindowToVram(SWAP_WIN_TITLE, COPYWIN_FULL);
 }
 
@@ -3738,9 +3756,9 @@ static void Swap_PrintMenuOptions(void)
 {
     PutWindowTilemap(SWAP_WIN_OPTIONS);
     FillWindowPixelBuffer(SWAP_WIN_OPTIONS, PIXEL_FILL(0));
-    AddTextPrinterParameterized3(SWAP_WIN_OPTIONS, FONT_NORMAL, 15,  1, sSwapMenuOptionsTextColors, 0, gText_Summary2);
-    AddTextPrinterParameterized3(SWAP_WIN_OPTIONS, FONT_NORMAL, 15, 17, sSwapMenuOptionsTextColors, 0, gText_Swap);
-    AddTextPrinterParameterized3(SWAP_WIN_OPTIONS, FONT_NORMAL, 15, 33, sSwapMenuOptionsTextColors, 0, gText_Rechoose);
+    AddTextPrinterParameterized3(SWAP_WIN_OPTIONS, FONT_NORMAL, 15,  1, sSwapMenuOptionsTextColors, 0, gText_Summary);
+    AddTextPrinterParameterized3(SWAP_WIN_OPTIONS, FONT_NORMAL, 15, 17, sSwapMenuOptionsTextColors, 0, sText_Swap);
+    AddTextPrinterParameterized3(SWAP_WIN_OPTIONS, FONT_NORMAL, 15, 33, sSwapMenuOptionsTextColors, 0, sText_Rechoose);
     CopyWindowToVram(SWAP_WIN_OPTIONS, COPYWIN_FULL);
 }
 
@@ -3748,8 +3766,8 @@ static void Swap_PrintYesNoOptions(void)
 {
     PutWindowTilemap(SWAP_WIN_YES_NO);
     FillWindowPixelBuffer(SWAP_WIN_YES_NO, PIXEL_FILL(0));
-    AddTextPrinterParameterized3(SWAP_WIN_YES_NO, FONT_NORMAL, 7, 1,  sSwapMenuOptionsTextColors, 0, gText_Yes3);
-    AddTextPrinterParameterized3(SWAP_WIN_YES_NO, FONT_NORMAL, 7, 17, sSwapMenuOptionsTextColors, 0, gText_No3);
+    AddTextPrinterParameterized3(SWAP_WIN_YES_NO, FONT_NORMAL, 7, 1,  sSwapMenuOptionsTextColors, 0, gText_Yes);
+    AddTextPrinterParameterized3(SWAP_WIN_YES_NO, FONT_NORMAL, 7, 17, sSwapMenuOptionsTextColors, 0, gText_No);
     CopyWindowToVram(SWAP_WIN_YES_NO, COPYWIN_FULL);
 }
 
@@ -3765,9 +3783,9 @@ static void Swap_PrintActionStrings(void)
     switch (sFactorySwapScreen->inEnemyScreen)
     {
     case TRUE:
-        Swap_PrintActionString(gText_PkmnForSwap, 0, SWAP_WIN_ACTION_FADE);
+        Swap_PrintActionString(sText_PkmnForSwap, 0, SWAP_WIN_ACTION_FADE);
     case FALSE:
-        Swap_PrintActionString(gText_Cancel3, 24, SWAP_WIN_ACTION_FADE);
+        Swap_PrintActionString(gText_Cancel, 24, SWAP_WIN_ACTION_FADE);
         break;
     }
     CopyWindowToVram(SWAP_WIN_ACTION_FADE, COPYWIN_FULL);
@@ -3779,9 +3797,9 @@ static void Swap_PrintActionStrings2(void)
     switch (sFactorySwapScreen->inEnemyScreen)
     {
     case TRUE:
-        Swap_PrintActionString(gText_PkmnForSwap, 8, SWAP_WIN_OPTIONS);
+        Swap_PrintActionString(sText_PkmnForSwap, 8, SWAP_WIN_OPTIONS);
     case FALSE:
-        Swap_PrintActionString(gText_Cancel3, 32, SWAP_WIN_OPTIONS);
+        Swap_PrintActionString(gText_Cancel, 32, SWAP_WIN_OPTIONS);
         break;
     }
     CopyWindowToVram(SWAP_WIN_OPTIONS, COPYWIN_FULL);
@@ -3793,10 +3811,10 @@ static void Swap_PrintOneActionString(u8 which)
     {
     case 0:
         if (sFactorySwapScreen->inEnemyScreen == TRUE)
-            Swap_PrintActionString(gText_PkmnForSwap, 8, SWAP_WIN_OPTIONS);
+            Swap_PrintActionString(sText_PkmnForSwap, 8, SWAP_WIN_OPTIONS);
         break;
     case 1:
-        Swap_PrintActionString(gText_Cancel3, 32, SWAP_WIN_OPTIONS);
+        Swap_PrintActionString(gText_Cancel, 32, SWAP_WIN_OPTIONS);
         break;
     }
     CopyWindowToVram(SWAP_WIN_OPTIONS, COPYWIN_FULL);
@@ -4053,7 +4071,7 @@ static void Swap_TaskCantHaveSameMons(u8 taskId)
     switch (gTasks[taskId].tState)
     {
     case 0:
-        Swap_PrintOnInfoWindow(gText_SamePkmnInPartyAlready);
+        Swap_PrintOnInfoWindow(sText_SamePkmnInPartyAlready);
         sFactorySwapScreen->monSwapped = FALSE;
         gTasks[taskId].tState++;
         break;
@@ -4074,7 +4092,7 @@ static void Swap_TaskCantHaveSameMons(u8 taskId)
         }
         break;
     case 3:
-        Swap_PrintOnInfoWindow(gText_SelectPkmnToAccept);
+        Swap_PrintOnInfoWindow(sText_SelectPkmnToAccept);
         gTasks[taskId].tState++;
         break;
     case 4:

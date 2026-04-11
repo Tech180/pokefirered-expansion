@@ -463,7 +463,7 @@ static const u8 *const sMessages[] = {
     [MSG_NO_BERRIES]   = COMPOUND_STRING("You have no BERRIES.\nThe game will be canceled."),
     [MSG_DROPPED]      = COMPOUND_STRING("A member dropped out.\nThe game will be canceled."),
     [MSG_TIMES_UP]     = COMPOUND_STRING("Time's up.\pGood BERRY POWDER could not be\nmade…\p"),
-    [MSG_COMM_STANDBY] = COMPOUND_STRING("Communication standby…"),
+    [MSG_COMM_STANDBY] = gText_CommunicationStandby,
 };
 
 static u32 (*const sBerryCrushCommands[])(struct BerryCrushGame * berryCrushGame, u8 *args) = {
@@ -2227,7 +2227,7 @@ static u32 Cmd_SaveGame(struct BerryCrushGame * game, u8 *args)
         if (!IsLinkTaskFinished())
             return 0;
         DrawDialogueFrame(0, FALSE);
-        AddTextPrinterParameterized2(0, FONT_NORMAL, gText_SavingDontTurnOffThePower2, 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+        AddTextPrinterParameterized2(0, FONT_NORMAL, gText_SavingDontTurnOffThePower, 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
         CopyWindowToVram(0, COPYWIN_FULL);
         CreateTask(Task_LinkFullSave, 0);
         break;
