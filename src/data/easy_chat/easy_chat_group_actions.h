@@ -1,7 +1,6 @@
 
 static const u8 sEasyChatWord_Meets[] = _("MEETS");
 static const u8 sEasyChatWord_Concede[] = _("CONCEDE");
-static const u8 sEasyChatWord_Give[] = _("GIVE");
 static const u8 sEasyChatWord_Gives[] = _("GIVES");
 static const u8 sEasyChatWord_Played[] = _("PLAYED");
 static const u8 sEasyChatWord_Plays[] = _("PLAYS");
@@ -41,7 +40,6 @@ static const u8 sEasyChatWord_Thinks[] = _("THINKS");
 static const u8 sEasyChatWord_Believe[] = _("BELIEVE");
 static const u8 sEasyChatWord_Slide[] = _("SLIDE");
 static const u8 sEasyChatWord_Eats[] = _("EATS");
-static const u8 sEasyChatWord_Use[] = _("USE");
 static const u8 sEasyChatWord_Uses[] = _("USES");
 static const u8 sEasyChatWord_Using[] = _("USING");
 static const u8 sEasyChatWord_Couldnt[] = _("COULDN'T");
@@ -70,7 +68,6 @@ static const u8 sEasyChatWord_Looks[] = _("LOOKS");
 static const u8 sEasyChatWord_Sees[] = _("SEES");
 static const u8 sEasyChatWord_Seek[] = _("SEEK");
 static const u8 sEasyChatWord_Own[] = _("OWN");
-static const u8 sEasyChatWord_Take[] = _("TAKE");
 static const u8 sEasyChatWord_Allow[] = _("ALLOW");
 static const u8 sEasyChatWord_Forget[] = _("FORGET");
 static const u8 sEasyChatWord_Forgets[] = _("FORGETS");
@@ -90,7 +87,7 @@ static const struct EasyChatWordInfo sEasyChatGroup_Actions[] = {
         .enabled = TRUE
     },
     {
-        .text = sEasyChatWord_Give,
+        .text = gText_Give,
         .alphabeticalOrder = 48,
         .enabled = TRUE
     },
@@ -290,7 +287,7 @@ static const struct EasyChatWordInfo sEasyChatGroup_Actions[] = {
         .enabled = TRUE
     },
     {
-        .text = sEasyChatWord_Use,
+        .text = gText_Use,
         .alphabeticalOrder = 53,
         .enabled = TRUE
     },
@@ -435,7 +432,7 @@ static const struct EasyChatWordInfo sEasyChatGroup_Actions[] = {
         .enabled = TRUE
     },
     {
-        .text = sEasyChatWord_Take,
+        .text = gText_Take,
         .alphabeticalOrder = 13,
         .enabled = TRUE
     },

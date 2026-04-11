@@ -66,6 +66,8 @@ enum
     CLOCK_MOVE_FORWARD,
 };
 
+static const u8 sText_IsThisTheCorrectTime[] = _("Is this the correct time?");
+
 static const u32 sHand_Gfx[] = INCBIN_U32("graphics/wallclock/hand.4bpp.smol");
 static const u16 sTextPrompt_Pal[] = INCBIN_U16("graphics/wallclock/text_prompt.gbapal"); // for "Cancel" or "Confirm"
 
@@ -728,7 +730,7 @@ void CB2_StartWallClock(void)
     WallClockInit();
 
     DrawStdFrameWithCustomTileAndPalette(1, FALSE, 0x250, 0x0d);
-    AddTextPrinterParameterized(1, 1, gText_PartyMenu_OK, 0, 1, 0, NULL);
+    AddTextPrinterParameterized(1, 1, gText_OK, 0, 1, 0, NULL);
     PutWindowTilemap(1);
     ScheduleBgCopyTilemapToVram(2);
 }
@@ -777,7 +779,7 @@ void CB2_ViewWallClock(void)
     WallClockInit();
 
     DrawStdFrameWithCustomTileAndPalette(1, FALSE, 0x250, 0x0d);
-    AddTextPrinterParameterized(1, 1, gText_Cancel4, 0, 1, 0, NULL);
+    AddTextPrinterParameterized(1, 1, gText_Cancel, 0, 1, 0, NULL);
     PutWindowTilemap(1);
     ScheduleBgCopyTilemapToVram(2);
 }
@@ -842,7 +844,7 @@ static void Task_SetClock_HandleInput(u8 taskId)
 static void Task_SetClock_AskConfirm(u8 taskId)
 {
     DrawStdFrameWithCustomTileAndPalette(0, FALSE, 0x250, 0x0d);
-    AddTextPrinterParameterized(0, 1, gText_IsThisTheCorrectTime, 0, 1, 0, NULL);
+    AddTextPrinterParameterized(0, 1, sText_IsThisTheCorrectTime, 0, 1, 0, NULL);
     PutWindowTilemap(0);
     ScheduleBgCopyTilemapToVram(0);
     LoadUserWindowBorderGfx_(0, 0x140, 0xE0);

@@ -2534,11 +2534,11 @@ static void BufferMonInfo(void)
     else if (gender == MON_MALE)
         StringCopy(sMonSummaryScreen->summary.genderSymbolStrBuf, gText_MaleSymbol);
     else
-        StringCopy(sMonSummaryScreen->summary.genderSymbolStrBuf, gString_Dummy);
+        StringCopy(sMonSummaryScreen->summary.genderSymbolStrBuf, gText_EmptyString);
 
     if (dexNum == SPECIES_NIDORAN_M || dexNum == SPECIES_NIDORAN_F)
         if (StringCompare(sMonSummaryScreen->summary.nicknameStrBuf, gSpeciesInfo[dexNum].speciesName) == 0)
-            StringCopy(sMonSummaryScreen->summary.genderSymbolStrBuf, gString_Dummy);
+            StringCopy(sMonSummaryScreen->summary.genderSymbolStrBuf, gText_EmptyString);
 
     GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_OT_NAME, tempStr);
     StringCopyN_Multibyte(sMonSummaryScreen->summary.otNameStrBuf, tempStr, PLAYER_NAME_LENGTH);
@@ -3165,7 +3165,7 @@ static void PrintMovesPage(void)
         else
             AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL,
                                          3, GetMoveNamePrinterYpos(4),
-                                         sPrintMoveTextColors[0], TEXT_SKIP_DRAW, gFameCheckerText_Cancel);
+                                         sPrintMoveTextColors[0], TEXT_SKIP_DRAW, gText_Cancel);
     }
 }
 

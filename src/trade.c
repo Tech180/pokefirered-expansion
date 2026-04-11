@@ -214,6 +214,9 @@ static void SetTradePartyHPBarSprites(void);
 static void SaveTradeGiftRibbons(void);
 static u32 CanTradeSelectedMon(struct Pokemon * party, int partyCount, int cursorPos);
 
+static const u8 sText_4Qmark[] = _("????");
+static const u8 sText_IsThisTradeOkay[] = _("Is this trade okay?");
+
 static const u16 sTradeMovesBoxTilemap[] = INCBIN_U16("graphics/trade/moves_box_map.bin");
 static const u16 sTradePartyBoxTilemap[] = INCBIN_U16("graphics/trade/party_box_map.bin");
 static const u8 sTradeStripesBG2Tilemap[] = INCBIN_U8("graphics/trade/stripes_bg2_map.bin");
@@ -513,36 +516,31 @@ static const u8 sUnusedCoords[][2] =
     {23, 12}
 };
 
-static const u8 sText_Dummy[] = _("");
 static const u8 sText_ClrWhtHltTranspShdwDrkGry[] = _("{COLOR WHITE}{HIGHLIGHT TRANSPARENT}{SHADOW DARK_GRAY}");
-const u8 gText_MaleSymbol4[] = _("♂");
-const u8 gText_FemaleSymbol4[] = _("♀");
-const u8 gText_GenderlessSymbol[] = _("");
-static const u8 sText_Dummy2[] = _("");
-static const u8 sText_Newline[] = _("\n");
-static const u8 sText_Slash[] = _("/");
 
 static const u8 *const sActionTexts[] = {
-    [TEXT_CANCEL]          = gTradeText_Cancel,
-    [TEXT_CHOOSE_MON]      = gTradeText_ChooseAPokemon,
-    [TEXT_SUMMARY]         = gTradeText_Summary, // Unused, sMenuAction_SummaryTrade is used instead
-    [TEXT_TRADE]           = gTradeText_Trade,   // Unused, sMenuAction_SummaryTrade is used instead
-    [TEXT_CANCEL_TRADE]    = gText_CancelTrade,
-    [TEXT_PRESS_B_TO_EXIT] = gTradeText_PressBButtonToExit // Unused
+    [TEXT_CANCEL]          = gText_Cancel,
+    [TEXT_CHOOSE_MON]      = gText_ChooseAPokemon,
+    [TEXT_SUMMARY]         = gText_Summary, // Unused, sMenuAction_SummaryTrade is used instead
+    [TEXT_TRADE]           = gText_Trade,   // Unused, sMenuAction_SummaryTrade is used instead
+    [TEXT_CANCEL_TRADE]    = COMPOUND_STRING("Cancel trade?"),
+    [TEXT_PRESS_B_TO_EXIT] = COMPOUND_STRING("Press the B Button to exit.") // Unused
 };
 
 static const struct MenuAction sMenuAction_SummaryTrade[] = {
-    {gText_TradeAction_Summary, { .void_u8 = Task_DrawSelectionSummary }},
-    {gText_TradeAction_Trade, { .void_u8 = Task_DrawSelectionTrade }}
+    {gText_Summary, { .void_u8 = Task_DrawSelectionSummary }},
+    {gText_Trade, { .void_u8 = Task_DrawSelectionTrade }}
 };
 
-static const u8 *const sMessages[] = {
-    [MSG_STANDBY]                    = gText_Trade_CommunicationStandby,
-    [MSG_CANCELED]                   = gText_TradeHasBeenCanceled,
-    [MSG_ONLY_MON1]                  = gText_Trade_OnlyPkmnForBattle,
-    [MSG_ONLY_MON2]                  = gText_OnlyPkmnForBattle, // Same as above but without color formatting
-    [MSG_WAITING_FOR_FRIEND]         = gText_WaitingForFriendToFinish,
-    [MSG_FRIEND_WANTS_TO_TRADE]      = gText_FriendWantsToTrade,
+
+static const u8 *const sMessages[] =
+{
+    [MSG_STANDBY]                    = COMPOUND_STRING("{COLOR DARK_GRAY}{HIGHLIGHT WHITE}{SHADOW LIGHT_GRAY}Communication standby…\nPlease wait."),
+    [MSG_CANCELED]                   = COMPOUND_STRING("{COLOR DARK_GRAY}{HIGHLIGHT WHITE}{SHADOW LIGHT_GRAY}The trade has been canceled."),
+    [MSG_ONLY_MON1]                  = COMPOUND_STRING("{COLOR DARK_GRAY}{HIGHLIGHT WHITE}{SHADOW LIGHT_GRAY}That's your only POKéMON\nfor battle."),
+    [MSG_ONLY_MON2]                  = COMPOUND_STRING("That's your only\nPOKéMON for battle."), // Same as above but without color formatting
+    [MSG_WAITING_FOR_FRIEND]         = COMPOUND_STRING("{COLOR DARK_GRAY}{HIGHLIGHT WHITE}{SHADOW LIGHT_GRAY}Waiting for your friend\nto finish…"),
+    [MSG_FRIEND_WANTS_TO_TRADE]      = COMPOUND_STRING("Your friend wants\nto trade POKéMON."),
     [MSG_MON_CANT_BE_TRADED]         = gText_PkmnCantBeTradedNow,
     [MSG_EGG_CANT_BE_TRADED]         = gText_EggCantBeTradedNow,
     [MSG_FRIENDS_MON_CANT_BE_TRADED] = gText_OtherTrainersPkmnCantBeTraded
@@ -1572,7 +1570,7 @@ static bool8 BufferTradeParties(void)
 
 static void PrintIsThisTradeOkay(void)
 {
-    DrawBottomRowText(gText_IsThisTradeOkay, (u8 *)OBJ_VRAM0 + sTradeMenu->bottomTextTileStart * 32, 0x18);
+    DrawBottomRowText(sText_IsThisTradeOkay, (u8 *)OBJ_VRAM0 + sTradeMenu->bottomTextTileStart * 32, 0x18);
 }
 
 static void Leader_ReadLinkBuffer(u8 mpId, u8 status)
@@ -2332,20 +2330,20 @@ static void BufferMovesString(u8 *movesString, u8 whichParty, u8 partyIdx)
                 moves[i] = GetMonData(&gEnemyParty[partyIdx], i + MON_DATA_MOVE1, NULL);
         }
 
-        StringCopy(movesString, sText_Dummy);
+        StringCopy(movesString, gText_EmptyString);
 
         for (i = 0; i < MAX_MON_MOVES; i++)
         {
             if (moves[i] != MOVE_NONE)
                 StringAppend(movesString, gMovesInfo[moves[i]].name);
 
-            StringAppend(movesString, sText_Newline);
+            StringAppend(movesString, gText_Newline);
         }
     }
     else
     {
-        StringCopy(movesString, sText_Dummy);
-        StringAppend(movesString, gText_4Qmark);
+        StringCopy(movesString, gText_EmptyString);
+        StringAppend(movesString, sText_4Qmark);
     }
 }
 

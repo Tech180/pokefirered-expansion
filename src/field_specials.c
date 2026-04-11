@@ -124,6 +124,13 @@ static void Task_LinkRetireStatusWithBattleTowerPartner(u8);
 static void CB2_ReturnToFieldWhileLearningMove(void);
 static void Task_ReturnToFieldWhileLearningMove(u8);
 
+static const u8 sText_BigGuy[] = _("Big guy");
+static const u8 sText_BigGirl[] = _("Big girl");
+static const u8 sText_Son[] = _("son");
+static const u8 sText_Daughter[] = _("daughter");
+static const u8 sText_NowOn[] = _("Now on:");
+static const u8 sText_BP[] = _("BP");
+
 static u8 *const sStringVarPtrs[] = {
     gStringVar1,
     gStringVar2,
@@ -140,7 +147,7 @@ static const u8 *const sScrollMultiLabels_Badges[] =
     gText_MarshBadge,
     gText_VolcanoBadge,
     gText_EarthBadge,
-    gOtherText_Exit,
+    gText_Exit,
 };
 
 static const u8 *const sScrollMultiLabels_SilphCoFloors[] =
@@ -156,36 +163,36 @@ static const u8 *const sScrollMultiLabels_SilphCoFloors[] =
     gText_3F,
     gText_2F,
     gText_1F,
-    gOtherText_Exit,
+    gText_Exit,
 };
 
 static const u8 *const sScrollMultiLabels_BerryPowder[] =
 {
-    gText_Energypowder_50,
-    gText_EnergyRoot_80,
-    gText_HealPowder_50,
-    gText_RevivalHerb_300,
-    gText_Protein_1000,
-    gText_Iron_1000,
-    gText_Carbos_1000,
-    gText_Calcium_1000,
-    gText_Zinc_1000,
-    gText_HpUp_1000,
-    gText_PpUp_3000,
-    gOtherText_Exit,
+    COMPOUND_STRING("ENERGYPOWDER{CLEAR_TO 0x74}{FONT_SMALL}50"),
+    COMPOUND_STRING("ENERGY ROOT{CLEAR_TO 0x74}{FONT_SMALL}80"),
+    COMPOUND_STRING("HEAL POWDER{CLEAR_TO 0x74}{FONT_SMALL}50"),
+    COMPOUND_STRING("REVIVAL HERB{CLEAR_TO 0x6F}{FONT_SMALL}300"),
+    COMPOUND_STRING("PROTEIN{CLEAR_TO 0x65}{FONT_SMALL}1,000"),
+    COMPOUND_STRING("IRON{CLEAR_TO 0x65}{FONT_SMALL}1,000"),
+    COMPOUND_STRING("CARBOS{CLEAR_TO 0x65}{FONT_SMALL}1,000"),
+    COMPOUND_STRING("CALCIUM{CLEAR_TO 0x65}{FONT_SMALL}1,000"),
+    COMPOUND_STRING("ZINC{CLEAR_TO 0x65}{FONT_SMALL}1,000"),
+    COMPOUND_STRING("HP UP{CLEAR_TO 0x65}{FONT_SMALL}1,000"),
+    COMPOUND_STRING("PP UP{CLEAR_TO 0x65}{FONT_SMALL}3,000"),
+    gText_Exit,
 };
 
 static const u8 *const sScrollMultiLabels_BFReceptionist[] =
 {
-    gText_BattleTower2,
+    gText_BattleTower,
     gText_BattleDome,
     gText_BattlePalace,
     gText_BattleArena,
     gText_BattleFactory,
     gText_BattlePike,
     gText_BattlePyramid,
-    gText_RankingHall,
-    gText_ExchangeService,
+    COMPOUND_STRING("RANKING HALL"),
+    COMPOUND_STRING("EXCHANGE SERVICE"),
     gText_Exit
 };
 
@@ -325,17 +332,17 @@ u8 GetPlayerTrainerIdOnesDigit(void)
 void BufferBigGuyOrBigGirlString(void)
 {
     if (gSaveBlock2Ptr->playerGender == MALE)
-        StringCopy(gStringVar1, gText_BigGuy);
+        StringCopy(gStringVar1, sText_BigGuy);
     else
-        StringCopy(gStringVar1, gText_BigGirl);
+        StringCopy(gStringVar1, sText_BigGirl);
 }
 
 void BufferSonOrDaughterString(void)
 {
     if (gSaveBlock2Ptr->playerGender == MALE)
-        StringCopy(gStringVar1, gText_Daughter);
+        StringCopy(gStringVar1, sText_Daughter);
     else
-        StringCopy(gStringVar1, gText_Son);
+        StringCopy(gStringVar1, sText_Son);
 }
 
 u8 GetBattleOutcome(void)
@@ -1312,7 +1319,7 @@ void DrawElevatorCurrentFloorWindow(void)
     sTutorMoveAndElevatorWindowId = AddWindow(&sElevatorCurrentFloorWindowTemplate);
     LoadStdWindowGfx(sTutorMoveAndElevatorWindowId, 0x21D, BG_PLTT_ID(13));
     DrawStdFrameWithCustomTileAndPalette(sTutorMoveAndElevatorWindowId, FALSE, 0x21D, 13);
-    AddTextPrinterParameterized(sTutorMoveAndElevatorWindowId, FONT_NORMAL, gText_NowOn, 0, 2, 0xFF, NULL);
+    AddTextPrinterParameterized(sTutorMoveAndElevatorWindowId, FONT_NORMAL, sText_NowOn, 0, 2, 0xFF, NULL);
     floorname = sFloorNamePointers[gSpecialVar_0x8005];
     strwidth = GetStringWidth(FONT_NORMAL, floorname, 0);
     AddTextPrinterParameterized(sTutorMoveAndElevatorWindowId, FONT_NORMAL, floorname, 56 - strwidth, 16, 0xFF, NULL);
@@ -3532,7 +3539,7 @@ void UpdateBattlePointsWindow(void)
 {
     u8 string[32];
     u32 x;
-    StringCopy(ConvertIntToDecimalStringN(string, gSaveBlock2Ptr->frontier.battlePoints, STR_CONV_MODE_RIGHT_ALIGN, 4), gText_BP);
+    StringCopy(ConvertIntToDecimalStringN(string, gSaveBlock2Ptr->frontier.battlePoints, STR_CONV_MODE_RIGHT_ALIGN, 4), sText_BP);
     x = GetStringRightAlignXOffset(FONT_NORMAL, string, 48);
     AddTextPrinterParameterized(sBattlePointsWindowId, FONT_NORMAL, string, x, 1, 0, NULL);
 }

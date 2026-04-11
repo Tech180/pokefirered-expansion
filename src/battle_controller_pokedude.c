@@ -363,7 +363,7 @@ static void PokedudeHandleChooseAction(enum BattlerId battler)
     if (GetBattlerSide(battler) == B_SIDE_PLAYER)
     {
         gBattlerControllerFuncs[battler] = HandleChooseActionAfterDma3;
-        BattlePutTextOnWindow(gText_EmptyString3, B_WIN_MSG);
+        BattlePutTextOnWindow(gText_EmptyString, B_WIN_MSG);
         BattlePutTextOnWindow(gText_BattleMenu, B_WIN_ACTION_MENU);
         for (i = 0; i < MAX_MON_MOVES; ++i)
             ActionSelectionDestroyCursorAt((u8)i);
@@ -798,6 +798,27 @@ static const struct PokedudeTextScriptHeader *const sPokedudeTextScripts[] =
     [TTVSCR_MATCHUPS] = sPokedudeTextScripts_Matchups,
     [TTVSCR_CATCHING] = sPokedudeTextScripts_Catching,
 };
+
+extern const u8 Pokedude_Text_SpeedierBattlerGoesFirst[];
+extern const u8 Pokedude_Text_MyRattataFasterThanPidgey[];
+extern const u8 Pokedude_Text_BattlersTakeTurnsAttacking[];
+extern const u8 Pokedude_Text_MyRattataWonGetsEXP[];
+extern const u8 Pokedude_Text_UhOhRattataPoisoned[];
+extern const u8 Pokedude_Text_HealStatusRightAway[];
+extern const u8 Pokedude_Text_UsingItemTakesTurn[];
+extern const u8 Pokedude_Text_YayWeManagedToWin[];
+extern const u8 Pokedude_Text_WaterNotVeryEffectiveAgainstGrass[];
+extern const u8 Pokedude_Text_GrassEffectiveAgainstWater[];
+extern const u8 Pokedude_Text_LetsTryShiftingMons[];
+extern const u8 Pokedude_Text_ShiftingUsesTurn[];
+extern const u8 Pokedude_Text_ButterfreeDoubleResistsGrass[];
+extern const u8 Pokedude_Text_ButterfreeGoodAgainstOddish[];
+extern const u8 Pokedude_Text_YeahWeWon[];
+extern const u8 Pokedude_Text_WeakenMonBeforeCatching[];
+extern const u8 Pokedude_Text_BestIfTargetStatused[];
+extern const u8 Pokedude_Text_CantDoubleUpOnStatus[];
+extern const u8 Pokedude_Text_LetMeThrowBall[];
+extern const u8 Pokedude_Text_PickBestKindOfBall[];
 
 static const u8 *const sPokedudeTexts_Battle[] =
 {

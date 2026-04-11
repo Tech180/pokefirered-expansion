@@ -1,6 +1,5 @@
 
 static const u8 sEasyChatWord_Thanks[] = _("THANKS");
-static const u8 sEasyChatWord_Yes[] = _("YES");
 static const u8 sEasyChatWord_HereGoes[] = _("HERE GOES");
 static const u8 sEasyChatWord_HereICome[] = _("HERE I COME");
 static const u8 sEasyChatWord_HereItIs[] = _("HERE IT IS");
@@ -10,11 +9,9 @@ static const u8 sEasyChatWord_Oi[] = _("OI");
 static const u8 sEasyChatWord_HowDo[] = _("HOW DO");
 static const u8 sEasyChatWord_Congrats[] = _("CONGRATS");
 static const u8 sEasyChatWord_GiveMe[] = _("GIVE ME");
-static const u8 sEasyChatWord_Sorry[] = _("SORRY");
 static const u8 sEasyChatWord_Apologize[] = _("APOLOGIZE");
 static const u8 sEasyChatWord_Forgive[] = _("FORGIVE");
 static const u8 sEasyChatWord_HeyThere[] = _("HEY, THERE");
-static const u8 sEasyChatWord_Hello[] = _("HELLO");
 static const u8 sEasyChatWord_GoodBye[] = _("GOOD-BYE");
 static const u8 sEasyChatWord_ThankYou[] = _("THANK YOU");
 static const u8 sEasyChatWord_IveArrived[] = _("I'VE ARRIVED");
@@ -28,7 +25,6 @@ static const u8 sEasyChatWord_Appreciate[] = _("APPRECIATE");
 static const u8 sEasyChatWord_HeyQues[] = _("HEY?");
 static const u8 sEasyChatWord_WhatsUpQues[] = _("WHAT'S UP?");
 static const u8 sEasyChatWord_HuhQues[] = _("HUH?");
-static const u8 sEasyChatWord_No[] = _("NO");
 static const u8 sEasyChatWord_Hi[] = _("HI");
 static const u8 sEasyChatWord_YeahYeah[] = _("YEAH, YEAH");
 static const u8 sEasyChatWord_ByeBye[] = _("BYE-BYE");
@@ -49,7 +45,7 @@ static const struct EasyChatWordInfo sEasyChatGroup_Greetings[] = {
         .enabled = TRUE
     },
     {
-        .text = sEasyChatWord_Yes,
+        .text = gText_Yes,
         .alphabeticalOrder = 25,
         .enabled = TRUE
     },
@@ -99,7 +95,7 @@ static const struct EasyChatWordInfo sEasyChatGroup_Greetings[] = {
         .enabled = TRUE
     },
     {
-        .text = sEasyChatWord_Sorry,
+        .text = gText_Sorry,
         .alphabeticalOrder = 16,
         .enabled = TRUE
     },
@@ -119,7 +115,7 @@ static const struct EasyChatWordInfo sEasyChatGroup_Greetings[] = {
         .enabled = TRUE
     },
     {
-        .text = sEasyChatWord_Hello,
+        .text = gText_Hello,
         .alphabeticalOrder = 4,
         .enabled = TRUE
     },
@@ -189,7 +185,7 @@ static const struct EasyChatWordInfo sEasyChatGroup_Greetings[] = {
         .enabled = TRUE
     },
     {
-        .text = sEasyChatWord_No,
+        .text = gText_No,
         .alphabeticalOrder = 21,
         .enabled = TRUE
     },

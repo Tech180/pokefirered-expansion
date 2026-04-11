@@ -4,8 +4,6 @@
 #include "mystery_gift_client.h"
 #include "constants/union_room.h"
 
-ALIGNED(4) const u8 gText_UR_EmptyString[] = _("");
-ALIGNED(4) const u8 gText_UR_Colon[] = _(":");
 ALIGNED(4) const u8 gText_UR_ID[] = _("{ID}");
 ALIGNED(4) const u8 gText_UR_PleaseStartOver[] = _("Please start over from the beginning.");
 ALIGNED(4) const u8 gText_UR_WirelessSearchCanceled[] = _("The WIRELESS COMMUNICATION\nSYSTEM search has been canceled.");
@@ -13,48 +11,16 @@ ALIGNED(4) static const u8 sText_AwaitingCommunucation2[] = _("ともだちか�
 ALIGNED(4) const u8 gText_UR_AwaitingCommunication[] = _("{STR_VAR_1}! Awaiting\ncommunication from another player.");
 ALIGNED(4) const u8 gText_UR_AwaitingLinkPressStart[] = _("{STR_VAR_1}! Awaiting link!\nPress START when everyone's ready.");
 
-ALIGNED(4) static const u8 sText_SingleBattle[] = _("シングルバトルを かいさいする");
-ALIGNED(4) static const u8 sText_DoubleBattle[] = _("ダブルバトルを かいさいする");
-ALIGNED(4) static const u8 sText_MultiBattle[] = _("マルチバトルを かいさいする");
-ALIGNED(4) static const u8 sText_TradePokemon[] = _("ポケモンこうかんを かいさいする");
-ALIGNED(4) static const u8 sText_Chat[] = _("チャットを かいさいする");
-ALIGNED(4) static const u8 sText_DistWonderCard[] = _("ふしぎなカードをくばる");
-ALIGNED(4) static const u8 sText_DistWonderNews[] = _("ふしぎなニュースをくばる");
-ALIGNED(4) static const u8 sText_DistMysteryEvent[] = _("ふしぎなできごとを かいさいする");
-ALIGNED(4) static const u8 sText_HoldPokemonJump[] = _("なわとびを かいさいする");
-ALIGNED(4) static const u8 sText_HoldBerryCrush[] = _("きのみマッシャーを かいさいする");
-ALIGNED(4) static const u8 sText_HoldBerryPicking[] = _("きのみどりを かいさいする");
-ALIGNED(4) static const u8 sText_HoldSpinTrade[] = _("ぐるぐるこうかんを かいさいする");
-ALIGNED(4) static const u8 sText_HoldSpinShop[] = _("ぐるぐるショップを かいさいする");
-
-// Unused
-static const u8 *const sLinkGroupActionTexts[] = {
-    sText_SingleBattle,
-    sText_DoubleBattle,
-    sText_MultiBattle,
-    sText_TradePokemon,
-    sText_Chat,
-    sText_DistWonderCard,
-    sText_DistWonderNews,
-    sText_DistWonderCard,
-    sText_HoldPokemonJump,
-    sText_HoldBerryCrush,
-    sText_HoldBerryPicking,
-    sText_HoldBerryPicking,
-    sText_HoldSpinTrade,
-    sText_HoldSpinShop
-};
-
 static const u8 sText_1PlayerNeeded[] = _("1 player\nneeded.");
 static const u8 sText_2PlayersNeeded[] = _("2 players\nneeded.");
 static const u8 sText_3PlayersNeeded[] = _("3 players\nneeded.");
-static const u8 sText_4PlayersNeeded[] = _("あと4にん\nひつよう");
 static const u8 sText_2PlayerMode[] = _("2-PLAYER\nMODE");
 static const u8 sText_3PlayerMode[] = _("3-PLAYER\nMODE");
 static const u8 sText_4PlayerMode[] = _("4-PLAYER\nMODE");
 static const u8 sText_5PlayerMode[] = _("5-PLAYER\nMODE");
 
-const u8 *const gTexts_UR_PlayersNeededOrMode[][5] = {
+const u8 *const gTexts_UR_PlayersNeededOrMode[][5] =
+{
     { // 2 players required
         sText_1PlayerNeeded,
         sText_2PlayerMode
@@ -82,7 +48,6 @@ const u8 *const gTexts_UR_PlayersNeededOrMode[][5] = {
 };
 
 ALIGNED(4) const u8 gText_UR_BButtonCancel[] = _("{B_BUTTON}CANCEL");
-ALIGNED(4) static const u8 sText_SearchingForParticipants[] = _("ため\nさんかしゃ ぼしゅうちゅう です！");
 ALIGNED(4) const u8 gText_UR_PlayerContactedYouForXAccept[] = _("{STR_VAR_2} contacted you for\n{STR_VAR_1}. Accept?");
 ALIGNED(4) const u8 gText_UR_PlayerContactedYouShareX[] = _("{STR_VAR_2} contacted you.\nWill you share {STR_VAR_1}?");
 ALIGNED(4) const u8 gText_UR_PlayerContactedYouAddToMembers[] = _("{STR_VAR_2} contacted you.\nAdd to the members?");
@@ -155,7 +120,6 @@ static const u8 *const sDoYouWantModeTexts[] = {
     sText_DoYouWantXMode2
 };
 
-ALIGNED(4) static const u8 sText_CommunicatingPleaseWait[] = _("はなしかけています…\nしょうしょう おまちください"); // Unused
 ALIGNED(4) const u8 gText_UR_AwaitingPlayersResponseAboutTrade[] = _("Awaiting {STR_VAR_1}'s response about\nthe trade…");
 
 ALIGNED(4) static const u8 sText_Communicating[] = _("Communicating{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.\n{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.");
@@ -512,12 +476,8 @@ const u8 *const gTexts_UR_NoWonderShared[] = {
     sText_NoNewsSharedRightNow
 };
 
-ALIGNED(4) const u8 gText_UR_Battle[] = _("BATTLE");
 ALIGNED(4) const u8 gText_UR_Chat2[] = _("CHAT");
 ALIGNED(4) const u8 gText_UR_Greetings[] = _("GREETINGS");
-ALIGNED(4) const u8 gText_UR_Exit[] = _("EXIT");
-
-ALIGNED(4) const u8 gText_UR_Exit2[] = _("EXIT");
 ALIGNED(4) const u8 gText_UR_NameWantedOfferLv[] = _("NAME{CLEAR_TO 0x3C}WANTED{CLEAR_TO 0x6E}OFFER{CLEAR_TO 0xC6}LV.");
 
 ALIGNED(4) const u8 gText_UR_PokemonTrades[] = _("POKéMON TRADES");

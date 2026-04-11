@@ -1,7 +1,6 @@
 
 static const u8 sEasyChatWord_IChooseYou[] = _("I CHOOSE YOU");
 static const u8 sEasyChatWord_Gotcha[] = _("GOTCHA");
-static const u8 sEasyChatWord_Trade[] = _("TRADE");
 static const u8 sEasyChatWord_Sapphire[] = _("SAPPHIRE");
 static const u8 sEasyChatWord_Evolve[] = _("EVOLVE");
 static const u8 sEasyChatWord_Encyclopedia[] = _("ENCYCLOPEDIA");
@@ -13,13 +12,11 @@ static const u8 sEasyChatWord_SpAbility[] = _("SP. ABILITY");
 static const u8 sEasyChatWord_Trainer[] = _("TRAINER");
 static const u8 sEasyChatWord_Version[] = _("VERSION");
 static const u8 sEasyChatWord_Pokenav[] = _("POKéNAV");
-static const u8 sEasyChatWord_Pokemon[] = _("POKéMON");
 static const u8 sEasyChatWord_Get[] = _("GET");
 static const u8 sEasyChatWord_Ruby[] = _("RUBY");
 static const u8 sEasyChatWord_Level[] = _("LEVEL");
 static const u8 sEasyChatWord_Red[] = _("RED");
 static const u8 sEasyChatWord_Green[] = _("GREEN");
-static const u8 sEasyChatWord_Bag[] = _("BAG");
 static const u8 sEasyChatWord_Flame[] = _("FLAME");
 static const u8 sEasyChatWord_Gold[] = _("GOLD");
 static const u8 sEasyChatWord_Leaf[] = _("LEAF");
@@ -37,7 +34,7 @@ static const struct EasyChatWordInfo sEasyChatGroup_Trainer[] = {
         .enabled = TRUE
     },
     {
-        .text = sEasyChatWord_Trade,
+        .text = gText_Trade,
         .alphabeticalOrder = 8,
         .enabled = TRUE
     },
@@ -97,7 +94,7 @@ static const struct EasyChatWordInfo sEasyChatGroup_Trainer[] = {
         .enabled = FALSE
     },
     {
-        .text = sEasyChatWord_Pokemon,
+        .text = gText_Pokemon,
         .alphabeticalOrder = 6,
         .enabled = TRUE
     },
@@ -132,7 +129,7 @@ static const struct EasyChatWordInfo sEasyChatGroup_Trainer[] = {
         .enabled = TRUE
     },
     {
-        .text = sEasyChatWord_Bag,
+        .text = gText_Bag,
         .alphabeticalOrder = 25,
         .enabled = TRUE
     },

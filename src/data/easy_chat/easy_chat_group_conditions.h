@@ -20,7 +20,6 @@ static const u8 sEasyChatWord_Skilled[] = _("SKILLED");
 static const u8 sEasyChatWord_Noisy[] = _("NOISY");
 static const u8 sEasyChatWord_Big[] = _("BIG");
 static const u8 sEasyChatWord_Late[] = _("LATE");
-static const u8 sEasyChatWord_Close[] = _("CLOSE");
 static const u8 sEasyChatWord_Docile[] = _("DOCILE");
 static const u8 sEasyChatWord_Amusing[] = _("AMUSING");
 static const u8 sEasyChatWord_Entertaining[] = _("ENTERTAINING");
@@ -46,12 +45,10 @@ static const u8 sEasyChatWord_Skill[] = _("SKILL");
 static const u8 sEasyChatWord_Top[] = _("TOP");
 static const u8 sEasyChatWord_NonStop[] = _("NON-STOP");
 static const u8 sEasyChatWord_Preposterous[] = _("PREPOSTEROUS");
-static const u8 sEasyChatWord_None[] = _("NONE");
 static const u8 sEasyChatWord_Nothing[] = _("NOTHING");
 static const u8 sEasyChatWord_Natural[] = _("NATURAL");
 static const u8 sEasyChatWord_Becomes[] = _("BECOMES");
 static const u8 sEasyChatWord_Lukewarm[] = _("LUKEWARM");
-static const u8 sEasyChatWord_Fast[] = _("FAST");
 static const u8 sEasyChatWord_Low[] = _("LOW");
 static const u8 sEasyChatWord_Awful[] = _("AWFUL");
 static const u8 sEasyChatWord_Alone[] = _("ALONE");
@@ -176,7 +173,7 @@ static const struct EasyChatWordInfo sEasyChatGroup_Conditions[] = {
         .enabled = TRUE
     },
     {
-        .text = sEasyChatWord_Close,
+        .text = gText_Close,
         .alphabeticalOrder = 1,
         .enabled = TRUE
     },
@@ -306,7 +303,7 @@ static const struct EasyChatWordInfo sEasyChatGroup_Conditions[] = {
         .enabled = TRUE
     },
     {
-        .text = sEasyChatWord_None,
+        .text = gText_None,
         .alphabeticalOrder = 47,
         .enabled = TRUE
     },
@@ -331,7 +328,7 @@ static const struct EasyChatWordInfo sEasyChatGroup_Conditions[] = {
         .enabled = TRUE
     },
     {
-        .text = sEasyChatWord_Fast,
+        .text = gText_Fast,
         .alphabeticalOrder = 26,
         .enabled = TRUE
     },

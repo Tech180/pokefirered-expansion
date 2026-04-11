@@ -166,7 +166,6 @@ static const u8 sText_Someones[] = _("someone's");
 static const u8 sText_Lanettes[] = _("LANETTE's"); //no decapitalize until it is everywhere
 static const u8 sText_EnigmaBerry[] = _("ENIGMA BERRY"); //no decapitalize until it is everywhere
 static const u8 sText_BerrySuffix[] = _(" BERRY"); //no decapitalize until it is everywhere
-const u8 gText_EmptyString3[] = _("");
 
 // New battle strings.
 const u8 gText_drastically[] = _("drastically ");
@@ -204,35 +203,14 @@ const u8 gText_Paralysis[] = _("paralysis");
 const u8 gText_Ice[] = _("ice");
 const u8 gText_Confusion[] = _("confusion");
 const u8 gText_Love[] = _("love");
-const u8 gText_SpaceAndSpace[] = _(" and ");
-const u8 gText_CommaSpace[] = _(", ");
 const u8 gText_Space[] = _(" ");
-const u8 gText_LineBreak[] = _("\l");
-const u8 gText_NewLine[] = _("\n");
-const u8 gText_Are[] = _("are");
-const u8 gText_Are2[] = _("are");
 const u8 gText_BadEgg[] = _("Bad EGG");
-const u8 gText_BattleWallyName[] = _("WALLY");
 const u8 gText_Win[] = _("{HIGHLIGHT TRANSPARENT}Win");
 const u8 gText_Loss[] = _("{HIGHLIGHT TRANSPARENT}Loss");
 const u8 gText_Draw[] = _("{HIGHLIGHT TRANSPARENT}Draw");
 static const u8 sText_SpaceIs[] = _(" is");
 static const u8 sText_ApostropheS[] = _("'s");
 const u8 gText_BattleTourney[] = _("BATTLE TOURNEY");
-
-
-const u8 gText_TheGreatNewHope[] = _("The great new hope!\p");
-const u8 gText_WillChampionshipDreamComeTrue[] = _("Will the championship dream come true?!\p");
-const u8 gText_AFormerChampion[] = _("A former CHAMPION!\p");
-const u8 gText_ThePreviousChampion[] = _("The previous CHAMPION!\p");
-const u8 gText_TheUnbeatenChampion[] = _("The unbeaten CHAMPION!\p");
-const u8 gText_PlayerMon1Name[] = _("{B_PLAYER_MON1_NAME}");
-const u8 gText_Vs[] = _("VS");
-const u8 gText_OpponentMon1Name[] = _("{B_OPPONENT_MON1_NAME}");
-const u8 gText_Mind[] = _("Mind");
-const u8 gText_Skill[] = _("Skill");
-const u8 gText_Body[] = _("Body");
-const u8 gText_Judgment[] = _("{B_BUFF1}{CLEAR 13}Judgment{CLEAR 13}{B_BUFF2}");
 
 static const u8 sText_TwoTrainersSentPkmn[] = _("{B_TRAINER1_NAME_WITH_CLASS} sent out {B_OPPONENT_MON1_NAME}!\p{B_TRAINER2_NAME_WITH_CLASS} sent out {B_OPPONENT_MON2_NAME}!");
 static const u8 sText_Trainer2SentOutPkmn[] = _("{B_TRAINER2_NAME_WITH_CLASS} sent out {B_BUFF1}!");
@@ -573,7 +551,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_PKMNSITEMRESTOREDHPALITTLE]           = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} restored a little HP using its {B_LAST_ITEM}!"),
     [STRINGID_ITEMALLOWSONLYYMOVE]                  = COMPOUND_STRING("{B_LAST_ITEM} only allows the use of {B_CURRENT_MOVE}!\p"),
     [STRINGID_PKMNHUNGONWITHX]                      = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} hung on using its {B_LAST_ITEM}!"),
-    [STRINGID_EMPTYSTRING3]                         = gText_EmptyString3,
+    [STRINGID_EMPTYSTRING3]                         = gText_EmptyString,
     [STRINGID_PKMNSXRESTOREDHPALITTLE2]             = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY} restored its HP a little!"), //not in gen 5+, ability popup
     [STRINGID_PKMNSXWHIPPEDUPSANDSTORM]             = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_SCR_ABILITY} whipped up a sandstorm!"), //not in gen 5+, ability popup
     [STRINGID_PKMNSXPREVENTSYLOSS]                  = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_SCR_ABILITY} prevents {B_BUFF1} loss!"), //not in gen 5+, ability popup
@@ -1520,10 +1498,10 @@ const u16 gDoubleBattleRecallStrings[1 << (MAX_BATTLERS_COUNT / 2)] =
 
 const u8 *const gTrainerTowerChallengeTypeTexts[NUM_TOWER_CHALLENGE_TYPES] =
 {
-    gOtherText_Single,
-    gOtherText_Double,
-    gOtherText_Knockout,
-    gOtherText_Mixed
+    gText_Single,
+    gText_Double,
+    gText_Knockout,
+    gText_Mixed
 };
 
 const u8 *const gRoundsStringTable[DOME_ROUNDS_COUNT] =
@@ -3068,7 +3046,7 @@ static const u8 *BattleStringGetOpponentNameByTrainerId(u16 trainerId, u8 *text,
 
     assertf(DoesStringProperlyTerminate(toCpy, TRAINER_NAME_LENGTH + 1),"Opponent needs a valid name")
     {
-        return gText_EmptyString3;
+        return gText_EmptyString;
     }
 
     return toCpy;
