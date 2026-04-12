@@ -1482,7 +1482,7 @@ static bool32 CanTwoTurnMoveFireThisTurn(struct BattleContext *ctx)
 {
     if (gBattleMoveEffects[GetMoveEffect(ctx->move)].semiInvulnerableEffect
      || GetMoveEffect(ctx->move) == EFFECT_GEOMANCY
-     || !IsBattlerWeatherAffected(ctx->battlerAtk, GetMoveTwoTurnAttackWeather(ctx->move)))
+     || !(GetAttackerWeather(ctx->holdEffectAtk, ctx->abilityAtk, GetWeather()) & GetMoveTwoTurnAttackWeather(ctx->move)))
         return FALSE;
     return TRUE;
 }
@@ -2085,7 +2085,7 @@ static enum MoveEndResult MoveEndProtectLikeEffect(void)
     }
 
     if (method != PROTECT_MAX_GUARD
-     && abilityAtk == ABILITY_UNSEEN_FIST
+     && (abilityAtk == ABILITY_UNSEEN_FIST || abilityAtk == ABILITY_PIERCING_DRILL)
      && IsMoveMakingContact(gBattlerAttacker, gBattlerTarget, abilityAtk, holdEffectAtk, gCurrentMove))
     {
         gBattleScripting.moveendState++;

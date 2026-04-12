@@ -1287,12 +1287,23 @@ static inline void CalculateAndSetMoveDamage(struct BattleContext *ctx)
     }
 }
 
-static u32 GetWeather(void)
+u32 GetWeather(void)
 {
     if (gBattleWeather == B_WEATHER_NONE || !HasWeatherEffect())
         return B_WEATHER_NONE;
     else
         return gBattleWeather;
+}
+
+u32 GetAttackerWeather(enum HoldEffect holdEffect, enum Ability ability, u32 weather)
+{
+    if (ability == ABILITY_MEGA_SOL)
+        return B_WEATHER_SUN;
+
+    if (holdEffect == HOLD_EFFECT_UTILITY_UMBRELLA)
+        return weather & ~(B_WEATHER_SUN | B_WEATHER_RAIN); // This was assumed not to block mega sol, like cloud nine doesn't.
+
+    return weather;
 }
 
 static void Cmd_damagecalc(void)
@@ -9444,19 +9455,20 @@ static void Cmd_recoverbasedonsunlight(void)
     if (gBattleMons[gBattlerAttacker].hp != gBattleMons[gBattlerAttacker].maxHP)
     {
         s32 recoverAmount = 0;
+        u32 weather = GetAttackerWeather(GetBattlerHoldEffect(gBattlerAttacker), GetBattlerAbility(gBattlerAttacker), GetWeather());
         if (GetMoveEffect(gCurrentMove) == EFFECT_SHORE_UP)
         {
-            if (HasWeatherEffect() && gBattleWeather & B_WEATHER_SANDSTORM)
+            if (weather & B_WEATHER_SANDSTORM)
                 recoverAmount = 20 * GetNonDynamaxMaxHP(gBattlerAttacker) / 30;
             else
                 recoverAmount = GetNonDynamaxMaxHP(gBattlerAttacker) / 2;
         }
         else if (GetConfig(B_TIME_OF_DAY_HEALING_MOVES) != GEN_2)
         {
-            if (!(gBattleWeather & B_WEATHER_ANY) || !HasWeatherEffect() || GetBattlerHoldEffect(gBattlerAttacker) == HOLD_EFFECT_UTILITY_UMBRELLA)
-                recoverAmount = GetNonDynamaxMaxHP(gBattlerAttacker) / 2;
-            else if (gBattleWeather & B_WEATHER_SUN)
+            if (weather & B_WEATHER_SUN)
                 recoverAmount = 20 * GetNonDynamaxMaxHP(gBattlerAttacker) / 30;
+            else if (!(gBattleWeather & B_WEATHER_ANY) || !HasWeatherEffect() || GetBattlerHoldEffect(gBattlerAttacker) == HOLD_EFFECT_UTILITY_UMBRELLA)
+                recoverAmount = GetNonDynamaxMaxHP(gBattlerAttacker) / 2;
             else // not sunny weather
                 recoverAmount = GetNonDynamaxMaxHP(gBattlerAttacker) / 4;
         }
@@ -9485,10 +9497,10 @@ static void Cmd_recoverbasedonsunlight(void)
                 break;
             }
 
-            if (!(gBattleWeather & B_WEATHER_ANY) || !HasWeatherEffect() || GetBattlerHoldEffect(gBattlerAttacker) == HOLD_EFFECT_UTILITY_UMBRELLA)
-                recoverAmount = healingModifier * GetNonDynamaxMaxHP(gBattlerAttacker) / 4;
-            else if (gBattleWeather & B_WEATHER_SUN)
+            if (weather & B_WEATHER_SUN)
                 recoverAmount = healingModifier * GetNonDynamaxMaxHP(gBattlerAttacker) / 2;
+            else if (!(gBattleWeather & B_WEATHER_ANY) || !HasWeatherEffect() || GetBattlerHoldEffect(gBattlerAttacker) == HOLD_EFFECT_UTILITY_UMBRELLA)
+                recoverAmount = healingModifier * GetNonDynamaxMaxHP(gBattlerAttacker) / 4;
             else // not sunny weather
                 recoverAmount = healingModifier * GetNonDynamaxMaxHP(gBattlerAttacker) / 8;
 
@@ -11408,27 +11420,9 @@ static void Cmd_trainerslideout(void)
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
-static const u16 sTelekinesisBanList[] =
-{
-    SPECIES_DIGLETT,
-    SPECIES_DUGTRIO,
-    SPECIES_DIGLETT_ALOLA,
-    SPECIES_DUGTRIO_ALOLA,
-    SPECIES_SANDYGAST,
-    SPECIES_PALOSSAND,
-    SPECIES_GENGAR_MEGA,
-};
-
 bool32 IsTelekinesisBannedSpecies(u16 species)
 {
-    u32 i;
-
-    for (i = 0; i < ARRAY_COUNT(sTelekinesisBanList); i++)
-    {
-        if (species == sTelekinesisBanList[i])
-            return TRUE;
-    }
-    return FALSE;
+    return gSpeciesInfo[SanitizeSpeciesId(species)].isTelekinesisBanned;
 }
 
 static void Cmd_settelekinesis(void)
@@ -14797,7 +14791,7 @@ void BS_JumpIfWeatherAffected(void)
 {
     NATIVE_ARGS(u16 flags, const u8 *jumpInstr);
     u32 weather = cmd->flags;
-    if (IsBattlerWeatherAffected(gBattlerAttacker, weather))
+    if (GetAttackerWeather(GetBattlerHoldEffect(gBattlerAttacker), GetBattlerAbility(gBattlerAttacker), GetWeather()) & weather)
         gBattlescriptCurrInstr = cmd->jumpInstr;
     else
         gBattlescriptCurrInstr = cmd->nextInstr;
