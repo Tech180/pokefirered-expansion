@@ -110,7 +110,7 @@
 #define VAR_0x403C                         0x403C // Set to 0x0302, never read
 #define VAR_HERACROSS_SIZE_RECORD          0x403D
 #define VAR_DEOXYS_INTERACTION_NUM         0x403E
-#define VAR_0x403F                         0x403F
+#define VAR_RIVAL_STARTER_HA               0x403F
 #define VAR_MAGIKARP_SIZE_RECORD           0x4040
 #define VAR_0x4041                         0x4041
 #define VAR_TRAINER_CARD_MON_ICON_TINT_IDX 0x4042
@@ -197,13 +197,13 @@
 #define VAR_FRONTIER_GAMBLER_STATE          0x408F
 #define VAR_FRONTIER_GAMBLER_SET_CHALLENGE  0x4090
 #define VAR_FRONTIER_GAMBLER_AMOUNT_BET     0x4091
-#define VAR_0x4092                 0x4092
-#define VAR_0x4093                 0x4093
-#define VAR_0x4094                 0x4094
-#define VAR_0x4095                 0x4095
-#define VAR_0x4096                 0x4096
-#define VAR_0x4097                 0x4097
-#define VAR_0x4098                 0x4098
+#define VAR_WEATHER_DAY_1          0x4092
+#define VAR_WEATHER_DAY_2          0x4093
+#define VAR_WEATHER_DAY_3          0x4094
+#define VAR_WEATHER_DAY_4          0x4095
+#define VAR_WEATHER_DAY_5          0x4096
+#define VAR_WEATHER_DAY_6          0x4097
+#define VAR_WEATHER_DAY_7          0x4098
 #define VAR_0x4099                 0x4099
 #define VAR_0x409A                 0x409A
 #define VAR_0x409B                 0x409B
