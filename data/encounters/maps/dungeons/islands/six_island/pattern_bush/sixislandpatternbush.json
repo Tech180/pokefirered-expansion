@@ -1,0 +1,143 @@
+{
+  "group_label": "gWildMonHeaders",
+  "encounters": [
+    {
+      "map": "MAP_SIX_ISLAND_PATTERN_BUSH",
+      "base_label": "sSixIslandPatternBush_FireRed",
+      "land_mons": {
+        "encounter_rate": 21,
+        "mons": [
+          {
+            "min_level": 9,
+            "max_level": 9,
+            "species": "SPECIES_SPINARAK"
+          },
+          {
+            "min_level": 9,
+            "max_level": 9,
+            "species": "SPECIES_KAKUNA"
+          },
+          {
+            "min_level": 14,
+            "max_level": 14,
+            "species": "SPECIES_SPINARAK"
+          },
+          {
+            "min_level": 6,
+            "max_level": 6,
+            "species": "SPECIES_CATERPIE"
+          },
+          {
+            "min_level": 6,
+            "max_level": 6,
+            "species": "SPECIES_WEEDLE"
+          },
+          {
+            "min_level": 15,
+            "max_level": 15,
+            "species": "SPECIES_HERACROSS"
+          },
+          {
+            "min_level": 9,
+            "max_level": 9,
+            "species": "SPECIES_METAPOD"
+          },
+          {
+            "min_level": 20,
+            "max_level": 20,
+            "species": "SPECIES_HERACROSS"
+          },
+          {
+            "min_level": 9,
+            "max_level": 9,
+            "species": "SPECIES_LEDYBA"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_HERACROSS"
+          },
+          {
+            "min_level": 14,
+            "max_level": 14,
+            "species": "SPECIES_LEDYBA"
+          },
+          {
+            "min_level": 30,
+            "max_level": 30,
+            "species": "SPECIES_HERACROSS"
+          }
+        ]
+      }
+    },
+    {
+      "map": "MAP_SIX_ISLAND_PATTERN_BUSH",
+      "base_label": "sSixIslandPatternBush_LeafGreen",
+      "land_mons": {
+        "encounter_rate": 21,
+        "mons": [
+          {
+            "min_level": 9,
+            "max_level": 9,
+            "species": "SPECIES_LEDYBA"
+          },
+          {
+            "min_level": 9,
+            "max_level": 9,
+            "species": "SPECIES_KAKUNA"
+          },
+          {
+            "min_level": 14,
+            "max_level": 14,
+            "species": "SPECIES_LEDYBA"
+          },
+          {
+            "min_level": 6,
+            "max_level": 6,
+            "species": "SPECIES_CATERPIE"
+          },
+          {
+            "min_level": 6,
+            "max_level": 6,
+            "species": "SPECIES_WEEDLE"
+          },
+          {
+            "min_level": 15,
+            "max_level": 15,
+            "species": "SPECIES_HERACROSS"
+          },
+          {
+            "min_level": 9,
+            "max_level": 9,
+            "species": "SPECIES_METAPOD"
+          },
+          {
+            "min_level": 20,
+            "max_level": 20,
+            "species": "SPECIES_HERACROSS"
+          },
+          {
+            "min_level": 9,
+            "max_level": 9,
+            "species": "SPECIES_SPINARAK"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_HERACROSS"
+          },
+          {
+            "min_level": 14,
+            "max_level": 14,
+            "species": "SPECIES_SPINARAK"
+          },
+          {
+            "min_level": 30,
+            "max_level": 30,
+            "species": "SPECIES_HERACROSS"
+          }
+        ]
+      }
+    }
+  ]
+}

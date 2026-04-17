@@ -1,0 +1,73 @@
+{
+  "group_label": "gBattlePyramidWildMonHeaders",
+  "encounters": [
+    {
+      "base_label": "gBattlePyramid_6",
+      "land_mons": {
+        "encounter_rate": 4,
+        "mons": [
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_CHARIZARD"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_CHARIZARD"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_CHARIZARD"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_CHARMELEON"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_SQUIRTLE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_SQUIRTLE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_WARTORTLE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_WARTORTLE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_WARTORTLE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_WARTORTLE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_WARTORTLE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_WARTORTLE"
+          }
+        ]
+      }
+    }
+  ]
+}

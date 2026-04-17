@@ -1,0 +1,143 @@
+{
+  "group_label": "gWildMonHeaders",
+  "encounters": [
+    {
+      "map": "MAP_FOUR_ISLAND_ICEFALL_CAVE_1F",
+      "base_label": "sFourIslandIcefallCave1F_FireRed",
+      "land_mons": {
+        "encounter_rate": 7,
+        "mons": [
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_SWINUB"
+          },
+          {
+            "min_level": 45,
+            "max_level": 45,
+            "species": "SPECIES_GOLBAT"
+          },
+          {
+            "min_level": 45,
+            "max_level": 45,
+            "species": "SPECIES_SEEL"
+          },
+          {
+            "min_level": 27,
+            "max_level": 27,
+            "species": "SPECIES_SWINUB"
+          },
+          {
+            "min_level": 40,
+            "max_level": 40,
+            "species": "SPECIES_ZUBAT"
+          },
+          {
+            "min_level": 29,
+            "max_level": 29,
+            "species": "SPECIES_SWINUB"
+          },
+          {
+            "min_level": 30,
+            "max_level": 30,
+            "species": "SPECIES_DELIBIRD"
+          },
+          {
+            "min_level": 31,
+            "max_level": 31,
+            "species": "SPECIES_SWINUB"
+          },
+          {
+            "min_level": 48,
+            "max_level": 48,
+            "species": "SPECIES_GOLBAT"
+          },
+          {
+            "min_level": 23,
+            "max_level": 23,
+            "species": "SPECIES_SWINUB"
+          },
+          {
+            "min_level": 48,
+            "max_level": 48,
+            "species": "SPECIES_GOLBAT"
+          },
+          {
+            "min_level": 23,
+            "max_level": 23,
+            "species": "SPECIES_SWINUB"
+          }
+        ]
+      }
+    },
+    {
+      "map": "MAP_FOUR_ISLAND_ICEFALL_CAVE_1F",
+      "base_label": "sFourIslandIcefallCave1F_LeafGreen",
+      "land_mons": {
+        "encounter_rate": 7,
+        "mons": [
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_SWINUB"
+          },
+          {
+            "min_level": 45,
+            "max_level": 45,
+            "species": "SPECIES_GOLBAT"
+          },
+          {
+            "min_level": 45,
+            "max_level": 45,
+            "species": "SPECIES_SEEL"
+          },
+          {
+            "min_level": 27,
+            "max_level": 27,
+            "species": "SPECIES_SWINUB"
+          },
+          {
+            "min_level": 40,
+            "max_level": 40,
+            "species": "SPECIES_ZUBAT"
+          },
+          {
+            "min_level": 29,
+            "max_level": 29,
+            "species": "SPECIES_SWINUB"
+          },
+          {
+            "min_level": 30,
+            "max_level": 30,
+            "species": "SPECIES_SNEASEL"
+          },
+          {
+            "min_level": 31,
+            "max_level": 31,
+            "species": "SPECIES_SWINUB"
+          },
+          {
+            "min_level": 48,
+            "max_level": 48,
+            "species": "SPECIES_GOLBAT"
+          },
+          {
+            "min_level": 23,
+            "max_level": 23,
+            "species": "SPECIES_SWINUB"
+          },
+          {
+            "min_level": 48,
+            "max_level": 48,
+            "species": "SPECIES_GOLBAT"
+          },
+          {
+            "min_level": 23,
+            "max_level": 23,
+            "species": "SPECIES_SWINUB"
+          }
+        ]
+      }
+    }
+  ]
+}

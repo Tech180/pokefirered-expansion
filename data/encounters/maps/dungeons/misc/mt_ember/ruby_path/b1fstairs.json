@@ -1,0 +1,203 @@
+{
+  "group_label": "gWildMonHeaders",
+  "encounters": [
+    {
+      "map": "MAP_MT_EMBER_RUBY_PATH_B1F_STAIRS",
+      "base_label": "sMtEmberRubyPathB1FStairs_FireRed",
+      "land_mons": {
+        "encounter_rate": 7,
+        "mons": [
+          {
+            "min_level": 40,
+            "max_level": 40,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 26,
+            "max_level": 26,
+            "species": "SPECIES_SLUGMA"
+          },
+          {
+            "min_level": 42,
+            "max_level": 42,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 24,
+            "max_level": 24,
+            "species": "SPECIES_SLUGMA"
+          },
+          {
+            "min_level": 28,
+            "max_level": 28,
+            "species": "SPECIES_SLUGMA"
+          },
+          {
+            "min_level": 30,
+            "max_level": 30,
+            "species": "SPECIES_SLUGMA"
+          },
+          {
+            "min_level": 44,
+            "max_level": 44,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 32,
+            "max_level": 32,
+            "species": "SPECIES_SLUGMA"
+          },
+          {
+            "min_level": 44,
+            "max_level": 44,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 22,
+            "max_level": 22,
+            "species": "SPECIES_SLUGMA"
+          },
+          {
+            "min_level": 44,
+            "max_level": 44,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 22,
+            "max_level": 22,
+            "species": "SPECIES_SLUGMA"
+          }
+        ]
+      },
+      "rock_smash_mons": {
+        "encounter_rate": 50,
+        "mons": [
+          {
+            "min_level": 25,
+            "max_level": 35,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 30,
+            "max_level": 45,
+            "species": "SPECIES_GRAVELER"
+          },
+          {
+            "min_level": 35,
+            "max_level": 50,
+            "species": "SPECIES_GRAVELER"
+          },
+          {
+            "min_level": 30,
+            "max_level": 40,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 30,
+            "max_level": 40,
+            "species": "SPECIES_GEODUDE"
+          }
+        ]
+      }
+    },
+    {
+      "map": "MAP_MT_EMBER_RUBY_PATH_B1F_STAIRS",
+      "base_label": "sMtEmberRubyPathB1FStairs_LeafGreen",
+      "land_mons": {
+        "encounter_rate": 7,
+        "mons": [
+          {
+            "min_level": 40,
+            "max_level": 40,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 26,
+            "max_level": 26,
+            "species": "SPECIES_SLUGMA"
+          },
+          {
+            "min_level": 42,
+            "max_level": 42,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 24,
+            "max_level": 24,
+            "species": "SPECIES_SLUGMA"
+          },
+          {
+            "min_level": 28,
+            "max_level": 28,
+            "species": "SPECIES_SLUGMA"
+          },
+          {
+            "min_level": 30,
+            "max_level": 30,
+            "species": "SPECIES_SLUGMA"
+          },
+          {
+            "min_level": 44,
+            "max_level": 44,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 32,
+            "max_level": 32,
+            "species": "SPECIES_SLUGMA"
+          },
+          {
+            "min_level": 44,
+            "max_level": 44,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 22,
+            "max_level": 22,
+            "species": "SPECIES_SLUGMA"
+          },
+          {
+            "min_level": 44,
+            "max_level": 44,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 22,
+            "max_level": 22,
+            "species": "SPECIES_SLUGMA"
+          }
+        ]
+      },
+      "rock_smash_mons": {
+        "encounter_rate": 50,
+        "mons": [
+          {
+            "min_level": 25,
+            "max_level": 35,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 30,
+            "max_level": 45,
+            "species": "SPECIES_GRAVELER"
+          },
+          {
+            "min_level": 35,
+            "max_level": 50,
+            "species": "SPECIES_GRAVELER"
+          },
+          {
+            "min_level": 30,
+            "max_level": 40,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 30,
+            "max_level": 40,
+            "species": "SPECIES_GEODUDE"
+          }
+        ]
+      }
+    }
+  ]
+}

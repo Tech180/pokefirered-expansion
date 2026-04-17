@@ -1,0 +1,73 @@
+{
+  "group_label": "gBattlePyramidWildMonHeaders",
+  "encounters": [
+    {
+      "base_label": "gBattlePyramid_1",
+      "land_mons": {
+        "encounter_rate": 4,
+        "mons": [
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_BULBASAUR"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_BULBASAUR"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_BULBASAUR"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_BULBASAUR"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_IVYSAUR"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_IVYSAUR"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_VENUSAUR"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_VENUSAUR"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_VENUSAUR"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_CHARMANDER"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_VENUSAUR"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_CHARMANDER"
+          }
+        ]
+      }
+    }
+  ]
+}

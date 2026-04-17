@@ -1,0 +1,143 @@
+{
+  "group_label": "gWildMonHeaders",
+  "encounters": [
+    {
+      "map": "MAP_ROUTE17",
+      "base_label": "sRoute17_FireRed",
+      "land_mons": {
+        "encounter_rate": 21,
+        "mons": [
+          {
+            "min_level": 20,
+            "max_level": 20,
+            "species": "SPECIES_SPEAROW"
+          },
+          {
+            "min_level": 24,
+            "max_level": 24,
+            "species": "SPECIES_DODUO"
+          },
+          {
+            "min_level": 22,
+            "max_level": 22,
+            "species": "SPECIES_SPEAROW"
+          },
+          {
+            "min_level": 26,
+            "max_level": 26,
+            "species": "SPECIES_DODUO"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_RATICATE"
+          },
+          {
+            "min_level": 27,
+            "max_level": 27,
+            "species": "SPECIES_RATICATE"
+          },
+          {
+            "min_level": 28,
+            "max_level": 28,
+            "species": "SPECIES_DODUO"
+          },
+          {
+            "min_level": 29,
+            "max_level": 29,
+            "species": "SPECIES_RATICATE"
+          },
+          {
+            "min_level": 22,
+            "max_level": 22,
+            "species": "SPECIES_RATTATA"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_FEAROW"
+          },
+          {
+            "min_level": 22,
+            "max_level": 22,
+            "species": "SPECIES_RATTATA"
+          },
+          {
+            "min_level": 27,
+            "max_level": 27,
+            "species": "SPECIES_FEAROW"
+          }
+        ]
+      }
+    },
+    {
+      "map": "MAP_ROUTE17",
+      "base_label": "sRoute17_LeafGreen",
+      "land_mons": {
+        "encounter_rate": 21,
+        "mons": [
+          {
+            "min_level": 20,
+            "max_level": 20,
+            "species": "SPECIES_SPEAROW"
+          },
+          {
+            "min_level": 24,
+            "max_level": 24,
+            "species": "SPECIES_DODUO"
+          },
+          {
+            "min_level": 22,
+            "max_level": 22,
+            "species": "SPECIES_SPEAROW"
+          },
+          {
+            "min_level": 26,
+            "max_level": 26,
+            "species": "SPECIES_DODUO"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_RATICATE"
+          },
+          {
+            "min_level": 27,
+            "max_level": 27,
+            "species": "SPECIES_RATICATE"
+          },
+          {
+            "min_level": 28,
+            "max_level": 28,
+            "species": "SPECIES_DODUO"
+          },
+          {
+            "min_level": 29,
+            "max_level": 29,
+            "species": "SPECIES_RATICATE"
+          },
+          {
+            "min_level": 22,
+            "max_level": 22,
+            "species": "SPECIES_RATTATA"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_FEAROW"
+          },
+          {
+            "min_level": 22,
+            "max_level": 22,
+            "species": "SPECIES_RATTATA"
+          },
+          {
+            "min_level": 27,
+            "max_level": 27,
+            "species": "SPECIES_FEAROW"
+          }
+        ]
+      }
+    }
+  ]
+}
