@@ -1,0 +1,69 @@
+{
+  "identifier": "TRAINER_PSYCHIC_RODETTE",
+  "trainer_name": "RODETTE",
+  "trainer_class": "TRAINER_CLASS_PSYCHIC",
+  "trainer_pic": "TRAINER_PIC_PSYCHIC_F",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_INTENSE",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_NATU",
+      "level": 48,
+      "moves": [
+        "MOVE_NIGHT_SHADE",
+        "MOVE_CONFUSE_RAY",
+        "MOVE_WISH",
+        "MOVE_FUTURE_SIGHT"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_DROWZEE",
+      "level": 48,
+      "moves": [
+        "MOVE_PSYCHIC",
+        "MOVE_DISABLE",
+        "MOVE_PSYCH_UP",
+        "MOVE_FUTURE_SIGHT"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_HYPNO",
+      "level": 50,
+      "moves": [
+        "MOVE_PSYCHIC",
+        "MOVE_HYPNOSIS",
+        "MOVE_PSYCH_UP",
+        "MOVE_FUTURE_SIGHT"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    }
+  ]
+}

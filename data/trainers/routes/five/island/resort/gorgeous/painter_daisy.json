@@ -1,0 +1,33 @@
+{
+  "identifier": "TRAINER_PAINTER_DAISY",
+  "trainer_name": "DAISY",
+  "trainer_class": "TRAINER_CLASS_PAINTER",
+  "trainer_pic": "TRAINER_PIC_PAINTER",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_FEMALE",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_SMEARGLE",
+      "level": 50,
+      "moves": [
+        "MOVE_DYNAMIC_PUNCH",
+        "MOVE_DIZZY_PUNCH",
+        "MOVE_FOCUS_PUNCH",
+        "MOVE_MEGA_PUNCH"
+      ],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      }
+    }
+  ]
+}

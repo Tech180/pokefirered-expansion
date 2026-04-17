@@ -1,0 +1,73 @@
+{
+  "identifier": "TRAINER_TEAM_ROCKET_ADMIN_2",
+  "trainer_name": "ADMIN",
+  "trainer_class": "TRAINER_CLASS_TEAM_ROCKET",
+  "trainer_pic": "TRAINER_PIC_ROCKET_GRUNT_M",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_AQUA",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [
+    "ITEM_HYPER_POTION"
+  ],
+  "party": [
+    {
+      "species": "SPECIES_GOLBAT",
+      "level": 53,
+      "moves": [
+        "MOVE_CONFUSE_RAY",
+        "MOVE_SLUDGE_BOMB",
+        "MOVE_AIR_CUTTER",
+        "MOVE_SHADOW_BALL"
+      ],
+      "ivs": {
+        "hp": 24,
+        "atk": 24,
+        "def": 24,
+        "spa": 24,
+        "spd": 24,
+        "spe": 24
+      }
+    },
+    {
+      "species": "SPECIES_WEEZING",
+      "level": 54,
+      "moves": [
+        "MOVE_SLUDGE_BOMB",
+        "MOVE_THUNDERBOLT",
+        "MOVE_EXPLOSION",
+        "MOVE_SHADOW_BALL"
+      ],
+      "ivs": {
+        "hp": 24,
+        "atk": 24,
+        "def": 24,
+        "spa": 24,
+        "spd": 24,
+        "spe": 24
+      }
+    },
+    {
+      "species": "SPECIES_HOUNDOOM",
+      "level": 55,
+      "moves": [
+        "MOVE_FLAMETHROWER",
+        "MOVE_CRUNCH",
+        "MOVE_IRON_TAIL",
+        "MOVE_SHADOW_BALL"
+      ],
+      "ivs": {
+        "hp": 24,
+        "atk": 24,
+        "def": 24,
+        "spa": 24,
+        "spd": 24,
+        "spe": 24
+      }
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "identifier": "TRAINER_ELITE_FOUR_BRUNO_2",
+  "trainer_name": "BRUNO",
+  "trainer_class": "TRAINER_CLASS_ELITE_FOUR",
+  "trainer_pic": "TRAINER_PIC_ELITE_FOUR_BRUNO",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [
+    "ITEM_FULL_RESTORE"
+  ],
+  "party": [
+    {
+      "species": "SPECIES_STEELIX",
+      "level": 65,
+      "moves": [
+        "MOVE_EARTHQUAKE",
+        "MOVE_IRON_TAIL",
+        "MOVE_CRUNCH",
+        "MOVE_ROCK_TOMB"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "SPECIES_HITMONCHAN",
+      "level": 65,
+      "moves": [
+        "MOVE_SKY_UPPERCUT",
+        "MOVE_MACH_PUNCH",
+        "MOVE_ROCK_SLIDE",
+        "MOVE_COUNTER"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "SPECIES_HITMONLEE",
+      "level": 65,
+      "moves": [
+        "MOVE_MEGA_KICK",
+        "MOVE_FORESIGHT",
+        "MOVE_EARTHQUAKE",
+        "MOVE_ROCK_SLIDE"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "SPECIES_STEELIX",
+      "level": 66,
+      "moves": [
+        "MOVE_EARTHQUAKE",
+        "MOVE_IRON_TAIL",
+        "MOVE_CRUNCH",
+        "MOVE_DRAGON_BREATH"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "SPECIES_MACHAMP",
+      "level": 68,
+      "moves": [
+        "MOVE_CROSS_CHOP",
+        "MOVE_EARTHQUAKE",
+        "MOVE_BRICK_BREAK",
+        "MOVE_ROCK_SLIDE"
+      ],
+      "held_item": "ITEM_PERSIM_BERRY",
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    }
+  ]
+}

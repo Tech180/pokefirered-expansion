@@ -1,0 +1,33 @@
+{
+  "identifier": "TRAINER_PAINTER_RAYNA_2",
+  "trainer_name": "RAYNA",
+  "trainer_class": "TRAINER_CLASS_PAINTER",
+  "trainer_pic": "TRAINER_PIC_PAINTER",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_FEMALE",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_SMEARGLE",
+      "level": 54,
+      "moves": [
+        "MOVE_CROSS_CHOP",
+        "MOVE_MEGAHORN",
+        "MOVE_DOUBLE_EDGE",
+        "MOVE_SELF_DESTRUCT"
+      ],
+      "ivs": {
+        "hp": 14,
+        "atk": 14,
+        "def": 14,
+        "spa": 14,
+        "spd": 14,
+        "spe": 14
+      }
+    }
+  ]
+}

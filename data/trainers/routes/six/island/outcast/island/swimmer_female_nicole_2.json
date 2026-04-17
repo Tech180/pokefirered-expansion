@@ -1,0 +1,28 @@
+{
+  "identifier": "TRAINER_SWIMMER_FEMALE_NICOLE_2",
+  "trainer_name": "NICOLE",
+  "trainer_class": "TRAINER_CLASS_SWIMMER_F",
+  "trainer_pic": "TRAINER_PIC_SWIMMER_F",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_FEMALE",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_MARILL",
+      "level": 54,
+      "moves": [],
+      "ivs": {
+        "hp": 14,
+        "atk": 14,
+        "def": 14,
+        "spa": 14,
+        "spd": 14,
+        "spe": 14
+      }
+    }
+  ]
+}

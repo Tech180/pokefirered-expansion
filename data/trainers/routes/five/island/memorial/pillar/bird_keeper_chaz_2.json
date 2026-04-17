@@ -1,0 +1,41 @@
+{
+  "identifier": "TRAINER_BIRD_KEEPER_CHAZ_2",
+  "trainer_name": "CHAZ",
+  "trainer_class": "TRAINER_CLASS_BIRD_KEEPER",
+  "trainer_pic": "TRAINER_PIC_BIRD_KEEPER",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_COOL",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_FEAROW",
+      "level": 53,
+      "moves": [],
+      "ivs": {
+        "hp": 14,
+        "atk": 14,
+        "def": 14,
+        "spa": 14,
+        "spd": 14,
+        "spe": 14
+      }
+    },
+    {
+      "species": "SPECIES_FEAROW",
+      "level": 55,
+      "moves": [],
+      "ivs": {
+        "hp": 14,
+        "atk": 14,
+        "def": 14,
+        "spa": 14,
+        "spd": 14,
+        "spe": 14
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "identifier": "TRAINER_BIRD_KEEPER_BENNY_2",
+  "trainer_name": "BENNY",
+  "trainer_class": "TRAINER_CLASS_BIRD_KEEPER",
+  "trainer_pic": "TRAINER_PIC_BIRD_KEEPER",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_COOL",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_FEAROW",
+      "level": 32,
+      "moves": [],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      }
+    },
+    {
+      "species": "SPECIES_FEAROW",
+      "level": 32,
+      "moves": [],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      }
+    }
+  ]
+}

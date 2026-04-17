@@ -1,0 +1,28 @@
+{
+  "identifier": "TRAINER_SPENSER",
+  "trainer_name": "SPENSER",
+  "trainer_class": "TRAINER_CLASS_PALACE_MAVEN",
+  "trainer_pic": "TRAINER_PIC_PALACE_MAVEN_SPENSER",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_MALE",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_BASIC_TRAINER"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_BELDUM",
+      "level": 5,
+      "moves": [],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    }
+  ]
+}

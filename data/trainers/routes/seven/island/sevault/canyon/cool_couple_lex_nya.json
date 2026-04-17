@@ -1,0 +1,55 @@
+{
+  "identifier": "TRAINER_COOL_COUPLE_LEX_NYA",
+  "trainer_name": "LEX & NYA",
+  "trainer_class": "TRAINER_CLASS_COOL_COUPLE",
+  "trainer_pic": "TRAINER_PIC_COOL_COUPLE",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_COOL",
+  "battle_type": "TRAINER_BATTLE_TYPE_DOUBLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [
+    "ITEM_FULL_RESTORE"
+  ],
+  "party": [
+    {
+      "species": "SPECIES_MILTANK",
+      "level": 52,
+      "moves": [
+        "MOVE_BODY_SLAM",
+        "MOVE_MILK_DRINK",
+        "MOVE_GROWL",
+        "MOVE_DEFENSE_CURL"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_TAUROS",
+      "level": 52,
+      "moves": [
+        "MOVE_THRASH",
+        "MOVE_HORN_ATTACK",
+        "MOVE_PURSUIT",
+        "MOVE_SWAGGER"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "identifier": "TRAINER_BLACK_BELT_MIKE",
+  "trainer_name": "MIKE",
+  "trainer_class": "TRAINER_CLASS_BLACK_BELT",
+  "trainer_pic": "TRAINER_PIC_BLACK_BELT",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_INTENSE",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_MANKEY",
+      "level": 31,
+      "moves": [],
+      "held_item": "ITEM_BLACK_BELT",
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_MANKEY",
+      "level": 31,
+      "moves": [],
+      "held_item": "ITEM_BLACK_BELT",
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_PRIMEAPE",
+      "level": 31,
+      "moves": [],
+      "held_item": "ITEM_BLACK_BELT",
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "identifier": "TRAINER_SCIENTIST_JOSE",
+  "trainer_name": "JOSE",
+  "trainer_class": "TRAINER_CLASS_SCIENTIST",
+  "trainer_pic": "TRAINER_PIC_SCIENTIST",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_ELECTRODE",
+      "level": 29,
+      "moves": [
+        "MOVE_SPARK",
+        "MOVE_SONIC_BOOM",
+        "MOVE_SCREECH",
+        "MOVE_TACKLE"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "species": "SPECIES_WEEZING",
+      "level": 29,
+      "moves": [
+        "MOVE_SMOKESCREEN",
+        "MOVE_SLUDGE",
+        "MOVE_SMOG",
+        "MOVE_TACKLE"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    }
+  ]
+}

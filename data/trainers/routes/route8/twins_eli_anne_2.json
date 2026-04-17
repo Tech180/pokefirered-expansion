@@ -1,0 +1,41 @@
+{
+  "identifier": "TRAINER_TWINS_ELI_ANNE_2",
+  "trainer_name": "ELI & ANNE",
+  "trainer_class": "TRAINER_CLASS_TWINS",
+  "trainer_pic": "TRAINER_PIC_TWINS",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_TWINS",
+  "battle_type": "TRAINER_BATTLE_TYPE_DOUBLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_CLEFAIRY",
+      "level": 28,
+      "moves": [],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      }
+    },
+    {
+      "species": "SPECIES_JIGGLYPUFF",
+      "level": 28,
+      "moves": [],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      }
+    }
+  ]
+}

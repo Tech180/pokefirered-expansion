@@ -1,0 +1,54 @@
+{
+  "identifier": "TRAINER_PICNICKER_ISABELLE_3",
+  "trainer_name": "ISABELLE",
+  "trainer_class": "TRAINER_CLASS_PICNICKER",
+  "trainer_pic": "TRAINER_PIC_PICNICKER",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_GIRL",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_PIDGEOTTO",
+      "level": 29,
+      "moves": [],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      }
+    },
+    {
+      "species": "SPECIES_PIDGEOTTO",
+      "level": 29,
+      "moves": [],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      }
+    },
+    {
+      "species": "SPECIES_PIDGEOTTO",
+      "level": 26,
+      "moves": [],
+      "ivs": {
+        "hp": 7,
+        "atk": 7,
+        "def": 7,
+        "spa": 7,
+        "spd": 7,
+        "spe": 7
+      }
+    }
+  ]
+}

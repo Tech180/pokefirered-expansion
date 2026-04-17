@@ -1,0 +1,28 @@
+{
+  "identifier": "TRAINER_SWIMMER_MALE_FINN",
+  "trainer_name": "FINN",
+  "trainer_class": "TRAINER_CLASS_SWIMMER_M",
+  "trainer_pic": "TRAINER_PIC_SWIMMER_M",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_SWIMMER",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_STARMIE",
+      "level": 38,
+      "moves": [],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "identifier": "TRAINER_RIVAL_SILPH_CHARMANDER",
+  "trainer_name": "TERRY",
+  "trainer_class": "TRAINER_CLASS_RIVAL_LATE",
+  "trainer_pic": "TRAINER_PIC_RIVAL_LATE",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_MALE",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_PIDGEOT",
+      "level": 37,
+      "moves": [],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_EXEGGCUTE",
+      "level": 38,
+      "moves": [],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_GYARADOS",
+      "level": 35,
+      "moves": [],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_ALAKAZAM",
+      "level": 35,
+      "moves": [],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_CHARIZARD",
+      "level": 40,
+      "moves": [],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      }
+    }
+  ]
+}

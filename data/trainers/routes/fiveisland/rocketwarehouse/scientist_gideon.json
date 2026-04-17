@@ -1,0 +1,105 @@
+{
+  "identifier": "TRAINER_SCIENTIST_GIDEON",
+  "trainer_name": "GIDEON",
+  "trainer_class": "TRAINER_CLASS_SCIENTIST",
+  "trainer_pic": "TRAINER_PIC_SCIENTIST",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_VOLTORB",
+      "level": 46,
+      "moves": [
+        "MOVE_SWIFT",
+        "MOVE_SCREECH",
+        "MOVE_SPARK",
+        "MOVE_SONIC_BOOM"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "species": "SPECIES_ELECTRODE",
+      "level": 46,
+      "moves": [
+        "MOVE_SPARK",
+        "MOVE_SONIC_BOOM",
+        "MOVE_SCREECH",
+        "MOVE_CHARGE"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "species": "SPECIES_MAGNEMITE",
+      "level": 46,
+      "moves": [
+        "MOVE_SCREECH",
+        "MOVE_SWIFT",
+        "MOVE_SPARK",
+        "MOVE_THUNDER_WAVE"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "species": "SPECIES_MAGNETON",
+      "level": 46,
+      "moves": [
+        "MOVE_TRI_ATTACK",
+        "MOVE_SPARK",
+        "MOVE_THUNDER_WAVE",
+        "MOVE_SONIC_BOOM"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "species": "SPECIES_PORYGON",
+      "level": 46,
+      "moves": [
+        "MOVE_TRI_ATTACK",
+        "MOVE_CONVERSION",
+        "MOVE_RECOVER",
+        "MOVE_PSYBEAM"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    }
+  ]
+}
