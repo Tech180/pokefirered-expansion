@@ -1,0 +1,269 @@
+{
+  "species_constant": "SPECIES_THUNDURUS_THERIAN",
+  "family_constant": "P_FAMILY_THUNDURUS",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "79"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "105"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "101"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "145"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_ELECTRIC, TYPE_FLYING)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_8) ? 290 : 261"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpAttack",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_MALE"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_VOLT_ABSORB, ABILITY_NONE, ABILITY_VOLT_ABSORB }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Thundurus\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_THUNDURUS_THERIAN"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_THUNDURUS"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Bolt Strike\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "610"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It pulverizes foes into nothingness\\n\"\n\"with showers of devastatingly\\n\"\n\"powerful lightning bolts launched\\n\"\n\"from the string of orbs on its tail.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "268"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "271"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_ThundurusTherian"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 5),\nANIMCMD_FRAME(1, 5),\nANIMCMD_FRAME(0, 5),\nANIMCMD_FRAME(1, 5),\nANIMCMD_FRAME(0, 5),\nANIMCMD_FRAME(1, 5),\nANIMCMD_FRAME(0, 5),\nANIMCMD_FRAME(1, 5),\nANIMCMD_FRAME(0, 5),\nANIMCMD_FRAME(1, 5),\nANIMCMD_FRAME(0, 20),\nANIMCMD_FRAME(0, 5),\nANIMCMD_FRAME(1, 5),\nANIMCMD_FRAME(0, 5),\nANIMCMD_FRAME(1, 5),\nANIMCMD_FRAME(0, 5),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_RISING_WOBBLE"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "7"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_ThundurusTherian"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "5"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_SHAKE_FLASH_YELLOW"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_ThundurusTherian"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_ThundurusTherian"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_ThundurusTherian"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "5, 16, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Thundurus",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_ThundurusTherian,\nSIZE_64x64,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_ThundurusTherian,\ngShinyOverworldPalette_ThundurusTherian",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isSubLegendary",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "perfectIVCount",
+      "value": "LEGENDARY_PERFECT_IV_COUNT"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sThundurusLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sThundurusTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sThundurusFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sThundurusFormChangeTable"
+    }
+  ]
+}

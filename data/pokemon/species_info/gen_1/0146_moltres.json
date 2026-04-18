@@ -1,0 +1,290 @@
+{
+  "species_constant": "SPECIES_MOLTRES",
+  "family_constant": "P_FAMILY_MOLTRES",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "125"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "P_UPDATED_STATS >= GEN_2 ? 85 : 125"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_FIRE, TYPE_FLYING)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "3"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_EXP_YIELDS >= GEN_8"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "290"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#elif P_UPDATED_EXP_YIELDS >= GEN_5"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "261"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "217"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpAttack",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_GENDERLESS"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "35"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_PRESSURE, ABILITY_NONE, ABILITY_FLAME_BODY }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_YELLOW"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Moltres\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_MOLTRES"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_MOLTRES"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Flame\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "600"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Moltres is a legendary bird Pok\u00e9mon\\n\"\n\"that can control fire. If injured, it is said\\n\"\n\"to dip its body in the molten magma of\\n\"\n\"a volcano to burn and heal itself.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "270"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "387"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "8"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Moltres"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 0 : 1"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 3),\nANIMCMD_FRAME(0, 3),\nANIMCMD_FRAME(1, 3),\nANIMCMD_FRAME(0, 3),\nANIMCMD_FRAME(1, 3),\nANIMCMD_FRAME(0, 3),\nANIMCMD_FRAME(1, 3),\nANIMCMD_FRAME(0, 3),\nANIMCMD_FRAME(1, 3),\nANIMCMD_FRAME(0, 3),\nANIMCMD_FRAME(1, 3),\nANIMCMD_FRAME(0, 3),\nANIMCMD_FRAME(1, 3),\nANIMCMD_FRAME(0, 3),\nANIMCMD_FRAME(1, 3),\nANIMCMD_FRAME(0, 3),\nANIMCMD_FRAME(1, 3),\nANIMCMD_FRAME(0, 3),\nANIMCMD_FRAME(1, 3),\nANIMCMD_FRAME(0, 3),\nANIMCMD_FRAME(1, 3),\nANIMCMD_FRAME(0, 3),\nANIMCMD_FRAME(1, 3),\nANIMCMD_FRAME(0, 3),\nANIMCMD_FRAME(1, 3),\nANIMCMD_FRAME(0, 3),\nANIMCMD_FRAME(1, 3),\nANIMCMD_FRAME(0, 3),\nANIMCMD_FRAME(1, 3),\nANIMCMD_FRAME(0, 3),\nANIMCMD_FRAME(1, 3),\nANIMCMD_FRAME(0, 3),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_V_SQUISH_AND_BOUNCE_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 5 : 0"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Moltres"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 4 : 5"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_SHAKE_GLOW_RED"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Moltres"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Moltres"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Moltres"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-1, 12, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Moltres",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Moltres,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_NONE,\nsAnimTable_Following,\ngOverworldPalette_Moltres,\ngShinyOverworldPalette_Moltres",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isSubLegendary",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "perfectIVCount",
+      "value": "LEGENDARY_PERFECT_IV_COUNT"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sMoltresLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sMoltresTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sMoltresFormSpeciesIdTable"
+    }
+  ]
+}

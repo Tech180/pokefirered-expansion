@@ -1,0 +1,112 @@
+{
+  "species_constant": "SPECIES_FLOETTE_ETERNAL",
+  "family_constant": "P_FAMILY_FLABEBE",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "FLOETTE_MISC_INFO",
+      "args": "Eternal, ETERNAL, 0",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "74"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "65"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "67"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "92"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "125"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "128"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "243"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED)"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_FLOETTE_ETERNAL"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"The flower it's holding can no\\n\"\n\"longer be found blooming anywhere. It's\\n\"\n\"also thought to contain terrifying\\n\"\n\"power.\")"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_FloetteEternal"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_FloetteEternal"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sFloetteEternalLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sFloetteEternalTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sFloetteEternalFormChangeTable"
+    }
+  ]
+}

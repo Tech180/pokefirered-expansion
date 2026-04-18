@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_OGERPON_WELLSPRING",
+  "family_constant": "P_FAMILY_OGERPON",
+  "macro_call": "OGERPON_SPECIES_INFO(Wellspring,  Wellspring,      TYPE_WATER, ABILITY_WATER_ABSORB,                   BODY_COLOR_BLUE,  1, 6, 0, FALSE)"
+}

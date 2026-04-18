@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_FLABEBE_YELLOW",
+  "family_constant": "P_FAMILY_FLABEBE",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "FLABEBE_MISC_INFO",
+      "args": "Yellow, YELLOW, 1",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It unleashes a variety of moves by\\n\"\n\"drawing forth the power hidden\\n\"\n\"within flowers. This Pok\u00e9mon is\\n\"\n\"particularly fond of yellow flowers.\")"
+    }
+  ]
+}

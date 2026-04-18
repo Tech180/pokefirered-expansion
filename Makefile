@@ -254,6 +254,22 @@ $(DATA_SRC_SUBDIR)/wild_encounters.h: $(DATA_SRC_SUBDIR)/wild_encounters.json $(
 $(INCLUDE_DIRS)/constants/script_commands.h: $(MISC_TOOL_DIR)/make_scr_cmd_constants.py $(DATA_ASM_SUBDIR)/script_cmd_table.inc
 	python3  $(MISC_TOOL_DIR)/make_scr_cmd_constants.py
 
+SPECIES_INFO_JSONS := $(shell find data/pokemon/species_info -type f -name "*.json")
+SPECIES_INFO_HEADERS := src/data/pokemon/species_info/gen_1_families.h \
+                        src/data/pokemon/species_info/gen_2_families.h \
+                        src/data/pokemon/species_info/gen_3_families.h \
+                        src/data/pokemon/species_info/gen_4_families.h \
+                        src/data/pokemon/species_info/gen_5_families.h \
+                        src/data/pokemon/species_info/gen_6_families.h \
+                        src/data/pokemon/species_info/gen_7_families.h \
+                        src/data/pokemon/species_info/gen_8_families.h \
+                        src/data/pokemon/species_info/gen_9_families.h
+
+AUTO_GEN_TARGETS += $(SPECIES_INFO_HEADERS)
+
+$(SPECIES_INFO_HEADERS): $(SPECIES_INFO_JSONS) scripts/build_species_info.py
+	python3 scripts/build_species_info.py
+
 PERL := perl
 SHA1 := $(shell { command -v sha1sum || command -v shasum; } 2>/dev/null) -c
 
@@ -547,7 +563,7 @@ $(ALL_LEARNABLES_JSON):
 $(ALL_TUTORS_JSON): $(shell find data/ -type f -name '*.inc')  $(LEARNSET_HELPERS_DIR)/make_tutors.py | $(LEARNSET_HELPERS_BUILD_DIR)
 	python3 $(LEARNSET_HELPERS_DIR)/make_tutors.py $@
 
-$(ALL_TEACHING_TYPES_JSON): $(wildcard $(DATA_SRC_SUBDIR)/pokemon/species_info/*_families.h)  $(LEARNSET_HELPERS_DIR)/make_teaching_types.py | $(LEARNSET_HELPERS_BUILD_DIR)
+$(ALL_TEACHING_TYPES_JSON): $(shell find data/pokemon/species_info -name "*.json" 2>/dev/null) $(LEARNSET_HELPERS_DIR)/make_teaching_types.py | $(LEARNSET_HELPERS_BUILD_DIR)
 	python3 $(LEARNSET_HELPERS_DIR)/make_teaching_types.py $@
 
 $(DATA_SRC_SUBDIR)/pokemon/teachable_learnsets.h: $(TEACHABLE_DEPS) | $(ALL_TUTORS_JSON) $(ALL_TEACHING_TYPES_JSON)

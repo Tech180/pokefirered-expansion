@@ -1,0 +1,1748 @@
+[
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_TREECKO",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_TREECKO",
+        "filename": "0252_treecko.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GROVYLE",
+        "filename": "0253_grovyle.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCEPTILE",
+        "filename": "0254_sceptile.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCEPTILE_MEGA",
+        "filename": "0927_sceptile_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_TORCHIC",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_TORCHIC",
+        "filename": "0255_torchic.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_COMBUSKEN",
+        "filename": "0256_combusken.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BLAZIKEN",
+        "filename": "0257_blaziken.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BLAZIKEN_MEGA",
+        "filename": "0928_blaziken_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_MUDKIP",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_MUDKIP",
+        "filename": "0258_mudkip.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MARSHTOMP",
+        "filename": "0259_marshtomp.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SWAMPERT",
+        "filename": "0260_swampert.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SWAMPERT_MEGA",
+        "filename": "0929_swampert_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_POOCHYENA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_POOCHYENA",
+        "filename": "0261_poochyena.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MIGHTYENA",
+        "filename": "0262_mightyena.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ZIGZAGOON",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ZIGZAGOON",
+        "filename": "0263_zigzagoon.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LINOONE",
+        "filename": "0264_linoone.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GALARIAN_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ZIGZAGOON_GALAR",
+        "filename": "0987_zigzagoon_galar.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LINOONE_GALAR",
+        "filename": "0988_linoone_galar.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_OBSTAGOON",
+        "filename": "0862_obstagoon.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GALARIAN_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_WURMPLE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_WURMPLE",
+        "filename": "0265_wurmple.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILCOON",
+        "filename": "0266_silcoon.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BEAUTIFLY",
+        "filename": "0267_beautifly.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CASCOON",
+        "filename": "0268_cascoon.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DUSTOX",
+        "filename": "0269_dustox.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_LOTAD",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_LOTAD",
+        "filename": "0270_lotad.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LOMBRE",
+        "filename": "0271_lombre.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LUDICOLO",
+        "filename": "0272_ludicolo.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SEEDOT",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SEEDOT",
+        "filename": "0273_seedot.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_NUZLEAF",
+        "filename": "0274_nuzleaf.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SHIFTRY",
+        "filename": "0275_shiftry.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_TAILLOW",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_TAILLOW",
+        "filename": "0276_taillow.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SWELLOW",
+        "filename": "0277_swellow.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_WINGULL",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_WINGULL",
+        "filename": "0278_wingull.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_PELIPPER",
+        "filename": "0279_pelipper.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_RALTS",
+    "components": [
+      {
+        "type": "raw",
+        "content": "#define RALTS_FAMILY_TYPE2 (P_UPDATED_TYPES >= GEN_6 ? TYPE_FAIRY : TYPE_PSYCHIC)\n\n#if P_UPDATED_EGG_GROUPS >= GEN_8\n    #define RALTS_FAMILY_EGG_GROUPS MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE, EGG_GROUP_AMORPHOUS)\n#else\n    #define RALTS_FAMILY_EGG_GROUPS MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS)\n#endif"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_RALTS",
+        "filename": "0280_ralts.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_KIRLIA",
+        "filename": "0281_kirlia.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GARDEVOIR",
+        "filename": "0282_gardevoir.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GARDEVOIR_MEGA",
+        "filename": "0930_gardevoir_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS\n\n#if P_GEN_4_CROSS_EVOS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GALLADE",
+        "filename": "0475_gallade.json",
+        "gen": 4
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GALLADE_MEGA",
+        "filename": "0950_gallade_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS\n#endif //P_GEN_4_CROSS_EVOS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SURSKIT",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SURSKIT",
+        "filename": "0283_surskit.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MASQUERAIN",
+        "filename": "0284_masquerain.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SHROOMISH",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SHROOMISH",
+        "filename": "0285_shroomish.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BRELOOM",
+        "filename": "0286_breloom.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SLAKOTH",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SLAKOTH",
+        "filename": "0287_slakoth.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIGOROTH",
+        "filename": "0288_vigoroth.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SLAKING",
+        "filename": "0289_slaking.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_NINCADA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_NINCADA",
+        "filename": "0290_nincada.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_NINJASK",
+        "filename": "0291_ninjask.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SHEDINJA",
+        "filename": "0292_shedinja.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_WHISMUR",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_WHISMUR",
+        "filename": "0293_whismur.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LOUDRED",
+        "filename": "0294_loudred.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_EXPLOUD",
+        "filename": "0295_exploud.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_MAKUHITA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_MAKUHITA",
+        "filename": "0296_makuhita.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_HARIYAMA",
+        "filename": "0297_hariyama.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_NOSEPASS",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_NOSEPASS",
+        "filename": "0299_nosepass.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_4_CROSS_EVOS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_PROBOPASS",
+        "filename": "0476_probopass.json",
+        "gen": 4
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_4_CROSS_EVOS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SKITTY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SKITTY",
+        "filename": "0300_skitty.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DELCATTY",
+        "filename": "0301_delcatty.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SABLEYE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SABLEYE",
+        "filename": "0302_sableye.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SABLEYE_MEGA",
+        "filename": "0931_sableye_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_MAWILE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_MAWILE",
+        "filename": "0303_mawile.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MAWILE_MEGA",
+        "filename": "0932_mawile_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ARON",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ARON",
+        "filename": "0304_aron.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LAIRON",
+        "filename": "0305_lairon.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_AGGRON",
+        "filename": "0306_aggron.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_AGGRON_MEGA",
+        "filename": "0933_aggron_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_MEDITITE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_MEDITITE",
+        "filename": "0307_meditite.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MEDICHAM",
+        "filename": "0308_medicham.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MEDICHAM_MEGA",
+        "filename": "0934_medicham_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ELECTRIKE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ELECTRIKE",
+        "filename": "0309_electrike.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MANECTRIC",
+        "filename": "0310_manectric.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MANECTRIC_MEGA",
+        "filename": "0935_manectric_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_PLUSLE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_PLUSLE",
+        "filename": "0311_plusle.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_MINUN",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_MINUN",
+        "filename": "0312_minun.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_VOLBEAT_ILLUMISE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_VOLBEAT",
+        "filename": "0313_volbeat.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ILLUMISE",
+        "filename": "0314_illumise.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ROSELIA",
+    "components": [
+      {
+        "type": "raw",
+        "content": "#if P_GEN_4_CROSS_EVOS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BUDEW",
+        "filename": "0406_budew.json",
+        "gen": 4
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_4_CROSS_EVOS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ROSELIA",
+        "filename": "0315_roselia.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_4_CROSS_EVOS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ROSERADE",
+        "filename": "0407_roserade.json",
+        "gen": 4
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_4_CROSS_EVOS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_GULPIN",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_GULPIN",
+        "filename": "0316_gulpin.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SWALOT",
+        "filename": "0317_swalot.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CARVANHA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CARVANHA",
+        "filename": "0318_carvanha.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SHARPEDO",
+        "filename": "0319_sharpedo.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SHARPEDO_MEGA",
+        "filename": "0936_sharpedo_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_WAILMER",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_WAILMER",
+        "filename": "0320_wailmer.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_WAILORD",
+        "filename": "0321_wailord.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_NUMEL",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_NUMEL",
+        "filename": "0322_numel.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CAMERUPT",
+        "filename": "0323_camerupt.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CAMERUPT_MEGA",
+        "filename": "0937_camerupt_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_TORKOAL",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_TORKOAL",
+        "filename": "0324_torkoal.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SPOINK",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SPOINK",
+        "filename": "0325_spoink.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GRUMPIG",
+        "filename": "0326_grumpig.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SPINDA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SPINDA",
+        "filename": "0327_spinda.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_TRAPINCH",
+    "components": [
+      {
+        "type": "raw",
+        "content": "#if P_UPDATED_EGG_GROUPS >= GEN_8\n    #define TRAPINCH_FAMILY_EGG_GROUPS MON_EGG_GROUPS(EGG_GROUP_BUG, EGG_GROUP_DRAGON)\n#else\n    #define TRAPINCH_FAMILY_EGG_GROUPS MON_EGG_GROUPS(EGG_GROUP_BUG)\n#endif"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_TRAPINCH",
+        "filename": "0328_trapinch.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIBRAVA",
+        "filename": "0329_vibrava.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLYGON",
+        "filename": "0330_flygon.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CACNEA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CACNEA",
+        "filename": "0331_cacnea.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CACTURNE",
+        "filename": "0332_cacturne.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SWABLU",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SWABLU",
+        "filename": "0333_swablu.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALTARIA",
+        "filename": "0334_altaria.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALTARIA_MEGA",
+        "filename": "0938_altaria_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ZANGOOSE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ZANGOOSE",
+        "filename": "0335_zangoose.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SEVIPER",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SEVIPER",
+        "filename": "0336_seviper.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_LUNATONE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_LUNATONE",
+        "filename": "0337_lunatone.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SOLROCK",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SOLROCK",
+        "filename": "0338_solrock.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_BARBOACH",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_BARBOACH",
+        "filename": "0339_barboach.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_WHISCASH",
+        "filename": "0340_whiscash.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CORPHISH",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CORPHISH",
+        "filename": "0341_corphish.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CRAWDAUNT",
+        "filename": "0342_crawdaunt.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_BALTOY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_BALTOY",
+        "filename": "0343_baltoy.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CLAYDOL",
+        "filename": "0344_claydol.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_LILEEP",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_LILEEP",
+        "filename": "0345_lileep.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CRADILY",
+        "filename": "0346_cradily.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ANORITH",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ANORITH",
+        "filename": "0347_anorith.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARMALDO",
+        "filename": "0348_armaldo.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_FEEBAS",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_FEEBAS",
+        "filename": "0349_feebas.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MILOTIC",
+        "filename": "0350_milotic.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CASTFORM",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CASTFORM_NORMAL",
+        "filename": "0351_castform_normal.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CASTFORM_SUNNY",
+        "filename": "1051_castform_sunny.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CASTFORM_RAINY",
+        "filename": "1052_castform_rainy.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CASTFORM_SNOWY",
+        "filename": "1053_castform_snowy.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_KECLEON",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_KECLEON",
+        "filename": "0352_kecleon.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SHUPPET",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SHUPPET",
+        "filename": "0353_shuppet.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BANETTE",
+        "filename": "0354_banette.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BANETTE_MEGA",
+        "filename": "0939_banette_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_DUSKULL",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_DUSKULL",
+        "filename": "0355_duskull.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DUSCLOPS",
+        "filename": "0356_dusclops.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_4_CROSS_EVOS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DUSKNOIR",
+        "filename": "0477_dusknoir.json",
+        "gen": 4
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_4_CROSS_EVOS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_TROPIUS",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_TROPIUS",
+        "filename": "0357_tropius.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CHIMECHO",
+    "components": [
+      {
+        "type": "raw",
+        "content": "#if P_GEN_4_CROSS_EVOS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CHINGLING",
+        "filename": "0433_chingling.json",
+        "gen": 4
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_4_CROSS_EVOS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CHIMECHO",
+        "filename": "0358_chimecho.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CHIMECHO_MEGA",
+        "filename": "1555_chimecho_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ABSOL",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ABSOL",
+        "filename": "0359_absol.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ABSOL_MEGA",
+        "filename": "0940_absol_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS\n\n#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ABSOL_MEGA_Z",
+        "filename": "1556_absol_mega_z.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SNORUNT",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SNORUNT",
+        "filename": "0361_snorunt.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GLALIE",
+        "filename": "0362_glalie.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GLALIE_MEGA",
+        "filename": "0941_glalie_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS\n\n#if P_GEN_4_CROSS_EVOS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FROSLASS",
+        "filename": "0478_froslass.json",
+        "gen": 4
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FROSLASS_MEGA",
+        "filename": "1531_froslass_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS\n#endif //P_GEN_4_CROSS_EVOS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SPHEAL",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SPHEAL",
+        "filename": "0363_spheal.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SEALEO",
+        "filename": "0364_sealeo.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_WALREIN",
+        "filename": "0365_walrein.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CLAMPERL",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CLAMPERL",
+        "filename": "0366_clamperl.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_HUNTAIL",
+        "filename": "0367_huntail.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GOREBYSS",
+        "filename": "0368_gorebyss.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_RELICANTH",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_RELICANTH",
+        "filename": "0369_relicanth.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_LUVDISC",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_LUVDISC",
+        "filename": "0370_luvdisc.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_BAGON",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_BAGON",
+        "filename": "0371_bagon.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SHELGON",
+        "filename": "0372_shelgon.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SALAMENCE",
+        "filename": "0373_salamence.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SALAMENCE_MEGA",
+        "filename": "0942_salamence_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_BELDUM",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_BELDUM",
+        "filename": "0374_beldum.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_METANG",
+        "filename": "0375_metang.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_METAGROSS",
+        "filename": "0376_metagross.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_METAGROSS_MEGA",
+        "filename": "0943_metagross_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_REGIROCK",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_REGIROCK",
+        "filename": "0377_regirock.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_REGICE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_REGICE",
+        "filename": "0378_regice.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_REGISTEEL",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_REGISTEEL",
+        "filename": "0379_registeel.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_LATIAS",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_LATIAS",
+        "filename": "0380_latias.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LATIAS_MEGA",
+        "filename": "0944_latias_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_LATIOS",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_LATIOS",
+        "filename": "0381_latios.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LATIOS_MEGA",
+        "filename": "0945_latios_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_KYOGRE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_KYOGRE",
+        "filename": "0382_kyogre.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_PRIMAL_REVERSIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_KYOGRE_PRIMAL",
+        "filename": "0954_kyogre_primal.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_PRIMAL_REVERSIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_GROUDON",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_GROUDON",
+        "filename": "0383_groudon.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_PRIMAL_REVERSIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GROUDON_PRIMAL",
+        "filename": "0955_groudon_primal.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_PRIMAL_REVERSIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_RAYQUAZA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_RAYQUAZA",
+        "filename": "0384_rayquaza.json",
+        "gen": 3
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_RAYQUAZA_MEGA",
+        "filename": "0953_rayquaza_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_JIRACHI",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_JIRACHI",
+        "filename": "0385_jirachi.json",
+        "gen": 3
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_DEOXYS",
+    "components": [
+      {
+        "type": "raw",
+        "content": "#if P_UPDATED_EXP_YIELDS >= GEN_8\n    #define DEOXYS_EXP_YIELD 300\n#elif P_UPDATED_EXP_YIELDS >= GEN_5\n    #define DEOXYS_EXP_YIELD 270\n#else\n    #define DEOXYS_EXP_YIELD 215\n#endif"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DEOXYS_NORMAL",
+        "filename": "0386_deoxys_normal.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DEOXYS_ATTACK",
+        "filename": "1054_deoxys_attack.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DEOXYS_DEFENSE",
+        "filename": "1055_deoxys_defense.json",
+        "gen": 3
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DEOXYS_SPEED",
+        "filename": "1056_deoxys_speed.json",
+        "gen": 3
+      }
+    ]
+  }
+]

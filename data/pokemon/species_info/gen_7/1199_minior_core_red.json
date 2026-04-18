@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_MINIOR_CORE_RED",
+  "family_constant": "P_FAMILY_MINIOR",
+  "macro_call": "MINIOR_CORE_SPECIES_INFO(Red,    BODY_COLOR_RED,    0, ITEM_HARD_STONE)"
+}

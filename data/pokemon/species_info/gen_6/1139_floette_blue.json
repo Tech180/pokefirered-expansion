@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_FLOETTE_BLUE",
+  "family_constant": "P_FAMILY_FLABEBE",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "FLOETTE_NORMAL_INFO",
+      "args": "Blue, BLUE, 0",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Whenever this Pok\u00e9mon finds\\n\"\n\"flowering plants that are withering, it\\n\"\n\"will bring them back to its territory\\n\"\n\"and care for them.\")"
+    }
+  ]
+}

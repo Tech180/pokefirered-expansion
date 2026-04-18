@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_FLOETTE_YELLOW",
+  "family_constant": "P_FAMILY_FLABEBE",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "FLOETTE_NORMAL_INFO",
+      "args": "Yellow, YELLOW, 1",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"This Pok\u00e9mon can draw forth the\\n\"\n\"power hidden within yellow flowers.\\n\"\n\"This power then becomes the moves\\n\"\n\"Floette uses to protect itself.\")"
+    }
+  ]
+}

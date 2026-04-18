@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_MINIOR_METEOR_RED",
+  "family_constant": "P_FAMILY_MINIOR",
+  "macro_call": "MINIOR_METEOR_SPECIES_INFO(Red,    ITEM_HARD_STONE)"
+}

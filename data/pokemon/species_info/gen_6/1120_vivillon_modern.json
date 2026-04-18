@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_VIVILLON_MODERN",
+  "family_constant": "P_FAMILY_SCATTERBUG",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "VIVILLON_MISC_INFO",
+      "args": "Modern, BODY_COLOR_RED, 2",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Its pattern depends on the climate and\\n\"\n\"topography of the land it was born in.\\n\"\n\"This form is from sun-drenched lands.\\n\"\n\"It scatters toxic color scales in battle.\")"
+    }
+  ]
+}

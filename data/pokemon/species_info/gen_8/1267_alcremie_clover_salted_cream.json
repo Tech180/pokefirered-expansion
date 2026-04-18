@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_ALCREMIE_CLOVER_SALTED_CREAM",
+  "family_constant": "P_FAMILY_MILCERY",
+  "macro_call": "ALCREMIE_REGULAR_SPECIES_INFO(Clover,     SaltedCream,  BODY_COLOR_WHITE)"
+}

@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_FLABEBE_BLUE",
+  "family_constant": "P_FAMILY_FLABEBE",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "FLABEBE_MISC_INFO",
+      "args": "Blue, BLUE, 0",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"This Pok\u00e9mon likes blue flowers\\n\"\n\"best of all. It floats upward using the\\n\"\n\"power emanating from its flower\\n\"\n\"and bobs along lightly through the air.\")"
+    }
+  ]
+}

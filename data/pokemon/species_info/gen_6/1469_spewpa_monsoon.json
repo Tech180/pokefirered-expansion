@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_SPEWPA_MONSOON",
+  "family_constant": "P_FAMILY_SCATTERBUG",
+  "macro_call": "SPEWPA_SPECIES_INFO(MONSOON)"
+}

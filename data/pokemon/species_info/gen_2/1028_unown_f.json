@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_UNOWN_F",
+  "family_constant": "P_FAMILY_UNOWN",
+  "macro_call": "UNOWN_MISC_INFO(F,           TRUE,  32, 32, 48, 48, 10 )"
+}

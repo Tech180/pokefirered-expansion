@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_ALCREMIE_CLOVER_RAINBOW_SWIRL",
+  "family_constant": "P_FAMILY_MILCERY",
+  "macro_call": "ALCREMIE_REGULAR_SPECIES_INFO(Clover,     RainbowSwirl, BODY_COLOR_YELLOW)"
+}

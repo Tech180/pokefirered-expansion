@@ -1,0 +1,1594 @@
+[
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_GROOKEY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_GROOKEY",
+        "filename": "0810_grookey.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_THWACKEY",
+        "filename": "0811_thwackey.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_RILLABOOM",
+        "filename": "0812_rillaboom.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_RILLABOOM_GMAX",
+        "filename": "1503_rillaboom_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SCORBUNNY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SCORBUNNY",
+        "filename": "0813_scorbunny.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_RABOOT",
+        "filename": "0814_raboot.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CINDERACE",
+        "filename": "0815_cinderace.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CINDERACE_GMAX",
+        "filename": "1504_cinderace_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SOBBLE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SOBBLE",
+        "filename": "0816_sobble.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DRIZZILE",
+        "filename": "0817_drizzile.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_INTELEON",
+        "filename": "0818_inteleon.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_INTELEON_GMAX",
+        "filename": "1505_inteleon_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SKWOVET",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SKWOVET",
+        "filename": "0819_skwovet.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GREEDENT",
+        "filename": "0820_greedent.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ROOKIDEE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ROOKIDEE",
+        "filename": "0821_rookidee.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CORVISQUIRE",
+        "filename": "0822_corvisquire.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CORVIKNIGHT",
+        "filename": "0823_corviknight.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CORVIKNIGHT_GMAX",
+        "filename": "1506_corviknight_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_BLIPBUG",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_BLIPBUG",
+        "filename": "0824_blipbug.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DOTTLER",
+        "filename": "0825_dottler.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ORBEETLE",
+        "filename": "0826_orbeetle.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ORBEETLE_GMAX",
+        "filename": "1507_orbeetle_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_NICKIT",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_NICKIT",
+        "filename": "0827_nickit.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_THIEVUL",
+        "filename": "0828_thievul.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_GOSSIFLEUR",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_GOSSIFLEUR",
+        "filename": "0829_gossifleur.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ELDEGOSS",
+        "filename": "0830_eldegoss.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_WOOLOO",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_WOOLOO",
+        "filename": "0831_wooloo.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DUBWOOL",
+        "filename": "0832_dubwool.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CHEWTLE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CHEWTLE",
+        "filename": "0833_chewtle.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DREDNAW",
+        "filename": "0834_drednaw.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DREDNAW_GMAX",
+        "filename": "1508_drednaw_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_YAMPER",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_YAMPER",
+        "filename": "0835_yamper.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BOLTUND",
+        "filename": "0836_boltund.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ROLYCOLY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ROLYCOLY",
+        "filename": "0837_rolycoly.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CARKOL",
+        "filename": "0838_carkol.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_COALOSSAL",
+        "filename": "0839_coalossal.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_COALOSSAL_GMAX",
+        "filename": "1509_coalossal_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_APPLIN",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_APPLIN",
+        "filename": "0840_applin.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLAPPLE",
+        "filename": "0841_flapple.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLAPPLE_GMAX",
+        "filename": "1510_flapple_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_APPLETUN",
+        "filename": "0842_appletun.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_APPLETUN_GMAX",
+        "filename": "1511_appletun_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS\n\n#if P_GEN_9_CROSS_EVOS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DIPPLIN",
+        "filename": "1408_dipplin.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_HYDRAPPLE",
+        "filename": "1426_hydrapple.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_CROSS_EVOS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SILICOBRA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SILICOBRA",
+        "filename": "0843_silicobra.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SANDACONDA",
+        "filename": "0844_sandaconda.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SANDACONDA_GMAX",
+        "filename": "1512_sandaconda_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CRAMORANT",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CRAMORANT",
+        "filename": "0845_cramorant.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CRAMORANT_GULPING",
+        "filename": "1211_cramorant_gulping.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CRAMORANT_GORGING",
+        "filename": "1212_cramorant_gorging.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ARROKUDA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ARROKUDA",
+        "filename": "0846_arrokuda.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BARRASKEWDA",
+        "filename": "0847_barraskewda.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_TOXEL",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_TOXEL",
+        "filename": "0848_toxel.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_TOXTRICITY_AMPED",
+        "filename": "0849_toxtricity_amped.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_TOXTRICITY_AMPED_GMAX",
+        "filename": "1513_toxtricity_amped_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_TOXTRICITY_LOW_KEY",
+        "filename": "1213_toxtricity_low_key.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_TOXTRICITY_LOW_KEY_GMAX",
+        "filename": "1514_toxtricity_low_key_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SIZZLIPEDE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SIZZLIPEDE",
+        "filename": "0850_sizzlipede.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CENTISKORCH",
+        "filename": "0851_centiskorch.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CENTISKORCH_GMAX",
+        "filename": "1515_centiskorch_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CLOBBOPUS",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CLOBBOPUS",
+        "filename": "0852_clobbopus.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GRAPPLOCT",
+        "filename": "0853_grapploct.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SINISTEA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SINISTEA_PHONY",
+        "filename": "0854_sinistea_phony.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SINISTEA_ANTIQUE",
+        "filename": "1214_sinistea_antique.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_POLTEAGEIST_PHONY",
+        "filename": "0855_polteageist_phony.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_POLTEAGEIST_ANTIQUE",
+        "filename": "1215_polteageist_antique.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_HATENNA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_HATENNA",
+        "filename": "0856_hatenna.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_HATTREM",
+        "filename": "0857_hattrem.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_HATTERENE",
+        "filename": "0858_hatterene.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_HATTERENE_GMAX",
+        "filename": "1516_hatterene_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_IMPIDIMP",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_IMPIDIMP",
+        "filename": "0859_impidimp.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MORGREM",
+        "filename": "0860_morgrem.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GRIMMSNARL",
+        "filename": "0861_grimmsnarl.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GRIMMSNARL_GMAX",
+        "filename": "1517_grimmsnarl_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_MILCERY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_MILCERY",
+        "filename": "0868_milcery.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#define ALCREMIE_MISC_INFO(color)                                               \\\n        .baseHP        = 65,                                                    \\\n        .baseAttack    = 60,                                                    \\\n        .baseDefense   = 75,                                                    \\\n        .baseSpeed     = 64,                                                    \\\n        .baseSpAttack  = 110,                                                   \\\n        .baseSpDefense = 121,                                                   \\\n        .types = MON_TYPES(TYPE_FAIRY),                                         \\\n        .catchRate = 100,                                                       \\\n        .expYield = 173,                                                        \\\n        .evYield_SpDefense = 2,                                                 \\\n        .genderRatio = MON_FEMALE,                                              \\\n        .eggCycles = 20,                                                        \\\n        .friendship = STANDARD_FRIENDSHIP,                                      \\\n        .growthRate = GROWTH_MEDIUM_FAST,                                       \\\n        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY, EGG_GROUP_AMORPHOUS),      \\\n        .abilities = { ABILITY_SWEET_VEIL, ABILITY_NONE, ABILITY_AROMA_VEIL },  \\\n        .bodyColor = color\n\n#define ALCREMIE_REGULAR_SPECIES_INFO(sweet, cream, color)                                      \\\n    {                                                                                           \\\n        ALCREMIE_MISC_INFO(color),                                                              \\\n        .speciesName = _(\"Alcremie\"),                                                           \\\n        .cryId = CRY_ALCREMIE,                                                                  \\\n        .natDexNum = NATIONAL_DEX_ALCREMIE,                                                     \\\n        .categoryName = _(\"Cream\"),                                                             \\\n        .height = 3,                                                                            \\\n        .weight = 5,                                                                            \\\n        .description = gAlcremie ##cream##PokedexText,                                          \\\n        .pokemonScale = 530,                                                                    \\\n        .pokemonOffset = 13,                                                                    \\\n        .trainerScale = 256,                                                                    \\\n        .trainerOffset = 0,                                                                     \\\n        .frontPic = gMonFrontPic_Alcremie ##sweet,                                              \\\n        .frontPicSize = MON_COORDS_SIZE(40, 56),                                                \\\n        .frontPicYOffset = 7,                                                                   \\\n        .frontAnimFrames = sAnims_SingleFramePlaceHolder,                                       \\\n        /*.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,*/                                            \\\n        .backPic = gMonBackPic_Alcremie ##sweet,                                                \\\n        .backPicSize = MON_COORDS_SIZE(48, 56),                                                 \\\n        .backPicYOffset = 9,                                                                    \\\n        /*.backAnimId = BACK_ANIM_NONE,*/                                                       \\\n        .palette = gMonPalette_Alcremie ##sweet##cream,                                         \\\n        .shinyPalette = gMonShinyPalette_Alcremie ##sweet,                                      \\\n        .iconSprite = gMonIcon_AlcremieStrawberryVanillaCream, /*AlcremieStrawberry##cream##*/  \\\n        .iconPalIndex = 1,                                                                      \\\n        .pokemonJumpType = PKMN_JUMP_TYPE_SLOW,                                                 \\\n        SHADOW(0, 5, SHADOW_SIZE_S)                                                             \\\n        FOOTPRINT(Alcremie)                                                                     \\\n        OVERWORLD(                                                                              \\\n            sPicTable_AlcremieStrawberry, /*Alcremie ##sweet*/                                  \\\n            SIZE_32x32,                                                                         \\\n            SHADOW_SIZE_M,                                                                      \\\n            TRACKS_FOOT,                                                                        \\\n            sAnimTable_Following,                                                               \\\n            gOverworldPalette_AlcremieStrawberryVanillaCream, /*Alcremie ##sweet##cream*/       \\\n            gShinyOverworldPalette_AlcremieStrawberryVanillaCream /*Alcremie ##sweet##cream*/   \\\n        )                                                                                       \\\n        .levelUpLearnset = sAlcremieLevelUpLearnset,                                            \\\n        .teachableLearnset = sAlcremieTeachableLearnset,                                        \\\n        .formSpeciesIdTable = sAlcremieFormSpeciesIdTable,                                      \\\n        .formChangeTable = sAlcremieFormChangeTable,                                            \\\n    }"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STRAWBERRY_VANILLA_CREAM",
+        "filename": "0869_alcremie_strawberry_vanilla_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM",
+        "filename": "1216_alcremie_strawberry_ruby_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STRAWBERRY_MATCHA_CREAM",
+        "filename": "1217_alcremie_strawberry_matcha_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STRAWBERRY_MINT_CREAM",
+        "filename": "1218_alcremie_strawberry_mint_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STRAWBERRY_LEMON_CREAM",
+        "filename": "1219_alcremie_strawberry_lemon_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STRAWBERRY_SALTED_CREAM",
+        "filename": "1220_alcremie_strawberry_salted_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STRAWBERRY_RUBY_SWIRL",
+        "filename": "1221_alcremie_strawberry_ruby_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STRAWBERRY_CARAMEL_SWIRL",
+        "filename": "1222_alcremie_strawberry_caramel_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STRAWBERRY_RAINBOW_SWIRL",
+        "filename": "1223_alcremie_strawberry_rainbow_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_BERRY_VANILLA_CREAM",
+        "filename": "1235_alcremie_berry_vanilla_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_BERRY_RUBY_CREAM",
+        "filename": "1236_alcremie_berry_ruby_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_BERRY_MATCHA_CREAM",
+        "filename": "1237_alcremie_berry_matcha_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_BERRY_MINT_CREAM",
+        "filename": "1238_alcremie_berry_mint_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_BERRY_LEMON_CREAM",
+        "filename": "1239_alcremie_berry_lemon_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_BERRY_SALTED_CREAM",
+        "filename": "1240_alcremie_berry_salted_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_BERRY_RUBY_SWIRL",
+        "filename": "1241_alcremie_berry_ruby_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_BERRY_CARAMEL_SWIRL",
+        "filename": "1242_alcremie_berry_caramel_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_BERRY_RAINBOW_SWIRL",
+        "filename": "1243_alcremie_berry_rainbow_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_LOVE_VANILLA_CREAM",
+        "filename": "1244_alcremie_love_vanilla_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_LOVE_RUBY_CREAM",
+        "filename": "1245_alcremie_love_ruby_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_LOVE_MATCHA_CREAM",
+        "filename": "1246_alcremie_love_matcha_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_LOVE_MINT_CREAM",
+        "filename": "1247_alcremie_love_mint_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_LOVE_LEMON_CREAM",
+        "filename": "1248_alcremie_love_lemon_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_LOVE_SALTED_CREAM",
+        "filename": "1249_alcremie_love_salted_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_LOVE_RUBY_SWIRL",
+        "filename": "1250_alcremie_love_ruby_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_LOVE_CARAMEL_SWIRL",
+        "filename": "1251_alcremie_love_caramel_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_LOVE_RAINBOW_SWIRL",
+        "filename": "1252_alcremie_love_rainbow_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STAR_VANILLA_CREAM",
+        "filename": "1253_alcremie_star_vanilla_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STAR_RUBY_CREAM",
+        "filename": "1254_alcremie_star_ruby_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STAR_MATCHA_CREAM",
+        "filename": "1255_alcremie_star_matcha_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STAR_MINT_CREAM",
+        "filename": "1256_alcremie_star_mint_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STAR_LEMON_CREAM",
+        "filename": "1257_alcremie_star_lemon_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STAR_SALTED_CREAM",
+        "filename": "1258_alcremie_star_salted_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STAR_RUBY_SWIRL",
+        "filename": "1259_alcremie_star_ruby_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STAR_CARAMEL_SWIRL",
+        "filename": "1260_alcremie_star_caramel_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_STAR_RAINBOW_SWIRL",
+        "filename": "1261_alcremie_star_rainbow_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_CLOVER_VANILLA_CREAM",
+        "filename": "1262_alcremie_clover_vanilla_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_CLOVER_RUBY_CREAM",
+        "filename": "1263_alcremie_clover_ruby_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_CLOVER_MATCHA_CREAM",
+        "filename": "1264_alcremie_clover_matcha_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_CLOVER_MINT_CREAM",
+        "filename": "1265_alcremie_clover_mint_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_CLOVER_LEMON_CREAM",
+        "filename": "1266_alcremie_clover_lemon_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_CLOVER_SALTED_CREAM",
+        "filename": "1267_alcremie_clover_salted_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_CLOVER_RUBY_SWIRL",
+        "filename": "1268_alcremie_clover_ruby_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_CLOVER_CARAMEL_SWIRL",
+        "filename": "1269_alcremie_clover_caramel_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_CLOVER_RAINBOW_SWIRL",
+        "filename": "1270_alcremie_clover_rainbow_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_FLOWER_VANILLA_CREAM",
+        "filename": "1271_alcremie_flower_vanilla_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_FLOWER_RUBY_CREAM",
+        "filename": "1272_alcremie_flower_ruby_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_FLOWER_MATCHA_CREAM",
+        "filename": "1273_alcremie_flower_matcha_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_FLOWER_MINT_CREAM",
+        "filename": "1274_alcremie_flower_mint_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_FLOWER_LEMON_CREAM",
+        "filename": "1275_alcremie_flower_lemon_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_FLOWER_SALTED_CREAM",
+        "filename": "1276_alcremie_flower_salted_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_FLOWER_RUBY_SWIRL",
+        "filename": "1277_alcremie_flower_ruby_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_FLOWER_CARAMEL_SWIRL",
+        "filename": "1278_alcremie_flower_caramel_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_FLOWER_RAINBOW_SWIRL",
+        "filename": "1279_alcremie_flower_rainbow_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_RIBBON_VANILLA_CREAM",
+        "filename": "1280_alcremie_ribbon_vanilla_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_RIBBON_RUBY_CREAM",
+        "filename": "1281_alcremie_ribbon_ruby_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_RIBBON_MATCHA_CREAM",
+        "filename": "1282_alcremie_ribbon_matcha_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_RIBBON_MINT_CREAM",
+        "filename": "1283_alcremie_ribbon_mint_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_RIBBON_LEMON_CREAM",
+        "filename": "1284_alcremie_ribbon_lemon_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_RIBBON_SALTED_CREAM",
+        "filename": "1285_alcremie_ribbon_salted_cream.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_RIBBON_RUBY_SWIRL",
+        "filename": "1286_alcremie_ribbon_ruby_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_RIBBON_CARAMEL_SWIRL",
+        "filename": "1287_alcremie_ribbon_caramel_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_RIBBON_RAINBOW_SWIRL",
+        "filename": "1288_alcremie_ribbon_rainbow_swirl.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ALCREMIE_GMAX",
+        "filename": "1518_alcremie_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_FALINKS",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_FALINKS",
+        "filename": "0870_falinks.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FALINKS_MEGA",
+        "filename": "1549_falinks_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_PINCURCHIN",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_PINCURCHIN",
+        "filename": "0871_pincurchin.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SNOM",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SNOM",
+        "filename": "0872_snom.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FROSMOTH",
+        "filename": "0873_frosmoth.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_STONJOURNER",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_STONJOURNER",
+        "filename": "0874_stonjourner.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_EISCUE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_EISCUE_ICE",
+        "filename": "0875_eiscue_ice.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_EISCUE_NOICE",
+        "filename": "1224_eiscue_noice.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_INDEEDEE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_INDEEDEE_M",
+        "filename": "0876_indeedee_m.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_INDEEDEE_F",
+        "filename": "1225_indeedee_f.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_MORPEKO",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_MORPEKO_FULL_BELLY",
+        "filename": "0877_morpeko_full_belly.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MORPEKO_HANGRY",
+        "filename": "1226_morpeko_hangry.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CUFANT",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CUFANT",
+        "filename": "0878_cufant.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_COPPERAJAH",
+        "filename": "0879_copperajah.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_COPPERAJAH_GMAX",
+        "filename": "1519_copperajah_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_DRACOZOLT",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_DRACOZOLT",
+        "filename": "0880_dracozolt.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ARCTOZOLT",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCTOZOLT",
+        "filename": "0881_arctozolt.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_DRACOVISH",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_DRACOVISH",
+        "filename": "0882_dracovish.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ARCTOVISH",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCTOVISH",
+        "filename": "0883_arctovish.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_DURALUDON",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_DURALUDON",
+        "filename": "0884_duraludon.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DURALUDON_GMAX",
+        "filename": "1520_duraludon_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS\n\n#if P_GEN_9_CROSS_EVOS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCHALUDON",
+        "filename": "1425_archaludon.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_CROSS_EVOS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_DREEPY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_DREEPY",
+        "filename": "0885_dreepy.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DRAKLOAK",
+        "filename": "0886_drakloak.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DRAGAPULT",
+        "filename": "0887_dragapult.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ZACIAN",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ZACIAN_HERO",
+        "filename": "0888_zacian_hero.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ZACIAN_CROWNED",
+        "filename": "1227_zacian_crowned.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ZAMAZENTA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ZAMAZENTA_HERO",
+        "filename": "0889_zamazenta_hero.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ZAMAZENTA_CROWNED",
+        "filename": "1228_zamazenta_crowned.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ETERNATUS",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ETERNATUS",
+        "filename": "0890_eternatus.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ETERNATUS_ETERNAMAX",
+        "filename": "1229_eternatus_eternamax.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_KUBFU",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_KUBFU",
+        "filename": "0891_kubfu.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_URSHIFU_SINGLE_STRIKE",
+        "filename": "0892_urshifu_single_strike.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_URSHIFU_SINGLE_STRIKE_GMAX",
+        "filename": "1521_urshifu_single_strike_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_URSHIFU_RAPID_STRIKE",
+        "filename": "1230_urshifu_rapid_strike.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_URSHIFU_RAPID_STRIKE_GMAX",
+        "filename": "1522_urshifu_rapid_strike_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ZARUDE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ZARUDE",
+        "filename": "0893_zarude.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ZARUDE_DADA",
+        "filename": "1231_zarude_dada.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_REGIELEKI",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_REGIELEKI",
+        "filename": "0894_regieleki.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_REGIDRAGO",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_REGIDRAGO",
+        "filename": "0895_regidrago.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_GLASTRIER",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_GLASTRIER",
+        "filename": "0896_glastrier.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SPECTRIER",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SPECTRIER",
+        "filename": "0897_spectrier.json",
+        "gen": 8
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CALYREX",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CALYREX",
+        "filename": "0898_calyrex.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_FUSION_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CALYREX_ICE",
+        "filename": "1232_calyrex_ice.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CALYREX_SHADOW",
+        "filename": "1233_calyrex_shadow.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_FUSION_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ENAMORUS",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ENAMORUS_INCARNATE",
+        "filename": "0905_enamorus_incarnate.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ENAMORUS_THERIAN",
+        "filename": "1103_enamorus_therian.json",
+        "gen": 8
+      }
+    ]
+  }
+]

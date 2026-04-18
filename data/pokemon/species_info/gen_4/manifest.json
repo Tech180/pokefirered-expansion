@@ -1,0 +1,1086 @@
+[
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_TURTWIG",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_TURTWIG",
+        "filename": "0387_turtwig.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GROTLE",
+        "filename": "0388_grotle.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_TORTERRA",
+        "filename": "0389_torterra.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CHIMCHAR",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CHIMCHAR",
+        "filename": "0390_chimchar.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MONFERNO",
+        "filename": "0391_monferno.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_INFERNAPE",
+        "filename": "0392_infernape.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_PIPLUP",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_PIPLUP",
+        "filename": "0393_piplup.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_PRINPLUP",
+        "filename": "0394_prinplup.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_EMPOLEON",
+        "filename": "0395_empoleon.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_STARLY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_STARLY",
+        "filename": "0396_starly.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_STARAVIA",
+        "filename": "0397_staravia.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_STARAPTOR",
+        "filename": "0398_staraptor.json",
+        "gen": 4
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_STARAPTOR_MEGA",
+        "filename": "1557_staraptor_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_BIDOOF",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_BIDOOF",
+        "filename": "0399_bidoof.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BIBAREL",
+        "filename": "0400_bibarel.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_KRICKETOT",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_KRICKETOT",
+        "filename": "0401_kricketot.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_KRICKETUNE",
+        "filename": "0402_kricketune.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SHINX",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SHINX",
+        "filename": "0403_shinx.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LUXIO",
+        "filename": "0404_luxio.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LUXRAY",
+        "filename": "0405_luxray.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CRANIDOS",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CRANIDOS",
+        "filename": "0408_cranidos.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_RAMPARDOS",
+        "filename": "0409_rampardos.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SHIELDON",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SHIELDON",
+        "filename": "0410_shieldon.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BASTIODON",
+        "filename": "0411_bastiodon.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_BURMY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_BURMY_PLANT",
+        "filename": "0412_burmy_plant.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BURMY_SANDY",
+        "filename": "1057_burmy_sandy.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BURMY_TRASH",
+        "filename": "1058_burmy_trash.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_WORMADAM_PLANT",
+        "filename": "0413_wormadam_plant.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_WORMADAM_SANDY",
+        "filename": "1059_wormadam_sandy.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_WORMADAM_TRASH",
+        "filename": "1060_wormadam_trash.json",
+        "gen": 4
+      },
+      {
+        "type": "raw",
+        "content": "#define MOTHIM_SPECIES_INFO                                                 \\\n    {                                                                       \\\n        .baseHP        = 70,                                                \\\n        .baseAttack    = 94,                                                \\\n        .baseDefense   = 50,                                                \\\n        .baseSpeed     = 66,                                                \\\n        .baseSpAttack  = 94,                                                \\\n        .baseSpDefense = 50,                                                \\\n        .types = MON_TYPES(TYPE_BUG, TYPE_FLYING),                          \\\n        .catchRate = 45,                                                    \\\n        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 148 : 159,            \\\n        .evYield_Attack = 1,                                                \\\n        .evYield_SpAttack = 1,                                              \\\n        .itemRare = ITEM_SILVER_POWDER,                                     \\\n        .genderRatio = MON_MALE,                                            \\\n        .eggCycles = 15,                                                    \\\n        .friendship = STANDARD_FRIENDSHIP,                                  \\\n        .growthRate = GROWTH_MEDIUM_FAST,                                   \\\n        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),                         \\\n        .abilities = { ABILITY_SWARM, ABILITY_NONE, ABILITY_TINTED_LENS },  \\\n        .bodyColor = BODY_COLOR_YELLOW,                                     \\\n        .speciesName = _(\"Mothim\"),                                         \\\n        .cryId = CRY_MOTHIM,                                                \\\n        .natDexNum = NATIONAL_DEX_MOTHIM,                                   \\\n        .categoryName = _(\"Moth\"),                                          \\\n        .height = 9,                                                        \\\n        .weight = 233,                                                      \\\n        .description = gMothimPokedexText,                                  \\\n        .pokemonScale = 338,                                                \\\n        .pokemonOffset = 8,                                                 \\\n        .trainerScale = 256,                                                \\\n        .trainerOffset = 0,                                                 \\\n        .frontPic = gMonFrontPic_Mothim,                                    \\\n        .frontPicSize = MON_COORDS_SIZE(64, 64),                            \\\n        .frontPicYOffset = 12,                                              \\\n        .frontAnimFrames = sAnims_Mothim,                                   \\\n        .frontAnimId = ANIM_H_SLIDE_WOBBLE,                                 \\\n        .enemyMonElevation = 10,                                            \\\n        .backPic = gMonBackPic_Mothim,                                      \\\n        .backPicSize = MON_COORDS_SIZE(64, 56),                             \\\n        .backPicYOffset = 8,                                                \\\n        .backAnimId = BACK_ANIM_H_SHAKE,                                    \\\n        .palette = gMonPalette_Mothim,                                      \\\n        .shinyPalette = gMonShinyPalette_Mothim,                            \\\n        .iconSprite = gMonIcon_Mothim,                                      \\\n        .iconPalIndex = 0,                                                  \\\n        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,                             \\\n        SHADOW(-1, 9, SHADOW_SIZE_S)                                        \\\n        FOOTPRINT(Mothim)                                                   \\\n        OVERWORLD(                                                          \\\n            sPicTable_Mothim,                                               \\\n            SIZE_32x32,                                                     \\\n            SHADOW_SIZE_M,                                                  \\\n            TRACKS_FOOT,                                                    \\\n            sAnimTable_Following,                                           \\\n            gOverworldPalette_Mothim,                                       \\\n            gShinyOverworldPalette_Mothim                                   \\\n        )                                                                   \\\n        .levelUpLearnset = sMothimLevelUpLearnset,                          \\\n        .teachableLearnset = sMothimTeachableLearnset,                      \\\n        .formSpeciesIdTable = sMothimFormSpeciesIdTable,                    \\\n    }"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MOTHIM_PLANT",
+        "filename": "0414_mothim_plant.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MOTHIM_SANDY",
+        "filename": "1436_mothim_sandy.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MOTHIM_TRASH",
+        "filename": "1437_mothim_trash.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_COMBEE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_COMBEE",
+        "filename": "0415_combee.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VESPIQUEN",
+        "filename": "0416_vespiquen.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_PACHIRISU",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_PACHIRISU",
+        "filename": "0417_pachirisu.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_BUIZEL",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_BUIZEL",
+        "filename": "0418_buizel.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLOATZEL",
+        "filename": "0419_floatzel.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CHERUBI",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CHERUBI",
+        "filename": "0420_cherubi.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CHERRIM_OVERCAST",
+        "filename": "0421_cherrim_overcast.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CHERRIM_SUNSHINE",
+        "filename": "1061_cherrim_sunshine.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SHELLOS",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SHELLOS_WEST",
+        "filename": "0422_shellos_west.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SHELLOS_EAST",
+        "filename": "1062_shellos_east.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GASTRODON_WEST",
+        "filename": "0423_gastrodon_west.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GASTRODON_EAST",
+        "filename": "1063_gastrodon_east.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_DRIFLOON",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_DRIFLOON",
+        "filename": "0425_drifloon.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DRIFBLIM",
+        "filename": "0426_drifblim.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_BUNEARY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_BUNEARY",
+        "filename": "0427_buneary.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LOPUNNY",
+        "filename": "0428_lopunny.json",
+        "gen": 4
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LOPUNNY_MEGA",
+        "filename": "0946_lopunny_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_GLAMEOW",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_GLAMEOW",
+        "filename": "0431_glameow.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_PURUGLY",
+        "filename": "0432_purugly.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_STUNKY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_STUNKY",
+        "filename": "0434_stunky.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SKUNTANK",
+        "filename": "0435_skuntank.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_BRONZOR",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_BRONZOR",
+        "filename": "0436_bronzor.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BRONZONG",
+        "filename": "0437_bronzong.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CHATOT",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CHATOT",
+        "filename": "0441_chatot.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SPIRITOMB",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SPIRITOMB",
+        "filename": "0442_spiritomb.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_GIBLE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_GIBLE",
+        "filename": "0443_gible.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GABITE",
+        "filename": "0444_gabite.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GARCHOMP",
+        "filename": "0445_garchomp.json",
+        "gen": 4
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GARCHOMP_MEGA",
+        "filename": "0947_garchomp_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS\n\n#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GARCHOMP_MEGA_Z",
+        "filename": "1558_garchomp_mega_z.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_RIOLU",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_RIOLU",
+        "filename": "0447_riolu.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LUCARIO",
+        "filename": "0448_lucario.json",
+        "gen": 4
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LUCARIO_MEGA",
+        "filename": "0948_lucario_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS\n\n#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LUCARIO_MEGA_Z",
+        "filename": "1559_lucario_mega_z.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_HIPPOPOTAS",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_HIPPOPOTAS",
+        "filename": "0449_hippopotas.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_HIPPOWDON",
+        "filename": "0450_hippowdon.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SKORUPI",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SKORUPI",
+        "filename": "0451_skorupi.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DRAPION",
+        "filename": "0452_drapion.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CROAGUNK",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CROAGUNK",
+        "filename": "0453_croagunk.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_TOXICROAK",
+        "filename": "0454_toxicroak.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CARNIVINE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CARNIVINE",
+        "filename": "0455_carnivine.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_FINNEON",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_FINNEON",
+        "filename": "0456_finneon.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LUMINEON",
+        "filename": "0457_lumineon.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SNOVER",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SNOVER",
+        "filename": "0459_snover.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ABOMASNOW",
+        "filename": "0460_abomasnow.json",
+        "gen": 4
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ABOMASNOW_MEGA",
+        "filename": "0949_abomasnow_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ROTOM",
+    "components": [
+      {
+        "type": "raw",
+        "content": "#define ROTOM_FAMILY_TYPES { TYPE_ELECTRIC, TYPE_GHOST }"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ROTOM",
+        "filename": "0479_rotom.json",
+        "gen": 4
+      },
+      {
+        "type": "raw",
+        "content": "#if P_UPDATED_EXP_YIELDS >= GEN_7\n    #define ROTOM_APPLIANCE_EXP_YIELD 182\n#elif P_UPDATED_EXP_YIELDS >= GEN_5\n    #define ROTOM_APPLIANCE_EXP_YIELD 154\n#else\n    #define ROTOM_APPLIANCE_EXP_YIELD 132\n#endif"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ROTOM_HEAT",
+        "filename": "1064_rotom_heat.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ROTOM_WASH",
+        "filename": "1065_rotom_wash.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ROTOM_FROST",
+        "filename": "1066_rotom_frost.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ROTOM_FAN",
+        "filename": "1067_rotom_fan.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ROTOM_MOW",
+        "filename": "1068_rotom_mow.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_UXIE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_UXIE",
+        "filename": "0480_uxie.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_MESPRIT",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_MESPRIT",
+        "filename": "0481_mesprit.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_AZELF",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_AZELF",
+        "filename": "0482_azelf.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_DIALGA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_DIALGA",
+        "filename": "0483_dialga.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DIALGA_ORIGIN",
+        "filename": "1069_dialga_origin.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_PALKIA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_PALKIA",
+        "filename": "0484_palkia.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_PALKIA_ORIGIN",
+        "filename": "1070_palkia_origin.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_HEATRAN",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_HEATRAN",
+        "filename": "0485_heatran.json",
+        "gen": 4
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_HEATRAN_MEGA",
+        "filename": "1550_heatran_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_REGIGIGAS",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_REGIGIGAS",
+        "filename": "0486_regigigas.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_GIRATINA",
+    "components": [
+      {
+        "type": "raw",
+        "content": "#if P_UPDATED_EXP_YIELDS >= GEN_8\n    #define GIRATINA_EXP_YIELD 340\n#elif P_UPDATED_EXP_YIELDS >= GEN_5\n    #define GIRATINA_EXP_YIELD 306\n#else\n    #define GIRATINA_EXP_YIELD 220\n#endif"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GIRATINA_ALTERED",
+        "filename": "0487_giratina_altered.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GIRATINA_ORIGIN",
+        "filename": "1071_giratina_origin.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CRESSELIA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CRESSELIA",
+        "filename": "0488_cresselia.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_MANAPHY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_PHIONE",
+        "filename": "0489_phione.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MANAPHY",
+        "filename": "0490_manaphy.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_DARKRAI",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_DARKRAI",
+        "filename": "0491_darkrai.json",
+        "gen": 4
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DARKRAI_MEGA",
+        "filename": "1551_darkrai_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SHAYMIN",
+    "components": [
+      {
+        "type": "raw",
+        "content": "#if P_UPDATED_EXP_YIELDS >= GEN_8\n    #define SHAYMIN_EXP_YIELD 300\n#elif P_UPDATED_EXP_YIELDS >= GEN_5\n    #define SHAYMIN_EXP_YIELD 270\n#else\n    #define SHAYMIN_EXP_YIELD 64\n#endif"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SHAYMIN_LAND",
+        "filename": "0492_shaymin_land.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SHAYMIN_SKY",
+        "filename": "1072_shaymin_sky.json",
+        "gen": 4
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ARCEUS",
+    "components": [
+      {
+        "type": "raw",
+        "content": "#if P_UPDATED_EXP_YIELDS >= GEN_8\n    #define ARCEUS_EXP_YIELD 360\n#elif P_UPDATED_EXP_YIELDS >= GEN_5\n    #define ARCEUS_EXP_YIELD 324\n#else\n    #define ARCEUS_EXP_YIELD 255\n#endif\n#if P_ARCEUS_UNIQUE_FORM_ICONS >= GEN_9\n    #define ARCEUS_ICON(typeName, iconPal)        \\\n        .iconSprite = gMonIcon_Arceus ##typeName, \\\n        .iconPalIndex = iconPal,\n#else\n    #define ARCEUS_ICON(typeName, iconPal)   \\\n        .iconSprite = gMonIcon_ArceusNormal, \\\n        .iconPalIndex = 1,\n#endif\n\n#define ARCEUS_SPECIES_INFO(type, typeName, iconPal)                                \\\n    {                                                                               \\\n        .baseHP        = 120,                                                       \\\n        .baseAttack    = 120,                                                       \\\n        .baseDefense   = 120,                                                       \\\n        .baseSpeed     = 120,                                                       \\\n        .baseSpAttack  = 120,                                                       \\\n        .baseSpDefense = 120,                                                       \\\n        .types = MON_TYPES(type),                                                   \\\n        .catchRate = 3,                                                             \\\n        .expYield = ARCEUS_EXP_YIELD,                                               \\\n        .evYield_HP = 3,                                                            \\\n        .genderRatio = MON_GENDERLESS,                                              \\\n        .eggCycles = 120,                                                           \\\n        .friendship = 0,                                                            \\\n        .growthRate = GROWTH_SLOW,                                                  \\\n        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),                  \\\n        .abilities = { ABILITY_MULTITYPE, ABILITY_NONE, ABILITY_NONE },             \\\n        .bodyColor = BODY_COLOR_WHITE,                                              \\\n        .speciesName = _(\"Arceus\"),                                                 \\\n        .cryId = CRY_ARCEUS,                                                        \\\n        .natDexNum = NATIONAL_DEX_ARCEUS,                                           \\\n        .categoryName = _(\"Alpha\"),                                                 \\\n        .height = 32,                                                               \\\n        .weight = 3200,                                                             \\\n        .description = gArceusPokedexText,                                          \\\n        .pokemonScale = 256,                                                        \\\n        .pokemonOffset = 0,                                                         \\\n        .trainerScale = 495,                                                        \\\n        .trainerOffset = 10,                                                        \\\n        .frontPic = gMonFrontPic_Arceus,                                            \\\n        .frontPicSize = MON_COORDS_SIZE(64, 64),                                    \\\n        .frontPicYOffset = 0,                                                       \\\n        .frontAnimFrames = sAnims_Arceus,                                           \\\n        .frontAnimId = ANIM_GROW_VIBRATE,                                           \\\n        .backPic = gMonBackPic_Arceus,                                              \\\n        .backPicSize = MON_COORDS_SIZE(64, 64),                                     \\\n        .backPicYOffset = 3,                                                        \\\n        .backAnimId = BACK_ANIM_GROW_STUTTER,                                       \\\n        .palette = gMonPalette_Arceus ##typeName,                                   \\\n        .shinyPalette = gMonShinyPalette_Arceus ##typeName,                         \\\n        ARCEUS_ICON(typeName, iconPal)                                              \\\n        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,                                     \\\n        SHADOW(-1, 15, SHADOW_SIZE_XL_BATTLE_ONLY)                                  \\\n        FOOTPRINT(Arceus)                                                           \\\n        OVERWORLD(                                                                  \\\n            sPicTable_Arceus ##typeName,                                            \\\n            SIZE_64x64,                                                             \\\n            SHADOW_SIZE_M,                                                          \\\n            TRACKS_FOOT,                                                            \\\n            sAnimTable_Following,                                                   \\\n            gOverworldPalette_Arceus ##typeName,                                    \\\n            gShinyOverworldPalette_Arceus ##typeName                                \\\n        )                                                                           \\\n        .levelUpLearnset = sArceusLevelUpLearnset,                                  \\\n        .teachableLearnset = sArceusTeachableLearnset,                              \\\n        .formSpeciesIdTable = sArceusFormSpeciesIdTable,                            \\\n        .formChangeTable = sArceusFormChangeTable,                                  \\\n        .isMythical = TRUE,                                                         \\\n        .isFrontierBanned = TRUE,                                                   \\\n        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT, \\\n    }"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_NORMAL",
+        "filename": "0493_arceus_normal.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_FIGHTING",
+        "filename": "1073_arceus_fighting.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_FLYING",
+        "filename": "1074_arceus_flying.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_POISON",
+        "filename": "1075_arceus_poison.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_GROUND",
+        "filename": "1076_arceus_ground.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_ROCK",
+        "filename": "1077_arceus_rock.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_BUG",
+        "filename": "1078_arceus_bug.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_GHOST",
+        "filename": "1079_arceus_ghost.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_STEEL",
+        "filename": "1080_arceus_steel.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_FIRE",
+        "filename": "1081_arceus_fire.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_WATER",
+        "filename": "1082_arceus_water.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_GRASS",
+        "filename": "1083_arceus_grass.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_ELECTRIC",
+        "filename": "1084_arceus_electric.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_PSYCHIC",
+        "filename": "1085_arceus_psychic.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_ICE",
+        "filename": "1086_arceus_ice.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_DRAGON",
+        "filename": "1087_arceus_dragon.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_DARK",
+        "filename": "1088_arceus_dark.json",
+        "gen": 4
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARCEUS_FAIRY",
+        "filename": "1089_arceus_fairy.json",
+        "gen": 4
+      }
+    ]
+  }
+]

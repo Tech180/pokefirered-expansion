@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_ALCREMIE_LOVE_MATCHA_CREAM",
+  "family_constant": "P_FAMILY_MILCERY",
+  "macro_call": "ALCREMIE_REGULAR_SPECIES_INFO(Love,       MatchaCream,  BODY_COLOR_GREEN)"
+}

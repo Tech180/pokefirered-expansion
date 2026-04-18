@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_FLORGES_YELLOW",
+  "family_constant": "P_FAMILY_FLABEBE",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "FLORGES_MISC_INFO",
+      "args": "Yellow, 1",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"This Pok\u00e9mon battles by drawing\\n\"\n\"forth the power of yellow flowers. It\\n\"\n\"ruthlessly punishes anyone who\\n\"\n\"tramples on flowering plants.\")"
+    }
+  ]
+}

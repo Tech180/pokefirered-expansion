@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_ALCREMIE_LOVE_RUBY_CREAM",
+  "family_constant": "P_FAMILY_MILCERY",
+  "macro_call": "ALCREMIE_REGULAR_SPECIES_INFO(Love,       RubyCream,    BODY_COLOR_PINK)"
+}

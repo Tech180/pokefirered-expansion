@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_FLOETTE_ORANGE",
+  "family_constant": "P_FAMILY_FLABEBE",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "FLOETTE_NORMAL_INFO",
+      "args": "Orange, ORANGE, 0",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"This Pok\u00e9mon can draw forth the\\n\"\n\"most power when in sync with orange\\n\"\n\"flowers, compared to flowers of other\\n\"\n\"colors.\")"
+    }
+  ]
+}

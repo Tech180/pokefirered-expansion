@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_GENESECT_DOUSE",
+  "family_constant": "P_FAMILY_GENESECT",
+  "macro_call": "GENESECT_SPECIES_INFO(GenesectDouseDrive)"
+}

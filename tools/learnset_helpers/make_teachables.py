@@ -94,16 +94,29 @@ def prepare_output(all_learnables: dict[str, set[str]], tms: list[str], tutors: 
         new += f"static const u16 s{species}TeachableLearnset[] = "
         new += "{\n"
         species_upper =  SNAKIFY_PAT.sub(r"_\1", species).upper()
+        
+        # Robust lookup: Try exact match, then strip suffix (for forms), then empty list
+        def get_learnables(name):
+            if name in all_learnables:
+                return list(all_learnables[name])
+            # Try stripping last component (e.g. RATTATA_ALOLA -> RATTATA)
+            if "_" in name:
+                base_name = "_".join(name.split("_")[:-1])
+                if base_name in all_learnables:
+                    return list(all_learnables[base_name])
+            return []
+
         if teaching_type == "ALL_TEACHABLES":
             part1 = list(filter(lambda m: m not in special_movesets["signatureTeachables"], tms))
             part2 = list(filter(lambda m: m not in special_movesets["signatureTeachables"], tutors))
         else:
+            learnables = get_learnables(species_upper)
             if teaching_type == "TM_ILLITERATE":
-                learnables = all_learnables[species_upper]
                 if not tm_litteracy_config:
                     learnables = filter(lambda m: m not in special_movesets["universalMoves"], learnables)
             else:
-                learnables = all_learnables[species_upper] + special_movesets["universalMoves"]
+                learnables = learnables + special_movesets["universalMoves"]
+            
             part1 = list(filter(lambda m: m in learnables, tms))
             part2 = list(filter(lambda m: m in learnables, tutors))
 
