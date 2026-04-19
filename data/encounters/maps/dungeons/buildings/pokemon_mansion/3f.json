@@ -1,0 +1,143 @@
+{
+  "group_label": "gWildMonHeaders",
+  "encounters": [
+    {
+      "map": "MAP_POKEMON_MANSION_3F",
+      "base_label": "sPokemonMansion3F_FireRed",
+      "land_mons": {
+        "encounter_rate": 7,
+        "mons": [
+          {
+            "min_level": 28,
+            "max_level": 28,
+            "species": "SPECIES_KOFFING"
+          },
+          {
+            "min_level": 32,
+            "max_level": 32,
+            "species": "SPECIES_RATICATE"
+          },
+          {
+            "min_level": 30,
+            "max_level": 30,
+            "species": "SPECIES_KOFFING"
+          },
+          {
+            "min_level": 36,
+            "max_level": 36,
+            "species": "SPECIES_RATICATE"
+          },
+          {
+            "min_level": 30,
+            "max_level": 30,
+            "species": "SPECIES_GROWLITHE"
+          },
+          {
+            "min_level": 28,
+            "max_level": 28,
+            "species": "SPECIES_RATTATA"
+          },
+          {
+            "min_level": 28,
+            "max_level": 28,
+            "species": "SPECIES_GRIMER"
+          },
+          {
+            "min_level": 32,
+            "max_level": 32,
+            "species": "SPECIES_WEEZING"
+          },
+          {
+            "min_level": 32,
+            "max_level": 32,
+            "species": "SPECIES_GROWLITHE"
+          },
+          {
+            "min_level": 26,
+            "max_level": 26,
+            "species": "SPECIES_RATTATA"
+          },
+          {
+            "min_level": 32,
+            "max_level": 32,
+            "species": "SPECIES_GROWLITHE"
+          },
+          {
+            "min_level": 26,
+            "max_level": 26,
+            "species": "SPECIES_RATTATA"
+          }
+        ]
+      }
+    },
+    {
+      "map": "MAP_POKEMON_MANSION_3F",
+      "base_label": "sPokemonMansion3F_LeafGreen",
+      "land_mons": {
+        "encounter_rate": 7,
+        "mons": [
+          {
+            "min_level": 28,
+            "max_level": 28,
+            "species": "SPECIES_GRIMER"
+          },
+          {
+            "min_level": 32,
+            "max_level": 32,
+            "species": "SPECIES_RATICATE"
+          },
+          {
+            "min_level": 30,
+            "max_level": 30,
+            "species": "SPECIES_GRIMER"
+          },
+          {
+            "min_level": 36,
+            "max_level": 36,
+            "species": "SPECIES_RATICATE"
+          },
+          {
+            "min_level": 30,
+            "max_level": 30,
+            "species": "SPECIES_VULPIX"
+          },
+          {
+            "min_level": 28,
+            "max_level": 28,
+            "species": "SPECIES_RATTATA"
+          },
+          {
+            "min_level": 28,
+            "max_level": 28,
+            "species": "SPECIES_KOFFING"
+          },
+          {
+            "min_level": 32,
+            "max_level": 32,
+            "species": "SPECIES_MUK"
+          },
+          {
+            "min_level": 32,
+            "max_level": 32,
+            "species": "SPECIES_VULPIX"
+          },
+          {
+            "min_level": 26,
+            "max_level": 26,
+            "species": "SPECIES_RATTATA"
+          },
+          {
+            "min_level": 32,
+            "max_level": 32,
+            "species": "SPECIES_VULPIX"
+          },
+          {
+            "min_level": 26,
+            "max_level": 26,
+            "species": "SPECIES_RATTATA"
+          }
+        ]
+      }
+    }
+  ]
+}

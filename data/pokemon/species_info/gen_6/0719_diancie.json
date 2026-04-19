@@ -1,0 +1,274 @@
+{
+  "species_constant": "SPECIES_DIANCIE",
+  "family_constant": "P_FAMILY_DIANCIE",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "150"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "150"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_ROCK, TYPE_FAIRY)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpDefense",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_GENDERLESS"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "25"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_CLEAR_BODY, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_PINK"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Diancie\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_DIANCIE"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_DIANCIE"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Jewel\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "7"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "88"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"A sudden transformation of Carbink,\\n\"\n\"its pink, glimmering body is said to be\\n\"\n\"the loveliest sight in the whole world.\\n\"\n\"It creates diamonds between its hands.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "365"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "12"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Diancie"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(40, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 20),\nANIMCMD_FRAME(1, 10),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_V_SQUISH_AND_BOUNCE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Diancie"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "7"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_CIRCLE_COUNTERCLOCKWISE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Diancie"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Diancie"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Diancie"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 13, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Diancie",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Diancie,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Diancie,\ngShinyOverworldPalette_Diancie",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isMythical",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "isFrontierBanned",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "perfectIVCount",
+      "value": "LEGENDARY_PERFECT_IV_COUNT"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sDiancieLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sDiancieTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sDiancieFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sDiancieFormChangeTable"
+    }
+  ]
+}

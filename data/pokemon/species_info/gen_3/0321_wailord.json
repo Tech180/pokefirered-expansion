@@ -1,0 +1,249 @@
+{
+  "species_constant": "SPECIES_WAILORD",
+  "family_constant": "P_FAMILY_WAILMER",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "170"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_WATER)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 206"
+    },
+    {
+      "type": "field",
+      "name": "evYield_HP",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_FLUCTUATING"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_WATER_2)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_WATER_VEIL, ABILITY_OBLIVIOUS, ABILITY_PRESSURE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Wailord\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_WAILORD"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_WAILORD"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Float Whale\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "145"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "3980"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It breathes through nostrils that it\\n\"\n\"raises above the sea. By inhaling to its\\n\"\n\"maximum capacity, a Wailord can dive close\\n\"\n\"to 10,000 feet beneath the waves.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "1352"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "18"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Wailord"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 10 : 4"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 26),\nANIMCMD_FRAME(1, 48),\nANIMCMD_FRAME(0, 33),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_V_SLIDE_WOBBLE"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimDelay",
+      "value": "10"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Wailord"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(64, 24) : MON_COORDS_SIZE(64, 40)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 22 : 14"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_SHAKE_GLOW_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Wailord"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Wailord"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Wailord"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "1, 7, SHADOW_SIZE_XL_BATTLE_ONLY",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Wailord",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Wailord,\nSIZE_64x64,\nSHADOW_SIZE_M,\nTRACKS_NONE,\nsAnimTable_Following,\ngOverworldPalette_Wailord,\ngShinyOverworldPalette_Wailord",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sWailordLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sWailordTeachableLearnset"
+    }
+  ]
+}

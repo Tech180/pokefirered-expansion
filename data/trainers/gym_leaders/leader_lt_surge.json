@@ -1,0 +1,74 @@
+{
+  "identifier": "TRAINER_LEADER_LT_SURGE",
+  "trainer_name": "LT. SURGE",
+  "trainer_class": "TRAINER_CLASS_LEADER",
+  "trainer_pic": "TRAINER_PIC_LEADER_LT_SURGE",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_MALE",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [
+    "ITEM_SUPER_POTION",
+    "ITEM_FULL_HEAL"
+  ],
+  "party": [
+    {
+      "species": "SPECIES_VOLTORB",
+      "level": 21,
+      "moves": [
+        "MOVE_SONIC_BOOM",
+        "MOVE_TACKLE",
+        "MOVE_SCREECH",
+        "MOVE_SHOCK_WAVE"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "species": "SPECIES_PIKACHU",
+      "level": 18,
+      "moves": [
+        "MOVE_QUICK_ATTACK",
+        "MOVE_THUNDER_WAVE",
+        "MOVE_DOUBLE_TEAM",
+        "MOVE_SHOCK_WAVE"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "species": "SPECIES_RAICHU",
+      "level": 24,
+      "moves": [
+        "MOVE_QUICK_ATTACK",
+        "MOVE_THUNDER_WAVE",
+        "MOVE_DOUBLE_TEAM",
+        "MOVE_SHOCK_WAVE"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    }
+  ]
+}

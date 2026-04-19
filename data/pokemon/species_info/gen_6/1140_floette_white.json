@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_FLOETTE_WHITE",
+  "family_constant": "P_FAMILY_FLABEBE",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "FLOETTE_NORMAL_INFO",
+      "args": "White, WHITE, 1",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"If it finds someone messing up a\\n\"\n\"flower bed, it will attack them\\n\"\n\"without mercy. This Floette takes\\n\"\n\"particularly good care of white flowers.\")"
+    }
+  ]
+}

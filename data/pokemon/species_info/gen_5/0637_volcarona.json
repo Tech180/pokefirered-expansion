@@ -1,0 +1,259 @@
+{
+  "species_constant": "SPECIES_VOLCARONA",
+  "family_constant": "P_FAMILY_LARVESTA",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "85"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "65"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "135"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "105"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_BUG, TYPE_FIRE)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_8) ? 275 : 248"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpAttack",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "itemCommon",
+      "value": "ITEM_SILVER_POWDER"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_SILVER_POWDER"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_BUG)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_FLAME_BODY, ABILITY_NONE, ABILITY_SWARM }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_WHITE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Volcarona\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_VOLCARONA"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_VOLCARONA"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Sun\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "16"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "460"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"When volcanic ash darkened the\\n\"\n\"atmosphere, it appeared and saved Pok\u00e9mon\\n\"\n\"from freezing, Volcarona's fire provided a\\n\"\n\"replacement for the sun.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "259"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "296"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Volcarona"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 25),\nANIMCMD_FRAME(0, 25),\nANIMCMD_FRAME(1, 25),\nANIMCMD_FRAME(0, 25),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_V_SLIDE_WOBBLE"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Volcarona"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_SHAKE_GLOW_RED"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Volcarona"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Volcarona"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Volcarona"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-4, 14, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Volcarona",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Volcarona,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Volcarona,\ngShinyOverworldPalette_Volcarona",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sVolcaronaLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sVolcaronaTeachableLearnset"
+    }
+  ]
+}

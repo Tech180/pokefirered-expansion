@@ -1,0 +1,280 @@
+{
+  "species_constant": "SPECIES_AEGISLASH_BLADE",
+  "family_constant": "P_FAMILY_HONEDGE",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "AEGISLASH_MAIN_STAT"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "AEGISLASH_MAIN_STAT"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_STEEL, TYPE_GHOST)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_8) ? 250 : 234"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_EVS >= GEN_7"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpAttack",
+      "value": "1"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpDefense",
+      "value": "1"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_MINERAL)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_STANCE_CHANGE, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BROWN"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Aegislash\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_AEGISLASH"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_AEGISLASH"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Royal Sword\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "17"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "530"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Once upon a time, a king with an\\n\"\n\"Aegislash reigned over the land. His\\n\"\n\"Pok\u00e9mon eventually drained him of\\n\"\n\"life, and his kingdom fell with him.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "259"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "290"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_AegislashBlade"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 18),\nANIMCMD_FRAME(1, 18),\nANIMCMD_FRAME(0, 18),\nANIMCMD_FRAME(1, 18),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_CIRCLE_C_CLOCKWISE_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_AegislashBlade"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "9"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_JOLT_RIGHT"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_AegislashBlade"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_AegislashBlade"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_AegislashBlade"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 14, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Aegislash",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sAegislashLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sAegislashTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sAegislashFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sAegislashFormChangeTable"
+    }
+  ]
+}

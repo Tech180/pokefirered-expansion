@@ -1,0 +1,264 @@
+{
+  "species_constant": "SPECIES_KOMMO_O_TOTEM",
+  "family_constant": "P_FAMILY_JANGMO_O",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "110"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "125"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "85"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "105"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_DRAGON, TYPE_FIGHTING)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "270"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "itemCommon",
+      "value": "ITEM_RAZOR_CLAW"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_DRAGON)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_OVERCOAT, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_GRAY"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Kommo-o\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_KOMMO_O"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_KOMMO_O"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Scaly\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "24"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "2075"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "gKommoOPokedexText"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "259"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "296"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_KommoO"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(63, 63)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 10),\nANIMCMD_FRAME(1, 20),\nANIMCMD_FRAME(0, 20),\nANIMCMD_FRAME(1, 20),\nANIMCMD_FRAME(0, 1),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_SHRINK_GROW_VIBRATE_FAST"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_KommoO"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(60, 60)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_SHRINK_GROW_VIBRATE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_KommoO"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_KommoO"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_KommoO"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 13, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "KommoO",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_KommoO,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_KommoO,\ngShinyOverworldPalette_KommoO",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isTotem",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "perfectIVCount",
+      "value": "LEGENDARY_PERFECT_IV_COUNT"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sKommoOLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sKommoOTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sKommoOFormSpeciesIdTable"
+    }
+  ]
+}

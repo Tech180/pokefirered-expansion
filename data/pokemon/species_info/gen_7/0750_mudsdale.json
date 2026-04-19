@@ -1,0 +1,244 @@
+{
+  "species_constant": "SPECIES_MUDSDALE",
+  "family_constant": "P_FAMILY_MUDBRAY",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "125"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "35"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "55"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "85"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_GROUND)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "175"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_LIGHT_CLAY"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_OWN_TEMPO, ABILITY_STAMINA, ABILITY_INNER_FOCUS }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BROWN"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Mudsdale\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_MUDSDALE"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_MUDSDALE"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Draft Horse\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "25"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "9200"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Its heavy, mud-covered kicks are its\\n\"\n\"best means of attack, and it can reduce\\n\"\n\"large trucks to scrap without breaking\\n\"\n\"a sweat.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "257"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "10"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "423"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "8"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Mudsdale"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_V_SHAKE_TWICE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Mudsdale"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "5"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Mudsdale"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Mudsdale"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Mudsdale"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "4, 13, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Mudsdale",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Mudsdale,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Mudsdale,\ngShinyOverworldPalette_Mudsdale",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sMudsdaleLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sMudsdaleTeachableLearnset"
+    }
+  ]
+}

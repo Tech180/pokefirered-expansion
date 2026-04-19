@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_ARCEUS_FLYING",
+  "family_constant": "P_FAMILY_ARCEUS",
+  "macro_call": "ARCEUS_SPECIES_INFO(TYPE_FLYING,   Flying,   2)"
+}

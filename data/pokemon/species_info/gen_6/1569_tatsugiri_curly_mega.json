@@ -1,0 +1,245 @@
+{
+  "species_constant": "SPECIES_TATSUGIRI_CURLY_MEGA",
+  "family_constant": "P_FAMILY_TATSUGIRI",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "68"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "65"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "92"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "135"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "125"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_DRAGON, TYPE_WATER)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "166"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpAttack",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "35"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_WATER_2)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_STORM_DRAIN, ABILITY_NONE, ABILITY_STORM_DRAIN }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_RED"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Tatsugiri\")"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_MODIFIED_MEGA_CRIES"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_TATSUGIRI_MEGA"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_TATSUGIRI_CURLY"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif // P_MODIFIED_MEGA_CRIES"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_TATSUGIRI"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Mimicry\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "240"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Tatsugiri's brain has been invigorated\\n\"\n\"by Mega Evolution, making it even\\n\"\n\"wilier. It can create and command\\n\"\n\"copies of itself.\")"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_TatsugiriCurlyMega"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "11"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_TatsugiriCurlyMega"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "17"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_TatsugiriMega"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_TatsugiriMega"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_TatsugiriCurlyMega"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Tatsugiri",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 2, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isMegaEvolution",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sTatsugiriLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sTatsugiriTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sTatsugiriEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sTatsugiriFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sTatsugiriCurlyFormChangeTable"
+    }
+  ]
+}

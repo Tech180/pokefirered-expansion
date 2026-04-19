@@ -1,0 +1,109 @@
+{
+  "identifier": "TRAINER_COOLTRAINER_MICHELLE_2",
+  "trainer_name": "MICHELLE",
+  "trainer_class": "TRAINER_CLASS_COOLTRAINER",
+  "trainer_pic": "TRAINER_PIC_COOLTRAINER_F",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_COOL",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [
+    "ITEM_HYPER_POTION"
+  ],
+  "party": [
+    {
+      "species": "SPECIES_PERSIAN",
+      "level": 53,
+      "moves": [
+        "MOVE_SLASH",
+        "MOVE_SCREECH",
+        "MOVE_FAINT_ATTACK",
+        "MOVE_BITE"
+      ],
+      "ivs": {
+        "hp": 26,
+        "atk": 26,
+        "def": 26,
+        "spa": 26,
+        "spd": 26,
+        "spe": 26
+      }
+    },
+    {
+      "species": "SPECIES_DEWGONG",
+      "level": 53,
+      "moves": [
+        "MOVE_ICE_BEAM",
+        "MOVE_TAKE_DOWN",
+        "MOVE_ICY_WIND",
+        "MOVE_SHEER_COLD"
+      ],
+      "ivs": {
+        "hp": 26,
+        "atk": 26,
+        "def": 26,
+        "spa": 26,
+        "spd": 26,
+        "spe": 26
+      }
+    },
+    {
+      "species": "SPECIES_NINETALES",
+      "level": 54,
+      "moves": [
+        "MOVE_FLAMETHROWER",
+        "MOVE_CONFUSE_RAY",
+        "MOVE_WILL_O_WISP",
+        "MOVE_GRUDGE"
+      ],
+      "ivs": {
+        "hp": 26,
+        "atk": 26,
+        "def": 26,
+        "spa": 26,
+        "spd": 26,
+        "spe": 26
+      }
+    },
+    {
+      "species": "SPECIES_RAPIDASH",
+      "level": 54,
+      "moves": [
+        "MOVE_BOUNCE",
+        "MOVE_AGILITY",
+        "MOVE_FIRE_SPIN",
+        "MOVE_TAKE_DOWN"
+      ],
+      "ivs": {
+        "hp": 26,
+        "atk": 26,
+        "def": 26,
+        "spa": 26,
+        "spd": 26,
+        "spe": 26
+      }
+    },
+    {
+      "species": "SPECIES_GIRAFARIG",
+      "level": 56,
+      "moves": [
+        "MOVE_CRUNCH",
+        "MOVE_PSYBEAM",
+        "MOVE_STOMP",
+        "MOVE_ODOR_SLEUTH"
+      ],
+      "ivs": {
+        "hp": 26,
+        "atk": 26,
+        "def": 26,
+        "spa": 26,
+        "spd": 26,
+        "spe": 26
+      }
+    }
+  ]
+}

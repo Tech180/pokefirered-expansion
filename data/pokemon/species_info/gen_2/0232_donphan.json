@@ -1,0 +1,283 @@
+{
+  "species_constant": "SPECIES_DONPHAN",
+  "family_constant": "P_FAMILY_PHANPY",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_GROUND)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_5) ? 175 : 189"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_STURDY, ABILITY_NONE, ABILITY_SAND_VEIL }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_GRAY"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Donphan\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_DONPHAN"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_DONPHAN"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Armor\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "11"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "1200"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"A Donphan is so strong it can easily haul\\n\"\n\"a dump truck. Its hide has toughened to a\\n\"\n\"rock-hard state. An ordinary sort of\\n\"\n\"attack won't even leave a scratch.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "313"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "9"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Donphan"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 48)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 8 : 9"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 10),\nANIMCMD_FRAME(1, 25),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? ANIM_V_SHAKE_TWICE : ANIM_ROTATE_UP_SLAM_DOWN"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Donphan"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(64, 40) : MON_COORDS_SIZE(64, 48)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 13 : 9"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_V_SHAKE_LOW"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Donphan"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Donphan"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Donphan"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_GENDER_DIFFERENCES && !P_GBA_STYLE_SPECIES_GFX"
+    },
+    {
+      "type": "field",
+      "name": "frontPicFemale",
+      "value": "gMonFrontPic_DonphanF"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSizeFemale",
+      "value": "MON_COORDS_SIZE(64, 48)"
+    },
+    {
+      "type": "field",
+      "name": "backPicFemale",
+      "value": "gMonBackPic_DonphanF"
+    },
+    {
+      "type": "field",
+      "name": "backPicSizeFemale",
+      "value": "MON_COORDS_SIZE(64, 48)"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif //P_GENDER_DIFFERENCES && !P_GBA_STYLE_SPECIES_GFX"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "7, 2, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Donphan",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Donphan,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Donphan,\ngShinyOverworldPalette_Donphan",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD_FEMALE",
+      "args": "sPicTable_DonphanF,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sDonphanLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sDonphanTeachableLearnset"
+    }
+  ]
+}

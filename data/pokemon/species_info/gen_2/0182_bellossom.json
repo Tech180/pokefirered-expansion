@@ -1,0 +1,284 @@
+{
+  "species_constant": "SPECIES_BELLOSSOM",
+  "family_constant": "P_FAMILY_ODDISH",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "P_UPDATED_STATS >= GEN_6 ? 95 : 85"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_GRASS)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_EXP_YIELDS >= GEN_8"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "245"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#elif P_UPDATED_EXP_YIELDS >= GEN_6"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "221"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#elif P_UPDATED_EXP_YIELDS >= GEN_5"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "216"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "184"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpDefense",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_ABSORB_BULB"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_GRASS)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_CHLOROPHYLL, ABILITY_NONE, ABILITY_HEALER }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_GREEN"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Bellossom\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_BELLOSSOM"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_BELLOSSOM"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Flower\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "58"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Its flower petals deepen in color through\\n\"\n\"exposure to sunlight. When cloudy weather\\n\"\n\"persists, it does a dance that is thought\\n\"\n\"to be a ritual for summoning the sun.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "472"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "21"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Bellossom"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(32, 40)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 14 : 12"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 5),\nANIMCMD_FRAME(0, 5),\nANIMCMD_FRAME(1, 5),\nANIMCMD_FRAME(0, 15),\nANIMCMD_FRAME(1, 5),\nANIMCMD_FRAME(0, 5),\nANIMCMD_FRAME(1, 5),\nANIMCMD_FRAME(0, 15),\nANIMCMD_FRAME(1, 5),\nANIMCMD_FRAME(0, 5),\nANIMCMD_FRAME(1, 5),\nANIMCMD_FRAME(0, 15),\nANIMCMD_FRAME(1, 5),\nANIMCMD_FRAME(0, 5),\nANIMCMD_FRAME(1, 5),\nANIMCMD_FRAME(0, 5),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? ANIM_SWING_CONCAVE : ANIM_H_SLIDE_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Bellossom"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(48, 48)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "11"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_CONVEX_DOUBLE_ARC"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Bellossom"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Bellossom"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Bellossom"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_SLOW"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 0, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Bellossom",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Bellossom,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Bellossom,\ngShinyOverworldPalette_Bellossom",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sBellossomLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sBellossomTeachableLearnset"
+    }
+  ]
+}

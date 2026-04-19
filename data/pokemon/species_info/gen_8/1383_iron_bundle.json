@@ -1,0 +1,244 @@
+{
+  "species_constant": "SPECIES_IRON_BUNDLE",
+  "family_constant": "P_FAMILY_IRON_BUNDLE",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "56"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "114"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "136"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "124"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_ICE, TYPE_WATER)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "285"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Speed",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_BOOSTER_ENERGY"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_GENDERLESS"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_QUARK_DRIVE, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_RED"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Iron Bundle\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_IRON_BUNDLE"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_IRON_BUNDLE"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Paradox\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "110"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Its shape is similar to a robot\\n\"\n\"featured in a paranormal magazine\\n\"\n\"article. The robot was said to have been\\n\"\n\"created by an ancient civilization.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "356"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "17"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_IronBundle"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "8"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_IronBundle"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_IronBundle"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_IronBundle"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_IronBundle"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_SLOW"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-1, 6, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "IronBundle",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_IronBundle,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_IronBundle,\ngShinyOverworldPalette_IronBundle",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isParadox",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sIronBundleLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sIronBundleTeachableLearnset"
+    }
+  ]
+}

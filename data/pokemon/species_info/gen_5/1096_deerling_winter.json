@@ -1,0 +1,259 @@
+{
+  "species_constant": "SPECIES_DEERLING_WINTER",
+  "family_constant": "P_FAMILY_DEERLING",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_NORMAL, TYPE_GRASS)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "190"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "67"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Speed",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_CHLOROPHYLL, ABILITY_SAP_SIPPER, ABILITY_SERENE_GRACE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BROWN"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Deerling\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_DEERLING"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_DEERLING"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Season\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "195"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Deerling's scent changes with the\\n\"\n\"seasons, but when the Pok\u00e9mon is in\\n\"\n\"its Winter Form, it has hardly any\\n\"\n\"scent at all.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "422"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "14"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Deerling"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(32, 48)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "11"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_Deerling"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_V_SQUISH_AND_BOUNCE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Deerling"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(48, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "9"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_H_SLIDE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_DeerlingWinter"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_DeerlingWinter"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_DeerlingWinter"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_FAST"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "1, 2, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Deerling",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_DeerlingWinter,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_DeerlingWinter,\ngShinyOverworldPalette_DeerlingWinter",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sDeerlingLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sDeerlingTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sDeerlingEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sDeerlingFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 34, SPECIES_SAWSBUCK_WINTER})"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "identifier": "TRAINER_LASS_JANICE_2",
+  "trainer_name": "JANICE",
+  "trainer_class": "TRAINER_CLASS_LASS",
+  "trainer_pic": "TRAINER_PIC_LASS",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_FEMALE",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_PIDGEOTTO",
+      "level": 20,
+      "moves": [],
+      "ivs": {
+        "hp": 2,
+        "atk": 2,
+        "def": 2,
+        "spa": 2,
+        "spd": 2,
+        "spe": 2
+      }
+    },
+    {
+      "species": "SPECIES_PIDGEOTTO",
+      "level": 20,
+      "moves": [],
+      "ivs": {
+        "hp": 2,
+        "atk": 2,
+        "def": 2,
+        "spa": 2,
+        "spd": 2,
+        "spe": 2
+      }
+    }
+  ]
+}

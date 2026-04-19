@@ -1,0 +1,274 @@
+{
+  "species_constant": "SPECIES_ZYGARDE_50_POWER_CONSTRUCT",
+  "family_constant": "P_FAMILY_ZYGARDE",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "108"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "121"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "81"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_DRAGON, TYPE_GROUND)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270"
+    },
+    {
+      "type": "field",
+      "name": "evYield_HP",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_GENDERLESS"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_POWER_CONSTRUCT, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_GREEN"
+    },
+    {
+      "type": "field",
+      "name": "noFlip",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Zygarde\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_ZYGARDE_50"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_ZYGARDE"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Order\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "3050"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "gZygarde50PokedexText"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "721"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "19"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Zygarde50"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_Zygarde50"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_TIP_MOVE_FORWARD"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Zygarde50"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_SHAKE_GLOW_GREEN"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Zygarde50"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Zygarde50"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Zygarde50"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 13, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Zygarde",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Zygarde50,\nSIZE_64x64,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Zygarde50,\ngShinyOverworldPalette_Zygarde50",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isRestrictedLegendary",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "isFrontierBanned",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "perfectIVCount",
+      "value": "LEGENDARY_PERFECT_IV_COUNT"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sZygardeLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sZygardeTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sZygardeFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sZygarde50PowerConstructFormChangeTable"
+    }
+  ]
+}

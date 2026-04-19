@@ -1,0 +1,244 @@
+{
+  "species_constant": "SPECIES_GROOKEY",
+  "family_constant": "P_FAMILY_GROOKEY",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "65"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "65"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_GRASS)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "62"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(12.5)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_GRASS)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_OVERGROW, ABILITY_NONE, ABILITY_GRASSY_SURGE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_GREEN"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Grookey\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_GROOKEY"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_GROOKEY"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Chimp\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"When it uses its special stick to strike up\\n\"\n\"a beat, the sound waves produced carry\\n\"\n\"revitalizing energy to the plants and\\n\"\n\"flowers in the area.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "530"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "13"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Grookey"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(40, 48)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "12"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Grookey"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(48, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "8"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Grookey"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Grookey"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Grookey"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NORMAL"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "1, 1, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Grookey",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Grookey,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Grookey,\ngShinyOverworldPalette_Grookey",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sGrookeyLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sGrookeyTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sGrookeyEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 16, SPECIES_THWACKEY})"
+    }
+  ]
+}

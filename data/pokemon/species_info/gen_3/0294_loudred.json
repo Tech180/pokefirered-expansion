@@ -1,0 +1,249 @@
+{
+  "species_constant": "SPECIES_LOUDRED",
+  "family_constant": "P_FAMILY_WHISMUR",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "84"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "71"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "43"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "48"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "71"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "43"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_NORMAL)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "126"
+    },
+    {
+      "type": "field",
+      "name": "evYield_HP",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_FIELD)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_SOUNDPROOF, ABILITY_NONE, ABILITY_SCRAPPY }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Loudred\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_LOUDRED"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_LOUDRED"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Big Voice\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "10"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "405"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It positions the round speakers on its\\n\"\n\"head to assail foes with ultrasonic waves\\n\"\n\"at massive volume. It builds power by\\n\"\n\"stomping the ground.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "356"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "10"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Loudred"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(56, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 9),\nANIMCMD_FRAME(1, 9),\nANIMCMD_FRAME(0, 9),\nANIMCMD_FRAME(1, 9),\nANIMCMD_FRAME(0, 33),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? ANIM_BOUNCE_ROTATE_TO_SIDES_SLOW : ANIM_SHRINK_GROW"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Loudred"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(64, 48) : MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 9 : 8"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_V_SHAKE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Loudred"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Loudred"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Loudred"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "1, 9, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Loudred",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Loudred,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Loudred,\ngShinyOverworldPalette_Loudred",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sLoudredLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sLoudredTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 40, SPECIES_EXPLOUD})"
+    }
+  ]
+}

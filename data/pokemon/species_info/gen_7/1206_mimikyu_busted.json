@@ -1,0 +1,253 @@
+{
+  "species_constant": "SPECIES_MIMIKYU_BUSTED",
+  "family_constant": "P_FAMILY_MIMIKYU",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "55"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "96"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "105"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_GHOST, TYPE_FAIRY)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "167"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpDefense",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_CHESTO_BERRY"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_DISGUISE, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_YELLOW"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Mimikyu\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_MIMIKYU"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_MIMIKYU"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Disguise\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "7"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "gMimikyuBustedPokedexText"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "682"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "24"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_MimikyuBusted"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(48, 40)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "12"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_DEEP_V_SQUISH_AND_BOUNCE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_MimikyuBusted"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 40)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "7"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_MimikyuBusted"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_MimikyuBusted"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_MimikyuBusted"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NORMAL"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-3, 1, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Mimikyu",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sMimikyuLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sMimikyuTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sMimikyuEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sMimikyuFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sMimikyuFormChangeTable"
+    }
+  ]
+}

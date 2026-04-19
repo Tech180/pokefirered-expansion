@@ -1,0 +1,28 @@
+{
+  "identifier": "TRAINER_GRETA",
+  "trainer_name": "GRETA",
+  "trainer_class": "TRAINER_CLASS_ARENA_TYCOON",
+  "trainer_pic": "TRAINER_PIC_ARENA_TYCOON_GRETA",
+  "gender": "TRAINER_GENDER_FEMALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_MALE",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_BASIC_TRAINER"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_BELDUM",
+      "level": 5,
+      "moves": [],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    }
+  ]
+}

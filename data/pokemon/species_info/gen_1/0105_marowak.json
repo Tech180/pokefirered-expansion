@@ -1,0 +1,259 @@
+{
+  "species_constant": "SPECIES_MAROWAK",
+  "family_constant": "P_FAMILY_CUBONE",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "110"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "P_UPDATED_STATS >= GEN_2 ? 80 : 50"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_GROUND)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_5) ? 149 : 124"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_THICK_CLUB"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_MONSTER)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_ROCK_HEAD, ABILITY_LIGHTNING_ROD, ABILITY_BATTLE_ARMOR }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BROWN"
+    },
+    {
+      "type": "field",
+      "name": "noFlip",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Marowak\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_MAROWAK"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_MAROWAK"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Bone Keeper\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "10"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "450"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"A Marowak is the evolved form of a Cubone\\n\"\n\"that has grown tough by overcoming the\\n\"\n\"grief of losing its mother. Its tempered\\n\"\n\"and hardened spirit is not easily broken.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "293"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "12"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Marowak"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(56, 48) : MON_COORDS_SIZE(56, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 11 : 8"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 14),\nANIMCMD_FRAME(0, 14),\nANIMCMD_FRAME(1, 14),\nANIMCMD_FRAME(0, 14),\nANIMCMD_FRAME(1, 14),\nANIMCMD_FRAME(0, 14),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_BOUNCE_ROTATE_TO_SIDES"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Marowak"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(48, 48) : MON_COORDS_SIZE(48, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "8"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_CONCAVE_ARC_LARGE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Marowak"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Marowak"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Marowak"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "P_GBA_STYLE_SPECIES_ICONS ? 1 : 2"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "6, 6, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Marowak",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Marowak,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Marowak,\ngShinyOverworldPalette_Marowak",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sMarowakLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sMarowakTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sMarowakFormSpeciesIdTable"
+    }
+  ]
+}

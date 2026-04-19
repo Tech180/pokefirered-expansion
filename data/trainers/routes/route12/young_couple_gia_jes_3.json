@@ -1,0 +1,41 @@
+{
+  "identifier": "TRAINER_YOUNG_COUPLE_GIA_JES_3",
+  "trainer_name": "GIA & JES",
+  "trainer_class": "TRAINER_CLASS_YOUNG_COUPLE",
+  "trainer_pic": "TRAINER_PIC_YOUNG_COUPLE",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_GIRL",
+  "battle_type": "TRAINER_BATTLE_TYPE_DOUBLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_NIDOKING",
+      "level": 55,
+      "moves": [],
+      "ivs": {
+        "hp": 14,
+        "atk": 14,
+        "def": 14,
+        "spa": 14,
+        "spd": 14,
+        "spe": 14
+      }
+    },
+    {
+      "species": "SPECIES_NIDOQUEEN",
+      "level": 55,
+      "moves": [],
+      "ivs": {
+        "hp": 14,
+        "atk": 14,
+        "def": 14,
+        "spa": 14,
+        "spd": 14,
+        "spe": 14
+      }
+    }
+  ]
+}

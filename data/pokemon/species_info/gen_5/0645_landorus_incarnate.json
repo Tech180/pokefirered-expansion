@@ -1,0 +1,269 @@
+{
+  "species_constant": "SPECIES_LANDORUS_INCARNATE",
+  "family_constant": "P_FAMILY_LANDORUS",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "89"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "125"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "101"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "115"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_GROUND, TYPE_FLYING)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpAttack",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_MALE"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_SAND_FORCE, ABILITY_NONE, ABILITY_SHEER_FORCE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BROWN"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Landorus\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_LANDORUS_INCARNATE"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_LANDORUS"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Abundance\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "680"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"The energy that comes pouring from its\\n\"\n\"tail increases the nutrition in the soil,\\n\"\n\"granting bountiful crops. It has been\\n\"\n\"hailed as \u201cThe Guardian of the Fields.\u201d\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "268"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "271"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_LandorusIncarnate"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 2),\nANIMCMD_FRAME(0, 2),\nANIMCMD_FRAME(1, 2),\nANIMCMD_FRAME(0, 2),\nANIMCMD_FRAME(1, 2),\nANIMCMD_FRAME(0, 2),\nANIMCMD_FRAME(1, 2),\nANIMCMD_FRAME(0, 2),\nANIMCMD_FRAME(1, 2),\nANIMCMD_FRAME(0, 20),\nANIMCMD_FRAME(1, 2),\nANIMCMD_FRAME(0, 2),\nANIMCMD_FRAME(1, 2),\nANIMCMD_FRAME(0, 2),\nANIMCMD_FRAME(1, 2),\nANIMCMD_FRAME(0, 2),\nANIMCMD_FRAME(1, 2),\nANIMCMD_FRAME(0, 2),\nANIMCMD_FRAME(1, 2),\nANIMCMD_FRAME(0, 2),\nANIMCMD_FRAME(1, 2),\nANIMCMD_FRAME(0, 2),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_FIGURE_8"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "7"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_LandorusIncarnate"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_V_SHAKE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_LandorusIncarnate"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_LandorusIncarnate"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_LandorusIncarnate"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "2, 17, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Landorus",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_LandorusIncarnate,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_LandorusIncarnate,\ngShinyOverworldPalette_LandorusIncarnate",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isSubLegendary",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "perfectIVCount",
+      "value": "LEGENDARY_PERFECT_IV_COUNT"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sLandorusLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sLandorusTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sLandorusFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sLandorusFormChangeTable"
+    }
+  ]
+}

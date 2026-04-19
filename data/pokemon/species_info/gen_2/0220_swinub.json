@@ -1,0 +1,271 @@
+{
+  "species_constant": "SPECIES_SWINUB",
+  "family_constant": "P_FAMILY_SWINUB",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_ICE, TYPE_GROUND)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "225"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_5) ? 50 : 78"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD)"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_ABILITIES >= GEN_4"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_OBLIVIOUS, ABILITY_SNOW_CLOAK, ABILITY_THICK_FAT }"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_OBLIVIOUS, ABILITY_NONE, ABILITY_THICK_FAT }"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BROWN"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Swinub\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_SWINUB"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_SWINUB"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Pig\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "65"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It roots for food by rubbing its snout\\n\"\n\"against the ground. Its favorite food is a\\n\"\n\"mushroom that grows under dried grass.\\n\"\n\"It occasionally roots out hot springs.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "324"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Swinub"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(32, 24) : MON_COORDS_SIZE(40, 32)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 20 : 18"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 10),\nANIMCMD_FRAME(0, 10),\nANIMCMD_FRAME(1, 10),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_V_SQUISH_AND_BOUNCE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Swinub"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(48, 24) : MON_COORDS_SIZE(56, 40)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 21 : 15"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_V_SHAKE_H_SLIDE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Swinub"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Swinub"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Swinub"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NORMAL"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-3, -6, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Swinub",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Swinub,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Swinub,\ngShinyOverworldPalette_Swinub",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sSwinubLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sSwinubTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sSwinubEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 33, SPECIES_PILOSWINE})"
+    }
+  ]
+}

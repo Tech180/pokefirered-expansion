@@ -1,0 +1,285 @@
+{
+  "species_constant": "SPECIES_REGISTEEL",
+  "family_constant": "P_FAMILY_REGISTEEL",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "150"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "150"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_STEEL)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "3"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_EXP_YIELDS >= GEN_8"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "290"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#elif P_UPDATED_EXP_YIELDS >= GEN_5"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "261"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "215"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpDefense",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_GENDERLESS"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "35"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_CLEAR_BODY, ABILITY_NONE, ABILITY_LIGHT_METAL }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_GRAY"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Registeel\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_REGISTEEL"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_REGISTEEL"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Iron\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "19"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "2050"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Its body is harder than any other kind of\\n\"\n\"metal. The body metal is composed of a\\n\"\n\"mysterious substance. Not only is it hard,\\n\"\n\"it shrinks and stretches flexibly.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "359"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Registeel"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(64, 64) : MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 3 : 5"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 10),\nANIMCMD_FRAME(1, 10),\nANIMCMD_FRAME(0, 10),\nANIMCMD_FRAME(1, 10),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_GROW_VIBRATE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Registeel"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(64, 40) : MON_COORDS_SIZE(64, 48)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 14 : 11"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_V_SHAKE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Registeel"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Registeel"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Registeel"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "4, 8, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Registeel",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Registeel,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Registeel,\ngShinyOverworldPalette_Registeel",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isSubLegendary",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "perfectIVCount",
+      "value": "LEGENDARY_PERFECT_IV_COUNT"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sRegisteelLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sRegisteelTeachableLearnset"
+    }
+  ]
+}

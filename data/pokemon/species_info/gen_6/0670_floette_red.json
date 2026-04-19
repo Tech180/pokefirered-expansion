@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_FLOETTE_RED",
+  "family_constant": "P_FAMILY_FLABEBE",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "FLOETTE_NORMAL_INFO",
+      "args": "Red, RED, 1",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"This Pok\u00e9mon uses red wavelengths\\n\"\n\"of light to pour its own energy\\n\"\n\"into flowers and draw forth their\\n\"\n\"latent potential.\")"
+    }
+  ]
+}

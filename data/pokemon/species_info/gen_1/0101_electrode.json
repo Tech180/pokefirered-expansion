@@ -1,0 +1,280 @@
+{
+  "species_constant": "SPECIES_ELECTRODE",
+  "family_constant": "P_FAMILY_VOLTORB",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "P_UPDATED_STATS >= GEN_7 ? 150 : 140"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_ELECTRIC)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "60"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_EXP_YIELDS >= GEN_7"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "172"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#elif P_UPDATED_EXP_YIELDS >= GEN_5"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "168"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "150"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Speed",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_GENDERLESS"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_MINERAL)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_SOUNDPROOF, ABILITY_STATIC, ABILITY_AFTERMATH }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_RED"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Electrode\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_ELECTRODE"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_ELECTRODE"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Ball\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "12"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "666"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"They appear in great numbers at electric\\n\"\n\"power plants. Because they feed on\\n\"\n\"electricity, they cause massive and\\n\"\n\"chaotic blackouts in nearby cities.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Electrode"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(40, 40) : MON_COORDS_SIZE(48, 48)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 14 : 11"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 14),\nANIMCMD_FRAME(1, 34),\nANIMCMD_FRAME(1, 34),\nANIMCMD_FRAME(0, 1),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? ANIM_V_SQUISH_AND_BOUNCE : ANIM_SHRINK_GROW_VIBRATE_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 12 : 0"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Electrode"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(48, 40) : MON_COORDS_SIZE(64, 40)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "13"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_JOLT_RIGHT"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Electrode"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Electrode"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Electrode"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "1, 2, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Electrode",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Electrode,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_SPOT,\nsAnimTable_Following,\ngOverworldPalette_Electrode,\ngShinyOverworldPalette_Electrode",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sElectrodeLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sElectrodeTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sElectrodeFormSpeciesIdTable"
+    }
+  ]
+}

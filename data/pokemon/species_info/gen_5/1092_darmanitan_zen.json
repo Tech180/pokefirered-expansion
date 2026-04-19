@@ -1,0 +1,248 @@
+{
+  "species_constant": "SPECIES_DARMANITAN_ZEN",
+  "family_constant": "P_FAMILY_DARUMAKA",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "105"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "105"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "55"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "140"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "105"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_FIRE, TYPE_PSYCHIC)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "189"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpAttack",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_SHEER_FORCE, ABILITY_NONE, ABILITY_ZEN_MODE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Darmanitan\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_DARMANITAN"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_DARMANITAN"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Blazing\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "13"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "929"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"When wounded, it stops moving. It\\n\"\n\"goes as still as stone to meditate,\\n\"\n\"sharpening its mind and spirit.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "272"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_DarmanitanZen"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(40, 40)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "14"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 15),\nANIMCMD_FRAME(0, 20),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_GROW_VIBRATE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_DarmanitanZen"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(56, 48)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "11"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_H_SHAKE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_DarmanitanZen"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_DarmanitanZen"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_DarmanitanZen"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-1, -1, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Darmanitan",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sDarmanitanLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sDarmanitanTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sDarmanitanFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sDarmanitanFormChangeTable"
+    }
+  ]
+}

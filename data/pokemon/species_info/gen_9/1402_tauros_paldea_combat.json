@@ -1,0 +1,254 @@
+{
+  "species_constant": "SPECIES_TAUROS_PALDEA_COMBAT",
+  "family_constant": "P_FAMILY_TAUROS",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "110"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "105"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_FIGHTING)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "172"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_MALE"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_INTIMIDATE, ABILITY_ANGER_POINT, ABILITY_CUD_CHEW }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLACK"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Tauros\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_TAUROS"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_TAUROS"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Wild Bull\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "14"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "1150"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"This Pok\u00e9mon has a muscular body\\n\"\n\"and excels at close-quarters combat.\\n\"\n\"It uses its short horns to strike\\n\"\n\"the opponent\u2019s weak spots.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_TaurosPaldeaCombat"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "5"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_TaurosPaldeaCombat"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 48)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "9"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_V_SHAKE_LOW"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_TaurosPaldeaCombat"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_TaurosPaldeaCombat"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_TaurosPaldeaCombat"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "1, 7, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Tauros",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_TaurosPaldeaCombat,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_TaurosPaldeaCombat,\ngShinyOverworldPalette_TaurosPaldeaCombat",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isPaldeanForm",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sTaurosPaldeaCombatLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sTaurosPaldeaCombatTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sTaurosPaldeaCombatEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sTaurosFormSpeciesIdTable"
+    }
+  ]
+}

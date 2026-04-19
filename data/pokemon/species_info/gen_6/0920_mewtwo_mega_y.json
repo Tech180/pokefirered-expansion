@@ -1,0 +1,299 @@
+{
+  "species_constant": "SPECIES_MEWTWO_MEGA_Y",
+  "family_constant": "P_FAMILY_MEWTWO",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "106"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "150"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "140"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "194"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_PSYCHIC)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_8) ? 390 : 351"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpAttack",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_GENDERLESS"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_INSOMNIA, ABILITY_INSOMNIA, ABILITY_INSOMNIA }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_PURPLE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Mewtwo\")"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_MODIFIED_MEGA_CRIES"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_MEWTWO_MEGA_Y"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_MEWTWO"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif // P_MODIFIED_MEGA_CRIES"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_MEWTWO"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Genetic\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "330"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Despite its diminished size, its mental\\n\"\n\"power has grown phenomenally. With a mere\\n\"\n\"thought, it can smash a skyscraper to\\n\"\n\"smithereens.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "309"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_MewtwoMegaY"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(40, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_MewtwoMegaY"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_GROW_STUTTER"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_MewtwoMegaY"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_MewtwoMegaY"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_MewtwoMegaY"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 14, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Mewtwo",
+      "has_comma": false
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if OW_BATTLE_ONLY_FORMS"
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_MewtwoMegaY,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_MewtwoMegaY,\ngShinyOverworldPalette_MewtwoMegaY",
+      "has_comma": false
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif //OW_BATTLE_ONLY_FORMS"
+    },
+    {
+      "type": "field",
+      "name": "isRestrictedLegendary",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "isMegaEvolution",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "isFrontierBanned",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "perfectIVCount",
+      "value": "LEGENDARY_PERFECT_IV_COUNT"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sMewtwoLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sMewtwoTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sMewtwoFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sMewtwoFormChangeTable"
+    }
+  ]
+}

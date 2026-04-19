@@ -1,0 +1,249 @@
+{
+  "species_constant": "SPECIES_ZOROARK_HISUI",
+  "family_constant": "P_FAMILY_ZORUA",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "55"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "110"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "125"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_NORMAL, TYPE_GHOST)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "179"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpAttack",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(12.5)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_ILLUSION, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_GRAY"
+    },
+    {
+      "type": "field",
+      "name": "noFlip",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Zoroark\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_ZOROARK"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_ZOROARK"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Baneful Fox\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "16"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "730"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Heedless of its own safety,\\n\"\n\"Zoroark attacks its nemeses with a bitter\\n\"\n\"energy so intense, it lacerates\\n\"\n\"Zoroark's own body.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "259"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "296"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_ZoroarkHisui"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_ZoroarkHisui"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_ZoroarkHisui"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_ZoroarkHisui"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_ZoroarkHisui"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "11, 13, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Zoroark",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_ZoroarkHisui,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_ZoroarkHisui,\ngShinyOverworldPalette_ZoroarkHisui",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isHisuianForm",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sZoroarkHisuiLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sZoroarkHisuiTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sZoroarkFormSpeciesIdTable"
+    }
+  ]
+}

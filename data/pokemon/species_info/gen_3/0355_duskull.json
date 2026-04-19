@@ -1,0 +1,286 @@
+{
+  "species_constant": "SPECIES_DUSKULL",
+  "family_constant": "P_FAMILY_DUSKULL",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "25"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_GHOST)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "190"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_5) ? 59 : 97"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "(P_UPDATED_EVS >= GEN_4) ? 0 : 1"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpDefense",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_SPELL_TAG"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "25"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "35"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS)"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_ABILITIES >= GEN_6"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_LEVITATE, ABILITY_NONE, ABILITY_FRISK }"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLACK"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Duskull\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_DUSKULL"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_DUSKULL"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Requiem\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "8"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "150"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"A glare from its single scarlet eye makes\\n\"\n\"even burly grown-ups freeze in utter fear.\\n\"\n\"It is a nocturnal Pok\u00e9mon that roams\\n\"\n\"about under the cloak of darkness.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "406"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "-4"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Duskull"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(48, 48) : MON_COORDS_SIZE(40, 48)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 10 : 12"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 15),\nANIMCMD_FRAME(1, 15),\nANIMCMD_FRAME(0, 15),\nANIMCMD_FRAME(1, 15),\nANIMCMD_FRAME(0, 15),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_ZIGZAG_FAST"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 9 : 13"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Duskull"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(48, 48) : MON_COORDS_SIZE(56, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 11 : 8"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_H_VIBRATE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Duskull"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Duskull"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Duskull"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 12, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Duskull",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Duskull,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_NONE,\nsAnimTable_Following,\ngOverworldPalette_Duskull,\ngShinyOverworldPalette_Duskull",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sDuskullLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sDuskullTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sDuskullEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 37, SPECIES_DUSCLOPS})"
+    }
+  ]
+}

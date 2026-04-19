@@ -1,0 +1,283 @@
+{
+  "species_constant": "SPECIES_LUXIO",
+  "family_constant": "P_FAMILY_SHINX",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "85"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "49"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "49"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_ELECTRIC)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_5) ? 127 : 117"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_RIVALRY, ABILITY_INTIMIDATE, ABILITY_GUTS }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Luxio\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_LUXIO"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_LUXIO"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Spark\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "9"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "305"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Strong electricity courses through the\\n\"\n\"tips of its sharp claws. A light scratch\\n\"\n\"has enough amperage to cause fainting\\n\"\n\"in foes.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "338"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "10"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Luxio"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(48, 48)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "10"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 40),\nANIMCMD_FRAME(0, 20),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_H_STRETCH"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Luxio"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_JOLT_RIGHT"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Luxio"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Luxio"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Luxio"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_GENDER_DIFFERENCES"
+    },
+    {
+      "type": "field",
+      "name": "frontPicFemale",
+      "value": "gMonFrontPic_LuxioF"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSizeFemale",
+      "value": "MON_COORDS_SIZE(48, 48)"
+    },
+    {
+      "type": "field",
+      "name": "backPicFemale",
+      "value": "gMonBackPic_LuxioF"
+    },
+    {
+      "type": "field",
+      "name": "backPicSizeFemale",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif //P_GENDER_DIFFERENCES"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-4, 2, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Luxio",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Luxio,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Luxio,\ngShinyOverworldPalette_Luxio",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD_FEMALE",
+      "args": "sPicTable_LuxioF,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sLuxioLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sLuxioTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 30, SPECIES_LUXRAY})"
+    }
+  ]
+}

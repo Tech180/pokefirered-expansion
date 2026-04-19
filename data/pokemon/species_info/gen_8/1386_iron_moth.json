@@ -1,0 +1,249 @@
+{
+  "species_constant": "SPECIES_IRON_MOTH",
+  "family_constant": "P_FAMILY_IRON_MOTH",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "110"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "140"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "110"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_FIRE, TYPE_POISON)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "285"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpAttack",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_BOOSTER_ENERGY"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_GENDERLESS"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_QUARK_DRIVE, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_WHITE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Iron Moth\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_IRON_MOTH"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_IRON_MOTH"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Paradox\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "12"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "360"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"No records exist of this species\\n\"\n\"being caught. Data is lacking, but\\n\"\n\"the Pok\u00e9mon's traits match up with an\\n\"\n\"object described in an old book.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "356"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "17"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_IronMoth"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "5"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "8"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_IronMoth"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_IronMoth"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_IronMoth"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_IronMoth"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-4, 14, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "IronMoth",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_IronMoth,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_IronMoth,\ngShinyOverworldPalette_IronMoth",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isParadox",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sIronMothLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sIronMothTeachableLearnset"
+    }
+  ]
+}

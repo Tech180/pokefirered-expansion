@@ -1,0 +1,250 @@
+{
+  "species_constant": "SPECIES_CLEFABLE_MEGA",
+  "family_constant": "P_FAMILY_CLEFAIRY",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "93"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "135"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "110"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_FAIRY, TYPE_FLYING)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "25"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "242"
+    },
+    {
+      "type": "field",
+      "name": "evYield_HP",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_MOON_STONE"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(75)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "10"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "140"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FAIRY)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_MAGIC_BOUNCE, ABILITY_MAGIC_BOUNCE, ABILITY_MAGIC_BOUNCE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_PINK"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Clefable\")"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_MODIFIED_MEGA_CRIES"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_CLEFABLE_MEGA"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_CLEFABLE"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif // P_MODIFIED_MEGA_CRIES"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_CLEFABLE"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Fairy\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "17"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "423"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It flies by using the power of\\n\"\n\"moonlight to control gravity within\\n\"\n\"a radius of over 32 feet around it.\")"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_ClefableMega"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "8"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_ClefableMega"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_ClefableMega"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_ClefableMega"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_ClefableMega"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Clefable",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "5, 20, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isMegaEvolution",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sClefableLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sClefableTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sClefableFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sClefableFormChangeTable"
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "species_constant": "SPECIES_LAPRAS",
+  "family_constant": "P_FAMILY_LAPRAS",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "130"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "85"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "P_UPDATED_STATS >= GEN_2 ? 85 : 95"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_WATER, TYPE_ICE)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_5) ? 187 : 219"
+    },
+    {
+      "type": "field",
+      "name": "evYield_HP",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "itemCommon",
+      "value": "ITEM_MYSTIC_WATER"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_MYSTIC_WATER"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_WATER_1)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_WATER_ABSORB, ABILITY_SHELL_ARMOR, ABILITY_HYDRATION }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Lapras\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_LAPRAS"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_LAPRAS"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Transport\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "25"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "2200"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"People have driven Lapras almost to the\\n\"\n\"point of extinction. In the evenings,\\n\"\n\"it is said to sing plaintively as it seeks\\n\"\n\"what few others of its kind still remain.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "257"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "10"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "423"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "8"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Lapras"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(64, 40) : MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 13 : 2"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 30),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_V_STRETCH"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Lapras"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(56, 56) : MON_COORDS_SIZE(56, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 4 : 3"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_SHAKE_GLOW_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Lapras"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Lapras"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Lapras"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "2, 8, SHADOW_SIZE_XL_BATTLE_ONLY",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Lapras",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Lapras,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_SLITHER,\nsAnimTable_Following,\ngOverworldPalette_Lapras,\ngShinyOverworldPalette_Lapras",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sLaprasLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sLaprasTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sLaprasEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sLaprasFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sLaprasFormChangeTable"
+    }
+  ]
+}

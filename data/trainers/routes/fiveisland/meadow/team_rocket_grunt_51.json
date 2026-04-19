@@ -1,0 +1,54 @@
+{
+  "identifier": "TRAINER_TEAM_ROCKET_GRUNT_51",
+  "trainer_name": "GRUNT",
+  "trainer_class": "TRAINER_CLASS_TEAM_ROCKET",
+  "trainer_pic": "TRAINER_PIC_ROCKET_GRUNT_F",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_AQUA",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_EKANS",
+      "level": 48,
+      "moves": [],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      }
+    },
+    {
+      "species": "SPECIES_GLOOM",
+      "level": 48,
+      "moves": [],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      }
+    },
+    {
+      "species": "SPECIES_GLOOM",
+      "level": 48,
+      "moves": [],
+      "ivs": {
+        "hp": 6,
+        "atk": 6,
+        "def": 6,
+        "spa": 6,
+        "spd": 6,
+        "spe": 6
+      }
+    }
+  ]
+}

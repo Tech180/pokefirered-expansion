@@ -1,0 +1,288 @@
+{
+  "species_constant": "SPECIES_WEAVILE",
+  "family_constant": "P_FAMILY_SNEASEL",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "65"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "125"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "85"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_DARK, TYPE_ICE)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_5) ? 179 : 199"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Speed",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_QUICK_CLAW"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "35"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_PRESSURE, ABILITY_NONE, ABILITY_PICKPOCKET }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLACK"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Weavile\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_WEAVILE"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_WEAVILE"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Sharp Claw\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "11"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "340"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"They travel in groups of four or five,\\n\"\n\"leaving signs for one another on trees\\n\"\n\"and rocks. They bring down their prey\\n\"\n\"with coordinated attacks.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "320"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "7"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Weavile"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(56, 56)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 15),\nANIMCMD_FRAME(0, 15),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_H_VIBRATE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Weavile"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_JOLT_RIGHT"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Weavile"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Weavile"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Weavile"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_GENDER_DIFFERENCES"
+    },
+    {
+      "type": "field",
+      "name": "frontPicFemale",
+      "value": "gMonFrontPic_WeavileF"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSizeFemale",
+      "value": "MON_COORDS_SIZE(56, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicFemale",
+      "value": "gMonBackPic_WeavileF"
+    },
+    {
+      "type": "field",
+      "name": "backPicSizeFemale",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif //P_GENDER_DIFFERENCES"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-4, 10, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Weavile",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Weavile,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Weavile,\ngShinyOverworldPalette_Weavile",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD_FEMALE",
+      "args": "sPicTable_WeavileF,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sWeavileLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sWeavileTeachableLearnset"
+    }
+  ]
+}

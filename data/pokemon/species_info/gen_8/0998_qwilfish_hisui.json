@@ -1,0 +1,269 @@
+{
+  "species_constant": "SPECIES_QWILFISH_HISUI",
+  "family_constant": "P_FAMILY_QWILFISH",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "65"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "85"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "85"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "55"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "55"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_DARK, TYPE_POISON)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "88"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_POISON_BARB"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_WATER_2)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_POISON_POINT, ABILITY_SWIFT_SWIM, ABILITY_INTIMIDATE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLACK"
+    },
+    {
+      "type": "field",
+      "name": "noFlip",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Qwilfish\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_QWILFISH"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_QWILFISH"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Balloon\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "5"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "39"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"A form of Qwilfish from the distant past.\\n\"\n\"Fishers detest this troublesome Pok\u00e9mon\\n\"\n\"because it sprays poison from its spines,\\n\"\n\"getting it everywhere.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "430"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_QwilfishHisui"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(48, 40)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "16"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "9"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_QwilfishHisui"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(56, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "8"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_QwilfishHisui"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_QwilfishHisui"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_QwilfishHisui"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-5, 4, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Qwilfish",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_QwilfishHisui,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_QwilfishHisui,\ngShinyOverworldPalette_QwilfishHisui",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isHisuianForm",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sQwilfishHisuiLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sQwilfishHisuiTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sQwilfishHisuiEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sQwilfishFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 0, SPECIES_OVERQWIL, CONDITIONS({IF_KNOWS_MOVE, MOVE_BARB_BARRAGE})})"
+    }
+  ]
+}

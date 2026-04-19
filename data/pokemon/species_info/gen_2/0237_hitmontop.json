@@ -1,0 +1,261 @@
+{
+  "species_constant": "SPECIES_HITMONTOP",
+  "family_constant": "P_FAMILY_HITMONS",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "35"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "110"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_FIGHTING)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_5) ? 159 : 138"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpDefense",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_MALE"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "25"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE)"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_ABILITIES >= GEN_4"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_INTIMIDATE, ABILITY_TECHNICIAN, ABILITY_STEADFAST }"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_INTIMIDATE, ABILITY_NONE, ABILITY_STEADFAST }"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BROWN"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Hitmontop\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_HITMONTOP"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_HITMONTOP"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Handstand\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "14"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "480"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Its technique of kicking while spinning is\\n\"\n\"a remarkable mix of both offense and\\n\"\n\"defense. Hitmontop travel faster\\n\"\n\"spinning than they do walking.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "257"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Hitmontop"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(48, 56) : MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 5 : 7"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 12),\nANIMCMD_FRAME(1, 26),\nANIMCMD_FRAME(0, 14),\nANIMCMD_FRAME(1, 32),\nANIMCMD_FRAME(0, 1),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? ANIM_H_VIBRATE : ANIM_SWING_CONCAVE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Hitmontop"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 5 : 6"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_CIRCLE_COUNTERCLOCKWISE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Hitmontop"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Hitmontop"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Hitmontop"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "1, 7, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Hitmontop",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Hitmontop,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Hitmontop,\ngShinyOverworldPalette_Hitmontop",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sHitmontopLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sHitmontopTeachableLearnset"
+    }
+  ]
+}

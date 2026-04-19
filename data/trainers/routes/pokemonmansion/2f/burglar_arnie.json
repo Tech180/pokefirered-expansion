@@ -1,0 +1,41 @@
+{
+  "identifier": "TRAINER_BURGLAR_ARNIE",
+  "trainer_name": "ARNIE",
+  "trainer_class": "TRAINER_CLASS_BURGLAR",
+  "trainer_pic": "TRAINER_PIC_BURGLAR",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_CHARMANDER",
+      "level": 34,
+      "moves": [],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "species": "SPECIES_CHARMELEON",
+      "level": 34,
+      "moves": [],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "species_constant": "SPECIES_ROLYCOLY",
+  "family_constant": "P_FAMILY_ROLYCOLY",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_ROCK)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "255"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "48"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_MINERAL)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_STEAM_ENGINE, ABILITY_HEATPROOF, ABILITY_FLASH_FIRE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLACK"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Rolycoly\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_ROLYCOLY"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_ROLYCOLY"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Coal\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Most of its body has the same composition\\n\"\n\"as coal. Fittingly, this Pok\u00e9mon was\\n\"\n\"first discovered in coal mines about\\n\"\n\"400 years ago.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "530"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "13"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Rolycoly"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(40, 40)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "16"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_TwoFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_H_SLIDE_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Rolycoly"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 32)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "17"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Rolycoly"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Rolycoly"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Rolycoly"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_FAST"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, -3, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Rolycoly",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Rolycoly,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Rolycoly,\ngShinyOverworldPalette_Rolycoly",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sRolycolyLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sRolycolyTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sRolycolyEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 18, SPECIES_CARKOL})"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "identifier": "TRAINER_CHAMPION_FIRST_BULBASAUR",
+  "trainer_name": "TERRY",
+  "trainer_class": "TRAINER_CLASS_CHAMPION",
+  "trainer_pic": "TRAINER_PIC_CHAMPION_RIVAL",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_MALE",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [
+    "ITEM_FULL_RESTORE"
+  ],
+  "party": [
+    {
+      "species": "SPECIES_PIDGEOT",
+      "level": 59,
+      "moves": [
+        "MOVE_AERIAL_ACE",
+        "MOVE_FEATHER_DANCE",
+        "MOVE_SAND_ATTACK",
+        "MOVE_WHIRLWIND"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "SPECIES_ALAKAZAM",
+      "level": 57,
+      "moves": [
+        "MOVE_PSYCHIC",
+        "MOVE_FUTURE_SIGHT",
+        "MOVE_RECOVER",
+        "MOVE_REFLECT"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "SPECIES_RHYDON",
+      "level": 59,
+      "moves": [
+        "MOVE_TAKE_DOWN",
+        "MOVE_EARTHQUAKE",
+        "MOVE_ROCK_TOMB",
+        "MOVE_SCARY_FACE"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "SPECIES_GYARADOS",
+      "level": 59,
+      "moves": [
+        "MOVE_HYDRO_PUMP",
+        "MOVE_DRAGON_RAGE",
+        "MOVE_BITE",
+        "MOVE_THRASH"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "SPECIES_ARCANINE",
+      "level": 61,
+      "moves": [
+        "MOVE_EXTREME_SPEED",
+        "MOVE_FLAMETHROWER",
+        "MOVE_ROAR",
+        "MOVE_BITE"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "SPECIES_VENUSAUR",
+      "level": 63,
+      "moves": [
+        "MOVE_SOLAR_BEAM",
+        "MOVE_SYNTHESIS",
+        "MOVE_SUNNY_DAY",
+        "MOVE_GROWTH"
+      ],
+      "held_item": "ITEM_SITRUS_BERRY",
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    }
+  ]
+}

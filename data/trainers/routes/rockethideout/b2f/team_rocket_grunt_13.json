@@ -1,0 +1,104 @@
+{
+  "identifier": "TRAINER_TEAM_ROCKET_GRUNT_13",
+  "trainer_name": "GRUNT",
+  "trainer_class": "TRAINER_CLASS_TEAM_ROCKET",
+  "trainer_pic": "TRAINER_PIC_ROCKET_GRUNT_M",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_AQUA",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_ZUBAT",
+      "level": 17,
+      "moves": [
+        "MOVE_BITE",
+        "MOVE_ASTONISH",
+        "MOVE_SUPERSONIC",
+        "MOVE_LEECH_LIFE"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "species": "SPECIES_KOFFING",
+      "level": 17,
+      "moves": [
+        "MOVE_SMOG",
+        "MOVE_TACKLE",
+        "MOVE_POISON_GAS"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "species": "SPECIES_GRIMER",
+      "level": 17,
+      "moves": [
+        "MOVE_SLUDGE",
+        "MOVE_DISABLE",
+        "MOVE_HARDEN",
+        "MOVE_POUND"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "species": "SPECIES_ZUBAT",
+      "level": 17,
+      "moves": [
+        "MOVE_BITE",
+        "MOVE_ASTONISH",
+        "MOVE_SUPERSONIC",
+        "MOVE_LEECH_LIFE"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "species": "SPECIES_RATICATE",
+      "level": 17,
+      "moves": [
+        "MOVE_HYPER_FANG",
+        "MOVE_QUICK_ATTACK",
+        "MOVE_TAIL_WHIP",
+        "MOVE_TACKLE"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    }
+  ]
+}

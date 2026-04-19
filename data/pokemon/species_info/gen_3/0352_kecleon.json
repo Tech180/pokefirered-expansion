@@ -1,0 +1,271 @@
+{
+  "species_constant": "SPECIES_KECLEON",
+  "family_constant": "P_FAMILY_KECLEON",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_NORMAL)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "200"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_5) ? 154 : 132"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpDefense",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD)"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_ABILITIES >= GEN_6"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_COLOR_CHANGE, ABILITY_NONE, ABILITY_PROTEAN }"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_COLOR_CHANGE, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_GREEN"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Kecleon\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_KECLEON"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_KECLEON"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Color Swap\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "10"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "220"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"A Pok\u00e9mon that has the ability to alter its\\n\"\n\"body colors to match its surroundings.\\n\"\n\"A Kecleon reverts to its original colors if\\n\"\n\"it is startled.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "316"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "10"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Kecleon"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(48, 56)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 7 : 5"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 10),\nANIMCMD_FRAME(1, 18),\nANIMCMD_FRAME(0, 8),\nANIMCMD_FRAME(1, 8),\nANIMCMD_FRAME(0, 15),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_FLICKER_INCREASING"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimDelay",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Kecleon"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(64, 56) : MON_COORDS_SIZE(56, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_H_VIBRATE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Kecleon"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Kecleon"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Kecleon"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "2, 8, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Kecleon",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Kecleon,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Kecleon,\ngShinyOverworldPalette_Kecleon",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sKecleonLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sKecleonTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sKecleonEggMoveLearnset"
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "species_constant": "SPECIES_LINOONE_GALAR",
+  "family_constant": "P_FAMILY_ZIGZAGOON",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "78"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "61"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "61"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_DARK, TYPE_NORMAL)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "147"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Speed",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_PICKUP, ABILITY_GLUTTONY, ABILITY_QUICK_FEET }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_WHITE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Linoone\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_LINOONE"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_LINOONE"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Rushing\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "5"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "325"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"This very aggressive Pok\u00e9mon will\\n\"\n\"recklessly challenge opponents stronger\\n\"\n\"than itself. It uses its long tongue to\\n\"\n\"taunt them to then tackle forcefully.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "321"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "7"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_LinooneGalar"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 40)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "13"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_LinooneGalar"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 40)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "13"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_LinooneGalar"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_LinooneGalar"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_LinooneGalar"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NORMAL"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-4, 0, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Linoone",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_LinooneGalar,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_LinooneGalar,\ngShinyOverworldPalette_LinooneGalar",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isGalarianForm",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sLinooneGalarLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sLinooneGalarTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sLinooneFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 35, SPECIES_OBSTAGOON, CONDITIONS({IF_TIME, TIME_NIGHT})})"
+    }
+  ]
+}

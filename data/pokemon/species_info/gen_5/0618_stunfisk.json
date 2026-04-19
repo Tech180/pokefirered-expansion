@@ -1,0 +1,259 @@
+{
+  "species_constant": "SPECIES_STUNFISK",
+  "family_constant": "P_FAMILY_STUNFISK",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "109"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "66"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "84"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "32"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "81"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "99"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_GROUND, TYPE_ELECTRIC)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "165"
+    },
+    {
+      "type": "field",
+      "name": "evYield_HP",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_SOFT_SAND"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_AMORPHOUS)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_STATIC, ABILITY_LIMBER, ABILITY_SAND_VEIL }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BROWN"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Stunfisk\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_STUNFISK"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_STUNFISK"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Trap\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "7"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "110"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It conceals itself in the mud of the\\n\"\n\"seashore. Then it waits. When prey touch\\n\"\n\"it, it delivers a jolt of electricity.\\n\"\n\"It smiles when transmitting electricity.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "365"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "14"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Stunfisk"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(56, 48)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "14"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 40),\nANIMCMD_FRAME(0, 20),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_V_SQUISH_AND_BOUNCE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Stunfisk"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 24)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "22"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_H_STRETCH"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Stunfisk"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Stunfisk"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Stunfisk"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_SLOW"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, -1, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Stunfisk",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Stunfisk,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Stunfisk,\ngShinyOverworldPalette_Stunfisk",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sStunfiskLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sStunfiskTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sStunfiskEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sStunfiskFormSpeciesIdTable"
+    }
+  ]
+}

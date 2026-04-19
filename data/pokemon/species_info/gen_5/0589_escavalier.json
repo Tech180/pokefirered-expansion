@@ -1,0 +1,244 @@
+{
+  "species_constant": "SPECIES_ESCAVALIER",
+  "family_constant": "P_FAMILY_KARRABLAST",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "135"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "105"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "105"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_BUG, TYPE_STEEL)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "173"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_BUG)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_SWARM, ABILITY_SHELL_ARMOR, ABILITY_OVERCOAT }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_GRAY"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Escavalier\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_ESCAVALIER"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_ESCAVALIER"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Cavalry\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "10"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "330"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Wearing the shell covering they stole\\n\"\n\"from Shelmet, they defend themselves and\\n\"\n\"attack with two lances. The steel armor\\n\"\n\"protects their whole body.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "305"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "7"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "257"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Escavalier"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 10),\nANIMCMD_FRAME(1, 25),\nANIMCMD_FRAME(0, 30),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_BACK_AND_LUNGE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Escavalier"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "9"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_JOLT_RIGHT"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Escavalier"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Escavalier"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Escavalier"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "1, 11, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Escavalier",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Escavalier,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Escavalier,\ngShinyOverworldPalette_Escavalier",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sEscavalierLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sEscavalierTeachableLearnset"
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "species_constant": "SPECIES_PALAFIN_HERO",
+  "family_constant": "P_FAMILY_FINIZEN",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "160"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "97"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "106"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "87"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_WATER)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "228"
+    },
+    {
+      "type": "field",
+      "name": "evYield_HP",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_WATER_2)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_ZERO_TO_HERO, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Palafin\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_PALAFIN_HERO"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_PALAFIN"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Hero\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "18"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "974"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"This Pok\u00e9mon's ancient genes have\\n\"\n\"awakened. It is now so extraordinarily\\n\"\n\"strong that it can easily lift a\\n\"\n\"cruise ship with one fin.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "356"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "17"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_PalafinHero"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_PalafinHero"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_PalafinHero"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_PalafinHero"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_PalafinHero"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "1, 13, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Palafin",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_PalafinHero,\nSIZE_32x32,\nSHADOW_SIZE_S,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_PalafinHero,\ngShinyOverworldPalette_PalafinHero",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sPalafinLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sPalafinTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sPalafinFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sPalafinZeroFormChangeTable"
+    }
+  ]
+}

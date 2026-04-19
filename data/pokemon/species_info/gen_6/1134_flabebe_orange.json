@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_FLABEBE_ORANGE",
+  "family_constant": "P_FAMILY_FLABEBE",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "FLABEBE_MISC_INFO",
+      "args": "Orange, ORANGE, 0",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It receives strength from flowers\\n\"\n\"and gives them some of its energy in\\n\"\n\"return. This Pok\u00e9mon likes orange\\n\"\n\"flowers best of all.\")"
+    }
+  ]
+}

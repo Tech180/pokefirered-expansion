@@ -1,0 +1,249 @@
+{
+  "species_constant": "SPECIES_TOUCANNON",
+  "family_constant": "P_FAMILY_PIKIPEK",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_NORMAL, TYPE_FLYING)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_8) ? 243 : 218"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "itemCommon",
+      "value": "ITEM_SITRUS_BERRY"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FLYING)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_KEEN_EYE, ABILITY_SKILL_LINK, ABILITY_SHEER_FORCE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLACK"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Toucannon\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_TOUCANNON"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_TOUCANNON"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Cannon\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "11"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "260"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"When it battles, within its beak, its\\n\"\n\"internal gases ignite, explosively\\n\"\n\"launching seeds with enough power to\\n\"\n\"pulverize boulders.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "320"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "7"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Toucannon"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(59, 59)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 40),\nANIMCMD_FRAME(0, 5),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_SHAKE_GLOW_RED_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Toucannon"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_SHRINK_GROW_VIBRATE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Toucannon"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Toucannon"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Toucannon"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "9, 12, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Toucannon",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Toucannon,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Toucannon,\ngShinyOverworldPalette_Toucannon",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sToucannonLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sToucannonTeachableLearnset"
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "species_constant": "SPECIES_TORTERRA",
+  "family_constant": "P_FAMILY_TURTWIG",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "109"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "105"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "56"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "85"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_GRASS, TYPE_GROUND)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_EXP_YIELDS >= GEN_8"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "263"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#elif P_UPDATED_EXP_YIELDS >= GEN_5"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "236"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "208"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(12.5)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_GRASS)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_OVERGROW, ABILITY_NONE, ABILITY_SHELL_ARMOR }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_GREEN"
+    },
+    {
+      "type": "field",
+      "name": "noFlip",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Torterra\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_TORTERRA"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_TORTERRA"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Continent\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "22"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "3100"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Some Pok\u00e9mon are born on a Torterra's\\n\"\n\"back and spend their entire life there.\\n\"\n\"Ancient people imagined that beneath \\n\"\n\"the ground, a gigantic Torterra dwelled.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "348"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Torterra"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 45),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_H_SHAKE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Torterra"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_SHAKE_GLOW_GREEN"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Torterra"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Torterra"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Torterra"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "1, 10, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Torterra",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Torterra,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Torterra,\ngShinyOverworldPalette_Torterra",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sTorterraLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sTorterraTeachableLearnset"
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "species_constant": "SPECIES_TAPU_FINI",
+  "family_constant": "P_FAMILY_TAPU_FINI",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "115"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "85"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "130"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_WATER, TYPE_FAIRY)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_8) ? 285 : 257"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpDefense",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_GENDERLESS"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_MISTY_SURGE, ABILITY_NONE, ABILITY_TELEPATHY }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_PURPLE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Tapu Fini\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_TAPU_FINI"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_TAPU_FINI"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Land Spirit\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "13"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "212"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"People say it can create pure water that\\n\"\n\"will wash away any corruption. The dense\\n\"\n\"fog it creates brings the downfall and\\n\"\n\"destruction of its confused enemies.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "272"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_TapuFini"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(56, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 60),\nANIMCMD_FRAME(1, 60),\nANIMCMD_FRAME(0, 1),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_SHAKE_GLOW_BLUE_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimDelay",
+      "value": "5"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_TapuFini"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_TapuFini"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_TapuFini"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_TapuFini"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "1, 15, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "TapuFini",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_TapuFini,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_TapuFini,\ngShinyOverworldPalette_TapuFini",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isSubLegendary",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "perfectIVCount",
+      "value": "LEGENDARY_PERFECT_IV_COUNT"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sTapuFiniLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sTapuFiniTeachableLearnset"
+    }
+  ]
+}

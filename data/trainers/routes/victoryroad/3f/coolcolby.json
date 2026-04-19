@@ -1,0 +1,109 @@
+{
+  "identifier": "TRAINER_COOLTRAINER_COLBY",
+  "trainer_name": "COLBY",
+  "trainer_class": "TRAINER_CLASS_COOLTRAINER",
+  "trainer_pic": "TRAINER_PIC_COOLTRAINER_M",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_COOL",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [
+    "ITEM_HYPER_POTION"
+  ],
+  "party": [
+    {
+      "species": "SPECIES_KINGLER",
+      "level": 41,
+      "moves": [
+        "MOVE_GUILLOTINE",
+        "MOVE_STOMP",
+        "MOVE_MUD_SHOT",
+        "MOVE_BUBBLE"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_POLIWHIRL",
+      "level": 42,
+      "moves": [
+        "MOVE_BODY_SLAM",
+        "MOVE_DOUBLE_SLAP",
+        "MOVE_WATER_GUN",
+        "MOVE_HYPNOSIS"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_TENTACRUEL",
+      "level": 42,
+      "moves": [
+        "MOVE_BARRIER",
+        "MOVE_WRAP",
+        "MOVE_BUBBLE_BEAM",
+        "MOVE_ACID"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_SEADRA",
+      "level": 42,
+      "moves": [
+        "MOVE_WATER_GUN",
+        "MOVE_SMOKESCREEN",
+        "MOVE_TWISTER",
+        "MOVE_LEER"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_BLASTOISE",
+      "level": 43,
+      "moves": [
+        "MOVE_WATER_GUN",
+        "MOVE_BITE",
+        "MOVE_RAPID_SPIN",
+        "MOVE_RAIN_DANCE"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    }
+  ]
+}

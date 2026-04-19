@@ -1,0 +1,285 @@
+{
+  "species_constant": "SPECIES_ABRA",
+  "family_constant": "P_FAMILY_ABRA",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "25"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "105"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "P_UPDATED_STATS >= GEN_2 ? 55 : 105"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_PSYCHIC)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "200"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_EXP_YIELDS >= GEN_5"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "62"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#elif P_UPDATED_EXP_YIELDS >= GEN_4"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "75"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "73"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpAttack",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_TWISTED_SPOON"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(25)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_SYNCHRONIZE, ABILITY_INNER_FOCUS, ABILITY_MAGIC_GUARD }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BROWN"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Abra\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_ABRA"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_ABRA"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Psi\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "9"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "195"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"A Pok\u00e9mon that sleeps 18 hours a day.\\n\"\n\"Observation revealed that it uses\\n\"\n\"Teleport to change its location once\\n\"\n\"every hour.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "363"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "14"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Abra"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(48, 48) : MON_COORDS_SIZE(56, 48)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 11 : 10"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 7),\nANIMCMD_FRAME(1, 21),\nANIMCMD_FRAME(0, 13),\nANIMCMD_FRAME(1, 21),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? ANIM_H_JUMPS : ANIM_H_VIBRATE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Abra"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(48, 48) : MON_COORDS_SIZE(56, 48)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 11 : 12"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_SHRINK_GROW_VIBRATE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Abra"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Abra"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Abra"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 0, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Abra",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Abra,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_NONE,\nsAnimTable_Following,\ngOverworldPalette_Abra,\ngShinyOverworldPalette_Abra",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sAbraLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sAbraTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sAbraEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 16, SPECIES_KADABRA})"
+    }
+  ]
+}

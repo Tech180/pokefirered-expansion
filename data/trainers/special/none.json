@@ -1,0 +1,12 @@
+{
+  "identifier": "TRAINER_NONE",
+  "trainer_name": "None",
+  "trainer_class": "TRAINER_CLASS_PKMN_TRAINER_1",
+  "trainer_pic": "TRAINER_PIC_NONE",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_MALE",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [],
+  "items": [],
+  "party": []
+}

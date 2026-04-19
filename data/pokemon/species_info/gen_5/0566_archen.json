@@ -1,0 +1,259 @@
+{
+  "species_constant": "SPECIES_ARCHEN",
+  "family_constant": "P_FAMILY_ARCHEN",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "55"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "112"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "74"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_ROCK, TYPE_FLYING)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "71"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(12.5)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FLYING, EGG_GROUP_WATER_3)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_DEFEATIST, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_YELLOW"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Archen\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_ARCHEN"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_ARCHEN"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"First Bird\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "5"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Said to be the ancestor of all bird\\n\"\n\"Pok\u00e9mon, Archen itself could not actually\\n\"\n\"fly but moved by hopping from treetop\\n\"\n\"to treetop.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "432"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "13"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Archen"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(56, 40)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "14"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 2),\nANIMCMD_FRAME(1, 46),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_V_JUMPS_SMALL"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Archen"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 32)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "16"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_CONCAVE_ARC_SMALL"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Archen"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Archen"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Archen"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NORMAL"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-3, -2, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Archen",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Archen,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Archen,\ngShinyOverworldPalette_Archen",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isSkyBattleBanned",
+      "value": "B_SKY_BATTLE_STRICT_ELIGIBILITY"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sArchenLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sArchenTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sArchenEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 37, SPECIES_ARCHEOPS})"
+    }
+  ]
+}

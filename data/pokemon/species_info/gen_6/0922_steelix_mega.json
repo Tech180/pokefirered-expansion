@@ -1,0 +1,284 @@
+{
+  "species_constant": "SPECIES_STEELIX_MEGA",
+  "family_constant": "P_FAMILY_ONIX",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "125"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "230"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "55"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_STEEL, TYPE_GROUND)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "25"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "214"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_METAL_COAT"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "25"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_MINERAL)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_SAND_FORCE, ABILITY_SAND_FORCE, ABILITY_SAND_FORCE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_GRAY"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Steelix\")"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_MODIFIED_MEGA_CRIES"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_STEELIX_MEGA"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_STEELIX"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif // P_MODIFIED_MEGA_CRIES"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_STEELIX"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Iron Snake\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "105"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "7400"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"The cells within its body, crystallized by\\n\"\n\"the energy produced from Mega Evolution,\\n\"\n\"are stronger than any mineral and able\\n\"\n\"to withstand any temperature.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "516"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "13"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_SteelixMega"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_SteelixMega"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_V_SHAKE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_SteelixMega"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_SteelixMega"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_SteelixMega"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "1, 13, SHADOW_SIZE_XL_BATTLE_ONLY",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Steelix",
+      "has_comma": false
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if OW_BATTLE_ONLY_FORMS"
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_SteelixMega,\nSIZE_64x64,\nSHADOW_SIZE_M,\nTRACKS_SLITHER,\nsAnimTable_Following,\ngOverworldPalette_SteelixMega,\ngShinyOverworldPalette_SteelixMega",
+      "has_comma": false
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif //OW_BATTLE_ONLY_FORMS"
+    },
+    {
+      "type": "field",
+      "name": "isMegaEvolution",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sSteelixLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sSteelixTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sSteelixFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sSteelixFormChangeTable"
+    }
+  ]
+}

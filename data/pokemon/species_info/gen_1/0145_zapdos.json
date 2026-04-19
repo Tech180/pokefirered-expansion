@@ -1,0 +1,307 @@
+{
+  "species_constant": "SPECIES_ZAPDOS",
+  "family_constant": "P_FAMILY_ZAPDOS",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "85"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "125"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "P_UPDATED_STATS >= GEN_2 ? 90 : 125"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_ELECTRIC, TYPE_FLYING)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "3"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_EXP_YIELDS >= GEN_8"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "290"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#elif P_UPDATED_EXP_YIELDS >= GEN_5"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "261"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "216"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpAttack",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_GENDERLESS"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "35"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED)"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_ABILITIES >= GEN_6"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_PRESSURE, ABILITY_NONE, ABILITY_STATIC }"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_PRESSURE, ABILITY_NONE, ABILITY_LIGHTNING_ROD }"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_YELLOW"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Zapdos\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_ZAPDOS"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_ZAPDOS"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Electric\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "16"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "526"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Zapdos is a legendary bird Pok\u00e9mon that\\n\"\n\"has the ability to control electricity.\\n\"\n\"It usually lives in thunderclouds. It gains\\n\"\n\"power if it is stricken by lightning bolts.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "318"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Zapdos"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 10),\nANIMCMD_FRAME(0, 10),\nANIMCMD_FRAME(1, 30),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_FLASH_YELLOW"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "8"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Zapdos"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(56, 48) : MON_COORDS_SIZE(64, 40)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 11 : 12"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_SHAKE_FLASH_YELLOW"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Zapdos"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Zapdos"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Zapdos"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "1, 15, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Zapdos",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Zapdos,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_NONE,\nsAnimTable_Following,\ngOverworldPalette_Zapdos,\ngShinyOverworldPalette_Zapdos",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isSubLegendary",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "perfectIVCount",
+      "value": "LEGENDARY_PERFECT_IV_COUNT"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sZapdosLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sZapdosTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sZapdosFormSpeciesIdTable"
+    }
+  ]
+}

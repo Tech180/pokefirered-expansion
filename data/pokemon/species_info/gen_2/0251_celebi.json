@@ -1,0 +1,300 @@
+{
+  "species_constant": "SPECIES_CELEBI",
+  "family_constant": "P_FAMILY_CELEBI",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_PSYCHIC, TYPE_GRASS)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_EXP_YIELDS >= GEN_8"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "300"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#elif P_UPDATED_EXP_YIELDS >= GEN_5"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "270"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "64"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "evYield_HP",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "itemCommon",
+      "value": "ITEM_LUM_BERRY"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_LUM_BERRY"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_GENDERLESS"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_NATURAL_CURE, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_GREEN"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Celebi\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_CELEBI"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_CELEBI"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Time Travel\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"This Pok\u00e9mon came from the future by\\n\"\n\"crossing over time. It is thought that so\\n\"\n\"long as Celebi appears, a bright and\\n\"\n\"shining future awaits us.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "393"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "-10"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Celebi"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(40, 40)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 14 : 12"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 30),\nANIMCMD_FRAME(0, 30),\nANIMCMD_FRAME(1, 30),\nANIMCMD_FRAME(0, 30),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? ANIM_RISING_WOBBLE : ANIM_H_SLIDE_WOBBLE"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Celebi"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(48, 48) : MON_COORDS_SIZE(48, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 8 : 7"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_SHAKE_GLOW_GREEN"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Celebi"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Celebi"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Celebi"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 14, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Celebi",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Celebi,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_NONE,\nsAnimTable_Following,\ngOverworldPalette_Celebi,\ngShinyOverworldPalette_Celebi",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isMythical",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "isFrontierBanned",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "perfectIVCount",
+      "value": "LEGENDARY_PERFECT_IV_COUNT"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sCelebiLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sCelebiTeachableLearnset"
+    }
+  ]
+}

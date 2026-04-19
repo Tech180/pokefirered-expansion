@@ -1,0 +1,109 @@
+{
+  "identifier": "TRAINER_COOLTRAINER_BROOKE",
+  "trainer_name": "BROOKE",
+  "trainer_class": "TRAINER_CLASS_COOLTRAINER",
+  "trainer_pic": "TRAINER_PIC_COOLTRAINER_F",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_COOL",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [
+    "ITEM_FULL_RESTORE"
+  ],
+  "party": [
+    {
+      "species": "SPECIES_TANGELA",
+      "level": 42,
+      "moves": [
+        "MOVE_SLAM",
+        "MOVE_BIND",
+        "MOVE_MEGA_DRAIN",
+        "MOVE_INGRAIN"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_GLOOM",
+      "level": 42,
+      "moves": [
+        "MOVE_ACID",
+        "MOVE_MOONLIGHT",
+        "MOVE_SLEEP_POWDER",
+        "MOVE_STUN_SPORE"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_VILEPLUME",
+      "level": 42,
+      "moves": [
+        "MOVE_MEGA_DRAIN",
+        "MOVE_ACID",
+        "MOVE_STUN_SPORE",
+        "MOVE_AROMATHERAPY"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_IVYSAUR",
+      "level": 42,
+      "moves": [
+        "MOVE_RAZOR_LEAF",
+        "MOVE_SWEET_SCENT",
+        "MOVE_GROWL",
+        "MOVE_LEECH_SEED"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_VENUSAUR",
+      "level": 42,
+      "moves": [
+        "MOVE_RAZOR_LEAF",
+        "MOVE_GROWTH",
+        "MOVE_SLEEP_POWDER",
+        "MOVE_POISON_POWDER"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    }
+  ]
+}

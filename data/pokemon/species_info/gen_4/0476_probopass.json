@@ -1,0 +1,259 @@
+{
+  "species_constant": "SPECIES_PROBOPASS",
+  "family_constant": "P_FAMILY_NOSEPASS",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "55"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "145"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "150"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_ROCK, TYPE_STEEL)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 198"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpDefense",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_MAGNET"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_MINERAL)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_STURDY, ABILITY_MAGNET_PULL, ABILITY_SAND_FORCE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_GRAY"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Probopass\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_PROBOPASS"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_PROBOPASS"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Compass\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "14"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "3400"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It freely controls three units called\\n\"\n\"Mini-Noses using magnetic force.\\n\"\n\"With them, it can attack its foes from\\n\"\n\"three directions.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "265"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "262"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Probopass"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(56, 56)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 10),\nANIMCMD_FRAME(1, 10),\nANIMCMD_FRAME(0, 10),\nANIMCMD_FRAME(1, 10),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_V_SLIDE"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Probopass"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_V_SHAKE_H_SLIDE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Probopass"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Probopass"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Probopass"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-1, 13, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Probopass",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Probopass,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Probopass,\ngShinyOverworldPalette_Probopass",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sProbopassLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sProbopassTeachableLearnset"
+    }
+  ]
+}

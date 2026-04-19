@@ -1,0 +1,286 @@
+{
+  "species_constant": "SPECIES_CHIMECHO_MEGA",
+  "family_constant": "P_FAMILY_CHIMECHO",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "110"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "65"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "135"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_PSYCHIC, TYPE_STEEL)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_EXP_YIELDS >= GEN_7"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "159"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#elif P_UPDATED_EXP_YIELDS >= GEN_5"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "149"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "147"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpAttack",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpDefense",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_CLEANSE_TAG"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "25"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Chimecho\")"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_MODIFIED_MEGA_CRIES"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_CHIMECHO_MEGA"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_CHIMECHO"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif // P_MODIFIED_MEGA_CRIES"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_CHIMECHO"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Wind Chime\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "12"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It vibrates its entire body to attack in\\n\"\n\"all directions using sound waves. Any who\\n\"\n\"hear the vibrations get so confused, they\\n\"\n\"forget who they are.\")"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_ChimechoMega"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_ChimechoMega"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_ChimechoMega"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_ChimechoMega"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_ChimechoMega"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Chimecho",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-2, 18, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isMegaEvolution",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sChimechoLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sChimechoTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sChimechoEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sChimechoFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sChimechoFormChangeTable"
+    }
+  ]
+}

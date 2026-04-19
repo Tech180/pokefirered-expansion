@@ -1,0 +1,249 @@
+{
+  "species_constant": "SPECIES_TSAREENA",
+  "family_constant": "P_FAMILY_BOUNSWEET",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "72"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "98"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "72"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "98"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_GRASS)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_8) ? 255 : 230"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "itemCommon",
+      "value": "ITEM_GRASSY_SEED"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_FEMALE"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_GRASS)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_LEAF_GUARD, ABILITY_QUEENLY_MAJESTY, ABILITY_SWEET_VEIL }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_PURPLE"
+    },
+    {
+      "type": "field",
+      "name": "noFlip",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Tsareena\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_TSAREENA"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_TSAREENA"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Fruit\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "12"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "214"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Its long, striking legs aren't just for\\n\"\n\"show but to be used to kick with skill.\\n\"\n\"In victory, it shows off by kicking the\\n\"\n\"defeated, laughing boisterously.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "282"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Tsareena"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(56, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_SHRINK_GROW"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Tsareena"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(56, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Tsareena"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Tsareena"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Tsareena"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "1, 13, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Tsareena",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Tsareena,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Tsareena,\ngShinyOverworldPalette_Tsareena",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sTsareenaLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sTsareenaTeachableLearnset"
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "species_constant": "SPECIES_ROGGENROLA",
+  "family_constant": "P_FAMILY_ROGGENROLA",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "55"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "85"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "25"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "25"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_ROCK)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "255"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "56"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "itemCommon",
+      "value": "ITEM_EVERSTONE"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_HARD_STONE"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_MINERAL)"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_ABILITIES >= GEN_7"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_STURDY, ABILITY_WEAK_ARMOR, ABILITY_SAND_FORCE }"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_STURDY, ABILITY_NONE, ABILITY_SAND_FORCE }"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Roggenrola\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_ROGGENROLA"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_ROGGENROLA"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Mantle\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "180"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"The hexagonal cavity is its ear.\\n\"\n\"It walks in the direction of sounds it\\n\"\n\"hears, but if the sounds cease, it panics\\n\"\n\"and topples over.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "491"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "16"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Roggenrola"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(24, 40)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "14"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 20),\nANIMCMD_FRAME(1, 10),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_V_SQUISH_AND_BOUNCE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Roggenrola"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(40, 48)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "13"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_V_SHAKE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Roggenrola"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Roggenrola"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Roggenrola"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_SLOW"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-1, 0, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Roggenrola",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Roggenrola,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Roggenrola,\ngShinyOverworldPalette_Roggenrola",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sRoggenrolaLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sRoggenrolaTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sRoggenrolaEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 25, SPECIES_BOLDORE})"
+    }
+  ]
+}

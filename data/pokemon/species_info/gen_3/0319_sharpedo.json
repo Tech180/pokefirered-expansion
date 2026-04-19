@@ -1,0 +1,259 @@
+{
+  "species_constant": "SPECIES_SHARPEDO",
+  "family_constant": "P_FAMILY_CARVANHA",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_WATER, TYPE_DARK)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_5) ? 161 : 175"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_DEEP_SEA_TOOTH"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "35"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_WATER_2)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_ROUGH_SKIN, ABILITY_NONE, ABILITY_SPEED_BOOST }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Sharpedo\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_SHARPEDO"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_SHARPEDO"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Brutal\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "18"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "888"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"The vicious and sly gangster of the sea.\\n\"\n\"Its skin is specially textured to minimize\\n\"\n\"drag in water. Its speed tops out at over\\n\"\n\"75 miles per hour.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "317"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Sharpedo"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(56, 64) : MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 3 : 0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 6),\nANIMCMD_FRAME(1, 6),\nANIMCMD_FRAME(0, 6),\nANIMCMD_FRAME(1, 6),\nANIMCMD_FRAME(0, 6),\nANIMCMD_FRAME(1, 6),\nANIMCMD_FRAME(0, 6),\nANIMCMD_FRAME(1, 6),\nANIMCMD_FRAME(0, 22),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_H_JUMPS_V_STRETCH_TWICE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Sharpedo"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 2 : 3"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_JOLT_RIGHT"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Sharpedo"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Sharpedo"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Sharpedo"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-2, 14, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Sharpedo",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Sharpedo,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_NONE,\nsAnimTable_Following,\ngOverworldPalette_Sharpedo,\ngShinyOverworldPalette_Sharpedo",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sSharpedoLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sSharpedoTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sSharpedoFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sSharpedoFormChangeTable"
+    }
+  ]
+}

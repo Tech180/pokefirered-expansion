@@ -1,0 +1,54 @@
+{
+  "identifier": "TRAINER_TABITHA_MOSSDEEP",
+  "trainer_name": "TABITHA",
+  "trainer_class": "TRAINER_CLASS_MAGMA_ADMIN",
+  "trainer_pic": "TRAINER_PIC_MAGMA_ADMIN_M",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_MAGMA",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_CAMERUPT",
+      "level": 36,
+      "moves": [],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_MIGHTYENA",
+      "level": 38,
+      "moves": [],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_GOLBAT",
+      "level": 40,
+      "moves": [],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    }
+  ]
+}

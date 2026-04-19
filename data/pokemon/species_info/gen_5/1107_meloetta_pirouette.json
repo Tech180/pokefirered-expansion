@@ -1,0 +1,299 @@
+{
+  "species_constant": "SPECIES_MELOETTA_PIROUETTE",
+  "family_constant": "P_FAMILY_MELOETTA",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "128"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "128"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "77"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "77"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_NORMAL, TYPE_FIGHTING)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Speed",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "itemCommon",
+      "value": "ITEM_STAR_PIECE"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_STAR_PIECE"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_GENDERLESS"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_SERENE_GRACE, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_WHITE"
+    },
+    {
+      "type": "field",
+      "name": "noFlip",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Meloetta\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_MELOETTA"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_MELOETTA"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Melody\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "65"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Meloetta's melodies are sung with\\n\"\n\"a special vocalization method that can\\n\"\n\"control the feelings of those who hear it.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "422"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "12"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_MeloettaPirouette"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 15),\nANIMCMD_FRAME(0, 15),\nANIMCMD_FRAME(1, 15),\nANIMCMD_FRAME(0, 15),\nANIMCMD_FRAME(1, 15),\nANIMCMD_FRAME(0, 15),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_H_SLIDE_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "5"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_MeloettaPirouette"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(56, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_TRIANGLE_DOWN"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_MeloettaPirouette"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_MeloettaPirouette"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_MeloettaPirouette"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 16, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Meloetta",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_MeloettaPirouette,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_MeloettaPirouette,\ngShinyOverworldPalette_MeloettaPirouette",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isMythical",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "isFrontierBanned",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "perfectIVCount",
+      "value": "LEGENDARY_PERFECT_IV_COUNT"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sMeloettaLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sMeloettaTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sMeloettaFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sMeloettaFormChangeTable"
+    }
+  ]
+}

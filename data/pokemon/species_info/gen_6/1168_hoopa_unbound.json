@@ -1,0 +1,274 @@
+{
+  "species_constant": "SPECIES_HOOPA_UNBOUND",
+  "family_constant": "P_FAMILY_HOOPA",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "160"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "170"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "130"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_PSYCHIC, TYPE_DARK)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_8) ? 300 : 270"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpAttack",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_GENDERLESS"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "P_UPDATED_FRIENDSHIP >= GEN_8 ? STANDARD_FRIENDSHIP : 100"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_MAGICIAN, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_PURPLE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Hoopa\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_HOOPA_UNBOUND"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_HOOPA"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Djinn\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "65"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "490"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It is the true form of Hoopa, which has had\\n\"\n\"its power sealed away. The rings it carries\\n\"\n\"have the power to bend dimensions and are\\n\"\n\"able to seize anything in the world.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "432"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "13"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_HoopaUnbound"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 20),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_GROW_IN_STAGES"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_HoopaUnbound"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_V_SHAKE_LOW"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_HoopaUnbound"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_HoopaUnbound"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_HoopaUnbound"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "1, 14, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Hoopa",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_HoopaUnbound,\nSIZE_64x64,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_HoopaUnbound,\ngShinyOverworldPalette_HoopaUnbound",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isMythical",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "isFrontierBanned",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "perfectIVCount",
+      "value": "LEGENDARY_PERFECT_IV_COUNT"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sHoopaUnboundLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sHoopaUnboundTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sHoopaFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sHoopaFormChangeTable"
+    }
+  ]
+}

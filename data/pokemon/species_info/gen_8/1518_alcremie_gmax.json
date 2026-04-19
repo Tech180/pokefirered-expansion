@@ -1,0 +1,164 @@
+{
+  "species_constant": "SPECIES_ALCREMIE_GMAX",
+  "family_constant": "P_FAMILY_MILCERY",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "ALCREMIE_MISC_INFO",
+      "args": "BODY_COLOR_YELLOW",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Alcremie\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_ALCREMIE"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_ALCREMIE"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Cream\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "5"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It launches swarms of missiles,\\n\"\n\"each made of cream and loaded with\\n\"\n\"100,000 kilocalories. Get hit by one of\\n\"\n\"these, and your head will swim.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "530"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "13"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_AlcremieGmax"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_AlcremieGmax"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "8"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_AlcremieGmax"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_AlcremieGmax"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_AlcremieGmax"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-1, 12, SHADOW_SIZE_XL_BATTLE_ONLY",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Alcremie",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isGigantamax",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sAlcremieLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sAlcremieTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sAlcremieFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sAlcremieFormChangeTable"
+    }
+  ]
+}

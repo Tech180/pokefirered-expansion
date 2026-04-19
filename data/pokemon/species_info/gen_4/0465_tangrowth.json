@@ -1,0 +1,268 @@
+{
+  "species_constant": "SPECIES_TANGROWTH",
+  "family_constant": "P_FAMILY_TANGELA",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "125"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "110"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_GRASS)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_5) ? 187 : 211"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_GRASS)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_CHLOROPHYLL, ABILITY_LEAF_GUARD, ABILITY_REGENERATOR }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Tangrowth\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_TANGROWTH"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_TANGROWTH"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Vine\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "1286"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It ensnares prey by extending arms made\\n\"\n\"of vines. Even if one of its arms is eaten,\\n\"\n\"it's fine. The Pok\u00e9mon regenerates quickly\\n\"\n\"and will go right back to normal.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "261"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "334"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Tangrowth"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 15),\nANIMCMD_FRAME(1, 15),\nANIMCMD_FRAME(0, 15),\nANIMCMD_FRAME(1, 15),\nANIMCMD_FRAME(0, 15),\nANIMCMD_FRAME(1, 15),\nANIMCMD_FRAME(0, 50),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_H_STRETCH"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Tangrowth"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_GROW"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Tangrowth"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Tangrowth"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Tangrowth"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_GENDER_DIFFERENCES"
+    },
+    {
+      "type": "field",
+      "name": "frontPicFemale",
+      "value": "gMonFrontPic_TangrowthF"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSizeFemale",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif //P_GENDER_DIFFERENCES"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-2, 9, SHADOW_SIZE_XL_BATTLE_ONLY",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Tangrowth",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Tangrowth,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Tangrowth,\ngShinyOverworldPalette_Tangrowth",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD_FEMALE",
+      "args": "sPicTable_TangrowthF,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sTangrowthLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sTangrowthTeachableLearnset"
+    }
+  ]
+}

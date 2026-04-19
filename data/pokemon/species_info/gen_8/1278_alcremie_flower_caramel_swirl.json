@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_ALCREMIE_FLOWER_CARAMEL_SWIRL",
+  "family_constant": "P_FAMILY_MILCERY",
+  "macro_call": "ALCREMIE_REGULAR_SPECIES_INFO(Flower,     CaramelSwirl, BODY_COLOR_BROWN)"
+}

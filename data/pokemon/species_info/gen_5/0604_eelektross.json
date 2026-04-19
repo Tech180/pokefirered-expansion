@@ -1,0 +1,259 @@
+{
+  "species_constant": "SPECIES_EELEKTROSS",
+  "family_constant": "P_FAMILY_TYNAMO",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "85"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "115"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "105"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_ELECTRIC)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_8) ? 258 : 232"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Eelektross\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_EELEKTROSS"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_EELEKTROSS"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"EleFish\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "21"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "805"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"They crawl out of the ocean using their\\n\"\n\"arms. They will attack prey on shore and\\n\"\n\"immediately drag it into the ocean, with\\n\"\n\"their sucker mouths.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "365"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "7"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Eelektross"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 27),\nANIMCMD_FRAME(0, 27),\nANIMCMD_FRAME(1, 24),\nANIMCMD_FRAME(0, 25),\nANIMCMD_FRAME(1, 27),\nANIMCMD_FRAME(0, 5),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_BOUNCE_ROTATE_TO_SIDES_SMALL_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "8"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Eelektross"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_SHAKE_FLASH_YELLOW"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Eelektross"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Eelektross"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Eelektross"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "3, 13, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Eelektross",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Eelektross,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Eelektross,\ngShinyOverworldPalette_Eelektross",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sEelektrossLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sEelektrossTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sEelektrossFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sEelektrossFormChangeTable"
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "species_constant": "SPECIES_ARCANINE_HISUI",
+  "family_constant": "P_FAMILY_GROWLITHE",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "115"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_FIRE, TYPE_ROCK)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "194"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(25)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_INTIMIDATE, ABILITY_FLASH_FIRE, ABILITY_ROCK_HEAD }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BROWN"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Arcanine\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_ARCANINE"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_ARCANINE"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Legendary\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "1680"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Snaps at its foes with fangs cloaked in\\n\"\n\"blazing flame. Despite its bulk, it deftly\\n\"\n\"feints every which way, leading opponents\\n\"\n\"on a deceptively merry chase.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "312"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_ArcanineHisui"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_ArcanineHisui"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_ArcanineHisui"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_ArcanineHisui"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_ArcanineHisui"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-1, 11, SHADOW_SIZE_XL_BATTLE_ONLY",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Arcanine",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_ArcanineHisui,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_ArcanineHisui,\ngShinyOverworldPalette_ArcanineHisui",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isHisuianForm",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sArcanineHisuiLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sArcanineHisuiTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sArcanineFormSpeciesIdTable"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "group_label": "gWildMonHeaders",
+  "encounters": [
+    {
+      "map": "MAP_SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER",
+      "base_label": "sSevenIslandTanobyRuinsMoneanChamber_FireRed",
+      "land_mons": {
+        "encounter_rate": 7,
+        "mons": [
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          }
+        ]
+      }
+    },
+    {
+      "map": "MAP_SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER",
+      "base_label": "sSevenIslandTanobyRuinsMoneanChamber_LeafGreen",
+      "land_mons": {
+        "encounter_rate": 7,
+        "mons": [
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_UNOWN"
+          }
+        ]
+      }
+    }
+  ]
+}

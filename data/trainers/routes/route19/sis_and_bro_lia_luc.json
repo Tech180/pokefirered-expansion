@@ -1,0 +1,41 @@
+{
+  "identifier": "TRAINER_SIS_AND_BRO_LIA_LUC",
+  "trainer_name": "LIA & LUC",
+  "trainer_class": "TRAINER_CLASS_SIS_AND_BRO",
+  "trainer_pic": "TRAINER_PIC_SIS_AND_BRO",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_SWIMMER",
+  "battle_type": "TRAINER_BATTLE_TYPE_DOUBLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_GOLDEEN",
+      "level": 30,
+      "moves": [],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "species": "SPECIES_SEAKING",
+      "level": 30,
+      "moves": [],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "species_constant": "SPECIES_FLAMIGO",
+  "family_constant": "P_FAMILY_FLAMIGO",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "82"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "115"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "74"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "64"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_FLYING, TYPE_FIGHTING)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "175"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FLYING)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_SCRAPPY, ABILITY_TANGLED_FEET, ABILITY_COSTAR }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_PINK"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Flamigo\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_FLAMIGO"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_FLAMIGO"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Synchronize\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "16"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "370"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Thanks to a behavior of theirs\\n\"\n\"known as \u201csynchronizing,\u201d an entire\\n\"\n\"flock of these Pok\u00e9mon can attack\\n\"\n\"simultaneously in perfect harmony.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "356"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "17"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Flamigo"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Flamigo"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Flamigo"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Flamigo"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Flamigo"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 12, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Flamigo",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Flamigo,\nSIZE_32x32,\nSHADOW_SIZE_S,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Flamigo,\ngShinyOverworldPalette_Flamigo",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sFlamigoLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sFlamigoTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sFlamigoEggMoveLearnset"
+    }
+  ]
+}

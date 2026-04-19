@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_FURFROU_STAR",
+  "family_constant": "P_FAMILY_FURFROU",
+  "macro_call": "FURFROU_MISC_INFO(Star,      FALSE, 56, 2, 64, 1, 0)"
+}

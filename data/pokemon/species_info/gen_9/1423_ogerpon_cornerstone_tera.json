@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_OGERPON_CORNERSTONE_TERA",
+  "family_constant": "P_FAMILY_OGERPON",
+  "macro_call": "OGERPON_SPECIES_INFO(Cornerstone, CornerstoneTera, TYPE_ROCK,  ABILITY_EMBODY_ASPECT_CORNERSTONE_MASK, BODY_COLOR_GRAY,  0, 0, TRUE)"
+}

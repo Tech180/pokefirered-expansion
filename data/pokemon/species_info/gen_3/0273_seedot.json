@@ -1,0 +1,259 @@
+{
+  "species_constant": "SPECIES_SEEDOT",
+  "family_constant": "P_FAMILY_SEEDOT",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_GRASS)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "255"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_5) ? 44 : 74"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_POWER_HERB"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_GRASS)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_CHLOROPHYLL, ABILITY_EARLY_BIRD, ABILITY_PICKPOCKET }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BROWN"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Seedot\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_SEEDOT"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_SEEDOT"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Acorn\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "5"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It hangs off branches and absorbs\\n\"\n\"nutrients. When it finishes eating, its\\n\"\n\"body becomes so heavy that it drops to\\n\"\n\"the ground with a thump.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "472"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Seedot"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(32, 48) : MON_COORDS_SIZE(32, 40)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 16 : 12"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 10),\nANIMCMD_FRAME(1, 10),\nANIMCMD_FRAME(0, 10),\nANIMCMD_FRAME(1, 10),\nANIMCMD_FRAME(0, 10),\nANIMCMD_FRAME(1, 10),\nANIMCMD_FRAME(0, 10),\nANIMCMD_FRAME(1, 10),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? ANIM_BOUNCE_ROTATE_TO_SIDES : ANIM_V_JUMPS_H_JUMPS"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Seedot"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(64, 48) : MON_COORDS_SIZE(48, 48)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 9 : 10"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_DIP_RIGHT_SIDE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Seedot"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Seedot"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Seedot"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "P_GBA_STYLE_SPECIES_ICONS ? 1 : 2"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_FAST"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 1, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Seedot",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Seedot,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Seedot,\ngShinyOverworldPalette_Seedot",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sSeedotLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sSeedotTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sSeedotEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 14, SPECIES_NUZLEAF})"
+    }
+  ]
+}

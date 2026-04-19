@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_OGERPON_HEARTHFLAME",
+  "family_constant": "P_FAMILY_OGERPON",
+  "macro_call": "OGERPON_SPECIES_INFO(Hearthflame, Hearthflame,     TYPE_FIRE,  ABILITY_MOLD_BREAKER,                   BODY_COLOR_RED,   2, 0, FALSE)"
+}

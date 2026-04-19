@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_SCATTERBUG_ICY_SNOW",
+  "family_constant": "P_FAMILY_SCATTERBUG",
+  "macro_call": "SCATTERBUG_SPECIES_INFO(ICY_SNOW)"
+}

@@ -1,0 +1,288 @@
+{
+  "species_constant": "SPECIES_MAGIKARP",
+  "family_constant": "P_FAMILY_MAGIKARP",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "10"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "55"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "P_UPDATED_STATS >= GEN_2 ? 15 : 20"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_WATER)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "255"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_5) ? 40 : 20"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Speed",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "5"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_WATER_2, EGG_GROUP_DRAGON)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_SWIFT_SWIM, ABILITY_NONE, ABILITY_RATTLED }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_RED"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Magikarp\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_MAGIKARP"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_MAGIKARP"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Fish\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "9"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Its swimming muscles are weak, so it is\\n\"\n\"easily washed away by currents. In places\\n\"\n\"where water pools, you can see many\\n\"\n\"Magikarp deposited there by the flow.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "310"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Magikarp"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(48, 56)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 6 : 4"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 8),\nANIMCMD_FRAME(1, 8),\nANIMCMD_FRAME(0, 8),\nANIMCMD_FRAME(1, 8),\nANIMCMD_FRAME(0, 8),\nANIMCMD_FRAME(1, 8),\nANIMCMD_FRAME(0, 8),\nANIMCMD_FRAME(1, 8),\nANIMCMD_FRAME(0, 8),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_BOUNCE_ROTATE_TO_SIDES"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Magikarp"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(56, 48) : MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 9 : 6"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_CONCAVE_ARC_LARGE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Magikarp"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Magikarp"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Magikarp"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_GENDER_DIFFERENCES && !P_GBA_STYLE_SPECIES_GFX"
+    },
+    {
+      "type": "field",
+      "name": "frontPicFemale",
+      "value": "gMonFrontPic_MagikarpF"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSizeFemale",
+      "value": "MON_COORDS_SIZE(48, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicFemale",
+      "value": "gMonBackPic_MagikarpF"
+    },
+    {
+      "type": "field",
+      "name": "backPicSizeFemale",
+      "value": "MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif //P_GENDER_DIFFERENCES && !P_GBA_STYLE_SPECIES_GFX"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "1, 7, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Magikarp",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Magikarp,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_SPOT,\nsAnimTable_Following,\ngOverworldPalette_Magikarp,\ngShinyOverworldPalette_Magikarp",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD_FEMALE",
+      "args": "sPicTable_MagikarpF,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_SPOT,\nsAnimTable_Following",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "teachingType",
+      "value": "TM_ILLITERATE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sMagikarpLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sMagikarpTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 20, SPECIES_GYARADOS})"
+    }
+  ]
+}

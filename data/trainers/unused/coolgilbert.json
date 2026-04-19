@@ -1,0 +1,109 @@
+{
+  "identifier": "TRAINER_COOLTRAINER_GILBERT",
+  "trainer_name": "GILBERT",
+  "trainer_class": "TRAINER_CLASS_COOLTRAINER",
+  "trainer_pic": "TRAINER_PIC_COOLTRAINER_M",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_COOL",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [
+    "ITEM_HYPER_POTION"
+  ],
+  "party": [
+    {
+      "species": "SPECIES_PIDGEOTTO",
+      "level": 42,
+      "moves": [
+        "MOVE_WING_ATTACK",
+        "MOVE_FEATHER_DANCE",
+        "MOVE_WHIRLWIND",
+        "MOVE_QUICK_ATTACK"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_FEAROW",
+      "level": 42,
+      "moves": [
+        "MOVE_DRILL_PECK",
+        "MOVE_MIRROR_MOVE",
+        "MOVE_PURSUIT",
+        "MOVE_LEER"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_PERSIAN",
+      "level": 42,
+      "moves": [
+        "MOVE_PAY_DAY",
+        "MOVE_FAINT_ATTACK",
+        "MOVE_SCREECH",
+        "MOVE_BITE"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_LICKITUNG",
+      "level": 42,
+      "moves": [
+        "MOVE_SLAM",
+        "MOVE_DISABLE",
+        "MOVE_WRAP",
+        "MOVE_SUPERSONIC"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_TAUROS",
+      "level": 42,
+      "moves": [
+        "MOVE_HORN_ATTACK",
+        "MOVE_SCARY_FACE",
+        "MOVE_SWAGGER",
+        "MOVE_TAIL_WHIP"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    }
+  ]
+}

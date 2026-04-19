@@ -1,0 +1,54 @@
+{
+  "identifier": "TRAINER_MAXIE_MOSSDEEP",
+  "trainer_name": "MAXIE",
+  "trainer_class": "TRAINER_CLASS_MAGMA_LEADER",
+  "trainer_pic": "TRAINER_PIC_MAGMA_LEADER_MAXIE",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_MAGMA",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_BASIC_TRAINER"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_MIGHTYENA",
+      "level": 42,
+      "moves": [],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      }
+    },
+    {
+      "species": "SPECIES_CROBAT",
+      "level": 43,
+      "moves": [],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      }
+    },
+    {
+      "species": "SPECIES_CAMERUPT",
+      "level": 44,
+      "moves": [],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      }
+    }
+  ]
+}

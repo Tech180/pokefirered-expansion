@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_FLORGES_RED",
+  "family_constant": "P_FAMILY_FLABEBE",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "FLORGES_MISC_INFO",
+      "args": "Red, 0",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"This Pok\u00e9mon creates an impressive\\n\"\n\"flower garden in its territory. It\\n\"\n\"draws forth the power of the red\\n\"\n\"flowers around its neck.\")"
+    }
+  ]
+}

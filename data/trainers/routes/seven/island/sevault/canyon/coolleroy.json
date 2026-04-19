@@ -1,0 +1,109 @@
+{
+  "identifier": "TRAINER_COOLTRAINER_LEROY",
+  "trainer_name": "LEROY",
+  "trainer_class": "TRAINER_CLASS_COOLTRAINER",
+  "trainer_pic": "TRAINER_PIC_COOLTRAINER_M",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_COOL",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [
+    "ITEM_FULL_RESTORE"
+  ],
+  "party": [
+    {
+      "species": "SPECIES_RHYDON",
+      "level": 47,
+      "moves": [
+        "MOVE_TAKE_DOWN",
+        "MOVE_HORN_DRILL",
+        "MOVE_ROCK_BLAST",
+        "MOVE_SCARY_FACE"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_SLOWBRO",
+      "level": 48,
+      "moves": [
+        "MOVE_PSYCHIC",
+        "MOVE_HEADBUTT",
+        "MOVE_AMNESIA",
+        "MOVE_DISABLE"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_KANGASKHAN",
+      "level": 47,
+      "moves": [
+        "MOVE_DIZZY_PUNCH",
+        "MOVE_BITE",
+        "MOVE_ENDURE",
+        "MOVE_REVERSAL"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_MACHOKE",
+      "level": 48,
+      "moves": [
+        "MOVE_CROSS_CHOP",
+        "MOVE_VITAL_THROW",
+        "MOVE_REVENGE",
+        "MOVE_SEISMIC_TOSS"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_URSARING",
+      "level": 50,
+      "moves": [
+        "MOVE_SLASH",
+        "MOVE_FAINT_ATTACK",
+        "MOVE_SNORE",
+        "MOVE_REST"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    }
+  ]
+}

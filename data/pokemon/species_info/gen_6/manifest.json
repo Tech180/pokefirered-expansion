@@ -1,0 +1,1468 @@
+[
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CHESPIN",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CHESPIN",
+        "filename": "0650_chespin.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_QUILLADIN",
+        "filename": "0651_quilladin.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CHESNAUGHT",
+        "filename": "0652_chesnaught.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CHESNAUGHT_MEGA",
+        "filename": "1538_chesnaught_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_FENNEKIN",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_FENNEKIN",
+        "filename": "0653_fennekin.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BRAIXEN",
+        "filename": "0654_braixen.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DELPHOX",
+        "filename": "0655_delphox.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DELPHOX_MEGA",
+        "filename": "1539_delphox_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_FROAKIE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_FROAKIE",
+        "filename": "0656_froakie.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FROGADIER",
+        "filename": "0657_frogadier.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GRENINJA",
+        "filename": "0658_greninja.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GRENINJA_BATTLE_BOND",
+        "filename": "greninja_battle_bond.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GRENINJA_ASH",
+        "filename": "1113_greninja_ash.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GRENINJA_MEGA",
+        "filename": "1540_greninja_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_BUNNELBY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_BUNNELBY",
+        "filename": "0659_bunnelby.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DIGGERSBY",
+        "filename": "0660_diggersby.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_FLETCHLING",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_FLETCHLING",
+        "filename": "0661_fletchling.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLETCHINDER",
+        "filename": "0662_fletchinder.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_TALONFLAME",
+        "filename": "0663_talonflame.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SCATTERBUG",
+    "components": [
+      {
+        "type": "raw",
+        "content": "#define SCATTERBUG_SPECIES_INFO(evolution)                                                  \\\n    {                                                                                       \\\n        .baseHP        = 38,                                                                \\\n        .baseAttack    = 35,                                                                \\\n        .baseDefense   = 40,                                                                \\\n        .baseSpeed     = 35,                                                                \\\n        .baseSpAttack  = 27,                                                                \\\n        .baseSpDefense = 25,                                                                \\\n        .types = MON_TYPES(TYPE_BUG),                                                       \\\n        .catchRate = 255,                                                                   \\\n        .expYield = 40,                                                                     \\\n        .evYield_Defense = 1,                                                               \\\n        .genderRatio = PERCENT_FEMALE(50),                                                  \\\n        .eggCycles = 15,                                                                    \\\n        .friendship = STANDARD_FRIENDSHIP,                                                  \\\n        .growthRate = GROWTH_MEDIUM_FAST,                                                   \\\n        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),                                         \\\n        .abilities = { ABILITY_SHIELD_DUST, ABILITY_COMPOUND_EYES, ABILITY_FRIEND_GUARD },  \\\n        .bodyColor = BODY_COLOR_BLACK,                                                      \\\n        .speciesName = _(\"Scatterbug\"),                                                     \\\n        .cryId = CRY_SCATTERBUG,                                                            \\\n        .natDexNum = NATIONAL_DEX_SCATTERBUG,                                               \\\n        .categoryName = _(\"Scatterdust\"),                                                   \\\n        .height = 3,                                                                        \\\n        .weight = 25,                                                                       \\\n        .description = gScatterbugPokedexText,                                              \\\n        .pokemonScale = 530,                                                                \\\n        .pokemonOffset = 13,                                                                \\\n        .trainerScale = 256,                                                                \\\n        .trainerOffset = 0,                                                                 \\\n        .frontPic = gMonFrontPic_Scatterbug,                                                \\\n        .frontPicSize = MON_COORDS_SIZE(32, 48),                                            \\\n        .frontPicYOffset = 13,                                                              \\\n        .frontAnimFrames = sAnims_Scatterbug,                                               \\\n        .frontAnimId = ANIM_V_STRETCH,                                                      \\\n        .backPic = gMonBackPic_Scatterbug,                                                  \\\n        .backPicSize = MON_COORDS_SIZE(40, 56),                                             \\\n        .backPicYOffset = 12,                                                               \\\n        .backAnimId = BACK_ANIM_H_SLIDE,                                                    \\\n        .palette = gMonPalette_Scatterbug,                                                  \\\n        .shinyPalette = gMonShinyPalette_Scatterbug,                                        \\\n        .iconSprite = gMonIcon_Scatterbug,                                                  \\\n        .iconPalIndex = 1,                                                                  \\\n        .pokemonJumpType = PKMN_JUMP_TYPE_FAST,                                             \\\n        SHADOW(1, 1, SHADOW_SIZE_S)                                                         \\\n        FOOTPRINT(Scatterbug)                                                               \\\n        OVERWORLD(                                                                          \\\n            sPicTable_Scatterbug,                                                           \\\n            SIZE_32x32,                                                                     \\\n            SHADOW_SIZE_M,                                                                  \\\n            TRACKS_FOOT,                                                                    \\\n            sAnimTable_Following,                                                           \\\n            gOverworldPalette_Scatterbug,                                                   \\\n            gShinyOverworldPalette_Scatterbug                                               \\\n        )                                                                                   \\\n        .teachingType = TM_ILLITERATE,                                                      \\\n        .levelUpLearnset = sScatterbugLevelUpLearnset,                                      \\\n        .teachableLearnset = sScatterbugTeachableLearnset,                                  \\\n        .eggMoveLearnset = sScatterbugEggMoveLearnset,                                      \\\n        .formSpeciesIdTable = sScatterbugFormSpeciesIdTable,                                \\\n        .evolutions = EVOLUTION({EVO_LEVEL, 9, SPECIES_SPEWPA_##evolution}),                \\\n    }                                                                                       \\"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_ICY_SNOW",
+        "filename": "0664_scatterbug_icy_snow.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_POLAR",
+        "filename": "1438_scatterbug_polar.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_TUNDRA",
+        "filename": "1439_scatterbug_tundra.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_CONTINENTAL",
+        "filename": "1440_scatterbug_continental.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_GARDEN",
+        "filename": "1441_scatterbug_garden.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_ELEGANT",
+        "filename": "1442_scatterbug_elegant.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_MEADOW",
+        "filename": "1443_scatterbug_meadow.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_MODERN",
+        "filename": "1444_scatterbug_modern.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_MARINE",
+        "filename": "1445_scatterbug_marine.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_ARCHIPELAGO",
+        "filename": "1446_scatterbug_archipelago.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_HIGH_PLAINS",
+        "filename": "1447_scatterbug_high_plains.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_SANDSTORM",
+        "filename": "1448_scatterbug_sandstorm.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_RIVER",
+        "filename": "1449_scatterbug_river.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_MONSOON",
+        "filename": "1450_scatterbug_monsoon.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_SAVANNA",
+        "filename": "1451_scatterbug_savanna.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_SUN",
+        "filename": "1452_scatterbug_sun.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_OCEAN",
+        "filename": "1453_scatterbug_ocean.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_JUNGLE",
+        "filename": "1454_scatterbug_jungle.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_FANCY",
+        "filename": "1455_scatterbug_fancy.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SCATTERBUG_POKEBALL",
+        "filename": "1456_scatterbug_pokeball.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#define SPEWPA_SPECIES_INFO(evolution)                                          \\\n    {                                                                           \\\n        .baseHP        = 45,                                                    \\\n        .baseAttack    = 22,                                                    \\\n        .baseDefense   = 60,                                                    \\\n        .baseSpeed     = 29,                                                    \\\n        .baseSpAttack  = 27,                                                    \\\n        .baseSpDefense = 30,                                                    \\\n        .types = MON_TYPES(TYPE_BUG),                                           \\\n        .catchRate = 120,                                                       \\\n        .expYield = 75,                                                         \\\n        .evYield_Defense = 2,                                                   \\\n        .genderRatio = PERCENT_FEMALE(50),                                      \\\n        .eggCycles = 15,                                                        \\\n        .friendship = STANDARD_FRIENDSHIP,                                      \\\n        .growthRate = GROWTH_MEDIUM_FAST,                                       \\\n        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),                             \\\n        .abilities = { ABILITY_SHED_SKIN, ABILITY_NONE, ABILITY_FRIEND_GUARD }, \\\n        .bodyColor = BODY_COLOR_BLACK,                                          \\\n        .speciesName = _(\"Spewpa\"),                                             \\\n        .cryId = CRY_SPEWPA,                                                    \\\n        .natDexNum = NATIONAL_DEX_SPEWPA,                                       \\\n        .categoryName = _(\"Scatterdust\"),                                       \\\n        .height = 3,                                                            \\\n        .weight = 84,                                                           \\\n        .description = gSpewpaPokedexText,                                      \\\n        .pokemonScale = 530,                                                    \\\n        .pokemonOffset = 13,                                                    \\\n        .trainerScale = 256,                                                    \\\n        .trainerOffset = 0,                                                     \\\n        .frontPic = gMonFrontPic_Spewpa,                                        \\\n        .frontPicSize = MON_COORDS_SIZE(40, 48),                                \\\n        .frontPicYOffset = 11,                                                  \\\n        .frontAnimFrames = sAnims_Spewpa,                                       \\\n        .frontAnimId = ANIM_V_SHAKE,                                            \\\n        .backPic = gMonBackPic_Spewpa,                                          \\\n        .backPicSize = MON_COORDS_SIZE(48, 48),                                 \\\n        .backPicYOffset = 12,                                                   \\\n        .backAnimId = BACK_ANIM_H_VIBRATE,                                      \\\n        .palette = gMonPalette_Spewpa,                                          \\\n        .shinyPalette = gMonShinyPalette_Spewpa,                                \\\n        .iconSprite = gMonIcon_Spewpa,                                          \\\n        .iconPalIndex = 1,                                                      \\\n        .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,                               \\\n        SHADOW(0, 2, SHADOW_SIZE_M)                                             \\\n        FOOTPRINT(Spewpa)                                                       \\\n        OVERWORLD(                                                              \\\n            sPicTable_Spewpa,                                                   \\\n            SIZE_32x32,                                                         \\\n            SHADOW_SIZE_M,                                                      \\\n            TRACKS_FOOT,                                                        \\\n            sAnimTable_Following,                                               \\\n            gOverworldPalette_Spewpa,                                           \\\n            gShinyOverworldPalette_Spewpa                                       \\\n        )                                                                       \\\n        .teachingType = TM_ILLITERATE,                                          \\\n        .levelUpLearnset = sSpewpaLevelUpLearnset,                              \\\n        .teachableLearnset = sSpewpaTeachableLearnset,                          \\\n        .formSpeciesIdTable = sSpewpaFormSpeciesIdTable,                        \\\n        .evolutions = EVOLUTION({EVO_LEVEL, 12, SPECIES_VIVILLON_##evolution}), \\\n    }"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_ICY_SNOW",
+        "filename": "0665_spewpa_icy_snow.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_POLAR",
+        "filename": "1457_spewpa_polar.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_TUNDRA",
+        "filename": "1458_spewpa_tundra.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_CONTINENTAL",
+        "filename": "1459_spewpa_continental.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_GARDEN",
+        "filename": "1460_spewpa_garden.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_ELEGANT",
+        "filename": "1461_spewpa_elegant.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_MEADOW",
+        "filename": "1462_spewpa_meadow.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_MODERN",
+        "filename": "1463_spewpa_modern.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_MARINE",
+        "filename": "1464_spewpa_marine.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_ARCHIPELAGO",
+        "filename": "1465_spewpa_archipelago.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_HIGH_PLAINS",
+        "filename": "1466_spewpa_high_plains.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_SANDSTORM",
+        "filename": "1467_spewpa_sandstorm.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_RIVER",
+        "filename": "1468_spewpa_river.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_MONSOON",
+        "filename": "1469_spewpa_monsoon.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_SAVANNA",
+        "filename": "1470_spewpa_savanna.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_SUN",
+        "filename": "1471_spewpa_sun.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_OCEAN",
+        "filename": "1472_spewpa_ocean.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_JUNGLE",
+        "filename": "1473_spewpa_jungle.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_FANCY",
+        "filename": "1474_spewpa_fancy.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SPEWPA_POKEBALL",
+        "filename": "1475_spewpa_pokeball.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#define VIVILLON_MISC_INFO(form, color, iconPal)                                            \\\n        .baseHP        = 80,                                                                \\\n        .baseAttack    = 52,                                                                \\\n        .baseDefense   = 50,                                                                \\\n        .baseSpeed     = 89,                                                                \\\n        .baseSpAttack  = 90,                                                                \\\n        .baseSpDefense = 50,                                                                \\\n        .types = MON_TYPES(TYPE_BUG, TYPE_FLYING),                                          \\\n        .catchRate = 45,                                                                    \\\n        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 206 : 185,                            \\\n        .evYield_HP = 1,                                                                    \\\n        .evYield_Speed = 1,                                                                 \\\n        .evYield_SpAttack = 1,                                                              \\\n        .genderRatio = PERCENT_FEMALE(50),                                                  \\\n        .eggCycles = 15,                                                                    \\\n        .friendship = STANDARD_FRIENDSHIP,                                                  \\\n        .growthRate = GROWTH_MEDIUM_FAST,                                                   \\\n        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),                                         \\\n        .abilities = { ABILITY_SHIELD_DUST, ABILITY_COMPOUND_EYES, ABILITY_FRIEND_GUARD },  \\\n        .bodyColor = color,                                                                 \\\n        .speciesName = _(\"Vivillon\"),                                                       \\\n        .cryId = CRY_VIVILLON,                                                              \\\n        .natDexNum = NATIONAL_DEX_VIVILLON,                                                 \\\n        .categoryName = _(\"Scale\"),                                                         \\\n        .height = 12,                                                                       \\\n        .weight = 170,                                                                      \\\n        .pokemonScale = 282,                                                                \\\n        .pokemonOffset = 4,                                                                 \\\n        .trainerScale = 256,                                                                \\\n        .trainerOffset = 0,                                                                 \\\n        .frontPic = gMonFrontPic_Vivillon ##form,                                           \\\n        .frontPicSize = MON_COORDS_SIZE(64, 64),                                            \\\n        .frontPicYOffset = 0,                                                               \\\n        .frontAnimFrames = sAnims_Vivillon,                                                 \\\n        .frontAnimId = ANIM_ZIGZAG_SLOW,                                                    \\\n        .enemyMonElevation = 9,                                                             \\\n        .backPic = gMonBackPic_Vivillon ##form,                                             \\\n        .backPicSize = MON_COORDS_SIZE(64, 64),                                             \\\n        .backPicYOffset = 0,                                                                \\\n        .backAnimId = BACK_ANIM_CIRCLE_COUNTERCLOCKWISE,                                    \\\n        .palette = gMonPalette_Vivillon ##form,                                             \\\n        .shinyPalette = gMonShinyPalette_Vivillon ##form,                                   \\\n        .iconSprite = gMonIcon_Vivillon ##form,                                             \\\n        .iconPalIndex = iconPal,                                                            \\\n        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,                                             \\\n        SHADOW(0, 20, SHADOW_SIZE_M)                                                        \\\n        FOOTPRINT(Vivillon)                                                                 \\\n        OVERWORLD(                                                                          \\\n            sPicTable_Vivillon ##form,                                                      \\\n            SIZE_32x32,                                                                     \\\n            SHADOW_SIZE_M,                                                                  \\\n            TRACKS_FOOT,                                                                    \\\n            sAnimTable_Following,                                                           \\\n            gOverworldPalette_Vivillon ##form,                                              \\\n            gShinyOverworldPalette_Vivillon ##form                                          \\\n        )                                                                                   \\\n        .levelUpLearnset = sVivillonLevelUpLearnset,                                        \\\n        .teachableLearnset = sVivillonTeachableLearnset,                                    \\\n        .formSpeciesIdTable = sVivillonFormSpeciesIdTable"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_ICY_SNOW",
+        "filename": "0666_vivillon_icy_snow.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_POLAR",
+        "filename": "1114_vivillon_polar.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_TUNDRA",
+        "filename": "1115_vivillon_tundra.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_CONTINENTAL",
+        "filename": "1116_vivillon_continental.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_GARDEN",
+        "filename": "1117_vivillon_garden.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_ELEGANT",
+        "filename": "1118_vivillon_elegant.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_MEADOW",
+        "filename": "1119_vivillon_meadow.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_MODERN",
+        "filename": "1120_vivillon_modern.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_MARINE",
+        "filename": "1121_vivillon_marine.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_ARCHIPELAGO",
+        "filename": "1122_vivillon_archipelago.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_HIGH_PLAINS",
+        "filename": "1123_vivillon_high_plains.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_SANDSTORM",
+        "filename": "1124_vivillon_sandstorm.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_RIVER",
+        "filename": "1125_vivillon_river.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_MONSOON",
+        "filename": "1126_vivillon_monsoon.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_SAVANNA",
+        "filename": "1127_vivillon_savanna.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_SUN",
+        "filename": "1128_vivillon_sun.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_OCEAN",
+        "filename": "1129_vivillon_ocean.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_JUNGLE",
+        "filename": "1130_vivillon_jungle.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_FANCY",
+        "filename": "1131_vivillon_fancy.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIVILLON_POKEBALL",
+        "filename": "1132_vivillon_pokeball.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_LITLEO",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_LITLEO",
+        "filename": "0667_litleo.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_PYROAR",
+        "filename": "0668_pyroar.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_PYROAR_MEGA",
+        "filename": "1541_pyroar_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_FLABEBE",
+    "components": [
+      {
+        "type": "raw",
+        "content": "#define FLABEBE_MISC_INFO(Form, FORM, iconPal)                                  \\\n        .baseHP        = 44,                                                    \\\n        .baseAttack    = 38,                                                    \\\n        .baseDefense   = 39,                                                    \\\n        .baseSpeed     = 42,                                                    \\\n        .baseSpAttack  = 61,                                                    \\\n        .baseSpDefense = 79,                                                    \\\n        .types = MON_TYPES(TYPE_FAIRY),                                         \\\n        .catchRate = 225,                                                       \\\n        .expYield = 61,                                                         \\\n        .evYield_SpDefense = 1,                                                 \\\n        .genderRatio = MON_FEMALE,                                              \\\n        .eggCycles = 20,                                                        \\\n        .friendship = STANDARD_FRIENDSHIP,                                      \\\n        .growthRate = GROWTH_MEDIUM_FAST,                                       \\\n        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY),                           \\\n        .abilities = { ABILITY_FLOWER_VEIL, ABILITY_NONE, ABILITY_SYMBIOSIS },  \\\n        .bodyColor = BODY_COLOR_WHITE,                                          \\\n        .speciesName = _(\"Flab\u00e9b\u00e9\"),                                            \\\n        .cryId = CRY_FLABEBE,                                                   \\\n        .natDexNum = NATIONAL_DEX_FLABEBE,                                      \\\n        .categoryName = _(\"Single Bloom\"),                                      \\\n        .height = 1,                                                            \\\n        .weight = 1,                                                            \\\n        .pokemonScale = 682,                                                    \\\n        .pokemonOffset = 24,                                                    \\\n        .trainerScale = 256,                                                    \\\n        .trainerOffset = 0,                                                     \\\n        .frontPic = gMonFrontPic_Flabebe,                                       \\\n        .frontPicSize = MON_COORDS_SIZE(48, 56),                                \\\n        .frontPicYOffset = 6,                                                   \\\n        .frontAnimFrames = sAnims_Flabebe,                                      \\\n        .frontAnimId = ANIM_H_SLIDE_SLOW,                                       \\\n        .enemyMonElevation = 6,                                                 \\\n        .backPic = gMonBackPic_Flabebe,                                         \\\n        .backPicSize = MON_COORDS_SIZE(64, 40),                                 \\\n        .backPicYOffset = 12,                                                   \\\n        .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,                              \\\n        .palette = gMonPalette_Flabebe##Form,                                   \\\n        .shinyPalette = gMonShinyPalette_Flabebe##Form,                         \\\n        .iconSprite = gMonIcon_Flabebe##Form,                                   \\\n        .iconPalIndex = iconPal,                                                \\\n        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,                                 \\\n        SHADOW(0, 11, SHADOW_SIZE_S)                                            \\\n        FOOTPRINT(Flabebe)                                                      \\\n        OVERWORLD(                                                              \\\n            sPicTable_Flabebe##Form,                                            \\\n            SIZE_32x32,                                                         \\\n            SHADOW_SIZE_M,                                                      \\\n            TRACKS_FOOT,                                                        \\\n            sAnimTable_Following,                                               \\\n            gOverworldPalette_Flabebe##Form,                                    \\\n            gShinyOverworldPalette_Flabebe##Form                                \\\n        )                                                                       \\\n        .levelUpLearnset = sFlabebeLevelUpLearnset,                             \\\n        .teachableLearnset = sFlabebeTeachableLearnset,                         \\\n        .eggMoveLearnset = sFlabebeEggMoveLearnset,                             \\\n        .formSpeciesIdTable = sFlabebeFormSpeciesIdTable,                       \\\n        .evolutions = EVOLUTION({EVO_LEVEL, 19, SPECIES_FLOETTE_ ##FORM})"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLABEBE_RED",
+        "filename": "0669_flabebe_red.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLABEBE_YELLOW",
+        "filename": "1133_flabebe_yellow.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLABEBE_ORANGE",
+        "filename": "1134_flabebe_orange.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLABEBE_BLUE",
+        "filename": "1135_flabebe_blue.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLABEBE_WHITE",
+        "filename": "1136_flabebe_white.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#define FLOETTE_MISC_INFO(form, FORM, iconPal)                                  \\\n        .types = MON_TYPES(TYPE_FAIRY),                                         \\\n        .catchRate = 120,                                                       \\\n        .evYield_SpDefense = 2,                                                 \\\n        .genderRatio = MON_FEMALE,                                              \\\n        .eggCycles = 20,                                                        \\\n        .friendship = STANDARD_FRIENDSHIP,                                      \\\n        .growthRate = GROWTH_MEDIUM_FAST,                                       \\\n        .abilities = { ABILITY_FLOWER_VEIL, ABILITY_NONE, ABILITY_SYMBIOSIS },  \\\n        .bodyColor = BODY_COLOR_WHITE,                                          \\\n        .speciesName = _(\"Floette\"),                                            \\\n        .natDexNum = NATIONAL_DEX_FLOETTE,                                      \\\n        .categoryName = _(\"Single Bloom\"),                                      \\\n        .height = 2,                                                            \\\n        .weight = 9,                                                            \\\n        .pokemonScale = 682,                                                    \\\n        .pokemonOffset = 24,                                                    \\\n        .trainerScale = 256,                                                    \\\n        .trainerOffset = 0,                                                     \\\n        .frontAnimFrames = sAnims_Floette,                                      \\\n        .frontAnimId = ANIM_V_SLIDE_WOBBLE,                                     \\\n        .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,                              \\\n        .palette = gMonPalette_Floette ##form,                                  \\\n        .shinyPalette = gMonShinyPalette_Floette ##form,                        \\\n        .iconSprite = gMonIcon_Floette##form,                                   \\\n        .iconPalIndex = iconPal,                                                \\\n        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,                                      \\\n        SHADOW(-3, 12, SHADOW_SIZE_S)                                           \\\n        FOOTPRINT(Floette)                                                      \\\n        OVERWORLD(                                                              \\\n            sPicTable_Floette ##form,                                           \\\n            SIZE_32x32,                                                         \\\n            SHADOW_SIZE_M,                                                      \\\n            TRACKS_FOOT,                                                        \\\n            sAnimTable_Following,                                               \\\n            gOverworldPalette_Floette ##form,                                   \\\n            gShinyOverworldPalette_Floette ##form                               \\\n        )                                                                       \\\n        .formSpeciesIdTable = sFloetteFormSpeciesIdTable\n\n#define FLOETTE_NORMAL_INFO(form, FORM, iconPal)                                                \\\n        .baseHP        = 54,                                                                    \\\n        .baseAttack    = 45,                                                                    \\\n        .baseDefense   = 47,                                                                    \\\n        .baseSpeed     = 52,                                                                    \\\n        .baseSpAttack  = 75,                                                                    \\\n        .baseSpDefense = 98,                                                                    \\\n        .expYield = 130,                                                                        \\\n        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY),                                           \\\n        .cryId = CRY_FLOETTE,                                                                   \\\n        .frontPic = gMonFrontPic_Floette,                                                       \\\n        .frontPicSize = MON_COORDS_SIZE(48, 64),                                                \\\n        .frontPicYOffset = 3,                                                                   \\\n        .enemyMonElevation = 4,                                                                 \\\n        .backPic = gMonBackPic_Floette,                                                         \\\n        .backPicSize = MON_COORDS_SIZE(64, 64),                                                 \\\n        .backPicYOffset = 2,                                                                    \\\n        .levelUpLearnset = sFloetteLevelUpLearnset,                                             \\\n        .teachableLearnset = sFloetteTeachableLearnset,                                         \\\n        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SHINY_STONE, SPECIES_FLORGES_ ##FORM}),\\\n        FLOETTE_MISC_INFO(form, FORM, iconPal)"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLOETTE_RED",
+        "filename": "0670_floette_red.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLOETTE_YELLOW",
+        "filename": "1137_floette_yellow.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLOETTE_ORANGE",
+        "filename": "1138_floette_orange.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLOETTE_BLUE",
+        "filename": "1139_floette_blue.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLOETTE_WHITE",
+        "filename": "1140_floette_white.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLOETTE_ETERNAL",
+        "filename": "1141_floette_eternal.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#define FLORGES_MISC_INFO(Form, iconPal)                                        \\\n        .baseHP        = 78,                                                    \\\n        .baseAttack    = 65,                                                    \\\n        .baseDefense   = 68,                                                    \\\n        .baseSpeed     = 75,                                                    \\\n        .baseSpAttack  = 112,                                                   \\\n        .baseSpDefense = 154,                                                   \\\n        .types = MON_TYPES(TYPE_FAIRY),                                         \\\n        .catchRate = 45,                                                        \\\n        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 276 : 248,                \\\n        .evYield_SpDefense = 3,                                                 \\\n        .genderRatio = MON_FEMALE,                                              \\\n        .eggCycles = 20,                                                        \\\n        .friendship = STANDARD_FRIENDSHIP,                                      \\\n        .growthRate = GROWTH_MEDIUM_FAST,                                       \\\n        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY),                           \\\n        .abilities = { ABILITY_FLOWER_VEIL, ABILITY_NONE, ABILITY_SYMBIOSIS },  \\\n        .bodyColor = BODY_COLOR_WHITE,                                          \\\n        .speciesName = _(\"Florges\"),                                            \\\n        .cryId = CRY_FLORGES,                                                   \\\n        .natDexNum = NATIONAL_DEX_FLORGES,                                      \\\n        .categoryName = _(\"Garden\"),                                            \\\n        .height = 11,                                                           \\\n        .weight = 100,                                                          \\\n        .pokemonScale = 320,                                                    \\\n        .pokemonOffset = 7,                                                     \\\n        .trainerScale = 256,                                                    \\\n        .trainerOffset = 0,                                                     \\\n        .frontPic = gMonFrontPic_Florges,                                       \\\n        .frontPicSize = MON_COORDS_SIZE(64, 64),                                \\\n        .frontPicYOffset = 0,                                                   \\\n        .frontAnimFrames = sAnims_Florges,                                      \\\n        .frontAnimId = ANIM_V_SLIDE_SLOW,                                       \\\n        .backPic = gMonBackPic_Florges,                                         \\\n        .backPicSize = MON_COORDS_SIZE(64, 48),                                 \\\n        .backPicYOffset = 9,                                                    \\\n        .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,                            \\\n        .palette = gMonPalette_Florges##Form,                                   \\\n        .shinyPalette = gMonShinyPalette_Florges##Form,                         \\\n        .iconSprite = gMonIcon_Florges##Form,                                   \\\n        .iconPalIndex = iconPal,                                                \\\n        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,                                 \\\n        SHADOW(-5, 15, SHADOW_SIZE_M)                                           \\\n        FOOTPRINT(Florges)                                                      \\\n        OVERWORLD(                                                              \\\n            sPicTable_Florges ##Form,                                           \\\n            SIZE_32x32,                                                         \\\n            SHADOW_SIZE_M,                                                      \\\n            TRACKS_FOOT,                                                        \\\n            sAnimTable_Following,                                               \\\n            gOverworldPalette_Florges ##Form,                                   \\\n            gShinyOverworldPalette_Florges ##Form                               \\\n        )                                                                       \\\n        .levelUpLearnset = sFlorgesLevelUpLearnset,                             \\\n        .teachableLearnset = sFlorgesTeachableLearnset,                         \\\n        .formSpeciesIdTable = sFlorgesFormSpeciesIdTable"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLORGES_RED",
+        "filename": "0671_florges_red.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLORGES_YELLOW",
+        "filename": "1142_florges_yellow.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLORGES_ORANGE",
+        "filename": "1143_florges_orange.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLORGES_BLUE",
+        "filename": "1144_florges_blue.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLORGES_WHITE",
+        "filename": "1145_florges_white.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FLOETTE_MEGA",
+        "filename": "1545_floette_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SKIDDO",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SKIDDO",
+        "filename": "0672_skiddo.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GOGOAT",
+        "filename": "0673_gogoat.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_PANCHAM",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_PANCHAM",
+        "filename": "0674_pancham.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_PANGORO",
+        "filename": "0675_pangoro.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_FURFROU",
+    "components": [
+      {
+        "type": "raw",
+        "content": "#define FURFROU_MISC_INFO(_form, _noFlip, frontWidth, frontYOffset, backWidth, backYOffset, _iconIdx)   \\\n    {                                                                                                   \\\n        .baseHP        = 75,                                                                            \\\n        .baseAttack    = 80,                                                                            \\\n        .baseDefense   = 60,                                                                            \\\n        .baseSpeed     = 102,                                                                           \\\n        .baseSpAttack  = 65,                                                                            \\\n        .baseSpDefense = 90,                                                                            \\\n        .types = MON_TYPES(TYPE_NORMAL),                                                                \\\n        .catchRate = 160,                                                                               \\\n        .expYield = 165,                                                                                \\\n        .evYield_Speed = 1,                                                                             \\\n        .genderRatio = PERCENT_FEMALE(50),                                                              \\\n        .eggCycles = 20,                                                                                \\\n        .friendship = STANDARD_FRIENDSHIP,                                                              \\\n        .growthRate = GROWTH_MEDIUM_FAST,                                                               \\\n        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),                                                   \\\n        .abilities = { ABILITY_FUR_COAT, ABILITY_NONE, ABILITY_NONE },                                  \\\n        .bodyColor = BODY_COLOR_WHITE,                                                                  \\\n        .noFlip = _noFlip,                                                                              \\\n        .speciesName = _(\"Furfrou\"),                                                                    \\\n        .cryId = CRY_FURFROU,                                                                           \\\n        .natDexNum = NATIONAL_DEX_FURFROU,                                                              \\\n        .categoryName = _(\"Poodle\"),                                                                    \\\n        .height = 12,                                                                                   \\\n        .weight = 280,                                                                                  \\\n        .description = gFurfrouPokedexText,                                                             \\\n        .pokemonScale = 282,                                                                            \\\n        .pokemonOffset = 4,                                                                             \\\n        .trainerScale = 256,                                                                            \\\n        .trainerOffset = 0,                                                                             \\\n        .frontPic = gMonFrontPic_Furfrou##_form,                                                        \\\n        .frontPicSize = MON_COORDS_SIZE(frontWidth, 64),                                                \\\n        .frontPicYOffset = frontYOffset,                                                                \\\n        .frontAnimFrames = sAnims_Furfrou,                                                              \\\n        .frontAnimId = ANIM_H_SLIDE,                                                                    \\\n        .backPic = gMonBackPic_Furfrou##_form,                                                          \\\n        .backPicSize = MON_COORDS_SIZE(backWidth, 64),                                                  \\\n        .backPicYOffset = backYOffset,                                                                  \\\n        .backAnimId = BACK_ANIM_V_STRETCH,                                                              \\\n        .palette = gMonPalette_Furfrou##_form,                                                          \\\n        .shinyPalette = gMonShinyPalette_Furfrou##_form,                                                \\\n        .iconSprite = gMonIcon_Furfrou##_form,                                                          \\\n        .iconPalIndex = _iconIdx,                                                                       \\\n        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,                                                         \\\n        SHADOW(3, 10, SHADOW_SIZE_XL_BATTLE_ONLY)                                                       \\\n        FOOTPRINT(Furfrou)                                                                              \\\n        OVERWORLD(                                                                                      \\\n            sPicTable_Furfrou##_form,                                                                   \\\n            SIZE_32x32,                                                                                 \\\n            SHADOW_SIZE_M,                                                                              \\\n            TRACKS_FOOT,                                                                                \\\n            sAnimTable_Following,                                                                       \\\n            gOverworldPalette_Furfrou##_form,                                                           \\\n            gShinyOverworldPalette_Furfrou##_form                                                       \\\n        )                                                                                               \\\n        .levelUpLearnset = sFurfrouLevelUpLearnset,                                                     \\\n        .teachableLearnset = sFurfrouTeachableLearnset,                                                 \\\n        .eggMoveLearnset = sFurfrouEggMoveLearnset,                                                     \\\n        .formSpeciesIdTable = sFurfrouFormSpeciesIdTable,                                               \\\n        .formChangeTable = sFurfrouFormChangeTable,                                                     \\\n    }"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FURFROU_NATURAL",
+        "filename": "0676_furfrou_natural.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FURFROU_HEART",
+        "filename": "1146_furfrou_heart.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FURFROU_STAR",
+        "filename": "1147_furfrou_star.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FURFROU_DIAMOND",
+        "filename": "1148_furfrou_diamond.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FURFROU_DEBUTANTE",
+        "filename": "1149_furfrou_debutante.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FURFROU_MATRON",
+        "filename": "1150_furfrou_matron.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FURFROU_DANDY",
+        "filename": "1151_furfrou_dandy.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FURFROU_LA_REINE",
+        "filename": "1152_furfrou_la_reine.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FURFROU_KABUKI",
+        "filename": "1153_furfrou_kabuki.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_FURFROU_PHARAOH",
+        "filename": "1154_furfrou_pharaoh.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ESPURR",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ESPURR",
+        "filename": "0677_espurr.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MEOWSTIC_M",
+        "filename": "0678_meowstic_m.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MEOWSTIC_F",
+        "filename": "1155_meowstic_f.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MEOWSTIC_M_MEGA",
+        "filename": "1561_meowstic_m_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MEOWSTIC_F_MEGA",
+        "filename": "1562_meowstic_f_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_HONEDGE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_HONEDGE",
+        "filename": "0679_honedge.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DOUBLADE",
+        "filename": "0680_doublade.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#define AEGISLASH_MAIN_STAT (P_UPDATED_STATS >= GEN_8 ? 140 : 150)"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_AEGISLASH_SHIELD",
+        "filename": "0681_aegislash_shield.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_AEGISLASH_BLADE",
+        "filename": "1156_aegislash_blade.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SPRITZEE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SPRITZEE",
+        "filename": "0682_spritzee.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_AROMATISSE",
+        "filename": "0683_aromatisse.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SWIRLIX",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SWIRLIX",
+        "filename": "0684_swirlix.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SLURPUFF",
+        "filename": "0685_slurpuff.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_INKAY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_INKAY",
+        "filename": "0686_inkay.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MALAMAR",
+        "filename": "0687_malamar.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MALAMAR_MEGA",
+        "filename": "1542_malamar_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_BINACLE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_BINACLE",
+        "filename": "0688_binacle.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BARBARACLE",
+        "filename": "0689_barbaracle.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BARBARACLE_MEGA",
+        "filename": "1546_barbaracle_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SKRELP",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SKRELP",
+        "filename": "0690_skrelp.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DRAGALGE",
+        "filename": "0691_dragalge.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DRAGALGE_MEGA",
+        "filename": "1543_dragalge_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CLAUNCHER",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CLAUNCHER",
+        "filename": "0692_clauncher.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CLAWITZER",
+        "filename": "0693_clawitzer.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_HELIOPTILE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_HELIOPTILE",
+        "filename": "0694_helioptile.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_HELIOLISK",
+        "filename": "0695_heliolisk.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_TYRUNT",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_TYRUNT",
+        "filename": "0696_tyrunt.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_TYRANTRUM",
+        "filename": "0697_tyrantrum.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_AMAURA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_AMAURA",
+        "filename": "0698_amaura.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_AURORUS",
+        "filename": "0699_aurorus.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_HAWLUCHA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_HAWLUCHA",
+        "filename": "0701_hawlucha.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_HAWLUCHA_MEGA",
+        "filename": "1544_hawlucha_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_DEDENNE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_DEDENNE",
+        "filename": "0702_dedenne.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CARBINK",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CARBINK",
+        "filename": "0703_carbink.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_GOOMY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_GOOMY",
+        "filename": "0704_goomy.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SLIGGOO",
+        "filename": "0705_sliggoo.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GOODRA",
+        "filename": "0706_goodra.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#if P_HISUIAN_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SLIGGOO_HISUI",
+        "filename": "1005_sliggoo_hisui.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GOODRA_HISUI",
+        "filename": "1006_goodra_hisui.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_HISUIAN_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_KLEFKI",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_KLEFKI",
+        "filename": "0707_klefki.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_PHANTUMP",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_PHANTUMP",
+        "filename": "0708_phantump.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_TREVENANT",
+        "filename": "0709_trevenant.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_PUMPKABOO",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_PUMPKABOO_AVERAGE",
+        "filename": "0710_pumpkaboo_average.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_PUMPKABOO_SMALL",
+        "filename": "1157_pumpkaboo_small.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_PUMPKABOO_LARGE",
+        "filename": "1158_pumpkaboo_large.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_PUMPKABOO_SUPER",
+        "filename": "1159_pumpkaboo_super.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GOURGEIST_AVERAGE",
+        "filename": "0711_gourgeist_average.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GOURGEIST_SMALL",
+        "filename": "1160_gourgeist_small.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GOURGEIST_LARGE",
+        "filename": "1161_gourgeist_large.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GOURGEIST_SUPER",
+        "filename": "1162_gourgeist_super.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_BERGMITE",
+    "components": [
+      {
+        "type": "raw",
+        "content": "#if P_UPDATED_EGG_GROUPS >= GEN_8\n    #define BERGMITE_EGG_GROUPS MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_MINERAL)\n#else\n    #define BERGMITE_EGG_GROUPS MON_EGG_GROUPS(EGG_GROUP_MONSTER)\n#endif"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BERGMITE",
+        "filename": "0712_bergmite.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_AVALUGG",
+        "filename": "0713_avalugg.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#if P_HISUIAN_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_AVALUGG_HISUI",
+        "filename": "1007_avalugg_hisui.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_HISUIAN_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_NOIBAT",
+    "components": [
+      {
+        "type": "raw",
+        "content": "#if P_UPDATED_EGG_GROUPS >= GEN_8\n    #define NOIBAT_EGG_GROUPS MON_EGG_GROUPS(EGG_GROUP_FLYING, EGG_GROUP_DRAGON)\n#else\n    #define NOIBAT_EGG_GROUPS MON_EGG_GROUPS(EGG_GROUP_FLYING)\n#endif"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_NOIBAT",
+        "filename": "0714_noibat.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_NOIVERN",
+        "filename": "0715_noivern.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_XERNEAS",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_XERNEAS_NEUTRAL",
+        "filename": "0716_xerneas_neutral.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_XERNEAS_ACTIVE",
+        "filename": "1163_xerneas_active.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_YVELTAL",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_YVELTAL",
+        "filename": "0717_yveltal.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ZYGARDE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ZYGARDE_50",
+        "filename": "0718_zygarde_50.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ZYGARDE_50_POWER_CONSTRUCT",
+        "filename": "1166_zygarde_50_power_construct.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ZYGARDE_10_AURA_BREAK",
+        "filename": "1164_zygarde_10_aura_break.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ZYGARDE_10_POWER_CONSTRUCT",
+        "filename": "1165_zygarde_10_power_construct.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ZYGARDE_COMPLETE",
+        "filename": "1167_zygarde_complete.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ZYGARDE_MEGA",
+        "filename": "1547_zygarde_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_DIANCIE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_DIANCIE",
+        "filename": "0719_diancie.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#if P_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DIANCIE_MEGA",
+        "filename": "0952_diancie_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_HOOPA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_HOOPA_CONFINED",
+        "filename": "0720_hoopa_confined.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_HOOPA_UNBOUND",
+        "filename": "1168_hoopa_unbound.json",
+        "gen": 6
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_VOLCANION",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_VOLCANION",
+        "filename": "0721_volcanion.json",
+        "gen": 6
+      }
+    ]
+  }
+]

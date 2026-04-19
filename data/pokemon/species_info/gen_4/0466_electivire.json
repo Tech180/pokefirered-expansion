@@ -1,0 +1,275 @@
+{
+  "species_constant": "SPECIES_ELECTIVIRE",
+  "family_constant": "P_FAMILY_ELECTABUZZ",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "123"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "67"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "85"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_ELECTRIC)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "30"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_EXP_YIELDS >= GEN_8"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "270"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#elif P_UPDATED_EXP_YIELDS >= GEN_5"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "243"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "199"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_ELECTIRIZER"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(25)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "25"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_MOTOR_DRIVE, ABILITY_NONE, ABILITY_VITAL_SPIRIT }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_YELLOW"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Electivire\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_ELECTIVIRE"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_ELECTIVIRE"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Thunderbolt\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "18"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "1386"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"When it gets excited, it thumps its chest.\\n\"\n\"With every thud, thunder roars, electric\\n\"\n\"sparks shower all around and blue sparks\\n\"\n\"begin to crackle between its horns.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "267"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "286"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Electivire"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 50),\nANIMCMD_FRAME(1, 15),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_GLOW_YELLOW"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Electivire"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 48)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "9"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_SHAKE_FLASH_YELLOW"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Electivire"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Electivire"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Electivire"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-3, 11, SHADOW_SIZE_XL_BATTLE_ONLY",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Electivire",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Electivire,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Electivire,\ngShinyOverworldPalette_Electivire",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sElectivireLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sElectivireTeachableLearnset"
+    }
+  ]
+}

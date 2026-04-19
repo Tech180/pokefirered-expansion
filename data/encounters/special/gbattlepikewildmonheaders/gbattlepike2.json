@@ -1,0 +1,73 @@
+{
+  "group_label": "gBattlePikeWildMonHeaders",
+  "encounters": [
+    {
+      "base_label": "gBattlePike_2",
+      "land_mons": {
+        "encounter_rate": 10,
+        "mons": [
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_SEVIPER"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_MILOTIC"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_ELECTRODE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_ELECTRODE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_ELECTRODE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_ELECTRODE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_SEVIPER"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_MILOTIC"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_ELECTRODE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_ELECTRODE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_SEVIPER"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_MILOTIC"
+          }
+        ]
+      }
+    }
+  ]
+}

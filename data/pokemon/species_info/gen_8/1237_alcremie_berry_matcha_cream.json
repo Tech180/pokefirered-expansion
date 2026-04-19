@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_ALCREMIE_BERRY_MATCHA_CREAM",
+  "family_constant": "P_FAMILY_MILCERY",
+  "macro_call": "ALCREMIE_REGULAR_SPECIES_INFO(Berry,      MatchaCream,  BODY_COLOR_GREEN)"
+}

@@ -1,0 +1,254 @@
+{
+  "species_constant": "SPECIES_TURTWIG",
+  "family_constant": "P_FAMILY_TURTWIG",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "55"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "68"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "64"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "31"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "55"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_GRASS)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "64"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(12.5)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_GRASS)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_OVERGROW, ABILITY_NONE, ABILITY_SHELL_ARMOR }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_GREEN"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Turtwig\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_TURTWIG"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_TURTWIG"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Tiny Leaf\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "102"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"The shell on its back is made of soil. \\n\"\n\"On a very healthy Turtwig, the shell \\n\"\n\"should feel moist. The leaf on its head\\n\"\n\"wilts if it is thirsty.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "491"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Turtwig"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(40, 48)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "11"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 15),\nANIMCMD_FRAME(1, 15),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_V_SQUISH_AND_BOUNCE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Turtwig"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(48, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_H_SLIDE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Turtwig"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Turtwig"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Turtwig"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_SLOW"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "1, 2, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Turtwig",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Turtwig,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Turtwig,\ngShinyOverworldPalette_Turtwig",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sTurtwigLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sTurtwigTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sTurtwigEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 18, SPECIES_GROTLE})"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_ARCEUS_PSYCHIC",
+  "family_constant": "P_FAMILY_ARCEUS",
+  "macro_call": "ARCEUS_SPECIES_INFO(TYPE_PSYCHIC,  Psychic,  1)"
+}

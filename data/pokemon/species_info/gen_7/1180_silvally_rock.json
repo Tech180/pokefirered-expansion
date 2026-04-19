@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_SILVALLY_ROCK",
+  "family_constant": "P_FAMILY_TYPE_NULL",
+  "macro_call": "SILVALLY_SPECIES_INFO(TYPE_ROCK,     Rock)"
+}

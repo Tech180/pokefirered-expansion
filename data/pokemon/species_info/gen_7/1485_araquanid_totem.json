@@ -1,0 +1,259 @@
+{
+  "species_constant": "SPECIES_ARAQUANID_TOTEM",
+  "family_constant": "P_FAMILY_DEWPIDER",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "68"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "92"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "42"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "132"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_WATER, TYPE_BUG)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "159"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpDefense",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_MYSTIC_WATER"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_BUG)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_WATER_BUBBLE, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_GREEN"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Araquanid\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_ARAQUANID"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_ARAQUANID"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Water Bubble\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "31"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "2175"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "gAraquanidPokedexText"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "267"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "286"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Araquanid"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_Araquanid"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_H_SHAKE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Araquanid"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 48)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "12"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Araquanid"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Araquanid"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Araquanid"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-6, 9, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Araquanid",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Araquanid,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Araquanid,\ngShinyOverworldPalette_Araquanid",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isTotem",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "perfectIVCount",
+      "value": "LEGENDARY_PERFECT_IV_COUNT"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sAraquanidLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sAraquanidTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sAraquanidFormSpeciesIdTable"
+    }
+  ]
+}

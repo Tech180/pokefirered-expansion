@@ -1,0 +1,33 @@
+{
+  "identifier": "TRAINER_BIKER_GOON_2",
+  "trainer_name": "GOON",
+  "trainer_class": "TRAINER_CLASS_BIKER",
+  "trainer_pic": "TRAINER_PIC_BIKER",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_MALE",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_KOFFING",
+      "level": 38,
+      "moves": [
+        "MOVE_HAZE",
+        "MOVE_SMOKESCREEN",
+        "MOVE_SLUDGE",
+        "MOVE_TACKLE"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    }
+  ]
+}

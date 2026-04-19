@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_FLABEBE_WHITE",
+  "family_constant": "P_FAMILY_FLABEBE",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "FLABEBE_MISC_INFO",
+      "args": "White, WHITE, 1",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"When evening falls, it searches out\\n\"\n\"a place blooming with flowers of\\n\"\n\"the same white color as itself, and\\n\"\n\"then it goes to sleep.\")"
+    }
+  ]
+}

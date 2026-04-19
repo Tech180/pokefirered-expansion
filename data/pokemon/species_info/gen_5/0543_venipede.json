@@ -1,0 +1,276 @@
+{
+  "species_constant": "SPECIES_VENIPEDE",
+  "family_constant": "P_FAMILY_VENIPEDE",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "59"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "57"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "39"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_BUG, TYPE_POISON)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "255"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "52"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_POISON_BARB"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_BUG)"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_UPDATED_ABILITIES >= GEN_6"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_POISON_POINT, ABILITY_SWARM, ABILITY_SPEED_BOOST }"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_POISON_POINT, ABILITY_SWARM, ABILITY_QUICK_FEET }"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_RED"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Venipede\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_VENIPEDE"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_VENIPEDE"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Centipede\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "53"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Using the feelers on its head and tail,\\n\"\n\"it picks up vibrations in the air to\\n\"\n\"determine its prey's location and state.\\n\"\n\"It is brutally aggressive.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "491"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "16"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Venipede"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(48, 32)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "16"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 5),\nANIMCMD_FRAME(1, 15),\nANIMCMD_FRAME(0, 15),\nANIMCMD_FRAME(1, 15),\nANIMCMD_FRAME(0, 15),\nANIMCMD_FRAME(1, 15),\nANIMCMD_FRAME(0, 5),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_H_SLIDE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Venipede"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 40)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "14"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_H_VIBRATE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Venipede"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Venipede"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Venipede"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_FAST"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-2, -3, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Venipede",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Venipede,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Venipede,\ngShinyOverworldPalette_Venipede",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sVenipedeLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sVenipedeTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sVenipedeEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 22, SPECIES_WHIRLIPEDE})"
+    }
+  ]
+}

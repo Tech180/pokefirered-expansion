@@ -6,11 +6,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 #if P_FAMILY_VICTINI
     [SPECIES_VICTINI] =
     {
-        .baseHP        = 100,
-        .baseAttack    = 100,
-        .baseDefense   = 100,
-        .baseSpeed     = 100,
-        .baseSpAttack  = 100,
+        .baseHP = 100,
+        .baseAttack = 100,
+        .baseDefense = 100,
+        .baseSpeed = 100,
+        .baseSpAttack = 100,
         .baseSpDefense = 100,
         .types = MON_TYPES(TYPE_PSYCHIC, TYPE_FIRE),
         .catchRate = 3,
@@ -30,10 +30,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 4,
         .weight = 40,
         .description = COMPOUND_STRING(
-            "This Pokémon brings victory.\n"
-            "It is said that Trainers with Victini\n"
-            "always win, regardless of the type\n"
-            "of encounter."),
+"This Pokémon brings victory.\n"
+"It is said that Trainers with Victini\n"
+"always win, regardless of the type\n"
+"of encounter."),
         .pokemonScale = 491,
         .pokemonOffset = 16,
         .trainerScale = 256,
@@ -42,10 +42,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 56),
         .frontPicYOffset = 10,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 46),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 46),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_H_JUMPS,
         .backPic = gMonBackPic_Victini,
         .backPicSize = MON_COORDS_SIZE(40, 64),
@@ -58,31 +58,29 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 4, SHADOW_SIZE_S)
         FOOTPRINT(Victini)
-        OVERWORLD(
-            sPicTable_Victini,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Victini,
-            gShinyOverworldPalette_Victini
-        )
+        OVERWORLD(sPicTable_Victini,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Victini,
+gShinyOverworldPalette_Victini)
         .isMythical = TRUE,
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sVictiniLevelUpLearnset,
         .teachableLearnset = sVictiniTeachableLearnset,
     },
-#endif //P_FAMILY_VICTINI
+#endif // P_FAMILY_VICTINI
 
 #if P_FAMILY_SNIVY
     [SPECIES_SNIVY] =
     {
-        .baseHP        = 45,
-        .baseAttack    = 45,
-        .baseDefense   = 55,
-        .baseSpeed     = 63,
-        .baseSpAttack  = 45,
+        .baseHP = 45,
+        .baseAttack = 45,
+        .baseDefense = 55,
+        .baseSpeed = 63,
+        .baseSpAttack = 45,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_GRASS),
         .catchRate = 45,
@@ -102,10 +100,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 81,
         .description = COMPOUND_STRING(
-            "It is very intelligent and calm.\n"
-            "Being exposed to lots of sunlight makes\n"
-            "its movements swifter. When they are\n"
-            "not feeling well, their tails droop."),
+"It is very intelligent and calm.\n"
+"Being exposed to lots of sunlight makes\n"
+"its movements swifter. When they are\n"
+"not feeling well, their tails droop."),
         .pokemonScale = 422,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -114,10 +112,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 40),
         .frontPicYOffset = 12,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 1),
-            ANIMCMD_FRAME(1, 36),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_FRAME(1, 36),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Snivy,
         .backPicSize = MON_COORDS_SIZE(56, 48),
@@ -130,28 +128,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(-1, 1, SHADOW_SIZE_S)
         FOOTPRINT(Snivy)
-        OVERWORLD(
-            sPicTable_Snivy,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Snivy,
-            gShinyOverworldPalette_Snivy
-        )
+        OVERWORLD(sPicTable_Snivy,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Snivy,
+gShinyOverworldPalette_Snivy)
         .levelUpLearnset = sSnivyLevelUpLearnset,
         .teachableLearnset = sSnivyTeachableLearnset,
         .eggMoveLearnset = sSnivyEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_SERVINE}),
     },
-
     [SPECIES_SERVINE] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 60,
-        .baseDefense   = 75,
-        .baseSpeed     = 83,
-        .baseSpAttack  = 60,
+        .baseHP = 60,
+        .baseAttack = 60,
+        .baseDefense = 75,
+        .baseSpeed = 83,
+        .baseSpAttack = 60,
         .baseSpDefense = 75,
         .types = MON_TYPES(TYPE_GRASS),
         .catchRate = 45,
@@ -171,10 +166,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 8,
         .weight = 160,
         .description = COMPOUND_STRING(
-            "When it gets dirty, its leaves can't be\n"
-            "used in photosynthesis, so it always keeps\n"
-            "clean. They avoid attacks by sinking into\n"
-            "the shadows of thick foliage."),
+"When it gets dirty, its leaves can't be\n"
+"used in photosynthesis, so it always keeps\n"
+"clean. They avoid attacks by sinking into\n"
+"the shadows of thick foliage."),
         .pokemonScale = 366,
         .pokemonOffset = 9,
         .trainerScale = 257,
@@ -183,14 +178,14 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 56),
         .frontPicYOffset = 7,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 50),
-        ),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 50),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Servine,
         .backPicSize = MON_COORDS_SIZE(48, 64),
@@ -203,27 +198,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 7, SHADOW_SIZE_S)
         FOOTPRINT(Servine)
-        OVERWORLD(
-            sPicTable_Servine,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Servine,
-            gShinyOverworldPalette_Servine
-        )
+        OVERWORLD(sPicTable_Servine,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Servine,
+gShinyOverworldPalette_Servine)
         .levelUpLearnset = sServineLevelUpLearnset,
         .teachableLearnset = sServineTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_SERPERIOR}),
     },
-
     [SPECIES_SERPERIOR] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 75,
-        .baseDefense   = 95,
-        .baseSpeed     = 113,
-        .baseSpAttack  = 75,
+        .baseHP = 75,
+        .baseAttack = 75,
+        .baseDefense = 95,
+        .baseSpeed = 113,
+        .baseSpAttack = 75,
         .baseSpDefense = 95,
         .types = MON_TYPES(TYPE_GRASS),
         .catchRate = 45,
@@ -243,10 +235,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 33,
         .weight = 630,
         .description = COMPOUND_STRING(
-            "They raise their heads to intimidate foes,\n"
-            "but only give it their all when fighting\n"
-            "powerful opponents who are not fazed\n"
-            "by the glare from its noble eyes."),
+"They raise their heads to intimidate foes,\n"
+"but only give it their all when fighting\n"
+"powerful opponents who are not fazed\n"
+"by the glare from its noble eyes."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 405,
@@ -255,12 +247,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 56),
         .frontPicYOffset = 4,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_CIRCULAR_STRETCH_TWICE,
         .backPic = gMonBackPic_Serperior,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -273,28 +265,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(2, 8, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Serperior)
-        OVERWORLD(
-            sPicTable_Serperior,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Serperior,
-            gShinyOverworldPalette_Serperior
-        )
+        OVERWORLD(sPicTable_Serperior,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Serperior,
+gShinyOverworldPalette_Serperior)
         .levelUpLearnset = sSerperiorLevelUpLearnset,
         .teachableLearnset = sSerperiorTeachableLearnset,
     },
-#endif //P_FAMILY_SNIVY
+#endif // P_FAMILY_SNIVY
 
 #if P_FAMILY_TEPIG
     [SPECIES_TEPIG] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 63,
-        .baseDefense   = 45,
-        .baseSpeed     = 45,
-        .baseSpAttack  = 45,
+        .baseHP = 65,
+        .baseAttack = 63,
+        .baseDefense = 45,
+        .baseSpeed = 45,
+        .baseSpAttack = 45,
         .baseSpDefense = 45,
         .types = MON_TYPES(TYPE_FIRE),
         .catchRate = 45,
@@ -314,10 +304,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 99,
         .description = COMPOUND_STRING(
-            "It loves to eat roasted berries, but\n"
-            "sometimes it gets too excited and burns\n"
-            "them to a crisp. It blows fire through\n"
-            "its nose."),
+"It loves to eat roasted berries, but\n"
+"sometimes it gets too excited and burns\n"
+"them to a crisp. It blows fire through\n"
+"its nose."),
         .pokemonScale = 432,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -326,12 +316,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 48),
         .frontPicYOffset = 15,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 27),
-            ANIMCMD_FRAME(1, 6),
-            ANIMCMD_FRAME(0, 6),
-            ANIMCMD_FRAME(1, 6),
-            ANIMCMD_FRAME(0, 1),
-        ),
+ANIMCMD_FRAME(0, 27),
+ANIMCMD_FRAME(1, 6),
+ANIMCMD_FRAME(0, 6),
+ANIMCMD_FRAME(1, 6),
+ANIMCMD_FRAME(0, 1),
+),
         .frontAnimId = ANIM_H_SLIDE,
         .backPic = gMonBackPic_Tepig,
         .backPicSize = MON_COORDS_SIZE(48, 56),
@@ -344,28 +334,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_SLOW,
         SHADOW(0, -2, SHADOW_SIZE_S)
         FOOTPRINT(Tepig)
-        OVERWORLD(
-            sPicTable_Tepig,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Tepig,
-            gShinyOverworldPalette_Tepig
-        )
+        OVERWORLD(sPicTable_Tepig,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Tepig,
+gShinyOverworldPalette_Tepig)
         .levelUpLearnset = sTepigLevelUpLearnset,
         .teachableLearnset = sTepigTeachableLearnset,
         .eggMoveLearnset = sTepigEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_PIGNITE}),
     },
-
     [SPECIES_PIGNITE] =
     {
-        .baseHP        = 90,
-        .baseAttack    = 93,
-        .baseDefense   = 55,
-        .baseSpeed     = 55,
-        .baseSpAttack  = 70,
+        .baseHP = 90,
+        .baseAttack = 93,
+        .baseDefense = 55,
+        .baseSpeed = 55,
+        .baseSpAttack = 70,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_FIRE, TYPE_FIGHTING),
         .catchRate = 45,
@@ -385,10 +372,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 10,
         .weight = 555,
         .description = COMPOUND_STRING(
-            "The more it eats, the more fuel it has\n"
-            "to make the fire in its stomach stronger.\n"
-            "When it is angered, the intensity of the\n"
-            "flame increases."),
+"The more it eats, the more fuel it has\n"
+"to make the fire in its stomach stronger.\n"
+"When it is angered, the intensity of the\n"
+"flame increases."),
         .pokemonScale = 305,
         .pokemonOffset = 8,
         .trainerScale = 257,
@@ -397,10 +384,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 8,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 1),
-            ANIMCMD_FRAME(1, 36),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_FRAME(1, 36),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Pignite,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -413,27 +400,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 6, SHADOW_SIZE_M)
         FOOTPRINT(Pignite)
-        OVERWORLD(
-            sPicTable_Pignite,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Pignite,
-            gShinyOverworldPalette_Pignite
-        )
+        OVERWORLD(sPicTable_Pignite,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Pignite,
+gShinyOverworldPalette_Pignite)
         .levelUpLearnset = sPigniteLevelUpLearnset,
         .teachableLearnset = sPigniteTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_EMBOAR}),
     },
-
     [SPECIES_EMBOAR] =
     {
-        .baseHP        = 110,
-        .baseAttack    = 123,
-        .baseDefense   = 65,
-        .baseSpeed     = 65,
-        .baseSpAttack  = 100,
+        .baseHP = 110,
+        .baseAttack = 123,
+        .baseDefense = 65,
+        .baseSpeed = 65,
+        .baseSpAttack = 100,
         .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_FIRE, TYPE_FIGHTING),
         .catchRate = 45,
@@ -454,10 +438,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 16,
         .weight = 1500,
         .description = COMPOUND_STRING(
-            "It is adept at using many different moves.\n"
-            "It can throw a fire punch by setting its\n"
-            "fists on fire with its fiery chin.\n"
-            "It cares deeply about its friends."),
+"It is adept at using many different moves.\n"
+"It can throw a fire punch by setting its\n"
+"fists on fire with its fiery chin.\n"
+"It cares deeply about its friends."),
         .pokemonScale = 259,
         .pokemonOffset = 1,
         .trainerScale = 296,
@@ -466,29 +450,29 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 4),
-            ANIMCMD_FRAME(0, 4),
-            ANIMCMD_FRAME(1, 4),
-            ANIMCMD_FRAME(0, 4),
-            ANIMCMD_FRAME(1, 4),
-            ANIMCMD_FRAME(0, 4),
-            ANIMCMD_FRAME(1, 4),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 4),
-            ANIMCMD_FRAME(0, 4),
-            ANIMCMD_FRAME(1, 4),
-            ANIMCMD_FRAME(0, 4),
-            ANIMCMD_FRAME(1, 4),
-            ANIMCMD_FRAME(0, 4),
-            ANIMCMD_FRAME(1, 4),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 4),
-            ANIMCMD_FRAME(0, 4),
-            ANIMCMD_FRAME(1, 4),
-            ANIMCMD_FRAME(0, 4),
-            ANIMCMD_FRAME(1, 4),
-            ANIMCMD_FRAME(0, 4),
-        ),
+ANIMCMD_FRAME(1, 4),
+ANIMCMD_FRAME(0, 4),
+ANIMCMD_FRAME(1, 4),
+ANIMCMD_FRAME(0, 4),
+ANIMCMD_FRAME(1, 4),
+ANIMCMD_FRAME(0, 4),
+ANIMCMD_FRAME(1, 4),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 4),
+ANIMCMD_FRAME(0, 4),
+ANIMCMD_FRAME(1, 4),
+ANIMCMD_FRAME(0, 4),
+ANIMCMD_FRAME(1, 4),
+ANIMCMD_FRAME(0, 4),
+ANIMCMD_FRAME(1, 4),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 4),
+ANIMCMD_FRAME(0, 4),
+ANIMCMD_FRAME(1, 4),
+ANIMCMD_FRAME(0, 4),
+ANIMCMD_FRAME(1, 4),
+ANIMCMD_FRAME(0, 4),
+),
         .frontAnimId = ANIM_DEEP_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Emboar,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -501,29 +485,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 12, SHADOW_SIZE_L)
         FOOTPRINT(Emboar)
-        OVERWORLD(
-            sPicTable_Emboar,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Emboar,
-            gShinyOverworldPalette_Emboar
-        )
+        OVERWORLD(sPicTable_Emboar,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Emboar,
+gShinyOverworldPalette_Emboar)
         .levelUpLearnset = sEmboarLevelUpLearnset,
         .teachableLearnset = sEmboarTeachableLearnset,
         .formSpeciesIdTable = sEmboarFormSpeciesIdTable,
         .formChangeTable = sEmboarFormChangeTable,
     },
-
 #if P_GEN_9_MEGA_EVOLUTIONS
+
     [SPECIES_EMBOAR_MEGA] =
     {
-        .baseHP        = 110,
-        .baseAttack    = 148,
-        .baseDefense   = 75,
-        .baseSpeed     = 75,
-        .baseSpAttack  = 110,
+        .baseHP = 110,
+        .baseAttack = 148,
+        .baseDefense = 75,
+        .baseSpeed = 75,
+        .baseSpAttack = 110,
         .baseSpDefense = 110,
         .types = MON_TYPES(TYPE_FIRE, TYPE_FIGHTING),
         .catchRate = 45,
@@ -548,19 +530,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 18,
         .weight = 1803,
         .description = COMPOUND_STRING(
-            "Brandishing a blazing flame\n"
-            "shaped like a serpentine spear,\n"
-            "it rushes in to save its\n"
-            "imperiled allies."),
+"Brandishing a blazing flame\n"
+"shaped like a serpentine spear,\n"
+"it rushes in to save its\n"
+"imperiled allies."),
         .frontPic = gMonFrontPic_EmboarMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_EmboarMega,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 1,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_EmboarMega,
         .shinyPalette = gMonShinyPalette_EmboarMega,
         .iconSprite = gMonIcon_EmboarMega,
@@ -575,16 +555,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formChangeTable = sEmboarFormChangeTable,
     },
 #endif //P_GEN_9_MEGA_EVOLUTIONS
-#endif //P_FAMILY_TEPIG
+
+#endif // P_FAMILY_TEPIG
 
 #if P_FAMILY_OSHAWOTT
     [SPECIES_OSHAWOTT] =
     {
-        .baseHP        = 55,
-        .baseAttack    = 55,
-        .baseDefense   = 45,
-        .baseSpeed     = 45,
-        .baseSpAttack  = 63,
+        .baseHP = 55,
+        .baseAttack = 55,
+        .baseDefense = 45,
+        .baseSpeed = 45,
+        .baseSpAttack = 63,
         .baseSpDefense = 45,
         .types = MON_TYPES(TYPE_WATER),
         .catchRate = 45,
@@ -604,10 +585,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 59,
         .description = COMPOUND_STRING(
-            "The scalchop on its stomach isn't just\n"
-            "used for battle, it can be used to break\n"
-            "open hard berries as well. It is made\n"
-            "from the same element as its claws."),
+"The scalchop on its stomach isn't just\n"
+"used for battle, it can be used to break\n"
+"open hard berries as well. It is made\n"
+"from the same element as its claws."),
         .pokemonScale = 432,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -616,14 +597,14 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 40),
         .frontPicYOffset = 14,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 13),
-            ANIMCMD_FRAME(1, 7),
-            ANIMCMD_FRAME(0, 13),
-            ANIMCMD_FRAME(1, 7),
-            ANIMCMD_FRAME(0, 13),
-            ANIMCMD_FRAME(1, 7),
-            ANIMCMD_FRAME(0, 11),
-        ),
+ANIMCMD_FRAME(0, 13),
+ANIMCMD_FRAME(1, 7),
+ANIMCMD_FRAME(0, 13),
+ANIMCMD_FRAME(1, 7),
+ANIMCMD_FRAME(0, 13),
+ANIMCMD_FRAME(1, 7),
+ANIMCMD_FRAME(0, 11),
+),
         .frontAnimId = ANIM_H_JUMPS,
         .backPic = gMonBackPic_Oshawott,
         .backPicSize = MON_COORDS_SIZE(40, 48),
@@ -636,28 +617,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
         SHADOW(-3, 0, SHADOW_SIZE_S)
         FOOTPRINT(Oshawott)
-        OVERWORLD(
-            sPicTable_Oshawott,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Oshawott,
-            gShinyOverworldPalette_Oshawott
-        )
+        OVERWORLD(sPicTable_Oshawott,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Oshawott,
+gShinyOverworldPalette_Oshawott)
         .levelUpLearnset = sOshawottLevelUpLearnset,
         .teachableLearnset = sOshawottTeachableLearnset,
         .eggMoveLearnset = sOshawottEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_DEWOTT}),
     },
-
     [SPECIES_DEWOTT] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 75,
-        .baseDefense   = 60,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 83,
+        .baseHP = 75,
+        .baseAttack = 75,
+        .baseDefense = 60,
+        .baseSpeed = 60,
+        .baseSpAttack = 83,
         .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_WATER),
         .catchRate = 45,
@@ -677,10 +655,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 8,
         .weight = 245,
         .description = COMPOUND_STRING(
-            "Strict training and disclipine leads it\n"
-            "to master its flowing double-scalchop\n"
-            "technique. Scalchop techniques differ\n"
-            "from one Dewott to another."),
+"Strict training and disclipine leads it\n"
+"to master its flowing double-scalchop\n"
+"technique. Scalchop techniques differ\n"
+"from one Dewott to another."),
         .pokemonScale = 366,
         .pokemonOffset = 9,
         .trainerScale = 257,
@@ -689,12 +667,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 56),
         .frontPicYOffset = 7,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 35),
-            ANIMCMD_FRAME(0, 28),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 35),
+ANIMCMD_FRAME(0, 28),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_H_VIBRATE,
         .backPic = gMonBackPic_Dewott,
         .backPicSize = MON_COORDS_SIZE(56, 64),
@@ -707,31 +685,28 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 6, SHADOW_SIZE_S)
         FOOTPRINT(Dewott)
-        OVERWORLD(
-            sPicTable_Dewott,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Dewott,
-            gShinyOverworldPalette_Dewott
-        )
+        OVERWORLD(sPicTable_Dewott,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Dewott,
+gShinyOverworldPalette_Dewott)
         .levelUpLearnset = sDewottLevelUpLearnset,
         .teachableLearnset = sDewottTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_SAMUROTT, CONDITIONS({IF_NOT_REGION, REGION_HISUI})}
-                            #if P_HISUIAN_FORMS
-                                ,{EVO_LEVEL, 36, SPECIES_SAMUROTT_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}
-                            #endif
-                            ),
+#if P_HISUIAN_FORMS
+,{EVO_LEVEL, 36, SPECIES_SAMUROTT_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}
+#endif
+),
     },
-
     [SPECIES_SAMUROTT] =
     {
-        .baseHP        = 95,
-        .baseAttack    = 100,
-        .baseDefense   = 85,
-        .baseSpeed     = 70,
-        .baseSpAttack  = 108,
+        .baseHP = 95,
+        .baseAttack = 100,
+        .baseDefense = 85,
+        .baseSpeed = 70,
+        .baseSpAttack = 108,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_WATER),
         .catchRate = 45,
@@ -751,10 +726,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 15,
         .weight = 946,
         .description = COMPOUND_STRING(
-            "One swing of the seamitars attached\n"
-            "to its armor can fell an opponent.\n"
-            "A simple glare from one of them is\n"
-            "enough to intimidate most enemies."),
+"One swing of the seamitars attached\n"
+"to its armor can fell an opponent.\n"
+"A simple glare from one of them is\n"
+"enough to intimidate most enemies."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -763,9 +738,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 40),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(1, 40),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_V_SHAKE,
         .backPic = gMonBackPic_Samurott,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -778,28 +753,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 13, SHADOW_SIZE_L)
         FOOTPRINT(Samurott)
-        OVERWORLD(
-            sPicTable_Samurott,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Samurott,
-            gShinyOverworldPalette_Samurott
-        )
+        OVERWORLD(sPicTable_Samurott,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Samurott,
+gShinyOverworldPalette_Samurott)
         .levelUpLearnset = sSamurottLevelUpLearnset,
         .teachableLearnset = sSamurottTeachableLearnset,
         .formSpeciesIdTable = sSamurottFormSpeciesIdTable,
     },
-
 #if P_HISUIAN_FORMS
+
     [SPECIES_SAMUROTT_HISUI] =
     {
-        .baseHP        = 90,
-        .baseAttack    = 108,
-        .baseDefense   = 80,
-        .baseSpeed     = 85,
-        .baseSpAttack  = 100,
+        .baseHP = 90,
+        .baseAttack = 108,
+        .baseDefense = 80,
+        .baseSpeed = 85,
+        .baseSpAttack = 100,
         .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_WATER, TYPE_DARK),
         .catchRate = 45,
@@ -819,10 +792,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 15,
         .weight = 582,
         .description = COMPOUND_STRING(
-            "Hard of heart and deft of blade,\n"
-            "this rare form of Samurott is a\n"
-            "product of the Pokémon's evolution in the\n"
-            "region of Hisui."),
+"Hard of heart and deft of blade,\n"
+"this rare form of Samurott is a\n"
+"product of the Pokémon's evolution in the\n"
+"region of Hisui."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -831,11 +804,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_SamurottHisui,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 8,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_SamurottHisui,
         .shinyPalette = gMonShinyPalette_SamurottHisui,
         .iconSprite = gMonIcon_SamurottHisui,
@@ -843,31 +814,30 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 13, SHADOW_SIZE_L)
         FOOTPRINT(Samurott)
-        OVERWORLD(
-            sPicTable_SamurottHisui,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_SamurottHisui,
-            gShinyOverworldPalette_SamurottHisui
-        )
+        OVERWORLD(sPicTable_SamurottHisui,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_SamurottHisui,
+gShinyOverworldPalette_SamurottHisui)
         .isHisuianForm = TRUE,
         .levelUpLearnset = sSamurottHisuiLevelUpLearnset,
         .teachableLearnset = sSamurottHisuiTeachableLearnset,
         .formSpeciesIdTable = sSamurottFormSpeciesIdTable,
     },
 #endif //P_HISUIAN_FORMS
-#endif //P_FAMILY_OSHAWOTT
+
+#endif // P_FAMILY_OSHAWOTT
 
 #if P_FAMILY_PATRAT
     [SPECIES_PATRAT] =
     {
-        .baseHP        = 45,
-        .baseAttack    = 55,
-        .baseDefense   = 39,
-        .baseSpeed     = 42,
-        .baseSpAttack  = 35,
+        .baseHP = 45,
+        .baseAttack = 55,
+        .baseDefense = 39,
+        .baseSpeed = 42,
+        .baseSpAttack = 35,
         .baseSpDefense = 39,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 255,
@@ -887,10 +857,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 116,
         .description = COMPOUND_STRING(
-            "Extremely cautious, they take shifts to\n"
-            "maintain a constant watch of their nest.\n"
-            "Using food stored in cheek pouches,\n"
-            "they can keep watch for days."),
+"Extremely cautious, they take shifts to\n"
+"maintain a constant watch of their nest.\n"
+"Using food stored in cheek pouches,\n"
+"they can keep watch for days."),
         .pokemonScale = 432,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -899,9 +869,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 40),
         .frontPicYOffset = 12,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 32),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 32),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Patrat,
         .backPicSize = MON_COORDS_SIZE(64, 40),
@@ -914,28 +884,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(1, 2, SHADOW_SIZE_S)
         FOOTPRINT(Patrat)
-        OVERWORLD(
-            sPicTable_Patrat,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Patrat,
-            gShinyOverworldPalette_Patrat
-        )
+        OVERWORLD(sPicTable_Patrat,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Patrat,
+gShinyOverworldPalette_Patrat)
         .levelUpLearnset = sPatratLevelUpLearnset,
         .teachableLearnset = sPatratTeachableLearnset,
         .eggMoveLearnset = sPatratEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_WATCHOG}),
     },
-
     [SPECIES_WATCHOG] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 85,
-        .baseDefense   = 69,
-        .baseSpeed     = 77,
-        .baseSpAttack  = 60,
+        .baseHP = 60,
+        .baseAttack = 85,
+        .baseDefense = 69,
+        .baseSpeed = 77,
+        .baseSpAttack = 60,
         .baseSpDefense = 69,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 255,
@@ -955,10 +922,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 11,
         .weight = 270,
         .description = COMPOUND_STRING(
-            "Using luminescent matter, it makes its\n"
-            "eyes and body glow and stuns attacking\n"
-            "opponents. Keen eyesight lets them see\n"
-            "in the dark."),
+"Using luminescent matter, it makes its\n"
+"eyes and body glow and stuns attacking\n"
+"opponents. Keen eyesight lets them see\n"
+"in the dark."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -967,14 +934,14 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 50),
-        ),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 50),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Watchog,
         .backPicSize = MON_COORDS_SIZE(56, 64),
@@ -987,28 +954,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-4, 11, SHADOW_SIZE_S)
         FOOTPRINT(Watchog)
-        OVERWORLD(
-            sPicTable_Watchog,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Watchog,
-            gShinyOverworldPalette_Watchog
-        )
+        OVERWORLD(sPicTable_Watchog,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Watchog,
+gShinyOverworldPalette_Watchog)
         .levelUpLearnset = sWatchogLevelUpLearnset,
         .teachableLearnset = sWatchogTeachableLearnset,
     },
-#endif //P_FAMILY_PATRAT
+#endif // P_FAMILY_PATRAT
 
 #if P_FAMILY_LILLIPUP
     [SPECIES_LILLIPUP] =
     {
-        .baseHP        = 45,
-        .baseAttack    = 60,
-        .baseDefense   = 45,
-        .baseSpeed     = 55,
-        .baseSpAttack  = 25,
+        .baseHP = 45,
+        .baseAttack = 60,
+        .baseDefense = 45,
+        .baseSpeed = 55,
+        .baseSpAttack = 25,
         .baseSpDefense = 45,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 255,
@@ -1028,10 +993,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 4,
         .weight = 41,
         .description = COMPOUND_STRING(
-            "It faces strong opponents with great\n"
-            "courage. Because it doesn't yelp, it's\n"
-            "extremely popular with Trainers who live\n"
-            "in apartment buildings."),
+"It faces strong opponents with great\n"
+"courage. Because it doesn't yelp, it's\n"
+"extremely popular with Trainers who live\n"
+"in apartment buildings."),
         .pokemonScale = 491,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -1040,14 +1005,14 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 40),
         .frontPicYOffset = 12,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 13),
-            ANIMCMD_FRAME(1, 7),
-            ANIMCMD_FRAME(0, 13),
-            ANIMCMD_FRAME(1, 7),
-            ANIMCMD_FRAME(0, 13),
-            ANIMCMD_FRAME(1, 7),
-            ANIMCMD_FRAME(0, 11),
-        ),
+ANIMCMD_FRAME(0, 13),
+ANIMCMD_FRAME(1, 7),
+ANIMCMD_FRAME(0, 13),
+ANIMCMD_FRAME(1, 7),
+ANIMCMD_FRAME(0, 13),
+ANIMCMD_FRAME(1, 7),
+ANIMCMD_FRAME(0, 11),
+),
         .frontAnimId = ANIM_H_JUMPS,
         .backPic = gMonBackPic_Lillipup,
         .backPicSize = MON_COORDS_SIZE(48, 48),
@@ -1060,28 +1025,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(2, 1, SHADOW_SIZE_S)
         FOOTPRINT(Lillipup)
-        OVERWORLD(
-            sPicTable_Lillipup,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Lillipup,
-            gShinyOverworldPalette_Lillipup
-        )
+        OVERWORLD(sPicTable_Lillipup,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Lillipup,
+gShinyOverworldPalette_Lillipup)
         .levelUpLearnset = sLillipupLevelUpLearnset,
         .teachableLearnset = sLillipupTeachableLearnset,
         .eggMoveLearnset = sLillipupEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_HERDIER}),
     },
-
     [SPECIES_HERDIER] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 80,
-        .baseDefense   = 65,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 35,
+        .baseHP = 65,
+        .baseAttack = 80,
+        .baseDefense = 65,
+        .baseSpeed = 60,
+        .baseSpAttack = 35,
         .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 120,
@@ -1101,10 +1063,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 9,
         .weight = 147,
         .description = COMPOUND_STRING(
-            "Its dense black fur grows continuously.\n"
-            "The high cost of keeping its hard fur\n"
-            "properly groomed makes this a\n"
-            "troublesome Pokémon to train."),
+"Its dense black fur grows continuously.\n"
+"The high cost of keeping its hard fur\n"
+"properly groomed makes this a\n"
+"troublesome Pokémon to train."),
         .pokemonScale = 338,
         .pokemonOffset = 9,
         .trainerScale = 256,
@@ -1113,13 +1075,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 48),
         .frontPicYOffset = 8,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 8),
-            ANIMCMD_FRAME(0, 8),
-            ANIMCMD_FRAME(1, 8),
-            ANIMCMD_FRAME(0, 8),
-            ANIMCMD_FRAME(1, 40),
-            ANIMCMD_FRAME(0, 8),
-        ),
+ANIMCMD_FRAME(1, 8),
+ANIMCMD_FRAME(0, 8),
+ANIMCMD_FRAME(1, 8),
+ANIMCMD_FRAME(0, 8),
+ANIMCMD_FRAME(1, 40),
+ANIMCMD_FRAME(0, 8),
+),
         .frontAnimId = ANIM_H_STRETCH,
         .backPic = gMonBackPic_Herdier,
         .backPicSize = MON_COORDS_SIZE(48, 56),
@@ -1132,27 +1094,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(3, 5, SHADOW_SIZE_M)
         FOOTPRINT(Herdier)
-        OVERWORLD(
-            sPicTable_Herdier,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Herdier,
-            gShinyOverworldPalette_Herdier
-        )
+        OVERWORLD(sPicTable_Herdier,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Herdier,
+gShinyOverworldPalette_Herdier)
         .levelUpLearnset = sHerdierLevelUpLearnset,
         .teachableLearnset = sHerdierTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_STOUTLAND}),
     },
-
     [SPECIES_STOUTLAND] =
     {
-        .baseHP        = 85,
-        .baseAttack    = P_UPDATED_STATS >= GEN_6 ? 110 : 100,
-        .baseDefense   = 90,
-        .baseSpeed     = 80,
-        .baseSpAttack  = 45,
+        .baseHP = 85,
+        .baseAttack = P_UPDATED_STATS >= GEN_6 ? 110 : 100,
+        .baseDefense = 90,
+        .baseSpeed = 80,
+        .baseSpAttack = 45,
         .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 45,
@@ -1178,10 +1137,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 12,
         .weight = 610,
         .description = COMPOUND_STRING(
-            "Intelligent, good-natured, and valiant,\n"
-            "there could be no concern that it would\n"
-            "ever attack people. Some parents even\n"
-            "trust it to babysit."),
+"Intelligent, good-natured, and valiant,\n"
+"there could be no concern that it would\n"
+"ever attack people. Some parents even\n"
+"trust it to babysit."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -1190,12 +1149,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 27),
-            ANIMCMD_FRAME(1, 6),
-            ANIMCMD_FRAME(0, 6),
-            ANIMCMD_FRAME(1, 6),
-            ANIMCMD_FRAME(0, 1),
-        ),
+ANIMCMD_FRAME(0, 27),
+ANIMCMD_FRAME(1, 6),
+ANIMCMD_FRAME(0, 6),
+ANIMCMD_FRAME(1, 6),
+ANIMCMD_FRAME(0, 1),
+),
         .frontAnimId = ANIM_H_SLIDE,
         .backPic = gMonBackPic_Stoutland,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -1208,28 +1167,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-4, 9, SHADOW_SIZE_L)
         FOOTPRINT(Stoutland)
-        OVERWORLD(
-            sPicTable_Stoutland,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Stoutland,
-            gShinyOverworldPalette_Stoutland
-        )
+        OVERWORLD(sPicTable_Stoutland,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Stoutland,
+gShinyOverworldPalette_Stoutland)
         .levelUpLearnset = sStoutlandLevelUpLearnset,
         .teachableLearnset = sStoutlandTeachableLearnset,
     },
-#endif //P_FAMILY_LILLIPUP
+#endif // P_FAMILY_LILLIPUP
 
 #if P_FAMILY_PURRLOIN
     [SPECIES_PURRLOIN] =
     {
-        .baseHP        = 41,
-        .baseAttack    = 50,
-        .baseDefense   = 37,
-        .baseSpeed     = 66,
-        .baseSpAttack  = 50,
+        .baseHP = 41,
+        .baseAttack = 50,
+        .baseDefense = 37,
+        .baseSpeed = 66,
+        .baseSpAttack = 50,
         .baseSpDefense = 37,
         .types = MON_TYPES(TYPE_DARK),
         .catchRate = 255,
@@ -1249,10 +1206,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 4,
         .weight = 101,
         .description = COMPOUND_STRING(
-            "Their deceptively cute act is the\n"
-            "perfect ruse. They steal from people for\n"
-            "fun, but their victims can't help but\n"
-            "forgive them."),
+"Their deceptively cute act is the\n"
+"perfect ruse. They steal from people for\n"
+"fun, but their victims can't help but\n"
+"forgive them."),
         .pokemonScale = 491,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -1261,10 +1218,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 48),
         .frontPicYOffset = 11,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 9),
-            ANIMCMD_FRAME(1, 54),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 9),
+ANIMCMD_FRAME(1, 54),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .backPic = gMonBackPic_Purrloin,
         .backPicSize = MON_COORDS_SIZE(56, 48),
@@ -1277,28 +1234,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(0, 2, SHADOW_SIZE_S)
         FOOTPRINT(Purrloin)
-        OVERWORLD(
-            sPicTable_Purrloin,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Purrloin,
-            gShinyOverworldPalette_Purrloin
-        )
+        OVERWORLD(sPicTable_Purrloin,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Purrloin,
+gShinyOverworldPalette_Purrloin)
         .levelUpLearnset = sPurrloinLevelUpLearnset,
         .teachableLearnset = sPurrloinTeachableLearnset,
         .eggMoveLearnset = sPurrloinEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_LIEPARD}),
     },
-
     [SPECIES_LIEPARD] =
     {
-        .baseHP        = 64,
-        .baseAttack    = 88,
-        .baseDefense   = 50,
-        .baseSpeed     = 106,
-        .baseSpAttack  = 88,
+        .baseHP = 64,
+        .baseAttack = 88,
+        .baseDefense = 50,
+        .baseSpeed = 106,
+        .baseSpAttack = 88,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_DARK),
         .catchRate = 90,
@@ -1318,10 +1272,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 11,
         .weight = 375,
         .description = COMPOUND_STRING(
-            "Many Trainers are drawn to their\n"
-            "beautiful form and fur. These Pokémon\n"
-            "vanish and appear unexpectedly.\n"
-            "They run silently in the night."),
+"Many Trainers are drawn to their\n"
+"beautiful form and fur. These Pokémon\n"
+"vanish and appear unexpectedly.\n"
+"They run silently in the night."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -1330,10 +1284,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 4,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 12),
-            ANIMCMD_FRAME(1, 45),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 12),
+ANIMCMD_FRAME(1, 45),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .backPic = gMonBackPic_Liepard,
         .backPicSize = MON_COORDS_SIZE(56, 48),
@@ -1346,28 +1300,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 11, SHADOW_SIZE_M)
         FOOTPRINT(Liepard)
-        OVERWORLD(
-            sPicTable_Liepard,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Liepard,
-            gShinyOverworldPalette_Liepard
-        )
+        OVERWORLD(sPicTable_Liepard,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Liepard,
+gShinyOverworldPalette_Liepard)
         .levelUpLearnset = sLiepardLevelUpLearnset,
         .teachableLearnset = sLiepardTeachableLearnset,
     },
-#endif //P_FAMILY_PURRLOIN
+#endif // P_FAMILY_PURRLOIN
 
 #if P_FAMILY_PANSAGE
     [SPECIES_PANSAGE] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 53,
-        .baseDefense   = 48,
-        .baseSpeed     = 64,
-        .baseSpAttack  = 53,
+        .baseHP = 50,
+        .baseAttack = 53,
+        .baseDefense = 48,
+        .baseSpeed = 64,
+        .baseSpAttack = 53,
         .baseSpDefense = 48,
         .types = MON_TYPES(TYPE_GRASS),
         .catchRate = 190,
@@ -1387,10 +1339,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 105,
         .description = COMPOUND_STRING(
-            "This Pokémon dwells deep in the forest.\n"
-            "It's good at finding berries and gathers\n"
-            "them from all over. It's kind enough to\n"
-            "share them with friends."),
+"This Pokémon dwells deep in the forest.\n"
+"It's good at finding berries and gathers\n"
+"them from all over. It's kind enough to\n"
+"share them with friends."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -1399,12 +1351,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 48),
         .frontPicYOffset = 11,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 8),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 13),
-            ANIMCMD_FRAME(0, 7),
-        ),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 8),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 13),
+ANIMCMD_FRAME(0, 7),
+),
         .frontAnimId = ANIM_CIRCULAR_STRETCH_TWICE,
         .backPic = gMonBackPic_Pansage,
         .backPicSize = MON_COORDS_SIZE(48, 48),
@@ -1417,28 +1369,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
         SHADOW(0, 3, SHADOW_SIZE_S)
         FOOTPRINT(Pansage)
-        OVERWORLD(
-            sPicTable_Pansage,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Pansage,
-            gShinyOverworldPalette_Pansage
-        )
+        OVERWORLD(sPicTable_Pansage,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Pansage,
+gShinyOverworldPalette_Pansage)
         .levelUpLearnset = sPansageLevelUpLearnset,
         .teachableLearnset = sPansageTeachableLearnset,
         .eggMoveLearnset = sPansageEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_SIMISAGE}),
     },
-
     [SPECIES_SIMISAGE] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 98,
-        .baseDefense   = 63,
-        .baseSpeed     = 101,
-        .baseSpAttack  = 98,
+        .baseHP = 75,
+        .baseAttack = 98,
+        .baseDefense = 63,
+        .baseSpeed = 101,
+        .baseSpAttack = 98,
         .baseSpDefense = 63,
         .types = MON_TYPES(TYPE_GRASS),
         .catchRate = 75,
@@ -1458,10 +1407,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 11,
         .weight = 305,
         .description = COMPOUND_STRING(
-            "Ill tempered, it attacks enemies by\n"
-            "swinging its barbed tail around wildly.\n"
-            "The leaf growing on its head is\n"
-            "very bitter."),
+"Ill tempered, it attacks enemies by\n"
+"swinging its barbed tail around wildly.\n"
+"The leaf growing on its head is\n"
+"very bitter."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -1470,10 +1419,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 12),
-            ANIMCMD_FRAME(1, 45),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 12),
+ANIMCMD_FRAME(1, 45),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .backPic = gMonBackPic_Simisage,
         .backPicSize = MON_COORDS_SIZE(56, 64),
@@ -1486,28 +1435,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 12, SHADOW_SIZE_M)
         FOOTPRINT(Simisage)
-        OVERWORLD(
-            sPicTable_Simisage,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Simisage,
-            gShinyOverworldPalette_Simisage
-        )
+        OVERWORLD(sPicTable_Simisage,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Simisage,
+gShinyOverworldPalette_Simisage)
         .levelUpLearnset = sSimisageLevelUpLearnset,
         .teachableLearnset = sSimisageTeachableLearnset,
     },
-#endif //P_FAMILY_PANSAGE
+#endif // P_FAMILY_PANSAGE
 
 #if P_FAMILY_PANSEAR
     [SPECIES_PANSEAR] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 53,
-        .baseDefense   = 48,
-        .baseSpeed     = 64,
-        .baseSpAttack  = 53,
+        .baseHP = 50,
+        .baseAttack = 53,
+        .baseDefense = 48,
+        .baseSpeed = 64,
+        .baseSpAttack = 53,
         .baseSpDefense = 48,
         .types = MON_TYPES(TYPE_FIRE),
         .catchRate = 190,
@@ -1528,10 +1475,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 110,
         .description = COMPOUND_STRING(
-            "The fire within the tuft on its head can\n"
-            "reach up to 600ºF. Very intelligent,\n"
-            "it roasts berries before eating them.\n"
-            "It likes to help people."),
+"The fire within the tuft on its head can\n"
+"reach up to 600ºF. Very intelligent,\n"
+"it roasts berries before eating them.\n"
+"It likes to help people."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -1540,9 +1487,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 48),
         .frontPicYOffset = 11,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 32),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 32),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Pansear,
         .backPicSize = MON_COORDS_SIZE(48, 56),
@@ -1555,28 +1502,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
         SHADOW(1, 3, SHADOW_SIZE_S)
         FOOTPRINT(Pansear)
-        OVERWORLD(
-            sPicTable_Pansear,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Pansear,
-            gShinyOverworldPalette_Pansear
-        )
+        OVERWORLD(sPicTable_Pansear,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Pansear,
+gShinyOverworldPalette_Pansear)
         .levelUpLearnset = sPansearLevelUpLearnset,
         .teachableLearnset = sPansearTeachableLearnset,
         .eggMoveLearnset = sPansearEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_FIRE_STONE, SPECIES_SIMISEAR}),
     },
-
     [SPECIES_SIMISEAR] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 98,
-        .baseDefense   = 63,
-        .baseSpeed     = 101,
-        .baseSpAttack  = 98,
+        .baseHP = 75,
+        .baseAttack = 98,
+        .baseDefense = 63,
+        .baseSpeed = 101,
+        .baseSpAttack = 98,
         .baseSpDefense = 63,
         .types = MON_TYPES(TYPE_FIRE),
         .catchRate = 75,
@@ -1597,10 +1541,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 10,
         .weight = 280,
         .description = COMPOUND_STRING(
-            "It loves sweets because they become\n"
-            "energy for the fire burning inside its\n"
-            "body. It scatters embers from its head\n"
-            "and tail to sear its opponents."),
+"It loves sweets because they become\n"
+"energy for the fire burning inside its\n"
+"body. It scatters embers from its head\n"
+"and tail to sear its opponents."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -1609,12 +1553,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 6,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_SWING_CONCAVE_FAST,
         .backPic = gMonBackPic_Simisear,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -1627,28 +1571,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 8, SHADOW_SIZE_M)
         FOOTPRINT(Simisear)
-        OVERWORLD(
-            sPicTable_Simisear,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Simisear,
-            gShinyOverworldPalette_Simisear
-        )
+        OVERWORLD(sPicTable_Simisear,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Simisear,
+gShinyOverworldPalette_Simisear)
         .levelUpLearnset = sSimisearLevelUpLearnset,
         .teachableLearnset = sSimisearTeachableLearnset,
     },
-#endif //P_FAMILY_PANSEAR
+#endif // P_FAMILY_PANSEAR
 
 #if P_FAMILY_PANPOUR
     [SPECIES_PANPOUR] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 53,
-        .baseDefense   = 48,
-        .baseSpeed     = 64,
-        .baseSpAttack  = 53,
+        .baseHP = 50,
+        .baseAttack = 53,
+        .baseDefense = 48,
+        .baseSpeed = 64,
+        .baseSpAttack = 53,
         .baseSpDefense = 48,
         .types = MON_TYPES(TYPE_WATER),
         .catchRate = 190,
@@ -1668,10 +1610,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 135,
         .description = COMPOUND_STRING(
-            "The water stored inside the tuft of its\n"
-            "head is rich in nutrients. It waters\n"
-            "plants using its tail, plants that\n"
-            "receive its water grow large."),
+"The water stored inside the tuft of its\n"
+"head is rich in nutrients. It waters\n"
+"plants using its tail, plants that\n"
+"receive its water grow large."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -1680,10 +1622,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 48),
         .frontPicYOffset = 10,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 12),
-            ANIMCMD_FRAME(1, 45),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 12),
+ANIMCMD_FRAME(1, 45),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .backPic = gMonBackPic_Panpour,
         .backPicSize = MON_COORDS_SIZE(48, 48),
@@ -1696,28 +1638,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
         SHADOW(-3, 4, SHADOW_SIZE_S)
         FOOTPRINT(Panpour)
-        OVERWORLD(
-            sPicTable_Panpour,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Panpour,
-            gShinyOverworldPalette_Panpour
-        )
+        OVERWORLD(sPicTable_Panpour,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Panpour,
+gShinyOverworldPalette_Panpour)
         .levelUpLearnset = sPanpourLevelUpLearnset,
         .teachableLearnset = sPanpourTeachableLearnset,
         .eggMoveLearnset = sPanpourEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_WATER_STONE, SPECIES_SIMIPOUR}),
     },
-
     [SPECIES_SIMIPOUR] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 98,
-        .baseDefense   = 63,
-        .baseSpeed     = 101,
-        .baseSpAttack  = 98,
+        .baseHP = 75,
+        .baseAttack = 98,
+        .baseDefense = 63,
+        .baseSpeed = 101,
+        .baseSpAttack = 98,
         .baseSpDefense = 63,
         .types = MON_TYPES(TYPE_WATER),
         .catchRate = 75,
@@ -1737,10 +1676,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 10,
         .weight = 290,
         .description = COMPOUND_STRING(
-            "It can shoot highly-pressurised water\n"
-            "from its tail with enough power to\n"
-            "break through a solid concrete wall.\n"
-            "It prefers places with clean water."),
+"It can shoot highly-pressurised water\n"
+"from its tail with enough power to\n"
+"break through a solid concrete wall.\n"
+"It prefers places with clean water."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -1749,9 +1688,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 6,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_H_STRETCH,
         .backPic = gMonBackPic_Simipour,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -1764,28 +1703,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 8, SHADOW_SIZE_M)
         FOOTPRINT(Simipour)
-        OVERWORLD(
-            sPicTable_Simipour,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Simipour,
-            gShinyOverworldPalette_Simipour
-        )
+        OVERWORLD(sPicTable_Simipour,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Simipour,
+gShinyOverworldPalette_Simipour)
         .levelUpLearnset = sSimipourLevelUpLearnset,
         .teachableLearnset = sSimipourTeachableLearnset,
     },
-#endif //P_FAMILY_PANPOUR
+#endif // P_FAMILY_PANPOUR
 
 #if P_FAMILY_MUNNA
     [SPECIES_MUNNA] =
     {
-        .baseHP        = 76,
-        .baseAttack    = 25,
-        .baseDefense   = 45,
-        .baseSpeed     = 24,
-        .baseSpAttack  = 67,
+        .baseHP = 76,
+        .baseAttack = 25,
+        .baseDefense = 45,
+        .baseSpeed = 24,
+        .baseSpAttack = 67,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 190,
@@ -1805,10 +1742,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 233,
         .description = COMPOUND_STRING(
-            "This Pokémon appears before people\n"
-            "and Pokémon who are having nightmares\n"
-            "and eats those dreams. Munna always\n"
-            "float in the air. "),
+"This Pokémon appears before people\n"
+"and Pokémon who are having nightmares\n"
+"and eats those dreams. Munna always\n"
+"float in the air. "),
         .pokemonScale = 422,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -1817,15 +1754,15 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 32),
         .frontPicYOffset = 16,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 12),
-            ANIMCMD_FRAME(0, 12),
-            ANIMCMD_FRAME(1, 12),
-            ANIMCMD_FRAME(0, 30),
-            ANIMCMD_FRAME(1, 12),
-            ANIMCMD_FRAME(0, 12),
-            ANIMCMD_FRAME(1, 12),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(1, 12),
+ANIMCMD_FRAME(0, 12),
+ANIMCMD_FRAME(1, 12),
+ANIMCMD_FRAME(0, 30),
+ANIMCMD_FRAME(1, 12),
+ANIMCMD_FRAME(0, 12),
+ANIMCMD_FRAME(1, 12),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_RISING_WOBBLE,
         .enemyMonElevation = 7,
         .backPic = gMonBackPic_Munna,
@@ -1839,28 +1776,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 2, SHADOW_SIZE_S)
         FOOTPRINT(Munna)
-        OVERWORLD(
-            sPicTable_Munna,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Munna,
-            gShinyOverworldPalette_Munna
-        )
+        OVERWORLD(sPicTable_Munna,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Munna,
+gShinyOverworldPalette_Munna)
         .levelUpLearnset = sMunnaLevelUpLearnset,
         .teachableLearnset = sMunnaTeachableLearnset,
         .eggMoveLearnset = sMunnaEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_MOON_STONE, SPECIES_MUSHARNA}),
     },
-
     [SPECIES_MUSHARNA] =
     {
-        .baseHP        = 116,
-        .baseAttack    = 55,
-        .baseDefense   = 85,
-        .baseSpeed     = 29,
-        .baseSpAttack  = 107,
+        .baseHP = 116,
+        .baseAttack = 55,
+        .baseDefense = 85,
+        .baseSpeed = 29,
+        .baseSpAttack = 107,
         .baseSpDefense = 95,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 75,
@@ -1880,10 +1814,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 11,
         .weight = 605,
         .description = COMPOUND_STRING(
-            "The mist emanating from their foreheads\n"
-            "is packed with the dreams of people and\n"
-            "Pokémon. It changes into different colors\n"
-            "depending on the dream that was eaten."),
+"The mist emanating from their foreheads\n"
+"is packed with the dreams of people and\n"
+"Pokémon. It changes into different colors\n"
+"depending on the dream that was eaten."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -1892,12 +1826,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 6,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 20),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 20),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 20),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 20),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_ROTATE_TO_SIDES_TWICE,
         .enemyMonElevation = 5,
         .backPic = gMonBackPic_Musharna,
@@ -1911,28 +1845,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(6, 10, SHADOW_SIZE_M)
         FOOTPRINT(Musharna)
-        OVERWORLD(
-            sPicTable_Musharna,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Musharna,
-            gShinyOverworldPalette_Musharna
-        )
+        OVERWORLD(sPicTable_Musharna,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Musharna,
+gShinyOverworldPalette_Musharna)
         .levelUpLearnset = sMusharnaLevelUpLearnset,
         .teachableLearnset = sMusharnaTeachableLearnset,
     },
-#endif //P_FAMILY_MUNNA
+#endif // P_FAMILY_MUNNA
 
 #if P_FAMILY_PIDOVE
     [SPECIES_PIDOVE] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 55,
-        .baseDefense   = 50,
-        .baseSpeed     = 43,
-        .baseSpAttack  = 36,
+        .baseHP = 50,
+        .baseAttack = 55,
+        .baseDefense = 50,
+        .baseSpeed = 43,
+        .baseSpAttack = 36,
         .baseSpDefense = 30,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
         .catchRate = 255,
@@ -1952,10 +1884,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 3,
         .weight = 21,
         .description = COMPOUND_STRING(
-            "This very forgetful Pokémon will wait for\n"
-            "a new order from its Trainer even though\n"
-            "it already has one. Flocks often gather\n"
-            "in parks and plazas."),
+"This very forgetful Pokémon will wait for\n"
+"a new order from its Trainer even though\n"
+"it already has one. Flocks often gather\n"
+"in parks and plazas."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -1964,10 +1896,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 12,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 46),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 46),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_JUMPS_SMALL,
         .backPic = gMonBackPic_Pidove,
         .backPicSize = MON_COORDS_SIZE(48, 40),
@@ -1980,29 +1912,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 1, SHADOW_SIZE_S)
         FOOTPRINT(Pidove)
-        OVERWORLD(
-            sPicTable_Pidove,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Pidove,
-            gShinyOverworldPalette_Pidove
-        )
+        OVERWORLD(sPicTable_Pidove,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Pidove,
+gShinyOverworldPalette_Pidove)
         .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sPidoveLevelUpLearnset,
         .teachableLearnset = sPidoveTeachableLearnset,
         .eggMoveLearnset = sPidoveEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 21, SPECIES_TRANQUILL}),
     },
-
     [SPECIES_TRANQUILL] =
     {
-        .baseHP        = 62,
-        .baseAttack    = 77,
-        .baseDefense   = 62,
-        .baseSpeed     = 65,
-        .baseSpAttack  = 50,
+        .baseHP = 62,
+        .baseAttack = 77,
+        .baseDefense = 62,
+        .baseSpeed = 65,
+        .baseSpAttack = 50,
         .baseSpDefense = 42,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
         .catchRate = 120,
@@ -2022,10 +1951,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 150,
         .description = COMPOUND_STRING(
-            "No matter where in the world it goes,\n"
-            "it knows where its nest is, so it can\n"
-            "always return to its Trainer's location\n"
-            "regardless of the distance."),
+"No matter where in the world it goes,\n"
+"it knows where its nest is, so it can\n"
+"always return to its Trainer's location\n"
+"regardless of the distance."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -2034,10 +1963,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 56),
         .frontPicYOffset = 7,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 1),
-            ANIMCMD_FRAME(1, 36),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_FRAME(1, 36),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Tranquill,
         .backPicSize = MON_COORDS_SIZE(56, 48),
@@ -2050,27 +1979,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 6, SHADOW_SIZE_S)
         FOOTPRINT(Tranquill)
-        OVERWORLD(
-            sPicTable_Tranquill,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Tranquill,
-            gShinyOverworldPalette_Tranquill
-        )
+        OVERWORLD(sPicTable_Tranquill,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Tranquill,
+gShinyOverworldPalette_Tranquill)
         .levelUpLearnset = sTranquillLevelUpLearnset,
         .teachableLearnset = sTranquillTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_UNFEZANT}),
     },
-
     [SPECIES_UNFEZANT] =
     {
-        .baseHP        = 80,
-        .baseAttack    = P_UPDATED_STATS >= GEN_6 ? 115 : 105,
-        .baseDefense   = 80,
-        .baseSpeed     = 93,
-        .baseSpAttack  = 65,
+        .baseHP = 80,
+        .baseAttack = P_UPDATED_STATS >= GEN_6 ? 115 : 105,
+        .baseDefense = 80,
+        .baseSpeed = 93,
+        .baseSpAttack = 65,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
         .catchRate = 45,
@@ -2096,10 +2022,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 12,
         .weight = 290,
         .description = COMPOUND_STRING(
-            "Males have plumage on their heads.\n"
-            "The females' flying abilities surpass\n"
-            "those of the males. They will only let\n"
-            "themselves feel close to their Trainers."),
+"Males have plumage on their heads.\n"
+"The females' flying abilities surpass\n"
+"those of the males. They will only let\n"
+"themselves feel close to their Trainers."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -2108,10 +2034,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 20),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 20),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_SHRINK_GROW,
         .backPic = gMonBackPic_Unfezant,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -2121,7 +2047,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .shinyPalette = gMonShinyPalette_Unfezant,
         .iconSprite = gMonIcon_Unfezant,
         .iconPalIndex = 1,
-#if P_GENDER_DIFFERENCES
+    #if P_GENDER_DIFFERENCES
         .frontPicFemale = gMonFrontPic_UnfezantF,
         .frontPicSizeFemale = MON_COORDS_SIZE(56, 64),
         .backPicFemale = gMonBackPic_UnfezantF,
@@ -2130,41 +2056,37 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .shinyPaletteFemale = gMonShinyPalette_UnfezantF,
         .iconSpriteFemale = gMonIcon_UnfezantF,
         .iconPalIndexFemale = 1,
-#endif //P_GENDER_DIFFERENCES
+    #endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 12, SHADOW_SIZE_M)
         FOOTPRINT(Unfezant)
-        OVERWORLD(
-            sPicTable_Unfezant,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Unfezant,
-            gShinyOverworldPalette_Unfezant
-        )
-        OVERWORLD_FEMALE(
-            sPicTable_UnfezantF,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_UnfezantF,
-            gShinyOverworldPalette_UnfezantF
-        )
+        OVERWORLD(sPicTable_Unfezant,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Unfezant,
+gShinyOverworldPalette_Unfezant)
+        OVERWORLD_FEMALE(sPicTable_UnfezantF,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_UnfezantF,
+gShinyOverworldPalette_UnfezantF)
         .levelUpLearnset = sUnfezantLevelUpLearnset,
         .teachableLearnset = sUnfezantTeachableLearnset,
     },
-#endif //P_FAMILY_PIDOVE
+#endif // P_FAMILY_PIDOVE
 
 #if P_FAMILY_BLITZLE
     [SPECIES_BLITZLE] =
     {
-        .baseHP        = 45,
-        .baseAttack    = 60,
-        .baseDefense   = 32,
-        .baseSpeed     = 76,
-        .baseSpAttack  = 50,
+        .baseHP = 45,
+        .baseAttack = 60,
+        .baseDefense = 32,
+        .baseSpeed = 76,
+        .baseSpAttack = 50,
         .baseSpDefense = 32,
         .types = MON_TYPES(TYPE_ELECTRIC),
         .catchRate = 190,
@@ -2184,10 +2106,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 8,
         .weight = 298,
         .description = COMPOUND_STRING(
-            "Its mane shines when it discharges\n"
-            "electricity. They use the frequency and\n"
-            "rhythm of these flashes to communicate\n"
-            "with one another."),
+"Its mane shines when it discharges\n"
+"electricity. They use the frequency and\n"
+"rhythm of these flashes to communicate\n"
+"with one another."),
         .pokemonScale = 366,
         .pokemonOffset = 8,
         .trainerScale = 257,
@@ -2196,13 +2118,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 56),
         .frontPicYOffset = 5,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 8),
-            ANIMCMD_FRAME(0, 8),
-            ANIMCMD_FRAME(1, 8),
-            ANIMCMD_FRAME(0, 8),
-            ANIMCMD_FRAME(1, 40),
-            ANIMCMD_FRAME(0, 8),
-        ),
+ANIMCMD_FRAME(1, 8),
+ANIMCMD_FRAME(0, 8),
+ANIMCMD_FRAME(1, 8),
+ANIMCMD_FRAME(0, 8),
+ANIMCMD_FRAME(1, 40),
+ANIMCMD_FRAME(0, 8),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Blitzle,
         .backPicSize = MON_COORDS_SIZE(56, 56),
@@ -2215,28 +2137,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(3, 9, SHADOW_SIZE_M)
         FOOTPRINT(Blitzle)
-        OVERWORLD(
-            sPicTable_Blitzle,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Blitzle,
-            gShinyOverworldPalette_Blitzle
-        )
+        OVERWORLD(sPicTable_Blitzle,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Blitzle,
+gShinyOverworldPalette_Blitzle)
         .levelUpLearnset = sBlitzleLevelUpLearnset,
         .teachableLearnset = sBlitzleTeachableLearnset,
         .eggMoveLearnset = sBlitzleEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_ZEBSTRIKA}),
     },
-
     [SPECIES_ZEBSTRIKA] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 100,
-        .baseDefense   = 63,
-        .baseSpeed     = 116,
-        .baseSpAttack  = 80,
+        .baseHP = 75,
+        .baseAttack = 100,
+        .baseDefense = 63,
+        .baseSpeed = 116,
+        .baseSpAttack = 80,
         .baseSpDefense = 63,
         .types = MON_TYPES(TYPE_ELECTRIC),
         .catchRate = 75,
@@ -2256,10 +2175,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 16,
         .weight = 795,
         .description = COMPOUND_STRING(
-            "When Zebstrika run at full speed, the\n"
-            "sound of thunder reverberates. It is\n"
-            "dangerous when it's angry as it shoots\n"
-            "lightning from its mane in all directions."),
+"When Zebstrika run at full speed, the\n"
+"sound of thunder reverberates. It is\n"
+"dangerous when it's angry as it shoots\n"
+"lightning from its mane in all directions."),
         .pokemonScale = 259,
         .pokemonOffset = 1,
         .trainerScale = 296,
@@ -2268,10 +2187,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 25),
-            ANIMCMD_FRAME(0, 30),
-        ),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 25),
+ANIMCMD_FRAME(0, 30),
+),
         .frontAnimId = ANIM_BACK_AND_LUNGE,
         .backPic = gMonBackPic_Zebstrika,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -2284,28 +2203,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 13, SHADOW_SIZE_M)
         FOOTPRINT(Zebstrika)
-        OVERWORLD(
-            sPicTable_Zebstrika,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Zebstrika,
-            gShinyOverworldPalette_Zebstrika
-        )
+        OVERWORLD(sPicTable_Zebstrika,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Zebstrika,
+gShinyOverworldPalette_Zebstrika)
         .levelUpLearnset = sZebstrikaLevelUpLearnset,
         .teachableLearnset = sZebstrikaTeachableLearnset,
     },
-#endif //P_FAMILY_BLITZLE
+#endif // P_FAMILY_BLITZLE
 
 #if P_FAMILY_ROGGENROLA
     [SPECIES_ROGGENROLA] =
     {
-        .baseHP        = 55,
-        .baseAttack    = 75,
-        .baseDefense   = 85,
-        .baseSpeed     = 15,
-        .baseSpAttack  = 25,
+        .baseHP = 55,
+        .baseAttack = 75,
+        .baseDefense = 85,
+        .baseSpeed = 15,
+        .baseSpAttack = 25,
         .baseSpDefense = 25,
         .types = MON_TYPES(TYPE_ROCK),
         .catchRate = 255,
@@ -2331,10 +2248,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 4,
         .weight = 180,
         .description = COMPOUND_STRING(
-            "The hexagonal cavity is its ear.\n"
-            "It walks in the direction of sounds it\n"
-            "hears, but if the sounds cease, it panics\n"
-            "and topples over."),
+"The hexagonal cavity is its ear.\n"
+"It walks in the direction of sounds it\n"
+"hears, but if the sounds cease, it panics\n"
+"and topples over."),
         .pokemonScale = 491,
         .pokemonOffset = 16,
         .trainerScale = 256,
@@ -2343,10 +2260,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(24, 40),
         .frontPicYOffset = 14,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Roggenrola,
         .backPicSize = MON_COORDS_SIZE(40, 48),
@@ -2359,28 +2276,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_SLOW,
         SHADOW(-1, 0, SHADOW_SIZE_S)
         FOOTPRINT(Roggenrola)
-        OVERWORLD(
-            sPicTable_Roggenrola,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Roggenrola,
-            gShinyOverworldPalette_Roggenrola
-        )
+        OVERWORLD(sPicTable_Roggenrola,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Roggenrola,
+gShinyOverworldPalette_Roggenrola)
         .levelUpLearnset = sRoggenrolaLevelUpLearnset,
         .teachableLearnset = sRoggenrolaTeachableLearnset,
         .eggMoveLearnset = sRoggenrolaEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 25, SPECIES_BOLDORE}),
     },
-
     [SPECIES_BOLDORE] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 105,
-        .baseDefense   = 105,
-        .baseSpeed     = 20,
-        .baseSpAttack  = 50,
+        .baseHP = 70,
+        .baseAttack = 105,
+        .baseDefense = 105,
+        .baseSpeed = 20,
+        .baseSpAttack = 50,
         .baseSpDefense = 40,
         .types = MON_TYPES(TYPE_ROCK),
         .catchRate = 120,
@@ -2407,10 +2321,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 9,
         .weight = 1020,
         .description = COMPOUND_STRING(
-            "Its orange crystal is a mass of energy.\n"
-            "Just one crystal fragment would provide\n"
-            "enough fuel for a hundred dump trucks.\n"
-            "When it is healthy, its core sticks out."),
+"Its orange crystal is a mass of energy.\n"
+"Just one crystal fragment would provide\n"
+"enough fuel for a hundred dump trucks.\n"
+"When it is healthy, its core sticks out."),
         .pokemonScale = 338,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -2419,13 +2333,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 48),
         .frontPicYOffset = 10,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_H_SLIDE_SLOW,
         .backPic = gMonBackPic_Boldore,
         .backPicSize = MON_COORDS_SIZE(64, 40),
@@ -2438,28 +2352,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 3, SHADOW_SIZE_L)
         FOOTPRINT(Boldore)
-        OVERWORLD(
-            sPicTable_Boldore,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Boldore,
-            gShinyOverworldPalette_Boldore
-        )
+        OVERWORLD(sPicTable_Boldore,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Boldore,
+gShinyOverworldPalette_Boldore)
         .levelUpLearnset = sBoldoreLevelUpLearnset,
         .teachableLearnset = sBoldoreTeachableLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_GIGALITH},
-                                {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_GIGALITH}),
+{EVO_ITEM, ITEM_LINKING_CORD, SPECIES_GIGALITH}),
     },
-
     [SPECIES_GIGALITH] =
     {
-        .baseHP        = 85,
-        .baseAttack    = 135,
-        .baseDefense   = 130,
-        .baseSpeed     = 25,
-        .baseSpAttack  = 60,
+        .baseHP = 85,
+        .baseAttack = 135,
+        .baseDefense = 130,
+        .baseSpeed = 25,
+        .baseSpAttack = 60,
         .baseSpDefense = P_UPDATED_STATS >= GEN_6 ? 80 : 70,
         .types = MON_TYPES(TYPE_ROCK),
         .catchRate = 45,
@@ -2491,10 +2402,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 17,
         .weight = 2600,
         .description = COMPOUND_STRING(
-            "The blasts of energy it makes from\n"
-            "sunbeams have terrifying power.\n"
-            "However, it's not able to fire its blasts\n"
-            "at night or on rainy days."),
+"The blasts of energy it makes from\n"
+"sunbeams have terrifying power.\n"
+"However, it's not able to fire its blasts\n"
+"at night or on rainy days."),
         .pokemonScale = 259,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -2503,10 +2414,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 25),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 25),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_ROTATE_UP_SLAM_DOWN,
         .backPic = gMonBackPic_Gigalith,
         .backPicSize = MON_COORDS_SIZE(56, 64),
@@ -2519,28 +2430,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 8, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Gigalith)
-        OVERWORLD(
-            sPicTable_Gigalith,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Gigalith,
-            gShinyOverworldPalette_Gigalith
-        )
+        OVERWORLD(sPicTable_Gigalith,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Gigalith,
+gShinyOverworldPalette_Gigalith)
         .levelUpLearnset = sGigalithLevelUpLearnset,
         .teachableLearnset = sGigalithTeachableLearnset,
     },
-#endif //P_FAMILY_ROGGENROLA
+#endif // P_FAMILY_ROGGENROLA
 
 #if P_FAMILY_WOOBAT
     [SPECIES_WOOBAT] =
     {
-        .baseHP        = P_UPDATED_STATS >= GEN_7 ? 65 : 55,
-        .baseAttack    = 45,
-        .baseDefense   = 43,
-        .baseSpeed     = 72,
-        .baseSpAttack  = 55,
+        .baseHP = P_UPDATED_STATS >= GEN_7 ? 65 : 55,
+        .baseAttack = 45,
+        .baseDefense = 43,
+        .baseSpeed = 72,
+        .baseSpAttack = 55,
         .baseSpDefense = 43,
         .types = MON_TYPES(TYPE_PSYCHIC, TYPE_FLYING),
         .catchRate = 190,
@@ -2560,10 +2469,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 4,
         .weight = 21,
         .description = COMPOUND_STRING(
-            "Its habitat is dark forests and caves.\n"
-            "Suction from its nostrils enables it\n"
-            "to stick to cave walls during sleep.\n"
-            "It leaves a heart-shaped mark behind."),
+"Its habitat is dark forests and caves.\n"
+"Suction from its nostrils enables it\n"
+"to stick to cave walls during sleep.\n"
+"It leaves a heart-shaped mark behind."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -2572,26 +2481,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 32),
         .frontPicYOffset = 16,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 1),
-        ),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 1),
+),
         .frontAnimId = ANIM_FOUR_PETAL,
         .enemyMonElevation = 19,
         .backPic = gMonBackPic_Woobat,
@@ -2605,28 +2514,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 14, SHADOW_SIZE_S)
         FOOTPRINT(Woobat)
-        OVERWORLD(
-            sPicTable_Woobat,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Woobat,
-            gShinyOverworldPalette_Woobat
-        )
+        OVERWORLD(sPicTable_Woobat,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Woobat,
+gShinyOverworldPalette_Woobat)
         .levelUpLearnset = sWoobatLevelUpLearnset,
         .teachableLearnset = sWoobatTeachableLearnset,
         .eggMoveLearnset = sWoobatEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_SWOOBAT, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD})}),
     },
-
     [SPECIES_SWOOBAT] =
     {
-        .baseHP        = 67,
-        .baseAttack    = 57,
-        .baseDefense   = 55,
-        .baseSpeed     = 114,
-        .baseSpAttack  = 77,
+        .baseHP = 67,
+        .baseAttack = 57,
+        .baseDefense = 55,
+        .baseSpeed = 114,
+        .baseSpAttack = 77,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_PSYCHIC, TYPE_FLYING),
         .catchRate = 45,
@@ -2646,10 +2552,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 9,
         .weight = 105,
         .description = COMPOUND_STRING(
-            "Anyone who comes into contact with\n"
-            "the ultrasonic waves emitted by a\n"
-            "courting male experiences a positive\n"
-            "mood shift."),
+"Anyone who comes into contact with\n"
+"the ultrasonic waves emitted by a\n"
+"courting male experiences a positive\n"
+"mood shift."),
         .pokemonScale = 338,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -2658,13 +2564,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 4,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_BOUNCE_ROTATE_TO_SIDES_SMALL,
         .enemyMonElevation = 10,
         .backPic = gMonBackPic_Swoobat,
@@ -2678,28 +2584,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 17, SHADOW_SIZE_M)
         FOOTPRINT(Swoobat)
-        OVERWORLD(
-            sPicTable_Swoobat,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Swoobat,
-            gShinyOverworldPalette_Swoobat
-        )
+        OVERWORLD(sPicTable_Swoobat,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Swoobat,
+gShinyOverworldPalette_Swoobat)
         .levelUpLearnset = sSwoobatLevelUpLearnset,
         .teachableLearnset = sSwoobatTeachableLearnset,
     },
-#endif //P_FAMILY_WOOBAT
+#endif // P_FAMILY_WOOBAT
 
 #if P_FAMILY_DRILBUR
     [SPECIES_DRILBUR] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 85,
-        .baseDefense   = 40,
-        .baseSpeed     = 68,
-        .baseSpAttack  = 30,
+        .baseHP = 60,
+        .baseAttack = 85,
+        .baseDefense = 40,
+        .baseSpeed = 68,
+        .baseSpAttack = 30,
         .baseSpDefense = 45,
         .types = MON_TYPES(TYPE_GROUND),
         .catchRate = 120,
@@ -2720,10 +2624,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 3,
         .weight = 85,
         .description = COMPOUND_STRING(
-            "It can dig through the ground at a\n"
-            "speed of 30 mph by spinning its body.\n"
-            "It could give a car running aboveground\n"
-            "a good race."),
+"It can dig through the ground at a\n"
+"speed of 30 mph by spinning its body.\n"
+"It could give a car running aboveground\n"
+"a good race."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -2732,12 +2636,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 48),
         .frontPicYOffset = 10,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_SWING_CONCAVE_FAST_SHORT,
         .backPic = gMonBackPic_Drilbur,
         .backPicSize = MON_COORDS_SIZE(64, 40),
@@ -2750,28 +2654,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
         SHADOW(0, 4, SHADOW_SIZE_S)
         FOOTPRINT(Drilbur)
-        OVERWORLD(
-            sPicTable_Drilbur,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Drilbur,
-            gShinyOverworldPalette_Drilbur
-        )
+        OVERWORLD(sPicTable_Drilbur,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Drilbur,
+gShinyOverworldPalette_Drilbur)
         .levelUpLearnset = sDrilburLevelUpLearnset,
         .teachableLearnset = sDrilburTeachableLearnset,
         .eggMoveLearnset = sDrilburEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 31, SPECIES_EXCADRILL}),
     },
-
     [SPECIES_EXCADRILL] =
     {
-        .baseHP        = 110,
-        .baseAttack    = 135,
-        .baseDefense   = 60,
-        .baseSpeed     = 88,
-        .baseSpAttack  = 50,
+        .baseHP = 110,
+        .baseAttack = 135,
+        .baseDefense = 60,
+        .baseSpeed = 88,
+        .baseSpAttack = 50,
         .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_GROUND, TYPE_STEEL),
         .catchRate = 60,
@@ -2792,10 +2693,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 7,
         .weight = 404,
         .description = COMPOUND_STRING(
-            "More than 300 feet below the surface,\n"
-            "they build mazelike nests. Their activity\n"
-            "can be destructive to subway tunnels,\n"
-            "but it can also help with construction."),
+"More than 300 feet below the surface,\n"
+"they build mazelike nests. Their activity\n"
+"can be destructive to subway tunnels,\n"
+"but it can also help with construction."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -2804,11 +2705,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 5,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 40),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 40),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_H_SHAKE,
         .backPic = gMonBackPic_Excadrill,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -2821,29 +2722,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
         SHADOW(3, 8, SHADOW_SIZE_L)
         FOOTPRINT(Excadrill)
-        OVERWORLD(
-            sPicTable_Excadrill,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Excadrill,
-            gShinyOverworldPalette_Excadrill
-        )
+        OVERWORLD(sPicTable_Excadrill,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Excadrill,
+gShinyOverworldPalette_Excadrill)
         .levelUpLearnset = sExcadrillLevelUpLearnset,
         .teachableLearnset = sExcadrillTeachableLearnset,
         .formSpeciesIdTable = sExcadrillFormSpeciesIdTable,
         .formChangeTable = sExcadrillFormChangeTable,
     },
-
 #if P_GEN_9_MEGA_EVOLUTIONS
+
     [SPECIES_EXCADRILL_MEGA] =
     {
-        .baseHP        = 110,
-        .baseAttack    = 165,
-        .baseDefense   = 100,
-        .baseSpeed     = 103,
-        .baseSpAttack  = 65,
+        .baseHP = 110,
+        .baseAttack = 165,
+        .baseDefense = 100,
+        .baseSpeed = 103,
+        .baseSpAttack = 65,
         .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_GROUND, TYPE_STEEL),
         .catchRate = 60,
@@ -2868,19 +2767,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 9,
         .weight = 600,
         .description = COMPOUND_STRING(
-            "If this Pokémon brings its arms and\n"
-            "head together to form a streamlined\n"
-            "shape and spins at high speeds,\n"
-            "it can destroy anything."),
+"If this Pokémon brings its arms and\n"
+"head together to form a streamlined\n"
+"shape and spins at high speeds,\n"
+"it can destroy anything."),
         .frontPic = gMonFrontPic_ExcadrillMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_ExcadrillMega,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 0,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_ExcadrillMega,
         .shinyPalette = gMonShinyPalette_ExcadrillMega,
         .iconSprite = gMonIcon_ExcadrillMega,
@@ -2895,16 +2792,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formChangeTable = sExcadrillFormChangeTable,
     },
 #endif //P_GEN_9_MEGA_EVOLUTIONS
-#endif //P_FAMILY_DRILBUR
+
+#endif // P_FAMILY_DRILBUR
 
 #if P_FAMILY_AUDINO
     [SPECIES_AUDINO] =
     {
-        .baseHP        = 103,
-        .baseAttack    = 60,
-        .baseDefense   = 86,
-        .baseSpeed     = 50,
-        .baseSpAttack  = 60,
+        .baseHP = 103,
+        .baseAttack = 60,
+        .baseDefense = 86,
+        .baseSpeed = 50,
+        .baseSpAttack = 60,
         .baseSpDefense = 86,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 255,
@@ -2926,10 +2824,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 11,
         .weight = 310,
         .description = COMPOUND_STRING(
-            "Its auditory sense is astounding.\n"
-            "Using the feelers on its ears, it can tell\n"
-            "how someone is feeling or when an egg\n"
-            "might hatch."),
+"Its auditory sense is astounding.\n"
+"Using the feelers on its ears, it can tell\n"
+"how someone is feeling or when an egg\n"
+"might hatch."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -2938,10 +2836,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 48),
         .frontPicYOffset = 8,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 1),
-            ANIMCMD_FRAME(1, 36),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_FRAME(1, 36),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Audino,
         .backPicSize = MON_COORDS_SIZE(56, 56),
@@ -2954,30 +2852,28 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 6, SHADOW_SIZE_S)
         FOOTPRINT(Audino)
-        OVERWORLD(
-            sPicTable_Audino,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Audino,
-            gShinyOverworldPalette_Audino
-        )
+        OVERWORLD(sPicTable_Audino,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Audino,
+gShinyOverworldPalette_Audino)
         .levelUpLearnset = sAudinoLevelUpLearnset,
         .teachableLearnset = sAudinoTeachableLearnset,
         .eggMoveLearnset = sAudinoEggMoveLearnset,
         .formSpeciesIdTable = sAudinoFormSpeciesIdTable,
         .formChangeTable = sAudinoFormChangeTable,
     },
-
 #if P_MEGA_EVOLUTIONS
+
     [SPECIES_AUDINO_MEGA] =
     {
-        .baseHP        = 103,
-        .baseAttack    = 60,
-        .baseDefense   = 126,
-        .baseSpeed     = 50,
-        .baseSpAttack  = 80,
+        .baseHP = 103,
+        .baseAttack = 60,
+        .baseDefense = 126,
+        .baseSpeed = 50,
+        .baseSpAttack = 80,
         .baseSpDefense = 126,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_FAIRY),
         .catchRate = 255,
@@ -3003,10 +2899,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 15,
         .weight = 320,
         .description = COMPOUND_STRING(
-            "Mega Audino emits a soothing pulse from\n"
-            "its body that reduces hostility in others.\n"
-            "Anything that comes into contact with its\n"
-            "second feelers will fall into a deep sleep."),
+"Mega Audino emits a soothing pulse from\n"
+"its body that reduces hostility in others.\n"
+"Anything that comes into contact with its\n"
+"second feelers will fall into a deep sleep."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -3015,11 +2911,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 64),
         .frontPicYOffset = 6,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_AudinoMega,
         .backPicSize = MON_COORDS_SIZE(56, 64),
         .backPicYOffset = 0,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_AudinoMega,
         .shinyPalette = gMonShinyPalette_AudinoMega,
         .iconSprite = gMonIcon_AudinoMega,
@@ -3028,15 +2922,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         SHADOW(-1, 7, SHADOW_SIZE_M)
         FOOTPRINT(Audino)
     #if OW_BATTLE_ONLY_FORMS
-        OVERWORLD(
-            sPicTable_AudinoMega,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_AudinoMega,
-            gShinyOverworldPalette_AudinoMega
-        )
+        OVERWORLD(sPicTable_AudinoMega,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_AudinoMega,
+gShinyOverworldPalette_AudinoMega)
     #endif //OW_BATTLE_ONLY_FORMS
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sAudinoLevelUpLearnset,
@@ -3046,16 +2938,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formChangeTable = sAudinoFormChangeTable,
     },
 #endif //P_MEGA_EVOLUTIONS
-#endif //P_FAMILY_AUDINO
+
+#endif // P_FAMILY_AUDINO
 
 #if P_FAMILY_TIMBURR
     [SPECIES_TIMBURR] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 80,
-        .baseDefense   = 55,
-        .baseSpeed     = 35,
-        .baseSpAttack  = 25,
+        .baseHP = 75,
+        .baseAttack = 80,
+        .baseDefense = 55,
+        .baseSpeed = 35,
+        .baseSpAttack = 25,
         .baseSpDefense = 35,
         .types = MON_TYPES(TYPE_FIGHTING),
         .catchRate = 180,
@@ -3075,10 +2968,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 125,
         .description = COMPOUND_STRING(
-            "These Pokémon appear at building\n"
-            "sites and help out with construction.\n"
-            "They always carry squared logs.\n"
-            "As they grow, they carry bigger logs."),
+"These Pokémon appear at building\n"
+"sites and help out with construction.\n"
+"They always carry squared logs.\n"
+"As they grow, they carry bigger logs."),
         .pokemonScale = 422,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -3087,10 +2980,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 40),
         .frontPicYOffset = 12,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Timburr,
         .backPicSize = MON_COORDS_SIZE(64, 40),
@@ -3103,28 +2996,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_SLOW,
         SHADOW(-4, 2, SHADOW_SIZE_S)
         FOOTPRINT(Timburr)
-        OVERWORLD(
-            sPicTable_Timburr,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Timburr,
-            gShinyOverworldPalette_Timburr
-        )
+        OVERWORLD(sPicTable_Timburr,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Timburr,
+gShinyOverworldPalette_Timburr)
         .levelUpLearnset = sTimburrLevelUpLearnset,
         .teachableLearnset = sTimburrTeachableLearnset,
         .eggMoveLearnset = sTimburrEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 25, SPECIES_GURDURR}),
     },
-
     [SPECIES_GURDURR] =
     {
-        .baseHP        = 85,
-        .baseAttack    = 105,
-        .baseDefense   = 85,
-        .baseSpeed     = 40,
-        .baseSpAttack  = 40,
+        .baseHP = 85,
+        .baseAttack = 105,
+        .baseDefense = 85,
+        .baseSpeed = 40,
+        .baseSpAttack = 40,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_FIGHTING),
         .catchRate = 90,
@@ -3144,10 +3034,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 12,
         .weight = 400,
         .description = COMPOUND_STRING(
-            "They strengthen their bodies by carrying\n"
-            "steel beams. This Pokémon is so muscular\n"
-            "and strongly built that even a group of\n"
-            "wrestlers could not make it budge an inch."),
+"They strengthen their bodies by carrying\n"
+"steel beams. This Pokémon is so muscular\n"
+"and strongly built that even a group of\n"
+"wrestlers could not make it budge an inch."),
         .pokemonScale = 282,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -3156,14 +3046,14 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 50),
-        ),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 50),
+),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .backPic = gMonBackPic_Gurdurr,
         .backPicSize = MON_COORDS_SIZE(64, 48),
@@ -3176,28 +3066,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 14, SHADOW_SIZE_M)
         FOOTPRINT(Gurdurr)
-        OVERWORLD(
-            sPicTable_Gurdurr,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Gurdurr,
-            gShinyOverworldPalette_Gurdurr
-        )
+        OVERWORLD(sPicTable_Gurdurr,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Gurdurr,
+gShinyOverworldPalette_Gurdurr)
         .levelUpLearnset = sGurdurrLevelUpLearnset,
         .teachableLearnset = sGurdurrTeachableLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_CONKELDURR},
-                                {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_CONKELDURR}),
+{EVO_ITEM, ITEM_LINKING_CORD, SPECIES_CONKELDURR}),
     },
-
     [SPECIES_CONKELDURR] =
     {
-        .baseHP        = 105,
-        .baseAttack    = 140,
-        .baseDefense   = 95,
-        .baseSpeed     = 45,
-        .baseSpAttack  = 55,
+        .baseHP = 105,
+        .baseAttack = 140,
+        .baseDefense = 95,
+        .baseSpeed = 45,
+        .baseSpAttack = 55,
         .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_FIGHTING),
         .catchRate = 45,
@@ -3217,10 +3104,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 14,
         .weight = 870,
         .description = COMPOUND_STRING(
-            "They use concrete pillars as walking\n"
-            "canes. Rather than rely solely on force,\n"
-            "they master moves that utilize the\n"
-            "centrifugal force of spinning concrete."),
+"They use concrete pillars as walking\n"
+"canes. Rather than rely solely on force,\n"
+"they master moves that utilize the\n"
+"centrifugal force of spinning concrete."),
         .pokemonScale = 265,
         .pokemonOffset = 3,
         .trainerScale = 262,
@@ -3229,9 +3116,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 56),
         .frontPicYOffset = 6,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 45),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(1, 45),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SHAKE_TWICE,
         .backPic = gMonBackPic_Conkeldurr,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -3244,28 +3131,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 3, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Conkeldurr)
-        OVERWORLD(
-            sPicTable_Conkeldurr,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Conkeldurr,
-            gShinyOverworldPalette_Conkeldurr
-        )
+        OVERWORLD(sPicTable_Conkeldurr,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Conkeldurr,
+gShinyOverworldPalette_Conkeldurr)
         .levelUpLearnset = sConkeldurrLevelUpLearnset,
         .teachableLearnset = sConkeldurrTeachableLearnset,
     },
-#endif //P_FAMILY_TIMBURR
+#endif // P_FAMILY_TIMBURR
 
 #if P_FAMILY_TYMPOLE
     [SPECIES_TYMPOLE] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 50,
-        .baseDefense   = 40,
-        .baseSpeed     = 64,
-        .baseSpAttack  = 50,
+        .baseHP = 50,
+        .baseAttack = 50,
+        .baseDefense = 40,
+        .baseSpeed = 64,
+        .baseSpAttack = 50,
         .baseSpDefense = 40,
         .types = MON_TYPES(TYPE_WATER),
         .catchRate = 255,
@@ -3285,10 +3170,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 45,
         .description = COMPOUND_STRING(
-            "By vibrating its cheeks, it emits sound\n"
-            "waves imperceptible to humans. It uses\n"
-            "the rhythm of these sounds to talk and\n"
-            "warns others of danger."),
+"By vibrating its cheeks, it emits sound\n"
+"waves imperceptible to humans. It uses\n"
+"the rhythm of these sounds to talk and\n"
+"warns others of danger."),
         .pokemonScale = 432,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -3297,9 +3182,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 14,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 35),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(1, 35),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_H_JUMPS_V_STRETCH,
         .backPic = gMonBackPic_Tympole,
         .backPicSize = MON_COORDS_SIZE(40, 32),
@@ -3312,28 +3197,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 0, SHADOW_SIZE_S)
         FOOTPRINT(Tympole)
-        OVERWORLD(
-            sPicTable_Tympole,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Tympole,
-            gShinyOverworldPalette_Tympole
-        )
+        OVERWORLD(sPicTable_Tympole,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Tympole,
+gShinyOverworldPalette_Tympole)
         .levelUpLearnset = sTympoleLevelUpLearnset,
         .teachableLearnset = sTympoleTeachableLearnset,
         .eggMoveLearnset = sTympoleEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 25, SPECIES_PALPITOAD}),
     },
-
     [SPECIES_PALPITOAD] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 65,
-        .baseDefense   = 55,
-        .baseSpeed     = 69,
-        .baseSpAttack  = 65,
+        .baseHP = 75,
+        .baseAttack = 65,
+        .baseDefense = 55,
+        .baseSpeed = 69,
+        .baseSpAttack = 65,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_WATER, TYPE_GROUND),
         .catchRate = 120,
@@ -3353,10 +3235,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 8,
         .weight = 170,
         .description = COMPOUND_STRING(
-            "It lives in the water and on land.\n"
-            "When they vibrate the bumps on their\n"
-            "heads, they can make waves in water\n"
-            "or earthquake-like vibrations on land."),
+"It lives in the water and on land.\n"
+"When they vibrate the bumps on their\n"
+"heads, they can make waves in water\n"
+"or earthquake-like vibrations on land."),
         .pokemonScale = 366,
         .pokemonOffset = 10,
         .trainerScale = 257,
@@ -3365,12 +3247,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 48),
         .frontPicYOffset = 11,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 8),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 13),
-            ANIMCMD_FRAME(0, 7),
-        ),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 8),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 13),
+ANIMCMD_FRAME(0, 7),
+),
         .frontAnimId = ANIM_CIRCULAR_STRETCH_TWICE,
         .backPic = gMonBackPic_Palpitoad,
         .backPicSize = MON_COORDS_SIZE(56, 40),
@@ -3383,27 +3265,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 3, SHADOW_SIZE_S)
         FOOTPRINT(Palpitoad)
-        OVERWORLD(
-            sPicTable_Palpitoad,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Palpitoad,
-            gShinyOverworldPalette_Palpitoad
-        )
+        OVERWORLD(sPicTable_Palpitoad,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Palpitoad,
+gShinyOverworldPalette_Palpitoad)
         .levelUpLearnset = sPalpitoadLevelUpLearnset,
         .teachableLearnset = sPalpitoadTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_SEISMITOAD}),
     },
-
     [SPECIES_SEISMITOAD] =
     {
-        .baseHP        = 105,
-        .baseAttack    = P_UPDATED_STATS >= GEN_6 ? 95 : 85,
-        .baseDefense   = 75,
-        .baseSpeed     = 74,
-        .baseSpAttack  = 85,
+        .baseHP = 105,
+        .baseAttack = P_UPDATED_STATS >= GEN_6 ? 95 : 85,
+        .baseDefense = 75,
+        .baseSpeed = 74,
+        .baseSpAttack = 85,
         .baseSpDefense = 75,
         .types = MON_TYPES(TYPE_WATER, TYPE_GROUND),
         .catchRate = 45,
@@ -3429,10 +3308,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 15,
         .weight = 620,
         .description = COMPOUND_STRING(
-            "It increases the power of its punches\n"
-            "by vibrating the bumps on its fists.\n"
-            "They can also shoot paralyzing liquid\n"
-            "from their head bumps."),
+"It increases the power of its punches\n"
+"by vibrating the bumps on its fists.\n"
+"They can also shoot paralyzing liquid\n"
+"from their head bumps."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -3441,14 +3320,14 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 13),
-            ANIMCMD_FRAME(1, 7),
-            ANIMCMD_FRAME(0, 13),
-            ANIMCMD_FRAME(1, 7),
-            ANIMCMD_FRAME(0, 13),
-            ANIMCMD_FRAME(1, 7),
-            ANIMCMD_FRAME(0, 11),
-        ),
+ANIMCMD_FRAME(0, 13),
+ANIMCMD_FRAME(1, 7),
+ANIMCMD_FRAME(0, 13),
+ANIMCMD_FRAME(1, 7),
+ANIMCMD_FRAME(0, 13),
+ANIMCMD_FRAME(1, 7),
+ANIMCMD_FRAME(0, 11),
+),
         .frontAnimId = ANIM_H_JUMPS,
         .backPic = gMonBackPic_Seismitoad,
         .backPicSize = MON_COORDS_SIZE(64, 40),
@@ -3461,28 +3340,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(4, 10, SHADOW_SIZE_L)
         FOOTPRINT(Seismitoad)
-        OVERWORLD(
-            sPicTable_Seismitoad,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Seismitoad,
-            gShinyOverworldPalette_Seismitoad
-        )
+        OVERWORLD(sPicTable_Seismitoad,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Seismitoad,
+gShinyOverworldPalette_Seismitoad)
         .levelUpLearnset = sSeismitoadLevelUpLearnset,
         .teachableLearnset = sSeismitoadTeachableLearnset,
     },
-#endif //P_FAMILY_TYMPOLE
+#endif // P_FAMILY_TYMPOLE
 
 #if P_FAMILY_THROH
     [SPECIES_THROH] =
     {
-        .baseHP        = 120,
-        .baseAttack    = 100,
-        .baseDefense   = 85,
-        .baseSpeed     = 45,
-        .baseSpAttack  = 30,
+        .baseHP = 120,
+        .baseAttack = 100,
+        .baseDefense = 85,
+        .baseSpeed = 45,
+        .baseSpAttack = 30,
         .baseSpDefense = 85,
         .types = MON_TYPES(TYPE_FIGHTING),
         .catchRate = 45,
@@ -3503,10 +3380,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 13,
         .weight = 555,
         .description = COMPOUND_STRING(
-            "When it tightens its belt, it becomes\n"
-            "stronger. Wild Throh use vines to weave\n"
-            "their own belts. It changes belts as it\n"
-            "gets more powerful."),
+"When it tightens its belt, it becomes\n"
+"stronger. Wild Throh use vines to weave\n"
+"their own belts. It changes belts as it\n"
+"gets more powerful."),
         .pokemonScale = 272,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -3515,11 +3392,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 48),
         .frontPicYOffset = 10,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_CIRCULAR_STRETCH_TWICE,
         .backPic = gMonBackPic_Throh,
         .backPicSize = MON_COORDS_SIZE(64, 48),
@@ -3532,28 +3409,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(3, 4, SHADOW_SIZE_M)
         FOOTPRINT(Throh)
-        OVERWORLD(
-            sPicTable_Throh,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Throh,
-            gShinyOverworldPalette_Throh
-        )
+        OVERWORLD(sPicTable_Throh,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Throh,
+gShinyOverworldPalette_Throh)
         .levelUpLearnset = sThrohLevelUpLearnset,
         .teachableLearnset = sThrohTeachableLearnset,
     },
-#endif //P_FAMILY_THROH
+#endif // P_FAMILY_THROH
 
 #if P_FAMILY_SAWK
     [SPECIES_SAWK] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 125,
-        .baseDefense   = 75,
-        .baseSpeed     = 85,
-        .baseSpAttack  = 30,
+        .baseHP = 75,
+        .baseAttack = 125,
+        .baseDefense = 75,
+        .baseSpeed = 85,
+        .baseSpAttack = 30,
         .baseSpDefense = 75,
         .types = MON_TYPES(TYPE_FIGHTING),
         .catchRate = 45,
@@ -3575,10 +3450,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 14,
         .weight = 510,
         .description = COMPOUND_STRING(
-            "The sound of Sawk punching boulders\n"
-            "and trees can be heard all the way from\n"
-            "the mountains where they train.\n"
-            "Disturbing their training angers them."),
+"The sound of Sawk punching boulders\n"
+"and trees can be heard all the way from\n"
+"the mountains where they train.\n"
+"Disturbing their training angers them."),
         .pokemonScale = 265,
         .pokemonOffset = 4,
         .trainerScale = 262,
@@ -3587,9 +3462,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 7,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 45),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(1, 45),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .backPic = gMonBackPic_Sawk,
         .backPicSize = MON_COORDS_SIZE(64, 40),
@@ -3602,28 +3477,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 6, SHADOW_SIZE_M)
         FOOTPRINT(Sawk)
-        OVERWORLD(
-            sPicTable_Sawk,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Sawk,
-            gShinyOverworldPalette_Sawk
-        )
+        OVERWORLD(sPicTable_Sawk,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Sawk,
+gShinyOverworldPalette_Sawk)
         .levelUpLearnset = sSawkLevelUpLearnset,
         .teachableLearnset = sSawkTeachableLearnset,
     },
-#endif //P_FAMILY_SAWK
+#endif // P_FAMILY_SAWK
 
 #if P_FAMILY_SEWADDLE
     [SPECIES_SEWADDLE] =
     {
-        .baseHP        = 45,
-        .baseAttack    = 53,
-        .baseDefense   = 70,
-        .baseSpeed     = 42,
-        .baseSpAttack  = 40,
+        .baseHP = 45,
+        .baseAttack = 53,
+        .baseDefense = 70,
+        .baseSpeed = 42,
+        .baseSpAttack = 40,
         .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_BUG, TYPE_GRASS),
         .catchRate = 255,
@@ -3644,10 +3517,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 3,
         .weight = 25,
         .description = COMPOUND_STRING(
-            "It chews up leaves and sews them with\n"
-            "sticky thread extruded from its mouth.\n"
-            "Since this Pokémon makes its own clothes,\n"
-            "it is a mascot for fashion designers."),
+"It chews up leaves and sews them with\n"
+"sticky thread extruded from its mouth.\n"
+"Since this Pokémon makes its own clothes,\n"
+"it is a mascot for fashion designers."),
         .pokemonScale = 530,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -3656,12 +3529,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 14,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 11),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 20),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 11),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 20),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_CIRCLE_INTO_BG,
         .backPic = gMonBackPic_Sewaddle,
         .backPicSize = MON_COORDS_SIZE(40, 48),
@@ -3674,28 +3547,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(1, 0, SHADOW_SIZE_S)
         FOOTPRINT(Sewaddle)
-        OVERWORLD(
-            sPicTable_Sewaddle,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Sewaddle,
-            gShinyOverworldPalette_Sewaddle
-        )
+        OVERWORLD(sPicTable_Sewaddle,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Sewaddle,
+gShinyOverworldPalette_Sewaddle)
         .levelUpLearnset = sSewaddleLevelUpLearnset,
         .teachableLearnset = sSewaddleTeachableLearnset,
         .eggMoveLearnset = sSewaddleEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_SWADLOON}),
     },
-
     [SPECIES_SWADLOON] =
     {
-        .baseHP        = 55,
-        .baseAttack    = 63,
-        .baseDefense   = 90,
-        .baseSpeed     = 42,
-        .baseSpAttack  = 50,
+        .baseHP = 55,
+        .baseAttack = 63,
+        .baseDefense = 90,
+        .baseSpeed = 42,
+        .baseSpAttack = 50,
         .baseSpDefense = 80,
         .types = MON_TYPES(TYPE_BUG, TYPE_GRASS),
         .catchRate = 120,
@@ -3716,10 +3586,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 73,
         .description = COMPOUND_STRING(
-            "Forests where Swadloon live have\n"
-            "superb foliage because the nutrients\n"
-            "they make from fallen leaves nourish\n"
-            "the plant life."),
+"Forests where Swadloon live have\n"
+"superb foliage because the nutrients\n"
+"they make from fallen leaves nourish\n"
+"the plant life."),
         .pokemonScale = 432,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -3728,11 +3598,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 48),
         .frontPicYOffset = 12,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_CIRCULAR_STRETCH_TWICE,
         .backPic = gMonBackPic_Swadloon,
         .backPicSize = MON_COORDS_SIZE(48, 48),
@@ -3745,27 +3615,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
         SHADOW(0, 1, SHADOW_SIZE_L)
         FOOTPRINT(Swadloon)
-        OVERWORLD(
-            sPicTable_Swadloon,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Swadloon,
-            gShinyOverworldPalette_Swadloon
-        )
+        OVERWORLD(sPicTable_Swadloon,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Swadloon,
+gShinyOverworldPalette_Swadloon)
         .levelUpLearnset = sSwadloonLevelUpLearnset,
         .teachableLearnset = sSwadloonTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_LEAVANNY, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD})}),
     },
-
     [SPECIES_LEAVANNY] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 103,
-        .baseDefense   = 80,
-        .baseSpeed     = 92,
-        .baseSpAttack  = 70,
+        .baseHP = 75,
+        .baseAttack = 103,
+        .baseDefense = 80,
+        .baseSpeed = 92,
+        .baseSpAttack = 70,
         .baseSpDefense = P_UPDATED_STATS >= GEN_6 ? 80 : 70,
         .types = MON_TYPES(TYPE_BUG, TYPE_GRASS),
         .catchRate = 45,
@@ -3792,10 +3659,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 12,
         .weight = 205,
         .description = COMPOUND_STRING(
-            "It keeps its eggs warm with heat from\n"
-            "fermenting leaves. It also uses leaves to\n"
-            "weave warm wrappings for Sewaddle by\n"
-            "using the silk secreted from its mouth."),
+"It keeps its eggs warm with heat from\n"
+"fermenting leaves. It also uses leaves to\n"
+"weave warm wrappings for Sewaddle by\n"
+"using the silk secreted from its mouth."),
         .pokemonScale = 282,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -3804,10 +3671,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 12),
-            ANIMCMD_FRAME(1, 45),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 12),
+ANIMCMD_FRAME(1, 45),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .backPic = gMonBackPic_Leavanny,
         .backPicSize = MON_COORDS_SIZE(56, 64),
@@ -3820,28 +3687,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 14, SHADOW_SIZE_S)
         FOOTPRINT(Leavanny)
-        OVERWORLD(
-            sPicTable_Leavanny,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Leavanny,
-            gShinyOverworldPalette_Leavanny
-        )
+        OVERWORLD(sPicTable_Leavanny,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Leavanny,
+gShinyOverworldPalette_Leavanny)
         .levelUpLearnset = sLeavannyLevelUpLearnset,
         .teachableLearnset = sLeavannyTeachableLearnset,
     },
-#endif //P_FAMILY_SEWADDLE
+#endif // P_FAMILY_SEWADDLE
 
 #if P_FAMILY_VENIPEDE
     [SPECIES_VENIPEDE] =
     {
-        .baseHP        = 30,
-        .baseAttack    = 45,
-        .baseDefense   = 59,
-        .baseSpeed     = 57,
-        .baseSpAttack  = 30,
+        .baseHP = 30,
+        .baseAttack = 45,
+        .baseDefense = 59,
+        .baseSpeed = 57,
+        .baseSpAttack = 30,
         .baseSpDefense = 39,
         .types = MON_TYPES(TYPE_BUG, TYPE_POISON),
         .catchRate = 255,
@@ -3866,10 +3731,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 4,
         .weight = 53,
         .description = COMPOUND_STRING(
-            "Using the feelers on its head and tail,\n"
-            "it picks up vibrations in the air to\n"
-            "determine its prey's location and state.\n"
-            "It is brutally aggressive."),
+"Using the feelers on its head and tail,\n"
+"it picks up vibrations in the air to\n"
+"determine its prey's location and state.\n"
+"It is brutally aggressive."),
         .pokemonScale = 491,
         .pokemonOffset = 16,
         .trainerScale = 256,
@@ -3878,14 +3743,14 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 32),
         .frontPicYOffset = 16,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_H_SLIDE,
         .backPic = gMonBackPic_Venipede,
         .backPicSize = MON_COORDS_SIZE(64, 40),
@@ -3898,28 +3763,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(-2, -3, SHADOW_SIZE_M)
         FOOTPRINT(Venipede)
-        OVERWORLD(
-            sPicTable_Venipede,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Venipede,
-            gShinyOverworldPalette_Venipede
-        )
+        OVERWORLD(sPicTable_Venipede,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Venipede,
+gShinyOverworldPalette_Venipede)
         .levelUpLearnset = sVenipedeLevelUpLearnset,
         .teachableLearnset = sVenipedeTeachableLearnset,
         .eggMoveLearnset = sVenipedeEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_WHIRLIPEDE}),
     },
-
     [SPECIES_WHIRLIPEDE] =
     {
-        .baseHP        = 40,
-        .baseAttack    = 55,
-        .baseDefense   = 99,
-        .baseSpeed     = 47,
-        .baseSpAttack  = 40,
+        .baseHP = 40,
+        .baseAttack = 55,
+        .baseDefense = 99,
+        .baseSpeed = 47,
+        .baseSpAttack = 40,
         .baseSpDefense = 79,
         .types = MON_TYPES(TYPE_BUG, TYPE_POISON),
         .catchRate = 120,
@@ -3944,10 +3806,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 12,
         .weight = 585,
         .description = COMPOUND_STRING(
-            "Storing energy for evolution, it sits.\n"
-            "But when attacked, it spins its body at\n"
-            "high speed like a wheel and then\n"
-            "crashes furiously into its opponent."),
+"Storing energy for evolution, it sits.\n"
+"But when attacked, it spins its body at\n"
+"high speed like a wheel and then\n"
+"crashes furiously into its opponent."),
         .pokemonScale = 282,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -3956,13 +3818,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 40),
         .frontPicYOffset = 13,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 8),
-            ANIMCMD_FRAME(0, 8),
-            ANIMCMD_FRAME(1, 8),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 20),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(1, 8),
+ANIMCMD_FRAME(0, 8),
+ANIMCMD_FRAME(1, 8),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 20),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_TIP_MOVE_FORWARD,
         .backPic = gMonBackPic_Whirlipede,
         .backPicSize = MON_COORDS_SIZE(64, 40),
@@ -3975,27 +3837,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 1, SHADOW_SIZE_S)
         FOOTPRINT(Whirlipede)
-        OVERWORLD(
-            sPicTable_Whirlipede,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Whirlipede,
-            gShinyOverworldPalette_Whirlipede
-        )
+        OVERWORLD(sPicTable_Whirlipede,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Whirlipede,
+gShinyOverworldPalette_Whirlipede)
         .levelUpLearnset = sWhirlipedeLevelUpLearnset,
         .teachableLearnset = sWhirlipedeTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_SCOLIPEDE}),
     },
-
     [SPECIES_SCOLIPEDE] =
     {
-        .baseHP        = 60,
-        .baseAttack    = P_UPDATED_STATS >= GEN_6 ? 100 : 90,
-        .baseDefense   = 89,
-        .baseSpeed     = 112,
-        .baseSpAttack  = 55,
+        .baseHP = 60,
+        .baseAttack = P_UPDATED_STATS >= GEN_6 ? 100 : 90,
+        .baseDefense = 89,
+        .baseSpeed = 112,
+        .baseSpAttack = 55,
         .baseSpDefense = 69,
         .types = MON_TYPES(TYPE_BUG, TYPE_POISON),
         .catchRate = 45,
@@ -4026,10 +3885,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 25,
         .weight = 2005,
         .description = COMPOUND_STRING(
-            "With quick movements, it chases down\n"
-            "its foes, attacking relentlessly with its\n"
-            "horns until it prevails. Then it finishes\n"
-            "them off with deadly poison."),
+"With quick movements, it chases down\n"
+"its foes, attacking relentlessly with its\n"
+"horns until it prevails. Then it finishes\n"
+"them off with deadly poison."),
         .pokemonScale = 257,
         .pokemonOffset = 2,
         .trainerScale = 423,
@@ -4038,9 +3897,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 45),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(1, 45),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_H_SHAKE,
         .backPic = gMonBackPic_Scolipede,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -4053,29 +3912,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 12, SHADOW_SIZE_L)
         FOOTPRINT(Scolipede)
-        OVERWORLD(
-            sPicTable_Scolipede,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Scolipede,
-            gShinyOverworldPalette_Scolipede
-        )
+        OVERWORLD(sPicTable_Scolipede,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Scolipede,
+gShinyOverworldPalette_Scolipede)
         .levelUpLearnset = sScolipedeLevelUpLearnset,
         .teachableLearnset = sScolipedeTeachableLearnset,
         .formSpeciesIdTable = sScolipedeFormSpeciesIdTable,
         .formChangeTable = sScolipedeFormChangeTable,
     },
-
 #if P_GEN_9_MEGA_EVOLUTIONS
+
     [SPECIES_SCOLIPEDE_MEGA] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 140,
-        .baseDefense   = 149,
-        .baseSpeed     = 62,
-        .baseSpAttack  = 75,
+        .baseHP = 60,
+        .baseAttack = 140,
+        .baseDefense = 149,
+        .baseSpeed = 62,
+        .baseSpAttack = 75,
         .baseSpDefense = 99,
         .types = MON_TYPES(TYPE_BUG, TYPE_POISON),
         .catchRate = 45,
@@ -4100,18 +3957,16 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 32,
         .weight = 2305,
         .description = COMPOUND_STRING(
-            "Its deadly venom gives off a faint\n"
-            "glow. The venom affects Scolipede's\n"
-            "mind, honing its viciousness."),
+"Its deadly venom gives off a faint\n"
+"glow. The venom affects Scolipede's\n"
+"mind, honing its viciousness."),
         .frontPic = gMonFrontPic_ScolipedeMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_ScolipedeMega,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 2,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_ScolipedeMega,
         .shinyPalette = gMonShinyPalette_ScolipedeMega,
         .iconSprite = gMonIcon_ScolipedeMega,
@@ -4126,18 +3981,19 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formChangeTable = sScolipedeFormChangeTable,
     },
 #endif //P_GEN_9_MEGA_EVOLUTIONS
-#endif //P_FAMILY_VENIPEDE
+
+#endif // P_FAMILY_VENIPEDE
 
 #if P_FAMILY_COTTONEE
 #define COTTONEE_FAMILY_TYPE2 (P_UPDATED_TYPES >= GEN_6 ? TYPE_FAIRY : TYPE_GRASS)
 
     [SPECIES_COTTONEE] =
     {
-        .baseHP        = 40,
-        .baseAttack    = 27,
-        .baseDefense   = 60,
-        .baseSpeed     = 66,
-        .baseSpAttack  = 37,
+        .baseHP = 40,
+        .baseAttack = 27,
+        .baseDefense = 60,
+        .baseSpeed = 66,
+        .baseSpAttack = 37,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_GRASS, COTTONEE_FAMILY_TYPE2),
         .catchRate = 190,
@@ -4158,10 +4014,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 3,
         .weight = 6,
         .description = COMPOUND_STRING(
-            "When it finds others of its kind, they all\n"
-            "stick together. When enough of them\n"
-            "have collected, the mass resembles a\n"
-            "cumulonimbus cloud."),
+"When it finds others of its kind, they all\n"
+"stick together. When enough of them\n"
+"have collected, the mass resembles a\n"
+"cumulonimbus cloud."),
         .pokemonScale = 530,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -4170,16 +4026,16 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 32),
         .frontPicYOffset = 18,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 50),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 1),
-        ),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 50),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 1),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Cottonee,
         .backPicSize = MON_COORDS_SIZE(64, 32),
@@ -4192,28 +4048,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, -5, SHADOW_SIZE_M)
         FOOTPRINT(Cottonee)
-        OVERWORLD(
-            sPicTable_Cottonee,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Cottonee,
-            gShinyOverworldPalette_Cottonee
-        )
+        OVERWORLD(sPicTable_Cottonee,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Cottonee,
+gShinyOverworldPalette_Cottonee)
         .levelUpLearnset = sCottoneeLevelUpLearnset,
         .teachableLearnset = sCottoneeTeachableLearnset,
         .eggMoveLearnset = sCottoneeEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_SUN_STONE, SPECIES_WHIMSICOTT}),
     },
-
     [SPECIES_WHIMSICOTT] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 67,
-        .baseDefense   = 85,
-        .baseSpeed     = 116,
-        .baseSpAttack  = 77,
+        .baseHP = 60,
+        .baseAttack = 67,
+        .baseDefense = 85,
+        .baseSpeed = 116,
+        .baseSpAttack = 77,
         .baseSpDefense = 75,
         .types = MON_TYPES(TYPE_GRASS, COTTONEE_FAMILY_TYPE2),
         .catchRate = 75,
@@ -4234,10 +4087,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 7,
         .weight = 66,
         .description = COMPOUND_STRING(
-            "It rides on the wind and slips into\n"
-            "people's homes. After it has turned a\n"
-            "room into a cotton-filled mess, it giggles\n"
-            "to itself and takes off."),
+"It rides on the wind and slips into\n"
+"people's homes. After it has turned a\n"
+"room into a cotton-filled mess, it giggles\n"
+"to itself and takes off."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -4246,10 +4099,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 6,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 20),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 20),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_SHRINK_GROW,
         .backPic = gMonBackPic_Whimsicott,
         .backPicSize = MON_COORDS_SIZE(64, 48),
@@ -4262,28 +4115,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 8, SHADOW_SIZE_M)
         FOOTPRINT(Whimsicott)
-        OVERWORLD(
-            sPicTable_Whimsicott,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Whimsicott,
-            gShinyOverworldPalette_Whimsicott
-        )
+        OVERWORLD(sPicTable_Whimsicott,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Whimsicott,
+gShinyOverworldPalette_Whimsicott)
         .levelUpLearnset = sWhimsicottLevelUpLearnset,
         .teachableLearnset = sWhimsicottTeachableLearnset,
     },
-#endif //P_FAMILY_COTTONEE
+#endif // P_FAMILY_COTTONEE
 
 #if P_FAMILY_PETILIL
     [SPECIES_PETILIL] =
     {
-        .baseHP        = 45,
-        .baseAttack    = 35,
-        .baseDefense   = 50,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 70,
+        .baseHP = 45,
+        .baseAttack = 35,
+        .baseDefense = 50,
+        .baseSpeed = 30,
+        .baseSpAttack = 70,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_GRASS),
         .catchRate = 190,
@@ -4304,10 +4155,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 66,
         .description = COMPOUND_STRING(
-            "By pruning the leaves on its head with\n"
-            "regularity, this Pokémon can be grown\n"
-            "into a fine plump shape. These bitter\n"
-            "leaves refresh those who eat them."),
+"By pruning the leaves on its head with\n"
+"regularity, this Pokémon can be grown\n"
+"into a fine plump shape. These bitter\n"
+"leaves refresh those who eat them."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -4316,12 +4167,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 48),
         .frontPicYOffset = 12,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 25),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 20),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 25),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 20),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_H_JUMPS_V_STRETCH,
         .enemyMonElevation = 7,
         .backPic = gMonBackPic_Petilil,
@@ -4335,32 +4186,29 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_SLOW,
         SHADOW(-2, 6, SHADOW_SIZE_S)
         FOOTPRINT(Petilil)
-        OVERWORLD(
-            sPicTable_Petilil,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Petilil,
-            gShinyOverworldPalette_Petilil
-        )
+        OVERWORLD(sPicTable_Petilil,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Petilil,
+gShinyOverworldPalette_Petilil)
         .levelUpLearnset = sPetililLevelUpLearnset,
         .teachableLearnset = sPetililTeachableLearnset,
         .eggMoveLearnset = sPetililEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_SUN_STONE, SPECIES_LILLIGANT, CONDITIONS({IF_NOT_REGION, REGION_HISUI})}
-                            #if P_HISUIAN_FORMS
-                                ,{EVO_ITEM, ITEM_SUN_STONE, SPECIES_LILLIGANT_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}
-                            #endif
-                            ),
+#if P_HISUIAN_FORMS
+,{EVO_ITEM, ITEM_SUN_STONE, SPECIES_LILLIGANT_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}
+#endif
+),
     },
-
     [SPECIES_LILLIGANT] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 60,
-        .baseDefense   = 75,
-        .baseSpeed     = 90,
-        .baseSpAttack  = 110,
+        .baseHP = 70,
+        .baseAttack = 60,
+        .baseDefense = 75,
+        .baseSpeed = 90,
+        .baseSpAttack = 110,
         .baseSpDefense = 75,
         .types = MON_TYPES(TYPE_GRASS),
         .catchRate = 75,
@@ -4382,10 +4230,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 11,
         .weight = 163,
         .description = COMPOUND_STRING(
-            "Even veteran Trainers face a challenge\n"
-            "in getting its beautiful flower to bloom.\n"
-            "It withers away if a trainer does not\n"
-            "take good care of it."),
+"Even veteran Trainers face a challenge\n"
+"in getting its beautiful flower to bloom.\n"
+"It withers away if a trainer does not\n"
+"take good care of it."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -4394,10 +4242,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 64),
         .frontPicYOffset = 1,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Lilligant,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -4410,28 +4258,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 13, SHADOW_SIZE_M)
         FOOTPRINT(Lilligant)
-        OVERWORLD(
-            sPicTable_Lilligant,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Lilligant,
-            gShinyOverworldPalette_Lilligant
-        )
+        OVERWORLD(sPicTable_Lilligant,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Lilligant,
+gShinyOverworldPalette_Lilligant)
         .levelUpLearnset = sLilligantLevelUpLearnset,
         .teachableLearnset = sLilligantTeachableLearnset,
         .formSpeciesIdTable = sLilligantFormSpeciesIdTable,
     },
-
 #if P_HISUIAN_FORMS
+
     [SPECIES_LILLIGANT_HISUI] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 105,
-        .baseDefense   = 75,
-        .baseSpeed     = 105,
-        .baseSpAttack  = 50,
+        .baseHP = 70,
+        .baseAttack = 105,
+        .baseDefense = 75,
+        .baseSpeed = 105,
+        .baseSpAttack = 50,
         .baseSpDefense = 75,
         .types = MON_TYPES(TYPE_GRASS, TYPE_FIGHTING),
         .catchRate = 75,
@@ -4454,10 +4300,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 12,
         .weight = 192,
         .description = COMPOUND_STRING(
-            "Its well-developed legs are the result of\n"
-            "a life spent on mountains covered in deep\n"
-            "snow. The scent it exudes from its flower\n"
-            "crown heartens those in proximity."),
+"Its well-developed legs are the result of\n"
+"a life spent on mountains covered in deep\n"
+"snow. The scent it exudes from its flower\n"
+"crown heartens those in proximity."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -4466,11 +4312,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_LilligantHisui,
         .backPicSize = MON_COORDS_SIZE(56, 56),
         .backPicYOffset = 5,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_LilligantHisui,
         .shinyPalette = gMonShinyPalette_LilligantHisui,
         .iconSprite = gMonIcon_LilligantHisui,
@@ -4478,31 +4322,30 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-3, 13, SHADOW_SIZE_S)
         FOOTPRINT(Lilligant)
-        OVERWORLD(
-            sPicTable_LilligantHisui,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_LilligantHisui,
-            gShinyOverworldPalette_LilligantHisui
-        )
+        OVERWORLD(sPicTable_LilligantHisui,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_LilligantHisui,
+gShinyOverworldPalette_LilligantHisui)
         .isHisuianForm = TRUE,
         .levelUpLearnset = sLilligantHisuiLevelUpLearnset,
         .teachableLearnset = sLilligantHisuiTeachableLearnset,
         .formSpeciesIdTable = sLilligantFormSpeciesIdTable,
     },
 #endif //P_HISUIAN_FORMS
-#endif //P_FAMILY_PETILIL
+
+#endif // P_FAMILY_PETILIL
 
 #if P_FAMILY_BASCULIN
     [SPECIES_BASCULIN_RED_STRIPED] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 92,
-        .baseDefense   = 65,
-        .baseSpeed     = 98,
-        .baseSpAttack  = 80,
+        .baseHP = 70,
+        .baseAttack = 92,
+        .baseDefense = 65,
+        .baseSpeed = 98,
+        .baseSpAttack = 80,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_WATER),
         .catchRate = 190,
@@ -4523,10 +4366,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 10,
         .weight = 180,
         .description = COMPOUND_STRING(
-            "It used to be a common food source. The\n"
-            "meat of red Basculin is on the fatty side\n"
-            "and it's more popular with the youth.\n"
-            "Its temperament is vicious and aggressive."),
+"It used to be a common food source. The\n"
+"meat of red Basculin is on the fatty side\n"
+"and it's more popular with the youth.\n"
+"Its temperament is vicious and aggressive."),
         .pokemonScale = 316,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -4548,28 +4391,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 4, SHADOW_SIZE_S)
         FOOTPRINT(Basculin)
-        OVERWORLD(
-            sPicTable_BasculinRedStriped,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_BasculinRedStriped,
-            gShinyOverworldPalette_BasculinRedStriped
-        )
+        OVERWORLD(sPicTable_BasculinRedStriped,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_BasculinRedStriped,
+gShinyOverworldPalette_BasculinRedStriped)
         .levelUpLearnset = sBasculinLevelUpLearnset,
         .teachableLearnset = sBasculinTeachableLearnset,
         .eggMoveLearnset = sBasculinEggMoveLearnset,
         .formSpeciesIdTable = sBasculinFormSpeciesIdTable,
     },
-
     [SPECIES_BASCULIN_BLUE_STRIPED] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 92,
-        .baseDefense   = 65,
-        .baseSpeed     = 98,
-        .baseSpAttack  = 80,
+        .baseHP = 70,
+        .baseAttack = 92,
+        .baseDefense = 65,
+        .baseSpeed = 98,
+        .baseSpAttack = 80,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_WATER),
         .catchRate = 190,
@@ -4590,10 +4430,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 10,
         .weight = 180,
         .description = COMPOUND_STRING(
-            "They form schools with others of the same\n"
-            "color. The greatest foe of a school of blue\n"
-            "Basculin is a school of red Basculin.\n"
-            "Its flavor is light and inoffensive."),
+"They form schools with others of the same\n"
+"color. The greatest foe of a school of blue\n"
+"Basculin is a school of red Basculin.\n"
+"Its flavor is light and inoffensive."),
         .pokemonScale = 316,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -4615,29 +4455,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 1, SHADOW_SIZE_S)
         FOOTPRINT(Basculin)
-        OVERWORLD(
-            sPicTable_BasculinBlueStriped,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_BasculinBlueStriped,
-            gShinyOverworldPalette_BasculinBlueStriped
-        )
+        OVERWORLD(sPicTable_BasculinBlueStriped,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_BasculinBlueStriped,
+gShinyOverworldPalette_BasculinBlueStriped)
         .levelUpLearnset = sBasculinLevelUpLearnset,
         .teachableLearnset = sBasculinTeachableLearnset,
         .eggMoveLearnset = sBasculinEggMoveLearnset,
         .formSpeciesIdTable = sBasculinFormSpeciesIdTable,
     },
-
 #if P_HISUIAN_FORMS
+
     [SPECIES_BASCULIN_WHITE_STRIPED] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 92,
-        .baseDefense   = 65,
-        .baseSpeed     = 98,
-        .baseSpAttack  = 80,
+        .baseHP = 70,
+        .baseAttack = 92,
+        .baseDefense = 65,
+        .baseSpeed = 98,
+        .baseSpAttack = 80,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_WATER),
         .catchRate = 190,
@@ -4658,10 +4496,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 10,
         .weight = 180,
         .description = COMPOUND_STRING(
-            "While this ancient form of Basculin shares\n"
-            "a vast array of qualities with other forms,\n"
-            "it differs in several respects, including\n"
-            "demeanor, being much gentler than others."),
+"While this ancient form of Basculin shares\n"
+"a vast array of qualities with other forms,\n"
+"it differs in several respects, including\n"
+"demeanor, being much gentler than others."),
         .pokemonScale = 316,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -4683,30 +4521,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 5, SHADOW_SIZE_S)
         FOOTPRINT(Basculin)
-        OVERWORLD(
-            sPicTable_BasculinWhiteStriped,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_BasculinWhiteStriped,
-            gShinyOverworldPalette_BasculinWhiteStriped
-        )
+        OVERWORLD(sPicTable_BasculinWhiteStriped,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_BasculinWhiteStriped,
+gShinyOverworldPalette_BasculinWhiteStriped)
         .levelUpLearnset = sBasculinWhiteStripedLevelUpLearnset,
         .teachableLearnset = sBasculinWhiteStripedTeachableLearnset,
         .eggMoveLearnset = sBasculinWhiteStripedEggMoveLearnset,
         .formSpeciesIdTable = sBasculinFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_BASCULEGION_M, CONDITIONS({IF_RECOIL_DAMAGE_GE, 294}, {IF_GENDER, MON_MALE})},
-                                {EVO_LEVEL, 0, SPECIES_BASCULEGION_F, CONDITIONS({IF_RECOIL_DAMAGE_GE, 294}, {IF_GENDER, MON_FEMALE})}),
+{EVO_LEVEL, 0, SPECIES_BASCULEGION_F, CONDITIONS({IF_RECOIL_DAMAGE_GE, 294}, {IF_GENDER, MON_FEMALE})}),
     },
-
     [SPECIES_BASCULEGION_M] =
     {
-        .baseHP        = 120,
-        .baseAttack    = 112,
-        .baseDefense   = 65,
-        .baseSpeed     = 78,
-        .baseSpAttack  = 80,
+        .baseHP = 120,
+        .baseAttack = 112,
+        .baseDefense = 65,
+        .baseSpeed = 78,
+        .baseSpAttack = 80,
         .baseSpDefense = 75,
         .types = MON_TYPES(TYPE_WATER, TYPE_GHOST),
         .catchRate = 45,
@@ -4726,10 +4561,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 30,
         .weight = 1100,
         .description = COMPOUND_STRING(
-            "Clads itself in the souls of comrades that\n"
-            "perished before fulfilling their goals of\n"
-            "journeying upstream. No other species in\n"
-            "all Hisui's rivers is Basculegion's equal."),
+"Clads itself in the souls of comrades that\n"
+"perished before fulfilling their goals of\n"
+"journeying upstream. No other species in\n"
+"all Hisui's rivers is Basculegion's equal."),
         .pokemonScale = 275,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -4738,12 +4573,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .enemyMonElevation = 5,
         .backPic = gMonBackPic_BasculegionM,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 8,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_BasculegionM,
         .shinyPalette = gMonShinyPalette_BasculegionM,
         .iconSprite = gMonIcon_BasculegionM,
@@ -4751,27 +4584,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 16, SHADOW_SIZE_M)
         FOOTPRINT(Basculegion)
-        OVERWORLD(
-            sPicTable_BasculegionM,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_BasculegionM,
-            gShinyOverworldPalette_BasculegionM
-        )
+        OVERWORLD(sPicTable_BasculegionM,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_BasculegionM,
+gShinyOverworldPalette_BasculegionM)
         .levelUpLearnset = sBasculegionLevelUpLearnset,
         .teachableLearnset = sBasculegionTeachableLearnset,
         .formSpeciesIdTable = sBasculegionFormSpeciesIdTable,
     },
-
     [SPECIES_BASCULEGION_F] =
     {
-        .baseHP        = 120,
-        .baseAttack    = 92,
-        .baseDefense   = 65,
-        .baseSpeed     = 78,
-        .baseSpAttack  = 100,
+        .baseHP = 120,
+        .baseAttack = 92,
+        .baseDefense = 65,
+        .baseSpeed = 78,
+        .baseSpAttack = 100,
         .baseSpDefense = 75,
         .types = MON_TYPES(TYPE_WATER, TYPE_GHOST),
         .catchRate = 45,
@@ -4791,9 +4621,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 30,
         .weight = 1100,
         .description = COMPOUND_STRING(
-            "The souls of its comrades cloak its\n"
-            "body and propel it effortlessly\n"
-            "through even raging rapids."),
+"The souls of its comrades cloak its\n"
+"body and propel it effortlessly\n"
+"through even raging rapids."),
         .pokemonScale = 275,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -4802,12 +4632,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .enemyMonElevation = 5,
         .backPic = gMonBackPic_BasculegionF,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 8,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_BasculegionF,
         .shinyPalette = gMonShinyPalette_BasculegionF,
         .iconSprite = gMonIcon_BasculegionF,
@@ -4815,30 +4643,29 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 16, SHADOW_SIZE_M)
         FOOTPRINT(Basculegion)
-        OVERWORLD(
-            sPicTable_BasculegionF,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_BasculegionF,
-            gShinyOverworldPalette_BasculegionF
-        )
+        OVERWORLD(sPicTable_BasculegionF,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_BasculegionF,
+gShinyOverworldPalette_BasculegionF)
         .levelUpLearnset = sBasculegionLevelUpLearnset,
         .teachableLearnset = sBasculegionTeachableLearnset,
         .formSpeciesIdTable = sBasculegionFormSpeciesIdTable,
     },
 #endif //P_HISUIAN_FORMS
-#endif //P_FAMILY_BASCULIN
+
+#endif // P_FAMILY_BASCULIN
 
 #if P_FAMILY_SANDILE
     [SPECIES_SANDILE] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 72,
-        .baseDefense   = 35,
-        .baseSpeed     = 65,
-        .baseSpAttack  = 35,
+        .baseHP = 50,
+        .baseAttack = 72,
+        .baseDefense = 35,
+        .baseSpeed = 65,
+        .baseSpAttack = 35,
         .baseSpDefense = 35,
         .types = MON_TYPES(TYPE_GROUND, TYPE_DARK),
         .catchRate = 180,
@@ -4859,10 +4686,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 7,
         .weight = 152,
         .description = COMPOUND_STRING(
-            "It conceals itself in the sand and\n"
-            "chomps down on the legs of any prey\n"
-            "that unwarily walk over it. Its favorite\n"
-            "food is Trapinch."),
+"It conceals itself in the sand and\n"
+"chomps down on the legs of any prey\n"
+"that unwarily walk over it. Its favorite\n"
+"food is Trapinch."),
         .pokemonScale = 365,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -4871,10 +4698,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 32),
         .frontPicYOffset = 18,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Sandile,
         .backPicSize = MON_COORDS_SIZE(64, 32),
@@ -4887,28 +4714,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
         SHADOW(4, -5, SHADOW_SIZE_M)
         FOOTPRINT(Sandile)
-        OVERWORLD(
-            sPicTable_Sandile,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Sandile,
-            gShinyOverworldPalette_Sandile
-        )
+        OVERWORLD(sPicTable_Sandile,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Sandile,
+gShinyOverworldPalette_Sandile)
         .levelUpLearnset = sSandileLevelUpLearnset,
         .teachableLearnset = sSandileTeachableLearnset,
         .eggMoveLearnset = sSandileEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 29, SPECIES_KROKOROK}),
     },
-
     [SPECIES_KROKOROK] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 82,
-        .baseDefense   = 45,
-        .baseSpeed     = 74,
-        .baseSpAttack  = 45,
+        .baseHP = 60,
+        .baseAttack = 82,
+        .baseDefense = 45,
+        .baseSpeed = 74,
+        .baseSpAttack = 45,
         .baseSpDefense = 45,
         .types = MON_TYPES(TYPE_GROUND, TYPE_DARK),
         .catchRate = 90,
@@ -4929,10 +4753,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 10,
         .weight = 334,
         .description = COMPOUND_STRING(
-            "They move in groups of a few individuals.\n"
-            "Thanks to the special membrane covering\n"
-            "its eyes, it can see its surroundings\n"
-            "clearly, even in the dead of night."),
+"They move in groups of a few individuals.\n"
+"Thanks to the special membrane covering\n"
+"its eyes, it can see its surroundings\n"
+"clearly, even in the dead of night."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -4941,9 +4765,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 56),
         .frontPicYOffset = 4,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 40),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(1, 40),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Krokorok,
         .backPicSize = MON_COORDS_SIZE(56, 64),
@@ -4956,27 +4780,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 8, SHADOW_SIZE_M)
         FOOTPRINT(Krokorok)
-        OVERWORLD(
-            sPicTable_Krokorok,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Krokorok,
-            gShinyOverworldPalette_Krokorok
-        )
+        OVERWORLD(sPicTable_Krokorok,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Krokorok,
+gShinyOverworldPalette_Krokorok)
         .levelUpLearnset = sKrokorokLevelUpLearnset,
         .teachableLearnset = sKrokorokTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_KROOKODILE}),
     },
-
     [SPECIES_KROOKODILE] =
     {
-        .baseHP        = 95,
-        .baseAttack    = 117,
-        .baseDefense   = P_UPDATED_STATS >= GEN_6 ? 80 : 70,
-        .baseSpeed     = 92,
-        .baseSpAttack  = 65,
+        .baseHP = 95,
+        .baseAttack = 117,
+        .baseDefense = P_UPDATED_STATS >= GEN_6 ? 80 : 70,
+        .baseSpeed = 92,
+        .baseSpAttack = 65,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_GROUND, TYPE_DARK),
         .catchRate = 45,
@@ -5003,10 +4824,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 15,
         .weight = 963,
         .description = COMPOUND_STRING(
-            "Very violent Pokémon, they never allow\n"
-            "their prey to escape. Their jaws are so\n"
-            "powerful, they can crush the body of\n"
-            "an automobile."),
+"Very violent Pokémon, they never allow\n"
+"their prey to escape. Their jaws are so\n"
+"powerful, they can crush the body of\n"
+"an automobile."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -5015,12 +4836,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_SWING_CONCAVE_FAST_SHORT,
         .backPic = gMonBackPic_Krookodile,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -5033,28 +4854,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(3, 12, SHADOW_SIZE_L)
         FOOTPRINT(Krookodile)
-        OVERWORLD(
-            sPicTable_Krookodile,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Krookodile,
-            gShinyOverworldPalette_Krookodile
-        )
+        OVERWORLD(sPicTable_Krookodile,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Krookodile,
+gShinyOverworldPalette_Krookodile)
         .levelUpLearnset = sKrookodileLevelUpLearnset,
         .teachableLearnset = sKrookodileTeachableLearnset,
     },
-#endif //P_FAMILY_SANDILE
+#endif // P_FAMILY_SANDILE
 
 #if P_FAMILY_DARUMAKA
     [SPECIES_DARUMAKA] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 90,
-        .baseDefense   = 45,
-        .baseSpeed     = 50,
-        .baseSpAttack  = 15,
+        .baseHP = 70,
+        .baseAttack = 90,
+        .baseDefense = 45,
+        .baseSpeed = 50,
+        .baseSpAttack = 15,
         .baseSpDefense = 45,
         .types = MON_TYPES(TYPE_FIRE),
         .catchRate = 120,
@@ -5074,10 +4893,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 375,
         .description = COMPOUND_STRING(
-            "When its internal fire is burning, it\n"
-            "cannot calm down and it runs around.\n"
-            "When the fire diminishes, it pulls its\n"
-            "limbs into its body and falls asleep."),
+"When its internal fire is burning, it\n"
+"cannot calm down and it runs around.\n"
+"When the fire diminishes, it pulls its\n"
+"limbs into its body and falls asleep."),
         .pokemonScale = 422,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -5086,10 +4905,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 13,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(1, 50),
+ANIMCMD_FRAME(1, 50),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_SWING_CONCAVE,
         .backPic = gMonBackPic_Darumaka,
         .backPicSize = MON_COORDS_SIZE(56, 48),
@@ -5102,29 +4921,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(-3, 1, SHADOW_SIZE_S)
         FOOTPRINT(Darumaka)
-        OVERWORLD(
-            sPicTable_Darumaka,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Darumaka,
-            gShinyOverworldPalette_Darumaka
-        )
+        OVERWORLD(sPicTable_Darumaka,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Darumaka,
+gShinyOverworldPalette_Darumaka)
         .levelUpLearnset = sDarumakaLevelUpLearnset,
         .teachableLearnset = sDarumakaTeachableLearnset,
         .eggMoveLearnset = sDarumakaEggMoveLearnset,
         .formSpeciesIdTable = sDarumakaFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_DARMANITAN_STANDARD}),
     },
-
     [SPECIES_DARMANITAN_STANDARD] =
     {
-        .baseHP        = 105,
-        .baseAttack    = 140,
-        .baseDefense   = 55,
-        .baseSpeed     = 95,
-        .baseSpAttack  = 30,
+        .baseHP = 105,
+        .baseAttack = 140,
+        .baseDefense = 55,
+        .baseSpeed = 95,
+        .baseSpAttack = 30,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_FIRE),
         .catchRate = 60,
@@ -5144,10 +4960,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 13,
         .weight = 929,
         .description = COMPOUND_STRING(
-            "When one is injured in a fierce battle,\n"
-            "it transforms into a stone statue.\n"
-            "Then it meditates and sharpens its\n"
-            "mind and fights on mentally."),
+"When one is injured in a fierce battle,\n"
+"it transforms into a stone statue.\n"
+"Then it meditates and sharpens its\n"
+"mind and fights on mentally."),
         .pokemonScale = 272,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -5156,11 +4972,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_CIRCULAR_STRETCH_TWICE,
         .backPic = gMonBackPic_DarmanitanStandard,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -5173,28 +4989,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(3, 5, SHADOW_SIZE_L)
         FOOTPRINT(Darmanitan)
-        OVERWORLD(
-            sPicTable_DarmanitanStandard,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_DarmanitanStandard,
-            gShinyOverworldPalette_DarmanitanStandard
-        )
+        OVERWORLD(sPicTable_DarmanitanStandard,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_DarmanitanStandard,
+gShinyOverworldPalette_DarmanitanStandard)
         .levelUpLearnset = sDarmanitanLevelUpLearnset,
         .teachableLearnset = sDarmanitanTeachableLearnset,
         .formSpeciesIdTable = sDarmanitanFormSpeciesIdTable,
         .formChangeTable = sDarmanitanFormChangeTable,
     },
-
     [SPECIES_DARMANITAN_ZEN] =
     {
-        .baseHP        = 105,
-        .baseAttack    = 30,
-        .baseDefense   = 105,
-        .baseSpeed     = 55,
-        .baseSpAttack  = 140,
+        .baseHP = 105,
+        .baseAttack = 30,
+        .baseDefense = 105,
+        .baseSpeed = 55,
+        .baseSpAttack = 140,
         .baseSpDefense = 105,
         .types = MON_TYPES(TYPE_FIRE, TYPE_PSYCHIC),
         .catchRate = 60,
@@ -5214,9 +5027,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 13,
         .weight = 929,
         .description = COMPOUND_STRING(
-            "When wounded, it stops moving. It\n"
-            "goes as still as stone to meditate,\n"
-            "sharpening its mind and spirit."),
+"When wounded, it stops moving. It\n"
+"goes as still as stone to meditate,\n"
+"sharpening its mind and spirit."),
         .pokemonScale = 272,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -5225,9 +5038,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 14,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .backPic = gMonBackPic_DarmanitanZen,
         .backPicSize = MON_COORDS_SIZE(56, 48),
@@ -5245,15 +5058,15 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formSpeciesIdTable = sDarmanitanFormSpeciesIdTable,
         .formChangeTable = sDarmanitanFormChangeTable,
     },
-
 #if P_GALARIAN_FORMS
+
     [SPECIES_DARUMAKA_GALAR] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 90,
-        .baseDefense   = 45,
-        .baseSpeed     = 50,
-        .baseSpAttack  = 15,
+        .baseHP = 70,
+        .baseAttack = 90,
+        .baseDefense = 45,
+        .baseSpeed = 50,
+        .baseSpAttack = 15,
         .baseSpDefense = 45,
         .types = MON_TYPES(TYPE_ICE),
         .catchRate = 120,
@@ -5273,10 +5086,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 7,
         .weight = 400,
         .description = COMPOUND_STRING(
-            "The colder they get, the more\n"
-            "energetic they are. They freeze their\n"
-            "breath to make snowballs, using them\n"
-            "as ammo for playful snowball fights."),
+"The colder they get, the more\n"
+"energetic they are. They freeze their\n"
+"breath to make snowballs, using them\n"
+"as ammo for playful snowball fights."),
         .pokemonScale = 422,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -5285,11 +5098,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 15,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_DarumakaGalar,
         .backPicSize = MON_COORDS_SIZE(56, 48),
         .backPicYOffset = 11,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_DarumakaGalar,
         .shinyPalette = gMonShinyPalette_DarumakaGalar,
         .iconSprite = gMonIcon_DarumakaGalar,
@@ -5297,15 +5108,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(-3, -1, SHADOW_SIZE_S)
         FOOTPRINT(Darumaka)
-        OVERWORLD(
-            sPicTable_DarumakaGalar,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_DarumakaGalar,
-            gShinyOverworldPalette_DarumakaGalar
-        )
+        OVERWORLD(sPicTable_DarumakaGalar,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_DarumakaGalar,
+gShinyOverworldPalette_DarumakaGalar)
         .isGalarianForm = TRUE,
         .levelUpLearnset = sDarumakaGalarLevelUpLearnset,
         .teachableLearnset = sDarumakaGalarTeachableLearnset,
@@ -5313,14 +5122,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formSpeciesIdTable = sDarumakaFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_ICE_STONE, SPECIES_DARMANITAN_GALAR_STANDARD}),
     },
-
     [SPECIES_DARMANITAN_GALAR_STANDARD] =
     {
-        .baseHP        = 105,
-        .baseAttack    = 140,
-        .baseDefense   = 55,
-        .baseSpeed     = 95,
-        .baseSpAttack  = 30,
+        .baseHP = 105,
+        .baseAttack = 140,
+        .baseDefense = 55,
+        .baseSpeed = 95,
+        .baseSpAttack = 30,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_ICE),
         .catchRate = 60,
@@ -5340,10 +5148,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 17,
         .weight = 1200,
         .description = COMPOUND_STRING(
-            "On days when blizzards blow\n"
-            "through, it comes down to where people\n"
-            "live. It stashes food in the snowball on\n"
-            "its head, taking it home for later."),
+"On days when blizzards blow\n"
+"through, it comes down to where people\n"
+"live. It stashes food in the snowball on\n"
+"its head, taking it home for later."),
         .pokemonScale = 272,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -5352,11 +5160,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_DarmanitanGalarStandard,
         .backPicSize = MON_COORDS_SIZE(56, 64),
         .backPicYOffset = 2,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_DarmanitanGalarStandard,
         .shinyPalette = gMonShinyPalette_DarmanitanGalarStandard,
         .iconSprite = gMonIcon_DarmanitanGalarStandard,
@@ -5364,29 +5170,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(4, 8, SHADOW_SIZE_L)
         FOOTPRINT(Darmanitan)
-        OVERWORLD(
-            sPicTable_DarmanitanGalarStandard,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_DarmanitanGalarStandard,
-            gShinyOverworldPalette_DarmanitanGalarStandard
-        )
+        OVERWORLD(sPicTable_DarmanitanGalarStandard,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_DarmanitanGalarStandard,
+gShinyOverworldPalette_DarmanitanGalarStandard)
         .isGalarianForm = TRUE,
         .levelUpLearnset = sDarmanitanGalarLevelUpLearnset,
         .teachableLearnset = sDarmanitanGalarTeachableLearnset,
         .formSpeciesIdTable = sDarmanitanFormSpeciesIdTable,
         .formChangeTable = sDarmanitanGalarFormChangeTable,
     },
-
     [SPECIES_DARMANITAN_GALAR_ZEN] =
     {
-        .baseHP        = 105,
-        .baseAttack    = 160,
-        .baseDefense   = 55,
-        .baseSpeed     = 135,
-        .baseSpAttack  = 30,
+        .baseHP = 105,
+        .baseAttack = 160,
+        .baseDefense = 55,
+        .baseSpeed = 135,
+        .baseSpAttack = 30,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_ICE, TYPE_FIRE),
         .catchRate = 60,
@@ -5407,10 +5210,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 17,
         .weight = 1200,
         .description = COMPOUND_STRING(
-            "Darmanitan takes this form when\n"
-            "enraged. It won't stop spewing flames\n"
-            "until its rage has settled, even if\n"
-            "its body starts to melt."),
+"Darmanitan takes this form when\n"
+"enraged. It won't stop spewing flames\n"
+"until its rage has settled, even if\n"
+"its body starts to melt."),
         .pokemonScale = 272,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -5419,11 +5222,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_DarmanitanGalarZen,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 1,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_DarmanitanGalarZen,
         .shinyPalette = gMonShinyPalette_DarmanitanGalarZen,
         .iconSprite = gMonIcon_DarmanitanGalarZen,
@@ -5438,16 +5239,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formChangeTable = sDarmanitanGalarFormChangeTable,
     },
 #endif //P_GALARIAN_FORMS
-#endif //P_FAMILY_DARUMAKA
+
+#endif // P_FAMILY_DARUMAKA
 
 #if P_FAMILY_MARACTUS
     [SPECIES_MARACTUS] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 86,
-        .baseDefense   = 67,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 106,
+        .baseHP = 75,
+        .baseAttack = 86,
+        .baseDefense = 67,
+        .baseSpeed = 60,
+        .baseSpAttack = 106,
         .baseSpDefense = 67,
         .types = MON_TYPES(TYPE_GRASS),
         .catchRate = 255,
@@ -5468,10 +5270,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 10,
         .weight = 280,
         .description = COMPOUND_STRING(
-            "Arid regions are their habitat.\n"
-            "When it moves rhythmically, it makes a\n"
-            "sound similar to maracas, making the\n"
-            "surprised Pokémon flee."),
+"Arid regions are their habitat.\n"
+"When it moves rhythmically, it makes a\n"
+"sound similar to maracas, making the\n"
+"surprised Pokémon flee."),
         .pokemonScale = 305,
         .pokemonOffset = 6,
         .trainerScale = 257,
@@ -5480,14 +5282,14 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_H_JUMPS_V_STRETCH,
         .backPic = gMonBackPic_Maractus,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -5500,29 +5302,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 13, SHADOW_SIZE_S)
         FOOTPRINT(Maractus)
-        OVERWORLD(
-            sPicTable_Maractus,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Maractus,
-            gShinyOverworldPalette_Maractus
-        )
+        OVERWORLD(sPicTable_Maractus,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Maractus,
+gShinyOverworldPalette_Maractus)
         .levelUpLearnset = sMaractusLevelUpLearnset,
         .teachableLearnset = sMaractusTeachableLearnset,
         .eggMoveLearnset = sMaractusEggMoveLearnset,
     },
-#endif //P_FAMILY_MARACTUS
+#endif // P_FAMILY_MARACTUS
 
 #if P_FAMILY_DWEBBLE
     [SPECIES_DWEBBLE] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 65,
-        .baseDefense   = 85,
-        .baseSpeed     = 55,
-        .baseSpAttack  = 35,
+        .baseHP = 50,
+        .baseAttack = 65,
+        .baseDefense = 85,
+        .baseSpeed = 55,
+        .baseSpAttack = 35,
         .baseSpDefense = 35,
         .types = MON_TYPES(TYPE_BUG, TYPE_ROCK),
         .catchRate = 190,
@@ -5543,10 +5343,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 3,
         .weight = 145,
         .description = COMPOUND_STRING(
-            "It makes a hole in a stone of a suitable\n"
-            "size. If that rock breaks, the Pokémon\n"
-            "remains agitated until it locates\n"
-            "a replacement."),
+"It makes a hole in a stone of a suitable\n"
+"size. If that rock breaks, the Pokémon\n"
+"remains agitated until it locates\n"
+"a replacement."),
         .pokemonScale = 530,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -5555,16 +5355,16 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 14,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 50),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 1),
-        ),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 50),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 1),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Dwebble,
         .backPicSize = MON_COORDS_SIZE(56, 32),
@@ -5577,28 +5377,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_SLOW,
         SHADOW(-1, -2, SHADOW_SIZE_S)
         FOOTPRINT(Dwebble)
-        OVERWORLD(
-            sPicTable_Dwebble,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Dwebble,
-            gShinyOverworldPalette_Dwebble
-        )
+        OVERWORLD(sPicTable_Dwebble,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Dwebble,
+gShinyOverworldPalette_Dwebble)
         .levelUpLearnset = sDwebbleLevelUpLearnset,
         .teachableLearnset = sDwebbleTeachableLearnset,
         .eggMoveLearnset = sDwebbleEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_CRUSTLE}),
     },
-
     [SPECIES_CRUSTLE] =
     {
-        .baseHP        = 70,
-        .baseAttack    = P_UPDATED_STATS >= GEN_7 ? 105 : 95,
-        .baseDefense   = 125,
-        .baseSpeed     = 45,
-        .baseSpAttack  = 65,
+        .baseHP = 70,
+        .baseAttack = P_UPDATED_STATS >= GEN_7 ? 105 : 95,
+        .baseDefense = 125,
+        .baseSpeed = 45,
+        .baseSpAttack = 65,
         .baseSpDefense = 75,
         .types = MON_TYPES(TYPE_BUG, TYPE_ROCK),
         .catchRate = 75,
@@ -5619,10 +5416,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 14,
         .weight = 2000,
         .description = COMPOUND_STRING(
-            "Competing for territory, Crustle fight\n"
-            "viciously. The one whose boulder is\n"
-            "broken is the loser of the battle and\n"
-            "begins to weaken."),
+"Competing for territory, Crustle fight\n"
+"viciously. The one whose boulder is\n"
+"broken is the loser of the battle and\n"
+"begins to weaken."),
         .pokemonScale = 265,
         .pokemonOffset = 2,
         .trainerScale = 262,
@@ -5631,13 +5428,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_H_SLIDE_SLOW,
         .backPic = gMonBackPic_Crustle,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -5650,28 +5447,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 8, SHADOW_SIZE_L)
         FOOTPRINT(Crustle)
-        OVERWORLD(
-            sPicTable_Crustle,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Crustle,
-            gShinyOverworldPalette_Crustle
-        )
+        OVERWORLD(sPicTable_Crustle,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Crustle,
+gShinyOverworldPalette_Crustle)
         .levelUpLearnset = sCrustleLevelUpLearnset,
         .teachableLearnset = sCrustleTeachableLearnset,
     },
-#endif //P_FAMILY_DWEBBLE
+#endif // P_FAMILY_DWEBBLE
 
 #if P_FAMILY_SCRAGGY
     [SPECIES_SCRAGGY] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 75,
-        .baseDefense   = 70,
-        .baseSpeed     = 48,
-        .baseSpAttack  = 35,
+        .baseHP = 50,
+        .baseAttack = 75,
+        .baseDefense = 70,
+        .baseSpeed = 48,
+        .baseSpAttack = 35,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_DARK, TYPE_FIGHTING),
         .catchRate = 180,
@@ -5692,10 +5487,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 118,
         .description = COMPOUND_STRING(
-            "Its skin has a rubbery elasticity, so it\n"
-            "can reduce damage by defensively\n"
-            "pulling its skin up to its neck.\n"
-            "Its skull is massively thick."),
+"Its skin has a rubbery elasticity, so it\n"
+"can reduce damage by defensively\n"
+"pulling its skin up to its neck.\n"
+"Its skull is massively thick."),
         .pokemonScale = 422,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -5704,10 +5499,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 48),
         .frontPicYOffset = 11,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 35),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 35),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Scraggy,
         .backPicSize = MON_COORDS_SIZE(48, 56),
@@ -5720,28 +5515,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_SLOW,
         SHADOW(-4, 2, SHADOW_SIZE_S)
         FOOTPRINT(Scraggy)
-        OVERWORLD(
-            sPicTable_Scraggy,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Scraggy,
-            gShinyOverworldPalette_Scraggy
-        )
+        OVERWORLD(sPicTable_Scraggy,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Scraggy,
+gShinyOverworldPalette_Scraggy)
         .levelUpLearnset = sScraggyLevelUpLearnset,
         .teachableLearnset = sScraggyTeachableLearnset,
         .eggMoveLearnset = sScraggyEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 39, SPECIES_SCRAFTY}),
     },
-
     [SPECIES_SCRAFTY] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 90,
-        .baseDefense   = 115,
-        .baseSpeed     = 58,
-        .baseSpAttack  = 45,
+        .baseHP = 65,
+        .baseAttack = 90,
+        .baseDefense = 115,
+        .baseSpeed = 58,
+        .baseSpAttack = 45,
         .baseSpDefense = 115,
         .types = MON_TYPES(TYPE_DARK, TYPE_FIGHTING),
         .catchRate = 90,
@@ -5763,10 +5555,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 11,
         .weight = 300,
         .description = COMPOUND_STRING(
-            "Groups of them beat up anything that\n"
-            "enters their territory. The one with the\n"
-            "biggest crest is the group leader, and\n"
-            "is the most respected."),
+"Groups of them beat up anything that\n"
+"enters their territory. The one with the\n"
+"biggest crest is the group leader, and\n"
+"is the most respected."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -5775,10 +5567,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 56),
         .frontPicYOffset = 4,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Scrafty,
         .backPicSize = MON_COORDS_SIZE(48, 64),
@@ -5791,29 +5583,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 9, SHADOW_SIZE_M)
         FOOTPRINT(Scrafty)
-        OVERWORLD(
-            sPicTable_Scrafty,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Scrafty,
-            gShinyOverworldPalette_Scrafty
-        )
+        OVERWORLD(sPicTable_Scrafty,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Scrafty,
+gShinyOverworldPalette_Scrafty)
         .levelUpLearnset = sScraftyLevelUpLearnset,
         .teachableLearnset = sScraftyTeachableLearnset,
         .formSpeciesIdTable = sScraftyFormSpeciesIdTable,
         .formChangeTable = sScraftyFormChangeTable,
     },
-
 #if P_GEN_9_MEGA_EVOLUTIONS
+
     [SPECIES_SCRAFTY_MEGA] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 130,
-        .baseDefense   = 135,
-        .baseSpeed     = 68,
-        .baseSpAttack  = 55,
+        .baseHP = 65,
+        .baseAttack = 130,
+        .baseDefense = 135,
+        .baseSpeed = 68,
+        .baseSpAttack = 55,
         .baseSpDefense = 135,
         .types = MON_TYPES(TYPE_DARK, TYPE_FIGHTING),
         .catchRate = 90,
@@ -5839,19 +5629,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 11,
         .weight = 310,
         .description = COMPOUND_STRING(
-            "Mega Evolution has caused Scrafty's\n"
-            "shed skin to turn white, growing\n"
-            "tough and supple. Of course, this\n"
-            "Pokémon is still as feisty as ever."),
+"Mega Evolution has caused Scrafty's\n"
+"shed skin to turn white, growing\n"
+"tough and supple. Of course, this\n"
+"Pokémon is still as feisty as ever."),
         .frontPic = gMonFrontPic_ScraftyMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_ScraftyMega,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 5,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_ScraftyMega,
         .shinyPalette = gMonShinyPalette_ScraftyMega,
         .iconSprite = gMonIcon_ScraftyMega,
@@ -5866,16 +5654,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formChangeTable = sScraftyFormChangeTable,
     },
 #endif //P_GEN_9_MEGA_EVOLUTIONS
-#endif //P_FAMILY_SCRAGGY
+
+#endif // P_FAMILY_SCRAGGY
 
 #if P_FAMILY_SIGILYPH
     [SPECIES_SIGILYPH] =
     {
-        .baseHP        = 72,
-        .baseAttack    = 58,
-        .baseDefense   = 80,
-        .baseSpeed     = 97,
-        .baseSpAttack  = 103,
+        .baseHP = 72,
+        .baseAttack = 58,
+        .baseDefense = 80,
+        .baseSpeed = 97,
+        .baseSpAttack = 103,
         .baseSpDefense = 80,
         .types = MON_TYPES(TYPE_PSYCHIC, TYPE_FLYING),
         .catchRate = 45,
@@ -5895,10 +5684,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 14,
         .weight = 140,
         .description = COMPOUND_STRING(
-            "The guardians of an ancient city, they\n"
-            "always fly the same route while keeping\n"
-            "watch for invaders. They use their\n"
-            "psychic power to attack enemies."),
+"The guardians of an ancient city, they\n"
+"always fly the same route while keeping\n"
+"watch for invaders. They use their\n"
+"psychic power to attack enemies."),
         .pokemonScale = 265,
         .pokemonOffset = 2,
         .trainerScale = 262,
@@ -5907,15 +5696,15 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 7),
-            ANIMCMD_FRAME(0, 7),
-            ANIMCMD_FRAME(1, 7),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 7),
-            ANIMCMD_FRAME(0, 7),
-            ANIMCMD_FRAME(1, 7),
-            ANIMCMD_FRAME(0, 7),
-        ),
+ANIMCMD_FRAME(1, 7),
+ANIMCMD_FRAME(0, 7),
+ANIMCMD_FRAME(1, 7),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 7),
+ANIMCMD_FRAME(0, 7),
+ANIMCMD_FRAME(1, 7),
+ANIMCMD_FRAME(0, 7),
+),
         .frontAnimId = ANIM_FIGURE_8,
         .enemyMonElevation = 7,
         .backPic = gMonBackPic_Sigilyph,
@@ -5929,29 +5718,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(3, 18, SHADOW_SIZE_S)
         FOOTPRINT(Sigilyph)
-        OVERWORLD(
-            sPicTable_Sigilyph,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Sigilyph,
-            gShinyOverworldPalette_Sigilyph
-        )
+        OVERWORLD(sPicTable_Sigilyph,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Sigilyph,
+gShinyOverworldPalette_Sigilyph)
         .levelUpLearnset = sSigilyphLevelUpLearnset,
         .teachableLearnset = sSigilyphTeachableLearnset,
         .eggMoveLearnset = sSigilyphEggMoveLearnset,
     },
-#endif //P_FAMILY_SIGILYPH
+#endif // P_FAMILY_SIGILYPH
 
 #if P_FAMILY_YAMASK
     [SPECIES_YAMASK] =
     {
-        .baseHP        = 38,
-        .baseAttack    = 30,
-        .baseDefense   = 85,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 55,
+        .baseHP = 38,
+        .baseAttack = 30,
+        .baseDefense = 85,
+        .baseSpeed = 30,
+        .baseSpAttack = 55,
         .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_GHOST),
         .catchRate = 190,
@@ -5972,10 +5759,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 15,
         .description = COMPOUND_STRING(
-            "These Pokémon arose from the spirits\n"
-            "of people interred in graves in past ages.\n"
-            "Each of them carries a mask that used\n"
-            "to be its face when it was human."),
+"These Pokémon arose from the spirits\n"
+"of people interred in graves in past ages.\n"
+"Each of them carries a mask that used\n"
+"to be its face when it was human."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -5984,12 +5771,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 40),
         .frontPicYOffset = 15,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 20),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 20),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 20),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 20),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SLIDE_WOBBLE,
         .enemyMonElevation = 10,
         .backPic = gMonBackPic_Yamask,
@@ -6003,29 +5790,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 6, SHADOW_SIZE_S)
         FOOTPRINT(Yamask)
-        OVERWORLD(
-            sPicTable_Yamask,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Yamask,
-            gShinyOverworldPalette_Yamask
-        )
+        OVERWORLD(sPicTable_Yamask,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Yamask,
+gShinyOverworldPalette_Yamask)
         .levelUpLearnset = sYamaskLevelUpLearnset,
         .teachableLearnset = sYamaskTeachableLearnset,
         .eggMoveLearnset = sYamaskEggMoveLearnset,
         .formSpeciesIdTable = sYamaskFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_COFAGRIGUS}),
     },
-
     [SPECIES_COFAGRIGUS] =
     {
-        .baseHP        = 58,
-        .baseAttack    = 50,
-        .baseDefense   = 145,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 95,
+        .baseHP = 58,
+        .baseAttack = 50,
+        .baseDefense = 145,
+        .baseSpeed = 30,
+        .baseSpAttack = 95,
         .baseSpDefense = 105,
         .types = MON_TYPES(TYPE_GHOST),
         .catchRate = 90,
@@ -6046,10 +5830,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 17,
         .weight = 765,
         .description = COMPOUND_STRING(
-            "Grave robbers who mistake them for\n"
-            "real coffins and get too close end up\n"
-            "trapped inside their bodies. Their bodies\n"
-            "are covered in pure gold."),
+"Grave robbers who mistake them for\n"
+"real coffins and get too close end up\n"
+"trapped inside their bodies. Their bodies\n"
+"are covered in pure gold."),
         .pokemonScale = 259,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -6058,10 +5842,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(1, 30),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(1, 50),
+ANIMCMD_FRAME(1, 30),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_GLOW_BLACK,
         .backPic = gMonBackPic_Cofagrigus,
         .backPicSize = MON_COORDS_SIZE(56, 56),
@@ -6074,27 +5858,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(6, 12, SHADOW_SIZE_M)
         FOOTPRINT(Cofagrigus)
-        OVERWORLD(
-            sPicTable_Cofagrigus,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Cofagrigus,
-            gShinyOverworldPalette_Cofagrigus
-        )
+        OVERWORLD(sPicTable_Cofagrigus,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Cofagrigus,
+gShinyOverworldPalette_Cofagrigus)
         .levelUpLearnset = sCofagrigusLevelUpLearnset,
         .teachableLearnset = sCofagrigusTeachableLearnset,
     },
-
 #if P_GALARIAN_FORMS
+
     [SPECIES_YAMASK_GALAR] =
     {
-        .baseHP        = 38,
-        .baseAttack    = 55,
-        .baseDefense   = 85,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 30,
+        .baseHP = 38,
+        .baseAttack = 55,
+        .baseDefense = 85,
+        .baseSpeed = 30,
+        .baseSpAttack = 30,
         .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_GROUND, TYPE_GHOST),
         .catchRate = 190,
@@ -6115,10 +5897,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 15,
         .description = COMPOUND_STRING(
-            "A clay slab with cursed engravings\n"
-            "took possession of a Yamask. The\n"
-            "slab is said to be absorbing the\n"
-            "Yamask's dark power."),
+"A clay slab with cursed engravings\n"
+"took possession of a Yamask. The\n"
+"slab is said to be absorbing the\n"
+"Yamask's dark power."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -6127,12 +5909,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 40),
         .frontPicYOffset = 13,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .enemyMonElevation = 4,
         .backPic = gMonBackPic_YamaskGalar,
         .backPicSize = MON_COORDS_SIZE(40, 40),
         .backPicYOffset = 13,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_YamaskGalar,
         .shinyPalette = gMonShinyPalette_YamaskGalar,
         .iconSprite = gMonIcon_YamaskGalar,
@@ -6140,15 +5920,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 2, SHADOW_SIZE_S)
         FOOTPRINT(Yamask)
-        OVERWORLD(
-            sPicTable_YamaskGalar,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_YamaskGalar,
-            gShinyOverworldPalette_YamaskGalar
-        )
+        OVERWORLD(sPicTable_YamaskGalar,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_YamaskGalar,
+gShinyOverworldPalette_YamaskGalar)
         .isGalarianForm = TRUE,
         .levelUpLearnset = sYamaskGalarLevelUpLearnset,
         .teachableLearnset = sYamaskGalarTeachableLearnset,
@@ -6156,14 +5934,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formSpeciesIdTable = sYamaskFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_SCRIPT_TRIGGER, 0, SPECIES_RUNERIGUS, CONDITIONS({IF_CURRENT_DAMAGE_GE, 49})}),
     },
-
     [SPECIES_RUNERIGUS] =
     {
-        .baseHP        = 58,
-        .baseAttack    = 95,
-        .baseDefense   = 145,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 50,
+        .baseHP = 58,
+        .baseAttack = 95,
+        .baseDefense = 145,
+        .baseSpeed = 30,
+        .baseSpAttack = 50,
         .baseSpDefense = 105,
         .types = MON_TYPES(TYPE_GROUND, TYPE_GHOST),
         .catchRate = 90,
@@ -6184,9 +5961,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 16,
         .weight = 666,
         .description = COMPOUND_STRING(
-            "A powerful curse was woven into an ancient\n"
-            "painting. After absorbing the spirit of\n"
-            "a Yamask, the painting began to move."),
+"A powerful curse was woven into an ancient\n"
+"painting. After absorbing the spirit of\n"
+"a Yamask, the painting began to move."),
         .pokemonScale = 259,
         .pokemonOffset = 1,
         .trainerScale = 296,
@@ -6195,12 +5972,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .enemyMonElevation = 5,
         .backPic = gMonBackPic_Runerigus,
         .backPicSize = MON_COORDS_SIZE(64, 48),
         .backPicYOffset = 9,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_Runerigus,
         .shinyPalette = gMonShinyPalette_Runerigus,
         .iconSprite = gMonIcon_Runerigus,
@@ -6208,29 +5983,28 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(14, 14, SHADOW_SIZE_M)
         FOOTPRINT(Runerigus)
-        OVERWORLD(
-            sPicTable_Runerigus,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Runerigus,
-            gShinyOverworldPalette_Runerigus
-        )
+        OVERWORLD(sPicTable_Runerigus,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Runerigus,
+gShinyOverworldPalette_Runerigus)
         .levelUpLearnset = sRunerigusLevelUpLearnset,
         .teachableLearnset = sRunerigusTeachableLearnset,
     },
 #endif //P_GALARIAN_FORMS
-#endif //P_FAMILY_YAMASK
+
+#endif // P_FAMILY_YAMASK
 
 #if P_FAMILY_TIRTOUGA
     [SPECIES_TIRTOUGA] =
     {
-        .baseHP        = 54,
-        .baseAttack    = 78,
-        .baseDefense   = 103,
-        .baseSpeed     = 22,
-        .baseSpAttack  = 53,
+        .baseHP = 54,
+        .baseAttack = 78,
+        .baseDefense = 103,
+        .baseSpeed = 22,
+        .baseSpAttack = 53,
         .baseSpDefense = 45,
         .types = MON_TYPES(TYPE_WATER, TYPE_ROCK),
         .catchRate = 45,
@@ -6250,10 +6024,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 7,
         .weight = 165,
         .description = COMPOUND_STRING(
-            "Reputed to be the ancestor of most\n"
-            "turtle Pokémon, it lived in warm seas\n"
-            "about a hundred million years ago.\n"
-            "It was restored from a fossil."),
+"Reputed to be the ancestor of most\n"
+"turtle Pokémon, it lived in warm seas\n"
+"about a hundred million years ago.\n"
+"It was restored from a fossil."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -6262,11 +6036,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 40),
         .frontPicYOffset = 16,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 30),
-            ANIMCMD_FRAME(0, 30),
-            ANIMCMD_FRAME(1, 30),
-            ANIMCMD_FRAME(0, 30),
-        ),
+ANIMCMD_FRAME(1, 30),
+ANIMCMD_FRAME(0, 30),
+ANIMCMD_FRAME(1, 30),
+ANIMCMD_FRAME(0, 30),
+),
         .frontAnimId = ANIM_RISING_WOBBLE,
         .backPic = gMonBackPic_Tirtouga,
         .backPicSize = MON_COORDS_SIZE(64, 32),
@@ -6279,28 +6053,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, -3, SHADOW_SIZE_M)
         FOOTPRINT(Tirtouga)
-        OVERWORLD(
-            sPicTable_Tirtouga,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Tirtouga,
-            gShinyOverworldPalette_Tirtouga
-        )
+        OVERWORLD(sPicTable_Tirtouga,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Tirtouga,
+gShinyOverworldPalette_Tirtouga)
         .levelUpLearnset = sTirtougaLevelUpLearnset,
         .teachableLearnset = sTirtougaTeachableLearnset,
         .eggMoveLearnset = sTirtougaEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_CARRACOSTA}),
     },
-
     [SPECIES_CARRACOSTA] =
     {
-        .baseHP        = 74,
-        .baseAttack    = 108,
-        .baseDefense   = 133,
-        .baseSpeed     = 32,
-        .baseSpAttack  = 83,
+        .baseHP = 74,
+        .baseAttack = 108,
+        .baseDefense = 133,
+        .baseSpeed = 32,
+        .baseSpAttack = 83,
         .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_WATER, TYPE_ROCK),
         .catchRate = 45,
@@ -6320,10 +6091,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 12,
         .weight = 810,
         .description = COMPOUND_STRING(
-            "They can live both in the ocean and\n"
-            "on land. Incredible jaw strength enables\n"
-            "them to chew up steel beams and rocks\n"
-            "along with their prey."),
+"They can live both in the ocean and\n"
+"on land. Incredible jaw strength enables\n"
+"them to chew up steel beams and rocks\n"
+"along with their prey."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -6332,17 +6103,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 56),
         .frontPicYOffset = 4,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 35),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(1, 35),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_H_SHAKE_SLOW,
         .backPic = gMonBackPic_Carracosta,
         .backPicSize = MON_COORDS_SIZE(64, 40),
@@ -6355,28 +6126,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(4, 8, SHADOW_SIZE_L)
         FOOTPRINT(Carracosta)
-        OVERWORLD(
-            sPicTable_Carracosta,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Carracosta,
-            gShinyOverworldPalette_Carracosta
-        )
+        OVERWORLD(sPicTable_Carracosta,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Carracosta,
+gShinyOverworldPalette_Carracosta)
         .levelUpLearnset = sCarracostaLevelUpLearnset,
         .teachableLearnset = sCarracostaTeachableLearnset,
     },
-#endif //P_FAMILY_TIRTOUGA
+#endif // P_FAMILY_TIRTOUGA
 
 #if P_FAMILY_ARCHEN
     [SPECIES_ARCHEN] =
     {
-        .baseHP        = 55,
-        .baseAttack    = 112,
-        .baseDefense   = 45,
-        .baseSpeed     = 70,
-        .baseSpAttack  = 74,
+        .baseHP = 55,
+        .baseAttack = 112,
+        .baseDefense = 45,
+        .baseSpeed = 70,
+        .baseSpAttack = 74,
         .baseSpDefense = 45,
         .types = MON_TYPES(TYPE_ROCK, TYPE_FLYING),
         .catchRate = 45,
@@ -6396,10 +6165,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 95,
         .description = COMPOUND_STRING(
-            "Said to be the ancestor of all bird\n"
-            "Pokémon, Archen itself could not actually\n"
-            "fly but moved by hopping from treetop\n"
-            "to treetop."),
+"Said to be the ancestor of all bird\n"
+"Pokémon, Archen itself could not actually\n"
+"fly but moved by hopping from treetop\n"
+"to treetop."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -6408,10 +6177,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 40),
         .frontPicYOffset = 14,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 46),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 46),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_JUMPS_SMALL,
         .backPic = gMonBackPic_Archen,
         .backPicSize = MON_COORDS_SIZE(64, 32),
@@ -6424,29 +6193,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
         SHADOW(-3, -2, SHADOW_SIZE_S)
         FOOTPRINT(Archen)
-        OVERWORLD(
-            sPicTable_Archen,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Archen,
-            gShinyOverworldPalette_Archen
-        )
+        OVERWORLD(sPicTable_Archen,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Archen,
+gShinyOverworldPalette_Archen)
         .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sArchenLevelUpLearnset,
         .teachableLearnset = sArchenTeachableLearnset,
         .eggMoveLearnset = sArchenEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_ARCHEOPS}),
     },
-
     [SPECIES_ARCHEOPS] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 140,
-        .baseDefense   = 65,
-        .baseSpeed     = 110,
-        .baseSpAttack  = 112,
+        .baseHP = 75,
+        .baseAttack = 140,
+        .baseDefense = 65,
+        .baseSpeed = 110,
+        .baseSpAttack = 112,
         .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_ROCK, TYPE_FLYING),
         .catchRate = 45,
@@ -6466,10 +6232,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 14,
         .weight = 320,
         .description = COMPOUND_STRING(
-            "They are intelligent and will cooperate\n"
-            "to catch prey. When one Archeops\n"
-            "had the prey cornered, another would\n"
-            "swoop on it."),
+"They are intelligent and will cooperate\n"
+"to catch prey. When one Archeops\n"
+"had the prey cornered, another would\n"
+"swoop on it."),
         .pokemonScale = 265,
         .pokemonOffset = 2,
         .trainerScale = 262,
@@ -6478,15 +6244,15 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 4,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 12),
-            ANIMCMD_FRAME(0, 12),
-            ANIMCMD_FRAME(1, 12),
-            ANIMCMD_FRAME(0, 30),
-            ANIMCMD_FRAME(1, 12),
-            ANIMCMD_FRAME(0, 12),
-            ANIMCMD_FRAME(1, 12),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(1, 12),
+ANIMCMD_FRAME(0, 12),
+ANIMCMD_FRAME(1, 12),
+ANIMCMD_FRAME(0, 30),
+ANIMCMD_FRAME(1, 12),
+ANIMCMD_FRAME(0, 12),
+ANIMCMD_FRAME(1, 12),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_RISING_WOBBLE,
         .enemyMonElevation = 11,
         .backPic = gMonBackPic_Archeops,
@@ -6500,28 +6266,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 18, SHADOW_SIZE_M)
         FOOTPRINT(Archeops)
-        OVERWORLD(
-            sPicTable_Archeops,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Archeops,
-            gShinyOverworldPalette_Archeops
-        )
+        OVERWORLD(sPicTable_Archeops,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Archeops,
+gShinyOverworldPalette_Archeops)
         .levelUpLearnset = sArcheopsLevelUpLearnset,
         .teachableLearnset = sArcheopsTeachableLearnset,
     },
-#endif //P_FAMILY_ARCHEN
+#endif // P_FAMILY_ARCHEN
 
 #if P_FAMILY_TRUBBISH
     [SPECIES_TRUBBISH] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 50,
-        .baseDefense   = 62,
-        .baseSpeed     = 65,
-        .baseSpAttack  = 40,
+        .baseHP = 50,
+        .baseAttack = 50,
+        .baseDefense = 62,
+        .baseSpeed = 65,
+        .baseSpAttack = 40,
         .baseSpDefense = 62,
         .types = MON_TYPES(TYPE_POISON),
         .catchRate = 190,
@@ -6542,10 +6306,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 310,
         .description = COMPOUND_STRING(
-            "It gorges on trash until its stomach\n"
-            "is full. Then it belches toxic gas.\n"
-            "An unlucky whiff of this gas will put\n"
-            "a person in the hospital."),
+"It gorges on trash until its stomach\n"
+"is full. Then it belches toxic gas.\n"
+"An unlucky whiff of this gas will put\n"
+"a person in the hospital."),
         .pokemonScale = 422,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -6554,10 +6318,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 40),
         .frontPicYOffset = 15,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Trubbish,
         .backPicSize = MON_COORDS_SIZE(48, 48),
@@ -6570,28 +6334,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
         SHADOW(-2, -1, SHADOW_SIZE_S)
         FOOTPRINT(Trubbish)
-        OVERWORLD(
-            sPicTable_Trubbish,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Trubbish,
-            gShinyOverworldPalette_Trubbish
-        )
+        OVERWORLD(sPicTable_Trubbish,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Trubbish,
+gShinyOverworldPalette_Trubbish)
         .levelUpLearnset = sTrubbishLevelUpLearnset,
         .teachableLearnset = sTrubbishTeachableLearnset,
         .eggMoveLearnset = sTrubbishEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_GARBODOR}),
     },
-
     [SPECIES_GARBODOR] =
     {
-        .baseHP        = 80,
-        .baseAttack    = 95,
-        .baseDefense   = 82,
-        .baseSpeed     = 75,
-        .baseSpAttack  = 60,
+        .baseHP = 80,
+        .baseAttack = 95,
+        .baseDefense = 82,
+        .baseSpeed = 75,
+        .baseSpAttack = 60,
         .baseSpDefense = 82,
         .types = MON_TYPES(TYPE_POISON),
         .catchRate = 60,
@@ -6614,10 +6375,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 19,
         .weight = 1073,
         .description = COMPOUND_STRING(
-            "Beware the poisonous liquid it shoots\n"
-            "from its right arm. If even a little of it\n"
-            "gets on you, you'll experience the full\n"
-            "effects of this unidentified toxin."),
+"Beware the poisonous liquid it shoots\n"
+"from its right arm. If even a little of it\n"
+"gets on you, you'll experience the full\n"
+"effects of this unidentified toxin."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 326,
@@ -6626,10 +6387,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 4,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 35),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 35),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Garbodor,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -6642,29 +6403,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(3, 9, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Garbodor)
-        OVERWORLD(
-            sPicTable_Garbodor,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Garbodor,
-            gShinyOverworldPalette_Garbodor
-        )
+        OVERWORLD(sPicTable_Garbodor,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Garbodor,
+gShinyOverworldPalette_Garbodor)
         .levelUpLearnset = sGarbodorLevelUpLearnset,
         .teachableLearnset = sGarbodorTeachableLearnset,
         .formSpeciesIdTable = sGarbodorFormSpeciesIdTable,
         .formChangeTable = sGarbodorFormChangeTable,
     },
-
 #if P_GIGANTAMAX_FORMS
+
     [SPECIES_GARBODOR_GMAX] =
     {
-        .baseHP        = 80,
-        .baseAttack    = 95,
-        .baseDefense   = 82,
-        .baseSpeed     = 75,
-        .baseSpAttack  = 60,
+        .baseHP = 80,
+        .baseAttack = 95,
+        .baseDefense = 82,
+        .baseSpeed = 75,
+        .baseSpAttack = 60,
         .baseSpDefense = 82,
         .types = MON_TYPES(TYPE_POISON),
         .catchRate = 60,
@@ -6687,10 +6446,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 210,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "It sprays toxic gas from its mouth\n"
-            "and fingers. If the gas engulfs you,\n"
-            "the toxins will seep in all the way\n"
-            "down to your bones."),
+"It sprays toxic gas from its mouth\n"
+"and fingers. If the gas engulfs you,\n"
+"the toxins will seep in all the way\n"
+"down to your bones."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 326,
@@ -6699,17 +6458,14 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_GarbodorGmax,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 2,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_GarbodorGmax,
         .shinyPalette = gMonShinyPalette_GarbodorGmax,
         .iconSprite = gMonIcon_GarbodorGmax,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
-        NO_SHADOW
         FOOTPRINT(Garbodor)
         .isGigantamax = TRUE,
         .levelUpLearnset = sGarbodorLevelUpLearnset,
@@ -6718,16 +6474,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formChangeTable = sGarbodorFormChangeTable,
     },
 #endif //P_GIGANTAMAX_FORMS
-#endif //P_FAMILY_TRUBBISH
+
+#endif // P_FAMILY_TRUBBISH
 
 #if P_FAMILY_ZORUA
     [SPECIES_ZORUA] =
     {
-        .baseHP        = 40,
-        .baseAttack    = 65,
-        .baseDefense   = 40,
-        .baseSpeed     = 65,
-        .baseSpAttack  = 80,
+        .baseHP = 40,
+        .baseAttack = 65,
+        .baseDefense = 40,
+        .baseSpeed = 65,
+        .baseSpAttack = 80,
         .baseSpDefense = 40,
         .types = MON_TYPES(TYPE_DARK),
         .catchRate = 75,
@@ -6747,10 +6504,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 7,
         .weight = 125,
         .description = COMPOUND_STRING(
-            "To protect themselves from danger, they\n"
-            "hide their true identities by transforming\n"
-            "into people and Pokémon. Apparently, it\n"
-            "often transforms into a silent child."),
+"To protect themselves from danger, they\n"
+"hide their true identities by transforming\n"
+"into people and Pokémon. Apparently, it\n"
+"often transforms into a silent child."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -6759,12 +6516,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 48),
         .frontPicYOffset = 11,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_CIRCULAR_VIBRATE,
         .backPic = gMonBackPic_Zorua,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -6777,29 +6534,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(0, 2, SHADOW_SIZE_S)
         FOOTPRINT(Zorua)
-        OVERWORLD(
-            sPicTable_Zorua,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Zorua,
-            gShinyOverworldPalette_Zorua
-        )
+        OVERWORLD(sPicTable_Zorua,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Zorua,
+gShinyOverworldPalette_Zorua)
         .levelUpLearnset = sZoruaLevelUpLearnset,
         .teachableLearnset = sZoruaTeachableLearnset,
         .eggMoveLearnset = sZoruaEggMoveLearnset,
         .formSpeciesIdTable = sZoruaFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_ZOROARK}),
     },
-
     [SPECIES_ZOROARK] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 105,
-        .baseDefense   = 60,
-        .baseSpeed     = 105,
-        .baseSpAttack  = 120,
+        .baseHP = 60,
+        .baseAttack = 105,
+        .baseDefense = 60,
+        .baseSpeed = 105,
+        .baseSpAttack = 120,
         .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_DARK),
         .catchRate = 45,
@@ -6819,10 +6573,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 16,
         .weight = 811,
         .description = COMPOUND_STRING(
-            "Bonds between these Pokémon are very\n"
-            "strong. It protects the safety of its\n"
-            "pack by tricking its opponents. They\n"
-            "defend their lair with illusory scenery."),
+"Bonds between these Pokémon are very\n"
+"strong. It protects the safety of its\n"
+"pack by tricking its opponents. They\n"
+"defend their lair with illusory scenery."),
         .pokemonScale = 259,
         .pokemonOffset = 1,
         .trainerScale = 296,
@@ -6831,12 +6585,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 18),
-            ANIMCMD_FRAME(0, 8),
-            ANIMCMD_FRAME(1, 8),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 18),
+ANIMCMD_FRAME(0, 8),
+ANIMCMD_FRAME(1, 8),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_FLICKER_INCREASING,
         .backPic = gMonBackPic_Zoroark,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -6849,28 +6603,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 8, SHADOW_SIZE_L)
         FOOTPRINT(Zoroark)
-        OVERWORLD(
-            sPicTable_Zoroark,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Zoroark,
-            gShinyOverworldPalette_Zoroark
-        )
+        OVERWORLD(sPicTable_Zoroark,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Zoroark,
+gShinyOverworldPalette_Zoroark)
         .levelUpLearnset = sZoroarkLevelUpLearnset,
         .teachableLearnset = sZoroarkTeachableLearnset,
         .formSpeciesIdTable = sZoroarkFormSpeciesIdTable,
     },
-
 #if P_HISUIAN_FORMS
+
     [SPECIES_ZORUA_HISUI] =
     {
-        .baseHP        = 35,
-        .baseAttack    = 60,
-        .baseDefense   = 40,
-        .baseSpeed     = 70,
-        .baseSpAttack  = 85,
+        .baseHP = 35,
+        .baseAttack = 60,
+        .baseDefense = 40,
+        .baseSpeed = 70,
+        .baseSpAttack = 85,
         .baseSpDefense = 40,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_GHOST),
         .catchRate = 75,
@@ -6890,10 +6642,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 7,
         .weight = 125,
         .description = COMPOUND_STRING(
-            "Derives power from resentment,\n"
-            "which rises as energy atop its head and\n"
-            "takes on the forms of foes. In this\n"
-            "way, Zorua vents lingering malice."),
+"Derives power from resentment,\n"
+"which rises as energy atop its head and\n"
+"takes on the forms of foes. In this\n"
+"way, Zorua vents lingering malice."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -6902,11 +6654,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 64),
         .frontPicYOffset = 1,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_ZoruaHisui,
         .backPicSize = MON_COORDS_SIZE(56, 64),
         .backPicYOffset = 1,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_ZoruaHisui,
         .shinyPalette = gMonShinyPalette_ZoruaHisui,
         .iconSprite = gMonIcon_ZoruaHisui,
@@ -6914,15 +6664,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(2, 12, SHADOW_SIZE_S)
         FOOTPRINT(Zorua)
-        OVERWORLD(
-            sPicTable_ZoruaHisui,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_ZoruaHisui,
-            gShinyOverworldPalette_ZoruaHisui
-        )
+        OVERWORLD(sPicTable_ZoruaHisui,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_ZoruaHisui,
+gShinyOverworldPalette_ZoruaHisui)
         .isHisuianForm = TRUE,
         .levelUpLearnset = sZoruaHisuiLevelUpLearnset,
         .teachableLearnset = sZoruaHisuiTeachableLearnset,
@@ -6930,14 +6678,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formSpeciesIdTable = sZoruaFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_ZOROARK_HISUI}),
     },
-
     [SPECIES_ZOROARK_HISUI] =
     {
-        .baseHP        = 55,
-        .baseAttack    = 100,
-        .baseDefense   = 60,
-        .baseSpeed     = 110,
-        .baseSpAttack  = 125,
+        .baseHP = 55,
+        .baseAttack = 100,
+        .baseDefense = 60,
+        .baseSpeed = 110,
+        .baseSpAttack = 125,
         .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_GHOST),
         .catchRate = 45,
@@ -6958,10 +6705,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 16,
         .weight = 730,
         .description = COMPOUND_STRING(
-            "Heedless of its own safety,\n"
-            "Zoroark attacks its nemeses with a bitter\n"
-            "energy so intense, it lacerates\n"
-            "Zoroark's own body."),
+"Heedless of its own safety,\n"
+"Zoroark attacks its nemeses with a bitter\n"
+"energy so intense, it lacerates\n"
+"Zoroark's own body."),
         .pokemonScale = 259,
         .pokemonOffset = 1,
         .trainerScale = 296,
@@ -6970,11 +6717,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_ZoroarkHisui,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 0,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_ZoroarkHisui,
         .shinyPalette = gMonShinyPalette_ZoroarkHisui,
         .iconSprite = gMonIcon_ZoroarkHisui,
@@ -6982,31 +6727,30 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(11, 13, SHADOW_SIZE_L)
         FOOTPRINT(Zoroark)
-        OVERWORLD(
-            sPicTable_ZoroarkHisui,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_ZoroarkHisui,
-            gShinyOverworldPalette_ZoroarkHisui
-        )
+        OVERWORLD(sPicTable_ZoroarkHisui,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_ZoroarkHisui,
+gShinyOverworldPalette_ZoroarkHisui)
         .isHisuianForm = TRUE,
         .levelUpLearnset = sZoroarkHisuiLevelUpLearnset,
         .teachableLearnset = sZoroarkHisuiTeachableLearnset,
         .formSpeciesIdTable = sZoroarkFormSpeciesIdTable,
     },
 #endif //P_HISUIAN_FORMS
-#endif //P_FAMILY_ZORUA
+
+#endif // P_FAMILY_ZORUA
 
 #if P_FAMILY_MINCCINO
     [SPECIES_MINCCINO] =
     {
-        .baseHP        = 55,
-        .baseAttack    = 50,
-        .baseDefense   = 40,
-        .baseSpeed     = 75,
-        .baseSpAttack  = 40,
+        .baseHP = 55,
+        .baseAttack = 50,
+        .baseDefense = 40,
+        .baseSpeed = 75,
+        .baseSpAttack = 40,
         .baseSpDefense = 40,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 255,
@@ -7026,10 +6770,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 4,
         .weight = 58,
         .description = COMPOUND_STRING(
-            "These Pokémon prefer a tidy habitat.\n"
-            "They greet one another by rubbing each\n"
-            "other with their tails, which are always\n"
-            "kept well groomed and clean."),
+"These Pokémon prefer a tidy habitat.\n"
+"They greet one another by rubbing each\n"
+"other with their tails, which are always\n"
+"kept well groomed and clean."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -7038,10 +6782,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 48),
         .frontPicYOffset = 11,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Minccino,
         .backPicSize = MON_COORDS_SIZE(56, 56),
@@ -7054,28 +6798,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(-3, 3, SHADOW_SIZE_S)
         FOOTPRINT(Minccino)
-        OVERWORLD(
-            sPicTable_Minccino,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Minccino,
-            gShinyOverworldPalette_Minccino
-        )
+        OVERWORLD(sPicTable_Minccino,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Minccino,
+gShinyOverworldPalette_Minccino)
         .levelUpLearnset = sMinccinoLevelUpLearnset,
         .teachableLearnset = sMinccinoTeachableLearnset,
         .eggMoveLearnset = sMinccinoEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_SHINY_STONE, SPECIES_CINCCINO}),
     },
-
     [SPECIES_CINCCINO] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 95,
-        .baseDefense   = 60,
-        .baseSpeed     = 115,
-        .baseSpAttack  = 65,
+        .baseHP = 75,
+        .baseAttack = 95,
+        .baseDefense = 60,
+        .baseSpeed = 115,
+        .baseSpAttack = 65,
         .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 60,
@@ -7095,10 +6836,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 75,
         .description = COMPOUND_STRING(
-            "Their white fur feels amazing to touch.\n"
-            "Cinccino's body is coated in a special\n"
-            "oil that repels dust and helps it deflect\n"
-            "attacks, such as punches."),
+"Their white fur feels amazing to touch.\n"
+"Cinccino's body is coated in a special\n"
+"oil that repels dust and helps it deflect\n"
+"attacks, such as punches."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -7107,12 +6848,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 7,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_V_SLIDE,
         .backPic = gMonBackPic_Cinccino,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -7125,28 +6866,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
         SHADOW(0, 6, SHADOW_SIZE_M)
         FOOTPRINT(Cinccino)
-        OVERWORLD(
-            sPicTable_Cinccino,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Cinccino,
-            gShinyOverworldPalette_Cinccino
-        )
+        OVERWORLD(sPicTable_Cinccino,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Cinccino,
+gShinyOverworldPalette_Cinccino)
         .levelUpLearnset = sCinccinoLevelUpLearnset,
         .teachableLearnset = sCinccinoTeachableLearnset,
     },
-#endif //P_FAMILY_MINCCINO
+#endif // P_FAMILY_MINCCINO
 
 #if P_FAMILY_GOTHITA
     [SPECIES_GOTHITA] =
     {
-        .baseHP        = 45,
-        .baseAttack    = 30,
-        .baseDefense   = 50,
-        .baseSpeed     = 45,
-        .baseSpAttack  = 55,
+        .baseHP = 45,
+        .baseAttack = 30,
+        .baseDefense = 50,
+        .baseSpeed = 45,
+        .baseSpAttack = 55,
         .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 200,
@@ -7170,10 +6909,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 4,
         .weight = 58,
         .description = COMPOUND_STRING(
-            "They intently observe both Trainers and\n"
-            "Pokémon. Apparently, Gothita are looking\n"
-            "at something that only they can see. Their\n"
-            "ribbonlike feelers increase their power."),
+"They intently observe both Trainers and\n"
+"Pokémon. Apparently, Gothita are looking\n"
+"at something that only they can see. Their\n"
+"ribbonlike feelers increase their power."),
         .pokemonScale = 491,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -7182,11 +6921,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 12,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_JUMPS_SMALL,
         .backPic = gMonBackPic_Gothita,
         .backPicSize = MON_COORDS_SIZE(48, 48),
@@ -7199,28 +6938,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_SLOW,
         SHADOW(-3, 2, SHADOW_SIZE_S)
         FOOTPRINT(Gothita)
-        OVERWORLD(
-            sPicTable_Gothita,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Gothita,
-            gShinyOverworldPalette_Gothita
-        )
+        OVERWORLD(sPicTable_Gothita,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Gothita,
+gShinyOverworldPalette_Gothita)
         .levelUpLearnset = sGothitaLevelUpLearnset,
         .teachableLearnset = sGothitaTeachableLearnset,
         .eggMoveLearnset = sGothitaEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_GOTHORITA}),
     },
-
     [SPECIES_GOTHORITA] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 45,
-        .baseDefense   = 70,
-        .baseSpeed     = 55,
-        .baseSpAttack  = 75,
+        .baseHP = 60,
+        .baseAttack = 45,
+        .baseDefense = 70,
+        .baseSpeed = 55,
+        .baseSpAttack = 75,
         .baseSpDefense = 85,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 100,
@@ -7244,10 +6980,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 7,
         .weight = 180,
         .description = COMPOUND_STRING(
-            "Starlight is the source of their power.\n"
-            "They use hypnosis to control people and\n"
-            "Pokémon. Tales of Gothorita leading them\n"
-            "astray are told in every corner."),
+"Starlight is the source of their power.\n"
+"They use hypnosis to control people and\n"
+"Pokémon. Tales of Gothorita leading them\n"
+"astray are told in every corner."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -7256,12 +6992,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 56),
         .frontPicYOffset = 7,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 11),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 20),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 11),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 20),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE_SLOW,
         .backPic = gMonBackPic_Gothorita,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -7274,27 +7010,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_SLOW,
         SHADOW(-2, 7, SHADOW_SIZE_S)
         FOOTPRINT(Gothorita)
-        OVERWORLD(
-            sPicTable_Gothorita,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Gothorita,
-            gShinyOverworldPalette_Gothorita
-        )
+        OVERWORLD(sPicTable_Gothorita,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Gothorita,
+gShinyOverworldPalette_Gothorita)
         .levelUpLearnset = sGothoritaLevelUpLearnset,
         .teachableLearnset = sGothoritaTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 41, SPECIES_GOTHITELLE}),
     },
-
     [SPECIES_GOTHITELLE] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 55,
-        .baseDefense   = 95,
-        .baseSpeed     = 65,
-        .baseSpAttack  = 95,
+        .baseHP = 70,
+        .baseAttack = 55,
+        .baseDefense = 95,
+        .baseSpeed = 65,
+        .baseSpAttack = 95,
         .baseSpDefense = 110,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 50,
@@ -7318,10 +7051,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 15,
         .weight = 440,
         .description = COMPOUND_STRING(
-            "Starry skies thousands of light-years\n"
-            "away are visible in the space distorted by\n"
-            "their intense psychic power. When it learns\n"
-            "its Trainer's life span, it cries in sadness."),
+"Starry skies thousands of light-years\n"
+"away are visible in the space distorted by\n"
+"their intense psychic power. When it learns\n"
+"its Trainer's life span, it cries in sadness."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -7330,11 +7063,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .backPic = gMonBackPic_Gothitelle,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -7347,28 +7080,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 13, SHADOW_SIZE_M)
         FOOTPRINT(Gothitelle)
-        OVERWORLD(
-            sPicTable_Gothitelle,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Gothitelle,
-            gShinyOverworldPalette_Gothitelle
-        )
+        OVERWORLD(sPicTable_Gothitelle,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Gothitelle,
+gShinyOverworldPalette_Gothitelle)
         .levelUpLearnset = sGothitelleLevelUpLearnset,
         .teachableLearnset = sGothitelleTeachableLearnset,
     },
-#endif //P_FAMILY_GOTHITA
+#endif // P_FAMILY_GOTHITA
 
 #if P_FAMILY_SOLOSIS
     [SPECIES_SOLOSIS] =
     {
-        .baseHP        = 45,
-        .baseAttack    = 30,
-        .baseDefense   = 40,
-        .baseSpeed     = 20,
-        .baseSpAttack  = 105,
+        .baseHP = 45,
+        .baseAttack = 30,
+        .baseDefense = 40,
+        .baseSpeed = 20,
+        .baseSpAttack = 105,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 200,
@@ -7389,10 +7120,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 3,
         .weight = 10,
         .description = COMPOUND_STRING(
-            "Because their bodies are enveloped\n"
-            "in a special liquid, they are fine in any\n"
-            "environment, no matter how severe. They\n"
-            "can use telepathy to talk with others."),
+"Because their bodies are enveloped\n"
+"in a special liquid, they are fine in any\n"
+"environment, no matter how severe. They\n"
+"can use telepathy to talk with others."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -7401,11 +7132,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 32),
         .frontPicYOffset = 17,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 45),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 45),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_TWIST,
         .enemyMonElevation = 14,
         .backPic = gMonBackPic_Solosis,
@@ -7419,28 +7150,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 8, SHADOW_SIZE_S)
         FOOTPRINT(Solosis)
-        OVERWORLD(
-            sPicTable_Solosis,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Solosis,
-            gShinyOverworldPalette_Solosis
-        )
+        OVERWORLD(sPicTable_Solosis,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Solosis,
+gShinyOverworldPalette_Solosis)
         .levelUpLearnset = sSolosisLevelUpLearnset,
         .teachableLearnset = sSolosisTeachableLearnset,
         .eggMoveLearnset = sSolosisEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_DUOSION}),
     },
-
     [SPECIES_DUOSION] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 40,
-        .baseDefense   = 50,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 125,
+        .baseHP = 65,
+        .baseAttack = 40,
+        .baseDefense = 50,
+        .baseSpeed = 30,
+        .baseSpAttack = 125,
         .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 100,
@@ -7460,10 +7188,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 80,
         .description = COMPOUND_STRING(
-            "When their brains, now divided in two,\n"
-            "are thinking the same thoughts,\n"
-            "these Pokémon exhibit their maximized\n"
-            "psychic power."),
+"When their brains, now divided in two,\n"
+"are thinking the same thoughts,\n"
+"these Pokémon exhibit their maximized\n"
+"psychic power."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -7472,11 +7200,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 48),
         .frontPicYOffset = 12,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_CIRCULAR_STRETCH_TWICE,
         .enemyMonElevation = 7,
         .backPic = gMonBackPic_Duosion,
@@ -7490,27 +7218,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 6, SHADOW_SIZE_M)
         FOOTPRINT(Duosion)
-        OVERWORLD(
-            sPicTable_Duosion,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Duosion,
-            gShinyOverworldPalette_Duosion
-        )
+        OVERWORLD(sPicTable_Duosion,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Duosion,
+gShinyOverworldPalette_Duosion)
         .levelUpLearnset = sDuosionLevelUpLearnset,
         .teachableLearnset = sDuosionTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 41, SPECIES_REUNICLUS}),
     },
-
     [SPECIES_REUNICLUS] =
     {
-        .baseHP        = 110,
-        .baseAttack    = 65,
-        .baseDefense   = 75,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 125,
+        .baseHP = 110,
+        .baseAttack = 65,
+        .baseDefense = 75,
+        .baseSpeed = 30,
+        .baseSpAttack = 125,
         .baseSpDefense = 85,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 50,
@@ -7530,10 +7255,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 10,
         .weight = 201,
         .description = COMPOUND_STRING(
-            "They use psychic power to control their\n"
-            "arms, which are made of a special liquid.\n"
-            "When Reuniclus shake hands, a network\n"
-            "forms between their brains."),
+"They use psychic power to control their\n"
+"arms, which are made of a special liquid.\n"
+"When Reuniclus shake hands, a network\n"
+"forms between their brains."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -7542,12 +7267,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 48),
         .frontPicYOffset = 11,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 20),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 20),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 20),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 20),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SLIDE_WOBBLE,
         .enemyMonElevation = 8,
         .backPic = gMonBackPic_Reuniclus,
@@ -7561,28 +7286,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 8, SHADOW_SIZE_M)
         FOOTPRINT(Reuniclus)
-        OVERWORLD(
-            sPicTable_Reuniclus,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Reuniclus,
-            gShinyOverworldPalette_Reuniclus
-        )
+        OVERWORLD(sPicTable_Reuniclus,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Reuniclus,
+gShinyOverworldPalette_Reuniclus)
         .levelUpLearnset = sReuniclusLevelUpLearnset,
         .teachableLearnset = sReuniclusTeachableLearnset,
     },
-#endif //P_FAMILY_SOLOSIS
+#endif // P_FAMILY_SOLOSIS
 
 #if P_FAMILY_DUCKLETT
     [SPECIES_DUCKLETT] =
     {
-        .baseHP        = 62,
-        .baseAttack    = 44,
-        .baseDefense   = 50,
-        .baseSpeed     = 55,
-        .baseSpAttack  = 44,
+        .baseHP = 62,
+        .baseAttack = 44,
+        .baseDefense = 50,
+        .baseSpeed = 55,
+        .baseSpAttack = 44,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_WATER, TYPE_FLYING),
         .catchRate = 190,
@@ -7602,10 +7325,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 55,
         .description = COMPOUND_STRING(
-            "These bird Pokémon are excellent divers.\n"
-            "They are better at swimming than flying,\n"
-            "and they happily eat their favorite food,\n"
-            "peat moss, as they dive underwater."),
+"These bird Pokémon are excellent divers.\n"
+"They are better at swimming than flying,\n"
+"and they happily eat their favorite food,\n"
+"peat moss, as they dive underwater."),
         .pokemonScale = 432,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -7614,14 +7337,14 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 40),
         .frontPicYOffset = 12,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 50),
-        ),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 50),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Ducklett,
         .backPicSize = MON_COORDS_SIZE(48, 48),
@@ -7634,29 +7357,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 2, SHADOW_SIZE_S)
         FOOTPRINT(Ducklett)
-        OVERWORLD(
-            sPicTable_Ducklett,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Ducklett,
-            gShinyOverworldPalette_Ducklett
-        )
+        OVERWORLD(sPicTable_Ducklett,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Ducklett,
+gShinyOverworldPalette_Ducklett)
         .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sDucklettLevelUpLearnset,
         .teachableLearnset = sDucklettTeachableLearnset,
         .eggMoveLearnset = sDucklettEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_SWANNA}),
     },
-
     [SPECIES_SWANNA] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 87,
-        .baseDefense   = 63,
-        .baseSpeed     = 98,
-        .baseSpAttack  = 87,
+        .baseHP = 75,
+        .baseAttack = 87,
+        .baseDefense = 63,
+        .baseSpeed = 98,
+        .baseSpAttack = 87,
         .baseSpDefense = 63,
         .types = MON_TYPES(TYPE_WATER, TYPE_FLYING),
         .catchRate = 45,
@@ -7676,10 +7396,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 13,
         .weight = 242,
         .description = COMPOUND_STRING(
-            "Despite their elegant appearance, they\n"
-            "can flap their wings strongly and fly for\n"
-            "thousands of miles. The one in the middle\n"
-            "is the leader of the flock."),
+"Despite their elegant appearance, they\n"
+"can flap their wings strongly and fly for\n"
+"thousands of miles. The one in the middle\n"
+"is the leader of the flock."),
         .pokemonScale = 272,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -7688,9 +7408,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 32),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 32),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Swanna,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -7703,28 +7423,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 12, SHADOW_SIZE_M)
         FOOTPRINT(Swanna)
-        OVERWORLD(
-            sPicTable_Swanna,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Swanna,
-            gShinyOverworldPalette_Swanna
-        )
+        OVERWORLD(sPicTable_Swanna,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Swanna,
+gShinyOverworldPalette_Swanna)
         .levelUpLearnset = sSwannaLevelUpLearnset,
         .teachableLearnset = sSwannaTeachableLearnset,
     },
-#endif //P_FAMILY_DUCKLETT
+#endif // P_FAMILY_DUCKLETT
 
 #if P_FAMILY_VANILLITE
     [SPECIES_VANILLITE] =
     {
-        .baseHP        = 36,
-        .baseAttack    = 50,
-        .baseDefense   = 50,
-        .baseSpeed     = 44,
-        .baseSpAttack  = 65,
+        .baseHP = 36,
+        .baseAttack = 50,
+        .baseDefense = 50,
+        .baseSpeed = 44,
+        .baseSpAttack = 65,
         .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_ICE),
         .catchRate = 255,
@@ -7749,10 +7467,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 4,
         .weight = 57,
         .description = COMPOUND_STRING(
-            "The temperature of their breath is -58ºF.\n"
-            "They create snow crystals and make snow\n"
-            "fall in the areas around them. Vanillite is\n"
-            "treasured by households in warm regions."),
+"The temperature of their breath is -58ºF.\n"
+"They create snow crystals and make snow\n"
+"fall in the areas around them. Vanillite is\n"
+"treasured by households in warm regions."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -7761,12 +7479,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 40),
         .frontPicYOffset = 14,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_H_SLIDE,
         .backPic = gMonBackPic_Vanillite,
         .backPicSize = MON_COORDS_SIZE(40, 48),
@@ -7779,28 +7497,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 0, SHADOW_SIZE_S)
         FOOTPRINT(Vanillite)
-        OVERWORLD(
-            sPicTable_Vanillite,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Vanillite,
-            gShinyOverworldPalette_Vanillite
-        )
+        OVERWORLD(sPicTable_Vanillite,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Vanillite,
+gShinyOverworldPalette_Vanillite)
         .levelUpLearnset = sVanilliteLevelUpLearnset,
         .teachableLearnset = sVanilliteTeachableLearnset,
         .eggMoveLearnset = sVanilliteEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_VANILLISH}),
     },
-
     [SPECIES_VANILLISH] =
     {
-        .baseHP        = 51,
-        .baseAttack    = 65,
-        .baseDefense   = 65,
-        .baseSpeed     = 59,
-        .baseSpAttack  = 80,
+        .baseHP = 51,
+        .baseAttack = 65,
+        .baseDefense = 65,
+        .baseSpeed = 59,
+        .baseSpAttack = 80,
         .baseSpDefense = 75,
         .types = MON_TYPES(TYPE_ICE),
         .catchRate = 120,
@@ -7825,10 +7540,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 11,
         .weight = 410,
         .description = COMPOUND_STRING(
-            "Vanillish has existed since the Ice Age.\n"
-            "It controls particles of ice, freezes its\n"
-            "opponents, and then shatters them with\n"
-            "a headbutt."),
+"Vanillish has existed since the Ice Age.\n"
+"It controls particles of ice, freezes its\n"
+"opponents, and then shatters them with\n"
+"a headbutt."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -7837,10 +7552,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 56),
         .frontPicYOffset = 5,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 12),
-            ANIMCMD_FRAME(1, 45),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 12),
+ANIMCMD_FRAME(1, 45),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .backPic = gMonBackPic_Vanillish,
         .backPicSize = MON_COORDS_SIZE(48, 56),
@@ -7853,27 +7568,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-3, 9, SHADOW_SIZE_S)
         FOOTPRINT(Vanillish)
-        OVERWORLD(
-            sPicTable_Vanillish,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Vanillish,
-            gShinyOverworldPalette_Vanillish
-        )
+        OVERWORLD(sPicTable_Vanillish,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Vanillish,
+gShinyOverworldPalette_Vanillish)
         .levelUpLearnset = sVanillishLevelUpLearnset,
         .teachableLearnset = sVanillishTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 47, SPECIES_VANILLUXE}),
     },
-
     [SPECIES_VANILLUXE] =
     {
-        .baseHP        = 71,
-        .baseAttack    = 95,
-        .baseDefense   = 85,
-        .baseSpeed     = 79,
-        .baseSpAttack  = 110,
+        .baseHP = 71,
+        .baseAttack = 95,
+        .baseDefense = 85,
+        .baseSpeed = 79,
+        .baseSpAttack = 110,
         .baseSpDefense = 95,
         .types = MON_TYPES(TYPE_ICE),
         .catchRate = 45,
@@ -7899,10 +7611,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 13,
         .weight = 575,
         .description = COMPOUND_STRING(
-            "Each of its two heads has a brain, and\n"
-            "when they are in agreement, it attacks\n"
-            "its enemies by exhaling a violent blizzard.\n"
-            "It makes snow clouds inside its body."),
+"Each of its two heads has a brain, and\n"
+"when they are in agreement, it attacks\n"
+"its enemies by exhaling a violent blizzard.\n"
+"It makes snow clouds inside its body."),
         .pokemonScale = 272,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -7911,10 +7623,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 4,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 12),
-            ANIMCMD_FRAME(1, 45),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 12),
+ANIMCMD_FRAME(1, 45),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .backPic = gMonBackPic_Vanilluxe,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -7927,28 +7639,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 10, SHADOW_SIZE_M)
         FOOTPRINT(Vanilluxe)
-        OVERWORLD(
-            sPicTable_Vanilluxe,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Vanilluxe,
-            gShinyOverworldPalette_Vanilluxe
-        )
+        OVERWORLD(sPicTable_Vanilluxe,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Vanilluxe,
+gShinyOverworldPalette_Vanilluxe)
         .levelUpLearnset = sVanilluxeLevelUpLearnset,
         .teachableLearnset = sVanilluxeTeachableLearnset,
     },
-#endif //P_FAMILY_VANILLITE
+#endif // P_FAMILY_VANILLITE
 
 #if P_FAMILY_DEERLING
     [SPECIES_DEERLING_SPRING] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 60,
-        .baseDefense   = 50,
-        .baseSpeed     = 75,
-        .baseSpAttack  = 40,
+        .baseHP = 60,
+        .baseAttack = 60,
+        .baseDefense = 50,
+        .baseSpeed = 75,
+        .baseSpAttack = 40,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_GRASS),
         .catchRate = 190,
@@ -7968,10 +7678,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 195,
         .description = COMPOUND_STRING(
-            "Deerling have different scents\n"
-            "depending on the season. In early\n"
-            "spring, these Pokémon give off a\n"
-            "delicate, sweet, and calming scent."),
+"Deerling have different scents\n"
+"depending on the season. In early\n"
+"spring, these Pokémon give off a\n"
+"delicate, sweet, and calming scent."),
         .pokemonScale = 422,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -7992,29 +7702,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(1, 2, SHADOW_SIZE_S)
         FOOTPRINT(Deerling)
-        OVERWORLD(
-            sPicTable_DeerlingSpring,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_DeerlingSpring,
-            gShinyOverworldPalette_DeerlingSpring
-        )
+        OVERWORLD(sPicTable_DeerlingSpring,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_DeerlingSpring,
+gShinyOverworldPalette_DeerlingSpring)
         .levelUpLearnset = sDeerlingLevelUpLearnset,
         .teachableLearnset = sDeerlingTeachableLearnset,
         .eggMoveLearnset = sDeerlingEggMoveLearnset,
         .formSpeciesIdTable = sDeerlingFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_SAWSBUCK_SPRING}),
     },
-
     [SPECIES_DEERLING_SUMMER] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 60,
-        .baseDefense   = 50,
-        .baseSpeed     = 75,
-        .baseSpAttack  = 40,
+        .baseHP = 60,
+        .baseAttack = 60,
+        .baseDefense = 50,
+        .baseSpeed = 75,
+        .baseSpAttack = 40,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_GRASS),
         .catchRate = 190,
@@ -8034,10 +7741,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 195,
         .description = COMPOUND_STRING(
-            "To prevent Deerling from entering\n"
-            "their fields, many farmers will have\n"
-            "several Lycanroc stand guard, as\n"
-            "they are its natural enemy."),
+"To prevent Deerling from entering\n"
+"their fields, many farmers will have\n"
+"several Lycanroc stand guard, as\n"
+"they are its natural enemy."),
         .pokemonScale = 422,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -8058,29 +7765,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(1, 2, SHADOW_SIZE_S)
         FOOTPRINT(Deerling)
-        OVERWORLD(
-            sPicTable_DeerlingSummer,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_DeerlingSummer,
-            gShinyOverworldPalette_DeerlingSummer
-        )
+        OVERWORLD(sPicTable_DeerlingSummer,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_DeerlingSummer,
+gShinyOverworldPalette_DeerlingSummer)
         .levelUpLearnset = sDeerlingLevelUpLearnset,
         .teachableLearnset = sDeerlingTeachableLearnset,
         .eggMoveLearnset = sDeerlingEggMoveLearnset,
         .formSpeciesIdTable = sDeerlingFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_SAWSBUCK_SUMMER}),
     },
-
     [SPECIES_DEERLING_AUTUMN] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 60,
-        .baseDefense   = 50,
-        .baseSpeed     = 75,
-        .baseSpAttack  = 40,
+        .baseHP = 60,
+        .baseAttack = 60,
+        .baseDefense = 50,
+        .baseSpeed = 75,
+        .baseSpAttack = 40,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_GRASS),
         .catchRate = 190,
@@ -8100,10 +7804,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 195,
         .description = COMPOUND_STRING(
-            "Deerling have different scents\n"
-            "depending on the season. In this form,\n"
-            "Deerling have a softly sweet scent\n"
-            "that lingers in the nose."),
+"Deerling have different scents\n"
+"depending on the season. In this form,\n"
+"Deerling have a softly sweet scent\n"
+"that lingers in the nose."),
         .pokemonScale = 422,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -8124,29 +7828,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(1, 2, SHADOW_SIZE_S)
         FOOTPRINT(Deerling)
-        OVERWORLD(
-            sPicTable_DeerlingAutumn,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_DeerlingAutumn,
-            gShinyOverworldPalette_DeerlingAutumn
-        )
+        OVERWORLD(sPicTable_DeerlingAutumn,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_DeerlingAutumn,
+gShinyOverworldPalette_DeerlingAutumn)
         .levelUpLearnset = sDeerlingLevelUpLearnset,
         .teachableLearnset = sDeerlingTeachableLearnset,
         .eggMoveLearnset = sDeerlingEggMoveLearnset,
         .formSpeciesIdTable = sDeerlingFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_SAWSBUCK_AUTUMN}),
     },
-
     [SPECIES_DEERLING_WINTER] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 60,
-        .baseDefense   = 50,
-        .baseSpeed     = 75,
-        .baseSpAttack  = 40,
+        .baseHP = 60,
+        .baseAttack = 60,
+        .baseDefense = 50,
+        .baseSpeed = 75,
+        .baseSpAttack = 40,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_GRASS),
         .catchRate = 190,
@@ -8166,10 +7867,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 195,
         .description = COMPOUND_STRING(
-            "Deerling's scent changes with the\n"
-            "seasons, but when the Pokémon is in\n"
-            "its Winter Form, it has hardly any\n"
-            "scent at all."),
+"Deerling's scent changes with the\n"
+"seasons, but when the Pokémon is in\n"
+"its Winter Form, it has hardly any\n"
+"scent at all."),
         .pokemonScale = 422,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -8190,29 +7891,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(1, 2, SHADOW_SIZE_S)
         FOOTPRINT(Deerling)
-        OVERWORLD(
-            sPicTable_DeerlingWinter,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_DeerlingWinter,
-            gShinyOverworldPalette_DeerlingWinter
-        )
+        OVERWORLD(sPicTable_DeerlingWinter,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_DeerlingWinter,
+gShinyOverworldPalette_DeerlingWinter)
         .levelUpLearnset = sDeerlingLevelUpLearnset,
         .teachableLearnset = sDeerlingTeachableLearnset,
         .eggMoveLearnset = sDeerlingEggMoveLearnset,
         .formSpeciesIdTable = sDeerlingFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_SAWSBUCK_WINTER}),
     },
-
     [SPECIES_SAWSBUCK_SPRING] =
     {
-        .baseHP        = 80,
-        .baseAttack    = 100,
-        .baseDefense   = 70,
-        .baseSpeed     = 95,
-        .baseSpAttack  = 60,
+        .baseHP = 80,
+        .baseAttack = 100,
+        .baseDefense = 70,
+        .baseSpeed = 95,
+        .baseSpAttack = 60,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_GRASS),
         .catchRate = 75,
@@ -8232,10 +7930,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 19,
         .weight = 925,
         .description = COMPOUND_STRING(
-            "Some people call Sawsbuck the harbingers\n"
-            "of spring because the plants growing on\n"
-            "its horns change according to the season.\n"
-            "The leader possesses magnificent horns."),
+"Some people call Sawsbuck the harbingers\n"
+"of spring because the plants growing on\n"
+"its horns change according to the season.\n"
+"The leader possesses magnificent horns."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 326,
@@ -8256,27 +7954,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(7, 13, SHADOW_SIZE_M)
         FOOTPRINT(Sawsbuck)
-        OVERWORLD(
-            sPicTable_SawsbuckSpring,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_SawsbuckSpring,
-            gShinyOverworldPalette_SawsbuckSpring
-        )
+        OVERWORLD(sPicTable_SawsbuckSpring,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_SawsbuckSpring,
+gShinyOverworldPalette_SawsbuckSpring)
         .levelUpLearnset = sSawsbuckLevelUpLearnset,
         .teachableLearnset = sSawsbuckTeachableLearnset,
         .formSpeciesIdTable = sSawsbuckFormSpeciesIdTable,
     },
-
     [SPECIES_SAWSBUCK_SUMMER] =
     {
-        .baseHP        = 80,
-        .baseAttack    = 100,
-        .baseDefense   = 70,
-        .baseSpeed     = 95,
-        .baseSpAttack  = 60,
+        .baseHP = 80,
+        .baseAttack = 100,
+        .baseDefense = 70,
+        .baseSpeed = 95,
+        .baseSpAttack = 60,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_GRASS),
         .catchRate = 75,
@@ -8296,10 +7991,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 19,
         .weight = 925,
         .description = COMPOUND_STRING(
-            "The thicker and larger the\n"
-            "branches and leaves on its antlers, the\n"
-            "more majestic the Sawsbuck is thought\n"
-            "to be."),
+"The thicker and larger the\n"
+"branches and leaves on its antlers, the\n"
+"more majestic the Sawsbuck is thought\n"
+"to be."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 326,
@@ -8320,27 +8015,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(7, 13, SHADOW_SIZE_M)
         FOOTPRINT(Sawsbuck)
-        OVERWORLD(
-            sPicTable_SawsbuckSummer,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_SawsbuckSummer,
-            gShinyOverworldPalette_SawsbuckSummer
-        )
+        OVERWORLD(sPicTable_SawsbuckSummer,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_SawsbuckSummer,
+gShinyOverworldPalette_SawsbuckSummer)
         .levelUpLearnset = sSawsbuckLevelUpLearnset,
         .teachableLearnset = sSawsbuckTeachableLearnset,
         .formSpeciesIdTable = sSawsbuckFormSpeciesIdTable,
     },
-
     [SPECIES_SAWSBUCK_AUTUMN] =
     {
-        .baseHP        = 80,
-        .baseAttack    = 100,
-        .baseDefense   = 70,
-        .baseSpeed     = 95,
-        .baseSpAttack  = 60,
+        .baseHP = 80,
+        .baseAttack = 100,
+        .baseDefense = 70,
+        .baseSpeed = 95,
+        .baseSpAttack = 60,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_GRASS),
         .catchRate = 75,
@@ -8360,10 +8052,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 19,
         .weight = 925,
         .description = COMPOUND_STRING(
-            "Sawsbuck in their Autumn Form are\n"
-            "known for having very short\n"
-            "tempers. The males fight each other\n"
-            "incessantly."),
+"Sawsbuck in their Autumn Form are\n"
+"known for having very short\n"
+"tempers. The males fight each other\n"
+"incessantly."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 326,
@@ -8384,27 +8076,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(7, 13, SHADOW_SIZE_M)
         FOOTPRINT(Sawsbuck)
-        OVERWORLD(
-            sPicTable_SawsbuckAutumn,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_SawsbuckAutumn,
-            gShinyOverworldPalette_SawsbuckAutumn
-        )
+        OVERWORLD(sPicTable_SawsbuckAutumn,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_SawsbuckAutumn,
+gShinyOverworldPalette_SawsbuckAutumn)
         .levelUpLearnset = sSawsbuckLevelUpLearnset,
         .teachableLearnset = sSawsbuckTeachableLearnset,
         .formSpeciesIdTable = sSawsbuckFormSpeciesIdTable,
     },
-
     [SPECIES_SAWSBUCK_WINTER] =
     {
-        .baseHP        = 80,
-        .baseAttack    = 100,
-        .baseDefense   = 70,
-        .baseSpeed     = 95,
-        .baseSpAttack  = 60,
+        .baseHP = 80,
+        .baseAttack = 100,
+        .baseDefense = 70,
+        .baseSpeed = 95,
+        .baseSpAttack = 60,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_GRASS),
         .catchRate = 75,
@@ -8424,10 +8113,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 19,
         .weight = 925,
         .description = COMPOUND_STRING(
-            "Though there are many enthusiasts\n"
-            "for Sawsbuck as a species, this\n"
-            "seasonal form in particular is not\n"
-            "very popular."),
+"Though there are many enthusiasts\n"
+"for Sawsbuck as a species, this\n"
+"seasonal form in particular is not\n"
+"very popular."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 326,
@@ -8448,30 +8137,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(7, 13, SHADOW_SIZE_M)
         FOOTPRINT(Sawsbuck)
-        OVERWORLD(
-            sPicTable_SawsbuckWinter,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_SawsbuckWinter,
-            gShinyOverworldPalette_SawsbuckWinter
-        )
+        OVERWORLD(sPicTable_SawsbuckWinter,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_SawsbuckWinter,
+gShinyOverworldPalette_SawsbuckWinter)
         .levelUpLearnset = sSawsbuckLevelUpLearnset,
         .teachableLearnset = sSawsbuckTeachableLearnset,
         .formSpeciesIdTable = sSawsbuckFormSpeciesIdTable,
     },
-
-#endif //P_FAMILY_DEERLING
+#endif // P_FAMILY_DEERLING
 
 #if P_FAMILY_EMOLGA
     [SPECIES_EMOLGA] =
     {
-        .baseHP        = 55,
-        .baseAttack    = 75,
-        .baseDefense   = 60,
-        .baseSpeed     = 103,
-        .baseSpAttack  = 75,
+        .baseHP = 55,
+        .baseAttack = 75,
+        .baseDefense = 60,
+        .baseSpeed = 103,
+        .baseSpAttack = 75,
         .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_ELECTRIC, TYPE_FLYING),
         .catchRate = 200,
@@ -8491,10 +8177,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 4,
         .weight = 50,
         .description = COMPOUND_STRING(
-            "It glides using its cape-like membrane.\n"
-            "It grills berries and bug Pokémon with\n"
-            "electric shocks from the pouches on its\n"
-            "cheeks and makes a meal of them."),
+"It glides using its cape-like membrane.\n"
+"It grills berries and bug Pokémon with\n"
+"electric shocks from the pouches on its\n"
+"cheeks and makes a meal of them."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -8503,11 +8189,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 48),
         .frontPicYOffset = 17,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 21),
-            ANIMCMD_FRAME(1, 45),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 21),
+ANIMCMD_FRAME(1, 45),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE_SLOW,
         .enemyMonElevation = 19,
         .backPic = gMonBackPic_Emolga,
@@ -8521,29 +8207,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 13, SHADOW_SIZE_S)
         FOOTPRINT(Emolga)
-        OVERWORLD(
-            sPicTable_Emolga,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Emolga,
-            gShinyOverworldPalette_Emolga
-        )
+        OVERWORLD(sPicTable_Emolga,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Emolga,
+gShinyOverworldPalette_Emolga)
         .levelUpLearnset = sEmolgaLevelUpLearnset,
         .teachableLearnset = sEmolgaTeachableLearnset,
         .eggMoveLearnset = sEmolgaEggMoveLearnset,
     },
-#endif //P_FAMILY_EMOLGA
+#endif // P_FAMILY_EMOLGA
 
 #if P_FAMILY_KARRABLAST
     [SPECIES_KARRABLAST] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 75,
-        .baseDefense   = 45,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 40,
+        .baseHP = 50,
+        .baseAttack = 75,
+        .baseDefense = 45,
+        .baseSpeed = 60,
+        .baseSpAttack = 40,
         .baseSpDefense = 45,
         .types = MON_TYPES(TYPE_BUG),
         .catchRate = 200,
@@ -8563,10 +8247,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 59,
         .description = COMPOUND_STRING(
-            "When they feel threatened, they spit an\n"
-            "acidic liquid to drive attackers away.\n"
-            "For some reason they evolve while they\n"
-            "are in the same place as Shelmet."),
+"When they feel threatened, they spit an\n"
+"acidic liquid to drive attackers away.\n"
+"For some reason they evolve while they\n"
+"are in the same place as Shelmet."),
         .pokemonScale = 432,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -8575,9 +8259,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 48),
         .frontPicYOffset = 13,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 32),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 32),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Karrablast,
         .backPicSize = MON_COORDS_SIZE(48, 48),
@@ -8590,28 +8274,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
         SHADOW(-1, 0, SHADOW_SIZE_S)
         FOOTPRINT(Karrablast)
-        OVERWORLD(
-            sPicTable_Karrablast,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Karrablast,
-            gShinyOverworldPalette_Karrablast
-        )
+        OVERWORLD(sPicTable_Karrablast,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Karrablast,
+gShinyOverworldPalette_Karrablast)
         .levelUpLearnset = sKarrablastLevelUpLearnset,
         .teachableLearnset = sKarrablastTeachableLearnset,
         .eggMoveLearnset = sKarrablastEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_ESCAVALIER, CONDITIONS({IF_TRADE_PARTNER_SPECIES, SPECIES_SHELMET})}),
     },
-
     [SPECIES_ESCAVALIER] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 135,
-        .baseDefense   = 105,
-        .baseSpeed     = 20,
-        .baseSpAttack  = 60,
+        .baseHP = 70,
+        .baseAttack = 135,
+        .baseDefense = 105,
+        .baseSpeed = 20,
+        .baseSpAttack = 60,
         .baseSpDefense = 105,
         .types = MON_TYPES(TYPE_BUG, TYPE_STEEL),
         .catchRate = 75,
@@ -8631,10 +8312,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 10,
         .weight = 330,
         .description = COMPOUND_STRING(
-            "Wearing the shell covering they stole\n"
-            "from Shelmet, they defend themselves and\n"
-            "attack with two lances. The steel armor\n"
-            "protects their whole body."),
+"Wearing the shell covering they stole\n"
+"from Shelmet, they defend themselves and\n"
+"attack with two lances. The steel armor\n"
+"protects their whole body."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -8643,10 +8324,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 25),
-            ANIMCMD_FRAME(0, 30),
-        ),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 25),
+ANIMCMD_FRAME(0, 30),
+),
         .frontAnimId = ANIM_BACK_AND_LUNGE,
         .backPic = gMonBackPic_Escavalier,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -8659,28 +8340,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 11, SHADOW_SIZE_M)
         FOOTPRINT(Escavalier)
-        OVERWORLD(
-            sPicTable_Escavalier,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Escavalier,
-            gShinyOverworldPalette_Escavalier
-        )
+        OVERWORLD(sPicTable_Escavalier,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Escavalier,
+gShinyOverworldPalette_Escavalier)
         .levelUpLearnset = sEscavalierLevelUpLearnset,
         .teachableLearnset = sEscavalierTeachableLearnset,
     },
-#endif //P_FAMILY_KARRABLAST
+#endif // P_FAMILY_KARRABLAST
 
 #if P_FAMILY_FOONGUS
     [SPECIES_FOONGUS] =
     {
-        .baseHP        = 69,
-        .baseAttack    = 55,
-        .baseDefense   = 45,
-        .baseSpeed     = 15,
-        .baseSpAttack  = 55,
+        .baseHP = 69,
+        .baseAttack = 55,
+        .baseDefense = 45,
+        .baseSpeed = 15,
+        .baseSpAttack = 55,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_GRASS, TYPE_POISON),
         .catchRate = 190,
@@ -8702,10 +8381,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 2,
         .weight = 10,
         .description = COMPOUND_STRING(
-            "It lures Pokémon in with its pattern that\n"
-            "looks just like a Poké Ball, then releases\n"
-            "its poison spores. Why it resembles a\n"
-            "Poké Ball is unknown."),
+"It lures Pokémon in with its pattern that\n"
+"looks just like a Poké Ball, then releases\n"
+"its poison spores. Why it resembles a\n"
+"Poké Ball is unknown."),
         .pokemonScale = 682,
         .pokemonOffset = 24,
         .trainerScale = 256,
@@ -8714,12 +8393,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 32),
         .frontPicYOffset = 16,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 20),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 20),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 20),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 20),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_SWING_CONCAVE_FAST,
         .backPic = gMonBackPic_Foongus,
         .backPicSize = MON_COORDS_SIZE(48, 40),
@@ -8732,28 +8411,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_SLOW,
         SHADOW(-1, -3, SHADOW_SIZE_S)
         FOOTPRINT(Foongus)
-        OVERWORLD(
-            sPicTable_Foongus,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Foongus,
-            gShinyOverworldPalette_Foongus
-        )
+        OVERWORLD(sPicTable_Foongus,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Foongus,
+gShinyOverworldPalette_Foongus)
         .levelUpLearnset = sFoongusLevelUpLearnset,
         .teachableLearnset = sFoongusTeachableLearnset,
         .eggMoveLearnset = sFoongusEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 39, SPECIES_AMOONGUSS}),
     },
-
     [SPECIES_AMOONGUSS] =
     {
-        .baseHP        = 114,
-        .baseAttack    = 85,
-        .baseDefense   = 70,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 85,
+        .baseHP = 114,
+        .baseAttack = 85,
+        .baseDefense = 70,
+        .baseSpeed = 30,
+        .baseSpAttack = 85,
         .baseSpDefense = 80,
         .types = MON_TYPES(TYPE_GRASS, TYPE_POISON),
         .catchRate = 75,
@@ -8776,10 +8452,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 105,
         .description = COMPOUND_STRING(
-            "It lures prey close by dancing and waving\n"
-            "its arm caps, which resemble Poké Balls,\n"
-            "in a swaying motion, but very few Pokémon\n"
-            "are fooled by this."),
+"It lures prey close by dancing and waving\n"
+"its arm caps, which resemble Poké Balls,\n"
+"in a swaying motion, but very few Pokémon\n"
+"are fooled by this."),
         .pokemonScale = 422,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -8788,13 +8464,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 8,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 8),
-            ANIMCMD_FRAME(0, 8),
-            ANIMCMD_FRAME(1, 8),
-            ANIMCMD_FRAME(0, 8),
-            ANIMCMD_FRAME(1, 8),
-            ANIMCMD_FRAME(0, 8),
-        ),
+ANIMCMD_FRAME(1, 8),
+ANIMCMD_FRAME(0, 8),
+ANIMCMD_FRAME(1, 8),
+ANIMCMD_FRAME(0, 8),
+ANIMCMD_FRAME(1, 8),
+ANIMCMD_FRAME(0, 8),
+),
         .frontAnimId = ANIM_H_SLIDE,
         .backPic = gMonBackPic_Amoonguss,
         .backPicSize = MON_COORDS_SIZE(64, 48),
@@ -8807,28 +8483,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_SLOW,
         SHADOW(1, 5, SHADOW_SIZE_M)
         FOOTPRINT(Amoonguss)
-        OVERWORLD(
-            sPicTable_Amoonguss,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Amoonguss,
-            gShinyOverworldPalette_Amoonguss
-        )
+        OVERWORLD(sPicTable_Amoonguss,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Amoonguss,
+gShinyOverworldPalette_Amoonguss)
         .levelUpLearnset = sAmoongussLevelUpLearnset,
         .teachableLearnset = sAmoongussTeachableLearnset,
     },
-#endif //P_FAMILY_FOONGUS
+#endif // P_FAMILY_FOONGUS
 
 #if P_FAMILY_FRILLISH
     [SPECIES_FRILLISH] =
     {
-        .baseHP        = 55,
-        .baseAttack    = 40,
-        .baseDefense   = 50,
-        .baseSpeed     = 40,
-        .baseSpAttack  = 65,
+        .baseHP = 55,
+        .baseAttack = 40,
+        .baseDefense = 50,
+        .baseSpeed = 40,
+        .baseSpAttack = 65,
         .baseSpDefense = 85,
         .types = MON_TYPES(TYPE_WATER, TYPE_GHOST),
         .catchRate = 190,
@@ -8848,10 +8522,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 12,
         .weight = 330,
         .description = COMPOUND_STRING(
-            "If its veil-like arms stun and wrap an\n"
-            "opponent, that foe will be dragged\n"
-            "five miles below the surface to its lair,\n"
-            "never to return."),
+"If its veil-like arms stun and wrap an\n"
+"opponent, that foe will be dragged\n"
+"five miles below the surface to its lair,\n"
+"never to return."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -8860,11 +8534,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 5,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 30),
-            ANIMCMD_FRAME(0, 30),
-            ANIMCMD_FRAME(1, 30),
-            ANIMCMD_FRAME(0, 30),
-        ),
+ANIMCMD_FRAME(1, 30),
+ANIMCMD_FRAME(0, 30),
+ANIMCMD_FRAME(1, 30),
+ANIMCMD_FRAME(0, 30),
+),
         .frontAnimId = ANIM_RISING_WOBBLE,
         .backPic = gMonBackPic_Frillish,
         .backPicSize = MON_COORDS_SIZE(40, 56),
@@ -8874,7 +8548,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .shinyPalette = gMonShinyPalette_Frillish,
         .iconSprite = gMonIcon_Frillish,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
+    #if P_GENDER_DIFFERENCES
         .frontPicFemale = gMonFrontPic_FrillishF,
         .frontPicSizeFemale = MON_COORDS_SIZE(56, 56),
         .backPicFemale = gMonBackPic_FrillishF,
@@ -8883,41 +8557,36 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .shinyPaletteFemale = gMonShinyPalette_FrillishF,
         .iconSpriteFemale = gMonIcon_FrillishF,
         .iconPalIndexFemale = 1,
-#endif //P_GENDER_DIFFERENCES
+    #endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 9, SHADOW_SIZE_S)
         FOOTPRINT(Frillish)
-        OVERWORLD(
-            sPicTable_Frillish,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Frillish,
-            gShinyOverworldPalette_Frillish
-        )
-        OVERWORLD_FEMALE(
-            sPicTable_FrillishF,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_FrillishF,
-            gShinyOverworldPalette_FrillishF
-        )
+        OVERWORLD(sPicTable_Frillish,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Frillish,
+gShinyOverworldPalette_Frillish)
+        OVERWORLD_FEMALE(sPicTable_FrillishF,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_FrillishF,
+gShinyOverworldPalette_FrillishF)
         .levelUpLearnset = sFrillishLevelUpLearnset,
         .teachableLearnset = sFrillishTeachableLearnset,
         .eggMoveLearnset = sFrillishEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_JELLICENT}),
     },
-
     [SPECIES_JELLICENT] =
     {
-        .baseHP        = 100,
-        .baseAttack    = 60,
-        .baseDefense   = 70,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 85,
+        .baseHP = 100,
+        .baseAttack = 60,
+        .baseDefense = 70,
+        .baseSpeed = 60,
+        .baseSpAttack = 85,
         .baseSpDefense = 105,
         .types = MON_TYPES(TYPE_WATER, TYPE_GHOST),
         .catchRate = 60,
@@ -8937,10 +8606,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 22,
         .weight = 1350,
         .description = COMPOUND_STRING(
-            "They propel themselves by expelling\n"
-            "absorbed seawater from their bodies.\n"
-            "It's said there's a castle of ships\n"
-            "Jellicent have sunk on the seafloor."),
+"They propel themselves by expelling\n"
+"absorbed seawater from their bodies.\n"
+"It's said there's a castle of ships\n"
+"Jellicent have sunk on the seafloor."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 348,
@@ -8949,12 +8618,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 3,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 8),
-            ANIMCMD_FRAME(1, 30),
-            ANIMCMD_FRAME(0, 8),
-            ANIMCMD_FRAME(1, 30),
-            ANIMCMD_FRAME(0, 8),
-        ),
+ANIMCMD_FRAME(0, 8),
+ANIMCMD_FRAME(1, 30),
+ANIMCMD_FRAME(0, 8),
+ANIMCMD_FRAME(1, 30),
+ANIMCMD_FRAME(0, 8),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Jellicent,
         .backPicSize = MON_COORDS_SIZE(64, 48),
@@ -8964,7 +8633,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .shinyPalette = gMonShinyPalette_Jellicent,
         .iconSprite = gMonIcon_Jellicent,
         .iconPalIndex = 0,
-#if P_GENDER_DIFFERENCES
+    #if P_GENDER_DIFFERENCES
         .frontPicFemale = gMonFrontPic_JellicentF,
         .frontPicSizeFemale = MON_COORDS_SIZE(64, 64),
         .backPicFemale = gMonBackPic_JellicentF,
@@ -8973,41 +8642,37 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .shinyPaletteFemale = gMonShinyPalette_JellicentF,
         .iconSpriteFemale = gMonIcon_JellicentF,
         .iconPalIndexFemale = 1,
-#endif //P_GENDER_DIFFERENCES
+    #endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 11, SHADOW_SIZE_M)
         FOOTPRINT(Jellicent)
-        OVERWORLD(
-            sPicTable_Jellicent,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Jellicent,
-            gShinyOverworldPalette_Jellicent
-        )
-        OVERWORLD_FEMALE(
-            sPicTable_JellicentF,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_JellicentF,
-            gShinyOverworldPalette_JellicentF
-        )
+        OVERWORLD(sPicTable_Jellicent,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Jellicent,
+gShinyOverworldPalette_Jellicent)
+        OVERWORLD_FEMALE(sPicTable_JellicentF,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_JellicentF,
+gShinyOverworldPalette_JellicentF)
         .levelUpLearnset = sJellicentLevelUpLearnset,
         .teachableLearnset = sJellicentTeachableLearnset,
     },
-#endif //P_FAMILY_FRILLISH
+#endif // P_FAMILY_FRILLISH
 
 #if P_FAMILY_ALOMOMOLA
     [SPECIES_ALOMOMOLA] =
     {
-        .baseHP        = 165,
-        .baseAttack    = 75,
-        .baseDefense   = 80,
-        .baseSpeed     = 65,
-        .baseSpAttack  = 40,
+        .baseHP = 165,
+        .baseAttack = 75,
+        .baseDefense = 80,
+        .baseSpeed = 65,
+        .baseSpAttack = 40,
         .baseSpDefense = 45,
         .types = MON_TYPES(TYPE_WATER),
         .catchRate = 75,
@@ -9027,10 +8692,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 12,
         .weight = 316,
         .description = COMPOUND_STRING(
-            "When they find a wounded Pokémon,\n"
-            "they embrace it and bring it to shore.\n"
-            "The special membrane enveloping\n"
-            "Alomomola has the ability to heal wounds."),
+"When they find a wounded Pokémon,\n"
+"they embrace it and bring it to shore.\n"
+"The special membrane enveloping\n"
+"Alomomola has the ability to heal wounds."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -9039,10 +8704,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(1, 50),
+ANIMCMD_FRAME(1, 50),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_SWING_CONCAVE,
         .backPic = gMonBackPic_Alomomola,
         .backPicSize = MON_COORDS_SIZE(48, 64),
@@ -9055,29 +8720,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 15, SHADOW_SIZE_S)
         FOOTPRINT(Alomomola)
-        OVERWORLD(
-            sPicTable_Alomomola,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Alomomola,
-            gShinyOverworldPalette_Alomomola
-        )
+        OVERWORLD(sPicTable_Alomomola,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Alomomola,
+gShinyOverworldPalette_Alomomola)
         .levelUpLearnset = sAlomomolaLevelUpLearnset,
         .teachableLearnset = sAlomomolaTeachableLearnset,
         .eggMoveLearnset = sAlomomolaEggMoveLearnset,
     },
-#endif //P_FAMILY_ALOMOMOLA
+#endif // P_FAMILY_ALOMOMOLA
 
 #if P_FAMILY_JOLTIK
     [SPECIES_JOLTIK] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 47,
-        .baseDefense   = 50,
-        .baseSpeed     = 65,
-        .baseSpAttack  = 57,
+        .baseHP = 50,
+        .baseAttack = 47,
+        .baseDefense = 50,
+        .baseSpeed = 65,
+        .baseSpAttack = 57,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_BUG, TYPE_ELECTRIC),
         .catchRate = 190,
@@ -9097,10 +8760,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 1,
         .weight = 6,
         .description = COMPOUND_STRING(
-            "Since they can't generate their own\n"
-            "electricity, they attach themselves to\n"
-            "large-bodied Pokémon and absorb static\n"
-            "electricity, which they store in a pouch."),
+"Since they can't generate their own\n"
+"electricity, they attach themselves to\n"
+"large-bodied Pokémon and absorb static\n"
+"electricity, which they store in a pouch."),
         .pokemonScale = 682,
         .pokemonOffset = 24,
         .trainerScale = 256,
@@ -9109,12 +8772,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 32),
         .frontPicYOffset = 17,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_H_SLIDE,
         .backPic = gMonBackPic_Joltik,
         .backPicSize = MON_COORDS_SIZE(48, 32),
@@ -9127,28 +8790,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(0, -5, SHADOW_SIZE_S)
         FOOTPRINT(Joltik)
-        OVERWORLD(
-            sPicTable_Joltik,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Joltik,
-            gShinyOverworldPalette_Joltik
-        )
+        OVERWORLD(sPicTable_Joltik,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Joltik,
+gShinyOverworldPalette_Joltik)
         .levelUpLearnset = sJoltikLevelUpLearnset,
         .teachableLearnset = sJoltikTeachableLearnset,
         .eggMoveLearnset = sJoltikEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_GALVANTULA}),
     },
-
     [SPECIES_GALVANTULA] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 77,
-        .baseDefense   = 60,
-        .baseSpeed     = 108,
-        .baseSpAttack  = 97,
+        .baseHP = 70,
+        .baseAttack = 77,
+        .baseDefense = 60,
+        .baseSpeed = 108,
+        .baseSpAttack = 97,
         .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_BUG, TYPE_ELECTRIC),
         .catchRate = 75,
@@ -9168,10 +8828,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 8,
         .weight = 143,
         .description = COMPOUND_STRING(
-            "It creates barriers from electrified silk\n"
-            "that stun foes. This works as a weapon as\n"
-            "well as a defense. While it is immobilized\n"
-            "by shock, they leisurely consume it."),
+"It creates barriers from electrified silk\n"
+"that stun foes. This works as a weapon as\n"
+"well as a defense. While it is immobilized\n"
+"by shock, they leisurely consume it."),
         .pokemonScale = 366,
         .pokemonOffset = 10,
         .trainerScale = 257,
@@ -9180,15 +8840,15 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 48),
         .frontPicYOffset = 10,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 6),
-            ANIMCMD_FRAME(0, 6),
-            ANIMCMD_FRAME(1, 6),
-            ANIMCMD_FRAME(0, 6),
-            ANIMCMD_FRAME(1, 6),
-            ANIMCMD_FRAME(0, 6),
-            ANIMCMD_FRAME(1, 6),
-            ANIMCMD_FRAME(0, 6),
-        ),
+ANIMCMD_FRAME(1, 6),
+ANIMCMD_FRAME(0, 6),
+ANIMCMD_FRAME(1, 6),
+ANIMCMD_FRAME(0, 6),
+ANIMCMD_FRAME(1, 6),
+ANIMCMD_FRAME(0, 6),
+ANIMCMD_FRAME(1, 6),
+ANIMCMD_FRAME(0, 6),
+),
         .frontAnimId = ANIM_CIRCLE_C_CLOCKWISE_SLOW,
         .backPic = gMonBackPic_Galvantula,
         .backPicSize = MON_COORDS_SIZE(64, 40),
@@ -9201,28 +8861,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, -2, SHADOW_SIZE_L)
         FOOTPRINT(Galvantula)
-        OVERWORLD(
-            sPicTable_Galvantula,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Galvantula,
-            gShinyOverworldPalette_Galvantula
-        )
+        OVERWORLD(sPicTable_Galvantula,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Galvantula,
+gShinyOverworldPalette_Galvantula)
         .levelUpLearnset = sGalvantulaLevelUpLearnset,
         .teachableLearnset = sGalvantulaTeachableLearnset,
     },
-#endif //P_FAMILY_JOLTIK
+#endif // P_FAMILY_JOLTIK
 
 #if P_FAMILY_FERROSEED
     [SPECIES_FERROSEED] =
     {
-        .baseHP        = 44,
-        .baseAttack    = 50,
-        .baseDefense   = 91,
-        .baseSpeed     = 10,
-        .baseSpAttack  = 24,
+        .baseHP = 44,
+        .baseAttack = 50,
+        .baseDefense = 91,
+        .baseSpeed = 10,
+        .baseSpAttack = 24,
         .baseSpDefense = 86,
         .types = MON_TYPES(TYPE_GRASS, TYPE_STEEL),
         .catchRate = 255,
@@ -9243,10 +8901,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 188,
         .description = COMPOUND_STRING(
-            "It absorbs the iron it finds in the rock\n"
-            "while clinging to the ceiling of caves.\n"
-            "When threatened, it attacks by shooting\n"
-            "a barrage of spikes."),
+"It absorbs the iron it finds in the rock\n"
+"while clinging to the ceiling of caves.\n"
+"When threatened, it attacks by shooting\n"
+"a barrage of spikes."),
         .pokemonScale = 422,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -9255,12 +8913,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 40),
         .frontPicYOffset = 12,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 35),
-            ANIMCMD_FRAME(0, 28),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 35),
+ANIMCMD_FRAME(0, 28),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_H_VIBRATE,
         .backPic = gMonBackPic_Ferroseed,
         .backPicSize = MON_COORDS_SIZE(48, 40),
@@ -9273,28 +8931,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 1, SHADOW_SIZE_S)
         FOOTPRINT(Ferroseed)
-        OVERWORLD(
-            sPicTable_Ferroseed,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Ferroseed,
-            gShinyOverworldPalette_Ferroseed
-        )
+        OVERWORLD(sPicTable_Ferroseed,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Ferroseed,
+gShinyOverworldPalette_Ferroseed)
         .levelUpLearnset = sFerroseedLevelUpLearnset,
         .teachableLearnset = sFerroseedTeachableLearnset,
         .eggMoveLearnset = sFerroseedEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_FERROTHORN}),
     },
-
     [SPECIES_FERROTHORN] =
     {
-        .baseHP        = 74,
-        .baseAttack    = 94,
-        .baseDefense   = 131,
-        .baseSpeed     = 20,
-        .baseSpAttack  = 54,
+        .baseHP = 74,
+        .baseAttack = 94,
+        .baseDefense = 131,
+        .baseSpeed = 20,
+        .baseSpAttack = 54,
         .baseSpDefense = 116,
         .types = MON_TYPES(TYPE_GRASS, TYPE_STEEL),
         .catchRate = 90,
@@ -9319,10 +8974,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 10,
         .weight = 1100,
         .description = COMPOUND_STRING(
-            "It fights by swinging around its three\n"
-            "spiky feelers and shooting spikes.\n"
-            "A hit from these steel spikes can reduce\n"
-            "a boulder to rubble."),
+"It fights by swinging around its three\n"
+"spiky feelers and shooting spikes.\n"
+"A hit from these steel spikes can reduce\n"
+"a boulder to rubble."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -9331,12 +8986,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 4,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 11),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 11),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SHAKE,
         .enemyMonElevation = 10,
         .backPic = gMonBackPic_Ferrothorn,
@@ -9350,28 +9005,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 17, SHADOW_SIZE_M)
         FOOTPRINT(Ferrothorn)
-        OVERWORLD(
-            sPicTable_Ferrothorn,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Ferrothorn,
-            gShinyOverworldPalette_Ferrothorn
-        )
+        OVERWORLD(sPicTable_Ferrothorn,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Ferrothorn,
+gShinyOverworldPalette_Ferrothorn)
         .levelUpLearnset = sFerrothornLevelUpLearnset,
         .teachableLearnset = sFerrothornTeachableLearnset,
     },
-#endif //P_FAMILY_FERROSEED
+#endif // P_FAMILY_FERROSEED
 
 #if P_FAMILY_KLINK
     [SPECIES_KLINK] =
     {
-        .baseHP        = 40,
-        .baseAttack    = 55,
-        .baseDefense   = 70,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 45,
+        .baseHP = 40,
+        .baseAttack = 55,
+        .baseDefense = 70,
+        .baseSpeed = 30,
+        .baseSpAttack = 45,
         .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_STEEL),
         .catchRate = 130,
@@ -9392,10 +9045,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 3,
         .weight = 210,
         .description = COMPOUND_STRING(
-            "Two bodies comprise a fixed pair.\n"
-            "The two minigears that mesh together\n"
-            "are predetermined. Each will rebound from\n"
-            "other minigears without meshing."),
+"Two bodies comprise a fixed pair.\n"
+"The two minigears that mesh together\n"
+"are predetermined. Each will rebound from\n"
+"other minigears without meshing."),
         .pokemonScale = 530,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -9404,11 +9057,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 40),
         .frontPicYOffset = 12,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_CIRCULAR_STRETCH_TWICE,
         .enemyMonElevation = 12,
         .backPic = gMonBackPic_Klink,
@@ -9422,27 +9075,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 11, SHADOW_SIZE_S)
         FOOTPRINT(Klink)
-        OVERWORLD(
-            sPicTable_Klink,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Klink,
-            gShinyOverworldPalette_Klink
-        )
+        OVERWORLD(sPicTable_Klink,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Klink,
+gShinyOverworldPalette_Klink)
         .levelUpLearnset = sKlinkLevelUpLearnset,
         .teachableLearnset = sKlinkTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_KLANG}),
     },
-
     [SPECIES_KLANG] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 80,
-        .baseDefense   = 95,
-        .baseSpeed     = 50,
-        .baseSpAttack  = 70,
+        .baseHP = 60,
+        .baseAttack = 80,
+        .baseDefense = 95,
+        .baseSpeed = 50,
+        .baseSpAttack = 70,
         .baseSpDefense = 85,
         .types = MON_TYPES(TYPE_STEEL),
         .catchRate = 60,
@@ -9463,10 +9113,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 510,
         .description = COMPOUND_STRING(
-            "A minigear and big gear comprise its\n"
-            "body. Spinning minigears are rotated\n"
-            "at high speed and repeatedly fired away.\n"
-            "It is dangerous if the gears don't return."),
+"A minigear and big gear comprise its\n"
+"body. Spinning minigears are rotated\n"
+"at high speed and repeatedly fired away.\n"
+"It is dangerous if the gears don't return."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -9475,11 +9125,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 56),
         .frontPicYOffset = 7,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_CIRCULAR_STRETCH_TWICE,
         .enemyMonElevation = 8,
         .backPic = gMonBackPic_Klang,
@@ -9493,27 +9143,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 12, SHADOW_SIZE_M)
         FOOTPRINT(Klang)
-        OVERWORLD(
-            sPicTable_Klang,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Klang,
-            gShinyOverworldPalette_Klang
-        )
+        OVERWORLD(sPicTable_Klang,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Klang,
+gShinyOverworldPalette_Klang)
         .levelUpLearnset = sKlangLevelUpLearnset,
         .teachableLearnset = sKlangTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 49, SPECIES_KLINKLANG}),
     },
-
     [SPECIES_KLINKLANG] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 100,
-        .baseDefense   = 115,
-        .baseSpeed     = 90,
-        .baseSpAttack  = 70,
+        .baseHP = 60,
+        .baseAttack = 100,
+        .baseDefense = 115,
+        .baseSpeed = 90,
+        .baseSpAttack = 70,
         .baseSpDefense = 85,
         .types = MON_TYPES(TYPE_STEEL),
         .catchRate = 30,
@@ -9534,10 +9181,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 810,
         .description = COMPOUND_STRING(
-            "Its red core functions as an energy tank.\n"
-            "It is rotated at high speed for a rapid\n"
-            "energy charge. It fires the charged energy\n"
-            "through its spikes into an area."),
+"Its red core functions as an energy tank.\n"
+"It is rotated at high speed for a rapid\n"
+"energy charge. It fires the charged energy\n"
+"through its spikes into an area."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -9546,11 +9193,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_CIRCULAR_STRETCH_TWICE,
         .enemyMonElevation = 4,
         .backPic = gMonBackPic_Klinklang,
@@ -9564,28 +9211,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 13, SHADOW_SIZE_L)
         FOOTPRINT(Klinklang)
-        OVERWORLD(
-            sPicTable_Klinklang,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Klinklang,
-            gShinyOverworldPalette_Klinklang
-        )
+        OVERWORLD(sPicTable_Klinklang,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Klinklang,
+gShinyOverworldPalette_Klinklang)
         .levelUpLearnset = sKlinklangLevelUpLearnset,
         .teachableLearnset = sKlinklangTeachableLearnset,
     },
-#endif //P_FAMILY_KLINK
+#endif // P_FAMILY_KLINK
 
 #if P_FAMILY_TYNAMO
     [SPECIES_TYNAMO] =
     {
-        .baseHP        = 35,
-        .baseAttack    = 55,
-        .baseDefense   = 40,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 45,
+        .baseHP = 35,
+        .baseAttack = 55,
+        .baseDefense = 40,
+        .baseSpeed = 60,
+        .baseSpAttack = 45,
         .baseSpDefense = 40,
         .types = MON_TYPES(TYPE_ELECTRIC),
         .catchRate = 190,
@@ -9605,10 +9250,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 2,
         .weight = 3,
         .description = COMPOUND_STRING(
-            "These Pokémon move in schools.\n"
-            "One alone can emit only a trickle of\n"
-            "electricity, so a group of them gathers\n"
-            "to unleash a powerful electric shock."),
+"These Pokémon move in schools.\n"
+"One alone can emit only a trickle of\n"
+"electricity, so a group of them gathers\n"
+"to unleash a powerful electric shock."),
         .pokemonScale = 682,
         .pokemonOffset = 24,
         .trainerScale = 256,
@@ -9617,23 +9262,23 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 24),
         .frontPicYOffset = 22,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 25),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 25),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_V_SLIDE_WOBBLE_SMALL,
         .enemyMonElevation = 16,
         .backPic = gMonBackPic_Tynamo,
@@ -9647,28 +9292,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-3, 5, SHADOW_SIZE_S)
         FOOTPRINT(Tynamo)
-        OVERWORLD(
-            sPicTable_Tynamo,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Tynamo,
-            gShinyOverworldPalette_Tynamo
-        )
+        OVERWORLD(sPicTable_Tynamo,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Tynamo,
+gShinyOverworldPalette_Tynamo)
         .teachingType = TM_ILLITERATE,
         .levelUpLearnset = sTynamoLevelUpLearnset,
         .teachableLearnset = sTynamoTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 39, SPECIES_EELEKTRIK}),
     },
-
     [SPECIES_EELEKTRIK] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 85,
-        .baseDefense   = 70,
-        .baseSpeed     = 40,
-        .baseSpAttack  = 75,
+        .baseHP = 65,
+        .baseAttack = 85,
+        .baseDefense = 70,
+        .baseSpeed = 40,
+        .baseSpAttack = 75,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_ELECTRIC),
         .catchRate = 60,
@@ -9688,10 +9330,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 12,
         .weight = 220,
         .description = COMPOUND_STRING(
-            "These Pokémon have a big appetite.\n"
-            "It wraps itself around its prey and\n"
-            "paralyzes it with electricity from the\n"
-            "round spots on its sides. Then it chomps."),
+"These Pokémon have a big appetite.\n"
+"It wraps itself around its prey and\n"
+"paralyzes it with electricity from the\n"
+"round spots on its sides. Then it chomps."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -9700,12 +9342,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 64),
         .frontPicYOffset = 6,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 4),
-            ANIMCMD_FRAME(1, 25),
-            ANIMCMD_FRAME(0, 4),
-            ANIMCMD_FRAME(1, 25),
-            ANIMCMD_FRAME(0, 4),
-        ),
+ANIMCMD_FRAME(0, 4),
+ANIMCMD_FRAME(1, 25),
+ANIMCMD_FRAME(0, 4),
+ANIMCMD_FRAME(1, 25),
+ANIMCMD_FRAME(0, 4),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .enemyMonElevation = 8,
         .backPic = gMonBackPic_Eelektrik,
@@ -9719,27 +9361,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 13, SHADOW_SIZE_S)
         FOOTPRINT(Eelektrik)
-        OVERWORLD(
-            sPicTable_Eelektrik,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Eelektrik,
-            gShinyOverworldPalette_Eelektrik
-        )
+        OVERWORLD(sPicTable_Eelektrik,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Eelektrik,
+gShinyOverworldPalette_Eelektrik)
         .levelUpLearnset = sEelektrikLevelUpLearnset,
         .teachableLearnset = sEelektrikTeachableLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_EELEKTROSS}),
     },
-
     [SPECIES_EELEKTROSS] =
     {
-        .baseHP        = 85,
-        .baseAttack    = 115,
-        .baseDefense   = 80,
-        .baseSpeed     = 50,
-        .baseSpAttack  = 105,
+        .baseHP = 85,
+        .baseAttack = 115,
+        .baseDefense = 80,
+        .baseSpeed = 50,
+        .baseSpAttack = 105,
         .baseSpDefense = 80,
         .types = MON_TYPES(TYPE_ELECTRIC),
         .catchRate = 30,
@@ -9759,10 +9398,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 21,
         .weight = 805,
         .description = COMPOUND_STRING(
-            "They crawl out of the ocean using their\n"
-            "arms. They will attack prey on shore and\n"
-            "immediately drag it into the ocean, with\n"
-            "their sucker mouths."),
+"They crawl out of the ocean using their\n"
+"arms. They will attack prey on shore and\n"
+"immediately drag it into the ocean, with\n"
+"their sucker mouths."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 365,
@@ -9771,13 +9410,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 56),
         .frontPicYOffset = 6,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 27),
-            ANIMCMD_FRAME(0, 27),
-            ANIMCMD_FRAME(1, 24),
-            ANIMCMD_FRAME(0, 25),
-            ANIMCMD_FRAME(1, 27),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(1, 27),
+ANIMCMD_FRAME(0, 27),
+ANIMCMD_FRAME(1, 24),
+ANIMCMD_FRAME(0, 25),
+ANIMCMD_FRAME(1, 27),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_BOUNCE_ROTATE_TO_SIDES_SMALL_SLOW,
         .enemyMonElevation = 8,
         .backPic = gMonBackPic_Eelektross,
@@ -9791,33 +9430,31 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(3, 13, SHADOW_SIZE_M)
         FOOTPRINT(Eelektross)
-        OVERWORLD(
-            sPicTable_Eelektross,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Eelektross,
-            gShinyOverworldPalette_Eelektross
-        )
+        OVERWORLD(sPicTable_Eelektross,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Eelektross,
+gShinyOverworldPalette_Eelektross)
         .levelUpLearnset = sEelektrossLevelUpLearnset,
         .teachableLearnset = sEelektrossTeachableLearnset,
         .formSpeciesIdTable = sEelektrossFormSpeciesIdTable,
         .formChangeTable = sEelektrossFormChangeTable,
     },
-
 #if P_GEN_9_MEGA_EVOLUTIONS
+
     [SPECIES_EELEKTROSS_MEGA] =
     {
-        .baseHP        = 85,
-        .baseAttack    = 145,
-        .baseDefense   = 80,
-        .baseSpeed     = 80,
-        .baseSpAttack  = 135,
+        .baseHP = 85,
+        .baseAttack = 145,
+        .baseDefense = 80,
+        .baseSpeed = 80,
+        .baseSpAttack = 135,
         .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_ELECTRIC),
         .catchRate = 30,
-        .expYield = 258 ,
+        .expYield = 258,
         .evYield_Attack = 3,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
@@ -9837,20 +9474,18 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 30,
         .weight = 1800,
         .description = COMPOUND_STRING(
-            "It now generates 10 times the\n"
-            "electricity it did before Mega\n"
-            "Evolving. It discharges this energy\n"
-            "from its false Eelektrik made of mucus."),
+"It now generates 10 times the\n"
+"electricity it did before Mega\n"
+"Evolving. It discharges this energy\n"
+"from its false Eelektrik made of mucus."),
         .frontPic = gMonFrontPic_EelektrossMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .enemyMonElevation = 6,
         .backPic = gMonBackPic_EelektrossMega,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 0,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_EelektrossMega,
         .shinyPalette = gMonShinyPalette_EelektrossMega,
         .iconSprite = gMonIcon_EelektrossMega,
@@ -9865,16 +9500,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formChangeTable = sEelektrossFormChangeTable,
     },
 #endif //P_GEN_9_MEGA_EVOLUTIONS
-#endif //P_FAMILY_TYNAMO
+
+#endif // P_FAMILY_TYNAMO
 
 #if P_FAMILY_ELGYEM
     [SPECIES_ELGYEM] =
     {
-        .baseHP        = 55,
-        .baseAttack    = 55,
-        .baseDefense   = 55,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 85,
+        .baseHP = 55,
+        .baseAttack = 55,
+        .baseDefense = 55,
+        .baseSpeed = 30,
+        .baseSpAttack = 85,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 255,
@@ -9894,10 +9530,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 90,
         .description = COMPOUND_STRING(
-            "It psychically squeezes the brain of\n"
-            "its foe, causing unendurable headaches.\n"
-            "Rumors of its origin are linked to a UFO\n"
-            "crash site in the desert 50 years ago."),
+"It psychically squeezes the brain of\n"
+"its foe, causing unendurable headaches.\n"
+"Rumors of its origin are linked to a UFO\n"
+"crash site in the desert 50 years ago."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -9906,15 +9542,15 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 48),
         .frontPicYOffset = 11,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 12),
-            ANIMCMD_FRAME(0, 12),
-            ANIMCMD_FRAME(1, 12),
-            ANIMCMD_FRAME(0, 30),
-            ANIMCMD_FRAME(1, 12),
-            ANIMCMD_FRAME(0, 12),
-            ANIMCMD_FRAME(1, 12),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(1, 12),
+ANIMCMD_FRAME(0, 12),
+ANIMCMD_FRAME(1, 12),
+ANIMCMD_FRAME(0, 30),
+ANIMCMD_FRAME(1, 12),
+ANIMCMD_FRAME(0, 12),
+ANIMCMD_FRAME(1, 12),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_RISING_WOBBLE,
         .backPic = gMonBackPic_Elgyem,
         .backPicSize = MON_COORDS_SIZE(48, 56),
@@ -9927,28 +9563,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 2, SHADOW_SIZE_S)
         FOOTPRINT(Elgyem)
-        OVERWORLD(
-            sPicTable_Elgyem,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Elgyem,
-            gShinyOverworldPalette_Elgyem
-        )
+        OVERWORLD(sPicTable_Elgyem,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Elgyem,
+gShinyOverworldPalette_Elgyem)
         .levelUpLearnset = sElgyemLevelUpLearnset,
         .teachableLearnset = sElgyemTeachableLearnset,
         .eggMoveLearnset = sElgyemEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_BEHEEYEM}),
     },
-
     [SPECIES_BEHEEYEM] =
     {
-        .baseHP        = 75,
-        .baseAttack    = 75,
-        .baseDefense   = 75,
-        .baseSpeed     = 40,
-        .baseSpAttack  = 125,
+        .baseHP = 75,
+        .baseAttack = 75,
+        .baseDefense = 75,
+        .baseSpeed = 40,
+        .baseSpAttack = 125,
         .baseSpDefense = 95,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 90,
@@ -9968,10 +9601,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 10,
         .weight = 345,
         .description = COMPOUND_STRING(
-            "It can manipulate an opponent's memory.\n"
-            "Apparently, it communicates by flashing\n"
-            "its three fingers, but those patterns\n"
-            "haven't been decoded. "),
+"It can manipulate an opponent's memory.\n"
+"Apparently, it communicates by flashing\n"
+"its three fingers, but those patterns\n"
+"haven't been decoded. "),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -9980,9 +9613,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 56),
         .frontPicYOffset = 4,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 20),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 20),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .backPic = gMonBackPic_Beheeyem,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -9995,28 +9628,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 10, SHADOW_SIZE_M)
         FOOTPRINT(Beheeyem)
-        OVERWORLD(
-            sPicTable_Beheeyem,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Beheeyem,
-            gShinyOverworldPalette_Beheeyem
-        )
+        OVERWORLD(sPicTable_Beheeyem,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Beheeyem,
+gShinyOverworldPalette_Beheeyem)
         .levelUpLearnset = sBeheeyemLevelUpLearnset,
         .teachableLearnset = sBeheeyemTeachableLearnset,
     },
-#endif //P_FAMILY_ELGYEM
+#endif // P_FAMILY_ELGYEM
 
 #if P_FAMILY_LITWICK
     [SPECIES_LITWICK] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 30,
-        .baseDefense   = 55,
-        .baseSpeed     = 20,
-        .baseSpAttack  = 65,
+        .baseHP = 50,
+        .baseAttack = 30,
+        .baseDefense = 55,
+        .baseSpeed = 20,
+        .baseSpAttack = 65,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_GHOST, TYPE_FIRE),
         .catchRate = 190,
@@ -10041,10 +9672,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 3,
         .weight = 31,
         .description = COMPOUND_STRING(
-            "While Litwick shines a light and pretends\n"
-            "to be a guide, it absorbs the life force of\n"
-            "any who follow it, which becomes the fuel\n"
-            "that it burns."),
+"While Litwick shines a light and pretends\n"
+"to be a guide, it absorbs the life force of\n"
+"any who follow it, which becomes the fuel\n"
+"that it burns."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -10053,11 +9684,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 40),
         .frontPicYOffset = 14,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Litwick,
         .backPicSize = MON_COORDS_SIZE(40, 40),
@@ -10070,28 +9701,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
         SHADOW(1, -1, SHADOW_SIZE_S)
         FOOTPRINT(Litwick)
-        OVERWORLD(
-            sPicTable_Litwick,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Litwick,
-            gShinyOverworldPalette_Litwick
-        )
+        OVERWORLD(sPicTable_Litwick,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Litwick,
+gShinyOverworldPalette_Litwick)
         .levelUpLearnset = sLitwickLevelUpLearnset,
         .teachableLearnset = sLitwickTeachableLearnset,
         .eggMoveLearnset = sLitwickEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 41, SPECIES_LAMPENT}),
     },
-
     [SPECIES_LAMPENT] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 40,
-        .baseDefense   = 60,
-        .baseSpeed     = 55,
-        .baseSpAttack  = 95,
+        .baseHP = 60,
+        .baseAttack = 40,
+        .baseDefense = 60,
+        .baseSpeed = 55,
+        .baseSpAttack = 95,
         .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_GHOST, TYPE_FIRE),
         .catchRate = 90,
@@ -10115,10 +9743,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 130,
         .description = COMPOUND_STRING(
-            "This ominous Pokémon is feared.\n"
-            "Through cities it wanders, searching\n"
-            "for the spirits of the fallen. The spirits\n"
-            "it absorbs fuel its baleful fire."),
+"This ominous Pokémon is feared.\n"
+"Through cities it wanders, searching\n"
+"for the spirits of the fallen. The spirits\n"
+"it absorbs fuel its baleful fire."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -10127,11 +9755,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 48),
         .frontPicYOffset = 8,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 25),
-            ANIMCMD_FRAME(0, 25),
-            ANIMCMD_FRAME(1, 25),
-            ANIMCMD_FRAME(0, 25),
-        ),
+ANIMCMD_FRAME(1, 25),
+ANIMCMD_FRAME(0, 25),
+ANIMCMD_FRAME(1, 25),
+ANIMCMD_FRAME(0, 25),
+),
         .frontAnimId = ANIM_V_SLIDE_WOBBLE,
         .enemyMonElevation = 6,
         .backPic = gMonBackPic_Lampent,
@@ -10145,27 +9773,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 9, SHADOW_SIZE_S)
         FOOTPRINT(Lampent)
-        OVERWORLD(
-            sPicTable_Lampent,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Lampent,
-            gShinyOverworldPalette_Lampent
-        )
+        OVERWORLD(sPicTable_Lampent,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Lampent,
+gShinyOverworldPalette_Lampent)
         .levelUpLearnset = sLampentLevelUpLearnset,
         .teachableLearnset = sLampentTeachableLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_DUSK_STONE, SPECIES_CHANDELURE}),
     },
-
     [SPECIES_CHANDELURE] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 55,
-        .baseDefense   = 90,
-        .baseSpeed     = 80,
-        .baseSpAttack  = 145,
+        .baseHP = 60,
+        .baseAttack = 55,
+        .baseDefense = 90,
+        .baseSpeed = 80,
+        .baseSpAttack = 145,
         .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_GHOST, TYPE_FIRE),
         .catchRate = 45,
@@ -10189,10 +9814,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 10,
         .weight = 343,
         .description = COMPOUND_STRING(
-            "Being consumed in Chandelure's flame burns\n"
-            "up the spirit, leaving the body behind.\n"
-            "By waving the flames on its arms, it puts\n"
-            "its foes into a hypnotic trance."),
+"Being consumed in Chandelure's flame burns\n"
+"up the spirit, leaving the body behind.\n"
+"By waving the flames on its arms, it puts\n"
+"its foes into a hypnotic trance."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -10201,10 +9826,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 4,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 30),
-            ANIMCMD_FRAME(1, 30),
-            ANIMCMD_FRAME(0, 1),
-        ),
+ANIMCMD_FRAME(0, 30),
+ANIMCMD_FRAME(1, 30),
+ANIMCMD_FRAME(0, 1),
+),
         .frontAnimId = ANIM_H_SLIDE_WOBBLE,
         .enemyMonElevation = 6,
         .backPic = gMonBackPic_Chandelure,
@@ -10218,29 +9843,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 13, SHADOW_SIZE_S)
         FOOTPRINT(Chandelure)
-        OVERWORLD(
-            sPicTable_Chandelure,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Chandelure,
-            gShinyOverworldPalette_Chandelure
-        )
+        OVERWORLD(sPicTable_Chandelure,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Chandelure,
+gShinyOverworldPalette_Chandelure)
         .levelUpLearnset = sChandelureLevelUpLearnset,
         .teachableLearnset = sChandelureTeachableLearnset,
         .formSpeciesIdTable = sChandelureFormSpeciesIdTable,
         .formChangeTable = sChandelureFormChangeTable,
     },
-
 #if P_GEN_9_MEGA_EVOLUTIONS
+
     [SPECIES_CHANDELURE_MEGA] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 75,
-        .baseDefense   = 110,
-        .baseSpeed     = 90,
-        .baseSpAttack  = 175,
+        .baseHP = 60,
+        .baseAttack = 75,
+        .baseDefense = 110,
+        .baseSpeed = 90,
+        .baseSpAttack = 175,
         .baseSpDefense = 110,
         .types = MON_TYPES(TYPE_GHOST, TYPE_FIRE),
         .catchRate = 45,
@@ -10265,20 +9888,18 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 25,
         .weight = 696,
         .description = COMPOUND_STRING(
-            "One of its eyes is a window linking\n"
-            "our world with the afterlife.\n"
-            "This Pokémon draws in hatred and\n"
-            "converts it into power."),
+"One of its eyes is a window linking\n"
+"our world with the afterlife.\n"
+"This Pokémon draws in hatred and\n"
+"converts it into power."),
         .frontPic = gMonFrontPic_ChandelureMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .enemyMonElevation = 6,
         .backPic = gMonBackPic_ChandelureMega,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 0,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_ChandelureMega,
         .shinyPalette = gMonShinyPalette_ChandelureMega,
         .iconSprite = gMonIcon_ChandelureMega,
@@ -10293,16 +9914,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formChangeTable = sChandelureFormChangeTable,
     },
 #endif //P_GEN_9_MEGA_EVOLUTIONS
-#endif //P_FAMILY_LITWICK
+
+#endif // P_FAMILY_LITWICK
 
 #if P_FAMILY_AXEW
     [SPECIES_AXEW] =
     {
-        .baseHP        = 46,
-        .baseAttack    = 87,
-        .baseDefense   = 60,
-        .baseSpeed     = 57,
-        .baseSpAttack  = 30,
+        .baseHP = 46,
+        .baseAttack = 87,
+        .baseDefense = 60,
+        .baseSpeed = 57,
+        .baseSpAttack = 30,
         .baseSpDefense = 40,
         .types = MON_TYPES(TYPE_DRAGON),
         .catchRate = 75,
@@ -10322,10 +9944,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 180,
         .description = COMPOUND_STRING(
-            "They mark their territory by leaving\n"
-            "gashes in trees with their tusks. If a\n"
-            "tusk breaks, a new one grows in quickly,\n"
-            "harder and sturdier than the last."),
+"They mark their territory by leaving\n"
+"gashes in trees with their tusks. If a\n"
+"tusk breaks, a new one grows in quickly,\n"
+"harder and sturdier than the last."),
         .pokemonScale = 422,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -10334,9 +9956,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 48),
         .frontPicYOffset = 12,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 40),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(1, 40),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_H_SHAKE,
         .backPic = gMonBackPic_Axew,
         .backPicSize = MON_COORDS_SIZE(48, 56),
@@ -10349,28 +9971,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(2, 1, SHADOW_SIZE_S)
         FOOTPRINT(Axew)
-        OVERWORLD(
-            sPicTable_Axew,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Axew,
-            gShinyOverworldPalette_Axew
-        )
+        OVERWORLD(sPicTable_Axew,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Axew,
+gShinyOverworldPalette_Axew)
         .levelUpLearnset = sAxewLevelUpLearnset,
         .teachableLearnset = sAxewTeachableLearnset,
         .eggMoveLearnset = sAxewEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_FRAXURE}),
     },
-
     [SPECIES_FRAXURE] =
     {
-        .baseHP        = 66,
-        .baseAttack    = 117,
-        .baseDefense   = 70,
-        .baseSpeed     = 67,
-        .baseSpAttack  = 40,
+        .baseHP = 66,
+        .baseAttack = 117,
+        .baseDefense = 70,
+        .baseSpeed = 67,
+        .baseSpAttack = 40,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_DRAGON),
         .catchRate = 60,
@@ -10390,10 +10009,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 10,
         .weight = 360,
         .description = COMPOUND_STRING(
-            "Their tusks can shatter rocks.\n"
-            "A broken tusk will not grow back,\n"
-            "so it diligently sharpens its tusks on\n"
-            "river rocks after the end of a battle."),
+"Their tusks can shatter rocks.\n"
+"A broken tusk will not grow back,\n"
+"so it diligently sharpens its tusks on\n"
+"river rocks after the end of a battle."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -10402,9 +10021,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 5,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Fraxure,
         .backPicSize = MON_COORDS_SIZE(64, 48),
@@ -10417,27 +10036,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 8, SHADOW_SIZE_L)
         FOOTPRINT(Fraxure)
-        OVERWORLD(
-            sPicTable_Fraxure,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Fraxure,
-            gShinyOverworldPalette_Fraxure
-        )
+        OVERWORLD(sPicTable_Fraxure,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Fraxure,
+gShinyOverworldPalette_Fraxure)
         .levelUpLearnset = sFraxureLevelUpLearnset,
         .teachableLearnset = sFraxureTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 48, SPECIES_HAXORUS}),
     },
-
     [SPECIES_HAXORUS] =
     {
-        .baseHP        = 76,
-        .baseAttack    = 147,
-        .baseDefense   = 90,
-        .baseSpeed     = 97,
-        .baseSpAttack  = 60,
+        .baseHP = 76,
+        .baseAttack = 147,
+        .baseDefense = 90,
+        .baseSpeed = 97,
+        .baseSpAttack = 60,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_DRAGON),
         .catchRate = 45,
@@ -10457,10 +10073,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 18,
         .weight = 1055,
         .description = COMPOUND_STRING(
-            "They are kind but can be relentless\n"
-            "when defending territory. Their sturdy\n"
-            "tusks will stay sharp even if used to cut\n"
-            "steel beams."),
+"They are kind but can be relentless\n"
+"when defending territory. Their sturdy\n"
+"tusks will stay sharp even if used to cut\n"
+"steel beams."),
         .pokemonScale = 267,
         .pokemonOffset = 2,
         .trainerScale = 286,
@@ -10469,11 +10085,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_H_SHAKE,
         .backPic = gMonBackPic_Haxorus,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -10486,28 +10102,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(2, 9, SHADOW_SIZE_L)
         FOOTPRINT(Haxorus)
-        OVERWORLD(
-            sPicTable_Haxorus,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Haxorus,
-            gShinyOverworldPalette_Haxorus
-        )
+        OVERWORLD(sPicTable_Haxorus,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Haxorus,
+gShinyOverworldPalette_Haxorus)
         .levelUpLearnset = sHaxorusLevelUpLearnset,
         .teachableLearnset = sHaxorusTeachableLearnset,
     },
-#endif //P_FAMILY_AXEW
+#endif // P_FAMILY_AXEW
 
 #if P_FAMILY_CUBCHOO
     [SPECIES_CUBCHOO] =
     {
-        .baseHP        = 55,
-        .baseAttack    = 70,
-        .baseDefense   = 40,
-        .baseSpeed     = 40,
-        .baseSpAttack  = 60,
+        .baseHP = 55,
+        .baseAttack = 70,
+        .baseDefense = 40,
+        .baseSpeed = 40,
+        .baseSpAttack = 60,
         .baseSpDefense = 40,
         .types = MON_TYPES(TYPE_ICE),
         .catchRate = 120,
@@ -10531,10 +10145,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 85,
         .description = COMPOUND_STRING(
-            "Its nose is always running.\n"
-            "Their snot is a barometer of health.\n"
-            "When healthy, their snot is sticky and\n"
-            "the power of their ice moves increases."),
+"Its nose is always running.\n"
+"Their snot is a barometer of health.\n"
+"When healthy, their snot is sticky and\n"
+"the power of their ice moves increases."),
         .pokemonScale = 432,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -10543,10 +10157,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 40),
         .frontPicYOffset = 12,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Cubchoo,
         .backPicSize = MON_COORDS_SIZE(40, 40),
@@ -10559,28 +10173,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(-2, 0, SHADOW_SIZE_S)
         FOOTPRINT(Cubchoo)
-        OVERWORLD(
-            sPicTable_Cubchoo,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Cubchoo,
-            gShinyOverworldPalette_Cubchoo
-        )
+        OVERWORLD(sPicTable_Cubchoo,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Cubchoo,
+gShinyOverworldPalette_Cubchoo)
         .levelUpLearnset = sCubchooLevelUpLearnset,
         .teachableLearnset = sCubchooTeachableLearnset,
         .eggMoveLearnset = sCubchooEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_BEARTIC}),
     },
-
     [SPECIES_BEARTIC] =
     {
-        .baseHP        = 95,
-        .baseAttack    = P_UPDATED_STATS >= GEN_7 ? 130 : 110,
-        .baseDefense   = 80,
-        .baseSpeed     = 50,
-        .baseSpAttack  = 70,
+        .baseHP = 95,
+        .baseAttack = P_UPDATED_STATS >= GEN_7 ? 130 : 110,
+        .baseDefense = 80,
+        .baseSpeed = 50,
+        .baseSpAttack = 70,
         .baseSpDefense = 80,
         .types = MON_TYPES(TYPE_ICE),
         .catchRate = 60,
@@ -10604,10 +10215,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 26,
         .weight = 2600,
         .description = COMPOUND_STRING(
-            "It freezes its breath to create fangs\n"
-            "and claws of ice to fight with.\n"
-            "Very able in the water, it swims around\n"
-            "in northern seas and catches prey."),
+"It freezes its breath to create fangs\n"
+"and claws of ice to fight with.\n"
+"Very able in the water, it swims around\n"
+"in northern seas and catches prey."),
         .pokemonScale = 266,
         .pokemonOffset = 3,
         .trainerScale = 399,
@@ -10616,11 +10227,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_H_SHAKE,
         .backPic = gMonBackPic_Beartic,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -10633,28 +10244,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 13, SHADOW_SIZE_L)
         FOOTPRINT(Beartic)
-        OVERWORLD(
-            sPicTable_Beartic,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Beartic,
-            gShinyOverworldPalette_Beartic
-        )
+        OVERWORLD(sPicTable_Beartic,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Beartic,
+gShinyOverworldPalette_Beartic)
         .levelUpLearnset = sBearticLevelUpLearnset,
         .teachableLearnset = sBearticTeachableLearnset,
     },
-#endif //P_FAMILY_CUBCHOO
+#endif // P_FAMILY_CUBCHOO
 
 #if P_FAMILY_CRYOGONAL
     [SPECIES_CRYOGONAL] =
     {
-        .baseHP        = P_UPDATED_STATS >= GEN_7 ? 80 : 70,
-        .baseAttack    = 50,
-        .baseDefense   = P_UPDATED_STATS >= GEN_7 ? 50 : 30,
-        .baseSpeed     = 105,
-        .baseSpAttack  = 95,
+        .baseHP = P_UPDATED_STATS >= GEN_7 ? 80 : 70,
+        .baseAttack = 50,
+        .baseDefense = P_UPDATED_STATS >= GEN_7 ? 50 : 30,
+        .baseSpeed = 105,
+        .baseSpAttack = 95,
         .baseSpDefense = 135,
         .types = MON_TYPES(TYPE_ICE),
         .catchRate = 25,
@@ -10675,10 +10284,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 11,
         .weight = 1480,
         .description = COMPOUND_STRING(
-            "They are born in snow clouds. When\n"
-            "its body temperature goes up, it turns\n"
-            "into steam and vanishes. When its\n"
-            "temperature lowers, it returns to ice."),
+"They are born in snow clouds. When\n"
+"its body temperature goes up, it turns\n"
+"into steam and vanishes. When its\n"
+"temperature lowers, it returns to ice."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -10687,12 +10296,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 11),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 48),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 11),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 48),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_SHRINK_GROW,
         .enemyMonElevation = 3,
         .backPic = gMonBackPic_Cryogonal,
@@ -10706,28 +10315,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 14, SHADOW_SIZE_M)
         FOOTPRINT(Cryogonal)
-        OVERWORLD(
-            sPicTable_Cryogonal,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Cryogonal,
-            gShinyOverworldPalette_Cryogonal
-        )
+        OVERWORLD(sPicTable_Cryogonal,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Cryogonal,
+gShinyOverworldPalette_Cryogonal)
         .levelUpLearnset = sCryogonalLevelUpLearnset,
         .teachableLearnset = sCryogonalTeachableLearnset,
     },
-#endif //P_FAMILY_CRYOGONAL
+#endif // P_FAMILY_CRYOGONAL
 
 #if P_FAMILY_SHELMET
     [SPECIES_SHELMET] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 40,
-        .baseDefense   = 85,
-        .baseSpeed     = 25,
-        .baseSpAttack  = 40,
+        .baseHP = 50,
+        .baseAttack = 40,
+        .baseDefense = 85,
+        .baseSpeed = 25,
+        .baseSpAttack = 40,
         .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_BUG),
         .catchRate = 200,
@@ -10747,10 +10354,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 4,
         .weight = 77,
         .description = COMPOUND_STRING(
-            "When attacked, it defends itself by\n"
-            "closing the lid of its shell. It evolves\n"
-            "when bathed in an electric-like energy\n"
-            "along with Karrablast."),
+"When attacked, it defends itself by\n"
+"closing the lid of its shell. It evolves\n"
+"when bathed in an electric-like energy\n"
+"along with Karrablast."),
         .pokemonScale = 491,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -10759,12 +10366,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 14,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_TWIST,
         .backPic = gMonBackPic_Shelmet,
         .backPicSize = MON_COORDS_SIZE(64, 32),
@@ -10777,28 +10384,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_SLOW,
         SHADOW(0, -1, SHADOW_SIZE_S)
         FOOTPRINT(Shelmet)
-        OVERWORLD(
-            sPicTable_Shelmet,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Shelmet,
-            gShinyOverworldPalette_Shelmet
-        )
+        OVERWORLD(sPicTable_Shelmet,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Shelmet,
+gShinyOverworldPalette_Shelmet)
         .levelUpLearnset = sShelmetLevelUpLearnset,
         .teachableLearnset = sShelmetTeachableLearnset,
         .eggMoveLearnset = sShelmetEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_ACCELGOR, CONDITIONS({IF_TRADE_PARTNER_SPECIES, SPECIES_KARRABLAST})}),
     },
-
     [SPECIES_ACCELGOR] =
     {
-        .baseHP        = 80,
-        .baseAttack    = 70,
-        .baseDefense   = 40,
-        .baseSpeed     = 145,
-        .baseSpAttack  = 100,
+        .baseHP = 80,
+        .baseAttack = 70,
+        .baseDefense = 40,
+        .baseSpeed = 145,
+        .baseSpAttack = 100,
         .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_BUG),
         .catchRate = 75,
@@ -10818,10 +10422,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 8,
         .weight = 253,
         .description = COMPOUND_STRING(
-            "When its body dries out, it weakens. So, to\n"
-            "prevent dehydration, it wraps itself in\n"
-            "layers of thin membrane. It is very light\n"
-            "and fights with ninja-like movements."),
+"When its body dries out, it weakens. So, to\n"
+"prevent dehydration, it wraps itself in\n"
+"layers of thin membrane. It is very light\n"
+"and fights with ninja-like movements."),
         .pokemonScale = 366,
         .pokemonOffset = 9,
         .trainerScale = 257,
@@ -10830,9 +10434,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 56),
         .frontPicYOffset = 7,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 35),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(1, 35),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_H_JUMPS_V_STRETCH,
         .backPic = gMonBackPic_Accelgor,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -10845,28 +10449,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-14, 8, SHADOW_SIZE_S)
         FOOTPRINT(Accelgor)
-        OVERWORLD(
-            sPicTable_Accelgor,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Accelgor,
-            gShinyOverworldPalette_Accelgor
-        )
+        OVERWORLD(sPicTable_Accelgor,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Accelgor,
+gShinyOverworldPalette_Accelgor)
         .levelUpLearnset = sAccelgorLevelUpLearnset,
         .teachableLearnset = sAccelgorTeachableLearnset,
     },
-#endif //P_FAMILY_SHELMET
+#endif // P_FAMILY_SHELMET
 
 #if P_FAMILY_STUNFISK
     [SPECIES_STUNFISK] =
     {
-        .baseHP        = 109,
-        .baseAttack    = 66,
-        .baseDefense   = 84,
-        .baseSpeed     = 32,
-        .baseSpAttack  = 81,
+        .baseHP = 109,
+        .baseAttack = 66,
+        .baseDefense = 84,
+        .baseSpeed = 32,
+        .baseSpAttack = 81,
         .baseSpDefense = 99,
         .types = MON_TYPES(TYPE_GROUND, TYPE_ELECTRIC),
         .catchRate = 75,
@@ -10887,10 +10489,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 7,
         .weight = 110,
         .description = COMPOUND_STRING(
-            "It conceals itself in the mud of the\n"
-            "seashore. Then it waits. When prey touch\n"
-            "it, it delivers a jolt of electricity.\n"
-            "It smiles when transmitting electricity."),
+"It conceals itself in the mud of the\n"
+"seashore. Then it waits. When prey touch\n"
+"it, it delivers a jolt of electricity.\n"
+"It smiles when transmitting electricity."),
         .pokemonScale = 365,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -10899,9 +10501,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 48),
         .frontPicYOffset = 14,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 40),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 40),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Stunfisk,
         .backPicSize = MON_COORDS_SIZE(64, 24),
@@ -10914,29 +10516,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_SLOW,
         SHADOW(0, -1, SHADOW_SIZE_M)
         FOOTPRINT(Stunfisk)
-        OVERWORLD(
-            sPicTable_Stunfisk,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Stunfisk,
-            gShinyOverworldPalette_Stunfisk
-        )
+        OVERWORLD(sPicTable_Stunfisk,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Stunfisk,
+gShinyOverworldPalette_Stunfisk)
         .levelUpLearnset = sStunfiskLevelUpLearnset,
         .teachableLearnset = sStunfiskTeachableLearnset,
         .eggMoveLearnset = sStunfiskEggMoveLearnset,
         .formSpeciesIdTable = sStunfiskFormSpeciesIdTable,
     },
-
 #if P_GALARIAN_FORMS
+
     [SPECIES_STUNFISK_GALAR] =
     {
-        .baseHP        = 109,
-        .baseAttack    = 81,
-        .baseDefense   = 99,
-        .baseSpeed     = 32,
-        .baseSpAttack  = 66,
+        .baseHP = 109,
+        .baseAttack = 81,
+        .baseDefense = 99,
+        .baseSpeed = 32,
+        .baseSpAttack = 66,
         .baseSpDefense = 84,
         .types = MON_TYPES(TYPE_GROUND, TYPE_STEEL),
         .catchRate = 75,
@@ -10957,10 +10557,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 7,
         .weight = 205,
         .description = COMPOUND_STRING(
-            "Its conspicuous lips lure prey in\n"
-            "as it lies in wait in the mud. When\n"
-            "prey gets close, Stunfisk clamps its\n"
-            "jagged steel fins down on them."),
+"Its conspicuous lips lure prey in\n"
+"as it lies in wait in the mud. When\n"
+"prey gets close, Stunfisk clamps its\n"
+"jagged steel fins down on them."),
         .pokemonScale = 365,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -10969,11 +10569,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 40),
         .frontPicYOffset = 14,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_StunfiskGalar,
         .backPicSize = MON_COORDS_SIZE(64, 24),
         .backPicYOffset = 23,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_StunfiskGalar,
         .shinyPalette = gMonShinyPalette_StunfiskGalar,
         .iconSprite = gMonIcon_StunfiskGalar,
@@ -10981,15 +10579,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_SLOW,
         SHADOW(0, -1, SHADOW_SIZE_M)
         FOOTPRINT(Stunfisk)
-        OVERWORLD(
-            sPicTable_StunfiskGalar,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_StunfiskGalar,
-            gShinyOverworldPalette_StunfiskGalar
-        )
+        OVERWORLD(sPicTable_StunfiskGalar,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_StunfiskGalar,
+gShinyOverworldPalette_StunfiskGalar)
         .isGalarianForm = TRUE,
         .levelUpLearnset = sStunfiskGalarLevelUpLearnset,
         .teachableLearnset = sStunfiskGalarTeachableLearnset,
@@ -10997,16 +10593,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formSpeciesIdTable = sStunfiskFormSpeciesIdTable,
     },
 #endif //P_GALARIAN_FORMS
-#endif //P_FAMILY_STUNFISK
+
+#endif // P_FAMILY_STUNFISK
 
 #if P_FAMILY_MIENFOO
     [SPECIES_MIENFOO] =
     {
-        .baseHP        = 45,
-        .baseAttack    = 85,
-        .baseDefense   = 50,
-        .baseSpeed     = 65,
-        .baseSpAttack  = 55,
+        .baseHP = 45,
+        .baseAttack = 85,
+        .baseDefense = 50,
+        .baseSpeed = 65,
+        .baseSpAttack = 55,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_FIGHTING),
         .catchRate = 180,
@@ -11026,10 +10623,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 9,
         .weight = 200,
         .description = COMPOUND_STRING(
-            "They have mastered elegant combos.\n"
-            "As they concentrate, their battle moves\n"
-            "become swifter and more precise. What it\n"
-            "lacks in power, it makes up for in quantity."),
+"They have mastered elegant combos.\n"
+"As they concentrate, their battle moves\n"
+"become swifter and more precise. What it\n"
+"lacks in power, it makes up for in quantity."),
         .pokemonScale = 338,
         .pokemonOffset = 10,
         .trainerScale = 256,
@@ -11038,9 +10635,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 48),
         .frontPicYOffset = 11,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 20),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 20),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_H_VIBRATE,
         .backPic = gMonBackPic_Mienfoo,
         .backPicSize = MON_COORDS_SIZE(56, 40),
@@ -11053,28 +10650,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 2, SHADOW_SIZE_S)
         FOOTPRINT(Mienfoo)
-        OVERWORLD(
-            sPicTable_Mienfoo,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Mienfoo,
-            gShinyOverworldPalette_Mienfoo
-        )
+        OVERWORLD(sPicTable_Mienfoo,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Mienfoo,
+gShinyOverworldPalette_Mienfoo)
         .levelUpLearnset = sMienfooLevelUpLearnset,
         .teachableLearnset = sMienfooTeachableLearnset,
         .eggMoveLearnset = sMienfooEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 50, SPECIES_MIENSHAO}),
     },
-
     [SPECIES_MIENSHAO] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 125,
-        .baseDefense   = 60,
-        .baseSpeed     = 105,
-        .baseSpAttack  = 95,
+        .baseHP = 65,
+        .baseAttack = 125,
+        .baseDefense = 60,
+        .baseSpeed = 105,
+        .baseSpAttack = 95,
         .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_FIGHTING),
         .catchRate = 45,
@@ -11094,10 +10688,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 14,
         .weight = 355,
         .description = COMPOUND_STRING(
-            "They use the long fur on their arms as\n"
-            "a whip to strike their opponents. Its arm\n"
-            "attacks come with such rapidity that they\n"
-            "cannot even be seen."),
+"They use the long fur on their arms as\n"
+"a whip to strike their opponents. Its arm\n"
+"attacks come with such rapidity that they\n"
+"cannot even be seen."),
         .pokemonScale = 265,
         .pokemonOffset = 2,
         .trainerScale = 262,
@@ -11106,14 +10700,14 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 56),
         .frontPicYOffset = 4,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 50),
-        ),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 50),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Mienshao,
         .backPicSize = MON_COORDS_SIZE(56, 56),
@@ -11126,28 +10720,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 8, SHADOW_SIZE_M)
         FOOTPRINT(Mienshao)
-        OVERWORLD(
-            sPicTable_Mienshao,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Mienshao,
-            gShinyOverworldPalette_Mienshao
-        )
+        OVERWORLD(sPicTable_Mienshao,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Mienshao,
+gShinyOverworldPalette_Mienshao)
         .levelUpLearnset = sMienshaoLevelUpLearnset,
         .teachableLearnset = sMienshaoTeachableLearnset,
     },
-#endif //P_FAMILY_MIENFOO
+#endif // P_FAMILY_MIENFOO
 
 #if P_FAMILY_DRUDDIGON
     [SPECIES_DRUDDIGON] =
     {
-        .baseHP        = 77,
-        .baseAttack    = 120,
-        .baseDefense   = 90,
-        .baseSpeed     = 48,
-        .baseSpAttack  = 60,
+        .baseHP = 77,
+        .baseAttack = 120,
+        .baseDefense = 90,
+        .baseSpeed = 48,
+        .baseSpAttack = 60,
         .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_DRAGON),
         .catchRate = 45,
@@ -11168,10 +10760,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 16,
         .weight = 1390,
         .description = COMPOUND_STRING(
-            "It warms its body by absorbing sunlight\n"
-            "with its wings. When its body temperature\n"
-            "falls, it can no longer move. It uses its\n"
-            "sharp claws to catch prey."),
+"It warms its body by absorbing sunlight\n"
+"with its wings. When its body temperature\n"
+"falls, it can no longer move. It uses its\n"
+"sharp claws to catch prey."),
         .pokemonScale = 259,
         .pokemonOffset = 1,
         .trainerScale = 296,
@@ -11180,14 +10772,14 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 4,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 22),
-            ANIMCMD_FRAME(1, 22),
-            ANIMCMD_FRAME(0, 22),
-            ANIMCMD_FRAME(1, 22),
-            ANIMCMD_FRAME(0, 22),
-            ANIMCMD_FRAME(1, 22),
-            ANIMCMD_FRAME(0, 11),
-        ),
+ANIMCMD_FRAME(0, 22),
+ANIMCMD_FRAME(1, 22),
+ANIMCMD_FRAME(0, 22),
+ANIMCMD_FRAME(1, 22),
+ANIMCMD_FRAME(0, 22),
+ANIMCMD_FRAME(1, 22),
+ANIMCMD_FRAME(0, 11),
+),
         .frontAnimId = ANIM_BOUNCE_ROTATE_TO_SIDES_SMALL_SLOW,
         .backPic = gMonBackPic_Druddigon,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -11200,29 +10792,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(3, 9, SHADOW_SIZE_M)
         FOOTPRINT(Druddigon)
-        OVERWORLD(
-            sPicTable_Druddigon,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Druddigon,
-            gShinyOverworldPalette_Druddigon
-        )
+        OVERWORLD(sPicTable_Druddigon,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Druddigon,
+gShinyOverworldPalette_Druddigon)
         .levelUpLearnset = sDruddigonLevelUpLearnset,
         .teachableLearnset = sDruddigonTeachableLearnset,
         .eggMoveLearnset = sDruddigonEggMoveLearnset,
     },
-#endif //P_FAMILY_DRUDDIGON
+#endif // P_FAMILY_DRUDDIGON
 
 #if P_FAMILY_GOLETT
     [SPECIES_GOLETT] =
     {
-        .baseHP        = 59,
-        .baseAttack    = 74,
-        .baseDefense   = 50,
-        .baseSpeed     = 35,
-        .baseSpAttack  = 35,
+        .baseHP = 59,
+        .baseAttack = 74,
+        .baseDefense = 50,
+        .baseSpeed = 35,
+        .baseSpAttack = 35,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_GROUND, TYPE_GHOST),
         .catchRate = 190,
@@ -11244,10 +10834,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 10,
         .weight = 920,
         .description = COMPOUND_STRING(
-            "These Pokémon are thought to have\n"
-            "been created by the science of an\n"
-            "ancient and mysterious civilization.\n"
-            "It's been active for thousands of years."),
+"These Pokémon are thought to have\n"
+"been created by the science of an\n"
+"ancient and mysterious civilization.\n"
+"It's been active for thousands of years."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -11256,10 +10846,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 7,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 44),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 44),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_V_SHAKE,
         .backPic = gMonBackPic_Golett,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -11272,27 +10862,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 7, SHADOW_SIZE_M)
         FOOTPRINT(Golett)
-        OVERWORLD(
-            sPicTable_Golett,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Golett,
-            gShinyOverworldPalette_Golett
-        )
+        OVERWORLD(sPicTable_Golett,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Golett,
+gShinyOverworldPalette_Golett)
         .levelUpLearnset = sGolettLevelUpLearnset,
         .teachableLearnset = sGolettTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 43, SPECIES_GOLURK}),
     },
-
     [SPECIES_GOLURK] =
     {
-        .baseHP        = 89,
-        .baseAttack    = 124,
-        .baseDefense   = 80,
-        .baseSpeed     = 55,
-        .baseSpAttack  = 55,
+        .baseHP = 89,
+        .baseAttack = 124,
+        .baseDefense = 80,
+        .baseSpeed = 55,
+        .baseSpAttack = 55,
         .baseSpDefense = 80,
         .types = MON_TYPES(TYPE_GROUND, TYPE_GHOST),
         .catchRate = 90,
@@ -11314,10 +10901,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 28,
         .weight = 3300,
         .description = COMPOUND_STRING(
-            "Golurk were created to protect people\n"
-            "and Pokémon by an ancient civilisation.\n"
-            "Removing the seal on its chest makes its\n"
-            "internal energy go out of control."),
+"Golurk were created to protect people\n"
+"and Pokémon by an ancient civilisation.\n"
+"Removing the seal on its chest makes its\n"
+"internal energy go out of control."),
         .pokemonScale = 275,
         .pokemonOffset = 3,
         .trainerScale = 300,
@@ -11326,9 +10913,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 45),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(1, 45),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SHAKE_TWICE,
         .backPic = gMonBackPic_Golurk,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -11341,29 +10928,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 14, SHADOW_SIZE_L)
         FOOTPRINT(Golurk)
-        OVERWORLD(
-            sPicTable_Golurk,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Golurk,
-            gShinyOverworldPalette_Golurk
-        )
+        OVERWORLD(sPicTable_Golurk,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Golurk,
+gShinyOverworldPalette_Golurk)
         .levelUpLearnset = sGolurkLevelUpLearnset,
         .teachableLearnset = sGolurkTeachableLearnset,
         .formSpeciesIdTable = sGolurkFormSpeciesIdTable,
         .formChangeTable = sGolurkFormChangeTable,
     },
-
 #if P_GEN_9_MEGA_EVOLUTIONS
+
     [SPECIES_GOLURK_MEGA] =
     {
-        .baseHP        = 89,
-        .baseAttack    = 159,
-        .baseDefense   = 105,
-        .baseSpeed     = 55,
-        .baseSpAttack  = 70,
+        .baseHP = 89,
+        .baseAttack = 159,
+        .baseDefense = 105,
+        .baseSpeed = 55,
+        .baseSpAttack = 70,
         .baseSpDefense = 105,
         .types = MON_TYPES(TYPE_GROUND, TYPE_GHOST),
         .catchRate = 90,
@@ -11389,18 +10974,16 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 40,
         .weight = 3300,
         .description = COMPOUND_STRING(
-            "The energy within Golurk has been\n"
-            "stimulated by Mega Evolution.\n"
-            "The Pokémon could explode at any moment."),
+"The energy within Golurk has been\n"
+"stimulated by Mega Evolution.\n"
+"The Pokémon could explode at any moment."),
         .frontPic = gMonFrontPic_GolurkMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_GolurkMega,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 0,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_GolurkMega,
         .shinyPalette = gMonShinyPalette_GolurkMega,
         .iconSprite = gMonIcon_GolurkMega,
@@ -11415,16 +10998,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formChangeTable = sGolurkFormChangeTable,
     },
 #endif //P_GEN_9_MEGA_EVOLUTIONS
-#endif //P_FAMILY_GOLETT
+
+#endif // P_FAMILY_GOLETT
 
 #if P_FAMILY_PAWNIARD
     [SPECIES_PAWNIARD] =
     {
-        .baseHP        = 45,
-        .baseAttack    = 85,
-        .baseDefense   = 70,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 40,
+        .baseHP = 45,
+        .baseAttack = 85,
+        .baseDefense = 70,
+        .baseSpeed = 60,
+        .baseSpAttack = 40,
         .baseSpDefense = 40,
         .types = MON_TYPES(TYPE_DARK, TYPE_STEEL),
         .catchRate = 120,
@@ -11444,10 +11028,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 102,
         .description = COMPOUND_STRING(
-            "Ignoring their injuries, groups attack by\n"
-            "sinking the blades that cover their bodies\n"
-            "into their prey. If battling dulls them, it\n"
-            "sharpens them on stones by the river."),
+"Ignoring their injuries, groups attack by\n"
+"sinking the blades that cover their bodies\n"
+"into their prey. If battling dulls them, it\n"
+"sharpens them on stones by the river."),
         .pokemonScale = 432,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -11456,15 +11040,15 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 48),
         .frontPicYOffset = 10,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 25),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 25),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_H_VIBRATE,
         .backPic = gMonBackPic_Pawniard,
         .backPicSize = MON_COORDS_SIZE(64, 48),
@@ -11477,28 +11061,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(4, 4, SHADOW_SIZE_S)
         FOOTPRINT(Pawniard)
-        OVERWORLD(
-            sPicTable_Pawniard,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Pawniard,
-            gShinyOverworldPalette_Pawniard
-        )
+        OVERWORLD(sPicTable_Pawniard,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Pawniard,
+gShinyOverworldPalette_Pawniard)
         .levelUpLearnset = sPawniardLevelUpLearnset,
         .teachableLearnset = sPawniardTeachableLearnset,
         .eggMoveLearnset = sPawniardEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 52, SPECIES_BISHARP}),
     },
-
     [SPECIES_BISHARP] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 125,
-        .baseDefense   = 100,
-        .baseSpeed     = 70,
-        .baseSpAttack  = 60,
+        .baseHP = 65,
+        .baseAttack = 125,
+        .baseDefense = 100,
+        .baseSpeed = 70,
+        .baseSpAttack = 60,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_DARK, TYPE_STEEL),
         .catchRate = 45,
@@ -11519,10 +11100,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 16,
         .weight = 700,
         .description = COMPOUND_STRING(
-            "This pitiless Pokémon commands a group\n"
-            "of Pawniard to hound prey into immobility.\n"
-            "It battles to become the boss, but will be\n"
-            "driven from the group if it loses."),
+"This pitiless Pokémon commands a group\n"
+"of Pawniard to hound prey into immobility.\n"
+"It battles to become the boss, but will be\n"
+"driven from the group if it loses."),
         .pokemonScale = 259,
         .pokemonOffset = 1,
         .trainerScale = 296,
@@ -11531,9 +11112,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_H_STRETCH,
         .backPic = gMonBackPic_Bisharp,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -11546,30 +11127,28 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 14, SHADOW_SIZE_M)
         FOOTPRINT(Bisharp)
-        OVERWORLD(
-            sPicTable_Bisharp,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Bisharp,
-            gShinyOverworldPalette_Bisharp
-        )
+        OVERWORLD(sPicTable_Bisharp,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Bisharp,
+gShinyOverworldPalette_Bisharp)
         .levelUpLearnset = sBisharpLevelUpLearnset,
         .teachableLearnset = sBisharpTeachableLearnset,
     #if P_GEN_9_CROSS_EVOS
         .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_KINGAMBIT, CONDITIONS({IF_DEFEAT_X_WITH_ITEMS, SPECIES_BISHARP, ITEM_LEADERS_CREST, 3})}),
     #endif
     },
-
 #if P_GEN_9_CROSS_EVOS
+
     [SPECIES_KINGAMBIT] =
     {
-        .baseHP        = 100,
-        .baseAttack    = 135,
-        .baseDefense   = 120,
-        .baseSpeed     = 50,
-        .baseSpAttack  = 60,
+        .baseHP = 100,
+        .baseAttack = 135,
+        .baseDefense = 120,
+        .baseSpeed = 50,
+        .baseSpAttack = 60,
         .baseSpDefense = 85,
         .types = MON_TYPES(TYPE_DARK, TYPE_STEEL),
         .catchRate = 25,
@@ -11589,10 +11168,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 20,
         .weight = 1200,
         .description = COMPOUND_STRING(
-            "Though it commands a massive army\n"
-            "in battle, it's not skilled at\n"
-            "devising complex strategies. It just uses\n"
-            "brute strength to keep pushing."),
+"Though it commands a massive army\n"
+"in battle, it's not skilled at\n"
+"devising complex strategies. It just uses\n"
+"brute strength to keep pushing."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -11601,11 +11180,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Kingambit,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 0,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_Kingambit,
         .shinyPalette = gMonShinyPalette_Kingambit,
         .iconSprite = gMonIcon_Kingambit,
@@ -11613,29 +11190,28 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 14, SHADOW_SIZE_M)
         FOOTPRINT(Kingambit)
-        OVERWORLD(
-            sPicTable_Kingambit,
-            SIZE_64x64,
-            SHADOW_SIZE_L,
-            TRACKS_NONE,
-            sAnimTable_Following,
-            gOverworldPalette_Kingambit,
-            gShinyOverworldPalette_Kingambit
-        )
+        OVERWORLD(sPicTable_Kingambit,
+SIZE_64x64,
+SHADOW_SIZE_L,
+TRACKS_NONE,
+sAnimTable_Following,
+gOverworldPalette_Kingambit,
+gShinyOverworldPalette_Kingambit)
         .levelUpLearnset = sKingambitLevelUpLearnset,
         .teachableLearnset = sKingambitTeachableLearnset,
     },
 #endif //P_GEN_9_CROSS_EVOS
-#endif //P_FAMILY_PAWNIARD
+
+#endif // P_FAMILY_PAWNIARD
 
 #if P_FAMILY_BOUFFALANT
     [SPECIES_BOUFFALANT] =
     {
-        .baseHP        = 95,
-        .baseAttack    = 110,
-        .baseDefense   = 95,
-        .baseSpeed     = 55,
-        .baseSpAttack  = 40,
+        .baseHP = 95,
+        .baseAttack = 110,
+        .baseDefense = 95,
+        .baseSpeed = 55,
+        .baseSpAttack = 40,
         .baseSpDefense = 95,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 45,
@@ -11655,10 +11231,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 16,
         .weight = 946,
         .description = COMPOUND_STRING(
-            "Their fluffy fur absorbs damage, even\n"
-            "if they strike foes with a fierce headbutt.\n"
-            "Their headbutts have enough destructive\n"
-            "force to derail a train."),
+"Their fluffy fur absorbs damage, even\n"
+"if they strike foes with a fierce headbutt.\n"
+"Their headbutts have enough destructive\n"
+"force to derail a train."),
         .pokemonScale = 259,
         .pokemonOffset = 1,
         .trainerScale = 296,
@@ -11667,10 +11243,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 56),
         .frontPicYOffset = 4,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 28),
-            ANIMCMD_FRAME(1, 32),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 28),
+ANIMCMD_FRAME(1, 32),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE_SLOW,
         .backPic = gMonBackPic_Bouffalant,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -11683,29 +11259,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(8, 7, SHADOW_SIZE_M)
         FOOTPRINT(Bouffalant)
-        OVERWORLD(
-            sPicTable_Bouffalant,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Bouffalant,
-            gShinyOverworldPalette_Bouffalant
-        )
+        OVERWORLD(sPicTable_Bouffalant,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Bouffalant,
+gShinyOverworldPalette_Bouffalant)
         .levelUpLearnset = sBouffalantLevelUpLearnset,
         .teachableLearnset = sBouffalantTeachableLearnset,
         .eggMoveLearnset = sBouffalantEggMoveLearnset,
     },
-#endif //P_FAMILY_BOUFFALANT
+#endif // P_FAMILY_BOUFFALANT
 
 #if P_FAMILY_RUFFLET
     [SPECIES_RUFFLET] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 83,
-        .baseDefense   = 50,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 37,
+        .baseHP = 70,
+        .baseAttack = 83,
+        .baseDefense = 50,
+        .baseSpeed = 60,
+        .baseSpAttack = 37,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
         .catchRate = 190,
@@ -11725,10 +11299,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 105,
         .description = COMPOUND_STRING(
-            "With its sharp claws, this Pokémon pierces\n"
-            "its prey, and then it pecks at them.\n"
-            "Although it also consumes berries, it's a\n"
-            "carnivore at heart."),
+"With its sharp claws, this Pokémon pierces\n"
+"its prey, and then it pecks at them.\n"
+"Although it also consumes berries, it's a\n"
+"carnivore at heart."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -11737,12 +11311,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 48),
         .frontPicYOffset = 10,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 35),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 35),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Rufflet,
         .backPicSize = MON_COORDS_SIZE(48, 56),
@@ -11755,32 +11329,29 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 2, SHADOW_SIZE_S)
         FOOTPRINT(Rufflet)
-        OVERWORLD(
-            sPicTable_Rufflet,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Rufflet,
-            gShinyOverworldPalette_Rufflet
-        )
+        OVERWORLD(sPicTable_Rufflet,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Rufflet,
+gShinyOverworldPalette_Rufflet)
         .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sRuffletLevelUpLearnset,
         .teachableLearnset = sRuffletTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 54, SPECIES_BRAVIARY, CONDITIONS({IF_NOT_REGION, REGION_HISUI})}
-                            #if P_HISUIAN_FORMS
-                                ,{EVO_LEVEL, 54, SPECIES_BRAVIARY_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}
-                            #endif
-                            ),
+#if P_HISUIAN_FORMS
+,{EVO_LEVEL, 54, SPECIES_BRAVIARY_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}
+#endif
+),
     },
-
     [SPECIES_BRAVIARY] =
     {
-        .baseHP        = 100,
-        .baseAttack    = 123,
-        .baseDefense   = 75,
-        .baseSpeed     = 80,
-        .baseSpAttack  = 57,
+        .baseHP = 100,
+        .baseAttack = 123,
+        .baseDefense = 75,
+        .baseSpeed = 80,
+        .baseSpAttack = 57,
         .baseSpDefense = 75,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_FLYING),
         .catchRate = 60,
@@ -11800,10 +11371,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 15,
         .weight = 410,
         .description = COMPOUND_STRING(
-            "For the sake of its friends, this brave\n"
-            "warrior of the sky will not stop battling,\n"
-            "even if it is injured. One can carry a car\n"
-            "while flying."),
+"For the sake of its friends, this brave\n"
+"warrior of the sky will not stop battling,\n"
+"even if it is injured. One can carry a car\n"
+"while flying."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -11812,10 +11383,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .enemyMonElevation = 6,
         .backPic = gMonBackPic_Braviary,
@@ -11829,28 +11400,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 16, SHADOW_SIZE_M)
         FOOTPRINT(Braviary)
-        OVERWORLD(
-            sPicTable_Braviary,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Braviary,
-            gShinyOverworldPalette_Braviary
-        )
+        OVERWORLD(sPicTable_Braviary,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Braviary,
+gShinyOverworldPalette_Braviary)
         .levelUpLearnset = sBraviaryLevelUpLearnset,
         .teachableLearnset = sBraviaryTeachableLearnset,
         .formSpeciesIdTable = sBraviaryFormSpeciesIdTable,
     },
-
 #if P_HISUIAN_FORMS
+
     [SPECIES_BRAVIARY_HISUI] =
     {
-        .baseHP        = 110,
-        .baseAttack    = 83,
-        .baseDefense   = 70,
-        .baseSpeed     = 65,
-        .baseSpAttack  = 112,
+        .baseHP = 110,
+        .baseAttack = 83,
+        .baseDefense = 70,
+        .baseSpeed = 65,
+        .baseSpAttack = 112,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_PSYCHIC, TYPE_FLYING),
         .catchRate = 60,
@@ -11870,9 +11439,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 17,
         .weight = 434,
         .description = COMPOUND_STRING(
-            "Screaming a bloodcurdling battle\n"
-            "cry, this huge and ferocious bird\n"
-            "Pokémon goes out on the hunt."),
+"Screaming a bloodcurdling battle\n"
+"cry, this huge and ferocious bird\n"
+"Pokémon goes out on the hunt."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -11881,12 +11450,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .enemyMonElevation = 3,
         .backPic = gMonBackPic_BraviaryHisui,
         .backPicSize = MON_COORDS_SIZE(64, 56),
         .backPicYOffset = 7,
-        //.backAnimId = BACK_ANIM_NONE,
         .palette = gMonPalette_BraviaryHisui,
         .shinyPalette = gMonShinyPalette_BraviaryHisui,
         .iconSprite = gMonIcon_BraviaryHisui,
@@ -11894,31 +11461,30 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 14, SHADOW_SIZE_M)
         FOOTPRINT(Braviary)
-        OVERWORLD(
-            sPicTable_BraviaryHisui,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_BraviaryHisui,
-            gShinyOverworldPalette_BraviaryHisui
-        )
+        OVERWORLD(sPicTable_BraviaryHisui,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_BraviaryHisui,
+gShinyOverworldPalette_BraviaryHisui)
         .isHisuianForm = TRUE,
         .levelUpLearnset = sBraviaryHisuiLevelUpLearnset,
         .teachableLearnset = sBraviaryHisuiTeachableLearnset,
         .formSpeciesIdTable = sBraviaryFormSpeciesIdTable,
     },
 #endif //P_HISUIAN_FORMS
-#endif //P_FAMILY_RUFFLET
+
+#endif // P_FAMILY_RUFFLET
 
 #if P_FAMILY_VULLABY
     [SPECIES_VULLABY] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 55,
-        .baseDefense   = 75,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 45,
+        .baseHP = 70,
+        .baseAttack = 55,
+        .baseDefense = 75,
+        .baseSpeed = 60,
+        .baseSpAttack = 45,
         .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_DARK, TYPE_FLYING),
         .catchRate = 190,
@@ -11938,10 +11504,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 90,
         .description = COMPOUND_STRING(
-            "It can't fly yet and must wait until its\n"
-            "wings have developed more. They guard\n"
-            "their posteriors with bones that were\n"
-            "gathered by Mandibuzz."),
+"It can't fly yet and must wait until its\n"
+"wings have developed more. They guard\n"
+"their posteriors with bones that were\n"
+"gathered by Mandibuzz."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -11950,10 +11516,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 5,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Vullaby,
         .backPicSize = MON_COORDS_SIZE(64, 48),
@@ -11966,29 +11532,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 9, SHADOW_SIZE_M)
         FOOTPRINT(Vullaby)
-        OVERWORLD(
-            sPicTable_Vullaby,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Vullaby,
-            gShinyOverworldPalette_Vullaby
-        )
+        OVERWORLD(sPicTable_Vullaby,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Vullaby,
+gShinyOverworldPalette_Vullaby)
         .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sVullabyLevelUpLearnset,
         .teachableLearnset = sVullabyTeachableLearnset,
         .eggMoveLearnset = sVullabyEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 54, SPECIES_MANDIBUZZ}),
     },
-
     [SPECIES_MANDIBUZZ] =
     {
-        .baseHP        = 110,
-        .baseAttack    = 65,
-        .baseDefense   = 105,
-        .baseSpeed     = 80,
-        .baseSpAttack  = 55,
+        .baseHP = 110,
+        .baseAttack = 65,
+        .baseDefense = 105,
+        .baseSpeed = 80,
+        .baseSpAttack = 55,
         .baseSpDefense = 95,
         .types = MON_TYPES(TYPE_DARK, TYPE_FLYING),
         .catchRate = 60,
@@ -12008,10 +11571,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 12,
         .weight = 395,
         .description = COMPOUND_STRING(
-            "They adorn themselves beautifully with\n"
-            "bones. This is supposedly an effort to\n"
-            "attract males, but no male Mandibuzz\n"
-            "have ever been found."),
+"They adorn themselves beautifully with\n"
+"bones. This is supposedly an effort to\n"
+"attract males, but no male Mandibuzz\n"
+"have ever been found."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -12020,10 +11583,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 64),
         .frontPicYOffset = 1,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 1),
-            ANIMCMD_FRAME(1, 36),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_FRAME(1, 36),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Mandibuzz,
         .backPicSize = MON_COORDS_SIZE(64, 48),
@@ -12036,28 +11599,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 12, SHADOW_SIZE_M)
         FOOTPRINT(Mandibuzz)
-        OVERWORLD(
-            sPicTable_Mandibuzz,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Mandibuzz,
-            gShinyOverworldPalette_Mandibuzz
-        )
+        OVERWORLD(sPicTable_Mandibuzz,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Mandibuzz,
+gShinyOverworldPalette_Mandibuzz)
         .levelUpLearnset = sMandibuzzLevelUpLearnset,
         .teachableLearnset = sMandibuzzTeachableLearnset,
     },
-#endif //P_FAMILY_VULLABY
+#endif // P_FAMILY_VULLABY
 
 #if P_FAMILY_HEATMOR
     [SPECIES_HEATMOR] =
     {
-        .baseHP        = 85,
-        .baseAttack    = 97,
-        .baseDefense   = 66,
-        .baseSpeed     = 65,
-        .baseSpAttack  = 105,
+        .baseHP = 85,
+        .baseAttack = 97,
+        .baseDefense = 66,
+        .baseSpeed = 65,
+        .baseSpAttack = 105,
         .baseSpDefense = 66,
         .types = MON_TYPES(TYPE_FIRE),
         .catchRate = 90,
@@ -12077,10 +11638,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 14,
         .weight = 580,
         .description = COMPOUND_STRING(
-            "It draws in air through its tail,\n"
-            "transforms it into fire, and uses it like\n"
-            "a tongue. They burn through Durant's steel\n"
-            "bodies and consume their insides."),
+"It draws in air through its tail,\n"
+"transforms it into fire, and uses it like\n"
+"a tongue. They burn through Durant's steel\n"
+"bodies and consume their insides."),
         .pokemonScale = 265,
         .pokemonOffset = 2,
         .trainerScale = 262,
@@ -12089,9 +11650,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 56),
         .frontPicYOffset = 6,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 40),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(1, 40),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_H_SHAKE,
         .backPic = gMonBackPic_Heatmor,
         .backPicSize = MON_COORDS_SIZE(64, 24),
@@ -12104,29 +11665,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(5, 7, SHADOW_SIZE_L)
         FOOTPRINT(Heatmor)
-        OVERWORLD(
-            sPicTable_Heatmor,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Heatmor,
-            gShinyOverworldPalette_Heatmor
-        )
+        OVERWORLD(sPicTable_Heatmor,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Heatmor,
+gShinyOverworldPalette_Heatmor)
         .levelUpLearnset = sHeatmorLevelUpLearnset,
         .teachableLearnset = sHeatmorTeachableLearnset,
         .eggMoveLearnset = sHeatmorEggMoveLearnset,
     },
-#endif //P_FAMILY_HEATMOR
+#endif // P_FAMILY_HEATMOR
 
 #if P_FAMILY_DURANT
     [SPECIES_DURANT] =
     {
-        .baseHP        = 58,
-        .baseAttack    = 109,
-        .baseDefense   = 112,
-        .baseSpeed     = 109,
-        .baseSpAttack  = 48,
+        .baseHP = 58,
+        .baseAttack = 109,
+        .baseDefense = 112,
+        .baseSpeed = 109,
+        .baseSpAttack = 48,
         .baseSpDefense = 48,
         .types = MON_TYPES(TYPE_BUG, TYPE_STEEL),
         .catchRate = 90,
@@ -12146,10 +11705,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 3,
         .weight = 330,
         .description = COMPOUND_STRING(
-            "Durant dig nests in mountains.\n"
-            "Individuals each play different roles in\n"
-            "driving Heatmor, their natural predator,\n"
-            "away from their colony."),
+"Durant dig nests in mountains.\n"
+"Individuals each play different roles in\n"
+"driving Heatmor, their natural predator,\n"
+"away from their colony."),
         .pokemonScale = 530,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -12158,24 +11717,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 32),
         .frontPicYOffset = 17,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-        ),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+),
         .frontAnimId = ANIM_RAPID_H_HOPS,
         .backPic = gMonBackPic_Durant,
         .backPicSize = MON_COORDS_SIZE(64, 32),
@@ -12188,29 +11747,27 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_FAST,
         SHADOW(0, -3, SHADOW_SIZE_L)
         FOOTPRINT(Durant)
-        OVERWORLD(
-            sPicTable_Durant,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Durant,
-            gShinyOverworldPalette_Durant
-        )
+        OVERWORLD(sPicTable_Durant,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Durant,
+gShinyOverworldPalette_Durant)
         .levelUpLearnset = sDurantLevelUpLearnset,
         .teachableLearnset = sDurantTeachableLearnset,
         .eggMoveLearnset = sDurantEggMoveLearnset,
     },
-#endif //P_FAMILY_DURANT
+#endif // P_FAMILY_DURANT
 
 #if P_FAMILY_DEINO
     [SPECIES_DEINO] =
     {
-        .baseHP        = 52,
-        .baseAttack    = 65,
-        .baseDefense   = 50,
-        .baseSpeed     = 38,
-        .baseSpAttack  = 45,
+        .baseHP = 52,
+        .baseAttack = 65,
+        .baseDefense = 50,
+        .baseSpeed = 38,
+        .baseSpAttack = 45,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_DARK, TYPE_DRAGON),
         .catchRate = 45,
@@ -12230,10 +11787,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 8,
         .weight = 173,
         .description = COMPOUND_STRING(
-            "Lacking sight, it's unaware of its\n"
-            "surroundings, so it bumps into things and\n"
-            "eats anything that moves. Approaching\n"
-            "it carelessly is dangerous."),
+"Lacking sight, it's unaware of its\n"
+"surroundings, so it bumps into things and\n"
+"eats anything that moves. Approaching\n"
+"it carelessly is dangerous."),
         .pokemonScale = 366,
         .pokemonOffset = 12,
         .trainerScale = 257,
@@ -12242,10 +11799,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 48),
         .frontPicYOffset = 10,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Deino,
         .backPicSize = MON_COORDS_SIZE(48, 48),
@@ -12258,28 +11815,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 3, SHADOW_SIZE_S)
         FOOTPRINT(Deino)
-        OVERWORLD(
-            sPicTable_Deino,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Deino,
-            gShinyOverworldPalette_Deino
-        )
+        OVERWORLD(sPicTable_Deino,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Deino,
+gShinyOverworldPalette_Deino)
         .levelUpLearnset = sDeinoLevelUpLearnset,
         .teachableLearnset = sDeinoTeachableLearnset,
         .eggMoveLearnset = sDeinoEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 50, SPECIES_ZWEILOUS}),
     },
-
     [SPECIES_ZWEILOUS] =
     {
-        .baseHP        = 72,
-        .baseAttack    = 85,
-        .baseDefense   = 70,
-        .baseSpeed     = 58,
-        .baseSpAttack  = 65,
+        .baseHP = 72,
+        .baseAttack = 85,
+        .baseDefense = 70,
+        .baseSpeed = 58,
+        .baseSpAttack = 65,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_DARK, TYPE_DRAGON),
         .catchRate = 45,
@@ -12299,10 +11853,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 14,
         .weight = 500,
         .description = COMPOUND_STRING(
-            "After it has eaten up all the food in its\n"
-            "territory, it moves on to another area.\n"
-            "Whichever head eats more than the other\n"
-            "gets to be the leader."),
+"After it has eaten up all the food in its\n"
+"territory, it moves on to another area.\n"
+"Whichever head eats more than the other\n"
+"gets to be the leader."),
         .pokemonScale = 265,
         .pokemonOffset = 3,
         .trainerScale = 262,
@@ -12311,9 +11865,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 56),
         .frontPicYOffset = 6,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 32),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 32),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_H_STRETCH,
         .backPic = gMonBackPic_Zweilous,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -12326,27 +11880,24 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 6, SHADOW_SIZE_L)
         FOOTPRINT(Zweilous)
-        OVERWORLD(
-            sPicTable_Zweilous,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Zweilous,
-            gShinyOverworldPalette_Zweilous
-        )
+        OVERWORLD(sPicTable_Zweilous,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Zweilous,
+gShinyOverworldPalette_Zweilous)
         .levelUpLearnset = sZweilousLevelUpLearnset,
         .teachableLearnset = sZweilousTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 64, SPECIES_HYDREIGON}),
     },
-
     [SPECIES_HYDREIGON] =
     {
-        .baseHP        = 92,
-        .baseAttack    = 105,
-        .baseDefense   = 90,
-        .baseSpeed     = 98,
-        .baseSpAttack  = 125,
+        .baseHP = 92,
+        .baseAttack = 105,
+        .baseDefense = 90,
+        .baseSpeed = 98,
+        .baseSpAttack = 125,
         .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_DARK, TYPE_DRAGON),
         .catchRate = 45,
@@ -12366,10 +11917,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 18,
         .weight = 1600,
         .description = COMPOUND_STRING(
-            "This brutal Pokémon travels the skies on\n"
-            "its six wings. The heads on their arms do\n"
-            "not have brains. They use all three heads\n"
-            "to consume and destroy everything."),
+"This brutal Pokémon travels the skies on\n"
+"its six wings. The heads on their arms do\n"
+"not have brains. They use all three heads\n"
+"to consume and destroy everything."),
         .pokemonScale = 267,
         .pokemonOffset = 2,
         .trainerScale = 286,
@@ -12378,15 +11929,15 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 12),
-            ANIMCMD_FRAME(0, 12),
-            ANIMCMD_FRAME(1, 12),
-            ANIMCMD_FRAME(0, 30),
-            ANIMCMD_FRAME(1, 12),
-            ANIMCMD_FRAME(0, 12),
-            ANIMCMD_FRAME(1, 12),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(1, 12),
+ANIMCMD_FRAME(0, 12),
+ANIMCMD_FRAME(1, 12),
+ANIMCMD_FRAME(0, 30),
+ANIMCMD_FRAME(1, 12),
+ANIMCMD_FRAME(0, 12),
+ANIMCMD_FRAME(1, 12),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_RISING_WOBBLE,
         .enemyMonElevation = 3,
         .backPic = gMonBackPic_Hydreigon,
@@ -12400,28 +11951,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 16, SHADOW_SIZE_M)
         FOOTPRINT(Hydreigon)
-        OVERWORLD(
-            sPicTable_Hydreigon,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Hydreigon,
-            gShinyOverworldPalette_Hydreigon
-        )
+        OVERWORLD(sPicTable_Hydreigon,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Hydreigon,
+gShinyOverworldPalette_Hydreigon)
         .levelUpLearnset = sHydreigonLevelUpLearnset,
         .teachableLearnset = sHydreigonTeachableLearnset,
     },
-#endif //P_FAMILY_DEINO
+#endif // P_FAMILY_DEINO
 
 #if P_FAMILY_LARVESTA
     [SPECIES_LARVESTA] =
     {
-        .baseHP        = 55,
-        .baseAttack    = 85,
-        .baseDefense   = 55,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 50,
+        .baseHP = 55,
+        .baseAttack = 85,
+        .baseDefense = 55,
+        .baseSpeed = 60,
+        .baseSpAttack = 50,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_BUG, TYPE_FIRE),
         .catchRate = 45,
@@ -12441,10 +11990,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 11,
         .weight = 288,
         .description = COMPOUND_STRING(
-            "This Pokémon was believed to have\n"
-            "been born from the sun. It spews fire from\n"
-            "its horns and encases itself in a cocoon\n"
-            "of fire when it evolves."),
+"This Pokémon was believed to have\n"
+"been born from the sun. It spews fire from\n"
+"its horns and encases itself in a cocoon\n"
+"of fire when it evolves."),
         .pokemonScale = 320,
         .pokemonOffset = 10,
         .trainerScale = 256,
@@ -12453,18 +12002,18 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(40, 48),
         .frontPicYOffset = 13,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_GLOW_ORANGE,
         .backPic = gMonBackPic_Larvesta,
         .backPicSize = MON_COORDS_SIZE(64, 48),
@@ -12477,28 +12026,25 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 0, SHADOW_SIZE_S)
         FOOTPRINT(Larvesta)
-        OVERWORLD(
-            sPicTable_Larvesta,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Larvesta,
-            gShinyOverworldPalette_Larvesta
-        )
+        OVERWORLD(sPicTable_Larvesta,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Larvesta,
+gShinyOverworldPalette_Larvesta)
         .levelUpLearnset = sLarvestaLevelUpLearnset,
         .teachableLearnset = sLarvestaTeachableLearnset,
         .eggMoveLearnset = sLarvestaEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 59, SPECIES_VOLCARONA}),
     },
-
     [SPECIES_VOLCARONA] =
     {
-        .baseHP        = 85,
-        .baseAttack    = 60,
-        .baseDefense   = 65,
-        .baseSpeed     = 100,
-        .baseSpAttack  = 135,
+        .baseHP = 85,
+        .baseAttack = 60,
+        .baseDefense = 65,
+        .baseSpeed = 100,
+        .baseSpAttack = 135,
         .baseSpDefense = 105,
         .types = MON_TYPES(TYPE_BUG, TYPE_FIRE),
         .catchRate = 15,
@@ -12520,10 +12066,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 16,
         .weight = 460,
         .description = COMPOUND_STRING(
-            "When volcanic ash darkened the\n"
-            "atmosphere, it appeared and saved Pokémon\n"
-            "from freezing, Volcarona's fire provided a\n"
-            "replacement for the sun."),
+"When volcanic ash darkened the\n"
+"atmosphere, it appeared and saved Pokémon\n"
+"from freezing, Volcarona's fire provided a\n"
+"replacement for the sun."),
         .pokemonScale = 259,
         .pokemonOffset = 1,
         .trainerScale = 296,
@@ -12532,11 +12078,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 56),
         .frontPicYOffset = 4,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 25),
-            ANIMCMD_FRAME(0, 25),
-            ANIMCMD_FRAME(1, 25),
-            ANIMCMD_FRAME(0, 25),
-        ),
+ANIMCMD_FRAME(1, 25),
+ANIMCMD_FRAME(0, 25),
+ANIMCMD_FRAME(1, 25),
+ANIMCMD_FRAME(0, 25),
+),
         .frontAnimId = ANIM_V_SLIDE_WOBBLE,
         .enemyMonElevation = 6,
         .backPic = gMonBackPic_Volcarona,
@@ -12550,28 +12096,26 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-4, 14, SHADOW_SIZE_M)
         FOOTPRINT(Volcarona)
-        OVERWORLD(
-            sPicTable_Volcarona,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Volcarona,
-            gShinyOverworldPalette_Volcarona
-        )
+        OVERWORLD(sPicTable_Volcarona,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Volcarona,
+gShinyOverworldPalette_Volcarona)
         .levelUpLearnset = sVolcaronaLevelUpLearnset,
         .teachableLearnset = sVolcaronaTeachableLearnset,
     },
-#endif //P_FAMILY_LARVESTA
+#endif // P_FAMILY_LARVESTA
 
 #if P_FAMILY_COBALION
     [SPECIES_COBALION] =
     {
-        .baseHP        = 91,
-        .baseAttack    = 90,
-        .baseDefense   = 129,
-        .baseSpeed     = 108,
-        .baseSpAttack  = 90,
+        .baseHP = 91,
+        .baseAttack = 90,
+        .baseDefense = 129,
+        .baseSpeed = 108,
+        .baseSpAttack = 90,
         .baseSpDefense = 72,
         .types = MON_TYPES(TYPE_STEEL, TYPE_FIGHTING),
         .catchRate = 3,
@@ -12591,10 +12135,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 21,
         .weight = 2500,
         .description = COMPOUND_STRING(
-            "It has a body and heart of steel. This\n"
-            "legendary Pokémon battled against humans\n"
-            "to protect Pokémon. Its personality\n"
-            "is calm and composed."),
+"It has a body and heart of steel. This\n"
+"legendary Pokémon battled against humans\n"
+"to protect Pokémon. Its personality\n"
+"is calm and composed."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 365,
@@ -12603,10 +12147,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 1),
-            ANIMCMD_FRAME(1, 36),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_FRAME(1, 36),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Cobalion,
         .backPicSize = MON_COORDS_SIZE(48, 64),
@@ -12619,30 +12163,28 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(2, 14, SHADOW_SIZE_M)
         FOOTPRINT(Cobalion)
-        OVERWORLD(
-            sPicTable_Cobalion,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Cobalion,
-            gShinyOverworldPalette_Cobalion
-        )
+        OVERWORLD(sPicTable_Cobalion,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Cobalion,
+gShinyOverworldPalette_Cobalion)
         .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sCobalionLevelUpLearnset,
         .teachableLearnset = sCobalionTeachableLearnset,
     },
-#endif //P_FAMILY_COBALION
+#endif // P_FAMILY_COBALION
 
 #if P_FAMILY_TERRAKION
     [SPECIES_TERRAKION] =
     {
-        .baseHP        = 91,
-        .baseAttack    = 129,
-        .baseDefense   = 90,
-        .baseSpeed     = 108,
-        .baseSpAttack  = 72,
+        .baseHP = 91,
+        .baseAttack = 129,
+        .baseDefense = 90,
+        .baseSpeed = 108,
+        .baseSpAttack = 72,
         .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_ROCK, TYPE_FIGHTING),
         .catchRate = 3,
@@ -12662,10 +12204,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 19,
         .weight = 2600,
         .description = COMPOUND_STRING(
-            "Spoken of in legend, this Pokémon used\n"
-            "its phenomenal power to destroy a castle\n"
-            "in its effort to protect Pokémon that had\n"
-            "lost their homes in a war among humans."),
+"Spoken of in legend, this Pokémon used\n"
+"its phenomenal power to destroy a castle\n"
+"in its effort to protect Pokémon that had\n"
+"lost their homes in a war among humans."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 336,
@@ -12674,14 +12216,14 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 56),
         .frontPicYOffset = 5,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 20),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 20),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_V_SHAKE_TWICE,
         .backPic = gMonBackPic_Terrakion,
         .backPicSize = MON_COORDS_SIZE(64, 48),
@@ -12694,30 +12236,28 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(3, 6, SHADOW_SIZE_L)
         FOOTPRINT(Terrakion)
-        OVERWORLD(
-            sPicTable_Terrakion,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Terrakion,
-            gShinyOverworldPalette_Terrakion
-        )
+        OVERWORLD(sPicTable_Terrakion,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Terrakion,
+gShinyOverworldPalette_Terrakion)
         .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sTerrakionLevelUpLearnset,
         .teachableLearnset = sTerrakionTeachableLearnset,
     },
-#endif //P_FAMILY_TERRAKION
+#endif // P_FAMILY_TERRAKION
 
 #if P_FAMILY_VIRIZION
     [SPECIES_VIRIZION] =
     {
-        .baseHP        = 91,
-        .baseAttack    = 90,
-        .baseDefense   = 72,
-        .baseSpeed     = 108,
-        .baseSpAttack  = 90,
+        .baseHP = 91,
+        .baseAttack = 90,
+        .baseDefense = 72,
+        .baseSpeed = 108,
+        .baseSpAttack = 90,
         .baseSpDefense = 129,
         .types = MON_TYPES(TYPE_GRASS, TYPE_FIGHTING),
         .catchRate = 3,
@@ -12737,10 +12277,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 20,
         .weight = 2000,
         .description = COMPOUND_STRING(
-            "Its head sprouts horns as sharp as blades.\n"
-            "Legends say this Pokémon used\n"
-            "whirlwind-like movements to confound\n"
-            "and swiftly cut its opponents."),
+"Its head sprouts horns as sharp as blades.\n"
+"Legends say this Pokémon used\n"
+"whirlwind-like movements to confound\n"
+"and swiftly cut its opponents."),
         .pokemonScale = 261,
         .pokemonOffset = 1,
         .trainerScale = 344,
@@ -12749,9 +12289,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(48, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .backPic = gMonBackPic_Virizion,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -12764,30 +12304,28 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 12, SHADOW_SIZE_M)
         FOOTPRINT(Virizion)
-        OVERWORLD(
-            sPicTable_Virizion,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Virizion,
-            gShinyOverworldPalette_Virizion
-        )
+        OVERWORLD(sPicTable_Virizion,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Virizion,
+gShinyOverworldPalette_Virizion)
         .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sVirizionLevelUpLearnset,
         .teachableLearnset = sVirizionTeachableLearnset,
     },
-#endif //P_FAMILY_VIRIZION
+#endif // P_FAMILY_VIRIZION
 
 #if P_FAMILY_TORNADUS
     [SPECIES_TORNADUS_INCARNATE] =
     {
-        .baseHP        = 79,
-        .baseAttack    = 115,
-        .baseDefense   = 70,
-        .baseSpeed     = 111,
-        .baseSpAttack  = 125,
+        .baseHP = 79,
+        .baseAttack = 115,
+        .baseDefense = 70,
+        .baseSpeed = 111,
+        .baseSpAttack = 125,
         .baseSpDefense = 80,
         .types = MON_TYPES(TYPE_FLYING),
         .catchRate = 3,
@@ -12807,10 +12345,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 15,
         .weight = 630,
         .description = COMPOUND_STRING(
-            "Tornadus expels massive energy from\n"
-            "its tail, causing severe storms.\n"
-            "Its power can blow entire houses away.\n"
-            "It zooms through the sky at 200 mph."),
+"Tornadus expels massive energy from\n"
+"its tail, causing severe storms.\n"
+"Its power can blow entire houses away.\n"
+"It zooms through the sky at 200 mph."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -12819,29 +12357,29 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-        ),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+),
         .frontAnimId = ANIM_FIGURE_8,
         .enemyMonElevation = 7,
         .backPic = gMonBackPic_TornadusIncarnate,
@@ -12855,15 +12393,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(2, 17, SHADOW_SIZE_M)
         FOOTPRINT(Tornadus)
-        OVERWORLD(
-            sPicTable_TornadusIncarnate,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_TornadusIncarnate,
-            gShinyOverworldPalette_TornadusIncarnate
-        )
+        OVERWORLD(sPicTable_TornadusIncarnate,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_TornadusIncarnate,
+gShinyOverworldPalette_TornadusIncarnate)
         .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sTornadusLevelUpLearnset,
@@ -12871,14 +12407,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formSpeciesIdTable = sTornadusFormSpeciesIdTable,
         .formChangeTable = sTornadusFormChangeTable,
     },
-
     [SPECIES_TORNADUS_THERIAN] =
     {
-        .baseHP        = 79,
-        .baseAttack    = 100,
-        .baseDefense   = 80,
-        .baseSpeed     = 121,
-        .baseSpAttack  = 110,
+        .baseHP = 79,
+        .baseAttack = 100,
+        .baseDefense = 80,
+        .baseSpeed = 121,
+        .baseSpAttack = 110,
         .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_FLYING),
         .catchRate = 3,
@@ -12898,10 +12433,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 14,
         .weight = 630,
         .description = COMPOUND_STRING(
-            "An example of what is known as a\n"
-            "“form change”. Tornadus has been\n"
-            "sighted crossing the ocean while in this\n"
-            "form."),
+"An example of what is known as a\n"
+"“form change”. Tornadus has been\n"
+"sighted crossing the ocean while in this\n"
+"form."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -12910,12 +12445,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 35),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+ANIMCMD_FRAME(1, 35),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_TornadusTherian,
         .backPicSize = MON_COORDS_SIZE(56, 64),
@@ -12928,15 +12463,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-5, 12, SHADOW_SIZE_L)
         FOOTPRINT(Tornadus)
-        OVERWORLD(
-            sPicTable_TornadusTherian,
-            SIZE_64x64,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_TornadusTherian,
-            gShinyOverworldPalette_TornadusTherian
-        )
+        OVERWORLD(sPicTable_TornadusTherian,
+SIZE_64x64,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_TornadusTherian,
+gShinyOverworldPalette_TornadusTherian)
         .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sTornadusLevelUpLearnset,
@@ -12944,16 +12477,16 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formSpeciesIdTable = sTornadusFormSpeciesIdTable,
         .formChangeTable = sTornadusFormChangeTable,
     },
-#endif //P_FAMILY_TORNADUS
+#endif // P_FAMILY_TORNADUS
 
 #if P_FAMILY_THUNDURUS
     [SPECIES_THUNDURUS_INCARNATE] =
     {
-        .baseHP        = 79,
-        .baseAttack    = 115,
-        .baseDefense   = 70,
-        .baseSpeed     = 111,
-        .baseSpAttack  = 125,
+        .baseHP = 79,
+        .baseAttack = 115,
+        .baseDefense = 70,
+        .baseSpeed = 111,
+        .baseSpAttack = 125,
         .baseSpDefense = 80,
         .types = MON_TYPES(TYPE_ELECTRIC, TYPE_FLYING),
         .catchRate = 3,
@@ -12973,10 +12506,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 15,
         .weight = 610,
         .description = COMPOUND_STRING(
-            "The spikes on its tail discharge immense\n"
-            "bolts of lightning. Countless charred\n"
-            "remains mar the landscape of places\n"
-            "through which Thundurus has passed."),
+"The spikes on its tail discharge immense\n"
+"bolts of lightning. Countless charred\n"
+"remains mar the landscape of places\n"
+"through which Thundurus has passed."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -12985,29 +12518,29 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-        ),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+),
         .frontAnimId = ANIM_FIGURE_8,
         .enemyMonElevation = 7,
         .backPic = gMonBackPic_ThundurusIncarnate,
@@ -13021,15 +12554,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(2, 17, SHADOW_SIZE_M)
         FOOTPRINT(Thundurus)
-        OVERWORLD(
-            sPicTable_ThundurusIncarnate,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_ThundurusIncarnate,
-            gShinyOverworldPalette_ThundurusIncarnate
-        )
+        OVERWORLD(sPicTable_ThundurusIncarnate,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_ThundurusIncarnate,
+gShinyOverworldPalette_ThundurusIncarnate)
         .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sThundurusLevelUpLearnset,
@@ -13037,14 +12568,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formSpeciesIdTable = sThundurusFormSpeciesIdTable,
         .formChangeTable = sThundurusFormChangeTable,
     },
-
     [SPECIES_THUNDURUS_THERIAN] =
     {
-        .baseHP        = 79,
-        .baseAttack    = 105,
-        .baseDefense   = 70,
-        .baseSpeed     = 101,
-        .baseSpAttack  = 145,
+        .baseHP = 79,
+        .baseAttack = 105,
+        .baseDefense = 70,
+        .baseSpeed = 101,
+        .baseSpAttack = 145,
         .baseSpDefense = 80,
         .types = MON_TYPES(TYPE_ELECTRIC, TYPE_FLYING),
         .catchRate = 3,
@@ -13064,10 +12594,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 30,
         .weight = 610,
         .description = COMPOUND_STRING(
-            "It pulverizes foes into nothingness\n"
-            "with showers of devastatingly\n"
-            "powerful lightning bolts launched\n"
-            "from the string of orbs on its tail."),
+"It pulverizes foes into nothingness\n"
+"with showers of devastatingly\n"
+"powerful lightning bolts launched\n"
+"from the string of orbs on its tail."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -13076,23 +12606,23 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-            ANIMCMD_FRAME(1, 5),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+ANIMCMD_FRAME(1, 5),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_RISING_WOBBLE,
         .enemyMonElevation = 7,
         .backPic = gMonBackPic_ThundurusTherian,
@@ -13106,15 +12636,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(5, 16, SHADOW_SIZE_M)
         FOOTPRINT(Thundurus)
-        OVERWORLD(
-            sPicTable_ThundurusTherian,
-            SIZE_64x64,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_ThundurusTherian,
-            gShinyOverworldPalette_ThundurusTherian
-        )
+        OVERWORLD(sPicTable_ThundurusTherian,
+SIZE_64x64,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_ThundurusTherian,
+gShinyOverworldPalette_ThundurusTherian)
         .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sThundurusLevelUpLearnset,
@@ -13122,16 +12650,16 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formSpeciesIdTable = sThundurusFormSpeciesIdTable,
         .formChangeTable = sThundurusFormChangeTable,
     },
-#endif //P_FAMILY_THUNDURUS
+#endif // P_FAMILY_THUNDURUS
 
 #if P_FAMILY_RESHIRAM
     [SPECIES_RESHIRAM] =
     {
-        .baseHP        = 100,
-        .baseAttack    = 120,
-        .baseDefense   = 100,
-        .baseSpeed     = 90,
-        .baseSpAttack  = 150,
+        .baseHP = 100,
+        .baseAttack = 120,
+        .baseDefense = 100,
+        .baseSpeed = 90,
+        .baseSpAttack = 150,
         .baseSpDefense = 120,
         .types = MON_TYPES(TYPE_DRAGON, TYPE_FIRE),
         .catchRate = 3,
@@ -13151,10 +12679,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 32,
         .weight = 3300,
         .description = COMPOUND_STRING(
-            "This Pokémon appears in legends. It\n"
-            "sends flames into the air from its tail,\n"
-            "burning up everything around it. It helps\n"
-            "those who want to build a world of truth."),
+"This Pokémon appears in legends. It\n"
+"sends flames into the air from its tail,\n"
+"burning up everything around it. It helps\n"
+"those who want to build a world of truth."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 445,
@@ -13163,9 +12691,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 40),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(1, 40),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_V_SHAKE,
         .backPic = gMonBackPic_Reshiram,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -13178,31 +12706,29 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 12, SHADOW_SIZE_L)
         FOOTPRINT(Reshiram)
-        OVERWORLD(
-            sPicTable_Reshiram,
-            SIZE_64x64,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Reshiram,
-            gShinyOverworldPalette_Reshiram
-        )
+        OVERWORLD(sPicTable_Reshiram,
+SIZE_64x64,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Reshiram,
+gShinyOverworldPalette_Reshiram)
         .isRestrictedLegendary = TRUE,
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sReshiramLevelUpLearnset,
         .teachableLearnset = sReshiramTeachableLearnset,
     },
-#endif //P_FAMILY_RESHIRAM
+#endif // P_FAMILY_RESHIRAM
 
 #if P_FAMILY_ZEKROM
     [SPECIES_ZEKROM] =
     {
-        .baseHP        = 100,
-        .baseAttack    = 150,
-        .baseDefense   = 120,
-        .baseSpeed     = 90,
-        .baseSpAttack  = 120,
+        .baseHP = 100,
+        .baseAttack = 150,
+        .baseDefense = 120,
+        .baseSpeed = 90,
+        .baseSpAttack = 120,
         .baseSpDefense = 100,
         .types = MON_TYPES(TYPE_DRAGON, TYPE_ELECTRIC),
         .catchRate = 3,
@@ -13222,10 +12748,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 29,
         .weight = 3450,
         .description = COMPOUND_STRING(
-            "This legendary Pokémon can scorch the\n"
-            "world with lightning. It has a generator\n"
-            "that creates electricity in its tail. It\n"
-            "assists those with strong ideals."),
+"This legendary Pokémon can scorch the\n"
+"world with lightning. It has a generator\n"
+"that creates electricity in its tail. It\n"
+"assists those with strong ideals."),
         .pokemonScale = 275,
         .pokemonOffset = 2,
         .trainerScale = 412,
@@ -13234,9 +12760,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 40),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(1, 40),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_V_SHAKE,
         .backPic = gMonBackPic_Zekrom,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -13249,31 +12775,29 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(2, 14, SHADOW_SIZE_L)
         FOOTPRINT(Zekrom)
-        OVERWORLD(
-            sPicTable_Zekrom,
-            SIZE_64x64,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Zekrom,
-            gShinyOverworldPalette_Zekrom
-        )
+        OVERWORLD(sPicTable_Zekrom,
+SIZE_64x64,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Zekrom,
+gShinyOverworldPalette_Zekrom)
         .isRestrictedLegendary = TRUE,
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sZekromLevelUpLearnset,
         .teachableLearnset = sZekromTeachableLearnset,
     },
-#endif //P_FAMILY_ZEKROM
+#endif // P_FAMILY_ZEKROM
 
 #if P_FAMILY_LANDORUS
     [SPECIES_LANDORUS_INCARNATE] =
     {
-        .baseHP        = 89,
-        .baseAttack    = 125,
-        .baseDefense   = 90,
-        .baseSpeed     = 101,
-        .baseSpAttack  = 115,
+        .baseHP = 89,
+        .baseAttack = 125,
+        .baseDefense = 90,
+        .baseSpeed = 101,
+        .baseSpAttack = 115,
         .baseSpDefense = 80,
         .types = MON_TYPES(TYPE_GROUND, TYPE_FLYING),
         .catchRate = 3,
@@ -13293,10 +12817,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 15,
         .weight = 680,
         .description = COMPOUND_STRING(
-            "The energy that comes pouring from its\n"
-            "tail increases the nutrition in the soil,\n"
-            "granting bountiful crops. It has been\n"
-            "hailed as “The Guardian of the Fields.”"),
+"The energy that comes pouring from its\n"
+"tail increases the nutrition in the soil,\n"
+"granting bountiful crops. It has been\n"
+"hailed as “The Guardian of the Fields.”"),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -13305,29 +12829,29 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-            ANIMCMD_FRAME(1, 2),
-            ANIMCMD_FRAME(0, 2),
-        ),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+ANIMCMD_FRAME(1, 2),
+ANIMCMD_FRAME(0, 2),
+),
         .frontAnimId = ANIM_FIGURE_8,
         .enemyMonElevation = 7,
         .backPic = gMonBackPic_LandorusIncarnate,
@@ -13341,15 +12865,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(2, 17, SHADOW_SIZE_M)
         FOOTPRINT(Landorus)
-        OVERWORLD(
-            sPicTable_LandorusIncarnate,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_LandorusIncarnate,
-            gShinyOverworldPalette_LandorusIncarnate
-        )
+        OVERWORLD(sPicTable_LandorusIncarnate,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_LandorusIncarnate,
+gShinyOverworldPalette_LandorusIncarnate)
         .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sLandorusLevelUpLearnset,
@@ -13357,14 +12879,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formSpeciesIdTable = sLandorusFormSpeciesIdTable,
         .formChangeTable = sLandorusFormChangeTable,
     },
-
     [SPECIES_LANDORUS_THERIAN] =
     {
-        .baseHP        = 89,
-        .baseAttack    = 145,
-        .baseDefense   = 90,
-        .baseSpeed     = 91,
-        .baseSpAttack  = 105,
+        .baseHP = 89,
+        .baseAttack = 145,
+        .baseDefense = 90,
+        .baseSpeed = 91,
+        .baseSpAttack = 105,
         .baseSpDefense = 80,
         .types = MON_TYPES(TYPE_GROUND, TYPE_FLYING),
         .catchRate = 3,
@@ -13384,10 +12905,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 13,
         .weight = 680,
         .description = COMPOUND_STRING(
-            "Landorus soars through the sky in\n"
-            "this form, bestowing plentiful\n"
-            "harvests upon the land and earning the\n"
-            "people's reverence."),
+"Landorus soars through the sky in\n"
+"this form, bestowing plentiful\n"
+"harvests upon the land and earning the\n"
+"people's reverence."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -13396,12 +12917,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_CIRCULAR_VIBRATE,
         .backPic = gMonBackPic_LandorusTherian,
         .backPicSize = MON_COORDS_SIZE(64, 56),
@@ -13414,15 +12935,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 11, SHADOW_SIZE_L)
         FOOTPRINT(Landorus)
-        OVERWORLD(
-            sPicTable_LandorusTherian,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_LandorusTherian,
-            gShinyOverworldPalette_LandorusTherian
-        )
+        OVERWORLD(sPicTable_LandorusTherian,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_LandorusTherian,
+gShinyOverworldPalette_LandorusTherian)
         .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sLandorusLevelUpLearnset,
@@ -13430,16 +12949,16 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formSpeciesIdTable = sLandorusFormSpeciesIdTable,
         .formChangeTable = sLandorusFormChangeTable,
     },
-#endif //P_FAMILY_LANDORUS
+#endif // P_FAMILY_LANDORUS
 
 #if P_FAMILY_KYUREM
     [SPECIES_KYUREM] =
     {
-        .baseHP        = 125,
-        .baseAttack    = 130,
-        .baseDefense   = 90,
-        .baseSpeed     = 95,
-        .baseSpAttack  = 130,
+        .baseHP = 125,
+        .baseAttack = 130,
+        .baseDefense = 90,
+        .baseSpeed = 95,
+        .baseSpAttack = 130,
         .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_DRAGON, TYPE_ICE),
         .catchRate = 3,
@@ -13462,10 +12981,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 30,
         .weight = 3250,
         .description = COMPOUND_STRING(
-            "This legendary ice Pokémon waits for a\n"
-            "hero to fill in the missing parts of its\n"
-            "body with truth or ideals. Its body became\n"
-            "frozen when its energy leaked out."),
+"This legendary ice Pokémon waits for a\n"
+"hero to fill in the missing parts of its\n"
+"body with truth or ideals. Its body became\n"
+"frozen when its energy leaked out."),
         .pokemonScale = 275,
         .pokemonOffset = 7,
         .trainerScale = 356,
@@ -13474,11 +12993,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 6,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 20),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 20),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Kyurem,
         .backPicSize = MON_COORDS_SIZE(64, 40),
@@ -13491,15 +13010,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 8, SHADOW_SIZE_L)
         FOOTPRINT(Kyurem)
-        OVERWORLD(
-            sPicTable_Kyurem,
-            SIZE_64x64,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_Kyurem,
-            gShinyOverworldPalette_Kyurem
-        )
+        OVERWORLD(sPicTable_Kyurem,
+SIZE_64x64,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_Kyurem,
+gShinyOverworldPalette_Kyurem)
         .isRestrictedLegendary = TRUE,
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
@@ -13507,15 +13024,15 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .teachableLearnset = sKyuremTeachableLearnset,
         .formSpeciesIdTable = sKyuremFormSpeciesIdTable,
     },
-
 #if P_FUSION_FORMS
+
     [SPECIES_KYUREM_WHITE] =
     {
-        .baseHP        = 125,
-        .baseAttack    = 120,
-        .baseDefense   = 90,
-        .baseSpeed     = 95,
-        .baseSpAttack  = 170,
+        .baseHP = 125,
+        .baseAttack = 120,
+        .baseDefense = 90,
+        .baseSpeed = 95,
+        .baseSpAttack = 170,
         .baseSpDefense = 100,
         .types = MON_TYPES(TYPE_DRAGON, TYPE_ICE),
         .catchRate = 3,
@@ -13536,10 +13053,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 36,
         .weight = 3250,
         .description = COMPOUND_STRING(
-            "The sameness of Reshiram's and\n"
-            "Kyurem's genes allowed Kyurem to\n"
-            "absorb Reshiram. Kyurem can now use the\n"
-            "power of both fire and ice."),
+"The sameness of Reshiram's and\n"
+"Kyurem's genes allowed Kyurem to\n"
+"absorb Reshiram. Kyurem can now use the\n"
+"power of both fire and ice."),
         .pokemonScale = 275,
         .pokemonOffset = 7,
         .trainerScale = 356,
@@ -13548,9 +13065,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 40),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(1, 40),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_H_SHAKE,
         .backPic = gMonBackPic_KyuremWhite,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -13563,15 +13080,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-8, 14, SHADOW_SIZE_L)
         FOOTPRINT(Kyurem)
-        OVERWORLD(
-            sPicTable_KyuremWhite,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_KyuremWhite,
-            gShinyOverworldPalette_KyuremWhite
-        )
+        OVERWORLD(sPicTable_KyuremWhite,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_KyuremWhite,
+gShinyOverworldPalette_KyuremWhite)
         .isRestrictedLegendary = TRUE,
         .cannotBeTraded = TRUE,
         .isFrontierBanned = TRUE,
@@ -13580,14 +13095,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .teachableLearnset = sKyuremTeachableLearnset,
         .formSpeciesIdTable = sKyuremFormSpeciesIdTable,
     },
-
     [SPECIES_KYUREM_BLACK] =
     {
-        .baseHP        = 125,
-        .baseAttack    = 170,
-        .baseDefense   = 100,
-        .baseSpeed     = 95,
-        .baseSpAttack  = 120,
+        .baseHP = 125,
+        .baseAttack = 170,
+        .baseDefense = 100,
+        .baseSpeed = 95,
+        .baseSpAttack = 120,
         .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_DRAGON, TYPE_ICE),
         .catchRate = 3,
@@ -13608,10 +13122,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 33,
         .weight = 3250,
         .description = COMPOUND_STRING(
-            "The sameness of Zekrom's and\n"
-            "Kyurem's genes allowed Kyurem to absorb\n"
-            "Zekrom. Kyurem can now use the\n"
-            "power of both electricity and ice."),
+"The sameness of Zekrom's and\n"
+"Kyurem's genes allowed Kyurem to absorb\n"
+"Zekrom. Kyurem can now use the\n"
+"power of both electricity and ice."),
         .pokemonScale = 275,
         .pokemonOffset = 7,
         .trainerScale = 356,
@@ -13620,9 +13134,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 40),
-            ANIMCMD_FRAME(0, 5),
-        ),
+ANIMCMD_FRAME(1, 40),
+ANIMCMD_FRAME(0, 5),
+),
         .frontAnimId = ANIM_V_SHAKE,
         .backPic = gMonBackPic_KyuremBlack,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -13635,15 +13149,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(4, 14, SHADOW_SIZE_L)
         FOOTPRINT(Kyurem)
-        OVERWORLD(
-            sPicTable_KyuremBlack,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_KyuremBlack,
-            gShinyOverworldPalette_KyuremBlack
-        )
+        OVERWORLD(sPicTable_KyuremBlack,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_KyuremBlack,
+gShinyOverworldPalette_KyuremBlack)
         .isRestrictedLegendary = TRUE,
         .cannotBeTraded = TRUE,
         .isFrontierBanned = TRUE,
@@ -13653,16 +13165,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formSpeciesIdTable = sKyuremFormSpeciesIdTable,
     },
 #endif //P_FUSION_FORMS
-#endif //P_FAMILY_KYUREM
+
+#endif // P_FAMILY_KYUREM
 
 #if P_FAMILY_KELDEO
     [SPECIES_KELDEO_ORDINARY] =
     {
-        .baseHP        = 91,
-        .baseAttack    = 72,
-        .baseDefense   = 90,
-        .baseSpeed     = 108,
-        .baseSpAttack  = 129,
+        .baseHP = 91,
+        .baseAttack = 72,
+        .baseDefense = 90,
+        .baseSpeed = 108,
+        .baseSpAttack = 129,
         .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_WATER, TYPE_FIGHTING),
         .catchRate = 3,
@@ -13682,10 +13195,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 14,
         .weight = 485,
         .description = COMPOUND_STRING(
-            "When it is resolute, its body fills with\n"
-            "power and it becomes swifter. It crosses\n"
-            "the world, running over the surfaces of\n"
-            "oceans and rivers."),
+"When it is resolute, its body fills with\n"
+"power and it becomes swifter. It crosses\n"
+"the world, running over the surfaces of\n"
+"oceans and rivers."),
         .pokemonScale = 265,
         .pokemonOffset = 2,
         .trainerScale = 262,
@@ -13694,9 +13207,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 5,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 32),
-            ANIMCMD_FRAME(0, 20),
-        ),
+ANIMCMD_FRAME(1, 32),
+ANIMCMD_FRAME(0, 20),
+),
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_KeldeoOrdinary,
         .backPicSize = MON_COORDS_SIZE(56, 64),
@@ -13709,15 +13222,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-2, 8, SHADOW_SIZE_M)
         FOOTPRINT(Keldeo)
-        OVERWORLD(
-            sPicTable_KeldeoOrdinary,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_KeldeoOrdinary,
-            gShinyOverworldPalette_KeldeoOrdinary
-        )
+        OVERWORLD(sPicTable_KeldeoOrdinary,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_KeldeoOrdinary,
+gShinyOverworldPalette_KeldeoOrdinary)
         .isMythical = TRUE,
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
@@ -13726,14 +13237,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formSpeciesIdTable = sKeldeoFormSpeciesIdTable,
         .formChangeTable = sKeldeoFormChangeTable,
     },
-
     [SPECIES_KELDEO_RESOLUTE] =
     {
-        .baseHP        = 91,
-        .baseAttack    = 72,
-        .baseDefense   = 90,
-        .baseSpeed     = 108,
-        .baseSpAttack  = 129,
+        .baseHP = 91,
+        .baseAttack = 72,
+        .baseDefense = 90,
+        .baseSpeed = 108,
+        .baseSpAttack = 129,
         .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_WATER, TYPE_FIGHTING),
         .catchRate = 3,
@@ -13754,10 +13264,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 14,
         .weight = 485,
         .description = COMPOUND_STRING(
-            "The power that lay hidden in its\n"
-            "body now covers its horn, turning it\n"
-            "into a sword that can slice through\n"
-            "anything."),
+"The power that lay hidden in its\n"
+"body now covers its horn, turning it\n"
+"into a sword that can slice through\n"
+"anything."),
         .pokemonScale = 265,
         .pokemonOffset = 2,
         .trainerScale = 262,
@@ -13766,10 +13276,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 1),
-            ANIMCMD_FRAME(1, 36),
-            ANIMCMD_FRAME(0, 10),
-        ),
+ANIMCMD_FRAME(0, 1),
+ANIMCMD_FRAME(1, 36),
+ANIMCMD_FRAME(0, 10),
+),
         .frontAnimId = ANIM_V_JUMPS_H_JUMPS,
         .backPic = gMonBackPic_KeldeoResolute,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -13790,16 +13300,16 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formSpeciesIdTable = sKeldeoFormSpeciesIdTable,
         .formChangeTable = sKeldeoFormChangeTable,
     },
-#endif //P_FAMILY_KELDEO
+#endif // P_FAMILY_KELDEO
 
 #if P_FAMILY_MELOETTA
     [SPECIES_MELOETTA_ARIA] =
     {
-        .baseHP        = 100,
-        .baseAttack    = 77,
-        .baseDefense   = 77,
-        .baseSpeed     = 90,
-        .baseSpAttack  = 128,
+        .baseHP = 100,
+        .baseAttack = 77,
+        .baseDefense = 77,
+        .baseSpeed = 90,
+        .baseSpAttack = 128,
         .baseSpDefense = 128,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_PSYCHIC),
         .catchRate = 3,
@@ -13824,10 +13334,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 65,
         .description = COMPOUND_STRING(
-            "The melodies sung by Meloetta have the\n"
-            "power to make Pokémon that hear them\n"
-            "happy or sad. Many famous songs have been\n"
-            "inspired by the tunes that Meloetta plays."),
+"The melodies sung by Meloetta have the\n"
+"power to make Pokémon that hear them\n"
+"happy or sad. Many famous songs have been\n"
+"inspired by the tunes that Meloetta plays."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -13836,14 +13346,14 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(32, 48),
         .frontPicYOffset = 9,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 45),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 10),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 45),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 10),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .enemyMonElevation = 8,
         .backPic = gMonBackPic_MeloettaAria,
@@ -13857,15 +13367,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 10, SHADOW_SIZE_S)
         FOOTPRINT(Meloetta)
-        OVERWORLD(
-            sPicTable_MeloettaAria,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_MeloettaAria,
-            gShinyOverworldPalette_MeloettaAria
-        )
+        OVERWORLD(sPicTable_MeloettaAria,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_MeloettaAria,
+gShinyOverworldPalette_MeloettaAria)
         .isMythical = TRUE,
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
@@ -13874,14 +13382,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formSpeciesIdTable = sMeloettaFormSpeciesIdTable,
         .formChangeTable = sMeloettaFormChangeTable,
     },
-
     [SPECIES_MELOETTA_PIROUETTE] =
     {
-        .baseHP        = 100,
-        .baseAttack    = 128,
-        .baseDefense   = 90,
-        .baseSpeed     = 128,
-        .baseSpAttack  = 77,
+        .baseHP = 100,
+        .baseAttack = 128,
+        .baseDefense = 90,
+        .baseSpeed = 128,
+        .baseSpAttack = 77,
         .baseSpDefense = 77,
         .types = MON_TYPES(TYPE_NORMAL, TYPE_FIGHTING),
         .catchRate = 3,
@@ -13906,9 +13413,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 6,
         .weight = 65,
         .description = COMPOUND_STRING(
-            "Meloetta's melodies are sung with\n"
-            "a special vocalization method that can\n"
-            "control the feelings of those who hear it."),
+"Meloetta's melodies are sung with\n"
+"a special vocalization method that can\n"
+"control the feelings of those who hear it."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -13917,13 +13424,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-            ANIMCMD_FRAME(1, 15),
-            ANIMCMD_FRAME(0, 15),
-        ),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+ANIMCMD_FRAME(1, 15),
+ANIMCMD_FRAME(0, 15),
+),
         .frontAnimId = ANIM_H_SLIDE_SLOW,
         .enemyMonElevation = 5,
         .backPic = gMonBackPic_MeloettaPirouette,
@@ -13937,15 +13444,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 16, SHADOW_SIZE_S)
         FOOTPRINT(Meloetta)
-        OVERWORLD(
-            sPicTable_MeloettaPirouette,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_MeloettaPirouette,
-            gShinyOverworldPalette_MeloettaPirouette
-        )
+        OVERWORLD(sPicTable_MeloettaPirouette,
+SIZE_32x32,
+SHADOW_SIZE_M,
+TRACKS_FOOT,
+sAnimTable_Following,
+gOverworldPalette_MeloettaPirouette,
+gShinyOverworldPalette_MeloettaPirouette)
         .isMythical = TRUE,
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
@@ -13954,7 +13459,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .formSpeciesIdTable = sMeloettaFormSpeciesIdTable,
         .formChangeTable = sMeloettaFormChangeTable,
     },
-#endif //P_FAMILY_MELOETTA
+#endif // P_FAMILY_MELOETTA
 
 #if P_FAMILY_GENESECT
 #define GENESECT_SPECIES_INFO(form)                                                 \
@@ -14023,12 +13528,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT, \
     }
 
-    [SPECIES_GENESECT]             = GENESECT_SPECIES_INFO(Genesect),
-    [SPECIES_GENESECT_DOUSE] = GENESECT_SPECIES_INFO(GenesectDouseDrive),
-    [SPECIES_GENESECT_SHOCK] = GENESECT_SPECIES_INFO(GenesectShockDrive),
-    [SPECIES_GENESECT_BURN]  = GENESECT_SPECIES_INFO(GenesectBurnDrive),
-    [SPECIES_GENESECT_CHILL] = GENESECT_SPECIES_INFO(GenesectChillDrive),
-#endif //P_FAMILY_GENESECT
+    [SPECIES_GENESECT] =
+        GENESECT_SPECIES_INFO(Genesect),
+    [SPECIES_GENESECT_DOUSE] =
+        GENESECT_SPECIES_INFO(GenesectDouseDrive),
+    [SPECIES_GENESECT_SHOCK] =
+        GENESECT_SPECIES_INFO(GenesectShockDrive),
+    [SPECIES_GENESECT_BURN] =
+        GENESECT_SPECIES_INFO(GenesectBurnDrive),
+    [SPECIES_GENESECT_CHILL] =
+        GENESECT_SPECIES_INFO(GenesectChillDrive),
+#endif // P_FAMILY_GENESECT
 
 #ifdef __INTELLISENSE__
 };

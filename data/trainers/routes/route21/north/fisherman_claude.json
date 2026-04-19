@@ -1,0 +1,41 @@
+{
+  "identifier": "TRAINER_FISHERMAN_CLAUDE",
+  "trainer_name": "CLAUDE",
+  "trainer_class": "TRAINER_CLASS_FISHERMAN",
+  "trainer_pic": "TRAINER_PIC_FISHERMAN",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_HIKER",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_SHELLDER",
+      "level": 31,
+      "moves": [],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "species": "SPECIES_CLOYSTER",
+      "level": 31,
+      "moves": [],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    }
+  ]
+}

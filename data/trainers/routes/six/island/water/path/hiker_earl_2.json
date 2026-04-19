@@ -1,0 +1,41 @@
+{
+  "identifier": "TRAINER_HIKER_EARL_2",
+  "trainer_name": "EARL",
+  "trainer_class": "TRAINER_CLASS_HIKER",
+  "trainer_pic": "TRAINER_PIC_HIKER",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_HIKER",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_ONIX",
+      "level": 54,
+      "moves": [],
+      "ivs": {
+        "hp": 14,
+        "atk": 14,
+        "def": 14,
+        "spa": 14,
+        "spd": 14,
+        "spe": 14
+      }
+    },
+    {
+      "species": "SPECIES_MACHAMP",
+      "level": 54,
+      "moves": [],
+      "ivs": {
+        "hp": 14,
+        "atk": 14,
+        "def": 14,
+        "spa": 14,
+        "spd": 14,
+        "spe": 14
+      }
+    }
+  ]
+}

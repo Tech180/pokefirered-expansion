@@ -1,0 +1,69 @@
+{
+  "identifier": "TRAINER_BIKER_RICARDO",
+  "trainer_name": "RICARDO",
+  "trainer_class": "TRAINER_CLASS_BIKER",
+  "trainer_pic": "TRAINER_PIC_BIKER",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_MALE",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_KOFFING",
+      "level": 22,
+      "moves": [
+        "MOVE_SLUDGE",
+        "MOVE_SMOG",
+        "MOVE_TACKLE",
+        "MOVE_POISON_GAS"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "species": "SPECIES_KOFFING",
+      "level": 22,
+      "moves": [
+        "MOVE_SLUDGE",
+        "MOVE_SMOG",
+        "MOVE_TACKLE",
+        "MOVE_POISON_GAS"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    },
+    {
+      "species": "SPECIES_GRIMER",
+      "level": 23,
+      "moves": [
+        "MOVE_MINIMIZE",
+        "MOVE_SLUDGE",
+        "MOVE_DISABLE",
+        "MOVE_POUND"
+      ],
+      "ivs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      }
+    }
+  ]
+}

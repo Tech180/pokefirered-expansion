@@ -1,0 +1,249 @@
+{
+  "species_constant": "SPECIES_SANDSLASH_ALOLA",
+  "family_constant": "P_FAMILY_SANDSHREW",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "65"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "25"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "65"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_ICE, TYPE_STEEL)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "158"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_GRIP_CLAW"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_SNOW_CLOAK, ABILITY_NONE, ABILITY_SLUSH_RUSH }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Sandslash\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_SANDSLASH"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_SANDSLASH"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Mouse\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "12"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "550"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It uses large, hooked claws to cut a path\\n\"\n\"through deep snow as it runs.\\n\"\n\"On snowy mountains, this Sandslash\\n\"\n\"is faster than any other Pok\u00e9mon.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "341"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "11"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_SandslashAlola"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_SandslashAlola"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_SandslashAlola"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_SandslashAlola"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_SandslashAlola"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 9, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Sandslash",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_SandslashAlola,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_SandslashAlola,\ngShinyOverworldPalette_SandslashAlola",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isAlolanForm",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sSandslashAlolaLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sSandslashAlolaTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sSandslashFormSpeciesIdTable"
+    }
+  ]
+}

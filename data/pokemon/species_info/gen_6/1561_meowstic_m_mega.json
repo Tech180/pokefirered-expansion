@@ -1,0 +1,245 @@
+{
+  "species_constant": "SPECIES_MEOWSTIC_M_MEGA",
+  "family_constant": "P_FAMILY_ESPURR",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "74"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "48"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "76"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "124"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "143"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "101"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_PSYCHIC)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "163"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Speed",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_MALE"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_TRACE, ABILITY_TRACE, ABILITY_TRACE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Meowstic\")"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_MODIFIED_MEGA_CRIES"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_MEOWSTIC_MEGA"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_MEOWSTIC"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif // P_MODIFIED_MEGA_CRIES"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_MEOWSTIC"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Constraint\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "8"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "101"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Mega Meowstic can use its psychic power\\n\"\n\"to compress or expand anything. It\\n\"\n\"overwhelms foes by contorting space\\n\"\n\"itself.\")"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_MeowsticMega"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_MeowsticMega"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_MeowsticMega"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_MeowsticMega"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_MeowsticMega"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Meowstic",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-3, 18, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isMegaEvolution",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sMeowsticMLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sMeowsticMTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sMeowsticFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sMeowsticMFormChangeTable"
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "species_constant": "SPECIES_GRENINJA_MEGA",
+  "family_constant": "P_FAMILY_FROAKIE",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "72"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "125"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "77"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "142"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "133"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "81"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_WATER, TYPE_DARK)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "265"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Speed",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(12.5)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_WATER_1)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_PROTEAN, ABILITY_NONE, ABILITY_PROTEAN }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "noFlip",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Greninja\")"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_MODIFIED_MEGA_CRIES"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_GRENINJA_MEGA"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#else"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_GRENINJA"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif // P_MODIFIED_MEGA_CRIES"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_GRENINJA"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Ninja\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "400"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"This Pok\u00e9mon spins a giant\\n\"\n\"shuriken at high speed to make it\\n\"\n\"float, then clings to it upside\\n\"\n\"down to catch opponents unawares.\")"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_GreninjaMega"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_GreninjaMega"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "11"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_GreninjaMega"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_GreninjaMega"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_GreninjaMega"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Greninja",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-1, 18, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isMegaEvolution",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sGreninjaLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sGreninjaTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sGreninjaFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sGreninjaFormChangeTable"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "group_label": "gWildMonHeaders",
+  "encounters": [
+    {
+      "map": "MAP_VICTORY_ROAD_2F",
+      "base_label": "sVictoryRoad2F_FireRed",
+      "land_mons": {
+        "encounter_rate": 7,
+        "mons": [
+          {
+            "min_level": 34,
+            "max_level": 34,
+            "species": "SPECIES_MACHOP"
+          },
+          {
+            "min_level": 34,
+            "max_level": 34,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 42,
+            "max_level": 42,
+            "species": "SPECIES_PRIMEAPE"
+          },
+          {
+            "min_level": 45,
+            "max_level": 45,
+            "species": "SPECIES_ONIX"
+          },
+          {
+            "min_level": 48,
+            "max_level": 48,
+            "species": "SPECIES_ONIX"
+          },
+          {
+            "min_level": 34,
+            "max_level": 34,
+            "species": "SPECIES_ZUBAT"
+          },
+          {
+            "min_level": 46,
+            "max_level": 46,
+            "species": "SPECIES_ARBOK"
+          },
+          {
+            "min_level": 46,
+            "max_level": 46,
+            "species": "SPECIES_GOLBAT"
+          },
+          {
+            "min_level": 46,
+            "max_level": 46,
+            "species": "SPECIES_MAROWAK"
+          },
+          {
+            "min_level": 46,
+            "max_level": 46,
+            "species": "SPECIES_MACHOKE"
+          },
+          {
+            "min_level": 48,
+            "max_level": 48,
+            "species": "SPECIES_MACHOKE"
+          },
+          {
+            "min_level": 48,
+            "max_level": 48,
+            "species": "SPECIES_MAROWAK"
+          }
+        ]
+      }
+    },
+    {
+      "map": "MAP_VICTORY_ROAD_2F",
+      "base_label": "sVictoryRoad2F_LeafGreen",
+      "land_mons": {
+        "encounter_rate": 7,
+        "mons": [
+          {
+            "min_level": 34,
+            "max_level": 34,
+            "species": "SPECIES_MACHOP"
+          },
+          {
+            "min_level": 34,
+            "max_level": 34,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 42,
+            "max_level": 42,
+            "species": "SPECIES_PRIMEAPE"
+          },
+          {
+            "min_level": 45,
+            "max_level": 45,
+            "species": "SPECIES_ONIX"
+          },
+          {
+            "min_level": 48,
+            "max_level": 48,
+            "species": "SPECIES_ONIX"
+          },
+          {
+            "min_level": 34,
+            "max_level": 34,
+            "species": "SPECIES_ZUBAT"
+          },
+          {
+            "min_level": 46,
+            "max_level": 46,
+            "species": "SPECIES_SANDSLASH"
+          },
+          {
+            "min_level": 46,
+            "max_level": 46,
+            "species": "SPECIES_GOLBAT"
+          },
+          {
+            "min_level": 46,
+            "max_level": 46,
+            "species": "SPECIES_MAROWAK"
+          },
+          {
+            "min_level": 46,
+            "max_level": 46,
+            "species": "SPECIES_MACHOKE"
+          },
+          {
+            "min_level": 48,
+            "max_level": 48,
+            "species": "SPECIES_MACHOKE"
+          },
+          {
+            "min_level": 48,
+            "max_level": 48,
+            "species": "SPECIES_MAROWAK"
+          }
+        ]
+      }
+    }
+  ]
+}

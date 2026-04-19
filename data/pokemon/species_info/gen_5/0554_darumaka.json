@@ -1,0 +1,259 @@
+{
+  "species_constant": "SPECIES_DARUMAKA",
+  "family_constant": "P_FAMILY_DARUMAKA",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "45"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_FIRE)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "63"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_HUSTLE, ABILITY_NONE, ABILITY_INNER_FOCUS }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_RED"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Darumaka\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_DARUMAKA"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_DARUMAKA"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Zen Charm\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "375"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"When its internal fire is burning, it\\n\"\n\"cannot calm down and it runs around.\\n\"\n\"When the fire diminishes, it pulls its\\n\"\n\"limbs into its body and falls asleep.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "422"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "14"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Darumaka"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(40, 40)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "13"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 50),\nANIMCMD_FRAME(1, 50),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_SWING_CONCAVE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Darumaka"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(56, 48)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "12"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_CONCAVE_ARC_LARGE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Darumaka"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Darumaka"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Darumaka"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_FAST"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-3, 1, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Darumaka",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Darumaka,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Darumaka,\ngShinyOverworldPalette_Darumaka",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sDarumakaLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sDarumakaTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sDarumakaEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sDarumakaFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 35, SPECIES_DARMANITAN_STANDARD})"
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "species_constant": "SPECIES_SPIRITOMB",
+  "family_constant": "P_FAMILY_SPIRITOMB",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "92"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "108"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "35"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "92"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "108"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_GHOST, TYPE_DARK)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_5) ? 170 : 168"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpDefense",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_PRESSURE, ABILITY_NONE, ABILITY_INFILTRATOR }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_PURPLE"
+    },
+    {
+      "type": "field",
+      "name": "noFlip",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Spiritomb\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_SPIRITOMB"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_SPIRITOMB"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Forbidden\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "10"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "1080"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"A Pok\u00e9mon that was formed by 108 spirits.\\n\"\n\"Its constant mischief and misdeeds\\n\"\n\"resulted in it being bound to an\\n\"\n\"Odd Keystone by a mysterious spell.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "305"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "7"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "257"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Spiritomb"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(56, 56)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 20),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_GROW_IN_STAGES"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Spiritomb"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "5"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_SHRINK_GROW_VIBRATE"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Spiritomb"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Spiritomb"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Spiritomb"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "5"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-1, 7, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Spiritomb",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Spiritomb,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Spiritomb,\ngShinyOverworldPalette_Spiritomb",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sSpiritombLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sSpiritombTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sSpiritombEggMoveLearnset"
+    }
+  ]
+}

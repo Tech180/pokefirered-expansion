@@ -1,0 +1,249 @@
+{
+  "species_constant": "SPECIES_APPLIN",
+  "family_constant": "P_FAMILY_APPLIN",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "80"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_GRASS, TYPE_DRAGON)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "255"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "52"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Defense",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_ERRATIC"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_GRASS, EGG_GROUP_DRAGON)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_RIPEN, ABILITY_GLUTTONY, ABILITY_BULLETPROOF }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_GREEN"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Applin\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_APPLIN"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_APPLIN"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Apple Core\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "5"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It spends its entire life inside an\\n\"\n\"apple. It hides from its natural enemies,\\n\"\n\"bird Pok\u00e9mon, by pretending it's just an\\n\"\n\"apple and nothing more.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "682"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "24"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Applin"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(32, 40)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "16"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_TwoFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Applin"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(40, 48)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Applin"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Applin"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Applin"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NORMAL"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-1, -3, SHADOW_SIZE_S",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Applin",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Applin,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Applin,\ngShinyOverworldPalette_Applin",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "teachingType",
+      "value": "TM_ILLITERATE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sApplinLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sApplinTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sApplinEggMoveLearnset"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_ITEM, ITEM_TART_APPLE, SPECIES_FLAPPLE},\n{EVO_ITEM, ITEM_SWEET_APPLE, SPECIES_APPLETUN}\n#if P_GEN_9_CROSS_EVOS\n,{EVO_ITEM, ITEM_SYRUPY_APPLE, SPECIES_DIPPLIN}\n#endif\n)"
+    }
+  ]
+}

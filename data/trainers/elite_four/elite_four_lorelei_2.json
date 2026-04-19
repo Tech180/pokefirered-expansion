@@ -1,0 +1,110 @@
+{
+  "identifier": "TRAINER_ELITE_FOUR_LORELEI_2",
+  "trainer_name": "LORELEI",
+  "trainer_class": "TRAINER_CLASS_ELITE_FOUR",
+  "trainer_pic": "TRAINER_PIC_ELITE_FOUR_LORELEI",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [
+    "ITEM_FULL_RESTORE"
+  ],
+  "party": [
+    {
+      "species": "SPECIES_DEWGONG",
+      "level": 64,
+      "moves": [
+        "MOVE_ICE_BEAM",
+        "MOVE_SURF",
+        "MOVE_SIGNAL_BEAM",
+        "MOVE_DOUBLE_TEAM"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "SPECIES_CLOYSTER",
+      "level": 63,
+      "moves": [
+        "MOVE_ICE_BEAM",
+        "MOVE_SURF",
+        "MOVE_SUPERSONIC",
+        "MOVE_RAIN_DANCE"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "SPECIES_PILOSWINE",
+      "level": 63,
+      "moves": [
+        "MOVE_BLIZZARD",
+        "MOVE_EARTHQUAKE",
+        "MOVE_DOUBLE_EDGE",
+        "MOVE_ROCK_SLIDE"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "SPECIES_JYNX",
+      "level": 66,
+      "moves": [
+        "MOVE_ICE_BEAM",
+        "MOVE_PSYCHIC",
+        "MOVE_LOVELY_KISS",
+        "MOVE_ATTRACT"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "SPECIES_LAPRAS",
+      "level": 66,
+      "moves": [
+        "MOVE_ICE_BEAM",
+        "MOVE_SURF",
+        "MOVE_PSYCHIC",
+        "MOVE_THUNDER"
+      ],
+      "held_item": "ITEM_CHERI_BERRY",
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "group_label": "gWildMonHeaders",
+  "encounters": [
+    {
+      "map": "MAP_FIVE_ISLAND_LOST_CAVE_ROOM13",
+      "base_label": "sFiveIslandLostCaveRoom13_FireRed",
+      "land_mons": {
+        "encounter_rate": 5,
+        "mons": [
+          {
+            "min_level": 40,
+            "max_level": 40,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 37,
+            "max_level": 37,
+            "species": "SPECIES_ZUBAT"
+          },
+          {
+            "min_level": 44,
+            "max_level": 44,
+            "species": "SPECIES_HAUNTER"
+          },
+          {
+            "min_level": 46,
+            "max_level": 46,
+            "species": "SPECIES_HAUNTER"
+          },
+          {
+            "min_level": 41,
+            "max_level": 41,
+            "species": "SPECIES_GOLBAT"
+          },
+          {
+            "min_level": 15,
+            "max_level": 15,
+            "species": "SPECIES_MURKROW"
+          },
+          {
+            "min_level": 20,
+            "max_level": 20,
+            "species": "SPECIES_MURKROW"
+          },
+          {
+            "min_level": 48,
+            "max_level": 48,
+            "species": "SPECIES_HAUNTER"
+          },
+          {
+            "min_level": 50,
+            "max_level": 50,
+            "species": "SPECIES_HAUNTER"
+          },
+          {
+            "min_level": 22,
+            "max_level": 22,
+            "species": "SPECIES_MURKROW"
+          },
+          {
+            "min_level": 52,
+            "max_level": 52,
+            "species": "SPECIES_HAUNTER"
+          },
+          {
+            "min_level": 22,
+            "max_level": 22,
+            "species": "SPECIES_MURKROW"
+          }
+        ]
+      }
+    },
+    {
+      "map": "MAP_FIVE_ISLAND_LOST_CAVE_ROOM13",
+      "base_label": "sFiveIslandLostCaveRoom13_LeafGreen",
+      "land_mons": {
+        "encounter_rate": 5,
+        "mons": [
+          {
+            "min_level": 40,
+            "max_level": 40,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 37,
+            "max_level": 37,
+            "species": "SPECIES_ZUBAT"
+          },
+          {
+            "min_level": 44,
+            "max_level": 44,
+            "species": "SPECIES_HAUNTER"
+          },
+          {
+            "min_level": 46,
+            "max_level": 46,
+            "species": "SPECIES_HAUNTER"
+          },
+          {
+            "min_level": 41,
+            "max_level": 41,
+            "species": "SPECIES_GOLBAT"
+          },
+          {
+            "min_level": 15,
+            "max_level": 15,
+            "species": "SPECIES_MISDREAVUS"
+          },
+          {
+            "min_level": 20,
+            "max_level": 20,
+            "species": "SPECIES_MISDREAVUS"
+          },
+          {
+            "min_level": 48,
+            "max_level": 48,
+            "species": "SPECIES_HAUNTER"
+          },
+          {
+            "min_level": 50,
+            "max_level": 50,
+            "species": "SPECIES_HAUNTER"
+          },
+          {
+            "min_level": 22,
+            "max_level": 22,
+            "species": "SPECIES_MISDREAVUS"
+          },
+          {
+            "min_level": 52,
+            "max_level": 52,
+            "species": "SPECIES_HAUNTER"
+          },
+          {
+            "min_level": 22,
+            "max_level": 22,
+            "species": "SPECIES_MISDREAVUS"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "species_constant": "SPECIES_PANGORO",
+  "family_constant": "P_FAMILY_PANCHAM",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "124"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "78"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "58"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "69"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "71"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_FIGHTING, TYPE_DARK)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "65"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "173"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_MENTAL_HERB"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "25"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_IRON_FIST, ABILITY_MOLD_BREAKER, ABILITY_SCRAPPY }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_WHITE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Pangoro\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_PANGORO"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_PANGORO"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Daunting\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "21"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "1360"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It boasts superb physical strength.\\n\"\n\"Those who wish to become Pangoro's\\n\"\n\"Trainer have no choice but to converse\\n\"\n\"with their fists.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "365"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "7"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Pangoro"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(1, 8),\nANIMCMD_FRAME(0, 8),\nANIMCMD_FRAME(1, 8),\nANIMCMD_FRAME(0, 15),\nANIMCMD_FRAME(1, 20),\nANIMCMD_FRAME(0, 10),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_BACK_AND_LUNGE"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Pangoro"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_V_SHAKE_LOW"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Pangoro"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Pangoro"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Pangoro"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-2, 13, SHADOW_SIZE_XL_BATTLE_ONLY",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Pangoro",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Pangoro,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_Pangoro,\ngShinyOverworldPalette_Pangoro",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sPangoroLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sPangoroTeachableLearnset"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_VIVILLON_HIGH_PLAINS",
+  "family_constant": "P_FAMILY_SCATTERBUG",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "VIVILLON_MISC_INFO",
+      "args": "HighPlains, BODY_COLOR_BROWN, 0",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Its pattern depends on the climate and\\n\"\n\"topography of the land it was born in.\\n\"\n\"This form is from lands with little rain.\\n\"\n\"It scatters toxic color scales in battle.\")"
+    }
+  ]
+}

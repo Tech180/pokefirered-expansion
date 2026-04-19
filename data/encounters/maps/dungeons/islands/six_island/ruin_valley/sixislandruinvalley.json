@@ -1,0 +1,313 @@
+{
+  "group_label": "gWildMonHeaders",
+  "encounters": [
+    {
+      "map": "MAP_SIX_ISLAND_RUIN_VALLEY",
+      "base_label": "sSixIslandRuinValley_FireRed",
+      "land_mons": {
+        "encounter_rate": 21,
+        "mons": [
+          {
+            "min_level": 15,
+            "max_level": 15,
+            "species": "SPECIES_NATU"
+          },
+          {
+            "min_level": 44,
+            "max_level": 44,
+            "species": "SPECIES_SPEAROW"
+          },
+          {
+            "min_level": 18,
+            "max_level": 18,
+            "species": "SPECIES_YANMA"
+          },
+          {
+            "min_level": 15,
+            "max_level": 15,
+            "species": "SPECIES_WOOPER"
+          },
+          {
+            "min_level": 49,
+            "max_level": 49,
+            "species": "SPECIES_FEAROW"
+          },
+          {
+            "min_level": 43,
+            "max_level": 43,
+            "species": "SPECIES_MEOWTH"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_WOBBUFFET"
+          },
+          {
+            "min_level": 41,
+            "max_level": 41,
+            "species": "SPECIES_PSYDUCK"
+          },
+          {
+            "min_level": 20,
+            "max_level": 20,
+            "species": "SPECIES_NATU"
+          },
+          {
+            "min_level": 49,
+            "max_level": 49,
+            "species": "SPECIES_PERSIAN"
+          },
+          {
+            "min_level": 20,
+            "max_level": 20,
+            "species": "SPECIES_NATU"
+          },
+          {
+            "min_level": 52,
+            "max_level": 52,
+            "species": "SPECIES_PERSIAN"
+          }
+        ]
+      },
+      "water_mons": {
+        "encounter_rate": 2,
+        "mons": [
+          {
+            "min_level": 5,
+            "max_level": 20,
+            "species": "SPECIES_WOOPER"
+          },
+          {
+            "min_level": 10,
+            "max_level": 20,
+            "species": "SPECIES_WOOPER"
+          },
+          {
+            "min_level": 15,
+            "max_level": 25,
+            "species": "SPECIES_WOOPER"
+          },
+          {
+            "min_level": 20,
+            "max_level": 25,
+            "species": "SPECIES_WOOPER"
+          },
+          {
+            "min_level": 20,
+            "max_level": 25,
+            "species": "SPECIES_WOOPER"
+          }
+        ]
+      },
+      "fishing_mons": {
+        "encounter_rate": 20,
+        "mons": [
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_MAGIKARP"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_MAGIKARP"
+          },
+          {
+            "min_level": 5,
+            "max_level": 15,
+            "species": "SPECIES_POLIWAG"
+          },
+          {
+            "min_level": 5,
+            "max_level": 15,
+            "species": "SPECIES_MAGIKARP"
+          },
+          {
+            "min_level": 5,
+            "max_level": 15,
+            "species": "SPECIES_GOLDEEN"
+          },
+          {
+            "min_level": 15,
+            "max_level": 25,
+            "species": "SPECIES_POLIWAG"
+          },
+          {
+            "min_level": 20,
+            "max_level": 30,
+            "species": "SPECIES_POLIWHIRL"
+          },
+          {
+            "min_level": 15,
+            "max_level": 25,
+            "species": "SPECIES_GYARADOS"
+          },
+          {
+            "min_level": 15,
+            "max_level": 25,
+            "species": "SPECIES_PSYDUCK"
+          },
+          {
+            "min_level": 25,
+            "max_level": 35,
+            "species": "SPECIES_PSYDUCK"
+          }
+        ]
+      }
+    },
+    {
+      "map": "MAP_SIX_ISLAND_RUIN_VALLEY",
+      "base_label": "sSixIslandRuinValley_LeafGreen",
+      "land_mons": {
+        "encounter_rate": 21,
+        "mons": [
+          {
+            "min_level": 15,
+            "max_level": 15,
+            "species": "SPECIES_NATU"
+          },
+          {
+            "min_level": 44,
+            "max_level": 44,
+            "species": "SPECIES_SPEAROW"
+          },
+          {
+            "min_level": 18,
+            "max_level": 18,
+            "species": "SPECIES_YANMA"
+          },
+          {
+            "min_level": 15,
+            "max_level": 15,
+            "species": "SPECIES_MARILL"
+          },
+          {
+            "min_level": 49,
+            "max_level": 49,
+            "species": "SPECIES_FEAROW"
+          },
+          {
+            "min_level": 43,
+            "max_level": 43,
+            "species": "SPECIES_MEOWTH"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_WOBBUFFET"
+          },
+          {
+            "min_level": 41,
+            "max_level": 41,
+            "species": "SPECIES_SLOWPOKE"
+          },
+          {
+            "min_level": 20,
+            "max_level": 20,
+            "species": "SPECIES_NATU"
+          },
+          {
+            "min_level": 49,
+            "max_level": 49,
+            "species": "SPECIES_PERSIAN"
+          },
+          {
+            "min_level": 20,
+            "max_level": 20,
+            "species": "SPECIES_NATU"
+          },
+          {
+            "min_level": 52,
+            "max_level": 52,
+            "species": "SPECIES_PERSIAN"
+          }
+        ]
+      },
+      "water_mons": {
+        "encounter_rate": 2,
+        "mons": [
+          {
+            "min_level": 5,
+            "max_level": 20,
+            "species": "SPECIES_MARILL"
+          },
+          {
+            "min_level": 10,
+            "max_level": 20,
+            "species": "SPECIES_MARILL"
+          },
+          {
+            "min_level": 15,
+            "max_level": 25,
+            "species": "SPECIES_MARILL"
+          },
+          {
+            "min_level": 20,
+            "max_level": 25,
+            "species": "SPECIES_MARILL"
+          },
+          {
+            "min_level": 20,
+            "max_level": 25,
+            "species": "SPECIES_MARILL"
+          }
+        ]
+      },
+      "fishing_mons": {
+        "encounter_rate": 20,
+        "mons": [
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_MAGIKARP"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_MAGIKARP"
+          },
+          {
+            "min_level": 5,
+            "max_level": 15,
+            "species": "SPECIES_POLIWAG"
+          },
+          {
+            "min_level": 5,
+            "max_level": 15,
+            "species": "SPECIES_MAGIKARP"
+          },
+          {
+            "min_level": 5,
+            "max_level": 15,
+            "species": "SPECIES_GOLDEEN"
+          },
+          {
+            "min_level": 15,
+            "max_level": 25,
+            "species": "SPECIES_POLIWAG"
+          },
+          {
+            "min_level": 20,
+            "max_level": 30,
+            "species": "SPECIES_POLIWHIRL"
+          },
+          {
+            "min_level": 15,
+            "max_level": 25,
+            "species": "SPECIES_GYARADOS"
+          },
+          {
+            "min_level": 15,
+            "max_level": 25,
+            "species": "SPECIES_SLOWPOKE"
+          },
+          {
+            "min_level": 25,
+            "max_level": 35,
+            "species": "SPECIES_SLOWPOKE"
+          }
+        ]
+      }
+    }
+  ]
+}

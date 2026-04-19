@@ -1,0 +1,183 @@
+{
+  "group_label": "gWildMonHeaders",
+  "encounters": [
+    {
+      "map": "MAP_FIVE_ISLAND",
+      "base_label": "sFiveIsland_FireRed",
+      "water_mons": {
+        "encounter_rate": 1,
+        "mons": [
+          {
+            "min_level": 5,
+            "max_level": 35,
+            "species": "SPECIES_TENTACOOL"
+          },
+          {
+            "min_level": 5,
+            "max_level": 15,
+            "species": "SPECIES_HOPPIP"
+          },
+          {
+            "min_level": 35,
+            "max_level": 40,
+            "species": "SPECIES_TENTACOOL"
+          },
+          {
+            "min_level": 35,
+            "max_level": 40,
+            "species": "SPECIES_TENTACRUEL"
+          },
+          {
+            "min_level": 35,
+            "max_level": 40,
+            "species": "SPECIES_TENTACRUEL"
+          }
+        ]
+      },
+      "fishing_mons": {
+        "encounter_rate": 10,
+        "mons": [
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_MAGIKARP"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_MAGIKARP"
+          },
+          {
+            "min_level": 5,
+            "max_level": 15,
+            "species": "SPECIES_HORSEA"
+          },
+          {
+            "min_level": 5,
+            "max_level": 15,
+            "species": "SPECIES_MAGIKARP"
+          },
+          {
+            "min_level": 5,
+            "max_level": 15,
+            "species": "SPECIES_HORSEA"
+          },
+          {
+            "min_level": 15,
+            "max_level": 25,
+            "species": "SPECIES_HORSEA"
+          },
+          {
+            "min_level": 15,
+            "max_level": 25,
+            "species": "SPECIES_SHELLDER"
+          },
+          {
+            "min_level": 15,
+            "max_level": 25,
+            "species": "SPECIES_GYARADOS"
+          },
+          {
+            "min_level": 25,
+            "max_level": 35,
+            "species": "SPECIES_SEADRA"
+          },
+          {
+            "min_level": 25,
+            "max_level": 35,
+            "species": "SPECIES_PSYDUCK"
+          }
+        ]
+      }
+    },
+    {
+      "map": "MAP_FIVE_ISLAND",
+      "base_label": "sFiveIsland_LeafGreen",
+      "water_mons": {
+        "encounter_rate": 1,
+        "mons": [
+          {
+            "min_level": 5,
+            "max_level": 35,
+            "species": "SPECIES_TENTACOOL"
+          },
+          {
+            "min_level": 5,
+            "max_level": 15,
+            "species": "SPECIES_HOPPIP"
+          },
+          {
+            "min_level": 35,
+            "max_level": 40,
+            "species": "SPECIES_TENTACOOL"
+          },
+          {
+            "min_level": 35,
+            "max_level": 40,
+            "species": "SPECIES_TENTACRUEL"
+          },
+          {
+            "min_level": 35,
+            "max_level": 40,
+            "species": "SPECIES_TENTACRUEL"
+          }
+        ]
+      },
+      "fishing_mons": {
+        "encounter_rate": 10,
+        "mons": [
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_MAGIKARP"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_MAGIKARP"
+          },
+          {
+            "min_level": 5,
+            "max_level": 15,
+            "species": "SPECIES_KRABBY"
+          },
+          {
+            "min_level": 5,
+            "max_level": 15,
+            "species": "SPECIES_MAGIKARP"
+          },
+          {
+            "min_level": 5,
+            "max_level": 15,
+            "species": "SPECIES_KRABBY"
+          },
+          {
+            "min_level": 15,
+            "max_level": 25,
+            "species": "SPECIES_KRABBY"
+          },
+          {
+            "min_level": 15,
+            "max_level": 25,
+            "species": "SPECIES_STARYU"
+          },
+          {
+            "min_level": 15,
+            "max_level": 25,
+            "species": "SPECIES_GYARADOS"
+          },
+          {
+            "min_level": 25,
+            "max_level": 35,
+            "species": "SPECIES_KINGLER"
+          },
+          {
+            "min_level": 25,
+            "max_level": 35,
+            "species": "SPECIES_SLOWPOKE"
+          }
+        ]
+      }
+    }
+  ]
+}

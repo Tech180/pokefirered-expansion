@@ -1,0 +1,110 @@
+{
+  "identifier": "TRAINER_ELITE_FOUR_LANCE_2",
+  "trainer_name": "LANCE",
+  "trainer_class": "TRAINER_CLASS_ELITE_FOUR",
+  "trainer_pic": "TRAINER_PIC_ELITE_FOUR_LANCE",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [
+    "ITEM_FULL_RESTORE"
+  ],
+  "party": [
+    {
+      "species": "SPECIES_GYARADOS",
+      "level": 68,
+      "moves": [
+        "MOVE_HYPER_BEAM",
+        "MOVE_DRAGON_DANCE",
+        "MOVE_EARTHQUAKE",
+        "MOVE_THUNDER_WAVE"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "SPECIES_DRAGONITE",
+      "level": 66,
+      "moves": [
+        "MOVE_HYPER_BEAM",
+        "MOVE_EARTHQUAKE",
+        "MOVE_DRAGON_CLAW",
+        "MOVE_FLAMETHROWER"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "SPECIES_KINGDRA",
+      "level": 66,
+      "moves": [
+        "MOVE_HYPER_BEAM",
+        "MOVE_DRAGON_DANCE",
+        "MOVE_SURF",
+        "MOVE_ICE_BEAM"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "SPECIES_AERODACTYL",
+      "level": 70,
+      "moves": [
+        "MOVE_HYPER_BEAM",
+        "MOVE_ANCIENT_POWER",
+        "MOVE_AERIAL_ACE",
+        "MOVE_EARTHQUAKE"
+      ],
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    },
+    {
+      "species": "SPECIES_DRAGONITE",
+      "level": 72,
+      "moves": [
+        "MOVE_HYPER_BEAM",
+        "MOVE_OUTRAGE",
+        "MOVE_THUNDERBOLT",
+        "MOVE_ICE_BEAM"
+      ],
+      "held_item": "ITEM_PERSIM_BERRY",
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      }
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "species_constant": "SPECIES_DONDOZO",
+  "family_constant": "P_FAMILY_DONDOZO",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "150"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "100"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "115"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "35"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "65"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "65"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_WATER)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "25"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "265"
+    },
+    {
+      "type": "field",
+      "name": "evYield_HP",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "40"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_WATER_2)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_UNAWARE, ABILITY_OBLIVIOUS, ABILITY_WATER_VEIL }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_BLUE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Dondozo\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_DONDOZO"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_DONDOZO"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Big Catfish\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "2200"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It treats Tatsugiri like its boss\\n\"\n\"and follows it loyally. Though\\n\"\n\"powerful, Dondozo is apparently not very\\n\"\n\"smart.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "356"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "17"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Dondozo"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "4"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Dondozo"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "11"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Dondozo"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Dondozo"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Dondozo"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-1, 8, SHADOW_SIZE_XL_BATTLE_ONLY",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Dondozo",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Dondozo,\nSIZE_64x64,\nSHADOW_SIZE_L,\nTRACKS_NONE,\nsAnimTable_Following,\ngOverworldPalette_Dondozo,\ngShinyOverworldPalette_Dondozo",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sDondozoLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sDondozoTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "eggMoveLearnset",
+      "value": "sDondozoEggMoveLearnset"
+    }
+  ]
+}

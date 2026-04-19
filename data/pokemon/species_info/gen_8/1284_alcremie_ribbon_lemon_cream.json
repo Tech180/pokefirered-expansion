@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_ALCREMIE_RIBBON_LEMON_CREAM",
+  "family_constant": "P_FAMILY_MILCERY",
+  "macro_call": "ALCREMIE_REGULAR_SPECIES_INFO(Ribbon,     LemonCream,   BODY_COLOR_YELLOW)"
+}

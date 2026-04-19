@@ -1,0 +1,267 @@
+{
+  "species_constant": "SPECIES_MAGNETON",
+  "family_constant": "P_FAMILY_MAGNEMITE",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "95"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "120"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "P_UPDATED_STATS >= GEN_2 ? 70 : 120"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_ELECTRIC, MAGNEMITE_FAMILY_TYPE2)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "60"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "(P_UPDATED_EXP_YIELDS >= GEN_5) ? 163 : 161"
+    },
+    {
+      "type": "field",
+      "name": "evYield_SpAttack",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_METAL_COAT"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_GENDERLESS"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "20"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_MINERAL)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_MAGNET_PULL, ABILITY_STURDY, ABILITY_ANALYTIC }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_GRAY"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Magneton\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_MAGNETON"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_MAGNETON"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Magnet\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "10"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "600"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"It is actually three Magnemite linked\\n\"\n\"by magnetism. It generates powerful radio\\n\"\n\"waves that raise temperatures by 3.6\\n\"\n\"degrees F within a 3,300-foot radius.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "292"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_Magneton"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(56, 48) : MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 8 : 7"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "ANIM_FRAMES(\nANIMCMD_FRAME(0, 14),\nANIMCMD_FRAME(1, 14),\nANIMCMD_FRAME(0, 14),\nANIMCMD_FRAME(1, 14),\nANIMCMD_FRAME(0, 14),\nANIMCMD_FRAME(1, 14),\nANIMCMD_FRAME(0, 14),\n)"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimId",
+      "value": "ANIM_FLASH_YELLOW"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 8 : 9"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_Magneton"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(48, 48) : MON_COORDS_SIZE(64, 56)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "P_GBA_STYLE_SPECIES_GFX ? 10 : 6"
+    },
+    {
+      "type": "field",
+      "name": "backAnimId",
+      "value": "BACK_ANIM_TRIANGLE_DOWN"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Magneton"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Magneton"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_Magneton"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 13, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Magneton",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_Magneton,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_NONE,\nsAnimTable_Following,\ngOverworldPalette_Magneton,\ngShinyOverworldPalette_Magneton",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sMagnetonLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sMagnetonTeachableLearnset"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#if P_GEN_4_CROSS_EVOS"
+    },
+    {
+      "type": "field",
+      "name": "evolutions",
+      "value": "EVOLUTION({EVO_LEVEL, 0, SPECIES_MAGNEZONE, CONDITIONS({IF_IN_MAPSEC, MAPSEC_NEW_MAUVILLE})},\n{EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_MAGNEZONE})"
+    },
+    {
+      "type": "preprocessor",
+      "line": "#endif"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_FLORGES_WHITE",
+  "family_constant": "P_FAMILY_FLABEBE",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "FLORGES_MISC_INFO",
+      "args": "White, 0",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"A flower garden made by a white-\\n\"\n\"flowered Florges will be beautifully\\n\"\n\"decorated with flowering plants of\\n\"\n\"many different colors.\")"
+    }
+  ]
+}

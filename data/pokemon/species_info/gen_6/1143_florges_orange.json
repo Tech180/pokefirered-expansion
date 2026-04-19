@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_FLORGES_ORANGE",
+  "family_constant": "P_FAMILY_FLABEBE",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "FLORGES_MISC_INFO",
+      "args": "Orange, 0",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"In times long past, castle\\n\"\n\"governors would lovingly raise Florges to\\n\"\n\"care for their castles' exquisite\\n\"\n\"gardens.\")"
+    }
+  ]
+}

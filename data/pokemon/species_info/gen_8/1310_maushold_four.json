@@ -1,0 +1,239 @@
+{
+  "species_constant": "SPECIES_MAUSHOLD_FOUR",
+  "family_constant": "P_FAMILY_TANDEMAUS",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "74"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "70"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "111"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "65"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_NORMAL)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "75"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "165"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Speed",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_GENDERLESS"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "10"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_FAIRY)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_FRIEND_GUARD, ABILITY_CHEEK_POUCH, ABILITY_TECHNICIAN }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_WHITE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Maushold\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_MAUSHOLD_FOUR"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_MAUSHOLD"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Family\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "28"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"The larger pair protects the little\\n\"\n\"ones during battles. When facing\\n\"\n\"strong opponents, the whole group\\n\"\n\"will join the fight.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "356"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "17"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_MausholdFour"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_MausholdFour"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "15"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_Maushold"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_Maushold"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_MausholdFour"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NORMAL"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, -1, SHADOW_SIZE_L",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "MausholdFour",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_MausholdFour,\nSIZE_32x32,\nSHADOW_SIZE_S,\nTRACKS_FOOT,\nsAnimTable_Following,\ngOverworldPalette_MausholdFour,\ngShinyOverworldPalette_MausholdFour",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sMausholdLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sMausholdTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sMausholdFormSpeciesIdTable"
+    }
+  ]
+}

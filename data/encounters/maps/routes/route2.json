@@ -1,0 +1,143 @@
+{
+  "group_label": "gWildMonHeaders",
+  "encounters": [
+    {
+      "map": "MAP_ROUTE2",
+      "base_label": "sRoute2_FireRed",
+      "land_mons": {
+        "encounter_rate": 21,
+        "mons": [
+          {
+            "min_level": 3,
+            "max_level": 3,
+            "species": "SPECIES_RATTATA"
+          },
+          {
+            "min_level": 3,
+            "max_level": 3,
+            "species": "SPECIES_PIDGEY"
+          },
+          {
+            "min_level": 4,
+            "max_level": 4,
+            "species": "SPECIES_RATTATA"
+          },
+          {
+            "min_level": 4,
+            "max_level": 4,
+            "species": "SPECIES_PIDGEY"
+          },
+          {
+            "min_level": 2,
+            "max_level": 2,
+            "species": "SPECIES_RATTATA"
+          },
+          {
+            "min_level": 2,
+            "max_level": 2,
+            "species": "SPECIES_PIDGEY"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_RATTATA"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_PIDGEY"
+          },
+          {
+            "min_level": 4,
+            "max_level": 4,
+            "species": "SPECIES_CATERPIE"
+          },
+          {
+            "min_level": 4,
+            "max_level": 4,
+            "species": "SPECIES_WEEDLE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_CATERPIE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_WEEDLE"
+          }
+        ]
+      }
+    },
+    {
+      "map": "MAP_ROUTE2",
+      "base_label": "sRoute2_LeafGreen",
+      "land_mons": {
+        "encounter_rate": 21,
+        "mons": [
+          {
+            "min_level": 3,
+            "max_level": 3,
+            "species": "SPECIES_RATTATA"
+          },
+          {
+            "min_level": 3,
+            "max_level": 3,
+            "species": "SPECIES_PIDGEY"
+          },
+          {
+            "min_level": 4,
+            "max_level": 4,
+            "species": "SPECIES_RATTATA"
+          },
+          {
+            "min_level": 4,
+            "max_level": 4,
+            "species": "SPECIES_PIDGEY"
+          },
+          {
+            "min_level": 2,
+            "max_level": 2,
+            "species": "SPECIES_RATTATA"
+          },
+          {
+            "min_level": 2,
+            "max_level": 2,
+            "species": "SPECIES_PIDGEY"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_RATTATA"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_PIDGEY"
+          },
+          {
+            "min_level": 4,
+            "max_level": 4,
+            "species": "SPECIES_CATERPIE"
+          },
+          {
+            "min_level": 4,
+            "max_level": 4,
+            "species": "SPECIES_WEEDLE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_CATERPIE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_WEEDLE"
+          }
+        ]
+      }
+    }
+  ]
+}

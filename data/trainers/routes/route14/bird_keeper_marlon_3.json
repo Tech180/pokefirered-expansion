@@ -1,0 +1,54 @@
+{
+  "identifier": "TRAINER_BIRD_KEEPER_MARLON_3",
+  "trainer_name": "MARLON",
+  "trainer_class": "TRAINER_CLASS_BIRD_KEEPER",
+  "trainer_pic": "TRAINER_PIC_BIRD_KEEPER",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_COOL",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_FEAROW",
+      "level": 48,
+      "moves": [],
+      "ivs": {
+        "hp": 9,
+        "atk": 9,
+        "def": 9,
+        "spa": 9,
+        "spd": 9,
+        "spe": 9
+      }
+    },
+    {
+      "species": "SPECIES_DODRIO",
+      "level": 48,
+      "moves": [],
+      "ivs": {
+        "hp": 9,
+        "atk": 9,
+        "def": 9,
+        "spa": 9,
+        "spd": 9,
+        "spe": 9
+      }
+    },
+    {
+      "species": "SPECIES_FEAROW",
+      "level": 48,
+      "moves": [],
+      "ivs": {
+        "hp": 9,
+        "atk": 9,
+        "def": 9,
+        "spa": 9,
+        "spd": 9,
+        "spe": 9
+      }
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "group_label": "gWildMonHeaders",
+  "encounters": [
+    {
+      "map": "MAP_MT_EMBER_SUMMIT_PATH_3F",
+      "base_label": "sMtEmberSummitPath3F_FireRed",
+      "land_mons": {
+        "encounter_rate": 7,
+        "mons": [
+          {
+            "min_level": 33,
+            "max_level": 33,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 35,
+            "max_level": 35,
+            "species": "SPECIES_MACHOP"
+          },
+          {
+            "min_level": 29,
+            "max_level": 29,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 31,
+            "max_level": 31,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 31,
+            "max_level": 31,
+            "species": "SPECIES_MACHOP"
+          },
+          {
+            "min_level": 33,
+            "max_level": 33,
+            "species": "SPECIES_MACHOP"
+          },
+          {
+            "min_level": 35,
+            "max_level": 35,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 37,
+            "max_level": 37,
+            "species": "SPECIES_MACHOP"
+          },
+          {
+            "min_level": 37,
+            "max_level": 37,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 39,
+            "max_level": 39,
+            "species": "SPECIES_MACHOP"
+          },
+          {
+            "min_level": 37,
+            "max_level": 37,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 39,
+            "max_level": 39,
+            "species": "SPECIES_MACHOP"
+          }
+        ]
+      }
+    },
+    {
+      "map": "MAP_MT_EMBER_SUMMIT_PATH_3F",
+      "base_label": "sMtEmberSummitPath3F_LeafGreen",
+      "land_mons": {
+        "encounter_rate": 7,
+        "mons": [
+          {
+            "min_level": 33,
+            "max_level": 33,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 35,
+            "max_level": 35,
+            "species": "SPECIES_MACHOP"
+          },
+          {
+            "min_level": 29,
+            "max_level": 29,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 31,
+            "max_level": 31,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 31,
+            "max_level": 31,
+            "species": "SPECIES_MACHOP"
+          },
+          {
+            "min_level": 33,
+            "max_level": 33,
+            "species": "SPECIES_MACHOP"
+          },
+          {
+            "min_level": 35,
+            "max_level": 35,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 37,
+            "max_level": 37,
+            "species": "SPECIES_MACHOP"
+          },
+          {
+            "min_level": 37,
+            "max_level": 37,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 39,
+            "max_level": 39,
+            "species": "SPECIES_MACHOP"
+          },
+          {
+            "min_level": 37,
+            "max_level": 37,
+            "species": "SPECIES_GEODUDE"
+          },
+          {
+            "min_level": 39,
+            "max_level": 39,
+            "species": "SPECIES_MACHOP"
+          }
+        ]
+      }
+    }
+  ]
+}

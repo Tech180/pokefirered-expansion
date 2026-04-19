@@ -1,0 +1,143 @@
+{
+  "group_label": "gWildMonHeaders",
+  "encounters": [
+    {
+      "map": "MAP_POKEMON_TOWER_4F",
+      "base_label": "sPokemonTower4F_FireRed",
+      "land_mons": {
+        "encounter_rate": 4,
+        "mons": [
+          {
+            "min_level": 15,
+            "max_level": 15,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 16,
+            "max_level": 16,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 17,
+            "max_level": 17,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 13,
+            "max_level": 13,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 14,
+            "max_level": 14,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 18,
+            "max_level": 18,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 20,
+            "max_level": 20,
+            "species": "SPECIES_HAUNTER"
+          },
+          {
+            "min_level": 15,
+            "max_level": 15,
+            "species": "SPECIES_CUBONE"
+          },
+          {
+            "min_level": 17,
+            "max_level": 17,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 17,
+            "max_level": 17,
+            "species": "SPECIES_CUBONE"
+          },
+          {
+            "min_level": 17,
+            "max_level": 17,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 19,
+            "max_level": 19,
+            "species": "SPECIES_GASTLY"
+          }
+        ]
+      }
+    },
+    {
+      "map": "MAP_POKEMON_TOWER_4F",
+      "base_label": "sPokemonTower4F_LeafGreen",
+      "land_mons": {
+        "encounter_rate": 4,
+        "mons": [
+          {
+            "min_level": 15,
+            "max_level": 15,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 16,
+            "max_level": 16,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 17,
+            "max_level": 17,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 13,
+            "max_level": 13,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 14,
+            "max_level": 14,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 18,
+            "max_level": 18,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 20,
+            "max_level": 20,
+            "species": "SPECIES_HAUNTER"
+          },
+          {
+            "min_level": 15,
+            "max_level": 15,
+            "species": "SPECIES_CUBONE"
+          },
+          {
+            "min_level": 17,
+            "max_level": 17,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 17,
+            "max_level": 17,
+            "species": "SPECIES_CUBONE"
+          },
+          {
+            "min_level": 17,
+            "max_level": 17,
+            "species": "SPECIES_GASTLY"
+          },
+          {
+            "min_level": 19,
+            "max_level": 19,
+            "species": "SPECIES_GASTLY"
+          }
+        ]
+      }
+    }
+  ]
+}

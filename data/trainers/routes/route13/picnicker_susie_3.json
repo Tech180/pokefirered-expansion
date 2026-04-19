@@ -1,0 +1,80 @@
+{
+  "identifier": "TRAINER_PICNICKER_SUSIE_3",
+  "trainer_name": "SUSIE",
+  "trainer_class": "TRAINER_CLASS_PICNICKER",
+  "trainer_pic": "TRAINER_PIC_PICNICKER",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_GIRL",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_PIDGEOTTO",
+      "level": 47,
+      "moves": [],
+      "ivs": {
+        "hp": 9,
+        "atk": 9,
+        "def": 9,
+        "spa": 9,
+        "spd": 9,
+        "spe": 9
+      }
+    },
+    {
+      "species": "SPECIES_PERSIAN",
+      "level": 47,
+      "moves": [],
+      "ivs": {
+        "hp": 9,
+        "atk": 9,
+        "def": 9,
+        "spa": 9,
+        "spd": 9,
+        "spe": 9
+      }
+    },
+    {
+      "species": "SPECIES_RATICATE",
+      "level": 47,
+      "moves": [],
+      "ivs": {
+        "hp": 9,
+        "atk": 9,
+        "def": 9,
+        "spa": 9,
+        "spd": 9,
+        "spe": 9
+      }
+    },
+    {
+      "species": "SPECIES_PIKACHU",
+      "level": 47,
+      "moves": [],
+      "ivs": {
+        "hp": 9,
+        "atk": 9,
+        "def": 9,
+        "spa": 9,
+        "spd": 9,
+        "spe": 9
+      }
+    },
+    {
+      "species": "SPECIES_PERSIAN",
+      "level": 47,
+      "moves": [],
+      "ivs": {
+        "hp": 9,
+        "atk": 9,
+        "def": 9,
+        "spa": 9,
+        "spd": 9,
+        "spe": 9
+      }
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "identifier": "TRAINER_ELITE_FOUR_AGATHA",
+  "trainer_name": "AGATHA",
+  "trainer_class": "TRAINER_CLASS_ELITE_FOUR",
+  "trainer_pic": "TRAINER_PIC_ELITE_FOUR_AGATHA",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [
+    "ITEM_FULL_RESTORE"
+  ],
+  "party": [
+    {
+      "species": "SPECIES_GENGAR",
+      "level": 54,
+      "moves": [
+        "MOVE_SHADOW_PUNCH",
+        "MOVE_CONFUSE_RAY",
+        "MOVE_TOXIC",
+        "MOVE_DOUBLE_TEAM"
+      ],
+      "ivs": {
+        "hp": 30,
+        "atk": 30,
+        "def": 30,
+        "spa": 30,
+        "spd": 30,
+        "spe": 30
+      }
+    },
+    {
+      "species": "SPECIES_GOLBAT",
+      "level": 54,
+      "moves": [
+        "MOVE_CONFUSE_RAY",
+        "MOVE_POISON_FANG",
+        "MOVE_AIR_CUTTER",
+        "MOVE_BITE"
+      ],
+      "ivs": {
+        "hp": 30,
+        "atk": 30,
+        "def": 30,
+        "spa": 30,
+        "spd": 30,
+        "spe": 30
+      }
+    },
+    {
+      "species": "SPECIES_HAUNTER",
+      "level": 53,
+      "moves": [
+        "MOVE_HYPNOSIS",
+        "MOVE_DREAM_EATER",
+        "MOVE_CURSE",
+        "MOVE_MEAN_LOOK"
+      ],
+      "ivs": {
+        "hp": 30,
+        "atk": 30,
+        "def": 30,
+        "spa": 30,
+        "spd": 30,
+        "spe": 30
+      }
+    },
+    {
+      "species": "SPECIES_ARBOK",
+      "level": 56,
+      "moves": [
+        "MOVE_SLUDGE_BOMB",
+        "MOVE_SCREECH",
+        "MOVE_IRON_TAIL",
+        "MOVE_BITE"
+      ],
+      "ivs": {
+        "hp": 30,
+        "atk": 30,
+        "def": 30,
+        "spa": 30,
+        "spd": 30,
+        "spe": 30
+      }
+    },
+    {
+      "species": "SPECIES_GENGAR",
+      "level": 58,
+      "moves": [
+        "MOVE_SHADOW_BALL",
+        "MOVE_SLUDGE_BOMB",
+        "MOVE_HYPNOSIS",
+        "MOVE_NIGHTMARE"
+      ],
+      "held_item": "ITEM_SITRUS_BERRY",
+      "ivs": {
+        "hp": 30,
+        "atk": 30,
+        "def": 30,
+        "spa": 30,
+        "spd": 30,
+        "spe": 30
+      }
+    }
+  ]
+}

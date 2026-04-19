@@ -1,0 +1,55 @@
+{
+  "identifier": "TRAINER_PKMN_RANGER_NICOLAS",
+  "trainer_name": "NICOLAS",
+  "trainer_class": "TRAINER_CLASS_PKMN_RANGER",
+  "trainer_pic": "TRAINER_PIC_POKEMON_RANGER_M",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_COOL",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [
+    "ITEM_FULL_RESTORE"
+  ],
+  "party": [
+    {
+      "species": "SPECIES_WEEPINBELL",
+      "level": 51,
+      "moves": [
+        "MOVE_RAZOR_LEAF",
+        "MOVE_ACID",
+        "MOVE_SWEET_SCENT",
+        "MOVE_WRAP"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_VICTREEBEL",
+      "level": 51,
+      "moves": [
+        "MOVE_RAZOR_LEAF",
+        "MOVE_ACID",
+        "MOVE_SLEEP_POWDER",
+        "MOVE_STUN_SPORE"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    }
+  ]
+}

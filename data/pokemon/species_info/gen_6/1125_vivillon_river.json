@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_VIVILLON_RIVER",
+  "family_constant": "P_FAMILY_SCATTERBUG",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "VIVILLON_MISC_INFO",
+      "args": "River, BODY_COLOR_BROWN, 2",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Its pattern depends on the climate and\\n\"\n\"topography of the land it was born in. This\\n\"\n\"form is from lands where large rivers flow.\\n\"\n\"It scatters toxic color scales in battle.\")"
+    }
+  ]
+}

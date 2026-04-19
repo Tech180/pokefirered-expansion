@@ -1,0 +1,248 @@
+{
+  "species_constant": "SPECIES_PIKACHU_GMAX",
+  "family_constant": "P_FAMILY_PIKACHU",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "35"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "55"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "PIKACHU_DEFENSE"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "90"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "PIKACHU_SP_DEF"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_ELECTRIC)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "190"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "PIKACHU_EXP_YIELD"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Speed",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_LIGHT_BALL"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "PERCENT_FEMALE(50)"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "10"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "STANDARD_FRIENDSHIP"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_MEDIUM_FAST"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_FAIRY)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_STATIC, ABILITY_NONE, ABILITY_LIGHTNING_ROD }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_YELLOW"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Pikachu\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_PIKACHU"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_PIKACHU"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Mouse\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "210"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"When it smashes its opponents with\\n\"\n\"its bolt-shaped tail, it delivers a\\n\"\n\"surge of electricity equivalent to a\\n\"\n\"lightning strike.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "479"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "19"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_PikachuGmax"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_PikachuGmax"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_PikachuGmax"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_PikachuGmax"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_PikachuGmax"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-3, 12, SHADOW_SIZE_XL_BATTLE_ONLY",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "Pikachu",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isGigantamax",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sPikachuLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sPikachuTeachableLearnset"
+    },
+    {
+      "type": "field",
+      "name": "formSpeciesIdTable",
+      "value": "sPikachuFormSpeciesIdTable"
+    },
+    {
+      "type": "field",
+      "name": "formChangeTable",
+      "value": "sPikachuFormChangeTable"
+    }
+  ]
+}

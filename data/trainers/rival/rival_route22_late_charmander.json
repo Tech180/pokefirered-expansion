@@ -1,0 +1,125 @@
+{
+  "identifier": "TRAINER_RIVAL_ROUTE22_LATE_CHARMANDER",
+  "trainer_name": "TERRY",
+  "trainer_class": "TRAINER_CLASS_RIVAL_LATE",
+  "trainer_pic": "TRAINER_PIC_RIVAL_LATE",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_MALE",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [],
+  "party": [
+    {
+      "species": "SPECIES_PIDGEOT",
+      "level": 47,
+      "moves": [
+        "MOVE_FEATHER_DANCE",
+        "MOVE_WING_ATTACK",
+        "MOVE_GUST",
+        "MOVE_QUICK_ATTACK"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      }
+    },
+    {
+      "species": "SPECIES_RHYHORN",
+      "level": 45,
+      "moves": [
+        "MOVE_TAKE_DOWN",
+        "MOVE_HORN_DRILL",
+        "MOVE_ROCK_BLAST",
+        "MOVE_FURY_ATTACK"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      }
+    },
+    {
+      "species": "SPECIES_EXEGGCUTE",
+      "level": 45,
+      "moves": [
+        "MOVE_SOLAR_BEAM",
+        "MOVE_SLEEP_POWDER",
+        "MOVE_POISON_POWDER",
+        "MOVE_STUN_SPORE"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      }
+    },
+    {
+      "species": "SPECIES_GYARADOS",
+      "level": 45,
+      "moves": [
+        "MOVE_HYDRO_PUMP",
+        "MOVE_TWISTER",
+        "MOVE_LEER",
+        "MOVE_RAIN_DANCE"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      }
+    },
+    {
+      "species": "SPECIES_ALAKAZAM",
+      "level": 47,
+      "moves": [
+        "MOVE_PSYCHIC",
+        "MOVE_CALM_MIND",
+        "MOVE_FUTURE_SIGHT",
+        "MOVE_DISABLE"
+      ],
+      "ivs": {
+        "hp": 18,
+        "atk": 18,
+        "def": 18,
+        "spa": 18,
+        "spd": 18,
+        "spe": 18
+      }
+    },
+    {
+      "species": "SPECIES_CHARIZARD",
+      "level": 53,
+      "moves": [
+        "MOVE_FLAMETHROWER",
+        "MOVE_WING_ATTACK",
+        "MOVE_SLASH",
+        "MOVE_SCARY_FACE"
+      ],
+      "ivs": {
+        "hp": 30,
+        "atk": 30,
+        "def": 30,
+        "spa": 30,
+        "spd": 30,
+        "spe": 30
+      }
+    }
+  ]
+}

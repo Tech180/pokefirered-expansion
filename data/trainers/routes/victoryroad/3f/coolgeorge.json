@@ -1,0 +1,109 @@
+{
+  "identifier": "TRAINER_COOLTRAINER_GEORGE",
+  "trainer_name": "GEORGE",
+  "trainer_class": "TRAINER_CLASS_COOLTRAINER",
+  "trainer_pic": "TRAINER_PIC_COOLTRAINER_M",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_COOL",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [
+    "ITEM_HYPER_POTION"
+  ],
+  "party": [
+    {
+      "species": "SPECIES_EXEGGUTOR",
+      "level": 42,
+      "moves": [
+        "MOVE_EGG_BOMB",
+        "MOVE_CONFUSION",
+        "MOVE_STUN_SPORE",
+        "MOVE_SLEEP_POWDER"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_SANDSLASH",
+      "level": 42,
+      "moves": [
+        "MOVE_FURY_SWIPES",
+        "MOVE_SWIFT",
+        "MOVE_POISON_STING",
+        "MOVE_SAND_ATTACK"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_CLOYSTER",
+      "level": 42,
+      "moves": [
+        "MOVE_SPIKE_CANNON",
+        "MOVE_SPIKES",
+        "MOVE_AURORA_BEAM",
+        "MOVE_SUPERSONIC"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_ELECTRODE",
+      "level": 42,
+      "moves": [
+        "MOVE_SPARK",
+        "MOVE_SONIC_BOOM",
+        "MOVE_SCREECH",
+        "MOVE_LIGHT_SCREEN"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_ARCANINE",
+      "level": 42,
+      "moves": [
+        "MOVE_FLAME_WHEEL",
+        "MOVE_ROAR",
+        "MOVE_BITE",
+        "MOVE_TAKE_DOWN"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    }
+  ]
+}

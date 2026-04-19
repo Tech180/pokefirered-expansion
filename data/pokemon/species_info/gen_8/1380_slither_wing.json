@@ -1,0 +1,244 @@
+{
+  "species_constant": "SPECIES_SLITHER_WING",
+  "family_constant": "P_FAMILY_SLITHER_WING",
+  "entries": [
+    {
+      "type": "field",
+      "name": "baseHP",
+      "value": "85"
+    },
+    {
+      "type": "field",
+      "name": "baseAttack",
+      "value": "135"
+    },
+    {
+      "type": "field",
+      "name": "baseDefense",
+      "value": "79"
+    },
+    {
+      "type": "field",
+      "name": "baseSpeed",
+      "value": "81"
+    },
+    {
+      "type": "field",
+      "name": "baseSpAttack",
+      "value": "85"
+    },
+    {
+      "type": "field",
+      "name": "baseSpDefense",
+      "value": "105"
+    },
+    {
+      "type": "field",
+      "name": "types",
+      "value": "MON_TYPES(TYPE_BUG, TYPE_FIGHTING)"
+    },
+    {
+      "type": "field",
+      "name": "catchRate",
+      "value": "30"
+    },
+    {
+      "type": "field",
+      "name": "expYield",
+      "value": "285"
+    },
+    {
+      "type": "field",
+      "name": "evYield_Attack",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "itemRare",
+      "value": "ITEM_BOOSTER_ENERGY"
+    },
+    {
+      "type": "field",
+      "name": "genderRatio",
+      "value": "MON_GENDERLESS"
+    },
+    {
+      "type": "field",
+      "name": "eggCycles",
+      "value": "50"
+    },
+    {
+      "type": "field",
+      "name": "friendship",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "growthRate",
+      "value": "GROWTH_SLOW"
+    },
+    {
+      "type": "field",
+      "name": "eggGroups",
+      "value": "MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED)"
+    },
+    {
+      "type": "field",
+      "name": "abilities",
+      "value": "{ ABILITY_PROTOSYNTHESIS, ABILITY_NONE, ABILITY_NONE }"
+    },
+    {
+      "type": "field",
+      "name": "bodyColor",
+      "value": "BODY_COLOR_WHITE"
+    },
+    {
+      "type": "field",
+      "name": "speciesName",
+      "value": "_(\"Slither Wing\")"
+    },
+    {
+      "type": "field",
+      "name": "cryId",
+      "value": "CRY_SLITHER_WING"
+    },
+    {
+      "type": "field",
+      "name": "natDexNum",
+      "value": "NATIONAL_DEX_SLITHER_WING"
+    },
+    {
+      "type": "field",
+      "name": "categoryName",
+      "value": "_(\"Paradox\")"
+    },
+    {
+      "type": "field",
+      "name": "height",
+      "value": "32"
+    },
+    {
+      "type": "field",
+      "name": "weight",
+      "value": "920"
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"This mysterious Pok\u00e9mon has some\\n\"\n\"similarities to a creature that an\\n\"\n\"old book introduced as Slither Wing.\")"
+    },
+    {
+      "type": "field",
+      "name": "pokemonScale",
+      "value": "356"
+    },
+    {
+      "type": "field",
+      "name": "pokemonOffset",
+      "value": "17"
+    },
+    {
+      "type": "field",
+      "name": "trainerScale",
+      "value": "256"
+    },
+    {
+      "type": "field",
+      "name": "trainerOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_SlitherWing"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_SlitherWing"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "5"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_SlitherWing"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_SlitherWing"
+    },
+    {
+      "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_SlitherWing"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "pokemonJumpType",
+      "value": "PKMN_JUMP_TYPE_NONE"
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-5, 13, SHADOW_SIZE_M",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "FOOTPRINT",
+      "args": "SlitherWing",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "OVERWORLD",
+      "args": "sPicTable_SlitherWing,\nSIZE_32x32,\nSHADOW_SIZE_M,\nTRACKS_SLITHER,\nsAnimTable_Following,\ngOverworldPalette_SlitherWing,\ngShinyOverworldPalette_SlitherWing",
+      "has_comma": false
+    },
+    {
+      "type": "field",
+      "name": "isParadox",
+      "value": "TRUE"
+    },
+    {
+      "type": "field",
+      "name": "levelUpLearnset",
+      "value": "sSlitherWingLevelUpLearnset"
+    },
+    {
+      "type": "field",
+      "name": "teachableLearnset",
+      "value": "sSlitherWingTeachableLearnset"
+    }
+  ]
+}

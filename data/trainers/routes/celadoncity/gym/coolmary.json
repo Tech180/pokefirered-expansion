@@ -1,0 +1,109 @@
+{
+  "identifier": "TRAINER_COOLTRAINER_MARY",
+  "trainer_name": "MARY",
+  "trainer_class": "TRAINER_CLASS_COOLTRAINER",
+  "trainer_pic": "TRAINER_PIC_COOLTRAINER_F",
+  "gender": "TRAINER_GENDER_MALE",
+  "encounter_music": "TRAINER_ENCOUNTER_MUSIC_COOL",
+  "battle_type": "TRAINER_BATTLE_TYPE_SINGLES",
+  "ai_flags": [
+    "AI_FLAG_CHECK_BAD_MOVE",
+    "AI_FLAG_TRY_TO_FAINT",
+    "AI_FLAG_CHECK_VIABILITY"
+  ],
+  "items": [
+    "ITEM_SUPER_POTION"
+  ],
+  "party": [
+    {
+      "species": "SPECIES_BELLSPROUT",
+      "level": 22,
+      "moves": [
+        "MOVE_WRAP",
+        "MOVE_STUN_SPORE",
+        "MOVE_POISON_POWDER",
+        "MOVE_GROWTH"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_ODDISH",
+      "level": 22,
+      "moves": [
+        "MOVE_POISON_POWDER",
+        "MOVE_STUN_SPORE",
+        "MOVE_ABSORB",
+        "MOVE_SWEET_SCENT"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_WEEPINBELL",
+      "level": 22,
+      "moves": [
+        "MOVE_VINE_WHIP",
+        "MOVE_STUN_SPORE",
+        "MOVE_POISON_POWDER",
+        "MOVE_GROWTH"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_GLOOM",
+      "level": 22,
+      "moves": [
+        "MOVE_ABSORB",
+        "MOVE_STUN_SPORE",
+        "MOVE_POISON_POWDER",
+        "MOVE_SWEET_SCENT"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    },
+    {
+      "species": "SPECIES_IVYSAUR",
+      "level": 22,
+      "moves": [
+        "MOVE_RAZOR_LEAF",
+        "MOVE_SLEEP_POWDER",
+        "MOVE_VINE_WHIP",
+        "MOVE_LEECH_SEED"
+      ],
+      "ivs": {
+        "hp": 12,
+        "atk": 12,
+        "def": 12,
+        "spa": 12,
+        "spd": 12,
+        "spe": 12
+      }
+    }
+  ]
+}

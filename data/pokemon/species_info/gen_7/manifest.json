@@ -1,0 +1,1296 @@
+[
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ROWLET",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ROWLET",
+        "filename": "0722_rowlet.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DARTRIX",
+        "filename": "0723_dartrix.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DECIDUEYE",
+        "filename": "0724_decidueye.json",
+        "gen": 7
+      },
+      {
+        "type": "raw",
+        "content": "#if P_HISUIAN_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DECIDUEYE_HISUI",
+        "filename": "1008_decidueye_hisui.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_HISUIAN_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_LITTEN",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_LITTEN",
+        "filename": "0725_litten.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_TORRACAT",
+        "filename": "0726_torracat.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_INCINEROAR",
+        "filename": "0727_incineroar.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_POPPLIO",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_POPPLIO",
+        "filename": "0728_popplio.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BRIONNE",
+        "filename": "0729_brionne.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_PRIMARINA",
+        "filename": "0730_primarina.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_PIKIPEK",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_PIKIPEK",
+        "filename": "0731_pikipek.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_TRUMBEAK",
+        "filename": "0732_trumbeak.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_TOUCANNON",
+        "filename": "0733_toucannon.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_YUNGOOS",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_YUNGOOS",
+        "filename": "0734_yungoos.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GUMSHOOS",
+        "filename": "0735_gumshoos.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GUMSHOOS_TOTEM",
+        "filename": "1477_gumshoos_totem.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_GRUBBIN",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_GRUBBIN",
+        "filename": "0736_grubbin.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CHARJABUG",
+        "filename": "0737_charjabug.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIKAVOLT",
+        "filename": "0738_vikavolt.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_VIKAVOLT_TOTEM",
+        "filename": "1478_vikavolt_totem.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CRABRAWLER",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CRABRAWLER",
+        "filename": "0739_crabrawler.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CRABOMINABLE",
+        "filename": "0740_crabominable.json",
+        "gen": 7
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_CRABOMINABLE_MEGA",
+        "filename": "1563_crabominable_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ORICORIO",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ORICORIO_BAILE",
+        "filename": "0741_oricorio_baile.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ORICORIO_POM_POM",
+        "filename": "1169_oricorio_pom_pom.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ORICORIO_PAU",
+        "filename": "1170_oricorio_pau.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ORICORIO_SENSU",
+        "filename": "1171_oricorio_sensu.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CUTIEFLY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CUTIEFLY",
+        "filename": "0742_cutiefly.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_RIBOMBEE",
+        "filename": "0743_ribombee.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_RIBOMBEE_TOTEM",
+        "filename": "1484_ribombee_totem.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ROCKRUFF",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ROCKRUFF",
+        "filename": "0744_rockruff.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ROCKRUFF_OWN_TEMPO",
+        "filename": "1172_rockruff_own_tempo.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LYCANROC_MIDDAY",
+        "filename": "0745_lycanroc_midday.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LYCANROC_MIDNIGHT",
+        "filename": "1173_lycanroc_midnight.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LYCANROC_DUSK",
+        "filename": "1174_lycanroc_dusk.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_WISHIWASHI",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_WISHIWASHI_SOLO",
+        "filename": "0746_wishiwashi_solo.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_WISHIWASHI_SCHOOL",
+        "filename": "1175_wishiwashi_school.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_MAREANIE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_MAREANIE",
+        "filename": "0747_mareanie.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_TOXAPEX",
+        "filename": "0748_toxapex.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_MUDBRAY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_MUDBRAY",
+        "filename": "0749_mudbray.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MUDSDALE",
+        "filename": "0750_mudsdale.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_DEWPIDER",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_DEWPIDER",
+        "filename": "0751_dewpider.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARAQUANID",
+        "filename": "0752_araquanid.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ARAQUANID_TOTEM",
+        "filename": "1485_araquanid_totem.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_FOMANTIS",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_FOMANTIS",
+        "filename": "0753_fomantis.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LURANTIS",
+        "filename": "0754_lurantis.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LURANTIS_TOTEM",
+        "filename": "1479_lurantis_totem.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_MORELULL",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_MORELULL",
+        "filename": "0755_morelull.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SHIINOTIC",
+        "filename": "0756_shiinotic.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SALANDIT",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SALANDIT",
+        "filename": "0757_salandit.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SALAZZLE",
+        "filename": "0758_salazzle.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SALAZZLE_TOTEM",
+        "filename": "1480_salazzle_totem.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_STUFFUL",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_STUFFUL",
+        "filename": "0759_stufful.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_BEWEAR",
+        "filename": "0760_bewear.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_BOUNSWEET",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_BOUNSWEET",
+        "filename": "0761_bounsweet.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_STEENEE",
+        "filename": "0762_steenee.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_TSAREENA",
+        "filename": "0763_tsareena.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_COMFEY",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_COMFEY",
+        "filename": "0764_comfey.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ORANGURU",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ORANGURU",
+        "filename": "0765_oranguru.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_PASSIMIAN",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_PASSIMIAN",
+        "filename": "0766_passimian.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_WIMPOD",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_WIMPOD",
+        "filename": "0767_wimpod.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GOLISOPOD",
+        "filename": "0768_golisopod.json",
+        "gen": 7
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_GOLISOPOD_MEGA",
+        "filename": "1564_golisopod_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_SANDYGAST",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_SANDYGAST",
+        "filename": "0769_sandygast.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_PALOSSAND",
+        "filename": "0770_palossand.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_PYUKUMUKU",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_PYUKUMUKU",
+        "filename": "0771_pyukumuku.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_TYPE_NULL",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_TYPE_NULL",
+        "filename": "0772_type_null.json",
+        "gen": 7
+      },
+      {
+        "type": "raw",
+        "content": "#define SILVALLY_SPECIES_INFO(type, _palette)                                       \\\n    {                                                                               \\\n        .baseHP        = 95,                                                        \\\n        .baseAttack    = 95,                                                        \\\n        .baseDefense   = 95,                                                        \\\n        .baseSpeed     = 95,                                                        \\\n        .baseSpAttack  = 95,                                                        \\\n        .baseSpDefense = 95,                                                        \\\n        .types = MON_TYPES(type),                                                   \\\n        .catchRate = 3,                                                             \\\n        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 285 : 257,                    \\\n        .evYield_HP = 3,                                                            \\\n        .genderRatio = MON_GENDERLESS,                                              \\\n        .eggCycles = 120,                                                           \\\n        .friendship = 0,                                                            \\\n        .growthRate = GROWTH_SLOW,                                                  \\\n        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),                  \\\n        .abilities = { ABILITY_RKS_SYSTEM, ABILITY_NONE, ABILITY_NONE },            \\\n        .bodyColor = BODY_COLOR_GRAY,                                               \\\n        .speciesName = _(\"Silvally\"),                                               \\\n        .cryId = CRY_SILVALLY,                                                      \\\n        .natDexNum = NATIONAL_DEX_SILVALLY,                                         \\\n        .categoryName = _(\"Synthetic\"),                                             \\\n        .height = 23,                                                               \\\n        .weight = 1005,                                                             \\\n        .description = (type == TYPE_NORMAL                                         \\\n            ? gSilvallyNormalPokedexText                                            \\\n            : gSilvallyMemoryPokedexText),                                          \\\n        .pokemonScale = 256,                                                        \\\n        .pokemonOffset = 0,                                                         \\\n        .trainerScale = 342,                                                        \\\n        .trainerOffset = 7,                                                         \\\n        .frontPic = gMonFrontPic_Silvally,                                          \\\n        .frontPicSize = MON_COORDS_SIZE(64, 64),                                    \\\n        .frontPicYOffset = 0,                                                       \\\n        .frontAnimFrames = sAnims_SingleFramePlaceHolder,                           \\\n        .frontAnimId = ANIM_V_SHAKE,                                                \\\n        .backPic = gMonBackPic_Silvally,                                            \\\n        .backPicSize = MON_COORDS_SIZE(56, 64),                                     \\\n        .backPicYOffset = 0,                                                        \\\n        /*.backAnimId = BACK_ANIM_NONE,*/                                           \\\n        .palette = gMonPalette_Silvally##_palette,                                  \\\n        .shinyPalette = gMonShinyPalette_Silvally##_palette,                        \\\n        .iconSprite = gMonIcon_Silvally,                                            \\\n        .iconPalIndex = 0,                                                          \\\n        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,                                     \\\n        SHADOW(1, 13, SHADOW_SIZE_L)                                                \\\n        FOOTPRINT(Silvally)                                                         \\\n        OVERWORLD(                                                                  \\\n            sPicTable_Silvally,                                                     \\\n            SIZE_32x32,                                                             \\\n            SHADOW_SIZE_M,                                                          \\\n            TRACKS_FOOT,                                                            \\\n            sAnimTable_Following,                                                   \\\n            gOverworldPalette_Silvally,                                             \\\n            gShinyOverworldPalette_Silvally                                         \\\n        )                                                                           \\\n        .isSubLegendary = TRUE,                                                     \\\n        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,                               \\\n        .levelUpLearnset = sSilvallyLevelUpLearnset,                                \\\n        .teachableLearnset = sSilvallyTeachableLearnset,                            \\\n        .formSpeciesIdTable = sSilvallyFormSpeciesIdTable,                          \\\n        .formChangeTable = sSilvallyFormChangeTable,                                \\\n    }"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_NORMAL",
+        "filename": "0773_silvally_normal.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_FIGHTING",
+        "filename": "1176_silvally_fighting.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_FLYING",
+        "filename": "1177_silvally_flying.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_POISON",
+        "filename": "1178_silvally_poison.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_GROUND",
+        "filename": "1179_silvally_ground.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_ROCK",
+        "filename": "1180_silvally_rock.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_BUG",
+        "filename": "1181_silvally_bug.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_GHOST",
+        "filename": "1182_silvally_ghost.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_STEEL",
+        "filename": "1183_silvally_steel.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_FIRE",
+        "filename": "1184_silvally_fire.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_WATER",
+        "filename": "1185_silvally_water.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_GRASS",
+        "filename": "1186_silvally_grass.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_ELECTRIC",
+        "filename": "1187_silvally_electric.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_PSYCHIC",
+        "filename": "1188_silvally_psychic.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_ICE",
+        "filename": "1189_silvally_ice.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_DRAGON",
+        "filename": "1190_silvally_dragon.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_DARK",
+        "filename": "1191_silvally_dark.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SILVALLY_FAIRY",
+        "filename": "1192_silvally_fairy.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_MINIOR",
+    "components": [
+      {
+        "type": "raw",
+        "content": "#define MINIOR_MISC_INFO(color)                                             \\\n        .types = MON_TYPES(TYPE_ROCK, TYPE_FLYING),                         \\\n        .catchRate = 30,                                                    \\\n        .expYield = 154,                                                    \\\n        .evYield_Defense = 1,                                               \\\n        .evYield_SpDefense = 1,                                             \\\n        .genderRatio = MON_GENDERLESS,                                      \\\n        .eggCycles = 25,                                                    \\\n        .friendship = STANDARD_FRIENDSHIP,                                  \\\n        .growthRate = GROWTH_MEDIUM_SLOW,                                   \\\n        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),                     \\\n        .abilities = { ABILITY_SHIELDS_DOWN, ABILITY_NONE, ABILITY_NONE },  \\\n        .bodyColor = color,                                                 \\\n        .noFlip = TRUE,                                                     \\\n        .speciesName = _(\"Minior\"),                                         \\\n        .cryId = CRY_MINIOR,                                                \\\n        .natDexNum = NATIONAL_DEX_MINIOR,                                   \\\n        .categoryName = _(\"Meteor\"),                                        \\\n        .height = 3,                                                        \\\n        .pokemonScale = 530,                                                \\\n        .pokemonOffset = 13,                                                \\\n        .trainerScale = 256,                                                \\\n        .trainerOffset = 0,                                                 \\\n        FOOTPRINT(Minior)                                                   \\\n        .levelUpLearnset = sMiniorLevelUpLearnset,                          \\\n        .teachableLearnset = sMiniorTeachableLearnset,                      \\\n        .formSpeciesIdTable = sMiniorFormSpeciesIdTable\n\n#define MINIOR_METEOR_SPECIES_INFO(Form, heldItem)          \\\n    {                                                       \\\n        .baseHP        = 60,                                \\\n        .baseAttack    = 60,                                \\\n        .baseDefense   = 100,                               \\\n        .baseSpeed     = 60,                                \\\n        .baseSpAttack  = 60,                                \\\n        .baseSpDefense = 100,                               \\\n        .itemCommon = heldItem,                             \\\n        .weight = 400,                                      \\\n        .description = gMiniorMeteorPokedexText,            \\\n        .frontPic = gMonFrontPic_MiniorMeteor,              \\\n        .frontPicSize = MON_COORDS_SIZE(48, 40),            \\\n        .frontPicYOffset = 14,                              \\\n        .frontAnimFrames = sAnims_SingleFramePlaceHolder,   \\\n        .frontAnimId = ANIM_TUMBLING_FRONT_FLIP_TWICE,      \\\n        .enemyMonElevation = 17,                            \\\n        .backPic = gMonBackPic_MiniorMeteor,                \\\n        .backPicSize = MON_COORDS_SIZE(56, 40),             \\\n        .backPicYOffset = 14,                               \\\n        /*.backAnimId = BACK_ANIM_NONE,*/                   \\\n        .palette = gMonPalette_MiniorMeteor,                \\\n        .shinyPalette = gMonShinyPalette_MiniorMeteor,      \\\n        .iconSprite = gMonIcon_MiniorMeteor,                \\\n        .iconPalIndex = 0,                                  \\\n        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,             \\\n        SHADOW(0, 14, SHADOW_SIZE_S)                        \\\n        OVERWORLD(                                          \\\n            sPicTable_MiniorMeteor,                         \\\n            SIZE_32x32,                                     \\\n            SHADOW_SIZE_M,                                  \\\n            TRACKS_FOOT,                                    \\\n            sAnimTable_Following,                           \\\n            gOverworldPalette_MiniorMeteor,                 \\\n            gShinyOverworldPalette_MiniorMeteor             \\\n        )                                                   \\\n        .formChangeTable = sMinior ##Form##FormChangeTable, \\\n        MINIOR_MISC_INFO(BODY_COLOR_BROWN),                 \\\n    }\n\n#define MINIOR_CORE_SPECIES_INFO(Form, color, iconPal, heldItem)\\\n    {                                                           \\\n        .baseHP        = 60,                                    \\\n        .baseAttack    = 100,                                   \\\n        .baseDefense   = 60,                                    \\\n        .baseSpeed     = 120,                                   \\\n        .baseSpAttack  = 100,                                   \\\n        .baseSpDefense = 60,                                    \\\n        .itemCommon = heldItem,                                 \\\n        .weight = 3,                                            \\\n        .description = gMiniorCorePokedexText,                  \\\n        .frontPic = gMonFrontPic_MiniorCore,                    \\\n        .frontPicSize = MON_COORDS_SIZE(48, 40),                \\\n        .frontPicYOffset = 16,                                  \\\n        .frontAnimFrames = sAnims_SingleFramePlaceHolder,       \\\n        .frontAnimId = ANIM_TUMBLING_FRONT_FLIP_TWICE,          \\\n        .enemyMonElevation = 17,                                \\\n        .backPic = gMonBackPic_MiniorCore,                      \\\n        .backPicSize = MON_COORDS_SIZE(56, 40),                 \\\n        .backPicYOffset = 15,                                   \\\n        /*.backAnimId = BACK_ANIM_NONE,*/                       \\\n        .palette = gMonPalette_MiniorCore##Form,                \\\n        .shinyPalette = gMonShinyPalette_MiniorCore,            \\\n        .iconSprite = gMonIcon_MiniorCore##Form,                \\\n        .iconPalIndex = iconPal,                                \\\n        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,                 \\\n        SHADOW(-2, 12, SHADOW_SIZE_S)                           \\\n        .formChangeTable = sMinior ##Form##FormChangeTable,     \\\n        MINIOR_MISC_INFO(color),                                \\\n    }"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MINIOR_METEOR_RED",
+        "filename": "0774_minior_meteor_red.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MINIOR_METEOR_ORANGE",
+        "filename": "1193_minior_meteor_orange.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MINIOR_METEOR_YELLOW",
+        "filename": "1194_minior_meteor_yellow.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MINIOR_METEOR_GREEN",
+        "filename": "1195_minior_meteor_green.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MINIOR_METEOR_BLUE",
+        "filename": "1196_minior_meteor_blue.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MINIOR_METEOR_INDIGO",
+        "filename": "1197_minior_meteor_indigo.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MINIOR_METEOR_VIOLET",
+        "filename": "1198_minior_meteor_violet.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MINIOR_CORE_RED",
+        "filename": "1199_minior_core_red.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MINIOR_CORE_ORANGE",
+        "filename": "1200_minior_core_orange.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MINIOR_CORE_YELLOW",
+        "filename": "1201_minior_core_yellow.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MINIOR_CORE_GREEN",
+        "filename": "1202_minior_core_green.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MINIOR_CORE_BLUE",
+        "filename": "1203_minior_core_blue.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MINIOR_CORE_INDIGO",
+        "filename": "1204_minior_core_indigo.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MINIOR_CORE_VIOLET",
+        "filename": "1205_minior_core_violet.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_KOMALA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_KOMALA",
+        "filename": "0775_komala.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_TURTONATOR",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_TURTONATOR",
+        "filename": "0776_turtonator.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_TOGEDEMARU",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_TOGEDEMARU",
+        "filename": "0777_togedemaru.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_TOGEDEMARU_TOTEM",
+        "filename": "1486_togedemaru_totem.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_MIMIKYU",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_MIMIKYU_DISGUISED",
+        "filename": "0778_mimikyu_disguised.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MIMIKYU_BUSTED",
+        "filename": "1206_mimikyu_busted.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MIMIKYU_TOTEM_DISGUISED",
+        "filename": "1481_mimikyu_totem_disguised.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MIMIKYU_BUSTED_TOTEM",
+        "filename": "1523_mimikyu_busted_totem.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_BRUXISH",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_BRUXISH",
+        "filename": "0779_bruxish.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_DRAMPA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_DRAMPA",
+        "filename": "0780_drampa.json",
+        "gen": 7
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_DRAMPA_MEGA",
+        "filename": "1548_drampa_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_DHELMISE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_DHELMISE",
+        "filename": "0781_dhelmise.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_JANGMO_O",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_JANGMO_O",
+        "filename": "0782_jangmo_o.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_HAKAMO_O",
+        "filename": "0783_hakamo_o.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_KOMMO_O",
+        "filename": "0784_kommo_o.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_KOMMO_O_TOTEM",
+        "filename": "1482_kommo_o_totem.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_TAPU_KOKO",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_TAPU_KOKO",
+        "filename": "0785_tapu_koko.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_TAPU_LELE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_TAPU_LELE",
+        "filename": "0786_tapu_lele.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_TAPU_BULU",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_TAPU_BULU",
+        "filename": "0787_tapu_bulu.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_TAPU_FINI",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_TAPU_FINI",
+        "filename": "0788_tapu_fini.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_COSMOG",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_COSMOG",
+        "filename": "0789_cosmog.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_COSMOEM",
+        "filename": "0790_cosmoem.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_SOLGALEO",
+        "filename": "0791_solgaleo.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_LUNALA",
+        "filename": "0792_lunala.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_NIHILEGO",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_NIHILEGO",
+        "filename": "0793_nihilego.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_BUZZWOLE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_BUZZWOLE",
+        "filename": "0794_buzzwole.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_PHEROMOSA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_PHEROMOSA",
+        "filename": "0795_pheromosa.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_XURKITREE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_XURKITREE",
+        "filename": "0796_xurkitree.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_CELESTEELA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_CELESTEELA",
+        "filename": "0797_celesteela.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_KARTANA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_KARTANA",
+        "filename": "0798_kartana.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_GUZZLORD",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_GUZZLORD",
+        "filename": "0799_guzzlord.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_NECROZMA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_NECROZMA",
+        "filename": "0800_necrozma.json",
+        "gen": 7
+      },
+      {
+        "type": "raw",
+        "content": "#if P_FUSION_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_NECROZMA_DUSK_MANE",
+        "filename": "1207_necrozma_dusk_mane.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_NECROZMA_DAWN_WINGS",
+        "filename": "1208_necrozma_dawn_wings.json",
+        "gen": 7
+      },
+      {
+        "type": "raw",
+        "content": "#if P_ULTRA_BURST_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_NECROZMA_ULTRA",
+        "filename": "1209_necrozma_ultra.json",
+        "gen": 7
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_ULTRA_BURST_FORMS\n#endif //P_FUSION_FORMS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_MAGEARNA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_MAGEARNA",
+        "filename": "0801_magearna.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MAGEARNA_ORIGINAL",
+        "filename": "1210_magearna_original.json",
+        "gen": 7
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MAGEARNA_MEGA",
+        "filename": "1565_magearna_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MAGEARNA_ORIGINAL_MEGA",
+        "filename": "1566_magearna_original_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_MARSHADOW",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_MARSHADOW",
+        "filename": "0802_marshadow.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_POIPOLE",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_POIPOLE",
+        "filename": "0803_poipole.json",
+        "gen": 7
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_NAGANADEL",
+        "filename": "0804_naganadel.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_STAKATAKA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_STAKATAKA",
+        "filename": "0805_stakataka.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_BLACEPHALON",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_BLACEPHALON",
+        "filename": "0806_blacephalon.json",
+        "gen": 7
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_ZERAORA",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_ZERAORA",
+        "filename": "0807_zeraora.json",
+        "gen": 7
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GEN_9_MEGA_EVOLUTIONS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_ZERAORA_MEGA",
+        "filename": "1552_zeraora_mega.json",
+        "gen": 6
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GEN_9_MEGA_EVOLUTIONS"
+      }
+    ]
+  },
+  {
+    "type": "family",
+    "family_constant": "P_FAMILY_MELTAN",
+    "components": [
+      {
+        "type": "species",
+        "constant": "SPECIES_MELTAN",
+        "filename": "0808_meltan.json",
+        "gen": 8
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MELMETAL",
+        "filename": "0809_melmetal.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#if P_GIGANTAMAX_FORMS"
+      },
+      {
+        "type": "species",
+        "constant": "SPECIES_MELMETAL_GMAX",
+        "filename": "1502_melmetal_gmax.json",
+        "gen": 8
+      },
+      {
+        "type": "raw",
+        "content": "#endif //P_GIGANTAMAX_FORMS"
+      }
+    ]
+  }
+]

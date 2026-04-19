@@ -1,0 +1,143 @@
+{
+  "group_label": "gWildMonHeaders",
+  "encounters": [
+    {
+      "map": "MAP_THREE_ISLAND_PORT",
+      "base_label": "sThreeIslandPort_FireRed",
+      "land_mons": {
+        "encounter_rate": 1,
+        "mons": [
+          {
+            "min_level": 15,
+            "max_level": 15,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 15,
+            "max_level": 15,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 10,
+            "max_level": 10,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 10,
+            "max_level": 10,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 20,
+            "max_level": 20,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 20,
+            "max_level": 20,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 30,
+            "max_level": 30,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 30,
+            "max_level": 30,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 35,
+            "max_level": 35,
+            "species": "SPECIES_DUNSPARCE"
+          }
+        ]
+      }
+    },
+    {
+      "map": "MAP_THREE_ISLAND_PORT",
+      "base_label": "sThreeIslandPort_LeafGreen",
+      "land_mons": {
+        "encounter_rate": 1,
+        "mons": [
+          {
+            "min_level": 15,
+            "max_level": 15,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 15,
+            "max_level": 15,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 10,
+            "max_level": 10,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 10,
+            "max_level": 10,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 20,
+            "max_level": 20,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 20,
+            "max_level": 20,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 30,
+            "max_level": 30,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 25,
+            "max_level": 25,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 30,
+            "max_level": 30,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 5,
+            "max_level": 5,
+            "species": "SPECIES_DUNSPARCE"
+          },
+          {
+            "min_level": 35,
+            "max_level": 35,
+            "species": "SPECIES_DUNSPARCE"
+          }
+        ]
+      }
+    }
+  ]
+}

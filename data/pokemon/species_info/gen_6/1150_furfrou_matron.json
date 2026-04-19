@@ -1,0 +1,5 @@
+{
+  "species_constant": "SPECIES_FURFROU_MATRON",
+  "family_constant": "P_FAMILY_FURFROU",
+  "macro_call": "FURFROU_MISC_INFO(Matron,    FALSE, 48, 2, 56, 1, 2)"
+}

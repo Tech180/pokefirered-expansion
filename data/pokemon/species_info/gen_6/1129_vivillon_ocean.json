@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_VIVILLON_OCEAN",
+  "family_constant": "P_FAMILY_SCATTERBUG",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "VIVILLON_MISC_INFO",
+      "args": "Ocean, BODY_COLOR_RED, 0",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"Its pattern depends on the climate and\\n\"\n\"topography of the land it was born in. This\\n\"\n\"form is from lands of perpetual summer.\\n\"\n\"It scatters toxic color scales in battle.\")"
+    }
+  ]
+}

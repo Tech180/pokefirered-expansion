@@ -1,0 +1,17 @@
+{
+  "species_constant": "SPECIES_FLABEBE_RED",
+  "family_constant": "P_FAMILY_FLABEBE",
+  "entries": [
+    {
+      "type": "macro",
+      "name": "FLABEBE_MISC_INFO",
+      "args": "Red, RED, 1",
+      "has_comma": true
+    },
+    {
+      "type": "field",
+      "name": "description",
+      "value": "COMPOUND_STRING(\n\"This Flab\u00e9b\u00e9 rides a red flower.\\n\"\n\"Immediately after birth, this Pok\u00e9mon\\n\"\n\"begins flying around in search of a\\n\"\n\"flower it likes.\")"
+    }
+  ]
+}
