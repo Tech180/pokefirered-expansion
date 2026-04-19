@@ -1,5 +1,5 @@
 {
   "species_constant": "SPECIES_OGERPON_TEAL",
   "family_constant": "P_FAMILY_OGERPON",
-  "macro_call": "OGERPON_SPECIES_INFO(Teal,        Teal,            TYPE_GRASS, ABILITY_DEFIANT,                        BODY_COLOR_GREEN, 1, 6, 1, FALSE)"
+  "macro_call": "OGERPON_SPECIES_INFO(Teal,        Teal,            TYPE_GRASS, ABILITY_DEFIANT,                        BODY_COLOR_GREEN, 2, 1, FALSE)"
 }

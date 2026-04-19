@@ -80,7 +80,7 @@
     {
       "type": "field",
       "name": "abilities",
-      "value": "{ ABILITY_PROTEAN, ABILITY_PROTEAN, ABILITY_PROTEAN }"
+      "value": "{ ABILITY_PROTEAN, ABILITY_NONE, ABILITY_PROTEAN }"
     },
     {
       "type": "field",
@@ -162,7 +162,7 @@
     {
       "type": "field",
       "name": "frontAnimFrames",
-      "value": "sAnims_TwoFramePlaceHolder"
+      "value": "sAnims_SingleFramePlaceHolder"
     },
     {
       "type": "field",

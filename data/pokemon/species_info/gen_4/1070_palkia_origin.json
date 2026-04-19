@@ -205,7 +205,7 @@
     {
       "type": "macro",
       "name": "SHADOW",
-      "args": "-3, 14, SHADOW_SIZE_L",
+      "args": "4, 12, SHADOW_SIZE_L",
       "has_comma": false
     },
     {

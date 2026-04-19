@@ -1,5 +1,5 @@
 {
   "species_constant": "SPECIES_OGERPON_HEARTHFLAME_TERA",
   "family_constant": "P_FAMILY_OGERPON",
-  "macro_call": "OGERPON_SPECIES_INFO(Hearthflame, HearthflameTera, TYPE_FIRE,  ABILITY_EMBODY_ASPECT_HEARTHFLAME_MASK, BODY_COLOR_RED,   0, 0, 0, TRUE)"
+  "macro_call": "OGERPON_SPECIES_INFO(Hearthflame, HearthflameTera, TYPE_FIRE,  ABILITY_EMBODY_ASPECT_HEARTHFLAME_MASK, BODY_COLOR_RED,   0, 0, TRUE)"
 }

@@ -1385,9 +1385,9 @@ sAnimTable_Following)
         .trainerOffset = 0,
         .frontPic = gMonFrontPic_ButterfreeGmax,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
-        .frontPicYOffset = 3,
+        .frontPicYOffset = 1,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        .enemyMonElevation = 7,
+        .enemyMonElevation = 8,
         .backPic = gMonBackPic_ButterfreeGmax,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 3,
@@ -1396,7 +1396,7 @@ sAnimTable_Following)
         .iconSprite = gMonIcon_ButterfreeGmax,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
-        SHADOW(-4, 15, SHADOW_SIZE_S)
+        SHADOW(-4, 18, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Butterfree)
         .isGigantamax = TRUE,
         .levelUpLearnset = sButterfreeLevelUpLearnset,
@@ -3934,18 +3934,18 @@ gShinyOverworldPalette_RaichuAlola)
 "forked tail."),
         .frontPic = gMonFrontPic_RaichuMegaX,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
-        .frontPicYOffset = 4,
-        .frontAnimFrames = sAnims_TwoFramePlaceHolder,
+        .frontPicYOffset = 3,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .backPic = gMonBackPic_RaichuMegaX,
         .backPicSize = MON_COORDS_SIZE(64, 64),
-        .backPicYOffset = 0,
+        .backPicYOffset = 3,
         .palette = gMonPalette_RaichuMegaX,
         .shinyPalette = gMonShinyPalette_RaichuMegaX,
         .iconSprite = gMonIcon_RaichuMegaX,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Raichu)
-        SHADOW(6, 6, SHADOW_SIZE_M)
+        SHADOW(-7, 9, SHADOW_SIZE_M)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sRaichuLevelUpLearnset,
         .teachableLearnset = sRaichuTeachableLearnset,
@@ -3991,10 +3991,20 @@ gShinyOverworldPalette_RaichuAlola)
 "tip of its tail and from the spiky tufts\n"
 "of fur growing out of its temples. This\n"
 "electricity forms the letter Y."),
+        .frontPic = gMonFrontPic_RaichuMegaY,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 4,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .backPic = gMonBackPic_RaichuMegaY,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 2,
+        .palette = gMonPalette_RaichuMegaY,
+        .shinyPalette = gMonShinyPalette_RaichuMegaY,
         .iconSprite = gMonIcon_RaichuMegaY,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Raichu)
+        SHADOW(-3, 10, SHADOW_SIZE_S)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sRaichuLevelUpLearnset,
         .teachableLearnset = sRaichuTeachableLearnset,
@@ -4985,10 +4995,21 @@ gShinyOverworldPalette_Clefable)
 "It flies by using the power of\n"
 "moonlight to control gravity within\n"
 "a radius of over 32 feet around it."),
+        .frontPic = gMonFrontPic_ClefableMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .enemyMonElevation = 8,
+        .backPic = gMonBackPic_ClefableMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 3,
+        .palette = gMonPalette_ClefableMega,
+        .shinyPalette = gMonShinyPalette_ClefableMega,
         .iconSprite = gMonIcon_ClefableMega,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Clefable)
+        SHADOW(5, 20, SHADOW_SIZE_S)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sClefableLevelUpLearnset,
         .teachableLearnset = sClefableTeachableLearnset,
@@ -9019,7 +9040,7 @@ gShinyOverworldPalette_Victreebel)
         .frontPic = gMonFrontPic_VictreebelMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_TwoFramePlaceHolder,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .backPic = gMonBackPic_VictreebelMega,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 1,
@@ -10089,7 +10110,7 @@ gShinyOverworldPalette_Slowking)
         .abilities = { ABILITY_SHELL_ARMOR, ABILITY_SHELL_ARMOR, ABILITY_SHELL_ARMOR },
         .bodyColor = BODY_COLOR_PINK,
         .speciesName = _("Slowbro"),
-        .cryId = CRY_SLOWBRO,
+        .cryId = CRY_SLOWBRO_MEGA,
         .natDexNum = NATIONAL_DEX_SLOWBRO,
         .categoryName = _("Hermit Crab"),
         .height = 20,
@@ -12701,7 +12722,7 @@ gShinyOverworldPalette_VoltorbHisui)
         .palette = gMonPalette_ElectrodeHisui,
         .shinyPalette = gMonShinyPalette_ElectrodeHisui,
         .iconSprite = gMonIcon_ElectrodeHisui,
-        .iconPalIndex = 1,
+        .iconPalIndex = 3,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 4, SHADOW_SIZE_M)
         FOOTPRINT(Electrode)
@@ -15224,10 +15245,20 @@ gShinyOverworldPalette_Starmie)
 "humanlike. Whether it's simply\n"
 "trying to communicate or wants to\n"
 "supplant humanity is unclear."),
+        .frontPic = gMonFrontPic_StarmieMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .backPic = gMonBackPic_StarmieMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        .palette = gMonPalette_StarmieMega,
+        .shinyPalette = gMonShinyPalette_StarmieMega,
         .iconSprite = gMonIcon_StarmieMega,
         .iconPalIndex = 2,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Starmie)
+        SHADOW(0, 15, SHADOW_SIZE_M)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sStarmieLevelUpLearnset,
         .teachableLearnset = sStarmieTeachableLearnset,
@@ -17419,17 +17450,17 @@ sAnimTable_Following)
         .trainerOffset = 0,
         .frontPic = gMonFrontPic_EeveeGmax,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
-        .frontPicYOffset = 8,
+        .frontPicYOffset = 6,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .backPic = gMonBackPic_EeveeGmax,
         .backPicSize = MON_COORDS_SIZE(64, 64),
-        .backPicYOffset = 7,
+        .backPicYOffset = 2,
         .palette = gMonPalette_EeveeGmax,
         .shinyPalette = gMonShinyPalette_EeveeGmax,
         .iconSprite = gMonIcon_EeveeGmax,
         .iconPalIndex = 2,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
-        SHADOW(0, 4, SHADOW_SIZE_L)
+        SHADOW(7, -1, SHADOW_SIZE_L)
         FOOTPRINT(Eevee)
         .isGigantamax = TRUE,
         .levelUpLearnset = sEeveeLevelUpLearnset,
@@ -19025,12 +19056,11 @@ gShinyOverworldPalette_Articuno)
         .trainerScale = 309,
         .trainerOffset = 2,
         .frontPic = gMonFrontPic_ArticunoGalar,
-        .frontPicSize = MON_COORDS_SIZE(64, 56),
-        .frontPicYOffset = 7,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        .enemyMonElevation = 10,
         .backPic = gMonBackPic_ArticunoGalar,
-        .backPicSize = MON_COORDS_SIZE(64, 56),
+        .backPicSize = MON_COORDS_SIZE(64, 48),
         .backPicYOffset = 5,
         .palette = gMonPalette_ArticunoGalar,
         .shinyPalette = gMonShinyPalette_ArticunoGalar,
@@ -19623,10 +19653,21 @@ gShinyOverworldPalette_Dragonite)
 "powered up this Pokémon's feelings\n"
 "of kindness. It finishes off its\n"
 "opponents with mercy in its heart."),
+        .frontPic = gMonFrontPic_DragoniteMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 1,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .enemyMonElevation = 8,
+        .backPic = gMonBackPic_DragoniteMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 3,
+        .palette = gMonPalette_DragoniteMega,
+        .shinyPalette = gMonShinyPalette_DragoniteMega,
         .iconSprite = gMonIcon_DragoniteMega,
         .iconPalIndex = 2,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Dragonite)
+        SHADOW(4, 20, SHADOW_SIZE_M)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sDragoniteLevelUpLearnset,
         .teachableLearnset = sDragoniteTeachableLearnset,

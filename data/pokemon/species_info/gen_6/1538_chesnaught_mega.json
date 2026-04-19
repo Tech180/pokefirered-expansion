@@ -80,7 +80,7 @@
     {
       "type": "field",
       "name": "abilities",
-      "value": "{ ABILITY_BULLETPROOF, ABILITY_BULLETPROOF, ABILITY_BULLETPROOF }"
+      "value": "{ ABILITY_BULLETPROOF, ABILITY_NONE, ABILITY_BULLETPROOF }"
     },
     {
       "type": "field",
@@ -157,7 +157,7 @@
     {
       "type": "field",
       "name": "frontAnimFrames",
-      "value": "sAnims_TwoFramePlaceHolder"
+      "value": "sAnims_SingleFramePlaceHolder"
     },
     {
       "type": "field",

@@ -150,22 +150,17 @@
     {
       "type": "field",
       "name": "frontPicSize",
-      "value": "MON_COORDS_SIZE(64, 56)"
+      "value": "MON_COORDS_SIZE(64, 64)"
     },
     {
       "type": "field",
       "name": "frontPicYOffset",
-      "value": "7"
+      "value": "0"
     },
     {
       "type": "field",
       "name": "frontAnimFrames",
       "value": "sAnims_SingleFramePlaceHolder"
-    },
-    {
-      "type": "field",
-      "name": "enemyMonElevation",
-      "value": "10"
     },
     {
       "type": "field",
@@ -175,7 +170,7 @@
     {
       "type": "field",
       "name": "backPicSize",
-      "value": "MON_COORDS_SIZE(64, 56)"
+      "value": "MON_COORDS_SIZE(64, 48)"
     },
     {
       "type": "field",

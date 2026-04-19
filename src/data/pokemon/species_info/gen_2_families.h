@@ -255,10 +255,20 @@ sAnimTable_Following)
 "powerful Solar Beam from its four\n"
 "flowers. Another name for this is\n"
 "Mega Sol Cannon."),
+        .frontPic = gMonFrontPic_MeganiumMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .backPic = gMonBackPic_MeganiumMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        .palette = gMonPalette_MeganiumMega,
+        .shinyPalette = gMonShinyPalette_MeganiumMega,
         .iconSprite = gMonIcon_MeganiumMega,
         .iconPalIndex = 1,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Meganium)
+        SHADOW(-2, 13, SHADOW_SIZE_M)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sMeganiumLevelUpLearnset,
         .teachableLearnset = sMeganiumTeachableLearnset,
@@ -794,7 +804,7 @@ gShinyOverworldPalette_Feraligatr)
         .frontPic = gMonFrontPic_FeraligatrMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_TwoFramePlaceHolder,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .backPic = gMonBackPic_FeraligatrMega,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 4,
@@ -5612,7 +5622,7 @@ sAnimTable_Following)
         .palette = gMonPalette_SneaselHisui,
         .shinyPalette = gMonShinyPalette_SneaselHisui,
         .iconSprite = gMonIcon_SneaselHisui,
-        .iconPalIndex = 0,
+        .iconPalIndex = 2,
     #if P_GENDER_DIFFERENCES
         .frontPicFemale = gMonFrontPic_SneaselHisuiF,
         .frontPicSizeFemale = MON_COORDS_SIZE(56, 56),
@@ -7046,7 +7056,7 @@ gShinyOverworldPalette_Skarmory)
         .frontPic = gMonFrontPic_SkarmoryMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_TwoFramePlaceHolder,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .enemyMonElevation = 6,
         .backPic = gMonBackPic_SkarmoryMega,
         .backPicSize = MON_COORDS_SIZE(64, 64),

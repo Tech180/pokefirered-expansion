@@ -116,7 +116,7 @@
     {
       "type": "field",
       "name": "abilities",
-      "value": "{ ABILITY_LEVITATE, ABILITY_LEVITATE, ABILITY_LEVITATE }"
+      "value": "{ ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE }"
     },
     {
       "type": "field",
@@ -177,6 +177,56 @@
     },
     {
       "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_ChimechoMega"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "6"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_ChimechoMega"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_ChimechoMega"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_ChimechoMega"
+    },
+    {
+      "type": "field",
       "name": "iconSprite",
       "value": "gMonIcon_ChimechoMega"
     },
@@ -194,6 +244,12 @@
       "type": "macro",
       "name": "FOOTPRINT",
       "args": "Chimecho",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-2, 18, SHADOW_SIZE_L",
       "has_comma": false
     },
     {

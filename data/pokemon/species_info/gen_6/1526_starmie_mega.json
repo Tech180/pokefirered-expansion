@@ -151,6 +151,51 @@
     },
     {
       "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_StarmieMega"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_StarmieMega"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_StarmieMega"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_StarmieMega"
+    },
+    {
+      "type": "field",
       "name": "iconSprite",
       "value": "gMonIcon_StarmieMega"
     },
@@ -168,6 +213,12 @@
       "type": "macro",
       "name": "FOOTPRINT",
       "args": "Starmie",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 15, SHADOW_SIZE_M",
       "has_comma": false
     },
     {

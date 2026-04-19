@@ -172,6 +172,56 @@
     },
     {
       "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_DarkraiMega"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "8"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_DarkraiMega"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_DarkraiMega"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_DarkraiMega"
+    },
+    {
+      "type": "field",
       "name": "iconSprite",
       "value": "gMonIcon_DarkraiMega"
     },
@@ -189,6 +239,12 @@
       "type": "macro",
       "name": "FOOTPRINT",
       "args": "Darkrai",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-2, 18, SHADOW_SIZE_XL_BATTLE_ONLY",
       "has_comma": false
     },
     {

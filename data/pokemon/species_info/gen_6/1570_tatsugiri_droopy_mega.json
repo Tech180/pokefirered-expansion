@@ -141,6 +141,51 @@
     },
     {
       "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_TatsugiriDroopyMega"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "11"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_TatsugiriDroopyMega"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "17"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_TatsugiriMega"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_TatsugiriMega"
+    },
+    {
+      "type": "field",
       "name": "iconSprite",
       "value": "gMonIcon_TatsugiriDroopyMega"
     },
@@ -158,6 +203,12 @@
       "type": "macro",
       "name": "FOOTPRINT",
       "args": "Tatsugiri",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 2, SHADOW_SIZE_M",
       "has_comma": false
     },
     {

@@ -141,6 +141,51 @@
     },
     {
       "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_MagearnaMega"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_MagearnaMega"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "3"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_MagearnaMega"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_MagearnaMega"
+    },
+    {
+      "type": "field",
       "name": "iconSprite",
       "value": "gMonIcon_MagearnaMega"
     },
@@ -158,6 +203,12 @@
       "type": "macro",
       "name": "FOOTPRINT",
       "args": "Magearna",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "-1, 15, SHADOW_SIZE_M",
       "has_comma": false
     },
     {

@@ -80,7 +80,7 @@
     {
       "type": "field",
       "name": "abilities",
-      "value": "{ ABILITY_SNOW_WARNING, ABILITY_SNOW_WARNING, ABILITY_SNOW_WARNING }"
+      "value": "{ ABILITY_SNOW_WARNING, ABILITY_NONE, ABILITY_SNOW_WARNING }"
     },
     {
       "type": "field",
@@ -141,6 +141,56 @@
     },
     {
       "type": "field",
+      "name": "frontPic",
+      "value": "gMonFrontPic_FroslassMega"
+    },
+    {
+      "type": "field",
+      "name": "frontPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "frontPicYOffset",
+      "value": "0"
+    },
+    {
+      "type": "field",
+      "name": "frontAnimFrames",
+      "value": "sAnims_SingleFramePlaceHolder"
+    },
+    {
+      "type": "field",
+      "name": "enemyMonElevation",
+      "value": "2"
+    },
+    {
+      "type": "field",
+      "name": "backPic",
+      "value": "gMonBackPic_FroslassMega"
+    },
+    {
+      "type": "field",
+      "name": "backPicSize",
+      "value": "MON_COORDS_SIZE(64, 64)"
+    },
+    {
+      "type": "field",
+      "name": "backPicYOffset",
+      "value": "1"
+    },
+    {
+      "type": "field",
+      "name": "palette",
+      "value": "gMonPalette_FroslassMega"
+    },
+    {
+      "type": "field",
+      "name": "shinyPalette",
+      "value": "gMonShinyPalette_FroslassMega"
+    },
+    {
+      "type": "field",
       "name": "iconSprite",
       "value": "gMonIcon_FroslassMega"
     },
@@ -158,6 +208,12 @@
       "type": "macro",
       "name": "FOOTPRINT",
       "args": "Froslass",
+      "has_comma": false
+    },
+    {
+      "type": "macro",
+      "name": "SHADOW",
+      "args": "0, 14, SHADOW_SIZE_L",
       "has_comma": false
     },
     {

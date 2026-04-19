@@ -1434,8 +1434,20 @@ gShinyOverworldPalette_Crabominable)
 "It can pulverize reinforced concrete with\n"
 "a light swing of one of its fists, each of\n"
 "which is covered in a thick layer of ice."),
+        .frontPic = gMonFrontPic_CrabominableMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .backPic = gMonBackPic_CrabominableMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 3,
+        .palette = gMonPalette_CrabominableMega,
+        .shinyPalette = gMonShinyPalette_CrabominableMega,
+        .iconSprite = gMonIcon_CrabominableMega,
+        .iconPalIndex = 2,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Crabominable)
+        SHADOW(-4, 17, SHADOW_SIZE_L)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sCrabominableLevelUpLearnset,
         .teachableLearnset = sCrabominableTeachableLearnset,
@@ -3976,10 +3988,20 @@ gShinyOverworldPalette_Golisopod)
 "assail its foes. Once they've been pushed\n"
 "to the brink of defeat, it finishes them\n"
 "off with the arms it kept hidden."),
+        .frontPic = gMonFrontPic_GolisopodMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .backPic = gMonBackPic_GolisopodMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 4,
+        .palette = gMonPalette_GolisopodMega,
+        .shinyPalette = gMonShinyPalette_GolisopodMega,
         .iconSprite = gMonIcon_GolisopodMega,
         .iconPalIndex = 2,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Golisopod)
+        SHADOW(0, 10, SHADOW_SIZE_XL_BATTLE_ONLY)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sGolisopodLevelUpLearnset,
         .teachableLearnset = sGolisopodTeachableLearnset,
@@ -5131,10 +5153,21 @@ gShinyOverworldPalette_Drampa)
 "invigorated, allowing it to regain\n"
 "its youth. It manipulates the\n"
 "atmosphere to summon storms."),
+        .frontPic = gMonFrontPic_DrampaMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .enemyMonElevation = 4,
+        .backPic = gMonBackPic_DrampaMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        .palette = gMonPalette_DrampaMega,
+        .shinyPalette = gMonShinyPalette_DrampaMega,
         .iconSprite = gMonIcon_DrampaMega,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Drampa)
+        SHADOW(-6, 16, SHADOW_SIZE_XL_BATTLE_ONLY)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sDrampaLevelUpLearnset,
         .teachableLearnset = sDrampaTeachableLearnset,
@@ -6907,10 +6940,20 @@ gShinyOverworldPalette_MagearnaOriginal)
 "than 500 years ago, can understand human\n"
 "speech but cannot itself speak. Its true\n"
 "self is its Soul-Heart, an artificial soul."),
+        .frontPic = gMonFrontPic_MagearnaMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .backPic = gMonBackPic_MagearnaMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 3,
+        .palette = gMonPalette_MagearnaMega,
+        .shinyPalette = gMonShinyPalette_MagearnaMega,
         .iconSprite = gMonIcon_MagearnaMega,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Magearna)
+        SHADOW(-1, 15, SHADOW_SIZE_M)
         .isMegaEvolution = TRUE,
         .isMythical = TRUE,
         .isFrontierBanned = TRUE,
@@ -6954,10 +6997,20 @@ gShinyOverworldPalette_MagearnaOriginal)
 "limitations has lain secretly within\n"
 "Magearna for 500 years. This mechanism\n"
 "is triggered by a Mega Stone."),
+        .frontPic = gMonFrontPic_MagearnaOriginalMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .backPic = gMonBackPic_MagearnaOriginalMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 3,
+        .palette = gMonPalette_MagearnaOriginalMega,
+        .shinyPalette = gMonShinyPalette_MagearnaOriginalMega,
         .iconSprite = gMonIcon_MagearnaOriginalMega,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Magearna)
+        SHADOW(-1, 15, SHADOW_SIZE_M)
         .isMegaEvolution = TRUE,
         .isMythical = TRUE,
         .isFrontierBanned = TRUE,
@@ -7396,10 +7449,20 @@ gShinyOverworldPalette_Zeraora)
 "of electricity. When it stops limiting\n"
 "itself, it's in the strongest class of\n"
 "electric Pokémon."),
+        .frontPic = gMonFrontPic_ZeraoraMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .backPic = gMonBackPic_ZeraoraMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 9,
+        .palette = gMonPalette_ZeraoraMega,
+        .shinyPalette = gMonShinyPalette_ZeraoraMega,
         .iconSprite = gMonIcon_ZeraoraMega,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Zeraora)
+        SHADOW(-6, 12, SHADOW_SIZE_L)
         .isMegaEvolution = TRUE,
         .isMythical = TRUE,
         .isFrontierBanned = TRUE,

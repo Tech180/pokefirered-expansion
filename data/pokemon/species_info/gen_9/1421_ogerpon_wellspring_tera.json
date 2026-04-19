@@ -1,5 +1,5 @@
 {
   "species_constant": "SPECIES_OGERPON_WELLSPRING_TERA",
   "family_constant": "P_FAMILY_OGERPON",
-  "macro_call": "OGERPON_SPECIES_INFO(Wellspring,  WellspringTera,  TYPE_WATER, ABILITY_EMBODY_ASPECT_WELLSPRING_MASK,  BODY_COLOR_BLUE,  0, 0, 0, TRUE)"
+  "macro_call": "OGERPON_SPECIES_INFO(Wellspring,  WellspringTera,  TYPE_WATER, ABILITY_EMBODY_ASPECT_WELLSPRING_MASK,  BODY_COLOR_BLUE,  0, 0, TRUE)"
 }

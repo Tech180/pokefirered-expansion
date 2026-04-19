@@ -192,12 +192,7 @@
     {
       "type": "field",
       "name": "frontAnimFrames",
-      "value": "sAnims_TwoFramePlaceHolder"
-    },
-    {
-      "type": "field",
-      "name": "enemyMonElevation",
-      "value": "8"
+      "value": "sAnims_SingleFramePlaceHolder"
     },
     {
       "type": "field",
@@ -212,7 +207,7 @@
     {
       "type": "field",
       "name": "backPicYOffset",
-      "value": "5"
+      "value": "0"
     },
     {
       "type": "field",
@@ -238,7 +233,7 @@
     {
       "type": "macro",
       "name": "SHADOW",
-      "args": "-1, 20, SHADOW_SIZE_M",
+      "args": "-1, 13, SHADOW_SIZE_L",
       "has_comma": false
     },
     {

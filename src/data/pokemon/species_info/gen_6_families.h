@@ -224,7 +224,7 @@ gShinyOverworldPalette_Chesnaught)
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_BULLETPROOF, ABILITY_BULLETPROOF, ABILITY_BULLETPROOF },
+        .abilities = { ABILITY_BULLETPROOF, ABILITY_NONE, ABILITY_BULLETPROOF },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Chesnaught"),
     #if P_MODIFIED_MEGA_CRIES
@@ -243,7 +243,7 @@ gShinyOverworldPalette_Chesnaught)
         .frontPic = gMonFrontPic_ChesnaughtMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_TwoFramePlaceHolder,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .backPic = gMonBackPic_ChesnaughtMega,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 10,
@@ -489,7 +489,7 @@ gShinyOverworldPalette_Delphox)
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_LEVITATE, ABILITY_LEVITATE, ABILITY_LEVITATE },
+        .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_LEVITATE },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Delphox"),
     #if P_MODIFIED_MEGA_CRIES
@@ -509,7 +509,7 @@ gShinyOverworldPalette_Delphox)
         .frontPic = gMonFrontPic_DelphoxMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_TwoFramePlaceHolder,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .enemyMonElevation = 6,
         .backPic = gMonBackPic_DelphoxMega,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -870,7 +870,7 @@ gShinyOverworldPalette_GreninjaAsh)
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1),
-        .abilities = { ABILITY_PROTEAN, ABILITY_PROTEAN, ABILITY_PROTEAN },
+        .abilities = { ABILITY_PROTEAN, ABILITY_NONE, ABILITY_PROTEAN },
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = TRUE,
         .speciesName = _("Greninja"),
@@ -891,7 +891,7 @@ gShinyOverworldPalette_GreninjaAsh)
         .frontPic = gMonFrontPic_GreninjaMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_TwoFramePlaceHolder,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .enemyMonElevation = 6,
         .backPic = gMonBackPic_GreninjaMega,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -1884,7 +1884,7 @@ sAnimTable_Following)
         .frontPic = gMonFrontPic_PyroarMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_TwoFramePlaceHolder,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .backPic = gMonBackPic_PyroarMega,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 6,
@@ -2266,7 +2266,7 @@ sAnimTable_Following)
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_FAIRY_AURA, ABILITY_FAIRY_AURA, ABILITY_FAIRY_AURA },
+        .abilities = { ABILITY_FAIRY_AURA, ABILITY_NONE, ABILITY_FAIRY_AURA },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Floette"),
     #if P_MODIFIED_MEGA_CRIES
@@ -2281,10 +2281,20 @@ sAnimTable_Following)
 "all the energy from Mega\n"
 "Evolution. The flower now attacks\n"
 "enemies on its own."),
+        .frontPic = gMonFrontPic_FloetteMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .backPic = gMonBackPic_FloetteMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 6,
+        .palette = gMonPalette_FloetteMega,
+        .shinyPalette = gMonShinyPalette_FloetteMega,
         .iconSprite = gMonIcon_FloetteMega,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Floette)
+        SHADOW(10, 10, SHADOW_SIZE_S)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sFloetteEternalLevelUpLearnset,
         .teachableLearnset = sFloetteEternalTeachableLearnset,
@@ -2886,8 +2896,21 @@ gShinyOverworldPalette_MeowsticF)
 "to compress or expand anything. It\n"
 "overwhelms foes by contorting space\n"
 "itself."),
+        .frontPic = gMonFrontPic_MeowsticMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .enemyMonElevation = 6,
+        .backPic = gMonBackPic_MeowsticMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 3,
+        .palette = gMonPalette_MeowsticMega,
+        .shinyPalette = gMonShinyPalette_MeowsticMega,
+        .iconSprite = gMonIcon_MeowsticMega,
+        .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Meowstic)
+        SHADOW(-3, 18, SHADOW_SIZE_S)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sMeowsticMLevelUpLearnset,
         .teachableLearnset = sMeowsticMTeachableLearnset,
@@ -2928,8 +2951,21 @@ gShinyOverworldPalette_MeowsticF)
 "to compress or expand anything. It\n"
 "overwhelms foes by contorting space\n"
 "itself."),
+        .frontPic = gMonFrontPic_MeowsticMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .enemyMonElevation = 6,
+        .backPic = gMonBackPic_MeowsticMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 3,
+        .palette = gMonPalette_MeowsticMega,
+        .shinyPalette = gMonShinyPalette_MeowsticMega,
+        .iconSprite = gMonIcon_MeowsticMega,
+        .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Meowstic)
+        SHADOW(-3, 18, SHADOW_SIZE_S)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sMeowsticFLevelUpLearnset,
         .teachableLearnset = sMeowsticFTeachableLearnset,
@@ -3667,10 +3703,20 @@ gShinyOverworldPalette_Malamar)
 "overwrite the personality and\n"
 "memories of others-and to\n"
 "control them."),
+        .frontPic = gMonFrontPic_MalamarMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .backPic = gMonBackPic_MalamarMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 8,
+        .palette = gMonPalette_MalamarMega,
+        .shinyPalette = gMonShinyPalette_MalamarMega,
         .iconSprite = gMonIcon_MalamarMega,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Malamar)
+        SHADOW(15, 15, SHADOW_SIZE_M)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sMalamarLevelUpLearnset,
         .teachableLearnset = sMalamarTeachableLearnset,
@@ -3853,10 +3899,20 @@ gShinyOverworldPalette_Barbaracle)
 "It uses its many arms to toy\n"
 "with its opponents. This\n"
 "keeps the head extremely busy."),
+        .frontPic = gMonFrontPic_BarbaracleMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .backPic = gMonBackPic_BarbaracleMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        .palette = gMonPalette_BarbaracleMega,
+        .shinyPalette = gMonShinyPalette_BarbaracleMega,
         .iconSprite = gMonIcon_BarbaracleMega,
         .iconPalIndex = 2,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Barbaracle)
+        SHADOW(-1, 14, SHADOW_SIZE_M)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sBarbaracleLevelUpLearnset,
         .teachableLearnset = sBarbaracleTeachableLearnset,
@@ -4045,7 +4101,7 @@ gShinyOverworldPalette_Dragalge)
         .frontPic = gMonFrontPic_DragalgeMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_TwoFramePlaceHolder,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .backPic = gMonBackPic_DragalgeMega,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 0,
@@ -4724,10 +4780,20 @@ gShinyOverworldPalette_Hawlucha)
 "Mega Evolution has pumped up all\n"
 "its muscles. Hawlucha flexes to\n"
 "show off its strength."),
+        .frontPic = gMonFrontPic_HawluchaMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 2,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .backPic = gMonBackPic_HawluchaMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 4,
+        .palette = gMonPalette_HawluchaMega,
+        .shinyPalette = gMonShinyPalette_HawluchaMega,
         .iconSprite = gMonIcon_HawluchaMega,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Hawlucha)
+        SHADOW(-2, 13, SHADOW_SIZE_M)
         .isMegaEvolution = TRUE,
         .levelUpLearnset = sHawluchaLevelUpLearnset,
         .teachableLearnset = sHawluchaTeachableLearnset,
@@ -6126,7 +6192,7 @@ gShinyOverworldPalette_Avalugg)
         .palette = gMonPalette_AvaluggHisui,
         .shinyPalette = gMonShinyPalette_AvaluggHisui,
         .iconSprite = gMonIcon_AvaluggHisui,
-        .iconPalIndex = 5,
+        .iconPalIndex = 2,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(2, -2, SHADOW_SIZE_L)
         FOOTPRINT(Avalugg)
@@ -6841,10 +6907,21 @@ gShinyOverworldPalette_ZygardeComplete)
 "during an unprecedented crisis,\n"
 "Zygarde Mega Evolves and calms the\n"
 "situation with its unmatched power."),
+        .frontPic = gMonFrontPic_ZygardeMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .enemyMonElevation = 8,
+        .backPic = gMonBackPic_ZygardeMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 15,
+        .palette = gMonPalette_ZygardeMega,
+        .shinyPalette = gMonShinyPalette_ZygardeMega,
         .iconSprite = gMonIcon_ZygardeMega,
         .iconPalIndex = 1,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         FOOTPRINT(Zygarde)
+        SHADOW(8, 20, SHADOW_SIZE_M)
         .isMegaEvolution = TRUE,
         .isRestrictedLegendary = TRUE,
         .levelUpLearnset = sZygardeLevelUpLearnset,

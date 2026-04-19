@@ -155,7 +155,7 @@
     {
       "type": "field",
       "name": "frontPicYOffset",
-      "value": "8"
+      "value": "6"
     },
     {
       "type": "field",
@@ -175,7 +175,7 @@
     {
       "type": "field",
       "name": "backPicYOffset",
-      "value": "7"
+      "value": "2"
     },
     {
       "type": "field",
@@ -205,7 +205,7 @@
     {
       "type": "macro",
       "name": "SHADOW",
-      "args": "0, 4, SHADOW_SIZE_L",
+      "args": "7, -1, SHADOW_SIZE_L",
       "has_comma": false
     },
     {

@@ -80,7 +80,7 @@
     {
       "type": "field",
       "name": "abilities",
-      "value": "{ ABILITY_LEVITATE, ABILITY_LEVITATE, ABILITY_LEVITATE }"
+      "value": "{ ABILITY_LEVITATE, ABILITY_NONE, ABILITY_LEVITATE }"
     },
     {
       "type": "field",
@@ -157,7 +157,7 @@
     {
       "type": "field",
       "name": "frontAnimFrames",
-      "value": "sAnims_TwoFramePlaceHolder"
+      "value": "sAnims_SingleFramePlaceHolder"
     },
     {
       "type": "field",

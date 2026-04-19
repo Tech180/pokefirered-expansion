@@ -158,6 +158,16 @@
     },
     {
       "type": "field",
+      "name": "iconSprite",
+      "value": "gMonIcon_GarchompMegaZ"
+    },
+    {
+      "type": "field",
+      "name": "iconPalIndex",
+      "value": "0"
+    },
+    {
+      "type": "field",
       "name": "pokemonJumpType",
       "value": "PKMN_JUMP_TYPE_NONE"
     },

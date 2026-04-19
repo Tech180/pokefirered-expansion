@@ -165,7 +165,7 @@
     {
       "type": "field",
       "name": "frontPicYOffset",
-      "value": "3"
+      "value": "1"
     },
     {
       "type": "field",
@@ -175,7 +175,7 @@
     {
       "type": "field",
       "name": "enemyMonElevation",
-      "value": "7"
+      "value": "8"
     },
     {
       "type": "field",
@@ -220,7 +220,7 @@
     {
       "type": "macro",
       "name": "SHADOW",
-      "args": "-4, 15, SHADOW_SIZE_S",
+      "args": "-4, 18, SHADOW_SIZE_XL_BATTLE_ONLY",
       "has_comma": false
     },
     {

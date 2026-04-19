@@ -157,7 +157,7 @@
     {
       "type": "field",
       "name": "frontAnimFrames",
-      "value": "sAnims_TwoFramePlaceHolder"
+      "value": "sAnims_SingleFramePlaceHolder"
     },
     {
       "type": "field",

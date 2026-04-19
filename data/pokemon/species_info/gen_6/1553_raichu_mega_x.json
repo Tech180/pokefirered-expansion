@@ -152,12 +152,12 @@
     {
       "type": "field",
       "name": "frontPicYOffset",
-      "value": "4"
+      "value": "3"
     },
     {
       "type": "field",
       "name": "frontAnimFrames",
-      "value": "sAnims_TwoFramePlaceHolder"
+      "value": "sAnims_SingleFramePlaceHolder"
     },
     {
       "type": "field",
@@ -172,7 +172,7 @@
     {
       "type": "field",
       "name": "backPicYOffset",
-      "value": "0"
+      "value": "3"
     },
     {
       "type": "field",
@@ -208,7 +208,7 @@
     {
       "type": "macro",
       "name": "SHADOW",
-      "args": "6, 6, SHADOW_SIZE_M",
+      "args": "-7, 9, SHADOW_SIZE_M",
       "has_comma": false
     },
     {
