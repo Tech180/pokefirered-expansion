@@ -136,5 +136,6 @@
 #define OW_BATTLE_FRONTIER          FALSE    // If TRUE, enables the Battle Frontier.
 #define OW_HOF_EVENT_TICKETS        FALSE   // If TRUE, enables event tickets after hall of fame.
 #define OW_MAP_POPUP_EMERALD        FALSE   // If TRUE, emerald-style map popups are used.
+#define OW_HEAT_START_MENU          TRUE    // If TRUE, uses the stylized icon-based start menu. If FALSE, uses the original text-based start menu.
 
 #endif // GUARD_CONFIG_OVERWORLD_H
