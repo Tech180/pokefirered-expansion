@@ -914,6 +914,7 @@ static void HeatStartMenu_ExitAndClearTilemap(void) {
 
   if (sHeatStartMenu != NULL) {
     FreeSpriteTilesByTag(TAG_ICON_GFX);
+    FreeSpritePaletteByTag(TAG_ICON_PAL);
     Free(sHeatStartMenu);
     sHeatStartMenu = NULL;
   }
@@ -924,7 +925,6 @@ static void DoCleanUpAndChangeCallback(MainCallback callback) {
     DestroyTask(FindTaskIdByFunc(Task_HeatStartMenu_HandleMainInput));
     PlayRainStoppingSoundEffect();
     HeatStartMenu_ExitAndClearTilemap();
-    CleanupOverworldWindowsAndTilemaps();
     SetMainCallback2(callback);
     gMain.savedCallback = CB2_ReturnToFieldWithOpenMenu;
   }
@@ -935,7 +935,6 @@ static void DoCleanUpAndOpenTrainerCard(void) {
     DestroyTask(FindTaskIdByFunc(Task_HeatStartMenu_HandleMainInput));
     PlayRainStoppingSoundEffect();
     HeatStartMenu_ExitAndClearTilemap();
-    CleanupOverworldWindowsAndTilemaps();
     if (IsOverworldLinkActive() || InUnionRoom()) {
       ShowPlayerTrainerCard(CB2_ReturnToFieldWithOpenMenu);
     } else if (FlagGet(FLAG_SYS_FRONTIER_PASS)) {
@@ -951,7 +950,6 @@ static void DoCleanUpAndOpenDexNav(void) {
     DestroyTask(FindTaskIdByFunc(Task_HeatStartMenu_HandleMainInput));
     PlayRainStoppingSoundEffect();
     HeatStartMenu_ExitAndClearTilemap();
-    CleanupOverworldWindowsAndTilemaps();
     CreateTask(Task_OpenDexNavFromStartMenu, 0);
   }
 }

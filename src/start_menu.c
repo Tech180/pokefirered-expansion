@@ -608,12 +608,14 @@ static bool8 FieldCB_ReturnToFieldStartMenu(void)
 {
 #if OW_HEAT_START_MENU
     HeatStartMenu_Init();
+    FadeInFromBlack();
+    return TRUE;
 #else
     if (InitStartMenuStep() == FALSE)
         return FALSE;
-#endif
     ReturnToFieldOpenStartMenu();
     return TRUE;
+#endif
 }
 
 void ShowReturnToFieldStartMenu(void)
