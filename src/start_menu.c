@@ -601,11 +601,17 @@ static void CreateStartMenuTask(TaskFunc followupFunc)
     SetTaskFuncWithFollowupFunc(taskId, StartMenuTask, followupFunc);
 }
 
+#include "config/overworld.h"
+#include "heat_start_menu.h"
+
 static bool8 FieldCB_ReturnToFieldStartMenu(void)
 {
-    if (!InitStartMenuStep())
+#if OW_HEAT_START_MENU
+    HeatStartMenu_Init();
+#else
+    if (InitStartMenuStep() == FALSE)
         return FALSE;
-
+#endif
     ReturnToFieldOpenStartMenu();
     return TRUE;
 }
@@ -638,6 +644,9 @@ void Task_ShowStartMenu(u8 taskId)
 
 void ShowStartMenu(void)
 {
+#if OW_HEAT_START_MENU
+    HeatStartMenu_Init();
+#else
     if (!IsOverworldLinkActive())
     {
         FreezeObjectEvents();
@@ -646,6 +655,7 @@ void ShowStartMenu(void)
     }
     CreateStartMenuTask(Task_ShowStartMenu);
     LockPlayerFieldControls();
+#endif
 }
 
 static bool8 HandleStartMenuInput(void)
