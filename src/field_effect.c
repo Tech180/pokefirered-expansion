@@ -119,11 +119,11 @@ static bool32 EscalatorWarpIn_End(struct Task *task);
 
 // Waterfall
 static void Task_UseWaterfall(u8 taskId);
-static bool32 WaterfallFieldEffect_Init(struct Task *task, struct ObjectEvent * playerObj);
-static bool32 WaterfallFieldEffect_ShowMon(struct Task *task, struct ObjectEvent * playerObj);
-static bool32 WaterfallFieldEffect_WaitForShowMon(struct Task *task, struct ObjectEvent * playerObj);
-static bool32 WaterfallFieldEffect_RideUp(struct Task *task, struct ObjectEvent * playerObj);
-static bool32 WaterfallFieldEffect_ContinueRideOrEnd(struct Task *task, struct ObjectEvent * playerObj);
+static bool32 WaterfallFieldEffect_Init(struct Task *task, struct ObjectEvent *playerObj);
+static bool32 WaterfallFieldEffect_ShowMon(struct Task *task, struct ObjectEvent *playerObj);
+static bool32 WaterfallFieldEffect_WaitForShowMon(struct Task *task, struct ObjectEvent *playerObj);
+static bool32 WaterfallFieldEffect_RideUp(struct Task *task, struct ObjectEvent *playerObj);
+static bool32 WaterfallFieldEffect_ContinueRideOrEnd(struct Task *task, struct ObjectEvent *playerObj);
 
 // Dive
 static void Task_UseDive(u8 taskId);
@@ -133,28 +133,28 @@ static bool32 DiveFieldEffect_TryWarp(struct Task *task);
 
 // Lavaridge 1BF warp
 static void Task_LavaridgeGymB1FWarp(u8 taskId);
-static bool32 LavaridgeGymB1FWarpEffect_Init(struct Task *task, struct ObjectEvent * objectEvent, struct Sprite *sprite);
-static bool32 LavaridgeGymB1FWarpEffect_CameraShake(struct Task *task, struct ObjectEvent * objectEvent, struct Sprite *sprite);
-static bool32 LavaridgeGymB1FWarpEffect_Launch(struct Task *task, struct ObjectEvent * objectEvent, struct Sprite *sprite);
-static bool32 LavaridgeGymB1FWarpEffect_Rise(struct Task *task, struct ObjectEvent * objectEvent, struct Sprite *sprite);
-static bool32 LavaridgeGymB1FWarpEffect_FadeOut(struct Task *task, struct ObjectEvent * objectEvent, struct Sprite *sprite);
-static bool32 LavaridgeGymB1FWarpEffect_Warp(struct Task *task, struct ObjectEvent * objectEvent, struct Sprite *sprite);
+static bool32 LavaridgeGymB1FWarpEffect_Init(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite);
+static bool32 LavaridgeGymB1FWarpEffect_CameraShake(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite);
+static bool32 LavaridgeGymB1FWarpEffect_Launch(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite);
+static bool32 LavaridgeGymB1FWarpEffect_Rise(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite);
+static bool32 LavaridgeGymB1FWarpEffect_FadeOut(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite);
+static bool32 LavaridgeGymB1FWarpEffect_Warp(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite);
 
 // Lavaridge 1BF warp exit
 static void FieldCB_LavaridgeGymB1FWarpExit(void);
 static void Task_LavaridgeGymB1FWarpExit(u8 taskId);
-static bool32 LavaridgeGymB1FWarpExitEffect_Init(struct Task *task, struct ObjectEvent * objectEvent, struct Sprite *sprite);
-static bool32 LavaridgeGymB1FWarpExitEffect_StartPopOut(struct Task *task, struct ObjectEvent * objectEvent, struct Sprite *sprite);
-static bool32 LavaridgeGymB1FWarpExitEffect_PopOut(struct Task *task, struct ObjectEvent * objectEvent, struct Sprite *sprite);
-static bool32 LavaridgeGymB1FWarpExitEffect_End(struct Task *task, struct ObjectEvent * objectEvent, struct Sprite *sprite);
+static bool32 LavaridgeGymB1FWarpExitEffect_Init(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite);
+static bool32 LavaridgeGymB1FWarpExitEffect_StartPopOut(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite);
+static bool32 LavaridgeGymB1FWarpExitEffect_PopOut(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite);
+static bool32 LavaridgeGymB1FWarpExitEffect_End(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite);
 
 // Lavaridge 1F warp
 static void Task_LavaridgeGym1FWarp(u8 taskId);
-static bool32 LavaridgeGym1FWarpEffect_Init(struct Task *task, struct ObjectEvent * objectEvent, struct Sprite *sprite);
-static bool32 LavaridgeGym1FWarpEffect_AshPuff(struct Task *task, struct ObjectEvent * objectEvent, struct Sprite *sprite);
-static bool32 LavaridgeGym1FWarpEffect_Disappear(struct Task *task, struct ObjectEvent * objectEvent, struct Sprite *sprite);
-static bool32 LavaridgeGym1FWarpEffect_FadeOut(struct Task *task, struct ObjectEvent * objectEvent, struct Sprite *sprite);
-static bool32 LavaridgeGym1FWarpEffect_Warp(struct Task *task, struct ObjectEvent * objectEvent, struct Sprite *sprite);
+static bool32 LavaridgeGym1FWarpEffect_Init(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite);
+static bool32 LavaridgeGym1FWarpEffect_AshPuff(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite);
+static bool32 LavaridgeGym1FWarpEffect_Disappear(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite);
+static bool32 LavaridgeGym1FWarpEffect_FadeOut(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite);
+static bool32 LavaridgeGym1FWarpEffect_Warp(struct Task *task, struct ObjectEvent *objectEvent, struct Sprite *sprite);
 
 // Escape Rope warp
 static void Task_EscapeRopeWarpOut(u8 taskId);
@@ -620,7 +620,7 @@ static const union AnimCmd *const sAnims_DeoxysRockFragment[] =
 static const struct SpriteTemplate sSpriteTemplate_DeoxysRockFragment =
 {
     .tileTag = TAG_NONE,
-    .paletteTag = 4371,
+    .paletteTag = OBJ_EVENT_PAL_TAG_METEORITE,
     .oam = &sOamData_8x8,
     .anims = sAnims_DeoxysRockFragment,
     .images = sImages_DeoxysRockFragment,
@@ -1441,7 +1441,7 @@ static bool32 FallWarpEffect_StartFall(struct Task *task)
 
 static bool32 FallWarpEffect_Fall(struct Task *task)
 {
-    struct ObjectEvent * objectEvent;
+    struct ObjectEvent *objectEvent;
     struct Sprite *sprite;
 
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
@@ -1561,7 +1561,7 @@ void HideFollowerForFieldEffect(void)
     ObjectEventSetHeldMovement(followerObj, MOVEMENT_ACTION_ENTER_POKEBALL);
 }
 
-void StartEscalatorWarp(u8 metatileBehavior, u8 priority)
+void StartEscalatorWarp(enum MetatileBehavior metatileBehavior, u8 priority)
 {
     u8 taskId = CreateTask(Task_EscalatorWarpOut, priority);
     gTasks[taskId].tGoingUp = FALSE;
@@ -1592,7 +1592,7 @@ static bool32 EscalatorWarpOut_Init(struct Task *task)
 
 static bool32 EscalatorWarpOut_WaitForPlayer(struct Task *task)
 {
-    struct ObjectEvent * objectEvent;
+    struct ObjectEvent *objectEvent;
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     if (!ObjectEventIsMovementOverridden(objectEvent) || ObjectEventClearHeldMovementIfFinished(objectEvent))
     {
@@ -1741,7 +1741,7 @@ static bool32 EscalatorWarpIn_Init(struct Task *task)
 {
     struct ObjectEvent *objectEvent;
     s16 x, y;
-    u32 behavior;
+    enum MetatileBehavior behavior;
 
     CameraObjectFreeze();
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
@@ -1870,7 +1870,7 @@ enum WaterfallState
     WATERFALL_CONTINUE_OR_END,
 };
 
-static bool32 (*const sWaterfallFieldEffectFuncs[])(struct Task *task, struct ObjectEvent * playerObj) = {
+static bool32 (*const sWaterfallFieldEffectFuncs[])(struct Task *task, struct ObjectEvent *playerObj) = {
     [WATERFALL_INIT]            = WaterfallFieldEffect_Init,
     [WATERFALL_SHOWMON]         = WaterfallFieldEffect_ShowMon,
     [WATERFALL_WAITMON]         = WaterfallFieldEffect_WaitForShowMon,
@@ -1896,7 +1896,7 @@ static void Task_UseWaterfall(u8 taskId)
         ;
 }
 
-static bool32 WaterfallFieldEffect_Init(struct Task *task, struct ObjectEvent * playerObj)
+static bool32 WaterfallFieldEffect_Init(struct Task *task, struct ObjectEvent *playerObj)
 {
     LockPlayerFieldControls();
     gPlayerAvatar.preventStep = TRUE;
@@ -1905,7 +1905,7 @@ static bool32 WaterfallFieldEffect_Init(struct Task *task, struct ObjectEvent * 
     return FALSE;
 }
 
-static bool32 WaterfallFieldEffect_ShowMon(struct Task *task, struct ObjectEvent * playerObj)
+static bool32 WaterfallFieldEffect_ShowMon(struct Task *task, struct ObjectEvent *playerObj)
 {
     LockPlayerFieldControls();
     if (!ObjectEventIsMovementOverridden(playerObj))
@@ -1918,7 +1918,7 @@ static bool32 WaterfallFieldEffect_ShowMon(struct Task *task, struct ObjectEvent
     return FALSE;
 }
 
-static bool32 WaterfallFieldEffect_WaitForShowMon(struct Task *task, struct ObjectEvent * playerObj)
+static bool32 WaterfallFieldEffect_WaitForShowMon(struct Task *task, struct ObjectEvent *playerObj)
 {
     if (FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_MON))
         return FALSE;
@@ -1927,14 +1927,14 @@ static bool32 WaterfallFieldEffect_WaitForShowMon(struct Task *task, struct Obje
     return TRUE;
 }
 
-static bool32 WaterfallFieldEffect_RideUp(struct Task *task, struct ObjectEvent * playerObj)
+static bool32 WaterfallFieldEffect_RideUp(struct Task *task, struct ObjectEvent *playerObj)
 {
     ObjectEventSetHeldMovement(playerObj, GetWalkSlowerMovementAction(DIR_NORTH));
     task->tState = WATERFALL_CONTINUE_OR_END;
     return FALSE;
 }
 
-static bool32 WaterfallFieldEffect_ContinueRideOrEnd(struct Task *task, struct ObjectEvent * playerObj)
+static bool32 WaterfallFieldEffect_ContinueRideOrEnd(struct Task *task, struct ObjectEvent *playerObj)
 {
     if (!ObjectEventClearHeldMovementIfFinished(playerObj))
         return FALSE;
@@ -2151,7 +2151,7 @@ static bool32 LavaridgeGymB1FWarpEffect_Rise(struct Task *task, struct ObjectEve
     return FALSE;
 }
 
-static bool32 LavaridgeGymB1FWarpEffect_FadeOut(struct Task *task, struct ObjectEvent * objEvent, struct Sprite *sprite)
+static bool32 LavaridgeGymB1FWarpEffect_FadeOut(struct Task *task, struct ObjectEvent *objEvent, struct Sprite *sprite)
 {
     TryFadeOutOldMapMusic();
     WarpFadeOutScreen();
@@ -2160,7 +2160,7 @@ static bool32 LavaridgeGymB1FWarpEffect_FadeOut(struct Task *task, struct Object
     return FALSE;
 }
 
-static bool32 LavaridgeGymB1FWarpEffect_Warp(struct Task *task, struct ObjectEvent * objEvent, struct Sprite *sprite)
+static bool32 LavaridgeGymB1FWarpEffect_Warp(struct Task *task, struct ObjectEvent *objEvent, struct Sprite *sprite)
 {
     if (!gPaletteFade.active && BGMusicStopped() == TRUE)
     {
@@ -2820,7 +2820,7 @@ static void TeleportWarpOutFieldEffect_Init(struct Task *task)
 
 static void TeleportWarpOutFieldEffect_SpinGround(struct Task *task)
 {
-    struct ObjectEvent * objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
+    struct ObjectEvent *objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     if (task->tSpinTimer == 0 || (--task->tSpinTimer) == 0)
     {
         ObjectEventTurn(objectEvent, sSpinDirections[objectEvent->facingDirection]);
@@ -2840,7 +2840,7 @@ static void TeleportWarpOutFieldEffect_SpinGround(struct Task *task)
 
 static void TeleportWarpOutFieldEffect_SpinExit(struct Task *task)
 {
-    struct ObjectEvent * objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
+    struct ObjectEvent *objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     struct Sprite *sprite = &gSprites[gPlayerAvatar.spriteId];
     if ((--task->tSpinTimer) <= 0)
     {
@@ -2957,7 +2957,7 @@ static void TeleportWarpInFieldEffect_Init(struct Task *task)
 
 static void TeleportWarpInFieldEffect_SpinEnter(struct Task *task)
 {
-    struct ObjectEvent * objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
+    struct ObjectEvent *objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     struct Sprite *sprite = &gSprites[gPlayerAvatar.spriteId];
 
     sprite->y2 += task->tFallOffset;
@@ -4376,7 +4376,7 @@ static void Task_MoveDeoxysRock(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
     struct Sprite *sprite = &gSprites[tSpriteId];
-    struct ObjectEvent * objectEvent;
+    struct ObjectEvent *objectEvent;
 
     switch (tState)
     {

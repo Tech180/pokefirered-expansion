@@ -2,6 +2,7 @@
 #define GUARD_FIELDMAP_H
 
 #include "global.h"
+#include "constants/metatile_behaviors.h"
 
 #define NUM_TILES_IN_PRIMARY 640
 #define NUM_TILES_TOTAL 1024
@@ -27,7 +28,7 @@ extern const struct MapLayout Route1_Layout;
 extern u16 ALIGNED(4) sBackupMapData[VIRTUAL_MAP_SIZE];
 
 u32 MapGridGetMetatileIdAt(s32, s32);
-u32 MapGridGetMetatileBehaviorAt(s16, s16);
+enum MetatileBehavior MapGridGetMetatileBehaviorAt(s16, s16);
 u8 MapGridGetMetatileLayerTypeAt(s16 x, s16 y);
 void MapGridSetMetatileIdAt(s32, s32, u16);
 void MapGridSetMetatileEntryAt(s32, s32, u16);
@@ -36,8 +37,8 @@ void GetCameraCoords(u16 *, u16 *);
 bool8 MapGridGetCollisionAt(s32, s32);
 s32 GetMapBorderIdAt(s32, s32);
 bool32 CanCameraMoveInDirection(s32);
-const struct MapHeader * GetMapHeaderFromConnection(const struct MapConnection * connection);
-const struct MapConnection * GetMapConnectionAtPos(s16 x, s16 y);
+const struct MapHeader *GetMapHeaderFromConnection(const struct MapConnection *connection);
+const struct MapConnection *GetMapConnectionAtPos(s16 x, s16 y);
 void ApplyGlobalTintToPaletteSlot(u8 slot, u8 count);
 void SaveMapView(void);
 u32 ExtractMetatileAttribute(u32 attributes, u8 attributeType);
@@ -48,8 +49,8 @@ void CopyMapTilesetsToVram(struct MapLayout const * mapLayout);
 void LoadMapTilesetPalettes(struct MapLayout const * mapLayout);
 void InitMap(void);
 void InitBattlePyramidMap(bool8 setPlayerPosition);
-void CopySecondaryTilesetToVramUsingHeap(const struct MapLayout * mapLayout);
-void LoadSecondaryTilesetPalette(const struct MapLayout * mapLayout, bool8 skipFaded);
+void CopySecondaryTilesetToVramUsingHeap(const struct MapLayout *mapLayout);
+void LoadSecondaryTilesetPalette(const struct MapLayout *mapLayout, bool8 skipFaded);
 void InitMapFromSavedGame(void);
 void CopyPrimaryTilesetToVram(const struct MapLayout *mapLayout);
 void CopySecondaryTilesetToVram(const struct MapLayout *mapLayout);

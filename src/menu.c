@@ -1141,7 +1141,7 @@ void *DecompressAndCopyTileDataToVram(u8 bgId, const void *src, u32 size, u16 of
 
     if (sTempTileDataBufferCursor < ARRAY_COUNT(sTempTileDataBuffers))
     {
-        void *ptr = malloc_and_decompress(src, &sizeOut);
+        void *ptr = AllocAndDecompress(src, &sizeOut);
         if (!size)
             size = sizeOut;
         if (ptr)
@@ -1158,7 +1158,7 @@ void DecompressAndLoadBgGfxUsingHeap(u8 bgId, const void *src, u32 size, u16 off
 {
     u32 sizeOut;
 
-    void *ptr = malloc_and_decompress(src, &sizeOut);
+    void *ptr = AllocAndDecompress(src, &sizeOut);
     if (!size)
         size = sizeOut;
     if (ptr)
@@ -1173,7 +1173,7 @@ void DecompressAndLoadBgGfxUsingHeap2(u8 bgId, const void *src, u32 size, u16 of
 {
     u32 sizeOut;
 
-    void *ptr = malloc_and_decompress(src, &sizeOut);
+    void *ptr = AllocAndDecompress(src, &sizeOut);
     if (sizeOut > size)
         sizeOut = size;
     if (ptr)
@@ -1193,7 +1193,7 @@ static void TaskFreeBufAfterCopyingTileDataToVram(u8 taskId)
     }
 }
 
-void *malloc_and_decompress(const void *src, u32 *size)
+void *AllocAndDecompress(const void *src, u32 *size)
 {
     void *ptr;
     u32 localSize = GetDecompressedDataSize(src);
@@ -1458,7 +1458,7 @@ u16 GetStandardFrameBaseTileNum(void)
     return STD_WINDOW_BASE_TILE_NUM;
 }
 
-void AddTextPrinterParameterized3(u8 windowId, u8 fontId, u8 x, u8 y, const u8 * color, s8 speed, const u8 * str)
+void AddTextPrinterParameterized3(u8 windowId, u8 fontId, u8 x, u8 y, const u8 *color, s8 speed, const u8 *str)
 {
     struct TextPrinterTemplate printer;
 
@@ -1523,7 +1523,7 @@ void AddTextPrinterParameterized5(u8 windowId, u8 fontId, const u8 *str, u8 x, u
     AddTextPrinter(&printer, speed, callback);
 }
 
-void PrintPlayerNameOnWindow(u8 windowId, const u8 * src, u16 x, u16 y)
+void PrintPlayerNameOnWindow(u8 windowId, const u8 *src, u16 x, u16 y)
 {
     s32 i;
 
@@ -1621,7 +1621,7 @@ void BufferSaveMenuText(enum SaveStat gameStatId, u8 *dest0, u8 color)
     }
 }
 
-void DrawHelpMessageWindowWithText(const u8 * text)
+void DrawHelpMessageWindowWithText(const u8 *text)
 {
     LoadHelpMessageWindowGfx(CreateHelpMessageWindow(), DLG_WINDOW_BASE_TILE_NUM, BG_PLTT_ID(DLG_WINDOW_PALETTE_NUM));
     PrintTextOnHelpMessageWindow(text, COPYWIN_GFX);

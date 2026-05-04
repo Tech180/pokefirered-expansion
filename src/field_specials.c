@@ -72,7 +72,7 @@
 static EWRAM_DATA u8 sTutorMoveAndElevatorWindowId = 0;
 static EWRAM_DATA u16 sElevatorScroll = 0;
 static EWRAM_DATA u16 sElevatorCursorPos = 0;
-static EWRAM_DATA struct ListMenuItem * sListMenuItems = NULL;
+static EWRAM_DATA struct ListMenuItem *sListMenuItems = NULL;
 static EWRAM_DATA u8 sScrollableMultichoice_ItemSpriteId = 0;
 static EWRAM_DATA u8 sBattlePointsWindowId = 0;
 static EWRAM_DATA u8 sFrontierExchangeCorner_ItemIconWindowId = 0;
@@ -91,11 +91,11 @@ static void Task_EndScreenShake(u8 taskId);
 static enum Species SampleResortGorgeousMon(void);
 static u16 SampleResortGorgeousReward(void);
 static void Task_ElevatorShake(u8 taskId);
-static void AnimateElevatorWindowView(u16 nfloors, bool8 direction);
+static void AnimateElevatorWindowView(u16 floorNum, enum Direction direction);
 static void Task_AnimateElevatorWindowView(u8 taskId);
 static void Task_CreateScriptListMenu(u8 taskId);
 static void InitScrollableMultichoice(void);
-static void ScrollableMultichoice_MoveCursor(s32 nothing, bool8 is, struct ListMenu * used);
+static void ScrollableMultichoice_MoveCursor(s32 nothing, bool8 is, struct ListMenu *used);
 static void ScrollableMultichoice_ProcessInput(u8 taskId);
 static void CloseScrollableMultichoice(u8 taskId);
 static void Task_SuspendListMenu(u8 taskId);
@@ -261,7 +261,7 @@ static const u8 *const sScrollMultiLabels_BFItemVendor[] =
     gText_Exit
 };
 
-static const u8 *const *sListMenuLabels[] =
+static const u8 *const *const sListMenuLabels[] =
 {
     [SCROLL_MULTI_BADGES]                              = sScrollMultiLabels_Badges,
     [SCROLL_MULTI_SILPHCO_FLOORS]                      = sScrollMultiLabels_SilphCoFloors,
@@ -368,7 +368,7 @@ u16 GetWeekCount(void)
 
 u8 GetLeadMonFriendship(void)
 {
-    struct Pokemon * pokemon = &gPlayerParty[GetLeadMonIndex()];
+    struct Pokemon *pokemon = &gPlayerParty[GetLeadMonIndex()];
     if (GetMonData(pokemon, MON_DATA_FRIENDSHIP) == 255)
         return 6;
     else if (GetMonData(pokemon, MON_DATA_FRIENDSHIP) >= 200)
@@ -394,7 +394,7 @@ void FieldShowRegionMap(void)
 bool8 PlayerHasGrassPokemonInParty(void)
 {
     u8 i;
-    struct Pokemon * pokemon;
+    struct Pokemon *pokemon;
 
     for (i = 0; i < PARTY_SIZE; i++)
     {
@@ -500,7 +500,7 @@ static void PcTurnOnUpdateMetatileId(bool16 flickerOff)
     u16 metatileId = GetPcAnimationMetatileId();
     s8 deltaX = 0;
     s8 deltaY = 0;
-    u8 direction = GetPlayerFacingDirection();
+    enum Direction direction = GetPlayerFacingDirection();
 
     switch (direction)
     {
@@ -516,6 +516,8 @@ static void PcTurnOnUpdateMetatileId(bool16 flickerOff)
         deltaX = 1;
         deltaY = -1;
         break;
+    default:
+        break;
     }
 
     MapGridSetMetatileIdAt(gSaveBlock1Ptr->pos.x + deltaX + MAP_OFFSET, gSaveBlock1Ptr->pos.y + deltaY + MAP_OFFSET, metatileId | MAPGRID_COLLISION_MASK);
@@ -524,9 +526,8 @@ static void PcTurnOnUpdateMetatileId(bool16 flickerOff)
 void AnimatePcTurnOff()
 {
     u16 metatileId;
-    s8 deltaX = 0;
-    s8 deltaY = 0;
-    u8 direction = GetPlayerFacingDirection();
+    s8 deltaX, deltaY;
+    enum Direction direction = GetPlayerFacingDirection();
 
     if (IsPlayerInFrontOfPC() == FALSE)
         return;
@@ -546,6 +547,11 @@ void AnimatePcTurnOff()
     case DIR_EAST:
         deltaX = 1;
         deltaY = -1;
+        break;
+    case DIR_SOUTH:
+    default:
+        deltaX = 0;
+        deltaY = 0;
         break;
     }
 
@@ -736,7 +742,7 @@ u8 GetLeadMonIndex(void)
 {
     u8 partyCount = CalculatePlayerPartyCount();
     u8 i;
-    struct Pokemon * pokemon;
+    struct Pokemon *pokemon;
     for (i = 0; i < partyCount; i++)
     {
         pokemon = &gPlayerParty[i];
@@ -763,7 +769,7 @@ bool8 IsMonOTNameNotPlayers(void)
 
 void DoPicboxCancel(void)
 {
-    DeactivateSingleTextPrinter(0, WINDOW_TEXT_PRINTER);
+    DeactivateAllTextPrinters();
     PicboxCancel();
 }
 
@@ -1334,7 +1340,7 @@ void CloseElevatorCurrentFloorWindow(void)
     RemoveWindow(sTutorMoveAndElevatorWindowId);
 }
 
-static void AnimateElevatorWindowView(u16 nfloors, u8 direction)
+static void AnimateElevatorWindowView(u16 floorNum, enum Direction direction)
 {
     u8 taskId;
     if (FuncIsActiveTask(Task_AnimateElevatorWindowView) != TRUE)
@@ -1343,7 +1349,7 @@ static void AnimateElevatorWindowView(u16 nfloors, u8 direction)
         gTasks[taskId].data[0] = 0;
         gTasks[taskId].data[1] = 0;
         gTasks[taskId].data[2] = direction;
-        gTasks[taskId].data[3] = sElevatorWindowAnimDuration[nfloors];
+        gTasks[taskId].data[3] = sElevatorWindowAnimDuration[floorNum];
     }
 }
 
@@ -1580,7 +1586,7 @@ static void InitScrollableMultichoice(void)
     gScrollableMultichoice_ListMenuTemplate.cursorKind = 0;
 }
 
-static void ScrollableMultichoice_MoveCursor(s32 nothing, bool8 is, struct ListMenu * used)
+static void ScrollableMultichoice_MoveCursor(s32 nothing, bool8 is, struct ListMenu *used)
 {
     u8 taskId;
     struct Task *task;
@@ -1817,7 +1823,7 @@ u8 ContextNpcGetTextColor(void)
 
 static bool8 HasMonBeenRenamed(u8 idx)
 {
-    struct Pokemon * pokemon = &gPlayerParty[idx];
+    struct Pokemon *pokemon = &gPlayerParty[idx];
     u8 language;
     GetMonData(pokemon, MON_DATA_NICKNAME, gStringVar1);
     language = GetMonData(pokemon, MON_DATA_LANGUAGE, &language);
@@ -1854,7 +1860,7 @@ size_t CountDigits(s32 value)
 
 bool8 NameRaterWasNicknameChanged(void)
 {
-    struct Pokemon * pokemon = &gPlayerParty[gSpecialVar_0x8004];
+    struct Pokemon *pokemon = &gPlayerParty[gSpecialVar_0x8004];
     GetMonData(pokemon, MON_DATA_NICKNAME, gStringVar1);
     if (StringCompare(gStringVar3, gStringVar1) == 0)
         return FALSE;
@@ -1864,7 +1870,7 @@ bool8 NameRaterWasNicknameChanged(void)
 
 void ChangeBoxPokemonNickname(void)
 {
-    struct BoxPokemon * pokemon = GetBoxedMonPtr(gSpecialVar_MonBoxId, gSpecialVar_MonBoxPos);
+    struct BoxPokemon *pokemon = GetBoxedMonPtr(gSpecialVar_MonBoxId, gSpecialVar_MonBoxPos);
     enum Species species;
     u8 gender;
     u32 personality;
@@ -2125,7 +2131,7 @@ void QuestLog_TryRecordDepartedLocation(void)
 {
     s16 x, y;
     struct QuestLogEvent_Departed data;
-    u16 locationId = VarGet(VAR_QL_ENTRANCE);
+    enum QLLocation locationId = VarGet(VAR_QL_ENTRANCE);
     data.mapSec = 0;
     data.locationId = 0;
     if (FlagGet(FLAG_SYS_QL_DEPARTED))
@@ -2646,9 +2652,11 @@ static void Task_DoDeoxysTriangleInteraction(u8 taskId)
 static void MoveDeoxysObject(u8 num)
 {
     u8 mapObjId;
-    LoadPalette(sDeoxysObjectPals[num], OBJ_PLTT_ID(10), PLTT_SIZEOF(4));
-    UpdateSpritePaletteWithWeather(10, FALSE);
-    ApplyGlobalFieldPaletteTint(10);
+    u32 palIndex = IndexOfSpritePaletteTag(OBJ_EVENT_PAL_TAG_METEORITE);
+
+    LoadPalette(sDeoxysObjectPals[num], OBJ_PLTT_ID(palIndex), PLTT_SIZEOF(4));
+    UpdateSpritePaletteWithWeather(palIndex, FALSE);
+    ApplyGlobalFieldPaletteTint(palIndex);
     TryGetObjectEventIdByLocalIdAndMap(LOCALID_BIRTH_ISLAND_EXTERIOR_ROCK, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup, &mapObjId);
     if (num == 0)
         PlaySE(SE_M_CONFUSE_RAY);
@@ -2693,8 +2701,10 @@ void IncrementBirthIslandRockStepCount(void)
 void SetDeoxysTrianglePalette(void)
 {
     u8 num = VarGet(VAR_DEOXYS_INTERACTION_NUM);
-    LoadPalette(sDeoxysObjectPals[num], OBJ_PLTT_ID(10), PLTT_SIZEOF(4));
-    ApplyGlobalFieldPaletteTint(10);
+    u32 palIndex = AllocSpritePalette(OBJ_EVENT_PAL_TAG_METEORITE);
+
+    LoadPalette(sDeoxysObjectPals[num], OBJ_PLTT_ID(palIndex), PLTT_SIZEOF(4));
+    ApplyGlobalFieldPaletteTint(palIndex);
 }
 
 bool8 IsBadEggInParty(void)

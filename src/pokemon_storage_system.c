@@ -759,7 +759,7 @@ static bool32 IsItemIconAtPosition(u8 cursorArea, u8 cursorPos);
 static u8 GetNewItemIconIdx(void);
 static u8 GetItemIconIdxByPosition(u8 cursorArea, u8 cursorPos);
 static void SetItemIconPosition(u8 id, u8 cursorArea, u8 cursorPos);
-static void LoadItemIconGfx(u8 id, const u32 * tiles, const u16 * pal);
+static void LoadItemIconGfx(u8 id, const u32 *tiles, const u16 *pal);
 static void SetItemIconAffineAnim(u8 id, u8 affineAnimNo);
 static void SetItemIconCallback(u8 id, u8 command, u8 cursorArea, u8 cursorPos);
 static void SetItemIconActive(u8 id, bool8 show);
@@ -4405,7 +4405,7 @@ void CreateBoxMonIconAtPos(u8 boxPosition)
         u32 personality = GetCurrentBoxMonData(boxPosition, MON_DATA_PERSONALITY);
 
         gStorage->boxMonsSprites[boxPosition] = CreateMonIconSprite(species, personality, x, y, 2, 19 - (boxPosition % IN_BOX_COLUMNS));
-        if (gStorage->boxOption == OPTION_MOVE_ITEMS)
+        if (ShouldBoxmonSpriteBeTransparent(StorageGetCurrentBox(), boxPosition))
             gStorage->boxMonsSprites[boxPosition]->oam.objMode = ST_OAM_OBJ_BLEND;
     }
 }
@@ -4502,6 +4502,9 @@ static u8 CreateBoxMonIconsInColumn(u8 column, u16 distance, s16 speed)
                     gStorage->boxMonsSprites[boxPosition]->sSpeed = speed;
                     gStorage->boxMonsSprites[boxPosition]->sDestX = xDest;
                     gStorage->boxMonsSprites[boxPosition]->callback = SpriteCB_BoxMonIconScrollIn;
+                    if (ShouldBoxmonSpriteBeTransparent(gStorage->incomingBoxId, boxPosition))
+                        gStorage->boxMonsSprites[boxPosition]->oam.objMode = ST_OAM_OBJ_BLEND;
+
                     count++;
                 }
             }
@@ -9075,12 +9078,12 @@ static void SpriteCB_ItemIcon_HideParty(struct Sprite *sprite)
 //  SECTION: General utility
 //------------------------------------------------------------------------------
 
-void BackupPokemonStorage(struct PokemonStorage * dest)
+void BackupPokemonStorage(struct PokemonStorage *dest)
 {
     *dest = *gPokemonStoragePtr;
 }
 
-void RestorePokemonStorage(struct PokemonStorage * src)
+void RestorePokemonStorage(struct PokemonStorage *src)
 {
     *gPokemonStoragePtr = *src;
 }
@@ -9167,13 +9170,13 @@ u32 GetAndCopyBoxMonDataAt(u8 boxId, u8 boxPosition, s32 request, void *dst)
         return 0;
 }
 
-void SetBoxMonAt(u8 boxId, u8 boxPosition, struct BoxPokemon * src)
+void SetBoxMonAt(u8 boxId, u8 boxPosition, struct BoxPokemon *src)
 {
     if (boxId < TOTAL_BOXES_COUNT && boxPosition < IN_BOX_COUNT)
         gPokemonStoragePtr->boxes[boxId][boxPosition] = *src;
 }
 
-void CopyBoxMonAt(u8 boxId, u8 boxPosition, struct BoxPokemon * dst)
+void CopyBoxMonAt(u8 boxId, u8 boxPosition, struct BoxPokemon *dst)
 {
     if (boxId < TOTAL_BOXES_COUNT && boxPosition < IN_BOX_COUNT)
         *dst = gPokemonStoragePtr->boxes[boxId][boxPosition];
@@ -9185,13 +9188,13 @@ void ZeroBoxMonAt(u8 boxId, u8 boxPosition)
         ZeroBoxMonData(&gPokemonStoragePtr->boxes[boxId][boxPosition]);
 }
 
-void BoxMonAtToMon(u8 boxId, u8 boxPosition, struct Pokemon * dst)
+void BoxMonAtToMon(u8 boxId, u8 boxPosition, struct Pokemon *dst)
 {
     if (boxId < TOTAL_BOXES_COUNT && boxPosition < IN_BOX_COUNT)
         BoxMonToMon(&gPokemonStoragePtr->boxes[boxId][boxPosition], dst);
 }
 
-struct BoxPokemon * GetBoxedMonPtr(u8 boxId, u8 boxPosition)
+struct BoxPokemon *GetBoxedMonPtr(u8 boxId, u8 boxPosition)
 {
     if (boxId < TOTAL_BOXES_COUNT && boxPosition < IN_BOX_COUNT)
         return &gPokemonStoragePtr->boxes[boxId][boxPosition];

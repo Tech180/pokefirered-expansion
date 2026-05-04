@@ -77,9 +77,9 @@ static const u8 sText_SavedGameAtLocation[] = _("And {PLAYER} saved the game at 
 COMMON_DATA u8 gQuestLogPlaybackState = 0;
 COMMON_DATA u16 sMaxActionsInScene = 0;
 COMMON_DATA struct FieldInput gQuestLogFieldInput = {0};
-COMMON_DATA struct QuestLogAction * sCurSceneActions = NULL;
+COMMON_DATA struct QuestLogAction *sCurSceneActions = NULL;
 
-static struct FlagOrVarRecord * sFlagOrVarRecords;
+static struct FlagOrVarRecord *sFlagOrVarRecords;
 static u16 sNumFlagsOrVars;
 
 static EWRAM_DATA u8 sCurrentSceneNum = 0;
@@ -251,7 +251,7 @@ bool8 QL_IsRoomToSaveAction(const void * cursor, size_t size)
     return TRUE;
 }
 
-static void SetQuestLogState(u8 state)
+static void SetQuestLogState(enum QLState state)
 {
     gQuestLogState = state;
     if (state == QL_STATE_RECORDING)
@@ -297,12 +297,12 @@ void GetQuestLogState(void)
     gSpecialVar_Result = gQuestLogState;
 }
 
-u8 GetQuestLogStartType(void)
+enum QLStartType GetQuestLogStartType(void)
 {
     return gSaveBlock1Ptr->questLog[sCurrentSceneNum].startType;
 }
 
-void QL_StartRecordingAction(u16 eventId)
+void QL_StartRecordingAction(enum QLEvent eventId)
 {
     if (sCurrentSceneNum >= QUEST_LOG_SCENE_COUNT)
         sCurrentSceneNum = 0;
@@ -314,6 +314,7 @@ void QL_StartRecordingAction(u16 eventId)
         gSaveBlock1Ptr->questLog[sCurrentSceneNum].startType = QL_START_WARP;
     else
         gSaveBlock1Ptr->questLog[sCurrentSceneNum].startType = QL_START_NORMAL;
+
     SetPokemonCounts();
     SetPlayerInitialCoordsAtScene(sCurrentSceneNum);
     SetNPCInitialCoordsAtScene(sCurrentSceneNum);
@@ -328,7 +329,7 @@ void QL_StartRecordingAction(u16 eventId)
 
 static void SetPlayerInitialCoordsAtScene(u8 sceneNum)
 {
-    struct QuestLogScene * questLog = &gSaveBlock1Ptr->questLog[sceneNum];
+    struct QuestLogScene *questLog = &gSaveBlock1Ptr->questLog[sceneNum];
     questLog->mapGroup = gSaveBlock1Ptr->location.mapGroup;
     questLog->mapNum = gSaveBlock1Ptr->location.mapNum;
     questLog->warpId = gSaveBlock1Ptr->location.warpId;
@@ -338,7 +339,7 @@ static void SetPlayerInitialCoordsAtScene(u8 sceneNum)
 
 static void SetNPCInitialCoordsAtScene(u8 sceneNum)
 {
-    struct QuestLogScene * questLog = &gSaveBlock1Ptr->questLog[sceneNum];
+    struct QuestLogScene *questLog = &gSaveBlock1Ptr->questLog[sceneNum];
     u16 i;
 
     QL_RecordObjects(questLog);
@@ -372,7 +373,7 @@ static void SetNPCInitialCoordsAtScene(u8 sceneNum)
 
 static void SetGameStateAtScene(u8 sceneNum)
 {
-    struct QuestLogScene * questLog = &gSaveBlock1Ptr->questLog[sceneNum];
+    struct QuestLogScene *questLog = &gSaveBlock1Ptr->questLog[sceneNum];
 
     CpuCopy16(gSaveBlock1Ptr->flags, questLog->flags, sizeof(gSaveBlock1Ptr->flags));
     CpuCopy16(gSaveBlock1Ptr->vars, questLog->vars, sizeof(gSaveBlock1Ptr->vars));
@@ -417,7 +418,7 @@ static void RecordSceneEnd(void)
         sCurrentSceneNum = 0;
 }
 
-static bool8 TryRecordActionSequence(struct QuestLogAction * actions)
+static bool8 TryRecordActionSequence(struct QuestLogAction *actions)
 {
     u16 i;
 
@@ -622,7 +623,7 @@ static void QLPlayback_InitOverworldState(void)
 
 void QL_CopySaveState(void)
 {
-    struct QuestLogScene * questLog = &gSaveBlock1Ptr->questLog[sCurrentSceneNum];
+    struct QuestLogScene *questLog = &gSaveBlock1Ptr->questLog[sCurrentSceneNum];
 
     CpuCopy16(questLog->flags, gSaveBlock1Ptr->flags, sizeof(gSaveBlock1Ptr->flags));
     CpuCopy16(questLog->vars, gSaveBlock1Ptr->vars, sizeof(gSaveBlock1Ptr->vars));
@@ -687,7 +688,7 @@ void QL_ResetPartyAndPC(void)
         {
             for (j = 0; j < IN_BOX_COUNT; j++)
             {
-                struct BoxPokemon * boxMon = GetBoxedMonPtr(i, j);
+                struct BoxPokemon *boxMon = GetBoxedMonPtr(i, j);
                 if (!GetBoxMonData(boxMon, MON_DATA_SANITY_HAS_SPECIES))
                 {
                     // Replace the additional slots with placeholder Pokémon.
@@ -776,7 +777,7 @@ void QL_RestoreMapLayoutId(void)
     }
 }
 
-static void ReadQuestLogScriptFromSav1(u8 sceneNum, struct QuestLogAction * actions)
+static void ReadQuestLogScriptFromSav1(u8 sceneNum, struct QuestLogAction *actions)
 {
     u16 i;
     u16 *script;
@@ -1334,7 +1335,7 @@ void QuestLog_CutRecording(void)
 
 static void SortQuestLogInSav1(void)
 {
-    struct QuestLogScene * buffer = AllocZeroed(sizeof(gSaveBlock1Ptr->questLog));
+    struct QuestLogScene *buffer = AllocZeroed(sizeof(gSaveBlock1Ptr->questLog));
     u8 i;
     u8 sceneNum = sCurrentSceneNum;
     u8 count = 0;
@@ -1514,7 +1515,7 @@ void QuestLogRecordPlayerAvatarGfxTransitionWithDuration(u8 gfxState, u8 duratio
     }
 }
 
-void QL_RecordFieldInput(struct FieldInput * fieldInput)
+void QL_RecordFieldInput(struct FieldInput *fieldInput)
 {
     if (gQuestLogCurActionIdx < sMaxActionsInScene)
     {
@@ -1556,9 +1557,9 @@ static void TogglePlaybackStateForOverworldLock(u8 a0)
     }
 }
 
-void QuestLog_OnEscalatorWarp(u8 direction)
+void QuestLog_OnEscalatorWarp(enum QLEscalatorType direction)
 {
-    u8 state = QL_GetPlaybackState();
+    enum QLPlaybackState state = QL_GetPlaybackState();
 
     switch (direction)
     {
@@ -1637,6 +1638,11 @@ static void ResetActions(u8 kind, struct QuestLogAction *actions, u16 size)
             break;
         case DIR_WEST:
             sCurSceneActions[gQuestLogCurActionIdx].data.a.movementActionId = MOVEMENT_ACTION_FACE_LEFT;
+            break;
+        case DIR_SOUTHWEST:
+        case DIR_SOUTHEAST:
+        case DIR_NORTHWEST:
+        case DIR_NORTHEAST:
             break;
         }
         sLastQuestLogCursor = 0;
@@ -1735,7 +1741,7 @@ void QL_AfterRecordFishActionSuccessful(void)
     sNextActionDelay++;
 }
 
-u8 QL_GetPlaybackState(void)
+enum QLPlaybackState QL_GetPlaybackState(void)
 {
     switch (gQuestLogPlaybackState)
     {

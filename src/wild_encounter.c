@@ -38,11 +38,11 @@
 struct WildEncounterData
 {
     u32 rngState;
-    u16 prevMetatileBehavior;
+    enum MetatileBehavior prevMetatileBehavior;
     u16 encounterRateBuff;
     u8 stepsSinceLastEncounter;
     u8 abilityEffect;
-    u16 leadMonHeldItem;
+    enum Item leadMonHeldItem;
 };
 
 static EWRAM_DATA struct WildEncounterData sWildEncounterData = {};
@@ -287,7 +287,7 @@ u16 GetCurrentMapWildMonHeaderId(void)
 
     for (i = 0; ; i++)
     {
-        const struct WildPokemonHeader * wildHeader = &gWildMonHeaders[i];
+        const struct WildPokemonHeader *wildHeader = &gWildMonHeaders[i];
         if (wildHeader->mapGroup == MAP_GROUP(MAP_UNDEFINED))
             break;
 
@@ -323,16 +323,15 @@ enum EncounterFallbacks
 void GetSeasonAndTimeOfDayForEncounters(u32 headerId, enum WildPokemonArea area, enum Season *season, enum TimeOfDay *timeOfDay)
 {
     const struct WildPokemonInfo *wildMonInfo = NULL;
-    *season = OW_SEASON_FALLBACK;
-    *timeOfDay = OW_TIME_OF_DAY_FALLBACK;
+
+    if (!OW_SEASON_ENCOUNTERS)
+        *season = OW_SEASON_FALLBACK;
+    if (!OW_TIME_OF_DAY_ENCOUNTERS)
+        *timeOfDay = OW_TIME_OF_DAY_FALLBACK;
 
     if (InBattlePike() || CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
         return;
 
-    if (OW_SEASON_ENCOUNTERS)
-        *season = gLoadedSeason;
-    if (OW_TIME_OF_DAY_ENCOUNTERS)
-        *timeOfDay = GetTimeOfDay();
     if (*season == OW_SEASON_FALLBACK && *timeOfDay == OW_TIME_OF_DAY_FALLBACK)
         return;
 
@@ -410,7 +409,7 @@ void CreateWildMon(enum Species species, u8 level, u8 unownSlot)
 
 #define TRY_GET_ABILITY_INFLUENCED_WILD_MON_INDEX(wildPokemon, type, ability, ptr, count) TryGetAbilityInfluencedWildMonIndex(wildPokemon, type, ability, ptr, count)
 
-static bool8 TryGenerateWildMon(const struct WildPokemonInfo * wildMonInfo, u8 area, u8 flags)
+static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, u8 area, u8 flags)
 {
     u8 wildMonIndex = 0;
     u8 level;
@@ -463,7 +462,7 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo * wildMonInfo, u8 a
     return TRUE;
 }
 
-static u16 GenerateFishingEncounter(const struct WildPokemonInfo * wildMonInfo, u8 rod)
+static u16 GenerateFishingEncounter(const struct WildPokemonInfo *wildMonInfo, u8 rod)
 {
     u8 wildMonIndex = ChooseWildMonIndex_Fishing(rod);
     u16 wildMonSpecies = wildMonInfo->wildPokemon[wildMonIndex].species;
@@ -556,11 +555,11 @@ static bool8 AllowWildCheckOnNewMetatile(void)
     return TRUE;
 }
 
-bool8 TryStandardWildLandEncounter(u16 headerId, u32 currMetatileAttrs, u16 previousMetatileBehavior)
+bool8 TryStandardWildLandEncounter(u16 headerId, u32 currMetatileAttrs, enum MetatileBehavior previousMetatileBehavior)
 {
-    struct Roamer * roamer;
-    enum Season season;
-    enum TimeOfDay timeOfDay;
+    struct Roamer *roamer;
+    enum Season season = gLoadedSeason;
+    enum TimeOfDay timeOfDay = GetTimeOfDay();
     GetSeasonAndTimeOfDayForEncounters(headerId, WILD_AREA_LAND, &season, &timeOfDay);
     if (gWildMonHeaders[headerId].encounterTypes[season][timeOfDay].landMonsInfo == NULL)
         return FALSE;
@@ -603,11 +602,11 @@ bool8 TryStandardWildLandEncounter(u16 headerId, u32 currMetatileAttrs, u16 prev
     return FALSE;
 }
 
-bool8 TryStandardWildSurfEncounter(u16 headerId, u32 currMetatileAttrs, u16 previousMetatileBehavior)
+bool8 TryStandardWildSurfEncounter(u16 headerId, u32 currMetatileAttrs, enum MetatileBehavior previousMetatileBehavior)
 {
-    struct Roamer * roamer;
-    enum Season season;
-    enum TimeOfDay timeOfDay;
+    struct Roamer *roamer;
+    enum Season season = gLoadedSeason;
+    enum TimeOfDay timeOfDay = GetTimeOfDay();
     GetSeasonAndTimeOfDayForEncounters(headerId, WILD_AREA_WATER, &season, &timeOfDay);
     if (gWildMonHeaders[headerId].encounterTypes[season][timeOfDay].waterMonsInfo == NULL)
         return FALSE;
@@ -652,7 +651,7 @@ bool8 TryStandardWildSurfEncounter(u16 headerId, u32 currMetatileAttrs, u16 prev
     return FALSE;
 }
 
-bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetatileBehavior)
+bool32 StandardWildEncounter(u32 currMetatileAttrs, enum MetatileBehavior previousMetatileBehavior)
 {
     u16 headerId;
 
@@ -663,9 +662,9 @@ bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetatileBehavior)
 
     if (headerId == HEADER_NONE)
     {
-        enum Season season;
-        enum TimeOfDay timeOfDay;
-        u16 curMetatileBehavior = ExtractMetatileAttribute(currMetatileAttrs, METATILE_ATTRIBUTE_BEHAVIOR);
+        enum Season season = gLoadedSeason;
+        enum TimeOfDay timeOfDay = GetTimeOfDay();
+        enum MetatileBehavior curMetatileBehavior = ExtractMetatileAttribute(currMetatileAttrs, METATILE_ATTRIBUTE_BEHAVIOR);
         if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS)
         {
             headerId = GetBattlePikeWildMonHeaderId();
@@ -713,8 +712,9 @@ bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetatileBehavior)
 void RockSmashWildEncounter(void)
 {
     u16 headerId = GetCurrentMapWildMonHeaderId();
-    enum Season season;
-    enum TimeOfDay timeOfDay;
+    enum Season season = gLoadedSeason;
+    enum TimeOfDay timeOfDay = GetTimeOfDay();
+
     GetSeasonAndTimeOfDayForEncounters(headerId, WILD_AREA_ROCKS, &season, &timeOfDay);
     if (headerId == HEADER_NONE)
         gSpecialVar_Result = FALSE;
@@ -735,8 +735,8 @@ bool8 SweetScentWildEncounter(void)
 {
     s16 x, y;
     u16 headerId;
-    enum Season season;
-    enum TimeOfDay timeOfDay;
+    enum Season season = gLoadedSeason;
+    enum TimeOfDay timeOfDay = GetTimeOfDay();
 
     PlayerGetDestCoords(&x, &y);
     headerId = GetCurrentMapWildMonHeaderId();
@@ -810,8 +810,9 @@ bool8 SweetScentWildEncounter(void)
 bool8 DoesCurrentMapHaveFishingMons(void)
 {
     u16 headerId = GetCurrentMapWildMonHeaderId();
-    enum Season season;
-    enum TimeOfDay timeOfDay;
+    enum Season season = gLoadedSeason;
+    enum TimeOfDay timeOfDay = GetTimeOfDay();
+
     GetSeasonAndTimeOfDayForEncounters(headerId, WILD_AREA_FISHING, &season, &timeOfDay);
 
     if (headerId == HEADER_NONE)
@@ -824,8 +825,9 @@ bool8 DoesCurrentMapHaveFishingMons(void)
 void FishingWildEncounter(u8 rod)
 {
     u32 headerId = GetCurrentMapWildMonHeaderId();
-    enum Season season;
-    enum TimeOfDay timeOfDay;
+    enum Season season = gLoadedSeason;
+    enum TimeOfDay timeOfDay = GetTimeOfDay();
+
     GetSeasonAndTimeOfDayForEncounters(headerId, WILD_AREA_FISHING, &season, &timeOfDay);
     gIsFishingEncounter = TRUE;
     GenerateFishingEncounter(gWildMonHeaders[headerId].encounterTypes[season][timeOfDay].fishingMonsInfo, rod);
@@ -836,8 +838,10 @@ void FishingWildEncounter(u8 rod)
 u16 GetLocalWildMon(bool8 *isWaterMon)
 {
     u32 headerId;
-    enum Season season;
-    enum TimeOfDay timeOfDay;
+    enum Season seasonBackup = gLoadedSeason;
+    enum TimeOfDay timeOfDayBackup = GetTimeOfDay();
+    enum Season season = seasonBackup;
+    enum TimeOfDay timeOfDay = timeOfDayBackup;
     const struct WildPokemonInfo *landMonsInfo;
     const struct WildPokemonInfo *waterMonsInfo;
 
@@ -848,6 +852,8 @@ u16 GetLocalWildMon(bool8 *isWaterMon)
     GetSeasonAndTimeOfDayForEncounters(headerId, WILD_AREA_LAND, &season, &timeOfDay);
     landMonsInfo = gWildMonHeaders[headerId].encounterTypes[season][timeOfDay].landMonsInfo;
 
+    season = seasonBackup;
+    timeOfDay = timeOfDayBackup;
     GetSeasonAndTimeOfDayForEncounters(headerId, WILD_AREA_WATER, &season, &timeOfDay);
     waterMonsInfo = gWildMonHeaders[headerId].encounterTypes[season][timeOfDay].waterMonsInfo;
     // Neither
@@ -877,13 +883,13 @@ u16 GetLocalWildMon(bool8 *isWaterMon)
 u16 GetLocalWaterMon(void)
 {
     u16 headerId = GetCurrentMapWildMonHeaderId();
-    enum Season season;
-    enum TimeOfDay timeOfDay;
+    enum Season season = gLoadedSeason;
+    enum TimeOfDay timeOfDay = GetTimeOfDay();
 
     if (headerId != HEADER_NONE)
     {
         GetSeasonAndTimeOfDayForEncounters(headerId, WILD_AREA_WATER, &season, &timeOfDay);
-        const struct WildPokemonInfo * waterMonsInfo = gWildMonHeaders[headerId].encounterTypes[season][timeOfDay].waterMonsInfo;
+        const struct WildPokemonInfo *waterMonsInfo = gWildMonHeaders[headerId].encounterTypes[season][timeOfDay].waterMonsInfo;
 
         if (waterMonsInfo)
             return waterMonsInfo->wildPokemon[ChooseWildMonIndex_Water()].species;
@@ -1078,8 +1084,9 @@ static u16 WildEncounterRandom(void)
 static u8 GetMapBaseEncounterCooldown(u8 encounterType)
 {
     u16 headerId = GetCurrentMapWildMonHeaderId();
-    enum Season season;
-    enum TimeOfDay timeOfDay;
+    enum Season season = gLoadedSeason;
+    enum TimeOfDay timeOfDay = GetTimeOfDay();
+
     if (headerId == HEADER_NONE)
         return 0xFF;
     if (encounterType == TILE_ENCOUNTER_LAND)

@@ -99,7 +99,7 @@ typedef u16 (*KeyInterCB)(u32 key);
 struct InitialPlayerAvatarState
 {
     enum AvatarState transitionState;
-    u8 direction;
+    enum Direction direction;
     bool8 hasDirectionSet;
 };
 
@@ -153,9 +153,9 @@ s16 gTimeUpdateCounter; // playTimeVBlanks will eventually overflow, so this is 
 static u8 CountBadgesForOverworldWhiteOutLossCalculation(void);
 static void Overworld_ResetStateAfterWhitingOut(void);
 static void SetWhiteoutWarpDestination(void);
-static enum AvatarState GetAdjustedInitialTransitionFlags(struct InitialPlayerAvatarState *playerStruct, u16 metatileBehavior, u8 mapType);
-static u8 GetAdjustedInitialDirection(struct InitialPlayerAvatarState *playerStruct, enum AvatarState transitionState, u16 metatileBehavior, u8 mapType);
-static u16 GetCenterScreenMetatileBehavior(void);
+static enum AvatarState GetAdjustedInitialTransitionFlags(struct InitialPlayerAvatarState *playerStruct, enum MetatileBehavior metatileBehavior, u8 mapType);
+static enum Direction GetAdjustedInitialDirection(struct InitialPlayerAvatarState *playerStruct, enum AvatarState transitionState, enum MetatileBehavior metatileBehavior, u8 mapType);
+static enum MetatileBehavior GetCenterScreenMetatileBehavior(void);
 static void SetDefaultFlashLevel(void);
 static void Overworld_TryMapConnectionMusicTransition(void);
 static void ChooseAmbientCrySpecies(void);
@@ -191,7 +191,7 @@ static void DoLoadMap_QLPlayback(u8 *state);
 static bool32 LoadMap_QLPlayback(u8 *state);
 static bool32 SetUpScrollSceneForCredits(u8 *state, u8 unused);
 static bool8 MapLdr_Credits(void);
-static void CameraCB_CreditsPan(struct CameraObject * camera);
+static void CameraCB_CreditsPan(struct CameraObject *camera);
 static void Task_OvwldCredits_FadeOut(u8 taskId);
 static void Task_OvwldCredits_WaitFade(u8 taskId);
 
@@ -203,8 +203,8 @@ static void ResetAllLinkStates(void);
 static void UpdateAllLinkPlayers(u16 *linkKeys, s32 selfId);
 static void UpdateHeldKeyCode(u16 interceptedKeys);
 static u32 GetLinkSendQueueLength(void);
-static u16 GetDirectionForDpadKey(u16 key);
-static void SetPlayerFacingDirection(u8 linkPlayerId, u8 setFacing);
+static enum LinkFacing GetDirectionForDpadKey(u16 keyCode);
+static void SetPlayerFacingDirection(u8 linkPlayerId, enum LinkFacing linkFacing);
 static void ResetPlayerHeldKeys(u16 *linkKeys);
 static u16 KeyInterCB_SelfIdle(u32 linkPlayerId);
 static u16 KeyInterCB_DeferToEventScript(u32 linkPlayerId);
@@ -216,7 +216,7 @@ static const u8 *TryGetTileEventScript(struct CableClubPlayer *player);
 static const u8 *TryInteractWithPlayer(struct CableClubPlayer *player);
 static bool32 IsCableClubPlayerUnfrozen(struct CableClubPlayer *player);
 static bool32 CanCableClubPlayerPressStart(struct CableClubPlayer *player);
-static u16 GetDirectionForEventScript(const u8 *script);
+static enum LinkFacing GetDirectionForEventScript(const u8 *script);
 static void InitLinkPlayerQueueScript(void);
 static void CreateConfirmLeaveTradeRoomPrompt(void);
 static void InitLinkRoomStartMenuScript(void);
@@ -231,9 +231,9 @@ static u8 GetLinkPlayerFacingDirection(u8 linkPlayerId);
 static u8 GetLinkPlayerElevation(u8 linkPlayerId);
 static u8 GetLinkPlayerIdAt(s16 x, s16 y);
 static void CreateLinkPlayerSprite(u8 i, enum GameVersion version);
-static u8 MovementEventModeCB_Normal(struct LinkPlayerObjectEvent *, struct ObjectEvent *, u8);
-static u8 MovementEventModeCB_Ignored(struct LinkPlayerObjectEvent *, struct ObjectEvent *, u8);
-static u8 MovementEventModeCB_Normal_2(struct LinkPlayerObjectEvent *, struct ObjectEvent *, u8);
+static u8 MovementEventModeCB_Normal(struct LinkPlayerObjectEvent *, struct ObjectEvent *, enum LinkFacing);
+static u8 MovementEventModeCB_Ignored(struct LinkPlayerObjectEvent *, struct ObjectEvent *, enum LinkFacing);
+static u8 MovementEventModeCB_Normal_2(struct LinkPlayerObjectEvent *, struct ObjectEvent *, enum LinkFacing);
 static u8 FacingHandler_DoNothing(struct LinkPlayerObjectEvent *, struct ObjectEvent *, u8);
 static u8 FacingHandler_DpadMovement(struct LinkPlayerObjectEvent *, struct ObjectEvent *, u8);
 static u8 FacingHandler_ForcedFacingChange(struct LinkPlayerObjectEvent *, struct ObjectEvent *, u8);
@@ -243,7 +243,7 @@ static u8 FlipVerticalAndClearForced(u8 newFacing, u8 oldFacing);
 static u8 LinkPlayerDetectCollision(u8 selfObjEventId, u8 a2, s16 x, s16 y);
 static void SpriteCB_LinkPlayer(struct Sprite *sprite);
 
-extern const struct MapLayout * gMapLayouts[];
+extern const struct MapLayout *gMapLayouts[];
 extern const struct MapHeader *const *gMapGroups[];
 
 // Routines related to game state on warping in
@@ -419,7 +419,7 @@ void ResetGameStats(void)
     }
 }
 
-void IncrementGameStat(u8 statId)
+void IncrementGameStat(enum GameStat statId)
 {
     u32 statVal;
     if (statId >= NUM_USED_GAME_STATS)
@@ -432,7 +432,7 @@ void IncrementGameStat(u8 statId)
     SetGameStat(statId, statVal);
 }
 
-u32 GetGameStat(u8 statId)
+u32 GetGameStat(enum GameStat statId)
 {
     if (statId >= NUM_USED_GAME_STATS)
         return 0;
@@ -440,7 +440,7 @@ u32 GetGameStat(u8 statId)
         return gSaveBlock1Ptr->gameStats[statId];
 }
 
-void SetGameStat(u8 statId, u32 statVal)
+void SetGameStat(enum GameStat statId, u32 statVal)
 {
     if (statId >= NUM_USED_GAME_STATS)
         return;
@@ -462,7 +462,7 @@ static void LoadObjEventTemplatesFromHeader(void)
             u8 localId = gMapHeader.events->objectEvents[i].targetLocalId;
             u8 mapNum = gMapHeader.events->objectEvents[i].targetMapNum;
             u8 mapGroup = gMapHeader.events->objectEvents[i].targetMapGroup;
-            const struct MapHeader * connectionMap = Overworld_GetMapHeaderByGroupAndId(mapGroup, mapNum);
+            const struct MapHeader *connectionMap = Overworld_GetMapHeaderByGroupAndId(mapGroup, mapNum);
 
             gSaveBlock1Ptr->objectEventTemplates[i] = connectionMap->events->objectEvents[localId - 1];
             gSaveBlock1Ptr->objectEventTemplates[i].localId = gMapHeader.events->objectEvents[i].localId;
@@ -483,8 +483,8 @@ static void LoadObjEventTemplatesFromHeader(void)
 static void LoadSaveblockObjEventScripts(void)
 {
     int i;
-    const struct ObjectEventTemplate * src = gMapHeader.events->objectEvents;
-    struct ObjectEventTemplate * savObjTemplates = gSaveBlock1Ptr->objectEventTemplates;
+    const struct ObjectEventTemplate *src = gMapHeader.events->objectEvents;
+    struct ObjectEventTemplate *savObjTemplates = gSaveBlock1Ptr->objectEventTemplates;
 
     for (i = 0; i < OBJECT_EVENT_TEMPLATES_COUNT; i++)
     {
@@ -495,7 +495,7 @@ static void LoadSaveblockObjEventScripts(void)
 void SetObjEventTemplateCoords(u8 localId, s16 x, s16 y)
 {
     int i;
-    struct ObjectEventTemplate * savObjTemplates = gSaveBlock1Ptr->objectEventTemplates;
+    struct ObjectEventTemplate *savObjTemplates = gSaveBlock1Ptr->objectEventTemplates;
     for (i = 0; i < OBJECT_EVENT_TEMPLATES_COUNT; i++)
     {
         if (savObjTemplates[i].localId == localId)
@@ -740,7 +740,7 @@ void SetWarpDestinationToFixedHoleWarp(s16 x, s16 y)
     if (IsDummyWarp(&sFixedHoleWarp) == TRUE)
         sWarpDestination = gLastUsedWarp;
     else
-        SetWarpDestination(sFixedHoleWarp.mapGroup, sFixedHoleWarp.mapNum, -1, x, y);
+        SetWarpDestination(sFixedHoleWarp.mapGroup, sFixedHoleWarp.mapNum, WARP_ID_NONE, x, y);
 }
 
 static void SetWarpDestinationToContinueGameWarp(void)
@@ -752,7 +752,7 @@ void SetContinueGameWarpToHealLocation(u8 healLocationId)
 {
     const struct HealLocation *warp = GetHealLocation(healLocationId);
     if (warp)
-        SetWarpData(&gSaveBlock1Ptr->continueGameWarp, warp->mapGroup, warp->mapNum, -1, warp->x, warp->y);
+        SetWarpData(&gSaveBlock1Ptr->continueGameWarp, warp->mapGroup, warp->mapNum, WARP_ID_NONE, warp->x, warp->y);
 }
 
 void SetContinueGameWarpToDynamicWarp(int unused)
@@ -760,7 +760,7 @@ void SetContinueGameWarpToDynamicWarp(int unused)
     gSaveBlock1Ptr->continueGameWarp = gSaveBlock1Ptr->dynamicWarp;
 }
 
-static const struct MapConnection * GetMapConnection(u8 dir)
+static const struct MapConnection *GetMapConnection(u8 dir)
 {
     s32 i;
     s32 count = gMapHeader.connections->count;
@@ -782,7 +782,7 @@ static bool8 SetDiveWarp(u8 dir, u16 x, u16 y)
 
     if (connection != NULL)
     {
-        SetWarpDestination(connection->mapGroup, connection->mapNum, -1, x, y);
+        SetWarpDestination(connection->mapGroup, connection->mapNum, WARP_ID_NONE, x, y);
     }
     else
     {
@@ -808,7 +808,7 @@ bool8 SetDiveWarpDive(u16 x, u16 y)
 
 void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
 {
-    SetWarpDestination(mapGroup, mapNum, -1, -1, -1);
+    SetWarpDestination(mapGroup, mapNum, WARP_ID_NONE, -1, -1);
     Overworld_TryMapConnectionMusicTransition();
     ApplyCurrentWarp();
     LoadCurrentMapData();
@@ -942,7 +942,7 @@ struct InitialPlayerAvatarState *GetInitialPlayerAvatarState(void)
 {
     struct InitialPlayerAvatarState playerStruct;
     u8 mapType = GetCurrentMapType();
-    u16 metatileBehavior = GetCenterScreenMetatileBehavior();
+    enum MetatileBehavior metatileBehavior = GetCenterScreenMetatileBehavior();
     enum AvatarState transitionState = GetAdjustedInitialTransitionFlags(&sInitialPlayerAvatarState, metatileBehavior, mapType);
 
     playerStruct.transitionState = transitionState;
@@ -952,7 +952,7 @@ struct InitialPlayerAvatarState *GetInitialPlayerAvatarState(void)
     return &sInitialPlayerAvatarState;
 }
 
-static enum AvatarState GetAdjustedInitialTransitionFlags(struct InitialPlayerAvatarState *playerStruct, u16 metatileBehavior, u8 mapType)
+static enum AvatarState GetAdjustedInitialTransitionFlags(struct InitialPlayerAvatarState *playerStruct, enum MetatileBehavior metatileBehavior, u8 mapType)
 {
     if (mapType != MAP_TYPE_INDOOR && FlagGet(FLAG_SYS_CRUISE_MODE))
         return PLAYER_AVATAR_STATE_NORMAL;
@@ -972,7 +972,7 @@ static enum AvatarState GetAdjustedInitialTransitionFlags(struct InitialPlayerAv
         return PLAYER_AVATAR_STATE_ACRO_BIKE;
 }
 
-bool8 MetatileBehavior_IsSurfableInSeafoamIslands(u16 metatileBehavior)
+bool8 MetatileBehavior_IsSurfableInSeafoamIslands(enum MetatileBehavior metatileBehavior)
 {
     if (MetatileBehavior_IsSurfable(metatileBehavior) != TRUE)
         return FALSE;
@@ -984,7 +984,7 @@ bool8 MetatileBehavior_IsSurfableInSeafoamIslands(u16 metatileBehavior)
     return FALSE;
 }
 
-static u8 GetAdjustedInitialDirection(struct InitialPlayerAvatarState *playerStruct, enum AvatarState transitionState, u16 metatileBehavior, u8 mapType)
+static enum Direction GetAdjustedInitialDirection(struct InitialPlayerAvatarState *playerStruct, enum AvatarState transitionState, enum MetatileBehavior metatileBehavior, u8 mapType)
 {
     if (FlagGet(FLAG_SYS_CRUISE_MODE) && mapType == MAP_TYPE_OCEAN_ROUTE)
         return DIR_EAST;
@@ -1015,7 +1015,7 @@ static u8 GetAdjustedInitialDirection(struct InitialPlayerAvatarState *playerStr
         return DIR_SOUTH;
 }
 
-static u16 GetCenterScreenMetatileBehavior(void)
+static enum MetatileBehavior GetCenterScreenMetatileBehavior(void)
 {
     return MapGridGetMetatileBehaviorAt(gSaveBlock1Ptr->pos.x + 7, gSaveBlock1Ptr->pos.y + 7);
 }
@@ -1060,14 +1060,14 @@ void SetCurrentMapLayout(u16 mapLayoutId)
     gCurrentSecondaryTileset = GetSecondaryTilesetFromLayout(gMapHeader.mapLayout);
 }
 
-void Overworld_SetWarpDestinationFromWarp(struct WarpData * warp)
+void Overworld_SetWarpDestinationFromWarp(struct WarpData *warp)
 {
     sWarpDestination = *warp;
 }
 
 // Routines related to map music
 
-static u16 GetLocationMusic(struct WarpData * warp)
+static u16 GetLocationMusic(struct WarpData *warp)
 {
     return Overworld_GetMapHeaderByGroupAndId(warp->mapGroup, warp->mapNum)->music;
 }
@@ -1483,7 +1483,7 @@ static void DoCB1_Overworld(u16 newKeys, u16 heldKeys)
         }
         else
         {
-            player_step(fieldInput.dpadDirection, newKeys, heldKeys);
+            PlayerStep(fieldInput.dpadDirection, newKeys, heldKeys);
         }
     }
     // If stop running but keep holding B -> fix follower frame.
@@ -2636,7 +2636,7 @@ static bool8 FieldCB2_Credits_WaitFade(void)
         return FALSE;
 }
 
-bool32 Overworld_DoScrollSceneForCredits(u8 *state_p, const struct CreditsOverworldCmd * script, u8 tintMode)
+bool32 Overworld_DoScrollSceneForCredits(u8 *state_p, const struct CreditsOverworldCmd *script, enum QLTintMode tintMode)
 {
     sCreditsOverworld_Script = script;
     gGlobalFieldTintMode = tintMode;
@@ -2749,7 +2749,7 @@ static bool8 MapLdr_Credits(void)
     return FALSE;
 }
 
-static void CameraCB_CreditsPan(struct CameraObject * camera)
+static void CameraCB_CreditsPan(struct CameraObject *camera)
 {
     if (sCreditsOverworld_CmdLength == 0)
     {
@@ -2809,7 +2809,7 @@ static void Task_OvwldCredits_WaitFade(u8 taskId)
 
 // Link related
 
-static u8 (*const sLinkPlayerMovementModes[])(struct LinkPlayerObjectEvent *, struct ObjectEvent *, u8) =
+static u8 (*const sLinkPlayerMovementModes[])(struct LinkPlayerObjectEvent *, struct ObjectEvent *, enum LinkFacing) =
 {
     [MOVEMENT_MODE_FREE]     = MovementEventModeCB_Normal,
     [MOVEMENT_MODE_FROZEN]   = MovementEventModeCB_Ignored,
@@ -2918,7 +2918,7 @@ static bool32 IsAnyPlayerInLinkState(u16 linkState)
     return FALSE;
 }
 
-static void HandleLinkPlayerKeyInput(u32 playerId, u16 key, struct CableClubPlayer *player, u16 *forceFacing)
+static void HandleLinkPlayerKeyInput(u32 playerId, u16 key, struct CableClubPlayer *player, enum LinkFacing *forceFacing)
 {
     const u8 *script;
 
@@ -3036,13 +3036,13 @@ static void UpdateAllLinkPlayers(u16 *keys, s32 selfId)
     for (i = 0; i < MAX_LINK_PLAYERS; i++)
     {
         u8 key = keys[i];
-        u16 setFacing = FACING_NONE;
+        enum LinkFacing linkFacing = FACING_NONE;
         LoadCableClubPlayer(i, selfId, &player);
-        HandleLinkPlayerKeyInput(i, key, &player, &setFacing);
+        HandleLinkPlayerKeyInput(i, key, &player, &linkFacing);
         if (sPlayerLinkStates[i] == PLAYER_LINK_STATE_IDLE)
-            setFacing = GetDirectionForDpadKey(key);
+            linkFacing = GetDirectionForDpadKey(key);
 
-        SetPlayerFacingDirection(i, setFacing);
+        SetPlayerFacingDirection(i, linkFacing);
     }
 }
 
@@ -3091,9 +3091,9 @@ static u16 KeyInterCB_ReadButtons(u32 key)
         return LINK_KEY_CODE_EMPTY;
 }
 
-static u16 GetDirectionForDpadKey(u16 a1)
+static enum LinkFacing GetDirectionForDpadKey(u16 keyCode)
 {
-    switch (a1)
+    switch (keyCode)
     {
     case LINK_KEY_CODE_DPAD_RIGHT:
         return FACING_RIGHT;
@@ -3373,7 +3373,7 @@ static const u8 *TryInteractWithPlayer(struct CableClubPlayer *player)
 
 // This returns which direction to force the player to look when one of
 // these event scripts runs.
-static u16 GetDirectionForEventScript(const u8 *script)
+static enum LinkFacing GetDirectionForEventScript(const u8 *script)
 {
     if (script == BattleColosseum_4P_EventScript_PlayerSpot0)
         return FACING_FORCED_RIGHT;
@@ -3612,7 +3612,7 @@ static u8 GetLinkPlayerIdAt(s16 x, s16 y)
     return 4;
 }
 
-static void SetPlayerFacingDirection(u8 linkPlayerId, u8 facing)
+static void SetPlayerFacingDirection(u8 linkPlayerId, enum LinkFacing linkFacing)
 {
     struct LinkPlayerObjectEvent *linkPlayerObjEvent = &gLinkPlayerObjectEvents[linkPlayerId];
     u8 objEventId = linkPlayerObjEvent->objEventId;
@@ -3620,7 +3620,7 @@ static void SetPlayerFacingDirection(u8 linkPlayerId, u8 facing)
 
     if (linkPlayerObjEvent->active)
     {
-        if (facing > FACING_FORCED_RIGHT)
+        if (linkFacing > FACING_FORCED_RIGHT)
         {
             objEvent->triggerGroundEffectsOnMove = TRUE;
         }
@@ -3628,7 +3628,7 @@ static void SetPlayerFacingDirection(u8 linkPlayerId, u8 facing)
         {
             // This is a hack to split this code onto two separate lines, without declaring a local variable.
             // C++ style inline variables would be nice here.
-#define TEMP sLinkPlayerMovementModes[linkPlayerObjEvent->movementMode](linkPlayerObjEvent, objEvent, facing)
+#define TEMP sLinkPlayerMovementModes[linkPlayerObjEvent->movementMode](linkPlayerObjEvent, objEvent, linkFacing)
 
             sMovementStatusHandler[TEMP](linkPlayerObjEvent, objEvent);
 
@@ -3638,18 +3638,18 @@ static void SetPlayerFacingDirection(u8 linkPlayerId, u8 facing)
     }
 }
 
-static u8 MovementEventModeCB_Normal(struct LinkPlayerObjectEvent *linkPlayerObjEvent, struct ObjectEvent *objEvent, u8 dir)
+static u8 MovementEventModeCB_Normal(struct LinkPlayerObjectEvent *linkPlayerObjEvent, struct ObjectEvent *objEvent, enum LinkFacing dir)
 {
     return sLinkPlayerFacingHandlers[dir](linkPlayerObjEvent, objEvent, dir);
 }
 
-static u8 MovementEventModeCB_Ignored(struct LinkPlayerObjectEvent *linkPlayerObjEvent, struct ObjectEvent *objEvent, u8 dir)
+static u8 MovementEventModeCB_Ignored(struct LinkPlayerObjectEvent *linkPlayerObjEvent, struct ObjectEvent *objEvent, enum LinkFacing dir)
 {
     return FACING_UP;
 }
 
 // Duplicate Function
-static u8 MovementEventModeCB_Normal_2(struct LinkPlayerObjectEvent *linkPlayerObjEvent, struct ObjectEvent *objEvent, u8 dir)
+static u8 MovementEventModeCB_Normal_2(struct LinkPlayerObjectEvent *linkPlayerObjEvent, struct ObjectEvent *objEvent, enum LinkFacing dir)
 {
     return sLinkPlayerFacingHandlers[dir](linkPlayerObjEvent, objEvent, dir);
 }

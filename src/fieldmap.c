@@ -85,7 +85,7 @@ static const u8 sMetatileAttrShifts[METATILE_ATTRIBUTE_COUNT] = {
     [METATILE_ATTRIBUTE_7]              = 31
 };
 
-const struct MapHeader * GetMapHeaderFromConnection(const struct MapConnection * connection)
+const struct MapHeader *GetMapHeaderFromConnection(const struct MapConnection *connection)
 {
     return Overworld_GetMapHeaderByGroupAndId(connection->mapGroup, connection->mapNum);
 }
@@ -109,9 +109,9 @@ void InitBattlePyramidMap(bool8 setPlayerPosition)
     GenerateBattlePyramidFloorLayout(sBackupMapData, setPlayerPosition);
 }
 
-static void InitMapLayoutData(struct MapHeader * mapHeader)
+static void InitMapLayoutData(struct MapHeader *mapHeader)
 {
-    const struct MapLayout * mapLayout = mapHeader->mapLayout;
+    const struct MapLayout *mapLayout = mapHeader->mapLayout;
     CpuFastFill16(MAPGRID_UNDEFINED, sBackupMapData, sizeof(sBackupMapData));
     VMap.map = sBackupMapData;
     VMap.Xsize = mapLayout->width + MAP_OFFSET_W;
@@ -397,7 +397,7 @@ u32 MapGridGetMetatileAttributeAt(s16 x, s16 y, u8 attributeType)
     return GetAttributeByMetatileIdAndMapLayout(gMapHeader.mapLayout, metatileId, attributeType);
 }
 
-u32 MapGridGetMetatileBehaviorAt(s16 x, s16 y)
+enum MetatileBehavior MapGridGetMetatileBehaviorAt(s16 x, s16 y)
 {
     return MapGridGetMetatileAttributeAt(x, y, METATILE_ATTRIBUTE_BEHAVIOR);
 }
@@ -440,7 +440,7 @@ void MapGridSetMetatileImpassabilityAt(s32 x, s32 y, bool32 impassable)
 
 static u32 GetAttributeByMetatileIdAndMapLayout(const struct MapLayout *mapLayout, u16 metatile, u8 attributeType)
 {
-    const u32 * attributes;
+    const u32 *attributes;
 
     if (metatile < NUM_METATILES_IN_PRIMARY)
     {

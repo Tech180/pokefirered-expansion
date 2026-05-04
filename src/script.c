@@ -246,7 +246,7 @@ bool8 IsQuestLogInputDpad(void)
         return FALSE;
 }
 
-void RegisterQuestLogInput(u8 var)
+void RegisterQuestLogInput(enum QLInput var)
 {
     sQuestLogInput = var;
 }
@@ -256,7 +256,7 @@ void ClearQuestLogInput(void)
     sQuestLogInput = 0;
 }
 
-u8 GetRegisteredQuestLogInput(void)
+enum QLInput GetRegisteredQuestLogInput(void)
 {
     return sQuestLogInput;
 }
@@ -375,6 +375,16 @@ void ScriptContext_SetupScript(const u8 *ptr)
     if (OW_FOLLOWERS_SCRIPT_MOVEMENT)
         FlagSet(FLAG_SAFE_FOLLOWER_MOVEMENT);
 
+    sGlobalScriptContextStatus = CONTEXT_RUNNING;
+}
+
+// Moves a script from a local context to the global context and enables it.
+void ScriptContext_ContinueScript(struct ScriptContext *ctx)
+{
+    sGlobalScriptContext = *ctx;
+    LockPlayerFieldControls();
+    if (OW_FOLLOWERS_SCRIPT_MOVEMENT)
+        FlagSet(FLAG_SAFE_FOLLOWER_MOVEMENT);
     sGlobalScriptContextStatus = CONTEXT_RUNNING;
 }
 

@@ -32,7 +32,7 @@ BattleScript_TrainerTowerLost::
 	returnopponentmon2toball
 	waitstate
 BattleScript_TrainerTowerLostLostSkipMonRecall::
-	trainerslidein BS_ATTACKER
+	trainerslidein BS_OPPONENT1
 	waitstate
 	printstring STRINGID_TRAINER1WINTEXT
 	jumpifnotbattletype BATTLE_TYPE_DOUBLE, BattleScript_TrainerTowerLostLostSkipDouble
@@ -42,7 +42,7 @@ BattleScript_TrainerTowerLostLostSkipDouble::
 
 BattleScript_TrainerTowerTrainerBattleWon::
 	printstring STRINGID_PLAYERDEFEATEDTRAINER1
-	trainerslidein BS_ATTACKER
+	trainerslidein BS_OPPONENT1
 	waitstate
 	jumpifnotbattletype BATTLE_TYPE_TRAINER_TOWER, BattleScript_BattleTowerEtcTrainerBattleWonSkipText
 	printstring STRINGID_TRAINER1LOSETEXT
@@ -7104,6 +7104,13 @@ BattleScript_MentalHerbCureRet::
 	removeitem BS_SCRIPTING
 	return
 
+BattleScript_MentalHerbCureFling::
+	playanimation BS_SCRIPTING, B_ANIM_HELD_ITEM_EFFECT
+	printfromtable gMentalHerbCureStringIds
+	waitmessage B_WAIT_TIME_LONG
+	updatestatusicon BS_SCRIPTING
+	return
+
 BattleScript_MentalHerbCureEnd2::
 	call BattleScript_MentalHerbCureRet
 	end2
@@ -7117,6 +7124,12 @@ BattleScript_WhiteHerbRet::
 	printstring STRINGID_PKMNSITEMRESTOREDSTATUS
 	waitmessage B_WAIT_TIME_LONG
 	removeitem BS_SCRIPTING
+	return
+
+BattleScript_WhiteHerbFling::
+	playanimation BS_SCRIPTING, B_ANIM_HELD_ITEM_EFFECT
+	printstring STRINGID_PKMNSITEMRESTOREDSTATUS
+	waitmessage B_WAIT_TIME_LONG
 	return
 
 BattleScript_ItemHealHP_RemoveItem::

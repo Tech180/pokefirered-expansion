@@ -28,28 +28,28 @@
 #include "constants/field_weather.h"
 #include "constants/songs.h"
 
+static bool8 WaitStairExitMovementFinished(s16 *speedX, s16 *speedY, s16 *offsetX, s16 *offsetY, s16 *timer);
+static void ExitStairsMovement(s16 *speedX, s16 *speedY, s16 *offsetX, s16 *offsetY, s16 *timer);
 static void ExitWarpFadeInScreen(u8 playerNotMoving);
+static void ForceStairsMovement(enum MetatileBehavior metatileBehavior, s16 *x, s16 *y);
+static void GetStairsMovementDirection(enum MetatileBehavior metatileBehavior, s16 *x, s16 *y);
+static void Task_DoorWarp(u8 taskId);
 static void Task_ExitDoor(u8 taskId);
 static void Task_ExitNonAnimDoor(u8 taskId);
 static void Task_ExitNonDoor(u8 taskId);
-static void Task_TeleportWarpIn(u8 taskId);
+static void Task_ExitStairs(u8 taskId);
+static void Task_StairWarp(u8 taskId);
 static void Task_Teleport2Warp(u8 taskId);
 static void Task_TeleportWarp(u8 taskId);
-static void Task_DoorWarp(u8 taskId);
-static void Task_StairWarp(u8 taskId);
-static void ForceStairsMovement(u16 metatileBehavior, s16 *x, s16 *y);
-static void GetStairsMovementDirection(u8 metatileBehavior, s16 *x, s16 *y);
+static void Task_TeleportWarpIn(u8 taskId);
 static void UpdateStairsMovement(s16 speedX, s16 speedY, s16 *offsetX, s16 *offsetY, s16 *timer);
-static void Task_ExitStairs(u8 taskId);
-static void ExitStairsMovement(s16 *speedX, s16 *speedY, s16 *offsetX, s16 *offsetY, s16 *timer);
-static bool8 WaitStairExitMovementFinished(s16 *speedX, s16 *speedY, s16 *offsetX, s16 *offsetY, s16 *timer);
 
-void palette_bg_faded_fill_white(void)
+void FillPalBufferWhite(void)
 {
     CpuFastFill16(RGB_WHITE, gPlttBufferFaded, PLTT_SIZE);
 }
 
-void palette_bg_faded_fill_black(void)
+void FillPalBufferBlack(void)
 {
     CpuFastFill16(RGB_BLACK, gPlttBufferFaded, PLTT_SIZE);
 }
@@ -59,14 +59,14 @@ void WarpFadeInScreen(void)
     switch (MapTransitionIsExit(GetLastUsedWarpMapType(), GetCurrentMapType()))
     {
     case FALSE:
-        palette_bg_faded_fill_black();
+        FillPalBufferBlack();
         FadeScreen(FADE_FROM_BLACK, 0);
-        palette_bg_faded_fill_black();
+        FillPalBufferBlack();
         break;
     case TRUE:
-        palette_bg_faded_fill_white();
+        FillPalBufferWhite();
         FadeScreen(FADE_FROM_WHITE, 0);
-        palette_bg_faded_fill_white();
+        FillPalBufferWhite();
         break;
     }
 }
@@ -76,26 +76,26 @@ static void WarpFadeInScreenWithDelay(void)
     switch (MapTransitionIsExit(GetLastUsedWarpMapType(), GetCurrentMapType()))
     {
     case FALSE:
-        palette_bg_faded_fill_black();
+        FillPalBufferBlack();
         // delay changed from 3 to 4
         // fixes DNS palette issue
         // e.g. fat man in pallet town
         FadeScreen(FADE_FROM_BLACK, 4);
-        palette_bg_faded_fill_black();
+        FillPalBufferBlack();
         break;
     case TRUE:
-        palette_bg_faded_fill_white();
+        FillPalBufferWhite();
         FadeScreen(FADE_FROM_WHITE, 3);
-        palette_bg_faded_fill_white();
+        FillPalBufferWhite();
         break;
     }
 }
 
 void FadeInFromBlack(void)
 {
-    palette_bg_faded_fill_black();
+    FillPalBufferBlack();
     FadeScreen(FADE_FROM_BLACK, 0);
-    palette_bg_faded_fill_black();
+    FillPalBufferBlack();
 }
 
 void WarpFadeOutScreen(void)
@@ -190,7 +190,7 @@ void FieldCB_ReturnToFieldCableLink(void)
 {
     LockPlayerFieldControls();
     Overworld_PlaySpecialMapMusic();
-    palette_bg_faded_fill_black();
+    FillPalBufferBlack();
     CreateTask(Task_ReturnToFieldCableLink, 10);
 }
 
@@ -225,14 +225,14 @@ void FieldCB_ReturnToFieldWirelessLink(void)
 {
     LockPlayerFieldControls();
     Overworld_PlaySpecialMapMusic();
-    palette_bg_faded_fill_black();
+    FillPalBufferBlack();
     CreateTask(Task_ReturnToFieldRecordMixing, 10);
 }
 
 static void SetUpWarpExitTask(bool8 playerNotMoving)
 {
     s16 x, y;
-    u32 metatileBehavior;
+    enum MetatileBehavior metatileBehavior;
     TaskFunc func;
 
     PlayerGetDestCoords(&x, &y);
@@ -243,10 +243,10 @@ static void SetUpWarpExitTask(bool8 playerNotMoving)
         switch (MapTransitionIsExit(GetLastUsedWarpMapType(), GetCurrentMapType()))
         {
         case FALSE:
-            palette_bg_faded_fill_black();
+            FillPalBufferBlack();
             break;
         case TRUE:
-            palette_bg_faded_fill_white();
+            FillPalBufferWhite();
             break;
         }
     }
@@ -557,7 +557,7 @@ void DoDiveWarp(void)
     CreateTask(Task_Teleport2Warp, 10);
 }
 
-void DoStairWarp(u16 metatileBehavior, u16 delay)
+void DoStairWarp(enum MetatileBehavior metatileBehavior, u16 delay)
 {
     u8 taskId = CreateTask(Task_StairWarp, 10);
     gTasks[taskId].data[1] = metatileBehavior;
@@ -592,7 +592,7 @@ void DoFallWarp(void)
     gFieldCallback = FieldCB_FallWarpExit;
 }
 
-void DoEscalatorWarp(u8 metatileBehavior)
+void DoEscalatorWarp(enum MetatileBehavior metatileBehavior)
 {
     LockPlayerFieldControls();
     StartEscalatorWarp(metatileBehavior, 10);
@@ -905,14 +905,14 @@ static void UpdateStairsMovement(s16 speedX, s16 speedY, s16 *offsetX, s16 *offs
         ObjectEventForceSetHeldMovement(playerObj, GetWalkInPlaceNormalMovementAction(GetPlayerFacingDirection()));
 }
 
-static void ForceStairsMovement(u16 metatileBehavior, s16 *x, s16 *y)
+static void ForceStairsMovement(enum MetatileBehavior metatileBehavior, s16 *x, s16 *y)
 {
     ObjectEventForceSetHeldMovement(&gObjectEvents[gPlayerAvatar.objectEventId], GetWalkInPlaceNormalMovementAction(GetPlayerFacingDirection()));
     GetStairsMovementDirection(metatileBehavior, x, y);
     gObjectEvents[gPlayerAvatar.objectEventId].noShadow = TRUE;
 }
 
-static void GetStairsMovementDirection(u8 metatileBehavior, s16 *x, s16 *y)
+static void GetStairsMovementDirection(enum MetatileBehavior metatileBehavior, s16 *x, s16 *y)
 {
     if (MetatileBehavior_IsDirectionalUpRightStairWarp(metatileBehavior))
     {
@@ -972,7 +972,7 @@ static void Task_ExitStairs(u8 taskId)
 static void ExitStairsMovement(s16 *speedX, s16 *speedY, s16 *offsetX, s16 *offsetY, s16 *timer)
 {
     s16 x, y;
-    u8 metatileBehavior;
+    enum MetatileBehavior metatileBehavior;
     s32 direction;
     struct Sprite *sprite;
     PlayerGetDestCoords(&x, &y);
