@@ -1,0 +1,68 @@
+Ready to build gameboy decomp rom.
+tools/scaninc/scaninc -M build/firered/src/new_shop.d -I include -I tools/agbcc/include src/new_shop.c
+/nix/store/sgx61jan98xn384567i31772vq7qfl7q-arm-none-eabi-gcc-15.2.0/libexec/gcc/arm-none-eabi/15.2.0/cc1 -quiet <flags> -o build/firered/src/new_shop.o src/new_shop.c
+src/new_shop.c: In function ‘ForEachCB_PopulateItemIcons’:
+src/new_shop.c:950:14: error: ‘NEW_SHOP_TYPE_DECOR’ undeclared (first use in this function); did you mean ‘NEW_SHOP_TYPE_COINS’?
+  950 |         case NEW_SHOP_TYPE_DECOR ... NEW_SHOP_TYPE_DECOR2:
+      |              ^~~~~~~~~~~~~~~~~~~
+      |              NEW_SHOP_TYPE_COINS
+src/new_shop.c:950:14: note: each undeclared identifier is reported only once for each function it appears in
+src/new_shop.c:950:38: error: ‘NEW_SHOP_TYPE_DECOR2’ undeclared (first use in this function); did you mean ‘NEW_SHOP_TYPE_COINS’?
+  950 |         case NEW_SHOP_TYPE_DECOR ... NEW_SHOP_TYPE_DECOR2:
+      |                                      ^~~~~~~~~~~~~~~~~~~~
+      |                                      NEW_SHOP_TYPE_COINS
+src/new_shop.c:962:60: error: implicit declaration of function ‘AddDecorationIconObject’ [-Wimplicit-function-declaration]
+  962 |                 sShopData->gridItems->iconSpriteIds[idx] = AddDecorationIconObject(sMartInfo.itemList[i], x, y, 2, GFXTAG_ITEM + idx, PALTAG_ITEM + idx);
+      |                                                            ^~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c: In function ‘BuyMenuGetItemPrice’:
+src/new_shop.c:1128:20: error: implicit declaration of function ‘ItemId_GetPrice’ [-Wimplicit-function-declaration]
+ 1128 |             return ItemId_GetPrice(sMartInfo.itemList[id]);
+      |                    ^~~~~~~~~~~~~~~
+src/new_shop.c: In function ‘Task_BuyMenuTryBuyingItem’:
+src/new_shop.c:1485:18: error: ‘NEW_SHOP_TYPE_DECOR’ undeclared (first use in this function); did you mean ‘NEW_SHOP_TYPE_COINS’?
+ 1485 |             case NEW_SHOP_TYPE_DECOR ... NEW_SHOP_TYPE_DECOR2:
+      |                  ^~~~~~~~~~~~~~~~~~~
+      |                  NEW_SHOP_TYPE_COINS
+src/new_shop.c:1485:42: error: ‘NEW_SHOP_TYPE_DECOR2’ undeclared (first use in this function); did you mean ‘NEW_SHOP_TYPE_COINS’?
+ 1485 |             case NEW_SHOP_TYPE_DECOR ... NEW_SHOP_TYPE_DECOR2:
+      |                                          ^~~~~~~~~~~~~~~~~~~~
+      |                                          NEW_SHOP_TYPE_COINS
+src/new_shop.c:1487:41: error: ‘gDecorations’ undeclared (first use in this function)
+ 1487 |                 StringCopy(gStringVar1, gDecorations[sShopData->currentItemId].name);
+      |                                         ^~~~~~~~~~~~
+src/new_shop.c: In function ‘BuyMenuTryMakePurchase’:
+src/new_shop.c:1628:14: error: ‘NEW_SHOP_TYPE_DECOR’ undeclared (first use in this function); did you mean ‘NEW_SHOP_TYPE_COINS’?
+ 1628 |         case NEW_SHOP_TYPE_DECOR ... NEW_SHOP_TYPE_DECOR2:
+      |              ^~~~~~~~~~~~~~~~~~~
+      |              NEW_SHOP_TYPE_COINS
+src/new_shop.c:1628:38: error: ‘NEW_SHOP_TYPE_DECOR2’ undeclared (first use in this function); did you mean ‘NEW_SHOP_TYPE_COINS’?
+ 1628 |         case NEW_SHOP_TYPE_DECOR ... NEW_SHOP_TYPE_DECOR2:
+      |                                      ^~~~~~~~~~~~~~~~~~~~
+      |                                      NEW_SHOP_TYPE_COINS
+src/new_shop.c:1630:17: error: implicit declaration of function ‘DecorationAdd’ [-Wimplicit-function-declaration]
+ 1630 |             if (DecorationAdd(sShopData->currentItemId))
+      |                 ^~~~~~~~~~~~~
+src/new_shop.c: In function ‘BuyMenuSubtractMoney’:
+src/new_shop.c:1679:14: error: ‘NEW_SHOP_TYPE_DECOR’ undeclared (first use in this function); did you mean ‘NEW_SHOP_TYPE_COINS’?
+ 1679 |         case NEW_SHOP_TYPE_DECOR ... NEW_SHOP_TYPE_DECOR2:
+      |              ^~~~~~~~~~~~~~~~~~~
+      |              NEW_SHOP_TYPE_COINS
+src/new_shop.c:1679:38: error: ‘NEW_SHOP_TYPE_DECOR2’ undeclared (first use in this function); did you mean ‘NEW_SHOP_TYPE_COINS’?
+ 1679 |         case NEW_SHOP_TYPE_DECOR ... NEW_SHOP_TYPE_DECOR2:
+      |                                      ^~~~~~~~~~~~~~~~~~~~
+      |                                      NEW_SHOP_TYPE_COINS
+src/new_shop.c: At top level:
+src/new_shop.c:1791:5: error: expected identifier or ‘(’ before ‘}’ token
+ 1791 |     }
+      |     ^
+src/new_shop.c:1793:5: error: expected identifier or ‘(’ before ‘if’
+ 1793 |     if (sPurchaseHistoryId < ARRAY_COUNT(gMartPurchaseHistory))
+      |     ^~
+src/new_shop.c:1799:1: error: expected identifier or ‘(’ before ‘}’ token
+ 1799 | }
+      | ^
+src/new_shop.c:190:45: warning: ‘sPurchaseHistoryId’ defined but not used [-Wunused-variable]
+  190 | static EWRAM_DATA u8 sPurchaseHistoryId = 0;
+      |                                             ^                 
+make: *** [Makefile:490: build/firered/src/new_shop.o] Error 1
+make: *** Deleting file 'build/firered/src/new_shop.o'

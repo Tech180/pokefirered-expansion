@@ -119,7 +119,7 @@ static void SetShopMenuCallback(MainCallback callback);
 static void Task_ShopMenu(u8 taskId);
 static void Task_HandleShopMenuBuy(u8 taskId);
 static void Task_HandleShopMenuSell(u8 taskId);
-static void CB2_GoToSellMenu(void);
+void CB2_GoToSellMenu(void);
 static void Task_HandleShopMenuQuit(u8 taskId);
 static void ClearShopMenuWindow(void);
 static void Task_GoToBuyOrSellMenu(u8 taskId);
@@ -462,7 +462,7 @@ static void Task_HandleShopMenuSell(u8 taskId)
     gTasks[taskId].func = Task_GoToBuyOrSellMenu;
 }
 
-static void CB2_GoToSellMenu(void)
+void CB2_GoToSellMenu(void)
 {
     GoToBagMenu(ITEMMENULOCATION_SHOP, POCKETS_COUNT_NO_CASES, CB2_ReturnToField);
     gFieldCallback = MapPostLoadHook_ReturnToShopMenu;
@@ -1410,7 +1410,7 @@ static void RecordTransactionForQuestLog(void)
         SetQuestLogEvent(eventId + QL_EVENT_USED_POKEMART, (const u16 *)&sHistory[1]);
 }
 
-static const enum Item *GetShopItems(enum ShopID shopId)
+const u16 *GetShopItems(enum ShopID shopId)
 {
     const struct ShopInfo *const *shopStages = sShopInfo[shopId];
     const enum Item *latestItems = NULL;

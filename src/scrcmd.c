@@ -37,6 +37,8 @@
 #include "palette.h"
 #include "party_menu.h"
 #include "pokemon_storage_system.h"
+#include "new_shop.h"
+#include "constants/new_shop.h"
 #include "quest_log.h"
 #include "random.h"
 #include "rtc.h"
@@ -2603,7 +2605,14 @@ bool8 ScrCmd_pokemart(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
-    CreatePokemartMenu(shopId);
+    if (gSaveBlock2Ptr->optionsModernShopUI)
+    {
+        NewShop_CreatePokemartMenuFromId(shopId);
+    }
+    else
+    {
+        CreatePokemartMenu(shopId);
+    }
     ScriptContext_Stop();
     return TRUE;
 }
@@ -2630,7 +2639,6 @@ bool8 ScrCmd_pokemartdecoration2(struct ScriptContext *ctx)
     ScriptContext_Stop();
     return TRUE;
 }
-
 bool8 ScrCmd_playslotmachine(struct ScriptContext *ctx)
 {
     u8 slotMachineIndex = VarGet(ScriptReadHalfword(ctx));
