@@ -1,0 +1,191 @@
+Ready to build gameboy decomp rom.
+tools/scaninc/scaninc -M build/firered/src/new_shop.d -I include -I tools/agbcc/include src/new_shop.c
+/nix/store/sgx61jan98xn384567i31772vq7qfl7q-arm-none-eabi-gcc-15.2.0/libexec/gcc/arm-none-eabi/15.2.0/cc1 -quiet <flags> -o build/firered/src/new_shop.o src/new_shop.c
+src/new_shop.c: In function ‘IsMartTypeMoney’:
+src/new_shop.c:287:13: error: implicit declaration of function ‘IsMartTypePoints’; did you mean ‘IsMartTypeCoin’? [-Wimplicit-function-declaration]
+  287 |     return !IsMartTypePoints(martType) && !IsMartTypeCoin(martType);
+      |             ^~~~~~~~~~~~~~~~
+      |             IsMartTypeCoin
+src/new_shop.c: In function ‘CreateShopMenu’:
+src/new_shop.c:314:49: error: ‘sShopMenuWindowTemplates’ undeclared (first use in this function)
+  314 |             struct WindowTemplate winTemplate = sShopMenuWindowTemplates[WIN_BUY_QUIT];
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:314:49: note: each undeclared identifier is reported only once for each function it appears in
+src/new_shop.c:315:56: error: ‘sShopMenuActions_BuyQuit’ undeclared (first use in this function)
+  315 |             winTemplate.width = GetMaxWidthInMenuTable(sShopMenuActions_BuyQuit, ARRAY_COUNT(sShopMenuActions_BuyQuit));
+      |                                                        ^~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:325:56: error: ‘sShopMenuActions_BuySellQuit’ undeclared (first use in this function)
+  325 |             winTemplate.width = GetMaxWidthInMenuTable(sShopMenuActions_BuySellQuit, ARRAY_COUNT(sShopMenuActions_BuySellQuit));
+      |                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c: In function ‘SetShopSellerId’:
+src/new_shop.c:441:22: error: ‘sSellers’ undeclared (first use in this function); did you mean ‘Seller’?
+  441 |         if (gfxId == sSellers[i].id.gfxId)
+      |                      ^~~~~~~~
+      |                      Seller
+src/new_shop.c: In function ‘Shop_GetSellerMessage’:
+src/new_shop.c:453:9: error: ‘sSellers’ undeclared (first use in this function); did you mean ‘Seller’?
+  453 |     if (sSellers[sellerId].message[msgId] == NULL)
+      |         ^~~~~~~~
+      |         Seller
+src/new_shop.c:451:9: warning: variable ‘sellerId’ set but not used [-Wunused-but-set-variable]
+  451 |     u32 sellerId = sMartInfo.sellerId;
+      |         ^~~~~~~~
+src/new_shop.c: In function ‘Shop_GetSellerGraphics’:
+src/new_shop.c:464:36: error: ‘sSellers’ undeclared (first use in this function); did you mean ‘seller’?
+  464 |     const struct Seller *seller = &sSellers[sellerId];
+      |                                    ^~~~~~~~
+      |                                    seller
+src/new_shop.c:463:9: warning: variable ‘sellerId’ set but not used [-Wunused-but-set-variable]
+  463 |     u32 sellerId = sMartInfo.sellerId;
+      |         ^~~~~~~~
+src/new_shop.c: In function ‘ForEachCB_PopulateItemIcons’:
+src/new_shop.c:685:31: error: ‘sGridPosX’ undeclared (first use in this function)
+  685 |     x = (((col % 3) < ARRAY_COUNT(sGridPosX)) ? sGridPosX[col] : sGridPosX[0]);
+      |                               ^~~~~~~~~
+src/new_shop.c:686:31: error: ‘sGridPosY’ undeclared (first use in this function)
+  686 |     y = (((row % 2) < ARRAY_COUNT(sGridPosY)) ? sGridPosY[row] : sGridPosY[0]);
+      |                               ^~~~~~~~~
+src/new_shop.c:691:51: error: ‘id’ undeclared (first use in this function); did you mean ‘i’?
+  691 |             return GetItemName(sMartInfo.itemList[id]);
+      |                                                   ^~
+      |                                                   i
+src/new_shop.c:691:20: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+  691 |             return GetItemName(sMartInfo.itemList[id]);
+      |                    ^~~~~~~~~~~
+src/new_shop.c:676:13: note: declared here
+  676 | static void ForEachCB_PopulateItemIcons(u32 idx, u32 col, u32 row)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:678:62: warning: variable ‘y’ set but not used [-Wunused-but-set-variable]
+  678 |     u32 i = sShopData->gridItems->topLeftItemIndex + idx, x, y;
+      |                                                              ^
+src/new_shop.c:678:59: warning: variable ‘x’ set but not used [-Wunused-but-set-variable]
+  678 |     u32 i = sShopData->gridItems->topLeftItemIndex + idx, x, y;
+      |                                                           ^
+src/new_shop.c: In function ‘BuyMenuInitWindows’:
+src/new_shop.c:778:17: error: ‘sBuyMenuWindowTemplates’ undeclared (first use in this function); did you mean ‘CreateWindowTemplate’?
+  778 |     InitWindows(sBuyMenuWindowTemplates);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~
+      |                 CreateWindowTemplate
+src/new_shop.c:781:5: error: implicit declaration of function ‘SpawnWindow’ [-Wimplicit-function-declaration]
+  781 |     SpawnWindow(WIN_MONEY);
+      |     ^~~~~~~~~~~
+src/new_shop.c:791:5: error: implicit declaration of function ‘UpdateItemData’ [-Wimplicit-function-declaration]
+  791 |     UpdateItemData();
+      |     ^~~~~~~~~~~~~~
+src/new_shop.c: In function ‘LoadSellerCursor’:
+src/new_shop.c:811:26: error: ‘sDefaultCursor_SpriteSheet’ undeclared (first use in this function)
+  811 |         LoadSpriteSheet(&sDefaultCursor_SpriteSheet);
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:812:28: error: ‘sDefaultCursor_SpritePalette’ undeclared (first use in this function)
+  812 |         LoadSpritePalette(&sDefaultCursor_SpritePalette);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c: In function ‘BuyMenuInitSprites’:
+src/new_shop.c:830:51: error: ‘sCursor_SpriteTemplate’ undeclared (first use in this function); did you mean ‘gDummySpriteTemplate’?
+  830 |         sShopData->cursorSpriteId = CreateSprite(&sCursor_SpriteTemplate, CURSOR_START_X, CURSOR_START_Y, 0);
+      |                                                   ^~~~~~~~~~~~~~~~~~~~~~
+      |                                                   gDummySpriteTemplate
+src/new_shop.c: In function ‘BuyMenuPrint’:
+src/new_shop.c:844:68: error: ‘sShopBuyMenuTextColors’ undeclared (first use in this function)
+  844 |     AddTextPrinterParameterized4(windowId, FONT_SMALL, x, y, 0, 0, sShopBuyMenuTextColors[colorSet], speed, text);
+      |                                                                    ^~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c: In function ‘PrintMoneyLocal’:
+src/new_shop.c:857:17: error: ‘sBuyMenuWindowTemplates’ undeclared (first use in this function); did you mean ‘CreateWindowTemplate’?
+  857 |     u32 width = sBuyMenuWindowTemplates[windowId].width * 8;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~
+      |                 CreateWindowTemplate
+src/new_shop.c:886:68: error: ‘sShopBuyMenuTextColors’ undeclared (first use in this function)
+  886 |     AddTextPrinterParameterized4(windowId, FONT_SMALL, x, y, 0, 0, sShopBuyMenuTextColors[colorIdx], TEXT_SKIP_DRAW, gStringVar4);
+      |                                                                    ^~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c: At top level:
+src/new_shop.c:907:13: error: conflicting types for ‘UpdateItemData’; have ‘void(void)’ [-Werror]
+  907 | static void UpdateItemData(void)
+      |             ^~~~~~~~~~~~~~
+src/new_shop.c:907:13: error: static declaration of ‘UpdateItemData’ follows non-static declaration
+src/new_shop.c:791:5: note: previous implicit declaration of ‘UpdateItemData’ with type ‘void(void)’
+  791 |     UpdateItemData();
+      |     ^~~~~~~~~~~~~~
+src/new_shop.c: In function ‘UpdateItemData’:
+src/new_shop.c:936:33: error: implicit declaration of function ‘BuyMenuGetItemName’; did you mean ‘BuyMenuGetItemPrice’? [-Wimplicit-function-declaration]
+  936 |         BuyMenuPrint(WIN_MULTI, BuyMenuGetItemName(i), 0, ITEM_NAME_Y, TEXT_SKIP_DRAW, COLORID_BLACK, FALSE);
+      |                                 ^~~~~~~~~~~~~~~~~~
+      |                                 BuyMenuGetItemPrice
+src/new_shop.c:936:33: error: passing argument 2 of ‘BuyMenuPrint’ makes pointer from integer without a cast [-Wint-conversion]
+  936 |         BuyMenuPrint(WIN_MULTI, BuyMenuGetItemName(i), 0, ITEM_NAME_Y, TEXT_SKIP_DRAW, COLORID_BLACK, FALSE);
+      |                                 ^~~~~~~~~~~~~~~~~~~~~
+      |                                 |
+      |                                 int
+src/new_shop.c:842:49: note: expected ‘const u8 *’ {aka ‘const unsigned char *’} but argument is of type ‘int’
+  842 | static void BuyMenuPrint(u8 windowId, const u8 *text, u8 x, u8 y, s8 speed, u8 colorSet, bool32 copy)
+      |                                       ~~~~~~~~~~^~~~
+src/new_shop.c:934:19: warning: variable ‘desc’ set but not used [-Wunused-but-set-variable]
+  934 |         const u8 *desc = BuyMenuGetItemDesc(i);
+      |                   ^~~~
+src/new_shop.c: In function ‘BuyMenuPrintItemQuantityAndPrice’:
+src/new_shop.c:1049:61: error: ‘sBuyMenuWindowTemplates’ undeclared (first use in this function); did you mean ‘CreateWindowTemplate’?
+ 1049 |     x = GetStringRightAlignXOffset(FONT_SMALL, gStringVar4, sBuyMenuWindowTemplates[WIN_QUANTITY_PRICE].width * 8);
+      |                                                             ^~~~~~~~~~~~~~~~~~~~~~~
+      |                                                             CreateWindowTemplate
+src/new_shop.c: At top level:
+src/new_shop.c:1069:13: error: redefinition of ‘RecordItemPurchase’
+ 1069 | static void RecordItemPurchase(u8 taskId){}
+      |             ^~~~~~~~~~~~~~~~~~
+src/new_shop.c:278:13: note: previous definition of ‘RecordItemPurchase’ with type ‘void(u8)’ {aka ‘void(unsigned char)’}
+  278 | static void RecordItemPurchase(u8 taskId){}
+      |             ^~~~~~~~~~~~~~~~~~
+src/new_shop.c:263:13: error: ‘Task_BuyMenu’ used but never defined [-Werror]
+  263 | static void Task_BuyMenu(u8 taskId);
+      |             ^~~~~~~~~~~~
+src/new_shop.c:264:13: error: ‘BuyMenuInitBgs’ used but never defined [-Werror]
+  264 | static void BuyMenuInitBgs(void);
+      |             ^~~~~~~~~~~~~~
+src/new_shop.c:266:13: error: ‘BuyMenuInitGrid’ used but never defined [-Werror]
+  266 | static void BuyMenuInitGrid(void);
+      |             ^~~~~~~~~~~~~~~
+src/new_shop.c:268:13: error: ‘BuyMenuDecompressBgGraphics’ used but never defined [-Werror]
+  268 | static void BuyMenuDecompressBgGraphics(void);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:271:13: warning: ‘BuyMenuTryMakePurchase’ declared ‘static’ but never defined [-Wunused-function]
+  271 | static void BuyMenuTryMakePurchase(u8 taskId);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:273:13: warning: ‘Task_BuyHowManyDialogueInit’ declared ‘static’ but never defined [-Wunused-function]
+  273 | static void Task_BuyHowManyDialogueInit(u8 taskId);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:274:13: warning: ‘BuyMenuConfirmPurchase’ declared ‘static’ but never defined [-Wunused-function]
+  274 | static void BuyMenuConfirmPurchase(u8 taskId);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:276:13: warning: ‘Task_BuyHowManyDialogueHandleInput’ declared ‘static’ but never defined [-Wunused-function]
+  276 | static void Task_BuyHowManyDialogueHandleInput(u8 taskId);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:277:13: warning: ‘BuyMenuSubtractMoney’ declared ‘static’ but never defined [-Wunused-function]
+  277 | static void BuyMenuSubtractMoney(u8 taskId);
+      |             ^~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:1069:13: warning: ‘RecordItemPurchase’ defined but not used [-Wunused-function]
+ 1069 | static void RecordItemPurchase(u8 taskId){}
+      |             ^~~~~~~~~~~~~~~~~~
+src/new_shop.c:1057:13: warning: ‘Task_ExitBuyMenu’ defined but not used [-Wunused-function]
+ 1057 | static void Task_ExitBuyMenu(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~
+src/new_shop.c:1040:13: warning: ‘BuyMenuPrintItemQuantityAndPrice’ defined but not used [-Wunused-function]
+ 1040 | static void BuyMenuPrintItemQuantityAndPrice(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:980:13: warning: ‘Task_ReturnToItemListAfterItemPurchase’ defined but not used [-Wunused-function]
+  980 | static void Task_ReturnToItemListAfterItemPurchase(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:676:13: warning: ‘ForEachCB_PopulateItemIcons’ defined but not used [-Wunused-function]
+  676 | static void ForEachCB_PopulateItemIcons(u32 idx, u32 col, u32 row)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:541:13: warning: ‘Task_HandleShopMenuSell’ defined but not used [-Wunused-function]
+  541 | static void Task_HandleShopMenuSell(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:532:13: warning: ‘Task_HandleShopMenuBuy’ defined but not used [-Wunused-function]
+  532 | static void Task_HandleShopMenuBuy(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:278:13: warning: ‘RecordItemPurchase’ defined but not used [-Wunused-function]
+  278 | static void RecordItemPurchase(u8 taskId){}
+      |             ^~~~~~~~~~~~~~~~~~
+src/new_shop.c:190:45: warning: ‘sPurchaseHistoryId’ defined but not used [-Wunused-variable]
+  190 | static EWRAM_DATA u8 sPurchaseHistoryId = 0;
+      |                                             ^                 
+cc1: all warnings being treated as errors
+make: *** [Makefile:490: build/firered/src/new_shop.o] Error 1
+make: *** Deleting file 'build/firered/src/new_shop.o'

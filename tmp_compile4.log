@@ -1,0 +1,92 @@
+Ready to build gameboy decomp rom.
+tools/scaninc/scaninc -M build/firered/src/new_shop.d -I include -I tools/agbcc/include src/new_shop.c
+/nix/store/sgx61jan98xn384567i31772vq7qfl7q-arm-none-eabi-gcc-15.2.0/libexec/gcc/arm-none-eabi/15.2.0/cc1 -quiet <flags> -o build/firered/src/new_shop.o src/new_shop.c
+src/new_shop.c: In function ‘ForEachCB_PopulateItemIcons’:
+src/new_shop.c:953:51: error: ‘id’ undeclared (first use in this function); did you mean ‘i’?
+  953 |             return GetItemName(sMartInfo.itemList[id]);
+      |                                                   ^~
+      |                                                   i
+src/new_shop.c:953:51: note: each undeclared identifier is reported only once for each function it appears in
+src/new_shop.c:953:20: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+  953 |             return GetItemName(sMartInfo.itemList[id]);
+      |                    ^~~~~~~~~~~
+src/new_shop.c:938:13: note: declared here
+  938 | static void ForEachCB_PopulateItemIcons(u32 idx, u32 col, u32 row)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:940:62: warning: variable ‘y’ set but not used [-Wunused-but-set-variable]
+  940 |     u32 i = sShopData->gridItems->topLeftItemIndex + idx, x, y;
+      |                                                              ^
+src/new_shop.c:940:59: warning: variable ‘x’ set but not used [-Wunused-but-set-variable]
+  940 |     u32 i = sShopData->gridItems->topLeftItemIndex + idx, x, y;
+      |                                                           ^
+src/new_shop.c: In function ‘BuyMenuInitWindows’:
+src/new_shop.c:1043:5: error: implicit declaration of function ‘SpawnWindow’ [-Wimplicit-function-declaration]
+ 1043 |     SpawnWindow(WIN_MONEY);
+      |     ^~~~~~~~~~~
+src/new_shop.c: In function ‘UpdateItemData’:
+src/new_shop.c:1198:33: error: implicit declaration of function ‘BuyMenuGetItemName’; did you mean ‘BuyMenuGetItemPrice’? [-Wimplicit-function-declaration]
+ 1198 |         BuyMenuPrint(WIN_MULTI, BuyMenuGetItemName(i), 0, ITEM_NAME_Y, TEXT_SKIP_DRAW, COLORID_BLACK, FALSE);
+      |                                 ^~~~~~~~~~~~~~~~~~
+      |                                 BuyMenuGetItemPrice
+src/new_shop.c:1198:33: error: passing argument 2 of ‘BuyMenuPrint’ makes pointer from integer without a cast [-Wint-conversion]
+ 1198 |         BuyMenuPrint(WIN_MULTI, BuyMenuGetItemName(i), 0, ITEM_NAME_Y, TEXT_SKIP_DRAW, COLORID_BLACK, FALSE);
+      |                                 ^~~~~~~~~~~~~~~~~~~~~
+      |                                 |
+      |                                 int
+src/new_shop.c:1104:49: note: expected ‘const u8 *’ {aka ‘const unsigned char *’} but argument is of type ‘int’
+ 1104 | static void BuyMenuPrint(u8 windowId, const u8 *text, u8 x, u8 y, s8 speed, u8 colorSet, bool32 copy)
+      |                                       ~~~~~~~~~~^~~~
+src/new_shop.c:1196:19: warning: variable ‘desc’ set but not used [-Wunused-but-set-variable]
+ 1196 |         const u8 *desc = BuyMenuGetItemDesc(i);
+      |                   ^~~~
+src/new_shop.c: In function ‘ClearItemPurchases’:
+src/new_shop.c:1332:12: error: ‘gMartPurchaseHistory’ undeclared (first use in this function); did you mean ‘sPurchaseHistoryId’?
+ 1332 |     memset(gMartPurchaseHistory, 0, sizeof(gMartPurchaseHistory));
+      |            ^~~~~~~~~~~~~~~~~~~~
+      |            sPurchaseHistoryId
+src/new_shop.c: At top level:
+src/new_shop.c:265:13: error: ‘Task_BuyMenu’ used but never defined [-Werror]
+  265 | static void Task_BuyMenu(u8 taskId);
+      |             ^~~~~~~~~~~~
+src/new_shop.c:266:13: error: ‘BuyMenuInitBgs’ used but never defined [-Werror]
+  266 | static void BuyMenuInitBgs(void);
+      |             ^~~~~~~~~~~~~~
+src/new_shop.c:268:13: error: ‘BuyMenuInitGrid’ used but never defined [-Werror]
+  268 | static void BuyMenuInitGrid(void);
+      |             ^~~~~~~~~~~~~~~
+src/new_shop.c:270:13: error: ‘BuyMenuDecompressBgGraphics’ used but never defined [-Werror]
+  270 | static void BuyMenuDecompressBgGraphics(void);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:273:13: error: ‘BuyMenuTryMakePurchase’ used but never defined [-Werror]
+  273 | static void BuyMenuTryMakePurchase(u8 taskId);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:275:13: warning: ‘Task_BuyHowManyDialogueInit’ declared ‘static’ but never defined [-Wunused-function]
+  275 | static void Task_BuyHowManyDialogueInit(u8 taskId);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:276:13: warning: ‘BuyMenuConfirmPurchase’ declared ‘static’ but never defined [-Wunused-function]
+  276 | static void BuyMenuConfirmPurchase(u8 taskId);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:278:13: warning: ‘Task_BuyHowManyDialogueHandleInput’ declared ‘static’ but never defined [-Wunused-function]
+  278 | static void Task_BuyHowManyDialogueHandleInput(u8 taskId);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:279:13: warning: ‘BuyMenuSubtractMoney’ declared ‘static’ but never defined [-Wunused-function]
+  279 | static void BuyMenuSubtractMoney(u8 taskId);
+      |             ^~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:1335:13: warning: ‘RecordItemPurchase’ defined but not used [-Wunused-function]
+ 1335 | static void RecordItemPurchase(u8 taskId){}
+      |             ^~~~~~~~~~~~~~~~~~
+src/new_shop.c:1319:13: warning: ‘Task_ExitBuyMenu’ defined but not used [-Wunused-function]
+ 1319 | static void Task_ExitBuyMenu(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~
+src/new_shop.c:1302:13: warning: ‘BuyMenuPrintItemQuantityAndPrice’ defined but not used [-Wunused-function]
+ 1302 | static void BuyMenuPrintItemQuantityAndPrice(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:1242:13: warning: ‘Task_ReturnToItemListAfterItemPurchase’ defined but not used [-Wunused-function]
+ 1242 | static void Task_ReturnToItemListAfterItemPurchase(u8 taskId)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/new_shop.c:938:13: warning: ‘ForEachCB_PopulateItemIcons’ defined but not used [-Wunused-function]
+  938 | static void ForEachCB_PopulateItemIcons(u32 idx, u32 col, u32 row)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+make: *** [Makefile:490: build/firered/src/new_shop.o] Error 1
+make: *** Deleting file 'build/firered/src/new_shop.o'

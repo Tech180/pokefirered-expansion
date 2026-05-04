@@ -1218,23 +1218,21 @@
 
 	@ Opens the Pokemart system, offering the specified products for sale.
 	@ Products should be a list of .2byte item values preceded by an .align 2
-	.macro pokemart products:req
+	.macro pokemart products:req, shopType=0
 	.byte SCR_OP_POKEMART
 	.4byte \products
+	.2byte \shopType
 	.endm
 
-	@ Opens the Pokemart system and treats the list of items as decorations.
-	@ Products should be a list of .2byte decoration values preceded by an .align 2
-	.macro pokemartdecoration products:req
-	.byte SCR_OP_POKEMARTDECORATION
-	.4byte \products
+	.macro pokemartcoins products:req
+	pokemart \products, 2
 	.endm
 
-	@ Identical to pokemartdecoration, but with slight changes to the clerk dialogue. See uses of MART_TYPE_DECOR2.
-	.macro pokemartdecoration2 products:req
-	.byte SCR_OP_POKEMARTDECORATION2
-	.4byte \products
+	.macro pokemartpoints products:req
+	pokemart \products, 3
 	.endm
+
+
 
 	@ Starts up the slot machine minigame. id is a SLOT_MACHINE_* value that influences probabilities of certain reel outcomes.
 	.macro playslotmachine id:req

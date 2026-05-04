@@ -13,3 +13,4 @@ u8 GetMartFontId(void);
 void RecordItemTransaction(enum Item itemId, u16 quantity, u8 logEventId);
 
 #endif // GUARD_SHOP_H
+void CB2_GoToSellMenu(void);
