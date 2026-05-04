@@ -2621,25 +2621,32 @@ bool8 ScrCmd_pokemart(struct ScriptContext * ctx)
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
-#ifdef MUDSKIP_SHOP_UI
-    switch (shopType)
+    if (gSaveBlock2Ptr->optionsModernShopUI)
     {
-    case NEW_SHOP_PRICE_TYPE_VARIABLE:
-        NewShop_CreateVariablePokemartMenu(ptr);
-        break;
-    case NEW_SHOP_PRICE_TYPE_COINS:
-        NewShop_CreateCoinPokemartMenu(ptr);
-        break;
-    case NEW_SHOP_PRICE_TYPE_POINTS:
-        NewShop_CreatePointsPokemartMenu(ptr);
-        break;
-    default:
-        NewShop_CreatePokemartMenu(ptr);
-        break;
-    }
+#ifdef MUDSKIP_SHOP_UI
+        switch (shopType)
+        {
+        case NEW_SHOP_PRICE_TYPE_VARIABLE:
+            NewShop_CreateVariablePokemartMenu(ptr);
+            break;
+        case NEW_SHOP_PRICE_TYPE_COINS:
+            NewShop_CreateCoinPokemartMenu(ptr);
+            break;
+        case NEW_SHOP_PRICE_TYPE_POINTS:
+            NewShop_CreatePointsPokemartMenu(ptr);
+            break;
+        default:
+            NewShop_CreatePokemartMenu(ptr);
+            break;
+        }
 #else
-    CreatePokemartMenu(ptr);
+        CreatePokemartMenu(ptr);
 #endif
+    }
+    else
+    {
+        CreatePokemartMenu(ptr);
+    }
     ScriptContext_Stop();
     return TRUE;
 }
