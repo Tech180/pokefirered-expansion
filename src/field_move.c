@@ -3,6 +3,7 @@
 #include "field_move.h"
 #include "fldeff.h"
 #include "pokemon.h"
+#include "item.h"
 #include "constants/field_move.h"
 #include "constants/moves.h"
 #include "constants/party_menu.h"
@@ -212,42 +213,58 @@ bool32 FieldMove_IsUnlocked(enum FieldMove fieldMove)
 
 static bool32 FieldMove_IsUnlockedCut(void)
 {
+    if (OW_FIELD_MOVES_REQUIRE_HM_ITEM && !CheckBagHasItem(ITEM_HM01, 1))
+        return FALSE;
     return FlagGet(FLAG_BADGE02_GET);
 }
 
 static bool32 FieldMove_IsUnlockedFly(void)
 {
+    if (OW_FIELD_MOVES_REQUIRE_HM_ITEM && !CheckBagHasItem(ITEM_HM02, 1))
+        return FALSE;
     return FlagGet(FLAG_BADGE03_GET);
 }
 
 static bool32 FieldMove_IsUnlockedSurf(void)
 {
+    if (OW_FIELD_MOVES_REQUIRE_HM_ITEM && !CheckBagHasItem(ITEM_HM03, 1))
+        return FALSE;
     return FlagGet(FLAG_BADGE05_GET);
 }
 
 static bool32 FieldMove_IsUnlockedStrength(void)
 {
+    if (OW_FIELD_MOVES_REQUIRE_HM_ITEM && !CheckBagHasItem(ITEM_HM04, 1))
+        return FALSE;
     return FlagGet(FLAG_BADGE04_GET);
 }
 
 static bool32 FieldMove_IsUnlockedFlash(void)
 {
+    if (OW_FIELD_MOVES_REQUIRE_HM_ITEM && !CheckBagHasItem(ITEM_HM05, 1))
+        return FALSE;
     return FlagGet(FLAG_BADGE01_GET);
 }
 
 static bool32 FieldMove_IsUnlockedRockSmash(void)
 {
+    if (OW_FIELD_MOVES_REQUIRE_HM_ITEM && !CheckBagHasItem(ITEM_HM06, 1))
+        return FALSE;
     return FlagGet(FLAG_BADGE06_GET);
 }
 
 static bool32 FieldMove_IsUnlockedWaterfall(void)
 {
+    if (OW_FIELD_MOVES_REQUIRE_HM_ITEM && !CheckBagHasItem(ITEM_HM07, 1))
+        return FALSE;
     return FlagGet(FLAG_BADGE07_GET);
 }
 
 #if OW_ROCK_CLIMB_FIELD_MOVE == TRUE
 static bool32 FieldMove_IsUnlockedRockClimb(void)
 {
+    if (OW_FIELD_MOVES_REQUIRE_HM_ITEM && !CheckBagHasItem(ITEM_HM08, 1))
+        return FALSE;
     return TRUE;
 }
 #endif
