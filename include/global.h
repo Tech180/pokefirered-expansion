@@ -661,7 +661,8 @@ struct SaveBlock2
     u8 optionsBattleStyle:1; // OPTIONS_BATTLE_STYLE_[SHIFT/SET]
     bool8 optionsBattleSceneOff:1; // whether battle animations are disabled
     u8 optionsModernShopUI:1; // SHOP_UI_[CLASSIC/MODERN]
-    u8 unused1:4;
+    u8 optionsDSPartyMenu:1; // PARTY_MENU_[CLASSIC/DS]
+    u8 unused1:3;
 
 #if FREE_POKEMON_JUMP == FALSE
     struct PokemonJumpRecords pokeJump;

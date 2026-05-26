@@ -26,6 +26,7 @@ enum
     MENUITEM_BUTTONMODE,
     MENUITEM_FRAMETYPE,
     MENUITEM_SHOP_UI,
+    MENUITEM_PARTY_MENU,
     MENUITEM_CANCEL,
     MENUITEM_COUNT
 };
@@ -140,7 +141,7 @@ static const struct BgTemplate sOptionMenuBgTemplates[] =
 };
 
 static const u16 sOptionMenuPalette[] = INCBIN_U16("graphics/misc/option_menu.gbapal");
-static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {3, 2, 2, 2, 3, 10, 2, 0};
+static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {3, 2, 2, 2, 3, 10, 2, 2, 0};
 
 static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
 {
@@ -151,6 +152,7 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
     [MENUITEM_BUTTONMODE]  = COMPOUND_STRING("BUTTON MODE"),
     [MENUITEM_FRAMETYPE]   = COMPOUND_STRING("FRAME"),
     [MENUITEM_SHOP_UI]     = COMPOUND_STRING("SHOP UI"),
+    [MENUITEM_PARTY_MENU]  = COMPOUND_STRING("PARTY MENU"),
     [MENUITEM_CANCEL]      = gText_Cancel,
 };
 
@@ -192,6 +194,12 @@ static const u8 *const sShopUIOptions[] =
     COMPOUND_STRING("MODERN"),
 };
 
+static const u8 *const sPartyMenuOptions[] =
+{
+    COMPOUND_STRING("CLASSIC"),
+    COMPOUND_STRING("DS STYLE"),
+};
+
 static const u8 sOptionMenuPickSwitchCancelTextColor[] = {TEXT_DYNAMIC_COLOR_6, TEXT_COLOR_WHITE, TEXT_COLOR_DARK_GRAY};
 static const u8 sOptionMenuTextColor[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_LIGHT_RED, TEXT_COLOR_RED};
 
@@ -231,6 +239,7 @@ void CB2_InitOptionMenu(void)
     sOptionMenuPtr->option[MENUITEM_BUTTONMODE] = gSaveBlock2Ptr->optionsButtonMode;
     sOptionMenuPtr->option[MENUITEM_FRAMETYPE] = gSaveBlock2Ptr->optionsWindowFrameType;
     sOptionMenuPtr->option[MENUITEM_SHOP_UI] = gSaveBlock2Ptr->optionsModernShopUI;
+    sOptionMenuPtr->option[MENUITEM_PARTY_MENU] = gSaveBlock2Ptr->optionsDSPartyMenu;
 
     for (i = 0; i < MENUITEM_COUNT - 1; i++)
     {
@@ -565,6 +574,9 @@ static void BufferOptionMenuString(u8 selection)
     case MENUITEM_SHOP_UI:
         AddTextPrinterParameterized3(1, FONT_NORMAL, x, y, dst, -1, sShopUIOptions[sOptionMenuPtr->option[selection]]);
         break;
+    case MENUITEM_PARTY_MENU:
+        AddTextPrinterParameterized3(1, FONT_NORMAL, x, y, dst, -1, sPartyMenuOptions[sOptionMenuPtr->option[selection]]);
+        break;
     case MENUITEM_FRAMETYPE:
         StringCopy(str, gText_Type);
         ConvertIntToDecimalStringN(buf, sOptionMenuPtr->option[selection] + 1, 1, 2);
@@ -590,6 +602,7 @@ static void CloseAndSaveOptionMenu(u8 taskId)
     gSaveBlock2Ptr->optionsButtonMode = sOptionMenuPtr->option[MENUITEM_BUTTONMODE];
     gSaveBlock2Ptr->optionsWindowFrameType = sOptionMenuPtr->option[MENUITEM_FRAMETYPE];
     gSaveBlock2Ptr->optionsModernShopUI = sOptionMenuPtr->option[MENUITEM_SHOP_UI];
+    gSaveBlock2Ptr->optionsDSPartyMenu = sOptionMenuPtr->option[MENUITEM_PARTY_MENU];
     SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
     if (sOptionMenuPtr->arrowTaskId != TASK_NONE)
     {
