@@ -1,6 +1,6 @@
 {
   "identifier": "TRAINER_PLAYER_RED",
-  "trainer_name": "RED",
+  "trainer_name": "Red",
   "trainer_class": "TRAINER_CLASS_RIVAL",
   "trainer_pic": "TRAINER_PIC_RED",
   "gender": "TRAINER_GENDER_MALE",

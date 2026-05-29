@@ -1,5 +1,5 @@
 ThreeIsland_Text_IslandSign::
-    .string "THREE ISLAND\n"
+    .string "Three Island\n"
     .string "Kin Island of Family Bonding$"
 
 ThreeIsland_Text_IslandBelongsToUs::
@@ -124,7 +124,7 @@ ThreeIsland_Text_PaxtonPostBattle::
 ThreeIsland_Text_ThankYouOhYourMonGotHurt::
     .string "Thank you! Those goons were\n"
     .string "nothing but bad trouble.\p"
-    .string "Oh, look, your POKéMON got hurt\n"
+    .string "Oh, look, your Pokémon got hurt\n"
     .string "on my account.$"
 
 ThreeIsland_Text_GivenFullRestore::
@@ -133,11 +133,11 @@ ThreeIsland_Text_GivenFullRestore::
 
 ThreeIsland_Text_OhYourBagIsFull::
     .string "Oh?\n"
-    .string "Your BAG is full.$"
+    .string "Your Bag is full.$"
 
 ThreeIsland_Text_YouveGotImpressiveMons::
     .string "You've got seriously impressive\n"
-    .string "POKéMON with you.$"
+    .string "Pokémon with you.$"
 
 ThreeIsland_Text_LostelleWentOffTowardsBondBridge::
     .string "It'd be fantastic if someone as\n"
@@ -150,7 +150,7 @@ ThreeIsland_Text_LostelleWentOffTowardsBondBridge::
     .string "BRIDGE a while ago.$"
 
 ThreeIsland_Text_WouldntWantToSeeBikersHereAgain::
-    .string "THREE ISLAND is actually the most\n"
+    .string "Three Island is actually the most\n"
     .string "populous of the islands here.\p"
     .string "Still, it could be less sleepy.\p"
     .string "But I wouldn't want to see goons\n"
@@ -158,9 +158,9 @@ ThreeIsland_Text_WouldntWantToSeeBikersHereAgain::
 
 ThreeIsland_Text_WhenDodouEvolvesGoingToPlayGame::
     .string "I'm going to train my DODUO in the\n"
-    .string "BERRY FOREST.\p"
+    .string "Berry Forest.\p"
     .string "When it evolves, I'm going to play\n"
-    .string "a game on TWO ISLAND.$"
+    .string "a game on Two Island.$"
 
 ThreeIsland_Text_Doduo::
     .string "DODUO: Gigiih!$"

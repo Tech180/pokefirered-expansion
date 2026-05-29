@@ -1,6 +1,6 @@
 {
   "identifier": "TRAINER_LASS_ANN",
-  "trainer_name": "ANN",
+  "trainer_name": "Ann",
   "trainer_class": "TRAINER_CLASS_LASS",
   "trainer_pic": "TRAINER_PIC_LASS",
   "gender": "TRAINER_GENDER_MALE",

@@ -20,7 +20,7 @@ OneIsland_KindleRoad_Text_AbigailPostBattle::
     .string "Maybe I should wear one, too…$"
 
 OneIsland_KindleRoad_Text_FinnIntro::
-    .string "Seen from here, MT. EMBER towers\n"
+    .string "Seen from here, Mt. Ember towers\n"
     .string "into the sky.$"
 
 OneIsland_KindleRoad_Text_FinnDefeat::
@@ -134,7 +134,7 @@ OneIsland_KindleRoad_Text_KiaPostBattle::
 OneIsland_KindleRoad_Text_KiaNotEnoughMons::
     .string "KIA: If you want to battle with\n"
     .string "us, you have to bring at least two\l"
-    .string "POKéMON with you.$"
+    .string "Pokémon with you.$"
 
 OneIsland_KindleRoad_Text_MikIntro::
     .string "MIK: Together with KIA, I'm afraid\n"
@@ -151,14 +151,14 @@ OneIsland_KindleRoad_Text_MikPostBattle::
 OneIsland_KindleRoad_Text_MikNotEnoughMons::
     .string "MIK: Hey, do you want to battle\n"
     .string "with us two?\p"
-    .string "Bring two or more POKéMON with\n"
+    .string "Bring two or more Pokémon with\n"
     .string "you, then.$"
 
 OneIsland_KindleRoad_Text_RouteSign::
-    .string "This is KINDLE ROAD.\p"
-    .string "Go straight for MT. EMBER.$"
+    .string "This is Kindle Road.\p"
+    .string "Go straight for Mt. Ember.$"
 
 OneIsland_KindleRoad_Text_EmberSpaSign::
     .string "Light the Fire in Your Heart!\n"
-    .string "EMBER SPA$"
+    .string "Ember Spa$"
 

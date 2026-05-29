@@ -111,13 +111,13 @@ Seagallop_SeviiIslands::
 	.string "SEVII ISLANDS$"
 
 Seagallop_NavelRock::
-	.string "NAVEL ROCK$"
+	.string "Navel Rock$"
 
 Seagallop_BirthIsland::
-	.string "BIRTH ISLAND$"
+	.string "Birth Island$"
 
 Seagallop_BattleFrontier::
-	.string "BATTLE FRONTIER$"
+	.string "Battle Frontier$"
 
 Seagallop_Cancel::
 	.string "CANCEL$"

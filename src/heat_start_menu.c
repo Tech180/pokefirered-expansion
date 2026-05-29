@@ -565,12 +565,12 @@ static const u8 *const gDayNameStringsTable[] =
     gText_Thursday
 };
 
-static const u8 gText_CurrentTime[]      = _("  {STR_VAR_3} {CLEAR_TO 64}{STR_VAR_1}:{STR_VAR_2}");
-static const u8 gText_CurrentTimeOff[]   = _("  {STR_VAR_3} {CLEAR_TO 64}{STR_VAR_1} {STR_VAR_2}");
-static const u8 gText_CurrentTimeAM[]    = _("  {STR_VAR_3} {CLEAR_TO 51}{STR_VAR_1}:{STR_VAR_2} AM");
-static const u8 gText_CurrentTimeAMOff[] = _("  {STR_VAR_3} {CLEAR_TO 51}{STR_VAR_1} {STR_VAR_2} AM");
-static const u8 gText_CurrentTimePM[]    = _("  {STR_VAR_3} {CLEAR_TO 51}{STR_VAR_1}:{STR_VAR_2} PM");
-static const u8 gText_CurrentTimePMOff[] = _("  {STR_VAR_3} {CLEAR_TO 51}{STR_VAR_1} {STR_VAR_2} PM");
+static const u8 gText_CurrentTime[]      = _("  {STR_VAR_3} {CLEAR_TO 54}{STR_VAR_1}:{STR_VAR_2}");
+static const u8 gText_CurrentTimeOff[]   = _("  {STR_VAR_3} {CLEAR_TO 54}{STR_VAR_1} {STR_VAR_2}");
+static const u8 gText_CurrentTimeAM[]    = _("  {STR_VAR_3} {CLEAR_TO 45}{STR_VAR_1}:{STR_VAR_2} AM");
+static const u8 gText_CurrentTimeAMOff[] = _("  {STR_VAR_3} {CLEAR_TO 45}{STR_VAR_1} {STR_VAR_2} AM");
+static const u8 gText_CurrentTimePM[]    = _("  {STR_VAR_3} {CLEAR_TO 45}{STR_VAR_1}:{STR_VAR_2} PM");
+static const u8 gText_CurrentTimePMOff[] = _("  {STR_VAR_3} {CLEAR_TO 45}{STR_VAR_1} {STR_VAR_2} PM");
 
 // Save error text (firered's is static in start_menu.c, so we define our own)
 static const u8 sText_SaveError[] = _("Save error.\pPlease exchange the\nbackup memory.");

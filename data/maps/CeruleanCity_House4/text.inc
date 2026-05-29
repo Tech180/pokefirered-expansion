@@ -57,6 +57,6 @@ CeruleanCity_House4_Text_EnjoyingMyselfWithAllSortsOfNews::
     .string "I won't be bored for a while.$"
 
 CeruleanCity_House4_Text_YourBerryPouchIsFull::
-    .string "Hm? Your BERRY POUCH is full.\n"
+    .string "Hm? Your Berry Pouch is full.\n"
     .string "My gift remains ungiven, then.$"
 

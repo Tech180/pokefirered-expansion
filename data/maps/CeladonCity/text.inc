@@ -17,7 +17,7 @@ CeladonCity_Text_BlewItAllAtSlots::
     .string "Moan…\n"
     .string "I blew it all at the slots!\p"
     .string "I knew I should have cashed in my\n"
-    .string "COINS for prizes!$"
+    .string "Coins for prizes!$"
 
 CeladonCity_Text_MyTrustedPalPoliwrath::
     .string "This is my trusted pal, POLIWRATH.\p"
@@ -44,11 +44,11 @@ CeladonCity_Text_ExplainXAccuracyDireHit::
     .string "DEPT. STORE!$"
 
 CeladonCity_Text_CitySign::
-    .string "CELADON CITY\n"
+    .string "Celadon City\n"
     .string "The City of Rainbow Dreams$"
 
 CeladonCity_Text_GymSign::
-    .string "CELADON CITY POKéMON GYM\n"
+    .string "Celadon City Pokémon GYM\n"
     .string "LEADER: ERIKA\l"
     .string "The Nature-Loving Princess!$"
 
@@ -57,18 +57,18 @@ CeladonCity_Text_MansionSign::
 
 CeladonCity_Text_DeptStoreSign::
     .string "Find what you need at the\n"
-    .string "CELADON DEPT. STORE!$"
+    .string "Celadon Dept. STORE!$"
 
 CeladonCity_Text_GuardSpecProtectsFromStatus::
     .string "TRAINER TIPS\p"
-    .string "GUARD SPEC. protects POKéMON\n"
+    .string "GUARD SPEC. protects Pokémon\n"
     .string "from status-reduction moves during\l"
     .string "battle.\p"
     .string "Get your items at the\n"
-    .string "CELADON DEPT. STORE!$"
+    .string "Celadon Dept. STORE!$"
 
 CeladonCity_Text_PrizeExchangeSign::
-    .string "COINS exchanged for prizes!\n"
+    .string "Coins exchanged for prizes!\n"
     .string "PRIZE EXCHANGE$"
 
 CeladonCity_Text_GameCornerSign::
@@ -98,7 +98,7 @@ Text_SoftboiledDeclined::
     .string "I hope we can chat again.$"
 
 Text_SoftboiledWhichMon::
-    .string "So, who's the POKéMON that gets\n"
+    .string "So, who's the Pokémon that gets\n"
     .string "the chance to learn SOFTBOILED?$"
 
 Text_SoftboiledTaught::

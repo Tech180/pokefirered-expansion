@@ -20,14 +20,14 @@ CinnabarIsland_PokemonCenter_1F_Text_VisitUnionRoom::
     .string "to check the UNION ROOM.$"
 
 CinnabarIsland_PokemonCenter_1F_Text_EvolutionCanWaitForNewMoves::
-    .string "POKéMON can still learn techniques\n"
+    .string "Pokémon can still learn techniques\n"
     .string "after canceling evolution.\p"
     .string "Evolution can wait until new moves\n"
     .string "have been learned.$"
 
 CinnabarIsland_PokemonCenter_1F_Text_ReadyToSailToOneIsland::
     .string "BILL: Hey, you kept me waiting!\n"
-    .string "Ready to set sail to ONE ISLAND?$"
+    .string "Ready to set sail to One Island?$"
 
 CinnabarIsland_PokemonCenter_1F_Text_OhNotDoneYet::
     .string "Oh, you're still not done yet?$"
