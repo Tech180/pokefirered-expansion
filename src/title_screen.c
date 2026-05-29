@@ -744,7 +744,7 @@ static void SetTitleScreenScene_Cry(s16 *data)
             data[2]++;
         else if (!IsSlashSpriteDeactivated(tSlashSpriteId))
         {
-            BeginNormalPaletteFade((PALETTES_ALL & ~(1 << 0x1C) & ~(1 << 0x1D) & ~(1 << 0x1E) & ~(1 << 0x1F)), 0, 0, 16, RGB_WHITE);
+            BeginNormalPaletteFade((PALETTES_ALL & ~(1 << 0x1C) & ~(1 << 0x1D) & ~(1 << 0x1E) & ~(1 << 0x1F)), 0, 0, 16, RGB_BLACK);
             SignalEndTitleScreenPaletteSomethingTask();
             FadeOutBGM(4);
             tState++;
