@@ -21,6 +21,7 @@
 #include "task.h"
 #include "text_window.h"
 #include "title_screen.h"
+#include "ui_main_menu.h"
 #include "constants/songs.h"
 
 enum MainMenuType
@@ -172,6 +173,11 @@ void CB2_InitMainMenu(void)
     MainMenuGpuInit(1);
 }
 
+void CB2_ReinitMainMenu(void)
+{
+    MainMenuGpuInit(0);
+}
+
 static bool32 MainMenuGpuInit(u8 a0)
 {
     u8 taskId;
@@ -231,6 +237,18 @@ static void Task_SetWin0BldRegsAndCheckSaveFile(u8 taskId)
 {
     if (!gPaletteFade.active)
     {
+        if (!gSaveBlock2Ptr->optionsCustomMainMenu && gTasks[taskId].tUnused8 == 0)
+        {
+            LoadUserFrameToBg(0);
+            if (IsMysteryGiftEnabled() == TRUE)
+                gTasks[taskId].tMenuType = MAIN_MENU_MYSTERYGIFT;
+            else
+                gTasks[taskId].tMenuType = MAIN_MENU_CONTINUE;
+            
+            gTasks[taskId].func = Task_OpenMainMenu;
+            return;
+        }
+
         SetGpuReg(REG_OFFSET_WIN0H, 0);
         SetGpuReg(REG_OFFSET_WIN0V, 0);
         SetGpuReg(REG_OFFSET_WININ, 0x0001);
@@ -387,6 +405,8 @@ static void Task_SetWin0BldRegsNoSaveFileCheck(u8 taskId)
         SetGpuReg(REG_OFFSET_BLDY, 7);
         if (gTasks[taskId].tMenuType == MAIN_MENU_NEWGAME)
             gTasks[taskId].func = Task_ExecuteMainMenuSelection;
+        else if (!gSaveBlock2Ptr->optionsCustomMainMenu)
+            gTasks[taskId].func = Task_OpenMainMenu;
         else
             gTasks[taskId].func = Task_WaitFadeAndPrintMainMenuText;
     }
