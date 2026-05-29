@@ -237,7 +237,7 @@ static void Task_SetWin0BldRegsAndCheckSaveFile(u8 taskId)
 {
     if (!gPaletteFade.active)
     {
-        if (gSaveBlock2Ptr->optionsCustomMainMenu && gTasks[taskId].tUnused8 == 0)
+        if (!gSaveBlock2Ptr->optionsCustomMainMenu && gTasks[taskId].tUnused8 == 0)
         {
             LoadUserFrameToBg(0);
             if (IsMysteryGiftEnabled() == TRUE)
@@ -405,7 +405,7 @@ static void Task_SetWin0BldRegsNoSaveFileCheck(u8 taskId)
         SetGpuReg(REG_OFFSET_BLDY, 7);
         if (gTasks[taskId].tMenuType == MAIN_MENU_NEWGAME)
             gTasks[taskId].func = Task_ExecuteMainMenuSelection;
-        else if (gSaveBlock2Ptr->optionsCustomMainMenu)
+        else if (!gSaveBlock2Ptr->optionsCustomMainMenu)
             gTasks[taskId].func = Task_OpenMainMenu;
         else
             gTasks[taskId].func = Task_WaitFadeAndPrintMainMenuText;

@@ -607,6 +607,11 @@ void HeatStartMenu_Init(void) {
 
   LockPlayerFieldControls();
 
+  if (GetFlashLevel() != 0 || InBattlePyramid_())
+  {
+      SetGpuRegBits(REG_OFFSET_WINOUT, WINOUT_WIN01_OBJ | WINOUT_WINOBJ_OBJ);
+  }
+
   if (sHeatStartMenu == NULL) {
     sHeatStartMenu = AllocZeroed(sizeof(struct HeatStartMenu));
   }
@@ -910,6 +915,11 @@ static void HeatStartMenu_ExitAndClearTilemap(void) {
   {
     ScriptUnfreezeObjectEvents();
     UnlockPlayerFieldControls();
+  }
+
+  if (GetFlashLevel() != 0 || InBattlePyramid_())
+  {
+      ClearGpuRegBits(REG_OFFSET_WINOUT, WINOUT_WIN01_OBJ | WINOUT_WINOBJ_OBJ);
   }
 
   if (sHeatStartMenu != NULL) {

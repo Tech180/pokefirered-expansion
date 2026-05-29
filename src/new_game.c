@@ -78,8 +78,8 @@ static void SetDefaultOptions(void)
     gSaveBlock2Ptr->optionsButtonMode = OPTIONS_BUTTON_MODE_LR;
     gSaveBlock2Ptr->optionsModernShopUI = 1;
     gSaveBlock2Ptr->optionsDSPartyMenu = 1;
-    gSaveBlock2Ptr->optionsCustomMainMenu = 1;
-    gSaveBlock2Ptr->optionsCustomStartMenu = 1;
+    gSaveBlock2Ptr->optionsCustomMainMenu = 0;
+    gSaveBlock2Ptr->optionsCustomStartMenu = 0;
 }
 
 static void ClearPokedexFlags(void)

@@ -142,13 +142,13 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] = {
 };
 
 static const u8 *const sMainMenuOptions[] = {
-    COMPOUND_STRING("Classic"),
     COMPOUND_STRING("Modern"),
+    COMPOUND_STRING("Classic"),
 };
 
 static const u8 *const sStartMenuOptions[] = {
-    COMPOUND_STRING("Classic"),
     COMPOUND_STRING("Modern"),
+    COMPOUND_STRING("Classic"),
 };
 
 static const u8 *const sTextSpeedOptions[] = {

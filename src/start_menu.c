@@ -603,7 +603,7 @@ static void CreateStartMenuTask(TaskFunc followupFunc)
 
 static bool8 FieldCB_ReturnToFieldStartMenu(void)
 {
-    if (gSaveBlock2Ptr->optionsCustomStartMenu)
+    if (!gSaveBlock2Ptr->optionsCustomStartMenu)
     {
         HeatStartMenu_Init();
         FadeInFromBlack();
@@ -646,7 +646,7 @@ void Task_ShowStartMenu(u8 taskId)
 
 void ShowStartMenu(void)
 {
-    if (gSaveBlock2Ptr->optionsCustomStartMenu)
+    if (!gSaveBlock2Ptr->optionsCustomStartMenu)
     {
         HeatStartMenu_Init();
     }
