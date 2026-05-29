@@ -41,7 +41,7 @@ SilphCo_2F_Text_Grunt2Defeat::
     .string "I goofed!$"
 
 SilphCo_2F_Text_Grunt2PostBattle::
-    .string "SILPH CO. will be associated with\n"
+    .string "Silph Co. will be associated with\n"
     .string "TEAM ROCKET!$"
 
 Text_ThunderWaveTeach::
@@ -57,18 +57,18 @@ Text_ThunderWaveDeclined::
     .string "But THUNDER WAVE is convenient…$"
 
 Text_ThunderWaveWhichMon::
-    .string "Which POKéMON should I teach\n"
+    .string "Which Pokémon should I teach\n"
     .string "THUNDER WAVE?$"
 
 Text_ThunderWaveTaught::
     .string "THUNDER WAVE causes paralysis in\n"
-    .string "the target POKéMON.\p"
-    .string "A paralyzed POKéMON may be unable\n"
+    .string "the target Pokémon.\p"
+    .string "A paralyzed Pokémon may be unable\n"
     .string "to move in battle.\p"
     .string "It's an ELECTRIC-type move, so it\n"
-    .string "won't work on some POKéMON.$"
+    .string "won't work on some Pokémon.$"
 
 SilphCo_2F_Text_FloorSign::
-    .string "SILPH CO. HEAD OFFICE\n"
+    .string "Silph Co. HEAD OFFICE\n"
     .string "2F$"
 

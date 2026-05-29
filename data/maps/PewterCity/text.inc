@@ -6,14 +6,14 @@ Text_DreamEaterTeach::
     .string "And…\n"
     .string "I learned how to eat dreams…\p"
     .string "Oogh, this is too spooky!\p"
-    .string "Let me teach it to a POKéMON so\n"
+    .string "Let me teach it to a Pokémon so\n"
     .string "I can forget about it!$"
 
 Text_DreamEaterDeclined::
     .string "…Snore…$"
 
 Text_DreamEaterWhichMon::
-    .string "Which POKéMON wants to learn\n"
+    .string "Which Pokémon wants to learn\n"
     .string "DREAM EATER?$"
 
 Text_DreamEaterTaught::
@@ -24,10 +24,10 @@ PewterCity_Text_ClefairyCameFromMoon::
     .string "CLEFAIRY came from the moon.\n"
     .string "That's what the rumor is.\p"
     .string "They appeared after MOON STONES\n"
-    .string "fell on MT. MOON.$"
+    .string "fell on Mt. Moon.$"
 
 PewterCity_Text_BrockOnlySeriousTrainerHere::
-    .string "There aren't many serious POKéMON\n"
+    .string "There aren't many serious Pokémon\n"
     .string "TRAINERS here.\p"
     .string "They're all like BUG CATCHERS,\n"
     .string "you know, just hobbyists.\p"
@@ -38,7 +38,7 @@ PewterCity_Text_DidYouCheckOutMuseum::
     .string "Did you check out the MUSEUM?$"
 
 PewterCity_Text_WerentThoseFossilsAmazing::
-    .string "Weren't those fossils from MT. MOON\n"
+    .string "Weren't those fossils from Mt. Moon\n"
     .string "amazing?$"
 
 PewterCity_Text_ReallyYouHaveToGo::
@@ -60,7 +60,7 @@ PewterCity_Text_ThatsRightItsHardWork::
 
 PewterCity_Text_SprayingRepelToKeepWildMonsOut::
     .string "I'm spraying REPEL to keep wild\n"
-    .string "POKéMON out of my garden!$"
+    .string "Pokémon out of my garden!$"
 
 PewterCity_Text_BrocksLookingForChallengersFollowMe::
     .string "You're a TRAINER, right?\p"
@@ -73,13 +73,13 @@ PewterCity_Text_GoTakeOnBrock::
 
 PewterCity_Text_TrainerTipsEarningEXP::
     .string "TRAINER TIPS\p"
-    .string "All POKéMON that appear in battle,\n"
+    .string "All Pokémon that appear in battle,\n"
     .string "however briefly, earn EXP Points.$"
 
 PewterCity_Text_CallPoliceIfInfoOnThieves::
     .string "NOTICE!\p"
-    .string "Thieves have been stealing POKéMON\n"
-    .string "fossils from MT. MOON.\p"
+    .string "Thieves have been stealing Pokémon\n"
+    .string "fossils from Mt. Moon.\p"
     .string "Please call the PEWTER POLICE if\n"
     .string "you have any information.$"
 
@@ -87,12 +87,12 @@ PewterCity_Text_MuseumOfScience::
     .string "PEWTER MUSEUM OF SCIENCE$"
 
 PewterCity_Text_GymSign::
-    .string "PEWTER CITY POKéMON GYM\n"
+    .string "Pewter City Pokémon GYM\n"
     .string "LEADER: BROCK\l"
-    .string "The Rock-Solid POKéMON TRAINER!$"
+    .string "The Rock-Solid Pokémon TRAINER!$"
 
 PewterCity_Text_CitySign::
-    .string "PEWTER CITY\n"
+    .string "Pewter City\n"
     .string "A Stone Gray City$"
 
 @ The below 3 JP texts are unused. Possibly a cut NPC meant to give the player the Berry Pouch

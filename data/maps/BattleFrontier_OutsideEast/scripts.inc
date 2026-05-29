@@ -238,7 +238,7 @@ BattleFrontier_OutsideEast_Text_BattleTowerSign:
 
 BattleFrontier_OutsideEast_Text_BattlePalaceSign:
 	.string "This is the BATTLE PALACE!\n"
-	.string "Keep your eyes on POKéMON battles!$"
+	.string "Keep your eyes on Pokémon battles!$"
 
 BattleFrontier_OutsideEast_Text_BattleArenaSign:
 	.string "This is the BATTLE ARENA!\n"
@@ -249,7 +249,7 @@ BattleFrontier_OutsideEast_Text_BattlePyramidSign:
 	.string "Advance through the Battle Quest!$"
 
 BattleFrontier_OutsideEast_Text_RankingHallSign:
-	.string "BATTLE FRONTIER RANKING HALL\n"
+	.string "Battle Frontier RANKING HALL\n"
 	.string "Set your sights on new records!$"
 
 BattleFrontier_OutsideEast_Text_ExchangeCornerSign:
@@ -264,7 +264,7 @@ BattleFrontier_OutsideEast_Text_BattleTowerFeelsSpecial:
 
 BattleFrontier_OutsideEast_Text_ConquerLeagueAndFrontier:
 	.string "My grand ambition is to conquer both\n"
-	.string "the BATTLE FRONTIER and the POKéMON\l"
+	.string "the Battle Frontier and the Pokémon\l"
 	.string "LEAGUE.\p"
 	.string "And if my dream comes true…\p"
 	.string "I… I'm going to ask MIMI next door\n"
@@ -329,7 +329,7 @@ BattleFrontier_OutsideEast_Text_FastOnBikeAndBattles:
 
 BattleFrontier_OutsideEast_Text_BetterThanDaddyAtPokemon:
 	.string "I'm better than my daddy\n"
-	.string "at POKéMON.$"
+	.string "at Pokémon.$"
 
 BattleFrontier_OutsideEast_Text_GoRackUpSomeWinsForDaddy:
 	.string "Go on, my baby sweetie!\n"
@@ -349,7 +349,7 @@ BattleFrontier_OutsideEast_Text_HeardPrettyGirlAtBattleArena:
 BattleFrontier_OutsideEast_Text_SometimesImportantOldManInThere:
 	.string "I sometimes see this really important-\n"
 	.string "looking old man going in there.\p"
-	.string "He has these really awesome POKéMON.\n"
+	.string "He has these really awesome Pokémon.\n"
 	.string "He seems really nice, though.$"
 
 BattleFrontier_OutsideEast_Text_LegendOfBattlePyramid:
@@ -408,7 +408,7 @@ BattleFrontier_OutsideEast_Text_PowerOfOurLoveWillOvercome:
 	.string "will topple like dominoes!$"
 
 BattleFrontier_OutsideEast_Text_FrontierNotExclusivelyForToughTrainers:
-	.string "The BATTLE FRONTIER isn't exclusively\n"
+	.string "The Battle Frontier isn't exclusively\n"
 	.string "for tough TRAINERS.\p"
 	.string "Many people with special abilities\n"
 	.string "have been invited, it seems.\p"
@@ -431,7 +431,7 @@ BattleFrontier_OutsideEast_Text_OnceAnOddTreePastHere:
 BattleFrontier_OutsideEast_Text_StickyMonWithLongTail:
 	.string "I…\n"
 	.string "I saw it!\p"
-	.string "There was a sticky sort of a POKéMON\n"
+	.string "There was a sticky sort of a Pokémon\n"
 	.string "with a long tail up ahead!\p"
 	.string "It was hiding under a boulder, and\n"
 	.string "it kept staring at me!$"

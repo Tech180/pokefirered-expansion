@@ -8,7 +8,7 @@ FiveIsland_MemorialPillar_Text_MiloDefeat::
     .string "Oh, so sharp!$"
 
 FiveIsland_MemorialPillar_Text_MiloPostBattle::
-    .string "You can fly to FOUR ISLAND from\n"
+    .string "You can fly to Four Island from\n"
     .string "here.$"
 
 FiveIsland_MemorialPillar_Text_ChazIntro::
@@ -36,14 +36,14 @@ FiveIsland_MemorialPillar_Text_HaroldDefeat::
 
 FiveIsland_MemorialPillar_Text_HaroldPostBattle::
     .string "It fills me with happiness when\n"
-    .string "bird POKéMON beg playfully…$"
+    .string "bird Pokémon beg playfully…$"
 
 FiveIsland_MemorialPillar_Text_ScrubScrub::
     .string "Scrub, scrub…$"
 
 FiveIsland_MemorialPillar_Text_YourMonsLookHealthy::
     .string "Hello…\n"
-    .string "Your POKéMON look healthy…$"
+    .string "Your Pokémon look healthy…$"
 
 FiveIsland_MemorialPillar_Text_ThisIsWhereIBuriedMyOnix::
     .string "This is where I buried my ONIX…\n"
@@ -74,7 +74,7 @@ FiveIsland_MemorialPillar_Text_ThankYouPleaseTakeThis::
     .string "thanks?$"
 
 FiveIsland_MemorialPillar_Text_BeGoodToYourMonsToo::
-    .string "Please be good to your POKéMON,\n"
+    .string "Please be good to your Pokémon,\n"
     .string "too.$"
 
 FiveIsland_MemorialPillar_Text_DontHaveRoomForIt::

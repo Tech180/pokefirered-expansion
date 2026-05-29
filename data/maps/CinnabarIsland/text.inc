@@ -11,17 +11,17 @@ CinnabarIsland_Text_ScientistsExperimentInMansion::
     .string "Scientists conduct experiments \n"
     .string "in the burned-out building.\p"
     .string "You know, the one they call the\n"
-    .string "POKéMON MANSION.$"
+    .string "Pokémon MANSION.$"
 
 CinnabarIsland_Text_IslandSign::
-    .string "CINNABAR ISLAND\n"
+    .string "Cinnabar Island\n"
     .string "The Fiery Town of Burning Desire$"
 
 CinnabarIsland_Text_PokemonLab::
-    .string "POKéMON LAB$"
+    .string "Pokémon LAB$"
 
 CinnabarIsland_Text_GymSign::
-    .string "CINNABAR ISLAND POKéMON GYM\n"
+    .string "Cinnabar Island Pokémon GYM\n"
     .string "LEADER: BLAINE\l"
     .string "The Hotheaded Quiz Master!$"
 
@@ -37,7 +37,7 @@ CinnabarIsland_Text_ComeWithMeToOneIsland::
     .string "Well, listen, since we met up here,\n"
     .string "how about spending time with me?\p"
     .string "There's this little island in the far\n"
-    .string "south called ONE ISLAND.\p"
+    .string "south called One Island.\p"
     .string "A friend invited me, so I'm on my\n"
     .string "way out there.\p"
     .string "How about it?\n"
@@ -51,7 +51,7 @@ CinnabarIsland_Text_IllBeWaitingInPokeCenter::
     .string "What, are you too busy?\p"
     .string "Well, all right.\n"
     .string "The boat hasn't arrived yet anyway.\p"
-    .string "I'll be waiting at the POKéMON\n"
+    .string "I'll be waiting at the Pokémon\n"
     .string "CENTER over there.\p"
     .string "Come see me when you're done with\n"
     .string "your business here.$"
@@ -68,7 +68,7 @@ CinnabarIsland_Text_IfYouHaveTriPassYouCanGoAgain::
     .string "your company.\p"
     .string "I'm sure he'd welcome you if you\n"
     .string "were to visit him again.\p"
-    .string "If you have a TRI-PASS, you can\n"
+    .string "If you have a Tri-Pass, you can\n"
     .string "always take a ferry there from\l"
     .string "VERMILION PORT.\p"
     .string "All right, thanks for your company!$"

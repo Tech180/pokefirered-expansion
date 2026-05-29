@@ -2,7 +2,7 @@
 
 TrainerTower_Lobby_Text_WelcomeToTrainerTower::
     .string "Hello!\p"
-    .string "Welcome to TRAINER TOWER where\n"
+    .string "Welcome to Trainer Tower where\n"
     .string "TRAINERS gather from all over!$"
 
 TrainerTower_Lobby_Text_TrainersUpToFloorNum::
@@ -88,10 +88,10 @@ TrainerTower_Lobby_Text_HereAreTheResults::
 TrainerTower_Lobby_Text_NeedTwoMonsForDouble::
     .string "This is a two-on-two battle.\p"
     .string "You may not battle unless you have\n"
-    .string "at least two POKéMON.$"
+    .string "at least two Pokémon.$"
 
 TrainerTower_Lobby_Text_ExplainTrainerTower::
-    .string "Here at TRAINER TOWER, there is an\n"
+    .string "Here at Trainer Tower, there is an\n"
     .string "event called TIME ATTACK.\p"
     .string "You will be timed on how quickly\n"
     .string "you can get from the reception\l"

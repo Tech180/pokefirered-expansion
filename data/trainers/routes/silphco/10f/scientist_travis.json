@@ -1,6 +1,6 @@
 {
   "identifier": "TRAINER_SCIENTIST_TRAVIS",
-  "trainer_name": "TRAVIS",
+  "trainer_name": "Travis",
   "trainer_class": "TRAINER_CLASS_SCIENTIST",
   "trainer_pic": "TRAINER_PIC_SCIENTIST",
   "gender": "TRAINER_GENDER_MALE",

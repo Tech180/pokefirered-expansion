@@ -1,6 +1,6 @@
 {
   "identifier": "TRAINER_CUE_BALL_CHASE",
-  "trainer_name": "CHASE",
+  "trainer_name": "Chase",
   "trainer_class": "TRAINER_CLASS_CUE_BALL",
   "trainer_pic": "TRAINER_PIC_CUE_BALL",
   "gender": "TRAINER_GENDER_MALE",

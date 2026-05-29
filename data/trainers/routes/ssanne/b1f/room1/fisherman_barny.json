@@ -1,6 +1,6 @@
 {
   "identifier": "TRAINER_FISHERMAN_BARNY",
-  "trainer_name": "BARNY",
+  "trainer_name": "Barny",
   "trainer_class": "TRAINER_CLASS_FISHERMAN",
   "trainer_pic": "TRAINER_PIC_FISHERMAN",
   "gender": "TRAINER_GENDER_MALE",

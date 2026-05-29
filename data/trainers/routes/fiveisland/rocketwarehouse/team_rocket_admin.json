@@ -1,6 +1,6 @@
 {
   "identifier": "TRAINER_TEAM_ROCKET_ADMIN",
-  "trainer_name": "ADMIN",
+  "trainer_name": "Admin",
   "trainer_class": "TRAINER_CLASS_TEAM_ROCKET",
   "trainer_pic": "TRAINER_PIC_ROCKET_GRUNT_F",
   "gender": "TRAINER_GENDER_MALE",

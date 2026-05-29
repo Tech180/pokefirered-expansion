@@ -10,7 +10,7 @@ Text_SwordsDanceDeclined::
     .string "Well, that's fine, too.$"
 
 Text_SwordsDanceWhichMon::
-    .string "All right, pick which POKéMON\n"
+    .string "All right, pick which Pokémon\n"
     .string "I should teach it to.$"
 
 Text_SwordsDanceTaught::
@@ -18,7 +18,7 @@ Text_SwordsDanceTaught::
     .string "stronger and stronger, eh?$"
 
 SevenIsland_Text_IslandSign::
-    .string "SEVEN ISLAND\n"
+    .string "Seven Island\n"
     .string "Quest Island of Infinity$"
 
 SevenIsland_Text_IslandsMadeInSevenDays::

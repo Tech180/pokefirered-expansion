@@ -1,6 +1,6 @@
 {
   "identifier": "TRAINER_CAMPER_FLINT",
-  "trainer_name": "FLINT",
+  "trainer_name": "Flint",
   "trainer_class": "TRAINER_CLASS_CAMPER",
   "trainer_pic": "TRAINER_PIC_CAMPER",
   "gender": "TRAINER_GENDER_MALE",

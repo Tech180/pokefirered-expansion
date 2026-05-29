@@ -1,5 +1,5 @@
 FourIsland_Text_IslandSign::
-    .string "FOUR ISLAND\n"
+    .string "Four Island\n"
     .string "The Warm, Blue, Floe Island$"
 
 FourIsland_Text_LoreleiHasReturned::
@@ -11,9 +11,9 @@ FourIsland_Text_LoreleiMetLaprasAsChild::
     .string "LORELEI has gone back.\p"
     .string "The LAPRAS she has, I imagine it\n"
     .string "to be the one she met as a child.\p"
-    .string "I believe it was in ICEFALL CAVE\n"
+    .string "I believe it was in Icefall Cave\n"
     .string "that she caught it.\p"
-    .string "Perhaps that POKéMON has been with\n"
+    .string "Perhaps that Pokémon has been with\n"
     .string "her ever since.$"
 
 FourIsland_Text_RivalAlreadyGotEggBeSmellingYa::
@@ -23,12 +23,12 @@ FourIsland_Text_RivalAlreadyGotEggBeSmellingYa::
     .string "SEVII ISLANDS?\p"
     .string "You should quit copying me,\n"
     .string "you know?\p"
-    .string "Anyways, I already got my POKéMON\n"
+    .string "Anyways, I already got my Pokémon\n"
     .string "EGG, so I'm done with this island.\p"
     .string "Heh, I bet you don't even know\n"
-    .string "about POKéMON EGGS.\p"
+    .string "about Pokémon EGGS.\p"
     .string "You'll never fill your NATIONAL\n"
-    .string "POKéDEX that way.\p"
+    .string "Pokédex that way.\p"
     .string "By the way, I saw someone we both\n"
     .string "know on this island.\p"
     .string "Why don't you go look around if\n"
@@ -43,12 +43,12 @@ FourIsland_Text_LoreleiHasLotsOfStuffedDolls::
     .string "Did you know that LORELEI has lots\n"
     .string "and lots of stuffed dolls?\p"
     .string "Every time she comes back to\n"
-    .string "FOUR ISLAND, her collection grows!$"
+    .string "Four Island, her collection grows!$"
 
 FourIsland_Text_MadeSlushieUsingIcefallCaveIce::
     .string "Ooh, chilly!\p"
     .string "I made a slushie using ice I\n"
-    .string "shaved inside ICEFALL CAVE.\p"
+    .string "shaved inside Icefall Cave.\p"
     .string "It's chilly and tasty!$"
 
 FourIsland_Text_LoreleisHouse::
