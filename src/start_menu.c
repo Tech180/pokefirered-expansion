@@ -603,16 +603,19 @@ static void CreateStartMenuTask(TaskFunc followupFunc)
 
 static bool8 FieldCB_ReturnToFieldStartMenu(void)
 {
-#if OW_HEAT_START_MENU
-    HeatStartMenu_Init();
-    FadeInFromBlack();
-    return TRUE;
-#else
-    if (InitStartMenuStep() == FALSE)
-        return FALSE;
-    ReturnToFieldOpenStartMenu();
-    return TRUE;
-#endif
+    if (gSaveBlock2Ptr->optionsCustomStartMenu)
+    {
+        HeatStartMenu_Init();
+        FadeInFromBlack();
+        return TRUE;
+    }
+    else
+    {
+        if (InitStartMenuStep() == FALSE)
+            return FALSE;
+        ReturnToFieldOpenStartMenu();
+        return TRUE;
+    }
 }
 
 void ShowReturnToFieldStartMenu(void)
@@ -643,18 +646,21 @@ void Task_ShowStartMenu(u8 taskId)
 
 void ShowStartMenu(void)
 {
-#if OW_HEAT_START_MENU
-    HeatStartMenu_Init();
-#else
-    if (!IsOverworldLinkActive())
+    if (gSaveBlock2Ptr->optionsCustomStartMenu)
     {
-        FreezeObjectEvents();
-        PlayerFreeze();
-        StopPlayerAvatar();
+        HeatStartMenu_Init();
     }
-    CreateStartMenuTask(Task_ShowStartMenu);
-    LockPlayerFieldControls();
-#endif
+    else
+    {
+        if (!IsOverworldLinkActive())
+        {
+            FreezeObjectEvents();
+            PlayerFreeze();
+            StopPlayerAvatar();
+        }
+        CreateStartMenuTask(Task_ShowStartMenu);
+        LockPlayerFieldControls();
+    }
 }
 
 static bool8 HandleStartMenuInput(void)

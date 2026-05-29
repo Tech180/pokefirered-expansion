@@ -27,6 +27,7 @@ enum {
   MENUITEM_SHOP_UI,
   MENUITEM_PARTY_MENU,
   MENUITEM_MAIN_MENU,
+  MENUITEM_START_MENU,
   MENUITEM_CANCEL,
   MENUITEM_COUNT
 };
@@ -124,7 +125,7 @@ static const struct BgTemplate sOptionMenuBgTemplates[] = {
 static const u16 sOptionMenuPalette[] =
     INCBIN_U16("graphics/misc/option_menu.gbapal");
 static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {3,  2, 2, 2, 3,
-                                                          10, 2, 2, 2, 0};
+                                                          10, 2, 2, 2, 2, 0};
 
 static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] = {
     [MENUITEM_TEXTSPEED] = COMPOUND_STRING("Text Speed"),
@@ -136,10 +137,16 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] = {
     [MENUITEM_SHOP_UI] = COMPOUND_STRING("Shop UI"),
     [MENUITEM_PARTY_MENU] = COMPOUND_STRING("Party Menu"),
     [MENUITEM_MAIN_MENU] = COMPOUND_STRING("Main Menu"),
+    [MENUITEM_START_MENU] = COMPOUND_STRING("Start Menu"),
     [MENUITEM_CANCEL] = gText_Cancel,
 };
 
 static const u8 *const sMainMenuOptions[] = {
+    COMPOUND_STRING("Classic"),
+    COMPOUND_STRING("Modern"),
+};
+
+static const u8 *const sStartMenuOptions[] = {
     COMPOUND_STRING("Classic"),
     COMPOUND_STRING("Modern"),
 };
@@ -228,6 +235,8 @@ void CB2_InitOptionMenu(void) {
       gSaveBlock2Ptr->optionsDSPartyMenu;
   sOptionMenuPtr->option[MENUITEM_MAIN_MENU] =
       gSaveBlock2Ptr->optionsCustomMainMenu;
+  sOptionMenuPtr->option[MENUITEM_START_MENU] =
+      gSaveBlock2Ptr->optionsCustomStartMenu;
 
   for (i = 0; i < MENUITEM_COUNT - 1; i++) {
     if (sOptionMenuPtr->option[i] > (sOptionMenuItemCounts[i]) - 1)
@@ -570,6 +579,11 @@ static void BufferOptionMenuString(u8 selection) {
         1, FONT_NORMAL, x, y, dst, -1,
         sMainMenuOptions[sOptionMenuPtr->option[selection]]);
     break;
+  case MENUITEM_START_MENU:
+    AddTextPrinterParameterized3(
+        1, FONT_NORMAL, x, y, dst, -1,
+        sStartMenuOptions[sOptionMenuPtr->option[selection]]);
+    break;
   case MENUITEM_FRAMETYPE:
     StringCopy(str, COMPOUND_STRING("Type "));
     ConvertIntToDecimalStringN(buf, sOptionMenuPtr->option[selection] + 1, 1,
@@ -604,6 +618,8 @@ static void CloseAndSaveOptionMenu(u8 taskId) {
       sOptionMenuPtr->option[MENUITEM_PARTY_MENU];
   gSaveBlock2Ptr->optionsCustomMainMenu =
       sOptionMenuPtr->option[MENUITEM_MAIN_MENU];
+  gSaveBlock2Ptr->optionsCustomStartMenu =
+      sOptionMenuPtr->option[MENUITEM_START_MENU];
   SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
   if (sOptionMenuPtr->arrowTaskId != TASK_NONE) {
     RemoveScrollIndicatorArrowPair(sOptionMenuPtr->arrowTaskId);

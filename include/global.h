@@ -663,7 +663,8 @@ struct SaveBlock2
     u8 optionsModernShopUI:1; // SHOP_UI_[CLASSIC/MODERN]
     u8 optionsDSPartyMenu:1; // PARTY_MENU_[CLASSIC/DS]
     u8 optionsCustomMainMenu:1; // MAIN_MENU_[CLASSIC/CUSTOM]
-    u8 unused1:2;
+    u8 optionsCustomStartMenu:1; // START_MENU_[CLASSIC/CUSTOM]
+    u8 unused1:1;
 
 #if FREE_POKEMON_JUMP == FALSE
     struct PokemonJumpRecords pokeJump;

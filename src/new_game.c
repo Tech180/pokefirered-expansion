@@ -79,6 +79,7 @@ static void SetDefaultOptions(void)
     gSaveBlock2Ptr->optionsModernShopUI = 1;
     gSaveBlock2Ptr->optionsDSPartyMenu = 1;
     gSaveBlock2Ptr->optionsCustomMainMenu = 1;
+    gSaveBlock2Ptr->optionsCustomStartMenu = 1;
 }
 
 static void ClearPokedexFlags(void)
