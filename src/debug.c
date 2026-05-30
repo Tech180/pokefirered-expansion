@@ -339,6 +339,8 @@ static void DebugAction_Give_DayCareEgg(u8 taskId);
 
 static void DebugAction_Quests_UnlockAll(u8 taskId);
 static void DebugAction_Quests_CompleteAll(u8 taskId);
+static void DebugAction_Quests_LockAll(u8 taskId);
+static void DebugAction_Quests_Editor(u8 taskId);
 
 static void DebugAction_Sound_SE(u8 taskId);
 static void DebugAction_Sound_SE_SelectId(u8 taskId);
@@ -633,6 +635,8 @@ static const struct DebugMenuOption sDebugMenu_Actions_Quests[] =
 {
     { COMPOUND_STRING("Unlock All Quests"),   DebugAction_Quests_UnlockAll },
     { COMPOUND_STRING("Complete All Quests"), DebugAction_Quests_CompleteAll },
+    { COMPOUND_STRING("Lock All Quests"),     DebugAction_Quests_LockAll },
+    { COMPOUND_STRING("Quest Editor"),        DebugAction_Quests_Editor },
     { NULL }
 };
 
@@ -774,6 +778,17 @@ static const struct WindowTemplate sDebugMenuWindowTemplateSound =
     .tilemapTop = 1,
     .width = DEBUG_MENU_WIDTH_SOUND,
     .height = DEBUG_MENU_HEIGHT_SOUND,
+    .paletteNum = 15,
+    .baseBlock = 1,
+};
+
+static const struct WindowTemplate sDebugMenuWindowTemplateQuest =
+{
+    .bg = 0,
+    .tilemapLeft = 30 - 22 - 1,
+    .tilemapTop = 1,
+    .width = 22,
+    .height = 10,
     .paletteNum = 15,
     .baseBlock = 1,
 };
@@ -4807,4 +4822,167 @@ void CheckEWRAMCounters(struct ScriptContext *ctx)
     ConvertIntToDecimalStringN(gStringVar1, gFollowerSteps, STR_CONV_MODE_LEFT_ALIGN, 5);
     ConvertIntToDecimalStringN(gStringVar2, gChainFishingDexNavStreak, STR_CONV_MODE_LEFT_ALIGN, 5);
 }
-static void DebugAction_Quests_UnlockAll(u8 taskId) { u8 i; for (i = 0; i < QUEST_COUNT; i++) QuestMenu_GetSetQuestState(i, FLAG_SET_UNLOCKED); PlaySE(SE_SELECT); Debug_DestroyMenu(taskId); } static void DebugAction_Quests_CompleteAll(u8 taskId) { u8 i; for (i = 0; i < QUEST_COUNT; i++) QuestMenu_GetSetQuestState(i, FLAG_SET_COMPLETED); PlaySE(SE_SELECT); Debug_DestroyMenu(taskId); }
+static void DebugAction_Quests_UnlockAll(u8 taskId) {
+    u8 i;
+    for (i = 0; i < QUEST_COUNT; i++)
+        QuestMenu_GetSetQuestState(i, FLAG_SET_UNLOCKED);
+    PlaySE(SE_SELECT);
+    ScriptContext_Enable();
+    Debug_DestroyMenu_Full(taskId);
+}
+
+static void DebugAction_Quests_CompleteAll(u8 taskId) {
+    u8 i;
+    for (i = 0; i < QUEST_COUNT; i++)
+        QuestMenu_GetSetQuestState(i, FLAG_SET_COMPLETED);
+    PlaySE(SE_SELECT);
+    ScriptContext_Enable();
+    Debug_DestroyMenu_Full(taskId);
+}
+
+static void DebugAction_Quests_LockAll(u8 taskId) {
+    u8 i;
+    for (i = 0; i < QUEST_COUNT; i++) {
+        QuestMenu_SetQuestState(i, 0);
+    }
+    PlaySE(SE_SELECT);
+    ScriptContext_Enable();
+    Debug_DestroyMenu_Full(taskId);
+}
+
+#define tWindowId     data[1]
+#define tQuestId      data[4]
+#define tQuestState   data[5]
+#define tSubWindowId  data[6]
+
+static const u8 *const sQuestStateNames[] = {
+    COMPOUND_STRING("Locked"),
+    COMPOUND_STRING("Unlocked"),
+    COMPOUND_STRING("Active"),
+    COMPOUND_STRING("Completed")
+};
+
+static u8 GetQuestStateFromData(u8 questId) {
+    if (QuestMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED)) {
+        return 3;
+    }
+    if (QuestMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE)) {
+        return 2;
+    }
+    if (QuestMenu_GetSetQuestState(questId, FLAG_GET_UNLOCKED)) {
+        return 1;
+    }
+    return 0;
+}
+
+static void Debug_Display_QuestInfo(u8 questId, u8 state, u8 windowId) {
+    u8 questName[32];
+    u8 *txtPtr;
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(TEXT_COLOR_WHITE));
+
+    QuestMenu_CopyQuestName(questName, questId);
+
+    txtPtr = StringCopy(gStringVar1, COMPOUND_STRING("Quest: "));
+    txtPtr = ConvertIntToDecimalStringN(txtPtr, questId + 1, STR_CONV_MODE_LEADING_ZEROS, 2);
+    txtPtr = StringCopy(txtPtr, COMPOUND_STRING("/"));
+    txtPtr = ConvertIntToDecimalStringN(txtPtr, QUEST_COUNT, STR_CONV_MODE_LEADING_ZEROS, 2);
+
+    StringCopy(gStringVar2, questName);
+    StringCopy(gStringVar3, sQuestStateNames[state]);
+    
+    StringExpandPlaceholders(gStringVar4, COMPOUND_STRING(
+        "{STR_VAR_1}\n"
+        "Name: {STR_VAR_2}\n"
+        "State: {STR_VAR_3}\n\n"
+        "{DPAD_LEFT}{DPAD_RIGHT} Quest  {DPAD_UP}{DPAD_DOWN} State\n"
+        "{A_BUTTON} Confirm  {B_BUTTON} Exit"
+    ));
+    
+    AddTextPrinterParameterized(windowId, DEBUG_MENU_FONT, gStringVar4, 0, 0, 0, NULL);
+    CopyWindowToVram(windowId, COPYWIN_FULL);
+}
+
+static void DebugAction_Quests_EditorSelect(u8 taskId) {
+    u8 questId = gTasks[taskId].tQuestId;
+    u8 state = gTasks[taskId].tQuestState;
+    u8 windowId = gTasks[taskId].tSubWindowId;
+
+    if (JOY_NEW(A_BUTTON)) {
+        PlaySE(SE_SELECT);
+        QuestMenu_SetQuestState(questId, state);
+        Debug_Display_QuestInfo(questId, state, windowId);
+    } else if (JOY_NEW(B_BUTTON)) {
+        PlaySE(SE_SELECT);
+        ClearStdWindowAndFrame(windowId, TRUE);
+        RemoveWindow(windowId);
+        ScriptContext_Enable();
+        Debug_DestroyMenu_Full(taskId);
+        return;
+    }
+
+    if (JOY_NEW(DPAD_LEFT)) {
+        PlaySE(SE_SELECT);
+        if (questId == 0) {
+            questId = QUEST_COUNT - 1;
+        } else {
+            questId--;
+        }
+        gTasks[taskId].tQuestId = questId;
+        gTasks[taskId].tQuestState = GetQuestStateFromData(questId);
+        Debug_Display_QuestInfo(questId, gTasks[taskId].tQuestState, windowId);
+    } else if (JOY_NEW(DPAD_RIGHT)) {
+        PlaySE(SE_SELECT);
+        if (questId == QUEST_COUNT - 1) {
+            questId = 0;
+        } else {
+            questId++;
+        }
+        gTasks[taskId].tQuestId = questId;
+        gTasks[taskId].tQuestState = GetQuestStateFromData(questId);
+        Debug_Display_QuestInfo(questId, gTasks[taskId].tQuestState, windowId);
+    } else if (JOY_NEW(DPAD_UP)) {
+        PlaySE(SE_SELECT);
+        if (state == 3) {
+            state = 0;
+        } else {
+            state++;
+        }
+        gTasks[taskId].tQuestState = state;
+        Debug_Display_QuestInfo(questId, state, windowId);
+    } else if (JOY_NEW(DPAD_DOWN)) {
+        PlaySE(SE_SELECT);
+        if (state == 0) {
+            state = 3;
+        } else {
+            state--;
+        }
+        gTasks[taskId].tQuestState = state;
+        Debug_Display_QuestInfo(questId, state, windowId);
+    }
+}
+
+static void DebugAction_Quests_Editor(u8 taskId) {
+    u8 windowId;
+
+    ClearStdWindowAndFrame(gTasks[taskId].tWindowId, TRUE);
+    RemoveWindow(gTasks[taskId].tWindowId);
+
+    HideMapNamePopUpWindow();
+    LoadMessageBoxAndBorderGfx();
+    windowId = AddWindow(&sDebugMenuWindowTemplateQuest);
+    DrawStdWindowFrame(windowId, FALSE);
+
+    CopyWindowToVram(windowId, COPYWIN_FULL);
+
+    gTasks[taskId].func = DebugAction_Quests_EditorSelect;
+    gTasks[taskId].tSubWindowId = windowId;
+    gTasks[taskId].tQuestId = 0;
+    gTasks[taskId].tQuestState = GetQuestStateFromData(0);
+
+    Debug_Display_QuestInfo(0, gTasks[taskId].tQuestState, windowId);
+}
+
+#undef tWindowId
+#undef tQuestId
+#undef tQuestState
+#undef tSubWindowId

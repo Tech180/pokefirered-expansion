@@ -1029,6 +1029,54 @@ u8 QuestMenu_GetSetSubquestState(u8 quest, u8 caseId, u8 childQuest)
 	return -1;
 }
 
+void QuestMenu_SetQuestState(u8 quest, u8 state)
+{
+	u8 i;
+
+	// Clear all 5 bits first
+	for (i = 0; i < 5; i++)
+	{
+		u8 curIndex = (quest * 5 + i) / 8;
+		u8 curBit = (quest * 5 + i) % 8;
+		gSaveBlock2Ptr->questData[curIndex] &= ~(1 << curBit);
+	}
+
+	// Set the appropriate bits based on state
+	switch (state)
+	{
+		case 1: // Unlocked
+			// Only unlocked bit set
+			{
+				u8 curIndex = (quest * 5 + 0) / 8;
+				u8 curBit = (quest * 5 + 0) % 8;
+				gSaveBlock2Ptr->questData[curIndex] |= (1 << curBit);
+			}
+			break;
+		case 2: // Active
+			// Unlocked and Active bits set
+			{
+				u8 curIndex0 = (quest * 5 + 0) / 8;
+				u8 curBit0 = (quest * 5 + 0) % 8;
+				u8 curIndex1 = (quest * 5 + 1) / 8;
+				u8 curBit1 = (quest * 5 + 1) % 8;
+				gSaveBlock2Ptr->questData[curIndex0] |= (1 << curBit0);
+				gSaveBlock2Ptr->questData[curIndex1] |= (1 << curBit1);
+			}
+			break;
+		case 3: // Completed
+			// Unlocked and Completed bits set
+			{
+				u8 curIndex0 = (quest * 5 + 0) / 8;
+				u8 curBit0 = (quest * 5 + 0) % 8;
+				u8 curIndex3 = (quest * 5 + 3) / 8;
+				u8 curBit3 = (quest * 5 + 3) % 8;
+				gSaveBlock2Ptr->questData[curIndex0] |= (1 << curBit0);
+				gSaveBlock2Ptr->questData[curIndex3] |= (1 << curBit3);
+			}
+			break;
+	}
+}
+
 u8 QuestMenu_GetSetQuestState(u8 quest, u8 caseId)
 {
 	u8 index = quest * 5 / 8;
@@ -1387,7 +1435,14 @@ void GenerateQuestLocation(s32 questId)
 {
 	if (!IsSubquestMode())
 	{
-		StringCopy(gStringVar2, GetQuestLocation(questId));
+		if (IsQuestInactiveState(questId) && !IsQuestRewardState(questId) && !IsQuestCompletedState(questId))
+		{
+			StringCopy(gStringVar2, sText_Unk);
+		}
+		else
+		{
+			StringCopy(gStringVar2, GetQuestLocation(questId));
+		}
 	}
 	else
 	{
