@@ -48,6 +48,7 @@
 #include "constants/pokeball.h"
 #include "constants/pokemon.h"
 #include "constants/quest_log.h"
+#include "constants/quests.h"
 #include "constants/script_menu.h"
 #include "constants/seagallop.h"
 #include "constants/shops.h"

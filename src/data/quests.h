@@ -135,6 +135,46 @@ static const u8 sQuestDesc_THE_ULTIMATE_COLLECTOR_1[] = _("Complete the Kanto Po
 static const u8 sQuestDesc_THE_ULTIMATE_COLLECTOR_2[] = _("You completed the Kanto Pokédex!");
 static const u8 sQuestMap_THE_ULTIMATE_COLLECTOR[] = _("Celadon City");
 
+static const u8 sQuestName_GYM_BROCK[] = _("Pewter Gym Challenge");
+static const u8 sQuestDesc_GYM_BROCK_1[] = _("Defeat Brock at the Pewter City Gym.");
+static const u8 sQuestDesc_GYM_BROCK_2[] = _("You defeated Brock and earned the Boulderbadge!");
+static const u8 sQuestMap_GYM_BROCK[] = _("Pewter City");
+
+static const u8 sQuestName_GYM_MISTY[] = _("Cerulean Gym Challenge");
+static const u8 sQuestDesc_GYM_MISTY_1[] = _("Defeat Misty at the Cerulean City Gym.");
+static const u8 sQuestDesc_GYM_MISTY_2[] = _("You defeated Misty and earned the Cascadebadge!");
+static const u8 sQuestMap_GYM_MISTY[] = _("Cerulean City");
+
+static const u8 sQuestName_GYM_LTSURGE[] = _("Vermilion Gym Challenge");
+static const u8 sQuestDesc_GYM_LTSURGE_1[] = _("Defeat Lt. Surge at the Vermilion City Gym.");
+static const u8 sQuestDesc_GYM_LTSURGE_2[] = _("You defeated Lt. Surge and earned the Thunderbadge!");
+static const u8 sQuestMap_GYM_LTSURGE[] = _("Vermilion City");
+
+static const u8 sQuestName_GYM_ERIKA[] = _("Celadon Gym Challenge");
+static const u8 sQuestDesc_GYM_ERIKA_1[] = _("Defeat Erika at the Celadon City Gym.");
+static const u8 sQuestDesc_GYM_ERIKA_2[] = _("You defeated Erika and earned the Rainbowbadge!");
+static const u8 sQuestMap_GYM_ERIKA[] = _("Celadon City");
+
+static const u8 sQuestName_GYM_KOGA[] = _("Fuchsia Gym Challenge");
+static const u8 sQuestDesc_GYM_KOGA_1[] = _("Defeat Koga at the Fuchsia City Gym.");
+static const u8 sQuestDesc_GYM_KOGA_2[] = _("You defeated Koga and earned the Soulbadge!");
+static const u8 sQuestMap_GYM_KOGA[] = _("Fuchsia City");
+
+static const u8 sQuestName_GYM_SABRINA[] = _("Saffron Gym Challenge");
+static const u8 sQuestDesc_GYM_SABRINA_1[] = _("Defeat Sabrina at the Saffron City Gym.");
+static const u8 sQuestDesc_GYM_SABRINA_2[] = _("You defeated Sabrina and earned the Marshbadge!");
+static const u8 sQuestMap_GYM_SABRINA[] = _("Saffron City");
+
+static const u8 sQuestName_GYM_BLAINE[] = _("Cinnabar Gym Challenge");
+static const u8 sQuestDesc_GYM_BLAINE_1[] = _("Defeat Blaine at the Cinnabar Island Gym.");
+static const u8 sQuestDesc_GYM_BLAINE_2[] = _("You defeated Blaine and earned the Volcanobadge!");
+static const u8 sQuestMap_GYM_BLAINE[] = _("Cinnabar Island");
+
+static const u8 sQuestName_GYM_GIOVANNI[] = _("Viridian Gym Challenge");
+static const u8 sQuestDesc_GYM_GIOVANNI_1[] = _("Defeat Giovanni at the Viridian City Gym.");
+static const u8 sQuestDesc_GYM_GIOVANNI_2[] = _("You defeated Giovanni and earned the Earthbadge!");
+static const u8 sQuestMap_GYM_GIOVANNI[] = _("Viridian City");
+
 static const struct SideQuest sSideQuests[QUEST_COUNT] = {
     [QUEST_THE_JOURNEY_BEGINS] = {
         .name = sQuestName_THE_JOURNEY_BEGINS,
@@ -242,7 +282,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_THE_EON_TICKET},
         .sprite = {ITEM_EON_TICKET},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_AURORA_TICKET] = {
         .name = sQuestName_AURORA_TICKET,
@@ -251,7 +292,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_AURORA_TICKET},
         .sprite = {ITEM_AURORA_TICKET},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_MYSTIC_TICKET] = {
         .name = sQuestName_MYSTIC_TICKET,
@@ -260,7 +302,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_MYSTIC_TICKET},
         .sprite = {ITEM_MYSTIC_TICKET},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_THE_OLD_AMBER] = {
         .name = sQuestName_THE_OLD_AMBER,
@@ -269,7 +312,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_THE_OLD_AMBER},
         .sprite = {ITEM_OLD_AMBER},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_BICYCLE_VOUCHER] = {
         .name = sQuestName_BICYCLE_VOUCHER,
@@ -278,7 +322,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_BICYCLE_VOUCHER},
         .sprite = {ITEM_BICYCLE},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_GOOD_ROD] = {
         .name = sQuestName_GOOD_ROD,
@@ -287,7 +332,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_GOOD_ROD},
         .sprite = {ITEM_GOOD_ROD},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_SUPER_ROD] = {
         .name = sQuestName_SUPER_ROD,
@@ -296,7 +342,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_SUPER_ROD},
         .sprite = {ITEM_SUPER_ROD},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_EXP_SHARE] = {
         .name = sQuestName_EXP_SHARE,
@@ -305,7 +352,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_EXP_SHARE},
         .sprite = {ITEM_EXP_SHARE},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_ITEMFINDER] = {
         .name = sQuestName_ITEMFINDER,
@@ -314,7 +362,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_ITEMFINDER},
         .sprite = {ITEM_ITEMFINDER},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_AMULET_COIN] = {
         .name = sQuestName_AMULET_COIN,
@@ -323,7 +372,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_AMULET_COIN},
         .sprite = {ITEM_AMULET_COIN},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_ARTICUNOS_ROOST] = {
         .name = sQuestName_ARTICUNOS_ROOST,
@@ -332,7 +382,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_ARTICUNOS_ROOST},
         .sprite = {ITEM_MYSTIC_WATER},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_ZAPDOS_POWER] = {
         .name = sQuestName_ZAPDOS_POWER,
@@ -341,7 +392,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_ZAPDOS_POWER},
         .sprite = {ITEM_MAGNET},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_MOLTRES_VOLCANO] = {
         .name = sQuestName_MOLTRES_VOLCANO,
@@ -350,7 +402,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_MOLTRES_VOLCANO},
         .sprite = {ITEM_CHARCOAL},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_THE_UNKNOWN_DUNGEON] = {
         .name = sQuestName_THE_UNKNOWN_DUNGEON,
@@ -359,7 +412,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_THE_UNKNOWN_DUNGEON},
         .sprite = {ITEM_MASTER_BALL},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_THE_ROAMING_BEAST] = {
         .name = sQuestName_THE_ROAMING_BEAST,
@@ -368,7 +422,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_THE_ROAMING_BEAST},
         .sprite = {ITEM_FULL_RESTORE},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_OLD_ROD] = {
         .name = sQuestName_OLD_ROD,
@@ -377,7 +432,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_OLD_ROD},
         .sprite = {ITEM_OLD_ROD},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_COIN_CASE] = {
         .name = sQuestName_COIN_CASE,
@@ -386,7 +442,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_COIN_CASE},
         .sprite = {ITEM_COIN_CASE},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_TEA_FOR_GUARDS] = {
         .name = sQuestName_TEA_FOR_GUARDS,
@@ -395,7 +452,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_TEA_FOR_GUARDS},
         .sprite = {ITEM_TEA},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_LOST_GIRL] = {
         .name = sQuestName_LOST_GIRL,
@@ -404,7 +462,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_LOST_GIRL},
         .sprite = {ITEM_IAPAPA_BERRY},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_THE_BRAILLE_PUZZLE] = {
         .name = sQuestName_THE_BRAILLE_PUZZLE,
@@ -413,7 +472,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_THE_BRAILLE_PUZZLE},
         .sprite = {ITEM_SAPPHIRE},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_TEAM_ROCKETS_RETURN] = {
         .name = sQuestName_TEAM_ROCKETS_RETURN,
@@ -422,7 +482,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_TEAM_ROCKETS_RETURN},
         .sprite = {ITEM_LIFT_KEY},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_TRAINER_TOWER] = {
         .name = sQuestName_TRAINER_TOWER,
@@ -431,7 +492,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_TRAINER_TOWER},
         .sprite = {ITEM_UP_GRADE},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
     },
     [QUEST_THE_ULTIMATE_COLLECTOR] = {
         .name = sQuestName_THE_ULTIMATE_COLLECTOR,
@@ -440,6 +502,87 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] = {
         .map = {sQuestMap_THE_ULTIMATE_COLLECTOR},
         .sprite = {ITEM_TOWN_MAP},
         .spritetype = {ITEM},
-        .questVariable = 0
+        .questVariable = 0,
+        .isSideQuest = TRUE
+    },
+    [QUEST_GYM_BROCK] = {
+        .name = sQuestName_GYM_BROCK,
+        .desc = {sQuestDesc_GYM_BROCK_1},
+        .donedesc = sQuestDesc_GYM_BROCK_2,
+        .map = {sQuestMap_GYM_BROCK},
+        .sprite = {ITEM_TM39},
+        .spritetype = {ITEM},
+        .questVariable = 0,
+        .rewardItem = ITEM_TM39
+    },
+    [QUEST_GYM_MISTY] = {
+        .name = sQuestName_GYM_MISTY,
+        .desc = {sQuestDesc_GYM_MISTY_1},
+        .donedesc = sQuestDesc_GYM_MISTY_2,
+        .map = {sQuestMap_GYM_MISTY},
+        .sprite = {ITEM_TM03},
+        .spritetype = {ITEM},
+        .questVariable = 0,
+        .rewardItem = ITEM_TM03
+    },
+    [QUEST_GYM_LTSURGE] = {
+        .name = sQuestName_GYM_LTSURGE,
+        .desc = {sQuestDesc_GYM_LTSURGE_1},
+        .donedesc = sQuestDesc_GYM_LTSURGE_2,
+        .map = {sQuestMap_GYM_LTSURGE},
+        .sprite = {ITEM_TM34},
+        .spritetype = {ITEM},
+        .questVariable = 0,
+        .rewardItem = ITEM_TM34
+    },
+    [QUEST_GYM_ERIKA] = {
+        .name = sQuestName_GYM_ERIKA,
+        .desc = {sQuestDesc_GYM_ERIKA_1},
+        .donedesc = sQuestDesc_GYM_ERIKA_2,
+        .map = {sQuestMap_GYM_ERIKA},
+        .sprite = {ITEM_TM19},
+        .spritetype = {ITEM},
+        .questVariable = 0,
+        .rewardItem = ITEM_TM19
+    },
+    [QUEST_GYM_KOGA] = {
+        .name = sQuestName_GYM_KOGA,
+        .desc = {sQuestDesc_GYM_KOGA_1},
+        .donedesc = sQuestDesc_GYM_KOGA_2,
+        .map = {sQuestMap_GYM_KOGA},
+        .sprite = {ITEM_TM06},
+        .spritetype = {ITEM},
+        .questVariable = 0,
+        .rewardItem = ITEM_TM06
+    },
+    [QUEST_GYM_SABRINA] = {
+        .name = sQuestName_GYM_SABRINA,
+        .desc = {sQuestDesc_GYM_SABRINA_1},
+        .donedesc = sQuestDesc_GYM_SABRINA_2,
+        .map = {sQuestMap_GYM_SABRINA},
+        .sprite = {ITEM_TM04},
+        .spritetype = {ITEM},
+        .questVariable = 0,
+        .rewardItem = ITEM_TM04
+    },
+    [QUEST_GYM_BLAINE] = {
+        .name = sQuestName_GYM_BLAINE,
+        .desc = {sQuestDesc_GYM_BLAINE_1},
+        .donedesc = sQuestDesc_GYM_BLAINE_2,
+        .map = {sQuestMap_GYM_BLAINE},
+        .sprite = {ITEM_TM38},
+        .spritetype = {ITEM},
+        .questVariable = 0,
+        .rewardItem = ITEM_TM38
+    },
+    [QUEST_GYM_GIOVANNI] = {
+        .name = sQuestName_GYM_GIOVANNI,
+        .desc = {sQuestDesc_GYM_GIOVANNI_1},
+        .donedesc = sQuestDesc_GYM_GIOVANNI_2,
+        .map = {sQuestMap_GYM_GIOVANNI},
+        .sprite = {ITEM_TM26},
+        .spritetype = {ITEM},
+        .questVariable = 0,
+        .rewardItem = ITEM_TM26
     },
 };

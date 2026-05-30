@@ -57,6 +57,8 @@ struct QuestMenuResources
 	u8 filterMode;
 	u8 parentQuest;
 	bool8 restoreCursor;
+	u8 selectorMainOrSide;
+	bool8 isSelectorFocused;
 };
 
 struct QuestMenuStaticResources
@@ -87,6 +89,7 @@ static void RunSetup(void);
 static bool8 SetupGraphics(void);
 static bool8 LoadGraphics(void);
 static void QuestMenu_InitWindows(void);
+static void DrawSelectorBox(bool8 isFocused);
 static bool8 InitBackgrounds(void);
 static void InitItems(void);
 static bool8 AllocateResourcesForListMenu(void);
@@ -106,6 +109,7 @@ static u8 ManageMode(u8 action);
 static u8 ToggleAlphaMode(u8 mode);
 static u8 ToggleSubquestMode(u8 mode);
 static u8 IncrementMode(u8 mode);
+static u8 DecrementMode(u8 mode);
 static bool8 IsSubquestMode(void);
 static bool8 IsNotFilteredMode(void);
 static bool8 IsAlphaMode(void);
@@ -179,6 +183,8 @@ static void PrintMenuContext(void);
 static void PrintTypeFilterButton(void);
 
 static void Task_Main(u8 taskId);
+static void ClaimQuestReward(u8 taskId, u8 questId);
+static void Task_ClaimRewardMessage(u8 taskId);
 static void ManageFavorites(u8 index);
 static void Task_QuestMenuCleanUp(u8 taskId);
 static void RestoreSavedScrollAndRow(s16 *data);
@@ -186,6 +192,7 @@ static void ResetCursorToTop(s16 *data);
 static void QuestMenu_RemoveScrollIndicatorArrowPair(void);
 static void EnterSubquestModeAndCleanUp(u8 taskId, s16 *data, s32 input);
 static void ChangeModeAndCleanUp(u8 taskId);
+static void ChangeModeDecrementAndCleanUp(u8 taskId);
 static void ToggleAlphaModeAndCleanUp(u8 taskId);
 static void ToggleFavoriteAndCleanUp(u8 taskId, u8 selectedQuestId);
 static bool8 CheckSelectedIsCancel(u8 selectedQuestId);
@@ -242,7 +249,12 @@ static const u8 sText_StartForMore[] =
 static const u8 sText_ReturnRecieveReward[] =
       _("Return to {STR_VAR_2}\nto recieve your reward!");
 static const u8 sText_SubQuestButton[] = _(" {A_BUTTON}");
-static const u8 sText_Type[] = _("{R_BUTTON}Type");
+static const u8 sText_LType[] = _("{L_BUTTON}");
+static const u8 sText_TypeR[] = _("Type{R_BUTTON}");
+static const u8 sText_MainSelector[] = _("  Main  ");
+static const u8 sText_SideSelector[] = _("  Side  ");
+static const u8 sText_MainSelectorFocused[] = _(" >Main  ");
+static const u8 sText_SideSelectorFocused[] = _(" >Side  ");
 static const u8 sText_Caught[] = _("Caught");
 static const u8 sText_Found[] = _("Found");
 static const u8 sText_Read[] = _("Read");
@@ -306,6 +318,16 @@ static const struct WindowTemplate sQuestMenuHeaderWindowTemplates[] =
 		.height = 2,
 		.paletteNum = 15,
 		.baseBlock = 721
+	},
+	{
+		// 3: Selector window
+		.bg = 0,
+		.tilemapLeft = 3,
+		.tilemapTop = 0,
+		.width = 8,
+		.height = 2,
+		.paletteNum = 15,
+		.baseBlock = 781
 	},
 	DUMMY_WIN_TEMPLATE
 };
@@ -572,6 +594,8 @@ static void QuestMenu_InitWindows(void)
 		PutWindowTilemap(i);
 	}
 
+	DrawSelectorBox(sStateDataPtr->isSelectorFocused);
+
 	ScheduleBgCopyTilemapToVram(0);
 }
 
@@ -632,7 +656,7 @@ void AllocateMemoryForArray(void)
 
 	for (i = 0; i < allocateRows; i++)
 	{
-		questNameArray[i] = Alloc(sizeof(u8) * 32);
+		questNameArray[i] = Alloc(sizeof(u8) * 48);
 	}
 }
 
@@ -737,6 +761,26 @@ static void SaveScrollAndRow(s16 *data)
 void ClearModeOnStartup(void)
 {
 	sStateDataPtr->filterMode = 0;
+	sStateDataPtr->selectorMainOrSide = 0;
+	sStateDataPtr->isSelectorFocused = FALSE;
+}
+
+static bool8 DoesQuestMatchCategory(u8 questId)
+{
+	if (sStateDataPtr->selectorMainOrSide == 0) // Main
+	{
+		return !sSideQuests[questId].isSideQuest;
+	}
+	else // Side
+	{
+		return sSideQuests[questId].isSideQuest;
+	}
+}
+
+static void DrawSelectorBox(bool8 isFocused)
+{
+	// Selector text is now rendered on window 2 via GenerateAndPrintHeader
+	return;
 }
 
 static u8 ManageMode(u8 action)
@@ -751,6 +795,11 @@ static u8 ManageMode(u8 action)
 
 		case ALPHA:
 			mode = ToggleAlphaMode(mode);
+			sStateDataPtr->restoreCursor = FALSE;
+			break;
+
+		case DECREMENT:
+			mode = DecrementMode(mode);
 			sStateDataPtr->restoreCursor = FALSE;
 			break;
 
@@ -801,6 +850,20 @@ u8 IncrementMode(u8 mode)
 	else
 	{
 		mode++;
+	}
+
+	return mode;
+}
+
+static u8 DecrementMode(u8 mode)
+{
+	if (mode % 10 == SORT_DEFAULT)
+	{
+		mode += SORT_DONE;
+	}
+	else
+	{
+		mode--;
 	}
 
 	return mode;
@@ -868,7 +931,7 @@ static void BuildMenuTemplate(void)
 	gMultiuseListMenuTemplate.moveCursorFunc = MoveCursorFunc;
 	gMultiuseListMenuTemplate.itemPrintFunc = GenerateStateAndPrint;
 	gMultiuseListMenuTemplate.scrollMultiple = LIST_MULTIPLE_SCROLL_DPAD;
-	gMultiuseListMenuTemplate.cursorKind = 0;
+	gMultiuseListMenuTemplate.cursorKind = sStateDataPtr->isSelectorFocused ? CURSOR_INVISIBLE : CURSOR_BLACK_ARROW;
 }
 
 u8 GetModeAndGenerateList()
@@ -883,30 +946,38 @@ u8 GetModeAndGenerateList()
 	}
 }
 
+static u8 CountMatchingQuests(void)
+{
+	u8 count = 0;
+	u8 i;
+	u8 mode = sStateDataPtr->filterMode % 10;
+	bool8 isFiltered = !IsNotFilteredMode();
+
+	for (i = 0; i < QUEST_COUNT; i++)
+	{
+		if (isFiltered && !QuestMenu_GetSetQuestState(i, mode))
+		{
+			continue;
+		}
+
+		if (!DoesQuestMatchCategory(i))
+		{
+			continue;
+		}
+
+		count++;
+	}
+	return count;
+}
+
 static u8 CountNumberListRows()
 {
-	u8 mode = sStateDataPtr->filterMode % 10;
-
 	if (IsSubquestMode())
 	{
 		return sSideQuests[sStateDataPtr->parentQuest].numSubquests + 1;
 	}
 
-	switch (mode)
-	{
-		case SORT_DEFAULT:
-			return QUEST_COUNT + 1;
-		case SORT_INACTIVE:
-			return CountInactiveQuests() + 1;
-		case SORT_ACTIVE:
-			return CountActiveQuests() + 1;
-		case SORT_REWARD:
-			return CountRewardQuests() + 1;
-		case SORT_DONE:
-			return CountCompletedQuests() + 1;
-	}
-
-	return 1;
+	return CountMatchingQuests() + 1;
 }
 
 u8 *DefineQuestOrder()
@@ -971,6 +1042,11 @@ u8 GenerateList(bool8 isFiltered)
 		selectedQuestId = *(sortedQuestList + countQuest);
 
 		if (isFiltered && !QuestMenu_GetSetQuestState(selectedQuestId, mode))
+		{
+			continue;
+		}
+
+		if (!DoesQuestMatchCategory(selectedQuestId))
 		{
 			continue;
 		}
@@ -1185,6 +1261,20 @@ u8 QuestMenu_GetSetQuestState(u8 quest, u8 caseId)
 	return -1;  //failure
 }
 
+static u8 CountQuestsInCategory(void)
+{
+	u8 count = 0;
+	u8 i;
+	for (i = 0; i < QUEST_COUNT; i++)
+	{
+		if (DoesQuestMatchCategory(i))
+		{
+			count++;
+		}
+	}
+	return count;
+}
+
 u8 CountUnlockedQuests(void)
 {
 	u8 q = 0, i = 0;
@@ -1193,7 +1283,10 @@ u8 CountUnlockedQuests(void)
 	{
 		if (QuestMenu_GetSetQuestState(i, FLAG_GET_UNLOCKED))
 		{
-			q++;
+			if (DoesQuestMatchCategory(i))
+			{
+				q++;
+			}
 		}
 	}
 	return q;
@@ -1207,7 +1300,10 @@ u8 CountInactiveQuests(void)
 	{
 		if (QuestMenu_GetSetQuestState(i, FLAG_GET_INACTIVE))
 		{
-			q++;
+			if (DoesQuestMatchCategory(i))
+			{
+				q++;
+			}
 		}
 	}
 	return q;
@@ -1221,7 +1317,10 @@ u8 CountActiveQuests(void)
 	{
 		if (QuestMenu_GetSetQuestState(i, FLAG_GET_ACTIVE))
 		{
-			q++;
+			if (DoesQuestMatchCategory(i))
+			{
+				q++;
+			}
 		}
 	}
 	return q;
@@ -1235,7 +1334,10 @@ u8 CountRewardQuests(void)
 	{
 		if (QuestMenu_GetSetQuestState(i, FLAG_GET_REWARD))
 		{
-			q++;
+			if (DoesQuestMatchCategory(i))
+			{
+				q++;
+			}
 		}
 	}
 	return q;
@@ -1263,7 +1365,10 @@ u8 CountCompletedQuests(void)
 		{
 			if (QuestMenu_GetSetQuestState(i, FLAG_GET_COMPLETED))
 			{
-				q++;
+				if (DoesQuestMatchCategory(i))
+				{
+					q++;
+				}
 			}
 		}
 	}
@@ -1280,11 +1385,14 @@ u8 CountFavoriteQuests(void)
 	{
 		if (QuestMenu_GetSetQuestState(i, FLAG_GET_FAVORITE))
 		{
-			if (QuestMenu_GetSetQuestState(i, mode))
+			if (DoesQuestMatchCategory(i))
 			{
-				x++;
+				if (QuestMenu_GetSetQuestState(i, mode))
+				{
+					x++;
+				}
+				q++;
 			}
-			q++;
 		}
 	}
 
@@ -1327,7 +1435,8 @@ void PopulateQuestName(u8 countQuest)
 	}
 	else
 	{
-		StringAppend(questNameArray[countQuest], sText_Unk);
+		questNamePointer = StringAppend(questNameArray[countQuest],
+		                                sText_Unk);
 	}
 }
 
@@ -1803,11 +1912,26 @@ static void GenerateAndPrintHeader(void)
 	if (!IsSubquestMode())
 	{
 		PrintTypeFilterButton();
+
+		if (sStateDataPtr->isSelectorFocused)
+		{
+			if (sStateDataPtr->selectorMainOrSide == 0)
+				QuestMenu_AddTextPrinterParameterized(2, 0, sText_MainSelectorFocused, 28, 1, 0, 1, 0, 0);
+			else
+				QuestMenu_AddTextPrinterParameterized(2, 0, sText_SideSelectorFocused, 28, 1, 0, 1, 0, 0);
+		}
+		else
+		{
+			if (sStateDataPtr->selectorMainOrSide == 0)
+				QuestMenu_AddTextPrinterParameterized(2, 0, sText_MainSelector, 28, 1, 0, 1, 0, 0);
+			else
+				QuestMenu_AddTextPrinterParameterized(2, 0, sText_SideSelector, 28, 1, 0, 1, 0, 0);
+		}
 	}
 }
 static void GenerateDenominatorNumQuests(void)
 {
-	ConvertIntToDecimalStringN(gStringVar2, QUEST_COUNT,
+	ConvertIntToDecimalStringN(gStringVar2, CountQuestsInCategory(),
 	                           STR_CONV_MODE_LEFT_ALIGN, 6);
 }
 
@@ -1905,45 +2029,38 @@ static void PrintNumQuests(void)
 static void PrintMenuContext(void)
 {
 	QuestMenu_AddTextPrinterParameterized(2, 0,
-	                                      questNameArray[QUEST_ARRAY_COUNT], 10, 1, 0, 1, 0, 0);
+	                                      questNameArray[QUEST_ARRAY_COUNT], 90, 1, 0, 1, 0, 0);
 }
 static void PrintTypeFilterButton(void)
 {
-	QuestMenu_AddTextPrinterParameterized(2, 0, sText_Type, 198, 1,
-	                                      0, 1, 0, 0);
-
+	QuestMenu_AddTextPrinterParameterized(2, 0, sText_LType, 6, 1, 0, 1, 0, 0);
+	QuestMenu_AddTextPrinterParameterized(2, 0, sText_TypeR, 200, 1, 0, 1, 0, 0);
 }
 
 static void Task_Main(u8 taskId)
 {
 	s16 *data = gTasks[taskId].data;
-	s32 input = ListMenu_ProcessInput(data[0]);
-
-	u8 selectedQuestId = sListMenuItems[GetCursorPosition()].id;
 
 	if (!gPaletteFade.active)
 	{
-		ListMenuGetScrollAndRow(data[0], &sListMenuState.scroll,
-		                        &sListMenuState.row);
-
-		switch (input)
+		if (sStateDataPtr->isSelectorFocused)
 		{
-			case LIST_NOTHING_CHOSEN:
-				if (JOY_NEW(R_BUTTON))
-				{
-					ChangeModeAndCleanUp(taskId);
-				}
-				if (JOY_NEW(START_BUTTON))
-				{
-					ToggleAlphaModeAndCleanUp(taskId);
-				}
-				if (JOY_NEW(SELECT_BUTTON))
-				{
-					ToggleFavoriteAndCleanUp(taskId, selectedQuestId);
-				}
-				break;
-
-			case LIST_CANCEL:
+			if (JOY_NEW(DPAD_LEFT) || JOY_NEW(DPAD_RIGHT))
+			{
+				sStateDataPtr->selectorMainOrSide ^= 1;
+				PlaySE(SE_SELECT);
+				Task_QuestMenuCleanUp(taskId);
+			}
+			else if (JOY_NEW(DPAD_DOWN))
+			{
+				sStateDataPtr->isSelectorFocused = FALSE;
+				PlaySE(SE_SELECT);
+				sListMenuState.scroll = 0;
+				sListMenuState.row = 0;
+				Task_QuestMenuCleanUp(taskId);
+			}
+			else if (JOY_NEW(B_BUTTON))
+			{
 				if (IsSubquestMode())
 				{
 					ReturnFromSubquestAndCleanUp(taskId);
@@ -1952,14 +2069,70 @@ static void Task_Main(u8 taskId)
 				{
 					TurnOffQuestMenu(taskId);
 				}
-				break;
+			}
+		}
+		else
+		{
+			s32 input = ListMenu_ProcessInput(data[0]);
+			u8 selectedQuestId = sListMenuItems[GetCursorPosition()].id;
 
-			default:
-				if (!IsSubquestMode())
-				{
-					EnterSubquestModeAndCleanUp(taskId, data, input);
-				}
-				break;
+			ListMenuGetScrollAndRow(data[0], &sListMenuState.scroll,
+			                        &sListMenuState.row);
+
+			if (!IsSubquestMode() && sListMenuState.scroll == 0 && sListMenuState.row == 0 && JOY_NEW(DPAD_UP))
+			{
+				sStateDataPtr->isSelectorFocused = TRUE;
+				PlaySE(SE_SELECT);
+				Task_QuestMenuCleanUp(taskId);
+				return;
+			}
+
+			switch (input)
+			{
+				case LIST_NOTHING_CHOSEN:
+					if (JOY_NEW(R_BUTTON))
+					{
+						ChangeModeAndCleanUp(taskId);
+					}
+					if (JOY_NEW(L_BUTTON))
+					{
+						ChangeModeDecrementAndCleanUp(taskId);
+					}
+					if (JOY_NEW(START_BUTTON))
+					{
+						ToggleAlphaModeAndCleanUp(taskId);
+					}
+					if (JOY_NEW(SELECT_BUTTON))
+					{
+						ToggleFavoriteAndCleanUp(taskId, selectedQuestId);
+					}
+					break;
+
+				case LIST_CANCEL:
+					if (IsSubquestMode())
+					{
+						ReturnFromSubquestAndCleanUp(taskId);
+					}
+					else
+					{
+						TurnOffQuestMenu(taskId);
+					}
+					break;
+
+				default:
+					if (!IsSubquestMode())
+					{
+						if (QuestMenu_GetSetQuestState(input, FLAG_GET_REWARD))
+						{
+							ClaimQuestReward(taskId, input);
+						}
+						else if (DoesQuestHaveChildrenAndNotInactive(input))
+						{
+							EnterSubquestModeAndCleanUp(taskId, data, input);
+						}
+					}
+					break;
+			}
 		}
 	}
 }
@@ -1986,6 +2159,9 @@ static void Task_QuestMenuCleanUp(u8 taskId)
 
 	InitItems();
 	GenerateAndPrintHeader();
+	PutWindowTilemap(2);
+	DrawSelectorBox(sStateDataPtr->isSelectorFocused);
+	ScheduleBgCopyTilemapToVram(0);
 	AllocateResourcesForListMenu();
 	BuildMenuTemplate();
 	PlaceTopMenuScrollIndicatorArrows();
@@ -2045,6 +2221,15 @@ void ChangeModeAndCleanUp(u8 taskId)
 	{
 		PlaySE(SE_SELECT);
 		sStateDataPtr->filterMode = ManageMode(INCREMENT);
+		Task_QuestMenuCleanUp(taskId);
+	}
+}
+void ChangeModeDecrementAndCleanUp(u8 taskId)
+{
+	if (!IsSubquestMode())
+	{
+		PlaySE(SE_SELECT);
+		sStateDataPtr->filterMode = ManageMode(DECREMENT);
 		Task_QuestMenuCleanUp(taskId);
 	}
 }
@@ -2293,6 +2478,55 @@ void QuestMenu_ResetMenuSaveData(void)
 	       sizeof(gSaveBlock2Ptr->questData));
 	memset(&gSaveBlock2Ptr->subQuests, 0,
 	       sizeof(gSaveBlock2Ptr->subQuests));
+}
+
+static void Task_ClaimRewardMessage(u8 taskId)
+{
+	if (JOY_NEW(A_BUTTON | B_BUTTON))
+	{
+		PlaySE(SE_SELECT);
+		Task_QuestMenuCleanUp(taskId);
+	}
+}
+
+static void ClaimQuestReward(u8 taskId, u8 questId)
+{
+	u16 itemId = sSideQuests[questId].rewardItem;
+
+	if (itemId != ITEM_NONE)
+	{
+		if (AddBagItem(itemId, 1))
+		{
+			// Mark quest completed
+			QuestMenu_GetSetQuestState(questId, FLAG_SET_COMPLETED);
+
+			// Copy item name to gStringVar1
+			CopyItemName(itemId, gStringVar1);
+			
+			// Show success message
+			// Format: "Obtained the {STR_VAR_1}!"
+			StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Obtained the {STR_VAR_1}!"));
+			
+			// Clear and print to the footer window (window 1)
+			FillWindowPixelBuffer(1, 0);
+			QuestMenu_AddTextPrinterParameterized(1, 2, gStringVar4, 2, 3, 2, 0, 0, 0);
+			
+			PlayFanfare(MUS_OBTAIN_TMHM);
+			
+			// Set task to wait for button press
+			gTasks[taskId].func = Task_ClaimRewardMessage;
+		}
+		else
+		{
+			// Bag is full!
+			FillWindowPixelBuffer(1, 0);
+			QuestMenu_AddTextPrinterParameterized(1, 2, COMPOUND_STRING("Too bad!\nThe Bag is full..."), 2, 3, 2, 0, 0, 0);
+			
+			PlaySE(SE_FAILURE);
+			
+			gTasks[taskId].func = Task_ClaimRewardMessage;
+		}
+	}
 }
 
 #if 0

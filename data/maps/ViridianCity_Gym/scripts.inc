@@ -4,7 +4,6 @@ ViridianCity_Gym_MapScripts::
 ViridianCity_Gym_EventScript_Giovanni::
 	famechecker FAMECHECKER_GIOVANNI, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	trainerbattle_single TRAINER_LEADER_GIOVANNI, ViridianCity_Gym_Text_GiovanniIntro, ViridianCity_Gym_Text_GiovanniDefeat, ViridianCity_Gym_EventScript_DefeatedGiovanni, NO_MUSIC
-	goto_if_unset FLAG_GOT_TM26_FROM_GIOVANNI, ViridianCity_Gym_EventScript_GiveTM26
 	msgbox ViridianCity_Gym_Text_GiovanniPostBattle
 	closemessage
 	fadescreen FADE_TO_BLACK
@@ -20,21 +19,14 @@ ViridianCity_Gym_EventScript_DefeatedGiovanni::
 	setflag FLAG_BADGE08_GET
 	setvar VAR_MAP_SCENE_ROUTE22, 3
 	set_gym_trainers 8
-	goto ViridianCity_Gym_EventScript_GiveTM26
-	end
-
-ViridianCity_Gym_EventScript_GiveTM26::
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_GIOVANNI
+	questmenu QUEST_MENU_SET_REWARD, QUEST_GYM_GIOVANNI
 	msgbox ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis
-	checkitemspace ITEM_TM26
-	goto_if_eq VAR_RESULT, FALSE, ViridianCity_Gym_EventScript_NoRoomForTM26
-	giveitem_msg ViridianCity_Gym_Text_ReceivedTM26FromGiovanni, ITEM_TM26
-	setflag FLAG_GOT_TM26_FROM_GIOVANNI
-	msgbox ViridianCity_Gym_Text_ExplainTM26
-	release
-	end
-
-ViridianCity_Gym_EventScript_NoRoomForTM26::
-	msgbox ViridianCity_Gym_Text_YouDoNotHaveSpace
+	msgbox ViridianCity_Gym_Text_GiovanniPostBattle
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_VIRIDIAN_GIOVANNI
+	fadescreen FADE_FROM_BLACK
 	release
 	end
 

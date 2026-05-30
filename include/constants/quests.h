@@ -50,7 +50,15 @@
 #define QUEST_TEAM_ROCKETS_RETURN       31
 #define QUEST_TRAINER_TOWER             32
 #define QUEST_THE_ULTIMATE_COLLECTOR    33
-#define QUEST_COUNT                     34
+#define QUEST_GYM_BROCK                 34
+#define QUEST_GYM_MISTY                 35
+#define QUEST_GYM_LTSURGE               36
+#define QUEST_GYM_ERIKA                 37
+#define QUEST_GYM_KOGA                  38
+#define QUEST_GYM_SABRINA               39
+#define QUEST_GYM_BLAINE                40
+#define QUEST_GYM_GIOVANNI              41
+#define QUEST_COUNT                     42
 
 #define SUB_QUEST_COUNT                 0
 #define QUEST_ARRAY_COUNT               QUEST_COUNT
