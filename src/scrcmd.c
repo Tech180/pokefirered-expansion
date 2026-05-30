@@ -40,6 +40,7 @@
 #include "new_shop.h"
 #include "constants/new_shop.h"
 #include "quest_log.h"
+#include "quest_menu.h"
 #include "random.h"
 #include "rtc.h"
 #include "script_menu.h"
@@ -3166,5 +3167,48 @@ bool8 ScrCmd_istmrelearneractive(struct ScriptContext *ctx)
      && (P_ENABLE_ALL_TM_MOVES || IsBagPocketNonEmpty(POCKET_TM_HM)))
         ScriptCall(ctx, ptr);
 
+    return FALSE;
+}
+
+bool8 ScrCmd_questmenu(struct ScriptContext *ctx)
+{
+    u8 action = ScriptReadByte(ctx);
+    u16 questId = ScriptReadHalfword(ctx);
+
+    switch (action)
+    {
+        case QUEST_MENU_OPEN:
+            break;
+        case QUEST_MENU_UNLOCK_QUEST:
+            QuestMenu_GetSetQuestState(questId, FLAG_SET_UNLOCKED);
+            break;
+        case QUEST_MENU_SET_ACTIVE:
+            QuestMenu_GetSetQuestState(questId, FLAG_SET_ACTIVE);
+            break;
+        case QUEST_MENU_SET_REWARD:
+            QuestMenu_GetSetQuestState(questId, FLAG_SET_REWARD);
+            break;
+        case QUEST_MENU_COMPLETE_QUEST:
+            QuestMenu_GetSetQuestState(questId, FLAG_SET_COMPLETED);
+            break;
+        case QUEST_MENU_CHECK_UNLOCKED:
+            gSpecialVar_Result = QuestMenu_GetSetQuestState(questId, FLAG_GET_UNLOCKED);
+            break;
+        case QUEST_MENU_CHECK_INACTIVE:
+            gSpecialVar_Result = QuestMenu_GetSetQuestState(questId, FLAG_GET_INACTIVE);
+            break;
+        case QUEST_MENU_CHECK_ACTIVE:
+            gSpecialVar_Result = QuestMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE);
+            break;
+        case QUEST_MENU_CHECK_REWARD:
+            gSpecialVar_Result = QuestMenu_GetSetQuestState(questId, FLAG_GET_REWARD);
+            break;
+        case QUEST_MENU_CHECK_COMPLETE:
+            gSpecialVar_Result = QuestMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED);
+            break;
+        case QUEST_MENU_BUFFER_QUEST_NAME:
+            QuestMenu_CopyQuestName(gStringVar1, questId);
+            break;
+    }
     return FALSE;
 }

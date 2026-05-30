@@ -688,6 +688,143 @@ static void CB2_NewGameScene(void)
     UpdatePaletteFade();
 }
 
+static const u8 sText_GameModeVanilla[] = _("Vanilla");
+static const u8 sText_GameModeVanillaPlus[] = _("Vanilla+");
+static const u8 sText_GameModeDescVanilla[] = _("The classic FireRed experience with\nall pokefirered-expansion enhancements.");
+static const u8 sText_GameModeDescVanillaPlus[] = _("An enhanced experience altering\npost-game, encounter rates, and more.");
+static const u8 sText_ClearCursor[] = _("  ");
+
+extern const u8 gText_SelectorArrow[];
+
+static const struct WindowTemplate sGameModeWindowTemplate =
+{
+    .bg = 0,
+    .tilemapLeft = 8,
+    .tilemapTop = 6,
+    .width = 14,
+    .height = 4,
+    .paletteNum = 15,
+    .baseBlock = 105
+};
+
+static void Task_GameModeSelect_HandleInput(u8 taskId);
+static void Task_GameModeSelect_End(u8 taskId);
+static void Task_NewGameScene(u8 taskId);
+
+static void Task_GameModeSelect_Init(u8 taskId)
+{
+    u8 menuWinId;
+    u8 textWinId;
+    
+    // Create menu window
+    menuWinId = AddWindow(&sGameModeWindowTemplate);
+    sOakSpeechResources->windowIds[0] = menuWinId; // store it temporarily
+    
+    // Clear the background completely
+    FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 32, 32);
+    FillBgTilemapBufferRect_Palette0(1, 0, 0, 0, 32, 32);
+    FillBgTilemapBufferRect_Palette0(2, 0, 0, 0, 32, 32);
+    CopyBgTilemapBufferToVram(0);
+    CopyBgTilemapBufferToVram(1);
+    CopyBgTilemapBufferToVram(2);
+    
+    // Draw menu window
+    DrawStdWindowFrame(menuWinId, FALSE);
+    FillWindowPixelBuffer(menuWinId, PIXEL_FILL(1));
+    AddTextPrinterParameterized(menuWinId, FONT_NORMAL, sText_GameModeVanilla, 16, 2, 0xFF, NULL);
+    AddTextPrinterParameterized(menuWinId, FONT_NORMAL, sText_GameModeVanillaPlus, 16, 18, 0xFF, NULL);
+    PutWindowTilemap(menuWinId);
+
+    // Draw text window
+    textWinId = WIN_INTRO_TEXTBOX;
+    DrawStdWindowFrame(textWinId, FALSE);
+    FillWindowPixelBuffer(textWinId, PIXEL_FILL(1));
+    AddTextPrinterParameterized(textWinId, FONT_NORMAL, sText_GameModeDescVanillaPlus, 0, 1, 0, NULL);
+    PutWindowTilemap(textWinId);
+    
+    // Set up cursor
+    gTasks[taskId].data[0] = 1; // Default to Vanilla+
+    AddTextPrinterParameterized(menuWinId, FONT_NORMAL, gText_SelectorArrow, 0, 18, 0xFF, NULL);
+    
+    CopyWindowToVram(menuWinId, COPYWIN_FULL);
+    CopyWindowToVram(textWinId, COPYWIN_FULL);
+    CopyBgTilemapBufferToVram(0); // This writes the frames to VRAM
+    
+    SetVBlankCallback(VBlankCB_NewGameScene);
+    gPaletteFade.bufferTransferDisabled = FALSE;
+    BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
+    SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0);
+    ShowBg(0);
+    ShowBg(1);
+    
+    gTasks[taskId].func = Task_GameModeSelect_HandleInput;
+}
+
+static void Task_GameModeSelect_HandleInput(u8 taskId)
+{
+    u8 menuWinId = sOakSpeechResources->windowIds[0];
+    u8 textWinId = WIN_INTRO_TEXTBOX;
+    
+    if (!gPaletteFade.active)
+    {
+        if (JOY_NEW(DPAD_UP) && gTasks[taskId].data[0] > 0)
+        {
+            PlaySE(SE_SELECT);
+            gTasks[taskId].data[0] = 0;
+            FillWindowPixelBuffer(menuWinId, PIXEL_FILL(1));
+            AddTextPrinterParameterized(menuWinId, FONT_NORMAL, sText_GameModeVanilla, 16, 2, 0xFF, NULL);
+            AddTextPrinterParameterized(menuWinId, FONT_NORMAL, sText_GameModeVanillaPlus, 16, 18, 0xFF, NULL);
+            AddTextPrinterParameterized(menuWinId, FONT_NORMAL, gText_SelectorArrow, 0, 2, 0xFF, NULL);
+            FillWindowPixelBuffer(textWinId, PIXEL_FILL(1));
+            AddTextPrinterParameterized(textWinId, FONT_NORMAL, sText_GameModeDescVanilla, 0, 1, 0, NULL);
+            CopyWindowToVram(menuWinId, COPYWIN_FULL);
+            CopyWindowToVram(textWinId, COPYWIN_FULL);
+        }
+        else if (JOY_NEW(DPAD_DOWN) && gTasks[taskId].data[0] < 1)
+        {
+            PlaySE(SE_SELECT);
+            gTasks[taskId].data[0] = 1;
+            FillWindowPixelBuffer(menuWinId, PIXEL_FILL(1));
+            AddTextPrinterParameterized(menuWinId, FONT_NORMAL, sText_GameModeVanilla, 16, 2, 0xFF, NULL);
+            AddTextPrinterParameterized(menuWinId, FONT_NORMAL, sText_GameModeVanillaPlus, 16, 18, 0xFF, NULL);
+            AddTextPrinterParameterized(menuWinId, FONT_NORMAL, gText_SelectorArrow, 0, 18, 0xFF, NULL);
+            FillWindowPixelBuffer(textWinId, PIXEL_FILL(1));
+            AddTextPrinterParameterized(textWinId, FONT_NORMAL, sText_GameModeDescVanillaPlus, 0, 1, 0, NULL);
+            CopyWindowToVram(menuWinId, COPYWIN_FULL);
+            CopyWindowToVram(textWinId, COPYWIN_FULL);
+        }
+        else if (JOY_NEW(A_BUTTON))
+        {
+            PlaySE(SE_SELECT);
+            if (gTasks[taskId].data[0] == 0)
+                gSaveBlock2Ptr->optionsVanillaPlusMode = 0;
+            else
+                gSaveBlock2Ptr->optionsVanillaPlusMode = 1;
+                
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_GameModeSelect_End;
+        }
+    }
+}
+
+static void Task_GameModeSelect_End(u8 taskId)
+{
+    u8 menuWinId = sOakSpeechResources->windowIds[0];
+    u8 textWinId = WIN_INTRO_TEXTBOX;
+    
+    if (!gPaletteFade.active)
+    {
+        ClearStdWindowAndFrameToTransparent(menuWinId, TRUE);
+        RemoveWindow(menuWinId);
+        
+        ClearDialogWindowAndFrame(textWinId, TRUE);
+        FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 32, 32);
+        CopyBgTilemapBufferToVram(0);
+        
+        gTasks[taskId].func = Task_OakSpeech_FreeResources;
+    }
+}
+
 void StartNewGameScene(void)
 {
     gPlttBufferUnfaded[0] = RGB_BLACK;
@@ -1791,7 +1928,7 @@ static void Task_OakSpeech_FadePlayerPicToBlack(u8 taskId)
 static void Task_OakSpeech_WaitForFade(u8 taskId)
 {
     if (!gPaletteFade.active)
-        gTasks[taskId].func = Task_OakSpeech_FreeResources;
+        gTasks[taskId].func = Task_GameModeSelect_Init;
 }
 
 static void Task_OakSpeech_FreeResources(u8 taskId)

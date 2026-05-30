@@ -70,6 +70,7 @@
 #include "vs_seeker.h"
 #include "load_save.h"
 #include "battle_partner.h"
+#include "quest_menu.h"
 
 enum FollowerNPCCreateDebugMenu
 {
@@ -335,6 +336,9 @@ static void DebugAction_Give_MaxMoney(u8 taskId);
 static void DebugAction_Give_MaxCoins(u8 taskId);
 static void DebugAction_Give_MaxBattlePoints(u8 taskId);
 static void DebugAction_Give_DayCareEgg(u8 taskId);
+
+static void DebugAction_Quests_UnlockAll(u8 taskId);
+static void DebugAction_Quests_CompleteAll(u8 taskId);
 
 static void DebugAction_Sound_SE(u8 taskId);
 static void DebugAction_Sound_SE_SelectId(u8 taskId);
@@ -625,6 +629,13 @@ static const struct DebugMenuOption sDebugMenu_Actions_Give[] =
     { NULL }
 };
 
+static const struct DebugMenuOption sDebugMenu_Actions_Quests[] =
+{
+    { COMPOUND_STRING("Unlock All Quests"),   DebugAction_Quests_UnlockAll },
+    { COMPOUND_STRING("Complete All Quests"), DebugAction_Quests_CompleteAll },
+    { NULL }
+};
+
 static const struct DebugMenuOption sDebugMenu_Actions_Player[] =
 {
     { COMPOUND_STRING("Player name"),    DebugAction_Player_Name },
@@ -716,6 +727,7 @@ static const struct DebugMenuOption sDebugMenu_Actions_Main[] =
     { COMPOUND_STRING("Flags & Vars…"), DebugAction_OpenSubMenuFlagsVars, sDebugMenu_Actions_Flags, },
     { COMPOUND_STRING("Sound…"),        DebugAction_OpenSubMenu, sDebugMenu_Actions_Sound, },
     { COMPOUND_STRING("ROM Info…"),     DebugAction_OpenSubMenu, sDebugMenu_Actions_ROMInfo2, },
+    { COMPOUND_STRING("Quests…"),       DebugAction_OpenSubMenu, sDebugMenu_Actions_Quests, },
     { COMPOUND_STRING("Cancel"),        DebugAction_Cancel, },
     { NULL }
 };
@@ -4795,3 +4807,4 @@ void CheckEWRAMCounters(struct ScriptContext *ctx)
     ConvertIntToDecimalStringN(gStringVar1, gFollowerSteps, STR_CONV_MODE_LEFT_ALIGN, 5);
     ConvertIntToDecimalStringN(gStringVar2, gChainFishingDexNavStreak, STR_CONV_MODE_LEFT_ALIGN, 5);
 }
+static void DebugAction_Quests_UnlockAll(u8 taskId) { u8 i; for (i = 0; i < QUEST_COUNT; i++) QuestMenu_GetSetQuestState(i, FLAG_SET_UNLOCKED); PlaySE(SE_SELECT); Debug_DestroyMenu(taskId); } static void DebugAction_Quests_CompleteAll(u8 taskId) { u8 i; for (i = 0; i < QUEST_COUNT; i++) QuestMenu_GetSetQuestState(i, FLAG_SET_COMPLETED); PlaySE(SE_SELECT); Debug_DestroyMenu(taskId); }

@@ -28,6 +28,8 @@ enum {
   MENUITEM_PARTY_MENU,
   MENUITEM_MAIN_MENU,
   MENUITEM_START_MENU,
+  MENUITEM_GAME_MODE,
+  MENUITEM_QUESTS,
   MENUITEM_CANCEL,
   MENUITEM_COUNT
 };
@@ -125,7 +127,7 @@ static const struct BgTemplate sOptionMenuBgTemplates[] = {
 static const u16 sOptionMenuPalette[] =
     INCBIN_U16("graphics/misc/option_menu.gbapal");
 static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {3,  2, 2, 2, 3,
-                                                          10, 2, 2, 2, 2, 0};
+                                                          10, 2, 2, 2, 2, 2, 2, 0};
 
 static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] = {
     [MENUITEM_TEXTSPEED] = COMPOUND_STRING("Text Speed"),
@@ -138,6 +140,8 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] = {
     [MENUITEM_PARTY_MENU] = COMPOUND_STRING("Party Menu"),
     [MENUITEM_MAIN_MENU] = COMPOUND_STRING("Main Menu"),
     [MENUITEM_START_MENU] = COMPOUND_STRING("Start Menu"),
+    [MENUITEM_GAME_MODE] = COMPOUND_STRING("Game Mode"),
+    [MENUITEM_QUESTS] = COMPOUND_STRING("Quests"),
     [MENUITEM_CANCEL] = gText_Cancel,
 };
 
@@ -186,6 +190,16 @@ static const u8 *const sShopUIOptions[] = {
 static const u8 *const sPartyMenuOptions[] = {
     COMPOUND_STRING("Classic"),
     COMPOUND_STRING("DS Style"),
+};
+
+static const u8 *const sGameModeOptions[] = {
+    COMPOUND_STRING("Vanilla"),
+    COMPOUND_STRING("Vanilla+"),
+};
+
+static const u8 *const sQuestsOptions[] = {
+    COMPOUND_STRING("Off"),
+    COMPOUND_STRING("On"),
 };
 
 static const u8 sOptionMenuPickSwitchCancelTextColor[] = {
@@ -237,6 +251,10 @@ void CB2_InitOptionMenu(void) {
       gSaveBlock2Ptr->optionsCustomMainMenu;
   sOptionMenuPtr->option[MENUITEM_START_MENU] =
       gSaveBlock2Ptr->optionsCustomStartMenu;
+  sOptionMenuPtr->option[MENUITEM_GAME_MODE] =
+      gSaveBlock2Ptr->optionsVanillaPlusMode;
+  sOptionMenuPtr->option[MENUITEM_QUESTS] =
+      gSaveBlock2Ptr->optionsEnableQuests;
 
   for (i = 0; i < MENUITEM_COUNT - 1; i++) {
     if (sOptionMenuPtr->option[i] > (sOptionMenuItemCounts[i]) - 1)
@@ -468,6 +486,8 @@ static u8 OptionMenu_ProcessInput(void) {
   u16 current;
   u16 *curr;
   if (JOY_REPEAT(DPAD_RIGHT)) {
+    if (sOptionMenuPtr->cursorPos == MENUITEM_GAME_MODE)
+        return 0; // Read-only
     current = sOptionMenuPtr->option[(sOptionMenuPtr->cursorPos)];
     if (current == (sOptionMenuItemCounts[sOptionMenuPtr->cursorPos] - 1))
       sOptionMenuPtr->option[sOptionMenuPtr->cursorPos] = 0;
@@ -478,6 +498,8 @@ static u8 OptionMenu_ProcessInput(void) {
     else
       return 4;
   } else if (JOY_REPEAT(DPAD_LEFT)) {
+    if (sOptionMenuPtr->cursorPos == MENUITEM_GAME_MODE)
+        return 0; // Read-only
     curr = &sOptionMenuPtr->option[sOptionMenuPtr->cursorPos];
     if (*curr == 0)
       *curr = sOptionMenuItemCounts[sOptionMenuPtr->cursorPos] - 1;
@@ -530,6 +552,10 @@ static void BufferOptionMenuString(u8 selection) {
   u8 x, y;
 
   memcpy(dst, sOptionMenuTextColor, 3);
+  if (selection == MENUITEM_GAME_MODE) {
+      dst[1] = TEXT_COLOR_LIGHT_GRAY;
+      dst[2] = TEXT_COLOR_DARK_GRAY;
+  }
   x = 0x82;
   y = ((GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT) - 1) *
        (selection - sOptionMenuPtr->scrollOffset)) +
@@ -584,6 +610,16 @@ static void BufferOptionMenuString(u8 selection) {
         1, FONT_NORMAL, x, y, dst, -1,
         sStartMenuOptions[sOptionMenuPtr->option[selection]]);
     break;
+  case MENUITEM_GAME_MODE:
+    AddTextPrinterParameterized3(
+        1, FONT_NORMAL, x, y, dst, -1,
+        sGameModeOptions[sOptionMenuPtr->option[selection]]);
+    break;
+  case MENUITEM_QUESTS:
+    AddTextPrinterParameterized3(
+        1, FONT_NORMAL, x, y, dst, -1,
+        sQuestsOptions[sOptionMenuPtr->option[selection]]);
+    break;
   case MENUITEM_FRAMETYPE:
     StringCopy(str, COMPOUND_STRING("Type "));
     ConvertIntToDecimalStringN(buf, sOptionMenuPtr->option[selection] + 1, 1,
@@ -620,6 +656,8 @@ static void CloseAndSaveOptionMenu(u8 taskId) {
       sOptionMenuPtr->option[MENUITEM_MAIN_MENU];
   gSaveBlock2Ptr->optionsCustomStartMenu =
       sOptionMenuPtr->option[MENUITEM_START_MENU];
+  gSaveBlock2Ptr->optionsEnableQuests =
+      sOptionMenuPtr->option[MENUITEM_QUESTS];
   SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
   if (sOptionMenuPtr->arrowTaskId != TASK_NONE) {
     RemoveScrollIndicatorArrowPair(sOptionMenuPtr->arrowTaskId);

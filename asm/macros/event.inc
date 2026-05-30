@@ -2488,3 +2488,10 @@
 	callnative ScrCmd_istmrelearneractive, requests_effects=1
 	.4byte \destination
 	.endm
+
+	@ Quest menu command
+	.macro questmenu action:req, questid:req
+	.byte 0xd9
+	.byte \action
+	.2byte \questid
+	.endm

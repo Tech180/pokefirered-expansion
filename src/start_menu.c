@@ -64,6 +64,7 @@ enum StartMenuOption
     MENU_ACTION_PYRAMID_BAG,
     MENU_ACTION_DEBUG,
     MENU_ACTION_DEXNAV,
+    MENU_ACTION_QUESTS,
     MAX_STARTMENU_ITEMS
 };
 
@@ -114,6 +115,7 @@ static bool8 StartMenuBattlePyramidRetireCallback(void);
 static bool8 StartMenuBattlePyramidBagCallback(void);
 static bool8 StartMenuDebugCallback(void);
 static bool8 StartMenuDexNavCallback(void);
+static bool8 StartMenuQuestsCallback(void);
 
 static bool8 BattlePyramidRetireStartCallback(void);
 static bool8 BattlePyramidRetireReturnCallback(void);
@@ -157,6 +159,7 @@ static const u8 sStartMenuDesc_Option[] = _("Adjust various game settings such a
 static const u8 sStartMenuDesc_Exit[] = _("Close this MENU window.");
 static const u8 sStartMenuDesc_Retire[] = _("Retire from the SAFARI GAME and return to\nthe registration counter.");
 static const u8 sStartMenuDesc_Debug[] = _("Debug Menu.");
+static const u8 sStartMenuDesc_Quests[] = _("Check the status of your current quests.");
 static const u8 sText_SaveError_PleaseExchangeBackupMemory[] = _("Save error.\pPlease exchange the\nbackup memory.");
 static const u8 sText_MenuSafariStats[] = _("{STR_VAR_1}/{STR_VAR_2}\nBALLS  {STR_VAR_3}");
 static const u8 sText_MenuTime[] = _("Time: {STR_VAR_1}:{STR_VAR_2}");
@@ -179,6 +182,7 @@ static const struct MenuAction sStartMenuActionTable[] = {
     [MENU_ACTION_PYRAMID_BAG]       = {gText_Bag,                  {.u8_void = StartMenuBattlePyramidBagCallback}},
     [MENU_ACTION_DEBUG]             = {COMPOUND_STRING("DEBUG"),   {.u8_void = StartMenuDebugCallback}},
     [MENU_ACTION_DEXNAV]            = {COMPOUND_STRING("DEXNAV"),  {.u8_void = StartMenuDexNavCallback}},
+    [MENU_ACTION_QUESTS]            = {COMPOUND_STRING("QUESTS"),  {.u8_void = StartMenuQuestsCallback}},
 };
 
 static const struct WindowTemplate sTimeWindowTemplate = {
@@ -234,16 +238,21 @@ static const struct WindowTemplate sWindowTemplate_PyramidPeak = {
 };
 
 static const u8 *const sStartMenuDescPointers[] = {
-    sStartMenuDesc_Pokedex,
-    sStartMenuDesc_Pokemon,
-    sStartMenuDesc_Bag,
-    sStartMenuDesc_Player,
-    sStartMenuDesc_Save,
-    sStartMenuDesc_Option,
-    sStartMenuDesc_Exit,
-    sStartMenuDesc_Retire,
-    sStartMenuDesc_Player,
-    sStartMenuDesc_Debug,
+    [MENU_ACTION_POKEDEX] = sStartMenuDesc_Pokedex,
+    [MENU_ACTION_POKEMON] = sStartMenuDesc_Pokemon,
+    [MENU_ACTION_BAG] = sStartMenuDesc_Bag,
+    [MENU_ACTION_PLAYER] = sStartMenuDesc_Player,
+    [MENU_ACTION_SAVE] = sStartMenuDesc_Save,
+    [MENU_ACTION_OPTION] = sStartMenuDesc_Option,
+    [MENU_ACTION_EXIT] = sStartMenuDesc_Exit,
+    [MENU_ACTION_RETIRE_SAFARI] = sStartMenuDesc_Retire,
+    [MENU_ACTION_PLAYER_LINK] = sStartMenuDesc_Player,
+    [MENU_ACTION_REST_FRONTIER] = sStartMenuDesc_Save,
+    [MENU_ACTION_RETIRE_FRONTIER] = sStartMenuDesc_Retire,
+    [MENU_ACTION_PYRAMID_BAG] = sStartMenuDesc_Bag,
+    [MENU_ACTION_DEBUG] = sStartMenuDesc_Debug,
+    [MENU_ACTION_DEXNAV] = sStartMenuDesc_Pokedex, // DexNav doesn't have a desc in vanilla FR, using Pokedex
+    [MENU_ACTION_QUESTS] = sStartMenuDesc_Quests,
 };
 
 static const struct BgTemplate sBGTemplates_AfterLinkSaveMessage[] = {
@@ -334,6 +343,8 @@ static void BuildNormalStartMenu(void)
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
         AddStartMenuAction(MENU_ACTION_POKEMON);
     AddStartMenuAction(MENU_ACTION_BAG);
+    if (gSaveBlock2Ptr->optionsEnableQuests)
+        AddStartMenuAction(MENU_ACTION_QUESTS);
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_OPTION);
@@ -800,6 +811,21 @@ static bool8 StartMenuOptionCallback(void)
         CleanupOverworldWindowsAndTilemaps();
         SetMainCallback2(CB2_InitOptionMenu);
         gMain.savedCallback = CB2_ReturnToFieldWithOpenMenu;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+extern void CB2_OpenQuestMenu(void);
+
+static bool8 StartMenuQuestsCallback(void)
+{
+    if (!gPaletteFade.active)
+    {
+        PlayRainStoppingSoundEffect();
+        RemoveExtraStartMenuWindows();
+        CleanupOverworldWindowsAndTilemaps();
+        SetMainCallback2(CB2_OpenQuestMenu);
         return TRUE;
     }
     return FALSE;

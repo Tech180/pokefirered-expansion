@@ -23,6 +23,7 @@
 #include "constants/items.h"
 #include "constants/moves.h"
 #include "constants/weather.h"
+#include "constants/quests.h"
 #include "config/save.h"
 
 #define NAKED __attribute__((naked))
@@ -664,7 +665,10 @@ struct SaveBlock2
     u8 optionsDSPartyMenu:1; // PARTY_MENU_[CLASSIC/DS]
     u8 optionsCustomMainMenu:1; // MAIN_MENU_[CLASSIC/CUSTOM]
     u8 optionsCustomStartMenu:1; // START_MENU_[CLASSIC/CUSTOM]
-    u8 unused1:1;
+    u8 optionsEnableQuests:1; // ENABLE_QUESTS_[OFF/ON]
+
+    u8 optionsVanillaPlusMode:1; // GAME_MODE_[VANILLA/VANILLA_PLUS]
+    u8 unused1:7;
 
 #if FREE_POKEMON_JUMP == FALSE
     struct PokemonJumpRecords pokeJump;
@@ -674,7 +678,12 @@ struct SaveBlock2
     struct RankingHall2P hallRecords2P[FRONTIER_LVL_MODE_COUNT][HALL_RECORDS_COUNT]; // From record mixing.
 #endif //FREE_RECORD_MIXING_HALL_RECORDS
 
-    u8 unused2[52];
+    #define QUEST_FLAGS_COUNT ROUND_BITS_TO_BYTES(QUEST_COUNT)
+    #define SUB_FLAGS_COUNT ROUND_BITS_TO_BYTES(SUB_QUEST_COUNT)
+    #define QUEST_STATES 5 // Number of different quest states tracked in the saveblock
+
+    u8 questData[QUEST_FLAGS_COUNT * QUEST_STATES];
+    u8 subQuests[SUB_FLAGS_COUNT];
 };
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
