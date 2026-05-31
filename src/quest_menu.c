@@ -955,6 +955,11 @@ static u8 CountMatchingQuests(void)
 
 	for (i = 0; i < QUEST_COUNT; i++)
 	{
+		if (!QuestMenu_GetSetQuestState(i, FLAG_GET_UNLOCKED))
+		{
+			continue;
+		}
+
 		if (isFiltered && !QuestMenu_GetSetQuestState(i, mode))
 		{
 			continue;
@@ -1041,6 +1046,11 @@ u8 GenerateList(bool8 isFiltered)
 	{
 		selectedQuestId = *(sortedQuestList + countQuest);
 
+		if (!QuestMenu_GetSetQuestState(selectedQuestId, FLAG_GET_UNLOCKED))
+		{
+			continue;
+		}
+
 		if (isFiltered && !QuestMenu_GetSetQuestState(selectedQuestId, mode))
 		{
 			continue;
@@ -1109,6 +1119,9 @@ void QuestMenu_SetQuestState(u8 quest, u8 state)
 {
 	u8 i;
 
+	if (quest >= QUEST_COUNT)
+		return;
+
 	// Clear all 5 bits first
 	for (i = 0; i < 5; i++)
 	{
@@ -1120,6 +1133,9 @@ void QuestMenu_SetQuestState(u8 quest, u8 state)
 	// Set the appropriate bits based on state
 	switch (state)
 	{
+	case 0: // Locked
+			// All bits already cleared by loop above
+			break;
 		case 1: // Unlocked
 			// Only unlocked bit set
 			{
@@ -1155,10 +1171,15 @@ void QuestMenu_SetQuestState(u8 quest, u8 state)
 
 u8 QuestMenu_GetSetQuestState(u8 quest, u8 caseId)
 {
-	u8 index = quest * 5 / 8;
-	u8 bit = quest * 5 % 8;
-	u8 mask = 0, index2 = 0, bit2 = 0, index3 = 0, bit3 = 0, mask2 = 0,
-	   mask3 = 0;
+	u8 index;
+	u8 bit;
+	u8 mask = 0;
+
+	if (quest >= QUEST_COUNT)
+		return 0;
+
+	index = quest * 5 / 8;
+	bit = quest * 5 % 8;
 
 	// 0 : locked
 	// 1 : actived
@@ -1207,27 +1228,29 @@ u8 QuestMenu_GetSetQuestState(u8 quest, u8 caseId)
 			gSaveBlock2Ptr->questData[index] |= mask;
 			return 1;
 		case FLAG_GET_INACTIVE:
-			bit2 = bit + 1;
-			bit3 = bit + 2;
-			index2 = index;
-			index3 = index;
-
-			if (bit2 >= 8)
+			// Must be unlocked first (bit 0)
+			u8 uq = quest * 5 / 8;
+			u8 ub = quest * 5 % 8;
+			u8 um = 1 << ub;
+			if (!(gSaveBlock2Ptr->questData[uq] & um))
 			{
-				index2 += 1;
-				bit2 %= 8;
+				return FALSE;
 			}
-			if (bit3 >= 8)
+			// Then check bits 1,2,3 (active, reward, completed) are all zero
+			u8 ab = bit;       // = bit from first switch (quest*5+1)
+			u8 rb = bit + 1;   // quest*5+2
+			u8 cb = bit + 2;   // quest*5+3
+			u8 ai = index, ri = index, ci = index;
+			if (ab >= 8) { ai += 1; ab %= 8; }
+			if (rb >= 8) { ri += 1; rb %= 8; }
+			if (cb >= 8) { ci += 1; cb %= 8; }
+			if ((gSaveBlock2Ptr->questData[ai] & (1 << ab)) ||
+			    (gSaveBlock2Ptr->questData[ri] & (1 << rb)) ||
+			    (gSaveBlock2Ptr->questData[ci] & (1 << cb)))
 			{
-				index3 += 1;
-				bit3 %= 8;
+				return FALSE;
 			}
-
-			mask2 = 1 << bit2;
-			mask3 = 1 << bit3;
-			return !(gSaveBlock2Ptr->questData[index] & mask) && \
-			       !(gSaveBlock2Ptr->questData[index2] & mask2) && \
-			       !(gSaveBlock2Ptr->questData[index3] & mask3);
+			return TRUE;
 		case FLAG_GET_ACTIVE:
 			return gSaveBlock2Ptr->questData[index] & mask;
 		case FLAG_SET_ACTIVE:
@@ -1267,9 +1290,12 @@ static u8 CountQuestsInCategory(void)
 	u8 i;
 	for (i = 0; i < QUEST_COUNT; i++)
 	{
-		if (DoesQuestMatchCategory(i))
+		if (QuestMenu_GetSetQuestState(i, FLAG_GET_UNLOCKED))
 		{
-			count++;
+			if (DoesQuestMatchCategory(i))
+			{
+				count++;
+			}
 		}
 	}
 	return count;

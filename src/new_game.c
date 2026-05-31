@@ -21,6 +21,7 @@
 #include "pokemon_size_record.h"
 #include "pokemon_storage_system.h"
 #include "quest_log.h"
+#include "quest_menu.h"
 #include "random.h"
 #include "renewable_hidden_items.h"
 #include "roamer.h"
@@ -173,6 +174,7 @@ void NewGameInitData(void)
     ResetItemFlags();
     ResetDexNav();
     ClearFollowerNPCData();
+    QuestMenu_ResetMenuSaveData();
 }
 
 static void ResetMiniGamesResults(void)
