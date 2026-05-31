@@ -340,6 +340,7 @@ static void DebugAction_Give_DayCareEgg(u8 taskId);
 static void DebugAction_Quests_UnlockAll(u8 taskId);
 static void DebugAction_Quests_CompleteAll(u8 taskId);
 static void DebugAction_Quests_LockAll(u8 taskId);
+static void DebugAction_Quests_ClaimAllRewards(u8 taskId);
 static void DebugAction_Quests_Editor(u8 taskId);
 
 static void DebugAction_Sound_SE(u8 taskId);
@@ -636,6 +637,7 @@ static const struct DebugMenuOption sDebugMenu_Actions_Quests[] =
     { COMPOUND_STRING("Unlock All Quests"),   DebugAction_Quests_UnlockAll },
     { COMPOUND_STRING("Complete All Quests"), DebugAction_Quests_CompleteAll },
     { COMPOUND_STRING("Lock All Quests"),     DebugAction_Quests_LockAll },
+    { COMPOUND_STRING("Claim All Rewards"),   DebugAction_Quests_ClaimAllRewards },
     { COMPOUND_STRING("Quest Editor"),        DebugAction_Quests_Editor },
     { NULL }
 };
@@ -4822,6 +4824,8 @@ void CheckEWRAMCounters(struct ScriptContext *ctx)
     ConvertIntToDecimalStringN(gStringVar1, gFollowerSteps, STR_CONV_MODE_LEFT_ALIGN, 5);
     ConvertIntToDecimalStringN(gStringVar2, gChainFishingDexNavStreak, STR_CONV_MODE_LEFT_ALIGN, 5);
 }
+extern const struct SideQuest sSideQuests[QUEST_COUNT];
+
 static void DebugAction_Quests_UnlockAll(u8 taskId) {
     u8 i;
     for (i = 0; i < QUEST_COUNT; i++)
@@ -4833,8 +4837,19 @@ static void DebugAction_Quests_UnlockAll(u8 taskId) {
 
 static void DebugAction_Quests_CompleteAll(u8 taskId) {
     u8 i;
-    for (i = 0; i < QUEST_COUNT; i++)
-        QuestMenu_GetSetQuestState(i, FLAG_SET_COMPLETED);
+    for (i = 0; i < QUEST_COUNT; i++) {
+        if (sSideQuests[i].rewardItem != ITEM_NONE) {
+            QuestMenu_GetSetQuestState(i, FLAG_SET_REWARD);
+        } else {
+            QuestMenu_GetSetQuestState(i, FLAG_SET_COMPLETED);
+        }
+    }
+    for (i = 0; i < SUB_FLAGS_COUNT; i++) {
+        gSaveBlock2Ptr->subQuests[i] = 0xFF;
+    }
+    for (i = SUB_FLAGS_COUNT; i < SUB_FLAGS_COUNT * 2; i++) {
+        gSaveBlock2Ptr->subQuests[i] = 0x00;
+    }
     PlaySE(SE_SELECT);
     ScriptContext_Enable();
     Debug_DestroyMenu_Full(taskId);
@@ -4844,6 +4859,24 @@ static void DebugAction_Quests_LockAll(u8 taskId) {
     u8 i;
     for (i = 0; i < QUEST_COUNT; i++) {
         QuestMenu_SetQuestState(i, 0);
+    }
+    for (i = 0; i < SUB_FLAGS_COUNT * 2; i++) {
+        gSaveBlock2Ptr->subQuests[i] = 0;
+    }
+    PlaySE(SE_SELECT);
+    ScriptContext_Enable();
+    Debug_DestroyMenu_Full(taskId);
+}
+
+static void DebugAction_Quests_ClaimAllRewards(u8 taskId) {
+    u8 i;
+    for (i = 0; i < QUEST_COUNT; i++) {
+        u16 itemId = sSideQuests[i].rewardItem;
+        if (itemId != ITEM_NONE && !QuestMenu_GetSetQuestState(i, FLAG_GET_COMPLETED)) {
+            if (!QuestMenu_GetSetQuestState(i, FLAG_GET_REWARD)) {
+                QuestMenu_GetSetQuestState(i, FLAG_SET_REWARD);
+            }
+        }
     }
     PlaySE(SE_SELECT);
     ScriptContext_Enable();

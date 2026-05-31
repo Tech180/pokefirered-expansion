@@ -60,8 +60,7 @@ CinnabarIsland_Gym_EventScript_DefeatedBlaine::
 	setvar VAR_MAP_SCENE_CINNABAR_ISLAND, 1
 	clearflag FLAG_HIDE_CINNABAR_BILL
 	set_gym_trainers 7
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_BLAINE
-	questmenu QUEST_MENU_SET_REWARD, QUEST_GYM_BLAINE
+	questmenu QUEST_MENU_COMPLETE_SUBQUEST, SUB_QUEST_GYM_BLAINE
 	msgbox CinnabarIsland_Gym_Text_ExplainVolcanoBadge
 	release
 	end

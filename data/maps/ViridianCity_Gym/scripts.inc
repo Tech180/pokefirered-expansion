@@ -19,8 +19,7 @@ ViridianCity_Gym_EventScript_DefeatedGiovanni::
 	setflag FLAG_BADGE08_GET
 	setvar VAR_MAP_SCENE_ROUTE22, 3
 	set_gym_trainers 8
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_GIOVANNI
-	questmenu QUEST_MENU_SET_REWARD, QUEST_GYM_GIOVANNI
+	questmenu QUEST_MENU_COMPLETE_SUBQUEST, SUB_QUEST_GYM_GIOVANNI
 	msgbox ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis
 	msgbox ViridianCity_Gym_Text_GiovanniPostBattle
 	closemessage

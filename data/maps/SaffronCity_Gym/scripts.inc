@@ -15,8 +15,7 @@ SaffronCity_Gym_EventScript_DefeatedSabrina::
 	setflag FLAG_DEFEATED_SABRINA
 	setflag FLAG_BADGE06_GET
 	set_gym_trainers 6
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_SABRINA
-	questmenu QUEST_MENU_SET_REWARD, QUEST_GYM_SABRINA
+	questmenu QUEST_MENU_COMPLETE_SUBQUEST, SUB_QUEST_GYM_SABRINA
 	msgbox SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis
 	release
 	end

@@ -16,8 +16,7 @@ PewterCity_Gym_EventScript_DefeatedBrock::
 	setflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
 	clearflag FLAG_HIDE_PEWTER_CITY_RUNNING_SHOES_GUY
 	set_gym_trainers 1
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_BROCK
-	questmenu QUEST_MENU_SET_REWARD, QUEST_GYM_BROCK
+	questmenu QUEST_MENU_COMPLETE_SUBQUEST, SUB_QUEST_GYM_BROCK
 	msgbox PewterCity_Gym_Text_BrockPostBattle
 	release
 	end

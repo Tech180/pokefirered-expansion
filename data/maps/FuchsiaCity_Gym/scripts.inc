@@ -14,8 +14,7 @@ FuchsiaCity_Gym_EventScript_DefeatedKoga::
 	setflag FLAG_DEFEATED_KOGA
 	setflag FLAG_BADGE05_GET
 	set_gym_trainers 5
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_KOGA
-	questmenu QUEST_MENU_SET_REWARD, QUEST_GYM_KOGA
+	questmenu QUEST_MENU_COMPLETE_SUBQUEST, SUB_QUEST_GYM_KOGA
 	msgbox FuchsiaCity_Gym_Text_KogaExplainSoulBadge
 	release
 	end

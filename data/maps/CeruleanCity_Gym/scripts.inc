@@ -14,8 +14,7 @@ CeruleanCity_Gym_EventScript_MistyDefeated::
 	setflag FLAG_BADGE02_GET
 	setrespawn HEAL_LOCATION_CERULEAN_CITY
 	set_gym_trainers 2
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_MISTY
-	questmenu QUEST_MENU_SET_REWARD, QUEST_GYM_MISTY
+	questmenu QUEST_MENU_COMPLETE_SUBQUEST, SUB_QUEST_GYM_MISTY
 	msgbox CeruleanCity_Gym_Text_ExplainCascadeBadge
 	release
 	end

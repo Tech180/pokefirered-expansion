@@ -683,7 +683,7 @@ struct SaveBlock2
     #define QUEST_STATES 5 // Number of different quest states tracked in the saveblock
 
     u8 questData[QUEST_FLAGS_COUNT * QUEST_STATES];
-    u8 subQuests[SUB_FLAGS_COUNT];
+    u8 subQuests[SUB_FLAGS_COUNT * 2];
 };
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;

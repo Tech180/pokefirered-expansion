@@ -14,8 +14,7 @@ CeladonCity_Gym_EventScript_DefeatedErika::
 	setflag FLAG_DEFEATED_ERIKA
 	setflag FLAG_BADGE04_GET
 	set_gym_trainers 4
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_ERIKA
-	questmenu QUEST_MENU_SET_REWARD, QUEST_GYM_ERIKA
+	questmenu QUEST_MENU_COMPLETE_SUBQUEST, SUB_QUEST_GYM_ERIKA
 	msgbox CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis
 	release
 	end

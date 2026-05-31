@@ -25,6 +25,7 @@
 #define OBJECT      1
 #define ITEM        2
 #define PKMN        3
+#define BADGE       4
 
 #define MAX_QUEST_STATES 50
 /* Defines how many states a complex quest can have */
@@ -38,6 +39,7 @@ struct SubQuest
     const u16 sprite;
     const u8 spritetype;
     const u8 *type;
+    const u16 rewardItem;
 };
 
 struct SideQuest
@@ -88,5 +90,7 @@ void QuestMenu_ResetMenuSaveData(void);
 void ResetQuestIconOnObject(struct ObjectEvent*);
 void HandleQuestIconForSingleObjectEvent(struct ObjectEvent*, u32);
 void RefreshQuestIcons(void);
+void QuestMenu_SetSubquestCompleted(u16 subQuestId);
+bool8 QuestMenu_IsSubquestCompleted(u16 subQuestId);
 
 #endif // GUARD_QUESTS_H

@@ -217,8 +217,7 @@ VermilionCity_Gym_EventScript_DefeatedLtSurge::
 	setflag FLAG_DEFEATED_LT_SURGE
 	setflag FLAG_BADGE03_GET
 	set_gym_trainers 3
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_GYM_LTSURGE
-	questmenu QUEST_MENU_SET_REWARD, QUEST_GYM_LTSURGE
+	questmenu QUEST_MENU_COMPLETE_SUBQUEST, SUB_QUEST_GYM_LTSURGE
 	msgbox VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis
 	release
 	end

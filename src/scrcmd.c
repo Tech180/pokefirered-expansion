@@ -3209,6 +3209,12 @@ bool8 ScrCmd_questmenu(struct ScriptContext *ctx)
         case QUEST_MENU_BUFFER_QUEST_NAME:
             QuestMenu_CopyQuestName(gStringVar1, questId);
             break;
+        case QUEST_MENU_COMPLETE_SUBQUEST:
+            QuestMenu_SetSubquestCompleted(questId);
+            break;
+        case QUEST_MENU_CHECK_SUBQUEST_COMPLETE:
+            gSpecialVar_Result = QuestMenu_IsSubquestCompleted(questId);
+            break;
     }
     return FALSE;
 }
