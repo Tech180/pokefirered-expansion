@@ -252,7 +252,6 @@ static const u8 sText_Unk[] = _("??????");
 static const u8 sText_Active[] = _("Active");
 static const u8 sText_Reward[] = _("Reward");
 static const u8 sText_Complete[] = _("Done");
-static const u8 sText_ShowLocation[] = _("Location: {STR_VAR_2}");
 static const u8 sText_StartForMore[] = _("Start for more details.");
 static const u8 sText_ReturnRecieveReward[] =
     _("Return to {STR_VAR_2}\nto recieve your reward!");
@@ -1214,6 +1213,36 @@ u8 QuestMenu_GetSetQuestState(u8 quest, u8 caseId) {
     gSaveBlock2Ptr->questData[index] &= ~mask;
     return 1;
   case FLAG_GET_COMPLETED:
+    if (sSideQuests[quest].dexRegion > 0) {
+      enum NationalDexOrder natNum;
+      for (natNum = NATIONAL_DEX_START; natNum <= NATIONAL_DEX_COUNT;
+           natNum++) {
+        u8 dexRegion = 0;
+        if ((s32)natNum <= 151)
+          dexRegion = DEX_REGION_KANTO;
+        else if (natNum <= 251)
+          dexRegion = DEX_REGION_JOHTO;
+        else if (natNum <= 386)
+          dexRegion = DEX_REGION_HOENN;
+        else if (natNum <= 493)
+          dexRegion = DEX_REGION_SINNOH;
+        else if (natNum <= 649)
+          dexRegion = DEX_REGION_UNOVA;
+        else if (natNum <= 721)
+          dexRegion = DEX_REGION_KALOS;
+        else if (natNum <= 809)
+          dexRegion = DEX_REGION_ALOLA;
+        else if (natNum <= 905)
+          dexRegion = DEX_REGION_GALAR;
+        else
+          dexRegion = DEX_REGION_PALDEA;
+        if (dexRegion != sSideQuests[quest].dexRegion)
+          continue;
+        if (GetSetPokedexFlag(natNum, FLAG_GET_CAUGHT) == FALSE)
+          return FALSE;
+      }
+      return TRUE;
+    }
     if (sSideQuests[quest].numSubquests > 0) {
       u8 i;
       for (i = 0; i < sSideQuests[quest].numSubquests; i++) {
@@ -1400,9 +1429,11 @@ void PopulateListRowNameAndId(u8 row, u8 countQuest) {
 }
 
 static bool8 DoesQuestHaveChildrenAndNotInactive(u16 itemId) {
+  // For quests with subquests, FLAG_GET_INACTIVE uses raw bit logic and doesn't
+  // account for the subquest-derived active state. Use FLAG_GET_UNLOCKED
+  // instead, since any unlocked quest with subquests should be enterable.
   if (sSideQuests[itemId].numSubquests != 0 &&
-      QuestMenu_GetSetQuestState(itemId, FLAG_GET_UNLOCKED) &&
-      !QuestMenu_GetSetQuestState(itemId, FLAG_GET_INACTIVE)) {
+      QuestMenu_GetSetQuestState(itemId, FLAG_GET_UNLOCKED)) {
     return TRUE;
   } else {
     return FALSE;
@@ -1476,12 +1507,28 @@ void GenerateQuestLocation(s32 questId) {
     StringCopy(gStringVar2,
                sSideQuests[sStateDataPtr->parentQuest].subquests[questId].map);
   }
-
-  StringExpandPlaceholders(gStringVar4, sText_ShowLocation);
 }
 void PrintQuestLocation(s32 questId) {
+  const u8 *title;
+  u32 locationX;
+
   FillWindowPixelBuffer(1, 0);
-  QuestMenu_AddTextPrinterParameterized(1, 2, gStringVar4, 2, 3, 2, 0, 0, 4);
+
+  if (!IsSubquestMode()) {
+    title = sSideQuests[questId].title;
+    if (title == NULL) {
+      title = sSideQuests[questId].name;
+    }
+  } else {
+    title = sSideQuests[sStateDataPtr->parentQuest].subquests[questId].title;
+    if (title == NULL) {
+      title = sSideQuests[sStateDataPtr->parentQuest].subquests[questId].name;
+    }
+  }
+  QuestMenu_AddTextPrinterParameterized(1, 2, title, 2, 3, 2, 0, 0, 4);
+
+  locationX = 234 - GetStringWidth(2, gStringVar2, 0);
+  QuestMenu_AddTextPrinterParameterized(1, 2, gStringVar2, locationX, 3, 2, 0, 0, 4);
 }
 void GenerateQuestFlavorText(s32 questId) {
   if (IsSubquestMode() == FALSE) {
@@ -1948,7 +1995,12 @@ static void QuestMenu_DestroySprite(u8 idx) {
   u8 *ptr = &sItemMenuIconSpriteIds[10];
 
   if (ptr[idx] != 0xFF) {
-    DestroySprite(&gSprites[ptr[idx]]);
+    struct Sprite *sprite = &gSprites[ptr[idx]];
+    if (!sprite->usingSheet) {
+      FreeAndDestroyMonIconSprite(sprite);
+    } else {
+      DestroySprite(sprite);
+    }
     ptr[idx] = 0xFF;
   }
   FreeSpriteTilesByTag(102 + idx);
@@ -2178,19 +2230,24 @@ static void Task_Main(u8 taskId) {
     } else {
       u16 prevScroll = sListMenuState.scroll;
       u16 prevRow = sListMenuState.row;
-      s32 input = ListMenu_ProcessInput(data[0]);
-      u8 selectedQuestId = sListMenuItems[GetCursorPosition()].id;
 
-      ListMenuGetScrollAndRow(data[0], &sListMenuState.scroll,
-                              &sListMenuState.row);
-
+      // Check UP-at-top BEFORE processing list input so the list never wraps
+      // to the bottom before the selector focus kicks in.
+      // Use JOY_REPEAT to catch both new presses AND held auto-repeat,
+      // since ListMenu_ProcessInput uses repeat internally.
       if (!IsSubquestMode() && prevScroll == 0 && prevRow == 0 &&
-          JOY_NEW(DPAD_UP)) {
+          JOY_REPEAT(DPAD_UP)) {
         sStateDataPtr->isSelectorFocused = TRUE;
         PlaySE(SE_SELECT);
         Task_QuestMenuCleanUp(taskId);
         return;
       }
+
+      s32 input = ListMenu_ProcessInput(data[0]);
+      u8 selectedQuestId = sListMenuItems[GetCursorPosition()].id;
+
+      ListMenuGetScrollAndRow(data[0], &sListMenuState.scroll,
+                              &sListMenuState.row);
 
       switch (input) {
       case LIST_NOTHING_CHOSEN:
@@ -2274,6 +2331,10 @@ static void Task_QuestMenuCleanUp(u8 taskId) {
   } else {
     ResetCursorToTop(data);
   }
+
+  // Consume the flag so it doesn't leak into subsequent cleanup calls
+  // (e.g., selector focus, Main/Side switching).
+  sStateDataPtr->restoreCursor = FALSE;
 
   gTasks[taskId].func = Task_Main;
 }

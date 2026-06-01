@@ -43,8 +43,28 @@
 #define QUEST_LEGENDARY_POKEMON         22
 #define QUEST_FIRERED_EXCLUSIVES        23
 #define QUEST_LEAFGREEN_EXCLUSIVES      24
+#define DEX_REGION_NONE       0
+#define DEX_REGION_KANTO      1
+#define DEX_REGION_JOHTO      2
+#define DEX_REGION_HOENN      3
+#define DEX_REGION_SINNOH     4
+#define DEX_REGION_UNOVA      5
+#define DEX_REGION_KALOS      6
+#define DEX_REGION_ALOLA      7
+#define DEX_REGION_GALAR      8
+#define DEX_REGION_PALDEA     9
+
 #define QUEST_SEVII_ISLANDS             25
-#define QUEST_COUNT                     26
+#define QUEST_KANTO_DEX                 26
+#define QUEST_JOHTO_DEX                 27
+#define QUEST_HOENN_DEX                 28
+#define QUEST_SINNOH_DEX                29
+#define QUEST_UNOVA_DEX                 30
+#define QUEST_KALOS_DEX                 31
+#define QUEST_ALOLA_DEX                 32
+#define QUEST_GALAR_DEX                 33
+#define QUEST_PALDEA_DEX                34
+#define QUEST_COUNT                     35
 
 // Subquests for Gym Challenges
 #define SUB_QUEST_GYM_BROCK             0

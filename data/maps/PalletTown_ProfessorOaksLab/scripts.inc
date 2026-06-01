@@ -105,6 +105,10 @@ PalletTown_ProfessorOaksLab_EventScript_NationalDexScene::
 	waitfanfare
 	call EventScript_RestorePrevTextColor
 	special EnableNationalPokedex
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_JOHTO_DEX
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_JOHTO_DEX
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_HOENN_DEX
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_HOENN_DEX
 	msgbox PalletTown_ProfessorOaksLab_Text_OakMustReallyWorkToFillPokedex
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex
 	closemessage
@@ -654,6 +658,8 @@ PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene::
 	waitfanfare
 	call EventScript_RestorePrevTextColor
 	setflag FLAG_SYS_POKEDEX_GET
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_KANTO_DEX
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_KANTO_DEX
 	special SetUnlockedPokedexFlags
 	setvar VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 1
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese

@@ -34,6 +34,7 @@ struct SubQuest
 {
     const u8 id;
     const u8 *name;
+    const u8 *title;
     const u8 *desc;
     const u8 *map;
     const u16 sprite;
@@ -45,6 +46,7 @@ struct SubQuest
 struct SideQuest
 {
     const u8 *name;
+    const u8 *title;
     const u8 *desc[MAX_QUEST_STATES];
     const u8 *donedesc;
     const u8 *map[MAX_QUEST_STATES];
@@ -55,6 +57,7 @@ struct SideQuest
     const u16 questVariable;
     const bool8 isSideQuest;
     const u16 rewardItem;
+    const u8 dexRegion;
 };
 
 enum QuestCases
