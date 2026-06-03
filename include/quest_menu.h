@@ -8,12 +8,14 @@
 #define SORT_ACTIVE     2
 #define SORT_REWARD     3
 #define SORT_DONE       4
+#define SORT_FAILED     5
 
 #define SORT_DEFAULT_AZ     10
 #define SORT_INACTIVE_AZ    11
 #define SORT_ACTIVE_AZ      12
 #define SORT_REWARD_AZ      13
 #define SORT_DONE_AZ        14
+#define SORT_FAILED_AZ      15
 
 #define SORT_SUBQUEST       100
 
@@ -41,6 +43,7 @@ struct SubQuest
     const u8 spritetype;
     const u8 *type;
     const u16 rewardItem;
+    const u8 dexRegion;
 };
 
 struct SideQuest
@@ -49,6 +52,8 @@ struct SideQuest
     const u8 *title;
     const u8 *desc[MAX_QUEST_STATES];
     const u8 *donedesc;
+    const u8 *faileddesc;
+    const u8 *rewarddesc;
     const u8 *map[MAX_QUEST_STATES];
     const u16 sprite[MAX_QUEST_STATES];
     const u8 spritetype[MAX_QUEST_STATES];
@@ -67,12 +72,14 @@ enum QuestCases
     FLAG_GET_ACTIVE,            // check if quest is active
     FLAG_GET_REWARD,            // check if quest is ready for reward
     FLAG_GET_COMPLETED,         // check if quest is completed
+    FLAG_GET_FAILED,            // check if quest is failed
     FLAG_GET_FAVORITE,          // check if quest is favorited
     FLAG_SET_UNLOCKED,          // mark quest as unlocked
     FLAG_SET_INACTIVE,          // mark quest as inactive
     FLAG_SET_ACTIVE,            // mark quest as active
     FLAG_SET_REWARD,            // mark quest ready for reward
     FLAG_SET_COMPLETED,         // mark completed quest
+    FLAG_SET_FAILED,            // mark quest as failed
     FLAG_SET_FAVORITE,          // mark quest as favorite
     FLAG_REMOVE_INACTIVE,       // remove inactive flag from quest
     FLAG_REMOVE_ACTIVE,         // remove active flag from quest

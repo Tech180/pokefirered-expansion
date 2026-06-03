@@ -105,10 +105,6 @@ PalletTown_ProfessorOaksLab_EventScript_NationalDexScene::
 	waitfanfare
 	call EventScript_RestorePrevTextColor
 	special EnableNationalPokedex
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_JOHTO_DEX
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_JOHTO_DEX
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_HOENN_DEX
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_HOENN_DEX
 	msgbox PalletTown_ProfessorOaksLab_Text_OakMustReallyWorkToFillPokedex
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex
 	closemessage
@@ -658,8 +654,8 @@ PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene::
 	waitfanfare
 	call EventScript_RestorePrevTextColor
 	setflag FLAG_SYS_POKEDEX_GET
-	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_KANTO_DEX
-	questmenu QUEST_MENU_SET_ACTIVE, QUEST_KANTO_DEX
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_THE_ULTIMATE_COLLECTOR
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_THE_ULTIMATE_COLLECTOR
 	special SetUnlockedPokedexFlags
 	setvar VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 1
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese
@@ -686,6 +682,8 @@ PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene::
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 1
 	setvar VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 1
 	setvar VAR_MAP_SCENE_ROUTE22, 1
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_ROUTE22_RIVAL
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_ROUTE22_RIVAL
 	release
 	end
 

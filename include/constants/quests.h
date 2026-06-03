@@ -15,6 +15,8 @@
 #define QUEST_MENU_BUFFER_QUEST_NAME 10 // buffers a quest name to gStringVar1
 #define QUEST_MENU_COMPLETE_SUBQUEST 11 // completes a subquest
 #define QUEST_MENU_CHECK_SUBQUEST_COMPLETE 12 // checks if a subquest is completed
+#define QUEST_MENU_SET_FAILED 13        // questId = QUEST_X (0-indexed)
+#define QUEST_MENU_CHECK_FAILED 14      // checks if questId is in Failed state. Returns result to gSpecialVar_Result
 
 // quest number defines
 #define QUEST_NONE                      0xFFFF
@@ -55,16 +57,8 @@
 #define DEX_REGION_PALDEA     9
 
 #define QUEST_SEVII_ISLANDS             25
-#define QUEST_KANTO_DEX                 26
-#define QUEST_JOHTO_DEX                 27
-#define QUEST_HOENN_DEX                 28
-#define QUEST_SINNOH_DEX                29
-#define QUEST_UNOVA_DEX                 30
-#define QUEST_KALOS_DEX                 31
-#define QUEST_ALOLA_DEX                 32
-#define QUEST_GALAR_DEX                 33
-#define QUEST_PALDEA_DEX                34
-#define QUEST_COUNT                     35
+#define QUEST_ROUTE22_RIVAL             26
+#define QUEST_COUNT                     27
 
 // Subquests for Gym Challenges
 #define SUB_QUEST_GYM_BROCK             0
@@ -120,7 +114,18 @@
 #define SUB_QUEST_SEVII_ROCKET          42
 #define SUB_QUEST_SEVII_TOWER           43
 
-#define SUB_QUEST_COUNT                 44
+// Subquests for The Ultimate Collector
+#define SUB_QUEST_DEX_KANTO             44
+#define SUB_QUEST_DEX_JOHTO             45
+#define SUB_QUEST_DEX_HOENN             46
+#define SUB_QUEST_DEX_SINNOH            47
+#define SUB_QUEST_DEX_UNOVA             48
+#define SUB_QUEST_DEX_KALOS             49
+#define SUB_QUEST_DEX_ALOLA             50
+#define SUB_QUEST_DEX_GALAR             51
+#define SUB_QUEST_DEX_PALDEA            52
+
+#define SUB_QUEST_COUNT                 53
 #define QUEST_ARRAY_COUNT               QUEST_COUNT
 
 #endif // GUARD_CONSTANTS_QUESTS_H

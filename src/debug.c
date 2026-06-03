@@ -87,6 +87,7 @@ enum FlagsVarsDebugMenu
     DEBUG_FLAGVAR_MENU_ITEM_FLAGS,
     DEBUG_FLAGVAR_MENU_ITEM_VARS,
     DEBUG_FLAGVAR_MENU_ITEM_DEXFLAGS_ALL,
+    DEBUG_FLAGVAR_MENU_ITEM_DEXFLAGS_KANTO,
     DEBUG_FLAGVAR_MENU_ITEM_DEXFLAGS_RESET,
     DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_POKEDEX,
     DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_NATDEX,
@@ -300,6 +301,7 @@ static void DebugAction_FlagsVars_Vars(u8 taskId);
 static void DebugAction_FlagsVars_Select(u8 taskId);
 static void DebugAction_FlagsVars_SetValue(u8 taskId);
 static void DebugAction_FlagsVars_PokedexFlags_All(u8 taskId);
+static void DebugAction_FlagsVars_PokedexFlags_Kanto(u8 taskId);
 static void DebugAction_FlagsVars_PokedexFlags_Reset(u8 taskId);
 static void DebugAction_FlagsVars_SwitchDex(u8 taskId);
 static void DebugAction_FlagsVars_SwitchNatDex(u8 taskId);
@@ -339,6 +341,7 @@ static void DebugAction_Give_DayCareEgg(u8 taskId);
 
 static void DebugAction_Quests_UnlockAll(u8 taskId);
 static void DebugAction_Quests_CompleteAll(u8 taskId);
+static void DebugAction_Quests_FailAll(u8 taskId);
 static void DebugAction_Quests_LockAll(u8 taskId);
 static void DebugAction_Quests_ClaimAllRewards(u8 taskId);
 static void DebugAction_Quests_Editor(u8 taskId);
@@ -636,6 +639,7 @@ static const struct DebugMenuOption sDebugMenu_Actions_Quests[] =
 {
     { COMPOUND_STRING("Unlock All Quests"),   DebugAction_Quests_UnlockAll },
     { COMPOUND_STRING("Complete All Quests"), DebugAction_Quests_CompleteAll },
+    { COMPOUND_STRING("Fail All Quests"),     DebugAction_Quests_FailAll },
     { COMPOUND_STRING("Lock All Quests"),     DebugAction_Quests_LockAll },
     { COMPOUND_STRING("Claim All Rewards"),   DebugAction_Quests_ClaimAllRewards },
     { COMPOUND_STRING("Quest Editor"),        DebugAction_Quests_Editor },
@@ -697,6 +701,7 @@ static const struct DebugMenuOption sDebugMenu_Actions_Flags[] =
     [DEBUG_FLAGVAR_MENU_ITEM_FLAGS]                = { COMPOUND_STRING("Set Flag XYZ…"),                     DebugAction_FlagsVars_Flags },
     [DEBUG_FLAGVAR_MENU_ITEM_VARS]                 = { COMPOUND_STRING("Set Var XYZ…"),                      DebugAction_FlagsVars_Vars },
     [DEBUG_FLAGVAR_MENU_ITEM_DEXFLAGS_ALL]         = { COMPOUND_STRING("Pokédex Flags All"),                 DebugAction_FlagsVars_PokedexFlags_All },
+    [DEBUG_FLAGVAR_MENU_ITEM_DEXFLAGS_KANTO]       = { COMPOUND_STRING("Pokédex Flags Kanto"),               DebugAction_FlagsVars_PokedexFlags_Kanto },
     [DEBUG_FLAGVAR_MENU_ITEM_DEXFLAGS_RESET]       = { COMPOUND_STRING("Pokédex Flags Reset"),               DebugAction_FlagsVars_PokedexFlags_Reset },
     [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_POKEDEX]       = { COMPOUND_STRING("Toggle {STR_VAR_1}Pokédex"),         DebugAction_ToggleFlag, DebugAction_FlagsVars_SwitchDex },
     [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_NATDEX]        = { COMPOUND_STRING("Toggle {STR_VAR_1}National Dex"),    DebugAction_ToggleFlag, DebugAction_FlagsVars_SwitchNatDex },
@@ -2415,6 +2420,29 @@ static void DebugAction_FlagsVars_PokedexFlags_All(u8 taskId)
     }
     Debug_DestroyMenu_Full(taskId);
     ScriptContext_Enable();
+}
+
+static void DebugAction_FlagsVars_PokedexFlags_Kanto(u8 taskId)
+{
+    u16 i;
+    for (i = 0; i < 151; i++)
+    {
+        GetSetPokedexFlag(i + 1, FLAG_SET_CAUGHT);
+        GetSetPokedexFlag(i + 1, FLAG_SET_SEEN);
+    }
+    Debug_DestroyMenu_Full(taskId);
+    ScriptContext_Enable();
+}
+
+void Debug_FillKantoPokedex(struct ScriptContext *ctx)
+{
+    u16 i;
+    for (i = 0; i < 151; i++)
+    {
+        GetSetPokedexFlag(i + 1, FLAG_SET_CAUGHT);
+        GetSetPokedexFlag(i + 1, FLAG_SET_SEEN);
+    }
+    DisableNationalPokedex();
 }
 
 static void DebugAction_FlagsVars_PokedexFlags_Reset(u8 taskId)
@@ -4868,6 +4896,18 @@ static void DebugAction_Quests_LockAll(u8 taskId) {
     Debug_DestroyMenu_Full(taskId);
 }
 
+static void DebugAction_Quests_FailAll(u8 taskId) {
+    u8 i;
+    for (i = 0; i < QUEST_COUNT; i++) {
+        if (sSideQuests[i].faileddesc != NULL) {
+            QuestMenu_SetQuestState(i, 4); // 4 = Failed state
+        }
+    }
+    PlaySE(SE_SELECT);
+    ScriptContext_Enable();
+    Debug_DestroyMenu_Full(taskId);
+}
+
 static void DebugAction_Quests_ClaimAllRewards(u8 taskId) {
     u8 i;
     for (i = 0; i < QUEST_COUNT; i++) {
@@ -4892,12 +4932,16 @@ static const u8 *const sQuestStateNames[] = {
     COMPOUND_STRING("Locked"),
     COMPOUND_STRING("Unlocked"),
     COMPOUND_STRING("Active"),
-    COMPOUND_STRING("Completed")
+    COMPOUND_STRING("Completed"),
+    COMPOUND_STRING("Failed")
 };
 
 static u8 GetQuestStateFromData(u8 questId) {
     if (QuestMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED)) {
         return 3;
+    }
+    if (QuestMenu_GetSetQuestState(questId, FLAG_GET_FAILED)) {
+        return 4;
     }
     if (QuestMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE)) {
         return 2;
@@ -4975,7 +5019,7 @@ static void DebugAction_Quests_EditorSelect(u8 taskId) {
         Debug_Display_QuestInfo(questId, gTasks[taskId].tQuestState, windowId);
     } else if (JOY_NEW(DPAD_UP)) {
         PlaySE(SE_SELECT);
-        if (state == 3) {
+        if (state == 4) {
             state = 0;
         } else {
             state++;
@@ -4985,7 +5029,7 @@ static void DebugAction_Quests_EditorSelect(u8 taskId) {
     } else if (JOY_NEW(DPAD_DOWN)) {
         PlaySE(SE_SELECT);
         if (state == 0) {
-            state = 3;
+            state = 4;
         } else {
             state--;
         }

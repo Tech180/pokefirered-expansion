@@ -144,6 +144,13 @@ Debug_EventScript_Text_DefensiveIVs:
 	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
 
 Debug_EventScript_Script_1::
+	callnative Debug_FillKantoPokedex
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_WORLD_MAP_ONE_ISLAND
+	setvar VAR_MAP_SCENE_PALLET_TOWN_OAK, 2
+	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6
+	clearflag FLAG_SYS_NATIONAL_DEX
+	warp MAP_PALLET_TOWN, 0
 	release
 	end
 

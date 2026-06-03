@@ -36,6 +36,10 @@ CeruleanCity_EventScript_RivalTriggerRight::
 CeruleanCity_EventScript_Rival::
 	textcolor NPC_TEXT_COLOR_MALE
 	setvar VAR_MAP_SCENE_ROUTE22, 2
+	questmenu QUEST_MENU_CHECK_COMPLETE, QUEST_ROUTE22_RIVAL
+	goto_if_eq VAR_RESULT, TRUE, CeruleanCity_EventScript_SkipRivalFail
+	questmenu QUEST_MENU_SET_FAILED, QUEST_ROUTE22_RIVAL
+CeruleanCity_EventScript_SkipRivalFail::
 	playbgm MUS_ENCOUNTER_RIVAL, 0
 	addobject LOCALID_CERULEAN_RIVAL
 	applymovement LOCALID_CERULEAN_RIVAL, CeruleanCity_Movement_RivalEnter

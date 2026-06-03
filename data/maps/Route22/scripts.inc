@@ -33,6 +33,13 @@ Route22_EventScript_EarlyRival::
 	call_if_eq VAR_STARTER_MON, 2, Route22_EventScript_EarlyRivalSquirtle
 	call_if_eq VAR_STARTER_MON, 1, Route22_EventScript_EarlyRivalBulbasaur
 	call_if_eq VAR_STARTER_MON, 0, Route22_EventScript_EarlyRivalCharmander
+	goto_if_eq VAR_RESULT, 0, Route22_EventScript_EarlyRivalWon
+	questmenu QUEST_MENU_SET_FAILED, QUEST_ROUTE22_RIVAL
+	goto Route22_EventScript_EarlyRivalContinue
+Route22_EventScript_EarlyRivalWon::
+	giveitem ITEM_ORAN_BERRY
+	questmenu QUEST_MENU_COMPLETE_QUEST, QUEST_ROUTE22_RIVAL
+Route22_EventScript_EarlyRivalContinue::
 	msgbox Route22_Text_EarlyRivalPostBattle
 	closemessage
 	delay 10

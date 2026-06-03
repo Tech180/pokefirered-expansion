@@ -129,6 +129,7 @@ static u8 CountInactiveQuests(void);
 static u8 CountActiveQuests(void);
 static u8 CountRewardQuests(void);
 static u8 CountCompletedQuests(void);
+static u8 CountFailedQuests(void);
 static u8 CountFavoriteQuests(void);
 
 static void PopulateEmptyRow(u8 countQuest);
@@ -162,6 +163,7 @@ static bool8 IsQuestUnlocked(s32 questId);
 static bool8 IsQuestActiveState(s32 questId);
 static bool8 IsQuestInactiveState(s32 questId);
 static bool8 IsQuestRewardState(s32 questId);
+static bool8 IsQuestFailedState(s32 questId);
 static bool8 IsQuestCompletedState(s32 questId);
 static bool8 IsSubquestCompletedState(s32 questId);
 
@@ -247,11 +249,13 @@ static const u8 sText_InactiveHeader[] = _("Inactive Missions");
 static const u8 sText_ActiveHeader[] = _("Active Missions");
 static const u8 sText_RewardHeader[] = _("Reward Available");
 static const u8 sText_CompletedHeader[] = _("Completed Missions");
+static const u8 sText_FailedHeader[] = _("Failed Missions");
 static const u8 sText_QuestNumberDisplay[] = _("{STR_VAR_1}/{STR_VAR_2}");
 static const u8 sText_Unk[] = _("??????");
 static const u8 sText_Active[] = _("Active");
 static const u8 sText_Reward[] = _("Reward");
 static const u8 sText_Complete[] = _("Done");
+static const u8 sText_Failed[] = _("Failed");
 static const u8 sText_StartForMore[] = _("Start for more details.");
 static const u8 sText_ReturnRecieveReward[] =
     _("Return to {STR_VAR_2}\nto recieve your reward!");
@@ -328,13 +332,15 @@ static const u8 sQuestMenuWindowFontColors[][4] = {
     {// Header of Quest Menu
      TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_TRANSPARENT},
     {// Reward state progress indicator
-     TEXT_COLOR_TRANSPARENT, TEXT_COLOR_RED, TEXT_COLOR_TRANSPARENT},
+     TEXT_COLOR_TRANSPARENT, TEXT_COLOR_LIGHT_BLUE, TEXT_COLOR_TRANSPARENT},
     {// Done state progress indicator
      TEXT_COLOR_TRANSPARENT, TEXT_COLOR_GREEN, TEXT_COLOR_TRANSPARENT},
     {// Active state progress indicator
      TEXT_COLOR_TRANSPARENT, TEXT_COLOR_BLUE, TEXT_COLOR_TRANSPARENT},
     {// Footer flavor text
      TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_TRANSPARENT},
+    {// Failed state progress indicator (Red)
+     TEXT_COLOR_TRANSPARENT, TEXT_COLOR_RED, TEXT_COLOR_TRANSPARENT},
 };
 
 // Functions begin here
@@ -740,8 +746,8 @@ u8 ToggleAlphaMode(u8 mode) {
 }
 
 u8 IncrementMode(u8 mode) {
-  if (mode % 10 == SORT_DONE) {
-    mode -= SORT_DONE;
+  if (mode % 10 == SORT_FAILED) {
+    mode -= SORT_FAILED;
   } else {
     mode++;
   }
@@ -751,7 +757,7 @@ u8 IncrementMode(u8 mode) {
 
 static u8 DecrementMode(u8 mode) {
   if (mode % 10 == SORT_DEFAULT) {
-    mode += SORT_DONE;
+    mode += SORT_FAILED;
   } else {
     mode--;
   }
@@ -760,7 +766,7 @@ static u8 DecrementMode(u8 mode) {
 }
 
 static bool8 IsSubquestMode(void) {
-  if (sStateDataPtr->filterMode > SORT_DONE_AZ) {
+  if (sStateDataPtr->filterMode > SORT_FAILED_AZ) {
     return TRUE;
   } else {
     return FALSE;
@@ -779,7 +785,7 @@ static bool8 IsNotFilteredMode(void) {
 
 static bool8 IsAlphaMode(void) {
   if (sStateDataPtr->filterMode < SORT_SUBQUEST &&
-      sStateDataPtr->filterMode > SORT_DONE) {
+      sStateDataPtr->filterMode > SORT_FAILED) {
     return TRUE;
   } else {
     return FALSE;
@@ -982,6 +988,37 @@ u8 QuestMenu_GetSetSubquestState(u8 quest, u8 caseId, u8 childQuest) {
 
   switch (caseId) {
   case FLAG_GET_COMPLETED:
+    if (sSideQuests[quest].subquests[childQuest].dexRegion > 0) {
+      enum NationalDexOrder natNum;
+      u8 region = sSideQuests[quest].subquests[childQuest].dexRegion;
+      for (natNum = NATIONAL_DEX_START; natNum <= NATIONAL_DEX_COUNT; natNum++) {
+        u8 dexRegion = 0;
+        if ((s32)natNum <= 151)
+          dexRegion = DEX_REGION_KANTO;
+        else if (natNum <= 251)
+          dexRegion = DEX_REGION_JOHTO;
+        else if (natNum <= 386)
+          dexRegion = DEX_REGION_HOENN;
+        else if (natNum <= 493)
+          dexRegion = DEX_REGION_SINNOH;
+        else if (natNum <= 649)
+          dexRegion = DEX_REGION_UNOVA;
+        else if (natNum <= 721)
+          dexRegion = DEX_REGION_KALOS;
+        else if (natNum <= 809)
+          dexRegion = DEX_REGION_ALOLA;
+        else if (natNum <= 905)
+          dexRegion = DEX_REGION_GALAR;
+        else
+          dexRegion = DEX_REGION_PALDEA;
+
+        if (dexRegion != region)
+          continue;
+        if (GetSetPokedexFlag(natNum, FLAG_GET_CAUGHT) == FALSE)
+          return FALSE;
+      }
+      return TRUE;
+    }
     if (sSideQuests[quest].subquests[childQuest].spritetype == PKMN) {
       u16 species = sSideQuests[quest].subquests[childQuest].sprite;
       return GetSetPokedexFlag(SpeciesToNationalPokedexNum(species),
@@ -1007,10 +1044,10 @@ void QuestMenu_SetQuestState(u8 quest, u8 state) {
   if (quest >= QUEST_COUNT)
     return;
 
-  // Clear all 5 bits first
-  for (i = 0; i < 5; i++) {
-    u8 curIndex = (quest * 5 + i) / 8;
-    u8 curBit = (quest * 5 + i) % 8;
+  // Clear all 6 bits first
+  for (i = 0; i < 6; i++) {
+    u8 curIndex = (quest * 6 + i) / 8;
+    u8 curBit = (quest * 6 + i) % 8;
     gSaveBlock2Ptr->questData[curIndex] &= ~(1 << curBit);
   }
 
@@ -1019,21 +1056,21 @@ void QuestMenu_SetQuestState(u8 quest, u8 state) {
   case 0: // Locked
     // All bits already cleared by loop above
     break;
-  case 1: // Unlocked
+  case 1: // Unlocked / Inactive
     // Only unlocked bit set
     {
-      u8 curIndex = (quest * 5 + 0) / 8;
-      u8 curBit = (quest * 5 + 0) % 8;
+      u8 curIndex = (quest * 6 + 0) / 8;
+      u8 curBit = (quest * 6 + 0) % 8;
       gSaveBlock2Ptr->questData[curIndex] |= (1 << curBit);
     }
     break;
   case 2: // Active
     // Unlocked and Active bits set
     {
-      u8 curIndex0 = (quest * 5 + 0) / 8;
-      u8 curBit0 = (quest * 5 + 0) % 8;
-      u8 curIndex1 = (quest * 5 + 1) / 8;
-      u8 curBit1 = (quest * 5 + 1) % 8;
+      u8 curIndex0 = (quest * 6 + 0) / 8;
+      u8 curBit0 = (quest * 6 + 0) % 8;
+      u8 curIndex1 = (quest * 6 + 1) / 8;
+      u8 curBit1 = (quest * 6 + 1) % 8;
       gSaveBlock2Ptr->questData[curIndex0] |= (1 << curBit0);
       gSaveBlock2Ptr->questData[curIndex1] |= (1 << curBit1);
     }
@@ -1041,12 +1078,23 @@ void QuestMenu_SetQuestState(u8 quest, u8 state) {
   case 3: // Completed
     // Unlocked and Completed bits set
     {
-      u8 curIndex0 = (quest * 5 + 0) / 8;
-      u8 curBit0 = (quest * 5 + 0) % 8;
-      u8 curIndex3 = (quest * 5 + 3) / 8;
-      u8 curBit3 = (quest * 5 + 3) % 8;
+      u8 curIndex0 = (quest * 6 + 0) / 8;
+      u8 curBit0 = (quest * 6 + 0) % 8;
+      u8 curIndex3 = (quest * 6 + 3) / 8;
+      u8 curBit3 = (quest * 6 + 3) % 8;
       gSaveBlock2Ptr->questData[curIndex0] |= (1 << curBit0);
       gSaveBlock2Ptr->questData[curIndex3] |= (1 << curBit3);
+    }
+    break;
+  case 4: // Failed
+    // Unlocked and Failed bits set
+    {
+      u8 curIndex0 = (quest * 6 + 0) / 8;
+      u8 curBit0 = (quest * 6 + 0) % 8;
+      u8 curIndex4 = (quest * 6 + 4) / 8;
+      u8 curBit4 = (quest * 6 + 4) % 8;
+      gSaveBlock2Ptr->questData[curIndex0] |= (1 << curBit0);
+      gSaveBlock2Ptr->questData[curIndex4] |= (1 << curBit4);
     }
     break;
   }
@@ -1060,14 +1108,15 @@ u8 QuestMenu_GetSetQuestState(u8 quest, u8 caseId) {
   if (quest >= QUEST_COUNT)
     return 0;
 
-  index = quest * 5 / 8;
-  bit = quest * 5 % 8;
+  index = quest * 6 / 8;
+  bit = quest * 6 % 8;
 
   // 0 : locked
-  // 1 : actived
-  // 2 : rewarded
+  // 1 : active
+  // 2 : reward
   // 3 : completed
-  // 4 : favorited
+  // 4 : failed
+  // 5 : favorited
 
   switch (caseId) {
   case FLAG_GET_UNLOCKED:
@@ -1088,10 +1137,14 @@ u8 QuestMenu_GetSetQuestState(u8 quest, u8 caseId) {
   case FLAG_SET_COMPLETED:
     bit += 3;
     break;
+  case FLAG_GET_FAILED:
+  case FLAG_SET_FAILED:
+    bit += 4;
+    break;
   case FLAG_GET_FAVORITE:
   case FLAG_SET_FAVORITE:
   case FLAG_REMOVE_FAVORITE:
-    bit += 4;
+    bit += 5;
     break;
   }
   if (bit >= 8) {
@@ -1120,40 +1173,48 @@ u8 QuestMenu_GetSetQuestState(u8 quest, u8 caseId) {
     return 1;
   case FLAG_GET_INACTIVE:
     // Must be unlocked first (bit 0)
-    u8 uq = quest * 5 / 8;
-    u8 ub = quest * 5 % 8;
-    u8 um = 1 << ub;
-    if (!(gSaveBlock2Ptr->questData[uq] & um)) {
-      return FALSE;
+    {
+      u8 uq = quest * 6 / 8;
+      u8 ub = quest * 6 % 8;
+      u8 um = 1 << ub;
+      if (!(gSaveBlock2Ptr->questData[uq] & um)) {
+        return FALSE;
+      }
+      // Then check bits 1,2,3,4 (active, reward, completed, failed) are all zero
+      u8 ab = bit;     // = bit from first switch (quest*6+1)
+      u8 rb = bit + 1; // quest*6+2
+      u8 cb = bit + 2; // quest*6+3
+      u8 fb = bit + 3; // quest*6+4
+      u8 ai = index, ri = index, ci = index, fi = index;
+      if (ab >= 8) {
+        ai += 1;
+        ab %= 8;
+      }
+      if (rb >= 8) {
+        ri += 1;
+        rb %= 8;
+      }
+      if (cb >= 8) {
+        ci += 1;
+        cb %= 8;
+      }
+      if (fb >= 8) {
+        fi += 1;
+        fb %= 8;
+      }
+      if ((gSaveBlock2Ptr->questData[ai] & (1 << ab)) ||
+          (gSaveBlock2Ptr->questData[ri] & (1 << rb)) ||
+          (gSaveBlock2Ptr->questData[ci] & (1 << cb)) ||
+          (gSaveBlock2Ptr->questData[fi] & (1 << fb))) {
+        return FALSE;
+      }
+      return TRUE;
     }
-    // Then check bits 1,2,3 (active, reward, completed) are all zero
-    u8 ab = bit;     // = bit from first switch (quest*5+1)
-    u8 rb = bit + 1; // quest*5+2
-    u8 cb = bit + 2; // quest*5+3
-    u8 ai = index, ri = index, ci = index;
-    if (ab >= 8) {
-      ai += 1;
-      ab %= 8;
-    }
-    if (rb >= 8) {
-      ri += 1;
-      rb %= 8;
-    }
-    if (cb >= 8) {
-      ci += 1;
-      cb %= 8;
-    }
-    if ((gSaveBlock2Ptr->questData[ai] & (1 << ab)) ||
-        (gSaveBlock2Ptr->questData[ri] & (1 << rb)) ||
-        (gSaveBlock2Ptr->questData[ci] & (1 << cb))) {
-      return FALSE;
-    }
-    return TRUE;
   case FLAG_GET_ACTIVE:
     if (sSideQuests[quest].numSubquests > 0) {
       // Unlocked if explicitly unlocked OR any subquest is completed
-      u8 unlockedIndex = (quest * 5 + 0) / 8;
-      u8 unlockedBit = (quest * 5 + 0) % 8;
+      u8 unlockedIndex = (quest * 6 + 0) / 8;
+      u8 unlockedBit = (quest * 6 + 0) % 8;
       u8 unlockedMask = 1 << unlockedBit;
       bool8 unlocked =
           (gSaveBlock2Ptr->questData[unlockedIndex] & unlockedMask) != 0;
@@ -1179,7 +1240,18 @@ u8 QuestMenu_GetSetQuestState(u8 quest, u8 caseId) {
     return gSaveBlock2Ptr->questData[index] & mask;
   case FLAG_SET_ACTIVE:
     gSaveBlock2Ptr->questData[index] |= mask;
-    gSaveBlock2Ptr->questData[quest * 5 / 8] |= (1 << (quest * 5 % 8));
+    gSaveBlock2Ptr->questData[quest * 6 / 8] |= (1 << (quest * 6 % 8));
+    {
+      u8 rewardIndex = (quest * 6 + 2) / 8;
+      u8 rewardBit = (quest * 6 + 2) % 8;
+      u8 completedIndex = (quest * 6 + 3) / 8;
+      u8 completedBit = (quest * 6 + 3) % 8;
+      u8 failedIndex = (quest * 6 + 4) / 8;
+      u8 failedBit = (quest * 6 + 4) % 8;
+      gSaveBlock2Ptr->questData[rewardIndex] &= ~(1 << rewardBit);
+      gSaveBlock2Ptr->questData[completedIndex] &= ~(1 << completedBit);
+      gSaveBlock2Ptr->questData[failedIndex] &= ~(1 << failedBit);
+    }
     return 1;
   case FLAG_REMOVE_ACTIVE:
     gSaveBlock2Ptr->questData[index] &= ~mask;
@@ -1207,7 +1279,18 @@ u8 QuestMenu_GetSetQuestState(u8 quest, u8 caseId) {
     return gSaveBlock2Ptr->questData[index] & mask;
   case FLAG_SET_REWARD:
     gSaveBlock2Ptr->questData[index] |= mask;
-    gSaveBlock2Ptr->questData[quest * 5 / 8] |= (1 << (quest * 5 % 8));
+    gSaveBlock2Ptr->questData[quest * 6 / 8] |= (1 << (quest * 6 % 8));
+    {
+      u8 activeIndex = (quest * 6 + 1) / 8;
+      u8 activeBit = (quest * 6 + 1) % 8;
+      u8 completedIndex = (quest * 6 + 3) / 8;
+      u8 completedBit = (quest * 6 + 3) % 8;
+      u8 failedIndex = (quest * 6 + 4) / 8;
+      u8 failedBit = (quest * 6 + 4) % 8;
+      gSaveBlock2Ptr->questData[activeIndex] &= ~(1 << activeBit);
+      gSaveBlock2Ptr->questData[completedIndex] &= ~(1 << completedBit);
+      gSaveBlock2Ptr->questData[failedIndex] &= ~(1 << failedBit);
+    }
     return 1;
   case FLAG_REMOVE_REWARD:
     gSaveBlock2Ptr->questData[index] &= ~mask;
@@ -1258,14 +1341,34 @@ u8 QuestMenu_GetSetQuestState(u8 quest, u8 caseId) {
     return gSaveBlock2Ptr->questData[index] & mask;
   case FLAG_SET_COMPLETED:
     gSaveBlock2Ptr->questData[index] |= mask;
-    gSaveBlock2Ptr->questData[quest * 5 / 8] |= (1 << (quest * 5 % 8));
+    gSaveBlock2Ptr->questData[quest * 6 / 8] |= (1 << (quest * 6 % 8));
     {
-      u8 activeIndex = (quest * 5 + 1) / 8;
-      u8 activeBit = (quest * 5 + 1) % 8;
-      u8 rewardIndex = (quest * 5 + 2) / 8;
-      u8 rewardBit = (quest * 5 + 2) % 8;
+      u8 activeIndex = (quest * 6 + 1) / 8;
+      u8 activeBit = (quest * 6 + 1) % 8;
+      u8 rewardIndex = (quest * 6 + 2) / 8;
+      u8 rewardBit = (quest * 6 + 2) % 8;
+      u8 failedIndex = (quest * 6 + 4) / 8;
+      u8 failedBit = (quest * 6 + 4) % 8;
       gSaveBlock2Ptr->questData[activeIndex] &= ~(1 << activeBit);
       gSaveBlock2Ptr->questData[rewardIndex] &= ~(1 << rewardBit);
+      gSaveBlock2Ptr->questData[failedIndex] &= ~(1 << failedBit);
+    }
+    return 1;
+  case FLAG_GET_FAILED:
+    return gSaveBlock2Ptr->questData[index] & mask;
+  case FLAG_SET_FAILED:
+    gSaveBlock2Ptr->questData[index] |= mask;
+    gSaveBlock2Ptr->questData[quest * 6 / 8] |= (1 << (quest * 6 % 8));
+    {
+      u8 activeIndex = (quest * 6 + 1) / 8;
+      u8 activeBit = (quest * 6 + 1) % 8;
+      u8 rewardIndex = (quest * 6 + 2) / 8;
+      u8 rewardBit = (quest * 6 + 2) % 8;
+      u8 completedIndex = (quest * 6 + 3) / 8;
+      u8 completedBit = (quest * 6 + 3) % 8;
+      gSaveBlock2Ptr->questData[activeIndex] &= ~(1 << activeBit);
+      gSaveBlock2Ptr->questData[rewardIndex] &= ~(1 << rewardBit);
+      gSaveBlock2Ptr->questData[completedIndex] &= ~(1 << completedBit);
     }
     return 1;
   case FLAG_GET_FAVORITE:
@@ -1366,6 +1469,19 @@ u8 CountCompletedQuests(void) {
     }
   }
 
+  return q;
+}
+
+u8 CountFailedQuests(void) {
+  u8 q = 0, i = 0;
+
+  for (i = 0; i < QUEST_COUNT; i++) {
+    if (QuestMenu_GetSetQuestState(i, FLAG_GET_FAILED)) {
+      if (DoesQuestMatchCategory(i)) {
+        q++;
+      }
+    }
+  }
   return q;
 }
 
@@ -1485,11 +1601,31 @@ static void PrintDetailsForCancel() {
 
   QuestMenu_AddTextPrinterParameterized(1, 2, sText_Empty, 2, 3, 2, 0, 0, 0);
   QuestMenu_AddTextPrinterParameterized(1, 2, sText_Empty, 40, 19, 5, 0, 0, 0);
+  CopyWindowToVram(1, COPYWIN_GFX);
 
   QuestMenu_CreateSprite(-1, sStateDataPtr->spriteIconSlot, ITEM);
 }
 
+static void PrintDetailsForHidden(void) {
+  FillWindowPixelBuffer(1, 0);
+
+  QuestMenu_AddTextPrinterParameterized(1, 2, sText_Empty, 2, 3, 2, 0, 0, 0);
+  QuestMenu_AddTextPrinterParameterized(1, 2, sText_Empty, 40, 19, 5, 0, 0, 0);
+  CopyWindowToVram(1, COPYWIN_GFX);
+}
+
 void GenerateAndPrintQuestDetails(s32 questId) {
+  if (!IsSubquestMode()) {
+    if (!QuestMenu_GetSetQuestState(questId, FLAG_GET_UNLOCKED)) {
+      PrintDetailsForHidden();
+      return;
+    }
+  } else {
+    if (!IsSubquestCompletedState(questId)) {
+      PrintDetailsForHidden();
+      return;
+    }
+  }
   GenerateQuestLocation(questId);
   PrintQuestLocation(questId);
   GenerateQuestFlavorText(questId);
@@ -1539,10 +1675,21 @@ void GenerateQuestFlavorText(s32 questId) {
       UpdateQuestFlavorText(questId);
     }
     if (IsQuestRewardState(questId) == TRUE) {
-      StringCopy(gStringVar1, sText_ReturnRecieveReward);
+      if (sSideQuests[questId].rewarddesc != NULL) {
+        StringCopy(gStringVar1, sSideQuests[questId].rewarddesc);
+      } else {
+        StringCopy(gStringVar1, sText_ReturnRecieveReward);
+      }
     }
     if (IsQuestCompletedState(questId) == TRUE) {
       StringCopy(gStringVar1, sSideQuests[questId].donedesc);
+    }
+    if (IsQuestFailedState(questId) == TRUE) {
+      if (sSideQuests[questId].faileddesc != NULL) {
+        StringCopy(gStringVar1, sSideQuests[questId].faileddesc);
+      } else {
+        StringCopy(gStringVar1, sText_Empty);
+      }
     }
   } else {
     if (IsSubquestCompletedState(questId) == TRUE) {
@@ -1597,8 +1744,17 @@ bool8 IsQuestRewardState(s32 questId) {
   }
 }
 
+bool8 IsQuestFailedState(s32 questId) {
+  if (QuestMenu_GetSetQuestState(questId, FLAG_GET_FAILED)) {
+    return TRUE;
+  } else {
+    return FALSE;
+  }
+}
+
 bool8 IsQuestInactiveState(s32 questId) {
-  if (!QuestMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE)) {
+  if (!QuestMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE) &&
+      !QuestMenu_GetSetQuestState(questId, FLAG_GET_FAILED)) {
     return TRUE;
   } else {
     return FALSE;
@@ -1634,10 +1790,13 @@ void DetermineSpriteType(s32 questId) {
   u8 spriteType;
 
   if (IsSubquestMode() == FALSE) {
-    spriteId = GetQuestSprite(questId);
-    spriteType = GetQuestSpriteType(questId);
-
-    QuestMenu_CreateSprite(spriteId, sStateDataPtr->spriteIconSlot, spriteType);
+    if (!QuestMenu_GetSetQuestState(questId, FLAG_GET_UNLOCKED)) {
+      QuestMenu_CreateSprite(ITEM_NONE, sStateDataPtr->spriteIconSlot, ITEM);
+    } else {
+      spriteId = GetQuestSprite(questId);
+      spriteType = GetQuestSpriteType(questId);
+      QuestMenu_CreateSprite(spriteId, sStateDataPtr->spriteIconSlot, spriteType);
+    }
   } else if (IsSubquestCompletedState(questId) == TRUE) {
     spriteId =
         sSideQuests[sStateDataPtr->parentQuest].subquests[questId].sprite;
@@ -2074,6 +2233,9 @@ u8 GenerateQuestState(u8 questId) {
   } else if (QuestMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE)) {
     StringCopy(gStringVar4, sText_Active);
     return 3;
+  } else if (QuestMenu_GetSetQuestState(questId, FLAG_GET_FAILED)) {
+    StringCopy(gStringVar4, sText_Failed);
+    return 5;
   } else {
     StringCopy(gStringVar4, sText_Empty);
   }
@@ -2144,6 +2306,10 @@ static void GenerateNumeratorNumQuests(void) {
     ConvertIntToDecimalStringN(gStringVar1, CountCompletedQuests(),
                                STR_CONV_MODE_LEFT_ALIGN, 6);
     break;
+  case SORT_FAILED:
+    ConvertIntToDecimalStringN(gStringVar1, CountFailedQuests(),
+                               STR_CONV_MODE_LEFT_ALIGN, 6);
+    break;
   }
 
   if (IsSubquestMode()) {
@@ -2180,6 +2346,10 @@ static void GenerateMenuContext(void) {
     questNamePointer =
         StringCopy(questNameArray[QUEST_ARRAY_COUNT], sText_CompletedHeader);
     break;
+  case SORT_FAILED:
+    questNamePointer =
+        StringCopy(questNameArray[QUEST_ARRAY_COUNT], sText_FailedHeader);
+    break;
   }
 
   if (IsAlphaMode()) {
@@ -2197,8 +2367,13 @@ static void PrintNumQuests(void) {
   QuestMenu_AddTextPrinterParameterized(2, 0, gStringVar4, 167, 1, 0, 1, 0, 0);
 }
 static void PrintMenuContext(void) {
-  QuestMenu_AddTextPrinterParameterized(2, 0, questNameArray[QUEST_ARRAY_COUNT],
-                                        90, 1, 0, 1, 0, 0);
+  if (IsSubquestMode()) {
+    QuestMenu_AddTextPrinterParameterized(2, 0, questNameArray[QUEST_ARRAY_COUNT],
+                                          10, 1, 0, 1, 0, 0);
+  } else {
+    QuestMenu_AddTextPrinterParameterized(2, 0, questNameArray[QUEST_ARRAY_COUNT],
+                                          90, 1, 0, 1, 0, 0);
+  }
 }
 static void PrintTypeFilterButton(void) {
   QuestMenu_AddTextPrinterParameterized(2, 0, sText_LType, 6, 1, 0, 1, 0, 0);

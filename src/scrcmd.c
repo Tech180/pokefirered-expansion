@@ -3191,6 +3191,9 @@ bool8 ScrCmd_questmenu(struct ScriptContext *ctx)
         case QUEST_MENU_COMPLETE_QUEST:
             QuestMenu_GetSetQuestState(questId, FLAG_SET_COMPLETED);
             break;
+        case QUEST_MENU_SET_FAILED:
+            QuestMenu_GetSetQuestState(questId, FLAG_SET_FAILED);
+            break;
         case QUEST_MENU_CHECK_UNLOCKED:
             gSpecialVar_Result = QuestMenu_GetSetQuestState(questId, FLAG_GET_UNLOCKED);
             break;
@@ -3205,6 +3208,9 @@ bool8 ScrCmd_questmenu(struct ScriptContext *ctx)
             break;
         case QUEST_MENU_CHECK_COMPLETE:
             gSpecialVar_Result = QuestMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED);
+            break;
+        case QUEST_MENU_CHECK_FAILED:
+            gSpecialVar_Result = QuestMenu_GetSetQuestState(questId, FLAG_GET_FAILED);
             break;
         case QUEST_MENU_BUFFER_QUEST_NAME:
             QuestMenu_CopyQuestName(gStringVar1, questId);
