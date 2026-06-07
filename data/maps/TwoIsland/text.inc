@@ -56,16 +56,16 @@ TwoIsland_Text_ShopkeepersBrotherWorksGameCorner::
 TwoIsland_Text_BrunoCameToIslandWhileBack::
     .string "Listen, listen.\n"
     .string "Did you know?\p"
-    .string "A famous TRAINER came to the\n"
+    .string "A famous Trainer came to the\n"
     .string "ISLAND a little while back.\p"
     .string "He's one of the ELITE FOUR.\n"
-    .string "His name is BRUNO.\p"
+    .string "His name is Bruno.\p"
     .string "He went away disappointed when he\n"
     .string "found out that they were all sold\l"
     .string "out of Rage Candybars.$"
 
 TwoIsland_Text_BuyRareItemsHere::
-    .string "The discerning TRAINER knows to\n"
+    .string "The discerning Trainer knows to\n"
     .string "buy rare items here!$"
 
 TwoIsland_Text_OldWomanLivesOutOnCape::

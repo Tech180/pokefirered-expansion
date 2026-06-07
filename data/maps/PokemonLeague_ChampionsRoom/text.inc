@@ -9,11 +9,11 @@ PokemonLeague_ChampionsRoom_Text_Intro::
     .string "Not only that, I assembled teams\n"
     .string "that would beat any Pokémon type.\p"
     .string "And now…\p"
-    .string "I'm the Pokémon LEAGUE CHAMPION!\p"
+    .string "I'm the Pokémon League CHAMPION!\p"
     .string "{PLAYER}!\n"
     .string "Do you know what that means?\p"
     .string "I'll tell you.\p"
-    .string "I am the most powerful TRAINER in\n"
+    .string "I am the most powerful Trainer in\n"
     .string "the world!$"
 
 PokemonLeague_ChampionsRoom_Text_RematchIntro::
@@ -27,11 +27,11 @@ PokemonLeague_ChampionsRoom_Text_RematchIntro::
     .string "Not only that, I assembled teams\n"
     .string "that would beat any Pokémon type.\p"
     .string "And now…\p"
-    .string "I'm the Pokémon LEAGUE CHAMPION!\p"
+    .string "I'm the Pokémon League CHAMPION!\p"
     .string "{PLAYER}!\n"
     .string "Do you know what that means?\p"
     .string "I'll tell you.\p"
-    .string "I am the most powerful TRAINER in\n"
+    .string "I am the most powerful Trainer in\n"
     .string "the world!$"
 
 PokemonLeague_ChampionsRoom_Text_Defeat::
@@ -69,7 +69,7 @@ PokemonLeague_ChampionsRoom_Text_OakPlayer::
 PokemonLeague_ChampionsRoom_Text_OakCongratulations::
     .string "OAK: So, you've won!\n"
     .string "Sincerely, congratulations!\p"
-    .string "You're the new Pokémon LEAGUE\n"
+    .string "You're the new Pokémon League\n"
     .string "CHAMPION!\p"
     .string "You've grown up so much since you\n"
     .string "first left with {STR_VAR_1} to work\l"

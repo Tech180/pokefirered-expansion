@@ -8,8 +8,8 @@ ViridianCity_Mart_Text_TakeThisToProfOak::
     .string "Can I get you to take it to him?$"
 
 ViridianCity_Mart_Text_ReceivedOaksParcelFromClerk::
-    .string "{PLAYER} received OAK'S PARCEL\n"
-    .string "from the Pokémon MART clerk.$"
+    .string "{PLAYER} received Oak's Parcel\n"
+    .string "from the Pokémon Mart clerk.$"
 
 ViridianCity_Mart_Text_SayHiToOakForMe::
     .string "Okay, thanks! Please say hi to\n"

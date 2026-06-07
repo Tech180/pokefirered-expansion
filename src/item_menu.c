@@ -224,7 +224,7 @@ static const u8 sText_CantStoreImportantItems[] = _("Important items\ncan't be s
 static const u8 *const sPocketNamesStringsTable[] = {
     [POCKET_ITEMS] = COMPOUND_STRING("ITEMS"),
     [POCKET_KEY_ITEMS] = COMPOUND_STRING("KEY ITEMS"),
-    [POCKET_POKE_BALLS] = COMPOUND_STRING("POKé BALLS"),
+    [POCKET_POKE_BALLS] = COMPOUND_STRING("Poké Balls"),
 };
 
 static void Task_LoadBagSortOptions(u8 taskId);

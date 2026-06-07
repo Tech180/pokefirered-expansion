@@ -12,7 +12,7 @@ LavenderTown_Mart_Text_DidYouBuyRevives::
     .string "They revive any fainted Pokémon!$"
 
 LavenderTown_Mart_Text_TrainerDuosCanChallengeYou::
-    .string "Sometimes, a TRAINER duo will\n"
+    .string "Sometimes, a Trainer duo will\n"
     .string "challenge you with two Pokémon\l"
     .string "at the same time.\p"
     .string "If that happens, you have to send\n"

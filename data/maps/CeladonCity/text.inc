@@ -4,7 +4,7 @@ CeladonCity_Text_GotMyKoffingInCinnabar::
     .string "poison when it's angry.$"
 
 CeladonCity_Text_GymIsGreatFullOfWomen::
-    .string "Heheh! This GYM is great!\n"
+    .string "Heheh! This Gym is great!\n"
     .string "It's full of women!$"
 
 CeladonCity_Text_GameCornerIsBadForCitysImage::
@@ -35,7 +35,7 @@ CeladonCity_Text_KeepOutOfTeamRocketsWay::
     .string "Keep out of TEAM ROCKET's way!$"
 
 CeladonCity_Text_ExplainXAccuracyDireHit::
-    .string "TRAINER TIPS\p"
+    .string "Trainer Tips\p"
     .string "X ACCURACY boosts the accuracy of\n"
     .string "techniques.\p"
     .string "DIRE HIT jacks up the likelihood\n"
@@ -48,8 +48,8 @@ CeladonCity_Text_CitySign::
     .string "The City of Rainbow Dreams$"
 
 CeladonCity_Text_GymSign::
-    .string "Celadon City Pokémon GYM\n"
-    .string "LEADER: ERIKA\l"
+    .string "Celadon City Pokémon Gym\n"
+    .string "LEADER: Erika\l"
     .string "The Nature-Loving Princess!$"
 
 CeladonCity_Text_MansionSign::
@@ -60,7 +60,7 @@ CeladonCity_Text_DeptStoreSign::
     .string "Celadon Dept. STORE!$"
 
 CeladonCity_Text_GuardSpecProtectsFromStatus::
-    .string "TRAINER TIPS\p"
+    .string "Trainer Tips\p"
     .string "GUARD SPEC. protects Pokémon\n"
     .string "from status-reduction moves during\l"
     .string "battle.\p"

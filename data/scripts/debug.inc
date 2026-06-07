@@ -840,3 +840,14 @@ MossdeepCity_SpaceCenter_2F_Text_StevenHurryGetReadyQuickly:
 
 MossdeepCity_SpaceCenter_Text_TabithaDefeat:
 	.string "I'm with our leader…$"
+
+Debug_EventScript_QuestStatus::
+	callnative CheckQuestCounters
+	msgbox Debug_EventScript_QuestStatus_Text, MSGBOX_DEFAULT
+	release
+	end
+
+Debug_EventScript_QuestStatus_Text::
+	.string "{STR_VAR_1}\n"
+	.string "{STR_VAR_2}\n"
+	.string "{STR_VAR_3}$"

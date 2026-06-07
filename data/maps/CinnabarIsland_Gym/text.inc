@@ -1,7 +1,7 @@
 CinnabarIsland_Gym_Text_BlaineIntro::
     .string "Hah!\p"
-    .string "I am BLAINE, the red-hot LEADER\n"
-    .string "of CINNABAR GYM!\p"
+    .string "I am Blaine, the red-hot LEADER\n"
+    .string "of Cinnabar Gym!\p"
     .string "My fiery Pokémon are all rough\n"
     .string "and ready with intense heat!\p"
     .string "They incinerate all challengers!\p"
@@ -26,7 +26,7 @@ CinnabarIsland_Gym_Text_ExplainVolcanoBadge::
 
 CinnabarIsland_Gym_Text_ReceivedTM38FromBlaine::
     .string "{PLAYER} received TM38\n"
-    .string "from BLAINE.$"
+    .string "from Blaine.$"
 
 CinnabarIsland_Gym_Text_BlainePostBattle::
     .string "TM38 contains FIRE BLAST.\n"
@@ -53,7 +53,7 @@ CinnabarIsland_Gym_Text_ErikPostBattle::
 
 CinnabarIsland_Gym_Text_QuinnIntro::
     .string "I was a thief, but I went straight\n"
-    .string "as a TRAINER.$"
+    .string "as a Trainer.$"
 
 CinnabarIsland_Gym_Text_QuinnDefeat::
     .string "I surrender!$"
@@ -86,22 +86,22 @@ CinnabarIsland_Gym_Text_RamonPostBattle::
     .string "I'd use that!$"
 
 CinnabarIsland_Gym_Text_DerekIntro::
-    .string "I know why BLAINE became a\n"
-    .string "TRAINER.$"
+    .string "I know why Blaine became a\n"
+    .string "Trainer.$"
 
 CinnabarIsland_Gym_Text_DerekDefeat::
     .string "Ow!$"
 
 CinnabarIsland_Gym_Text_DerekPostBattle::
-    .string "Our LEADER, BLAINE, became lost\n"
+    .string "Our LEADER, Blaine, became lost\n"
     .string "in the mountains but good.\p"
     .string "Night fell when a fiery bird\n"
     .string "Pokémon appeared.\p"
-    .string "Its light allowed BLAINE to find\n"
+    .string "Its light allowed Blaine to find\n"
     .string "his way down safely.$"
 
 CinnabarIsland_Gym_Text_DustyIntro::
-    .string "I've been to many GYMS, but this\n"
+    .string "I've been to many Gyms, but this\n"
     .string "one best suits my style.$"
 
 CinnabarIsland_Gym_Text_DustyDefeat::
@@ -127,7 +127,7 @@ CinnabarIsland_Gym_Text_ZacPostBattle::
 CinnabarIsland_Gym_Text_GymGuyAdvice::
     .string "Yo!\n"
     .string "Champ in the making!\p"
-    .string "The hotheaded BLAINE is a FIRE\n"
+    .string "The hotheaded Blaine is a FIRE\n"
     .string "Pokémon pro.\p"
     .string "Douse his spirits with water!\p"
     .string "You'd better take some\n"
@@ -138,24 +138,24 @@ CinnabarIsland_Gym_Text_GymGuyPostVictory::
     .string "You beat that firebrand!$"
 
 CinnabarIsland_Gym_Text_GymStatue::
-    .string "CINNABAR Pokémon GYM\n"
-    .string "LEADER: BLAINE\p"
-    .string "WINNING TRAINERS:\n"
+    .string "CINNABAR Pokémon Gym\n"
+    .string "LEADER: Blaine\p"
+    .string "WINNING Trainers:\n"
     .string "{RIVAL}$"
 
 CinnabarIsland_Gym_Text_GymStatuePlayerWon::
-    .string "CINNABAR Pokémon GYM\n"
-    .string "LEADER: BLAINE\p"
-    .string "WINNING TRAINERS:\n"
+    .string "CINNABAR Pokémon Gym\n"
+    .string "LEADER: Blaine\p"
+    .string "WINNING Trainers:\n"
     .string "{RIVAL}, {PLAYER}$"
 
 CinnabarIsland_Gym_Text_PokemonQuizRules::
     .string "Pokémon Quiz!\p"
     .string "Get it right, and the door opens to\n"
     .string "the next room.\p"
-    .string "Get it wrong, and face a TRAINER!\p"
+    .string "Get it wrong, and face a Trainer!\p"
     .string "If you want to conserve your\n"
-    .string "Pokémon for the GYM LEADER…\p"
+    .string "Pokémon for the Gym Leader…\p"
     .string "Then get it right!\n"
     .string "Here we go!$"
 

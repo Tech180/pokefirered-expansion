@@ -35,7 +35,7 @@ SixIsland_PatternBush_Text_GarretDefeat::
 
 SixIsland_PatternBush_Text_GarretPostBattle::
     .string "There's a girl near the BUSH who\n"
-    .string "measures HERACROSS for TRAINERS.$"
+    .string "measures HERACROSS for Trainers.$"
 
 SixIsland_PatternBush_Text_JonahIntro::
     .string "You know, it just doesn't feel right\n"

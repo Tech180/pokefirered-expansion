@@ -7,8 +7,8 @@ static const u8 sText_PokeSum_FatefulEncounterHatched[] = _("{DYNAMIC 0x00} natu
 static const u8 sText_PokeSum_ApparentlyFatefulEncounterHatched[] = _("{DYNAMIC 0x00} nature. Apparently met in\na fateful encounter (hatched:\n{DYNAMIC 0x02} at {LV_2} {DYNAMIC 0x01}).");
 static const u8 sText_PokeSum_ATrade[] = _("a trade");
 static const u8 gText_Somewhere[] = _("Somewhere");
-static const u8 sText_PokeSum_PageName_PokemonInfo[] = _("POKéMON INFO");
-static const u8 sText_PokeSum_PageName_PokemonSkills[] = _("POKéMON SKILLS");
+static const u8 sText_PokeSum_PageName_PokemonInfo[] = _("Pokémon INFO");
+static const u8 sText_PokeSum_PageName_PokemonSkills[] = _("Pokémon SKILLS");
 static const u8 sText_PokeSum_PageName_KnownMoves[] = _("KNOWN MOVES");
 static const u8 sText_PokeSum_NoData[] = _("No data");
 static const u8 sText_PokeSum_ExpPoints[] = _("EXP. POINTS");
@@ -352,11 +352,11 @@ static const u8 *const sEggHatchTimeTexts[] =
 
 static const u8 *const sEggOriginTexts[] =
 {
-    [EGG_ORIGIN_DAYCARE]       = COMPOUND_STRING("An odd POKéMON EGG found by the\nDAY-CARE couple."),
-    [EGG_ORIGIN_TRADE]         = COMPOUND_STRING("A peculiar POKéMON EGG obtained\nin a trade."),
-    [EGG_ORIGIN_TRAVELING_MAN] = COMPOUND_STRING("An odd POKéMON EGG obtained from\nthe traveling man."),
-    [EGG_ORIGIN_NICE_PLACE]    = COMPOUND_STRING("A wondrously peculiar POKéMON EGG\nobtained at a nice place."),
-    [EGG_ORIGIN_SPA]           = COMPOUND_STRING("An odd POKéMON EGG obtained from\nan old woman at the SPA."),
+    [EGG_ORIGIN_DAYCARE]       = COMPOUND_STRING("An odd Pokémon EGG found by the\nDAY-CARE couple."),
+    [EGG_ORIGIN_TRADE]         = COMPOUND_STRING("A peculiar Pokémon EGG obtained\nin a trade."),
+    [EGG_ORIGIN_TRAVELING_MAN] = COMPOUND_STRING("An odd Pokémon EGG obtained from\nthe traveling man."),
+    [EGG_ORIGIN_NICE_PLACE]    = COMPOUND_STRING("A wondrously peculiar Pokémon EGG\nobtained at a nice place."),
+    [EGG_ORIGIN_SPA]           = COMPOUND_STRING("An odd Pokémon EGG obtained from\nan old woman at the SPA."),
 };
 
 static const u8 sPrintMoveTextColors[][3] =

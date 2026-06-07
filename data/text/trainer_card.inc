@@ -1,7 +1,7 @@
 CeladonCity_GameCorner_Text_TryPokemonPrinter::
 	.string "It's a Pokémon PRINTER!\p"
 	.string "It can put a print of your Pokémon\n"
-	.string "on the back of your TRAINER CARD.\p"
+	.string "on the back of your Trainer CARD.\p"
 	.string "It costs only ¥50.\n"
 	.string "Would you like to try it?$"
 
@@ -18,7 +18,7 @@ CeladonCity_GameCorner_Text_BigSmileForPhoto::
 
 CeladonCity_GameCorner_Text_PrintIsReadyCheckTrainerCard::
 	.string "Your Pokémon print is ready!\n"
-	.string "Check your TRAINER CARD.$"
+	.string "Check your Trainer CARD.$"
 
 FourIsland_House2_Text_WishICouldShowOffStickers::
 	.string "Giggle…\n"
@@ -64,7 +64,7 @@ FourIsland_House2_Text_WowHoFHigh::
 	.string "Whoa! You've made it into the\n"
 	.string "HALL OF FAME that often?\l"
 	.string "That's seriously incredible, yup!\p"
-	.string "You own the Pokémon LEAGUE!\n"
+	.string "You own the Pokémon League!\n"
 	.string "I'll give you one of these.$"
 
 FourIsland_House2_Text_WowHoFHighest::
@@ -75,7 +75,7 @@ FourIsland_House2_Text_WowHoFHighest::
 
 FourIsland_House2_Text_HoFStickerApplied::
 	.string "The HALL OF FAME STICKER was\n"
-	.string "applied to the TRAINER CARD.$"
+	.string "applied to the Trainer CARD.$"
 
 FourIsland_House2_Text_ComeBackWithBetterStoryHoF::
 	.string "Hmm…\p"
@@ -114,7 +114,7 @@ FourIsland_House2_Text_WowEggsHighest::
 
 FourIsland_House2_Text_EggStickerApplied::
 	.string "The EGG STICKER was applied\n"
-	.string "to the TRAINER CARD.$"
+	.string "to the Trainer CARD.$"
 
 FourIsland_House2_Text_ComeBackWithBetterStoryEggs::
 	.string "Hmm…\p"
@@ -154,7 +154,7 @@ FourIsland_House2_Text_WowLinkWinsHighest::
 
 FourIsland_House2_Text_VictoryStickerApplied::
 	.string "The VICTORY STICKER was applied\n"
-	.string "to the TRAINER CARD.$"
+	.string "to the Trainer CARD.$"
 
 FourIsland_House2_Text_ComeBackWithBetterStoryLinkWins::
 	.string "Hmm…\p"

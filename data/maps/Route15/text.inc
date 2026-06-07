@@ -8,7 +8,7 @@ Route15_Text_KindraDefeat::
 Route15_Text_KindraPostBattle::
     .string "You can't change the nickname of\n"
     .string "any Pokémon you get in a trade.\p"
-    .string "Only the Original TRAINER can get\n"
+    .string "Only the Original Trainer can get\n"
     .string "the nickname changed.$"
 
 Route15_Text_BeckyIntro::

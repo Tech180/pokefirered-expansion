@@ -119,7 +119,7 @@ Route19_Text_RouteSign::
 
 Route19_Text_LiaIntro::
     .string "LIA: I'm looking after my brother.\n"
-    .string "He just became a TRAINER.$"
+    .string "He just became a Trainer.$"
 
 Route19_Text_LiaDefeat::
     .string "LIA: That's no way to treat my\n"

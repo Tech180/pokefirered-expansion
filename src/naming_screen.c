@@ -290,7 +290,7 @@ static const struct SpriteSheet sSpriteSheets[];
 static const struct SpritePalette sSpritePalettes[];
 static const struct NamingScreenTemplate *const sNamingScreenTemplates[];
 
-static const u8 gText_MoveOkBack[] = _("{DPAD_ANY}MOVE {A_BUTTON}OK {B_BUTTON}BACK");
+static const u8 gText_MoveOkBack[] = _("{DPAD_ANY}Move {A_BUTTON}OK {B_BUTTON}Back");
 
 static const u16 sPCIconOff_Gfx[] = INCBIN_U16("graphics/naming_screen/pc_icon_off.4bpp");
 static const u16 sPCIconOn_Gfx[] = INCBIN_U16("graphics/naming_screen/pc_icon_on.4bpp");
@@ -2059,7 +2059,7 @@ static const struct NamingScreenTemplate sPlayerNamingScreenTemplate =
     .iconFunction = 1,
     .addGenderIcon = 0,
     .initialPage = KBPAGE_LETTERS_UPPER,
-    .title = COMPOUND_STRING("YOUR NAME?"),
+    .title = COMPOUND_STRING("Your Name?"),
 };
 
 static const struct NamingScreenTemplate sPcBoxNamingScreenTemplate =
@@ -2069,7 +2069,7 @@ static const struct NamingScreenTemplate sPcBoxNamingScreenTemplate =
     .iconFunction = 2,
     .addGenderIcon = 0,
     .initialPage = KBPAGE_LETTERS_UPPER,
-    .title = COMPOUND_STRING("BOX NAME?"),
+    .title = COMPOUND_STRING("Box Name?"),
 };
 
 static const struct NamingScreenTemplate sMonNamingScreenTemplate =
@@ -2089,7 +2089,7 @@ static const struct NamingScreenTemplate sRivalNamingScreenTemplate =
     .iconFunction = 4,
     .addGenderIcon = 0,
     .initialPage = KBPAGE_LETTERS_UPPER,
-    .title = COMPOUND_STRING("RIVAL's NAME?"),
+    .title = COMPOUND_STRING("Rival's Name?"),
 };
 
 static const struct NamingScreenTemplate *const sNamingScreenTemplates[] =

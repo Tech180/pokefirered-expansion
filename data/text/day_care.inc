@@ -3,7 +3,7 @@
 DayCare_Text_ImDaycareManSpeakToMyWife::
 	.string "I'm the DAY-CARE MAN.\p"
 	.string "I help take care of the precious\n"
-	.string "Pokémon of TRAINERS.\p"
+	.string "Pokémon of Trainers.\p"
 	.string "If you'd like me to raise your\n"
 	.string "Pokémon, have a word with my wife.$"
 

@@ -93,7 +93,7 @@ Route20_Text_MissyDefeat::
 Route20_Text_MissyPostBattle::
     .string "Pokémon have taken over an\n"
     .string "abandoned mansion on CINNABAR.\p"
-    .string "They call it the Pokémon MANSION\n"
+    .string "They call it the Pokémon Mansion\n"
     .string "now.$"
 
 Route20_Text_MelissaIntro::
@@ -114,7 +114,7 @@ Route20_Text_SeafoamIslands::
     .string "Seafoam Islands$"
 
 Route20_Text_MistyTrainsHere::
-    .string "Strong TRAINERS and WATER Pokémon\n"
+    .string "Strong Trainers and WATER Pokémon\n"
     .string "are common sights in these parts.\p"
-    .string "They say that MISTY of the\n"
-    .string "CERULEAN GYM trains here.$"
+    .string "They say that Misty of the\n"
+    .string "Cerulean Gym trains here.$"

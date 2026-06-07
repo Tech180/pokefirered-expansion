@@ -314,7 +314,7 @@ BattleFrontier_OutsideWest_Text_BattlePikeSign:
 
 BattleFrontier_OutsideWest_Text_ThisIsBattleTower:
 	.string "This is the BATTLE TOWER.\p"
-	.string "TRAINERS bring their best-raised\n"
+	.string "Trainers bring their best-raised\n"
 	.string "Pokémon for elimination-style matches.$"
 
 BattleFrontier_OutsideWest_Text_MayISeeYourTicket:
@@ -368,9 +368,9 @@ BattleFrontier_OutsideWest_Text_GotSeasickOnWayHere:
 BattleFrontier_OutsideWest_Text_OnlyToughTrainersBroughtHere:
 	.string "It's not as if just anyone can come\n"
 	.string "here, you know?\p"
-	.string "Only those TRAINERS who've been\n"
+	.string "Only those Trainers who've been\n"
 	.string "recognized as tough are brought here.\p"
-	.string "That's why many TRAINERS don't even\n"
+	.string "That's why many Trainers don't even\n"
 	.string "know about the Battle Frontier.$"
 
 BattleFrontier_OutsideWest_Text_SureWeCanChallengeWithNoMons:
@@ -491,21 +491,21 @@ BattleFrontier_OutsideWest_Text_DomeAceIsMine:
 	.string "Oh, shush!\n"
 	.string "Keep that racket down!\p"
 	.string "You fair-weather fans should stick\n"
-	.string "to cheering for some GYM LEADER!\p"
+	.string "to cheering for some Gym Leader!\p"
 	.string "The DOME ACE is mine!\n"
 	.string "The only idol for me!$"
 
 BattleFrontier_OutsideWest_Text_FansOverThereUsedToBeTrainers:
 	.string "Those people squabbling over there…\p"
 	.string "It's hard to believe, but they once\n"
-	.string "were TRAINERS, and good ones, too.\p"
+	.string "were Trainers, and good ones, too.\p"
 	.string "They used to be incredibly tough,\n"
 	.string "and they were famous, too.\p"
 	.string "But they were obliterated by this\n"
-	.string "certain TRAINER at a tournament.\p"
+	.string "certain Trainer at a tournament.\p"
 	.string "They were so thoroughly whipped,\n"
-	.string "they became smitten by the TRAINER.\p"
-	.string "Now they're just fans of the TRAINER.\n"
+	.string "they became smitten by the Trainer.\p"
+	.string "Now they're just fans of the Trainer.\n"
 	.string "They go cheer for their idol at the\l"
 	.string "BATTLE DOME every day now.$"
 

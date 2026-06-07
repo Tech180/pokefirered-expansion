@@ -86,7 +86,7 @@ struct ShopInfo
 static const u8 sText_ShopBuy[] = _("BUY");
 static const u8 sText_ShopSell[] = _("SELL");
 static const u8 sText_ShopQuit[] = _("SEE YA!");
-static const u8 sText_InBagVar1[] = _("IN BAG:{FONT_SMALL} {STR_VAR_1}");
+static const u8 sText_InBagVar1[] = _("IN Bag:{FONT_SMALL} {STR_VAR_1}");
 static const u8 sText_QuitShopping[] = _("Quit shopping.");
 static const u8 sText_Var1CertainlyHowMany[] = _("{STR_VAR_1}? Certainly.\nHow many would you like?");
 static const u8 sText_Var1AndYouWantedVar2[] = _("{STR_VAR_1}, and you want {STR_VAR_2}.\nThat will be ¥{STR_VAR_3}. Okay?");

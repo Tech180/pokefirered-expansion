@@ -72,8 +72,8 @@ Text_MegaKickTaught::
 
 Route4_Text_PeopleLikeAndRespectBrock::
     .string "Oh, wow, that's the Boulder Badge!\n"
-    .string "You got it from BROCK, didn't you?\p"
-    .string "BROCK is cool. He's not just tough.\n"
+    .string "You got it from Brock, didn't you?\p"
+    .string "Brock is cool. He's not just tough.\n"
     .string "People like and respect him.\p"
-    .string "I want to become a GYM LEADER\n"
+    .string "I want to become a Gym Leader\n"
     .string "like him.$"

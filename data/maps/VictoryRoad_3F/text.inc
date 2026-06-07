@@ -17,7 +17,7 @@ Text_DoubleEdgeWhichMon::
 
 Text_DoubleEdgeTaught::
     .string "Keep that drive going for the\n"
-    .string "Pokémon LEAGUE!\p"
+    .string "Pokémon League!\p"
     .string "Take a run at them and knock 'em\n"
     .string "out!$"
 
@@ -28,11 +28,11 @@ VictoryRoad_3F_Text_GeorgeDefeat::
     .string "The rumors were true!$"
 
 VictoryRoad_3F_Text_GeorgePostBattle::
-    .string "So, it was you who beat GIOVANNI\n"
+    .string "So, it was you who beat Giovanni\n"
     .string "of TEAM ROCKET?$"
 
 VictoryRoad_3F_Text_AlexaIntro::
-    .string "TRAINERS live to seek stronger\n"
+    .string "Trainers live to seek stronger\n"
     .string "opponents.$"
 
 VictoryRoad_3F_Text_AlexaDefeat::
@@ -61,8 +61,8 @@ VictoryRoad_3F_Text_ColbyDefeat::
     .string "I don't believe it!$"
 
 VictoryRoad_3F_Text_ColbyPostBattle::
-    .string "All TRAINERS here are headed to\n"
-    .string "the Pokémon LEAGUE.\p"
+    .string "All Trainers here are headed to\n"
+    .string "the Pokémon League.\p"
     .string "Don't let down your guard.$"
 
 VictoryRoad_3F_Text_RayIntro::

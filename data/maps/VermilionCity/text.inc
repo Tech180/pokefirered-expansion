@@ -42,12 +42,12 @@ VermilionCity_Text_SnorlaxBlockingRoute12::
     .string "VERMILION POLICE$"
 
 VermilionCity_Text_PokemonFanClubSign::
-    .string "Pokémon FAN CLUB\n"
+    .string "Pokémon Fan Club\n"
     .string "All Pokémon fans welcome!$"
 
 VermilionCity_Text_GymSign::
-    .string "Vermilion City Pokémon GYM\n"
-    .string "LEADER: LT. SURGE\l"
+    .string "Vermilion City Pokémon Gym\n"
+    .string "LEADER: Lt. Surge\l"
     .string "The Lightning American!$"
 
 VermilionCity_Text_VermilionHarbor::

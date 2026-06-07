@@ -110,11 +110,12 @@ static void CreateFadeInTask(u8, u8);
 static void CreateFadeOutTask(u8, u8);
 static void PrintNameChoiceOptions(u8, u8);
 static void GetDefaultName(u8, u8);
+static inline void OakSpeechPrintMessage(const u8 *str, u8 speed, bool32 isStringVar4);
 
 static const u8 sText_Controls[] = _("CONTROLS");
 static const u8 sText_ABUTTONNext_BBUTTONBack[] = _("{A_BUTTON}NEXT {B_BUTTON}BACK");
-static const u8 sText_Boy[] = _("BOY");
-static const u8 sText_Girl[] = _("GIRL");
+static const u8 sText_Boy[] = _("Boy");
+static const u8 sText_Girl[] = _("Girl");
 
 extern const struct OamData gOamData_AffineOff_ObjBlend_32x32;
 extern const struct OamData gOamData_AffineOff_ObjNormal_32x32;
@@ -912,6 +913,34 @@ static void Task_NewGameScene(u8 taskId)
         CopyBgTilemapBufferToVram(1);
         break;
     case 7:
+        if (gSaveBlock2Ptr->optionsSkipTutorials)
+        {
+            // Skip tutorials: bypass controls guide, Pikachu intro, and Oak speech.
+            // Load Oak Speech background for the gender selection screen.
+            {
+                u32 size = 0;
+                sOakSpeechResources->oakSpeechBackgroundTiles = AllocAndDecompress(sOakSpeech_Background_Tiles, &size);
+                LoadBgTiles(1, sOakSpeechResources->oakSpeechBackgroundTiles, size, 0);
+                CopyToBgTilemapBuffer(1, sOakSpeech_Background_Tilemap, 0, 0);
+                CopyBgTilemapBufferToVram(1);
+                FillBgTilemapBufferRect(2, 0, 0, 0, 32, 32, 16);
+                CopyBgTilemapBufferToVram(2);
+            }
+            gPaletteFade.bufferTransferDisabled = FALSE;
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
+            SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_1D_MAP | DISPCNT_OBJ_ON);
+            ShowBg(0);
+            ShowBg(1);
+            ShowBg(2);
+            SetVBlankCallback(VBlankCB_NewGameScene);
+            gTextFlags.canABSpeedUpPrint = TRUE;
+            PlayBGM(MUS_ROUTE24);
+            gTasks[taskId].tTrainerPicPosX = -60;
+            OakSpeechPrintMessage(gOakSpeech_Text_AskPlayerGender, sOakSpeechResources->textSpeed, FALSE);
+            gTasks[taskId].func = Task_OakSpeech_ShowGenderOptions;
+            gMain.state = 0;
+            return;
+        }
         HofPCTopBar_AddWindow(0, 30, 0, 13, 0x1C4);
         FillBgTilemapBufferRect_Palette0(1, 0xD00F, 0,  0, 30, 2);
         FillBgTilemapBufferRect_Palette0(1, 0xD002, 0,  2, 30, 1);

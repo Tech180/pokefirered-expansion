@@ -79,7 +79,7 @@ PalletTown_ProfessorOaksLab_Text_OakThreeMonsChooseOne::
     .string "The Pokémon are held inside\n"
     .string "these Poké Balls.\p"
     .string "When I was young, I was a serious\n"
-    .string "Pokémon TRAINER.\p"
+    .string "Pokémon Trainer.\p"
     .string "But now, in my old age, I have\n"
     .string "only these three left.\p"
     .string "You can have one.\n"
@@ -143,12 +143,12 @@ PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe::
     .string "Well, it seems to be growing more\n"
     .string "attached to you.\p"
     .string "You must be talented as a Pokémon\n"
-    .string "TRAINER.\p"
+    .string "Trainer.\p"
     .string "What's that?\n"
     .string "You have something for me?$"
 
 PalletTown_ProfessorOaksLab_Text_DeliveredOaksParcel::
-    .string "{PLAYER} delivered OAK'S PARCEL.$"
+    .string "{PLAYER} delivered Oak's Parcel.$"
 
 PalletTown_ProfessorOaksLab_Text_OakCustomBallIOrdered::
     .string "Ah! \n"
@@ -254,12 +254,12 @@ PalletTown_ProfessorOaksLab_Text_EmailMessage::
     .string "There's an e-mail message here.\p"
     .string "…\p"
     .string "Finally!\n"
-    .string "The ultimate TRAINERS of the\l"
-    .string "Pokémon LEAGUE are ready to\l"
+    .string "The ultimate Trainers of the\l"
+    .string "Pokémon League are ready to\l"
     .string "take on all comers!\p"
     .string "Bring your best Pokémon and see\n"
-    .string "how you rate as a TRAINER!\p"
-    .string "Pokémon LEAGUE HQ\n"
+    .string "how you rate as a Trainer!\p"
+    .string "Pokémon League HQ\n"
     .string "Indigo Plateau\p"
     .string "PROF. OAK, please visit us!\n"
     .string "…$"
@@ -289,7 +289,7 @@ PalletTown_ProfessorOaksLab_Text_OakIsGoingToHaveRadioShow::
 PalletTown_ProfessorOaksLab_Text_OakIsAuthorityOnMons::
     .string "PROF. OAK may not look like much,\n"
     .string "but he's the authority on Pokémon.\p"
-    .string "Many Pokémon TRAINERS hold him in\n"
+    .string "Many Pokémon Trainers hold him in\n"
     .string "high regard.$"
 
 PalletTown_ProfessorOaksLab_Text_OakFavorToAskYouPlayer::

@@ -79,7 +79,7 @@ static const u8 sText_IsAsShownOkay[] = _("is as shown. Okay?");
 static const u8 sText_AllTextBeingEditedWill[] = _("All the text being edited will");
 static const u8 sText_BeDeletedThatOkay[] = _("be deleted. Is that okay?");
 static const u8 sText_QuitEditing[] = _("Quit editing?");
-static const u8 sText_StopGivingPkmnMail[] = _("Stop giving the POKéMON MAIL?");
+static const u8 sText_StopGivingPkmnMail[] = _("Stop giving the Pokémon MAIL?");
 static const u8 sText_Profile[] = _("PROFILE");
 static const u8 sText_AtTheBattlesStart[] = _("At the battle's start:");
 static const u8 sText_UponWinningABattle[] = _("Upon winning a battle:");
@@ -474,7 +474,7 @@ static const struct EasyChatScreenTemplate sEasyChatScreenTemplates[] = {
         .frameId = FRAMEID_GENERAL_2x3,
         .titleText = COMPOUND_STRING("Apprentice's phrase"),
         .instructionsText1 = COMPOUND_STRING("Find words which fit"),
-        .instructionsText2 = COMPOUND_STRING("the TRAINER's image."),
+        .instructionsText2 = COMPOUND_STRING("the Trainer's image."),
         .confirmText1 = COMPOUND_STRING("Apprentice's phrase:"),
         .confirmText2 = sText_IsAsShownOkay,
     },

@@ -14,7 +14,7 @@ EWRAM_DATA u8 *gItemIcon4x4Buffer = NULL;
 
 bool8 AllocItemIconTemporaryBuffers(void)
 {
-    gItemIconDecompressionBuffer = Alloc(0x120);
+    gItemIconDecompressionBuffer = Alloc(0x200);
     if (gItemIconDecompressionBuffer == NULL)
         return FALSE;
 
@@ -53,7 +53,10 @@ u8 AddItemIconSprite(u16 tilesTag, u16 paletteTag, enum Item itemId)
         return MAX_SPRITES;
 
     DecompressDataWithHeaderWram(GetItemIconPic(itemId), gItemIconDecompressionBuffer);
-    CopyItemIconPicTo4x4Buffer(gItemIconDecompressionBuffer, gItemIcon4x4Buffer);
+    if (GetDecompressedDataSize(GetItemIconPic(itemId)) >= 0x200)
+        CpuCopy16(gItemIconDecompressionBuffer, gItemIcon4x4Buffer, 0x200);
+    else
+        CopyItemIconPicTo4x4Buffer(gItemIconDecompressionBuffer, gItemIcon4x4Buffer);
     spriteSheet.data = gItemIcon4x4Buffer;
     spriteSheet.size = 0x200;
     spriteSheet.tag = tilesTag;
@@ -86,7 +89,10 @@ u8 AddCustomItemIconSprite(const struct SpriteTemplate *origTemplate, u16 tilesT
         return MAX_SPRITES;
 
     DecompressDataWithHeaderWram(GetItemIconPic(itemId), gItemIconDecompressionBuffer);
-    CopyItemIconPicTo4x4Buffer(gItemIconDecompressionBuffer, gItemIcon4x4Buffer);
+    if (GetDecompressedDataSize(GetItemIconPic(itemId)) >= 0x200)
+        CpuCopy16(gItemIconDecompressionBuffer, gItemIcon4x4Buffer, 0x200);
+    else
+        CopyItemIconPicTo4x4Buffer(gItemIconDecompressionBuffer, gItemIcon4x4Buffer);
     spriteSheet.data = gItemIcon4x4Buffer;
     spriteSheet.size = 0x200;
     spriteSheet.tag = tilesTag;

@@ -126,7 +126,7 @@ static const u8 sFameCheckerText_FlavorTextUI[] = _("{DPAD_ANY}PICK {A_BUTTON}RE
 static const u8 sFameCheckerOakName[] = _("OAK");
 static const u8 sFameCheckerDaisyName[] = _("DAISY");
 static const u8 sFameCheckerMrFujiName[] = _("FUJI");
-static const u8 sFameCheckerText_FameCheckerWillBeClosed[] = _("The FAME CHECKER will be closed.");
+static const u8 sFameCheckerText_FameCheckerWillBeClosed[] = _("The Fame Checker will be closed.");
 static const u8 sFameCheckerText_ClearTextbox[] = _("\n                              ");
 
 static const u16 sFameCheckerTilemap[] = INCBIN_U16("graphics/fame_checker/tilemap1.bin");

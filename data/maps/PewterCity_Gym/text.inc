@@ -1,6 +1,6 @@
 PewterCity_Gym_Text_BrockIntro::
-    .string "So, you're here. I'm BROCK.\n"
-    .string "I'm PEWTER's GYM LEADER.\p"
+    .string "So, you're here. I'm Brock.\n"
+    .string "I'm PEWTER's Gym Leader.\p"
     .string "My rock-hard willpower is evident\n"
     .string "even in my Pokémon.\p"
     .string "My Pokémon are all rock hard, and\n"
@@ -9,7 +9,7 @@ PewterCity_Gym_Text_BrockIntro::
     .string "the ROCK type!\p"
     .string "Fuhaha! You're going to challenge\n"
     .string "me knowing that you'll lose?\p"
-    .string "That's the TRAINER's honor that\n"
+    .string "That's the Trainer's honor that\n"
     .string "compels you to challenge me.\p"
     .string "Fine, then!\n"
     .string "Show me your best!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
@@ -21,7 +21,7 @@ PewterCity_Gym_Text_BrockDefeat::
     .string "on you this…the official Pokémon\l"
     .string "LEAGUE Boulder Badge.\p"
     .string "{FONT_NORMAL}{PLAYER} received the Boulder Badge\n"
-    .string "from BROCK!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
+    .string "from Brock!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
     .string "{FONT_MALE}Just having the Boulder Badge makes\n"
     .string "your Pokémon more powerful.\p"
     .string "It also enables the use of the\n"
@@ -35,7 +35,7 @@ PewterCity_Gym_Text_TakeThisWithYou::
 
 PewterCity_Gym_Text_ReceivedTM39FromBrock::
     .string "{PLAYER} received TM39\n"
-    .string "from BROCK.$"
+    .string "from Brock.$"
 
 PewterCity_Gym_Text_ExplainTM39::
     .string "A TM, Technical Machine, contains a\n"
@@ -51,12 +51,12 @@ PewterCity_Gym_Text_ExplainTM39::
     .string "lowers its SPEED.$"
 
 PewterCity_Gym_Text_BrockPostBattle::
-    .string "There are all kinds of TRAINERS in\n"
+    .string "There are all kinds of Trainers in\n"
     .string "this huge world of ours.\p"
     .string "You appear to be very gifted as a\n"
-    .string "Pokémon TRAINER.\p"
+    .string "Pokémon Trainer.\p"
     .string "So let me make a suggestion.\p"
-    .string "Go to the GYM in CERULEAN and test\n"
+    .string "Go to the Gym in CERULEAN and test\n"
     .string "your abilities.$"
 
 PewterCity_Gym_Text_DontHaveRoomForThis::
@@ -65,7 +65,7 @@ PewterCity_Gym_Text_DontHaveRoomForThis::
 PewterCity_Gym_Text_LiamIntro::
     .string "Stop right there, kid!\p"
     .string "You're ten thousand light-years \n"
-    .string "from facing BROCK!$"
+    .string "from facing Brock!$"
 
 PewterCity_Gym_Text_LiamDefeat::
     .string "Darn!\p"
@@ -74,14 +74,14 @@ PewterCity_Gym_Text_LiamDefeat::
 
 PewterCity_Gym_Text_LiamPostBattle::
     .string "You're pretty hot.\n"
-    .string "…But not as hot as BROCK!$"
+    .string "…But not as hot as Brock!$"
 
 PewterCity_Gym_Text_LetMeTakeYouToTheTop::
     .string "Hiya!\n"
     .string "Do you want to dream big?\p"
     .string "Do you dare to dream of becoming\n"
     .string "the Pokémon champ?\p"
-    .string "I'm no TRAINER, but I can advise\n"
+    .string "I'm no Trainer, but I can advise\n"
     .string "you on how to win.\p"
     .string "Let me take you to the top!$"
 
@@ -106,14 +106,14 @@ PewterCity_Gym_Text_YoureChampMaterial::
     .string "You're Pokémon champ material!$"
 
 PewterCity_Gym_Text_GymStatue::
-    .string "PEWTER Pokémon GYM\n"
-    .string "LEADER: BROCK\p"
-    .string "WINNING TRAINERS:\n"
+    .string "PEWTER Pokémon Gym\n"
+    .string "LEADER: Brock\p"
+    .string "WINNING Trainers:\n"
     .string "{RIVAL}$"
 
 PewterCity_Gym_Text_GymStatuePlayerWon::
-    .string "PEWTER Pokémon GYM\n"
-    .string "LEADER: BROCK\p"
-    .string "WINNING TRAINERS:\n"
+    .string "PEWTER Pokémon Gym\n"
+    .string "LEADER: Brock\p"
+    .string "WINNING Trainers:\n"
     .string "{RIVAL}, {PLAYER}$"
 

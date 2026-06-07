@@ -180,7 +180,7 @@ static const u8 *const sPyramidBagMenu_ReturnToStrings[] =
 {
     [PYRAMIDBAG_LOC_FIELD]       = sText_TheField,
     [PYRAMIDBAG_LOC_BATTLE]      = COMPOUND_STRING("the battle"),
-    [PYRAMIDBAG_LOC_PARTY]       = COMPOUND_STRING("the POKéMON LIST"),
+    [PYRAMIDBAG_LOC_PARTY]       = COMPOUND_STRING("the Pokémon LIST"),
     [PYRAMIDBAG_LOC_CHOOSE_TOSS] = sText_TheField
 };
 

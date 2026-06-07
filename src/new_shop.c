@@ -185,9 +185,9 @@ struct Seller
 
 static EWRAM_DATA struct MartInfo sMartInfo = {0};
 static EWRAM_DATA struct ShopData *sShopData = NULL;
-static const u8 sText_ShopBuy[] = _("BUY");
-static const u8 sText_ShopSell[] = _("SELL");
-static const u8 sText_ShopQuit[] = _("QUIT");
+static const u8 sText_ShopBuy[] = _("Buy");
+static const u8 sText_ShopSell[] = _("Sell");
+static const u8 sText_ShopQuit[] = _("Quit");
 static const u8 sText_QuitShopping[] = _("Quit shopping.");
 static const u8 sText_AnythingElseICanHelp[] = _("Is there anything else I can help\nyou with?");
 
@@ -211,8 +211,8 @@ static const u8 sText_YouDontHaveCoins[] = _("You don't have\nenough Coins.{PAUS
 static const u8 sText_YouDontHaveBP[] = _("You don't have\nenough Battle Points.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_NoMoreRoomForThis[] = _("You have no more\nroom for this\nitem.");
 static const u8 sText_SpaceForVar1Full[] = _("The space for\n{STR_VAR_1}\nis full.");
-static const u8 sText_ThrowInPremierBall[] = _("I'll throw in\na PREMIER BALL,\ntoo.");
-static const u8 sText_ThrowInPremierBalls[] = _("I'll throw in\n{STR_VAR_1} PREMIER BALLS,\ntoo.");
+static const u8 sText_ThrowInPremierBall[] = _("I'll throw in\na Premier Ball,\ntoo.");
+static const u8 sText_ThrowInPremierBalls[] = _("I'll throw in\n{STR_VAR_1} Premier Balls,\ntoo.");
 
 // default state if all seller-based graphics fails
 static const u32 sNewShopMenu_DefaultMenuGfx[] = INCBIN_U32("graphics/new_shop/menu.4bpp.lz");
@@ -1186,7 +1186,7 @@ static void BuyMenuInitWindows(void)
     BuyMenuPrint(WIN_MULTI, COMPOUND_STRING("PRICE"), 0, ITEM_PRICE_Y, TEXT_SKIP_DRAW, COLORID_BLACK, FALSE);
     if (IsMartTypeItem(sMartInfo.martType))
     {
-        BuyMenuPrint(WIN_MULTI, COMPOUND_STRING("IN BAG"), 0, ITEM_IN_BAG_Y, TEXT_SKIP_DRAW, COLORID_BLACK, FALSE);
+        BuyMenuPrint(WIN_MULTI, COMPOUND_STRING("IN Bag"), 0, ITEM_IN_BAG_Y, TEXT_SKIP_DRAW, COLORID_BLACK, FALSE);
     }
 
     UpdateItemData();

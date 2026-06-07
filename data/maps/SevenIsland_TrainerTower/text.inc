@@ -15,7 +15,7 @@ SevenIsland_TrainerTower_Text_RodetteIntro::
     .string "Pokémon are sleeping.$"
 
 SevenIsland_TrainerTower_Text_RodetteDefeat::
-    .string "What an amazing TRAINER!$"
+    .string "What an amazing Trainer!$"
 
 SevenIsland_TrainerTower_Text_RodettePostBattle::
     .string "Somewhere on this island, peculiar\n"
@@ -25,7 +25,7 @@ SevenIsland_TrainerTower_Text_RodettePostBattle::
 
 SevenIsland_TrainerTower_Text_TrainerTowerSign::
     .string "Trainer Tower ENTRANCE\n"
-    .string "Rise to the Challenge, TRAINERS!$"
+    .string "Rise to the Challenge, Trainers!$"
 
 SevenIsland_TrainerTower_Text_TrainerTowerAhead::
     .string "Trainer Tower AHEAD$"

@@ -32,21 +32,21 @@ Text_Snacks::
 
 Text_PokemartSign::
 	.string "All your item needs fulfilled!\n"
-	.string "Pokémon MART$"
+	.string "Pokémon Mart$"
 
 Text_PokecenterSign::
 	.string "Heal Your Pokémon!\n"
-	.string "Pokémon CENTER$"
+	.string "Pokémon Center$"
 
 Text_Indigo_UltimateGoal::
 	.string "Indigo Plateau\p"
-	.string "The ultimate goal of TRAINERS!\n"
-	.string "Pokémon LEAGUE HQ$"
+	.string "The ultimate goal of Trainers!\n"
+	.string "Pokémon League HQ$"
 
 Text_Indigo_HighestAuthority::
 	.string "Indigo Plateau\p"
 	.string "The highest Pokémon authority!\n"
-	.string "Pokémon LEAGUE HQ$"
+	.string "Pokémon League HQ$"
 
 Text_Food::
 	.string "It should be packed with all kinds\n"

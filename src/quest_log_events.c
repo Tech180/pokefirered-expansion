@@ -44,7 +44,7 @@ static EWRAM_DATA u8 sLastDepartedLocation = 0;
 static EWRAM_DATA bool8 sPlayedTheSlots = FALSE;
 
 #include "data/text/quest_log.h"
-static const u8 sText_PokemonCenter[] = _("POKéMON CENTER");
+static const u8 sText_PokemonCenter[] = _("Pokémon Center");
 
 static bool8 InQuestLogDisabledLocation(void);
 static bool8 ShouldRegisterEvent_HandlePartyActions(enum QLEvent, const u16 *);
@@ -308,45 +308,45 @@ static const u8 *const sLocationNameTexts[] =
     [QL_LOCATION_MT_MOON_1]          = sText_MtMoon,
     [QL_LOCATION_MT_MOON_2]          = sText_MtMoon,
     [QL_LOCATION_CERULEAN_GYM]       = sText_Gym,
-    [QL_LOCATION_BIKE_SHOP]          = COMPOUND_STRING("BIKE SHOP"),
+    [QL_LOCATION_BIKE_SHOP]          = COMPOUND_STRING("Bike Shop"),
     [QL_LOCATION_BILLS_HOUSE]        = COMPOUND_STRING("BILL'S HOUSE"),
     [QL_LOCATION_DAY_CARE]           = COMPOUND_STRING("DAY CARE"),
     [QL_LOCATION_UNDERGROUND_PATH_1] = sText_UndergroundPath,
     [QL_LOCATION_UNDERGROUND_PATH_2] = sText_UndergroundPath,
-    [QL_LOCATION_PKMN_FAN_CLUB]      = COMPOUND_STRING("POKéMON FAN CLUB"),
+    [QL_LOCATION_PKMN_FAN_CLUB]      = COMPOUND_STRING("Pokémon FAN CLUB"),
     [QL_LOCATION_VERMILION_GYM]      = sText_Gym,
-    [QL_LOCATION_SS_ANNE]            = COMPOUND_STRING("S.S. ANNE"),
+    [QL_LOCATION_SS_ANNE]            = COMPOUND_STRING("S.S. Anne"),
     [QL_LOCATION_DIGLETTS_CAVE_1]    = sText_DiglettsCave,
     [QL_LOCATION_DIGLETTS_CAVE_2]    = sText_DiglettsCave,
     [QL_LOCATION_ROCK_TUNNEL_1]      = sText_RockTunnel,
     [QL_LOCATION_ROCK_TUNNEL_2]      = sText_RockTunnel,
-    [QL_LOCATION_POWER_PLANT]        = COMPOUND_STRING("POWER PLANT"),
-    [QL_LOCATION_PKMN_TOWER]         = COMPOUND_STRING("POKéMON TOWER"),
+    [QL_LOCATION_POWER_PLANT]        = COMPOUND_STRING("Power Plant"),
+    [QL_LOCATION_PKMN_TOWER]         = COMPOUND_STRING("Pokémon TOWER"),
     [QL_LOCATION_VOLUNTEER_HOUSE]    = COMPOUND_STRING("VOLUNTEER HOUSE"),
     [QL_LOCATION_NAME_RATERS_HOUSE]  = COMPOUND_STRING("NAME RATER'S HOUSE"),
     [QL_LOCATION_UNDERGROUND_PATH_3] = sText_UndergroundPath,
     [QL_LOCATION_UNDERGROUND_PATH_4] = sText_UndergroundPath,
-    [QL_LOCATION_CELADON_DEPT_STORE] = COMPOUND_STRING("CELADON DEPT. STORE"),
+    [QL_LOCATION_CELADON_DEPT_STORE] = COMPOUND_STRING("Celadon Dept. STORE"),
     [QL_LOCATION_CELADON_MANSION]    = COMPOUND_STRING("CELADON MANSION"),
     [QL_LOCATION_GAME_CORNER]        = COMPOUND_STRING("ROCKET GAME CORNER"),
     [QL_LOCATION_CELADON_GYM]        = sText_Gym,
     [QL_LOCATION_CELADON_RESTAURANT] = COMPOUND_STRING("RESTAURANT"),
-    [QL_LOCATION_ROCKET_HIDEOUT]     = COMPOUND_STRING("ROCKET HIDEOUT"),
-    [QL_LOCATION_SAFARI_ZONE]        = COMPOUND_STRING("SAFARI ZONE"),
+    [QL_LOCATION_ROCKET_HIDEOUT]     = COMPOUND_STRING("Rocket Hideout"),
+    [QL_LOCATION_SAFARI_ZONE]        = COMPOUND_STRING("Safari Zone"),
     [QL_LOCATION_FUCHSIA_GYM]        = sText_Gym,
-    [QL_LOCATION_WARDENS_HOME]       = COMPOUND_STRING("WARDEN'S HOME"),
+    [QL_LOCATION_WARDENS_HOME]       = COMPOUND_STRING("Warden's Home"),
     [QL_LOCATION_FIGHTING_DOJO]      = COMPOUND_STRING("FIGHTING DOJO"),
     [QL_LOCATION_SAFFRON_GYM]        = sText_Gym,
-    [QL_LOCATION_SILPH_CO]           = COMPOUND_STRING("SILPH CO."),
+    [QL_LOCATION_SILPH_CO]           = COMPOUND_STRING("Silph Co.."),
     [QL_LOCATION_SEAFOAM_ISLANDS_1]  = sText_SeafoamIslands,
     [QL_LOCATION_SEAFOAM_ISLANDS_2]  = sText_SeafoamIslands,
-    [QL_LOCATION_PKMN_MANSION]       = COMPOUND_STRING("POKéMON MANSION"),
+    [QL_LOCATION_PKMN_MANSION]       = COMPOUND_STRING("Pokémon MANSION"),
     [QL_LOCATION_CINNABAR_GYM]       = sText_Gym,
-    [QL_LOCATION_CINNABAR_LAB]       = COMPOUND_STRING("POKéMON RESEARCH LAB"),
+    [QL_LOCATION_CINNABAR_LAB]       = COMPOUND_STRING("Pokémon RESEARCH LAB"),
     [QL_LOCATION_VICTORY_ROAD_1]     = sText_VictoryRoad,
     [QL_LOCATION_VICTORY_ROAD_2]     = sText_VictoryRoad,
-    [QL_LOCATION_PKMN_LEAGUE]        = COMPOUND_STRING("POKéMON LEAGUE"),
-    [QL_LOCATION_CERULEAN_CAVE]      = COMPOUND_STRING("CERULEAN CAVE"),
+    [QL_LOCATION_PKMN_LEAGUE]        = COMPOUND_STRING("Pokémon League"),
+    [QL_LOCATION_CERULEAN_CAVE]      = COMPOUND_STRING("Cerulean Cave"),
 };
 
 static const u8 *const sDepartedLocationTexts[] =

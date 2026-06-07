@@ -61,7 +61,9 @@ struct SideQuest
     const u8 numSubquests;
     const u16 questVariable;
     const bool8 isSideQuest;
+    const u16 discoveryFlag;
     const u16 rewardItem;
+    const u8 rewardQuantity;
     const u8 dexRegion;
 };
 
@@ -87,6 +89,10 @@ enum QuestCases
     FLAG_REMOVE_FAVORITE,       // remove favorite flag from quest
 };
 
+#define QUEST_POPUP_UNLOCKED   0
+#define QUEST_POPUP_COMPLETED  1
+#define QUEST_POPUP_FAILED     2
+
 // functions
 void QuestMenu_Init(u8 a0, MainCallback callback);
 u8 QuestMenu_GetSetSubquestState(u8 quest, u8 caseId, u8 childQuest);
@@ -102,5 +108,7 @@ void HandleQuestIconForSingleObjectEvent(struct ObjectEvent*, u32);
 void RefreshQuestIcons(void);
 void QuestMenu_SetSubquestCompleted(u16 subQuestId);
 bool8 QuestMenu_IsSubquestCompleted(u16 subQuestId);
+void QuestMenu_ShowQuestPopup(u8 questId, u8 type);
+void QuestMenu_HideQuestPopup(void);
 
 #endif // GUARD_QUESTS_H

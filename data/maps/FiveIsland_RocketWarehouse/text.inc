@@ -35,7 +35,7 @@ FiveIsland_RocketWarehouse_Text_Grunt3Intro::
     .string "I got word about you from the\n"
     .string "others.\p"
     .string "But there's no way a kid like you'd\n"
-    .string "know our BOSS GIOVANNI!$"
+    .string "know our BOSS Giovanni!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt3Defeat::
     .string "Don't…you…dare…laugh…$"
@@ -47,7 +47,7 @@ FiveIsland_RocketWarehouse_Text_Grunt3PostBattle::
 FiveIsland_RocketWarehouse_Text_Admin1Intro::
     .string "I don't know or care if what I'm\n"
     .string "doing is right or wrong…\p"
-    .string "I just put my faith in GIOVANNI\n"
+    .string "I just put my faith in Giovanni\n"
     .string "and do as I am told.$"
 
 FiveIsland_RocketWarehouse_Text_Admin1Defeat::
@@ -65,7 +65,7 @@ FiveIsland_RocketWarehouse_Text_MadeItSoYouCanComeBackThrough::
     .string "Why don't you go get rested and\n"
     .string "refreshed for what lies ahead?\p"
     .string "The ADMIN after me outranks me\n"
-    .string "thoroughly as a TRAINER.\p"
+    .string "thoroughly as a Trainer.\p"
     .string "You'd better steel yourself for one\n"
     .string "harsh challenge.$"
 
@@ -85,7 +85,7 @@ FiveIsland_RocketWarehouse_Text_Admin2Defeat::
     .string "Urgh…\n"
     .string "You were too strong…\p"
     .string "…\n"
-    .string "Th-that's GIOVANNI's BADGE!\p"
+    .string "Th-that's Giovanni's BADGE!\p"
     .string "So it's true?\n"
     .string "TEAM ROCKET really has disbanded?$"
 
@@ -93,7 +93,7 @@ FiveIsland_RocketWarehouse_Text_Admin2PostBattle::
     .string "We will abandon this WAREHOUSE…\p"
     .string "But don't think this is over.\n"
     .string "I won't let this be the end.\p"
-    .string "I will find GIOVANNI.\n"
+    .string "I will find Giovanni.\n"
     .string "And I will resurrect TEAM ROCKET!\l"
     .string "I will…\p"
     .string "Until then, farewell!$"
@@ -128,10 +128,10 @@ FiveIsland_RocketWarehouse_Text_GetLostLeaveMeBe::
 
 FiveIsland_RocketWarehouse_Text_GiovannisKidHasRedHair::
     .string "What, you again?\p"
-    .string "You… You're not GIOVANNI's kid,\n"
+    .string "You… You're not Giovanni's kid,\n"
     .string "are you?\p"
     .string "No, that can't be right!\n"
-    .string "GIOVANNI's kid has red hair.\p"
+    .string "Giovanni's kid has red hair.\p"
     .string "You don't have any reasons for\n"
     .string "bugging me. Leave me alone!$"
 

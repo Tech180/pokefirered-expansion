@@ -135,7 +135,7 @@ static void StartBerryPouchSpriteWobbleAnim(void);
 static void SpriteCB_BerryPouchWaitWobbleAnim(struct Sprite *sprite);
 
 static const u8 sText_Var1CantBeHeldHere[] = _("The {STR_VAR_1} can't be held\nhere.");
-static const u8 sText_TheBerryPouchWillBePutAway[] = _("The BERRY POUCH will be\nput away.");
+static const u8 sText_TheBerryPouchWillBePutAway[] = _("The Berry Pouch will be\nput away.");
 
 static const struct BgTemplate sBgTemplates[] =
 {

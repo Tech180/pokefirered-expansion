@@ -37,6 +37,10 @@
 #include "pokemon_storage_system.h"
 #include "pokemon_summary_screen.h"
 #include "quest_log.h"
+#include "quest_menu.h"
+#include "quest_menu_discovery.h"
+#include "constants/flags.h"
+#include "constants/quests.h"
 #include "random.h"
 #include "region_map.h"
 #include "rtc.h"
@@ -255,7 +259,7 @@ static const u8 *const sScrollMultiLabels_BFItemVendor[] =
     COMPOUND_STRING("MENTAL HERB{CLEAR_TO 0x5E}48BP"),
     COMPOUND_STRING("BRIGHTPOWDER{CLEAR_TO 0x5E}64BP"),
     COMPOUND_STRING("CHOICE BAND{CLEAR_TO 0x5E}64BP"),
-    COMPOUND_STRING("KING'S ROCK{CLEAR_TO 0x5E}64BP"),
+    COMPOUND_STRING("King's Rock{CLEAR_TO 0x5E}64BP"),
     COMPOUND_STRING("FOCUS BAND{CLEAR_TO 0x5E}64BP"),
     COMPOUND_STRING("SCOPE LENS{CLEAR_TO 0x5E}64BP"),
     gText_Exit
@@ -351,9 +355,25 @@ u8 GetBattleOutcome(void)
     return gBattleOutcome;
 }
 
+u32 CountFoundHiddenItems(void)
+{
+    u32 i;
+    u32 count = 0;
+    for (i = 0; i <= 194; i++)
+    {
+        if (FlagGet(FLAG_HIDDEN_ITEMS_START + i))
+            count++;
+    }
+    return count;
+}
+
 void SetHiddenItemFlag(void)
 {
     FlagSet(gSpecialVar_0x8004);
+    if (CountFoundHiddenItems() >= 25)
+    {
+        UnlockQuestDiscovery(QUEST_THE_TREASURE_HUNTER);
+    }
 }
 
 u16 GetWeekCount(void)
@@ -3845,6 +3865,11 @@ static void Task_CloseBattlePikeCurtain(u8 taskId)
 #undef CURTAIN_WIDTH
 #undef tFrameTimer
 #undef tCurrentFrame
+
+void CheckSkipTutorials(void)
+{
+    gSpecialVar_Result = gSaveBlock2Ptr->optionsSkipTutorials;
+}
 
 void GetBattlePyramidHint(void)
 {

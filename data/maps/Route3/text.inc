@@ -25,7 +25,7 @@ Route3_Text_BenDefeat::
     .string "I don't believe it!$"
 
 Route3_Text_BenPostBattle::
-    .string "Are you using a Pokémon CENTER's\n"
+    .string "Are you using a Pokémon Center's\n"
     .string "PC for storing your Pokémon?\p"
     .string "Each BOX can hold up to\n"
     .string "30 Pokémon.$"
@@ -42,7 +42,7 @@ Route3_Text_JanicePostBattle::
     .string "don't want to battle!$"
 
 Route3_Text_GregIntro::
-    .string "Are you a TRAINER?\n"
+    .string "Are you a Trainer?\n"
     .string "Let's get with it right away!$"
 
 Route3_Text_GregDefeat::
@@ -62,7 +62,7 @@ Route3_Text_SallyDefeat::
 
 Route3_Text_SallyPostBattle::
     .string "You can avoid battles by not\n"
-    .string "letting TRAINERS see you.$"
+    .string "letting Trainers see you.$"
 
 Route3_Text_CalvinIntro::
     .string "Hey! You're not wearing shorts!\n"

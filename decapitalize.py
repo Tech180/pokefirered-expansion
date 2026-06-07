@@ -6,6 +6,52 @@ import argparse
 
 # Static replacements for core terminology and badges
 STATIC_REPLACEMENTS = {
+    # Specific compound terms first
+    r"POKéMON CENTER": "Pokémon Center",
+    r"POKéMON CENTERS": "Pokémon Centers",
+    r"POKéMON LEAGUE": "Pokémon League",
+    r"BIKE SHOP": "Bike Shop",
+    r"GYM LEADER": "Gym Leader",
+    r"GYM LEADERS": "Gym Leaders",
+    r"BUG CATCHER": "Bug Catcher",
+    r"BUG CATCHERS": "Bug Catchers",
+    r"YOUNGSTER": "Youngster",
+    r"YOUNGSTERS": "Youngsters",
+    r"LASS": "Lass",
+    r"LASSES": "Lasses",
+    r"POKéMART": "Pokémart",
+    r"POKé MARTS": "Pokémarts",
+    r"POKé MART": "Pokémart",
+
+    # Partially-decapitalized compound terms
+    r"Pokémon CENTER": "Pokémon Center",
+    r"Pokémon CENTERS": "Pokémon Centers",
+    r"Pokémon LEAGUE": "Pokémon League",
+    r"Pokémon MART": "Pokémon Mart",
+    r"Pokémon MARTS": "Pokémon Marts",
+    r"Pokémon TOWER": "Pokémon Tower",
+    r"Pokémon MANSION": "Pokémon Mansion",
+    r"Pokémon FAN CLUB": "Pokémon Fan Club",
+    r"Pokémon RESEARCH LAB": "Pokémon Research Lab",
+
+    # Signposts & Other terms
+    r"OAK'S PARCEL": "Oak's Parcel",
+    r"OAK'S PC": "Oak's PC",
+    r"OAK'S Pokémon SEMINAR": "Oak's Pokémon Seminar",
+    r"TRAINER'S SCHOOL": "Trainer's School",
+    r"TRAINER'S MARKET": "Trainer's Market",
+    r"MR. PSYCHIC'S HOUSE": "Mr. Psychic's House",
+    r"WARDEN'S HOME": "Warden's Home",
+    r"SELPHY'S HOUSE": "Selphy's House",
+    r"LORELEI'S HOUSE": "Lorelei's House",
+    r"TODAY'S SMART SHOPPER": "Today's Smart Shopper",
+    r"TODAY'S RIVAL TRAINER": "Today's Rival Trainer",
+    r"WHAT'S NO. 1 IN HOENN TODAY": "What's No. 1 in Hoenn Today",
+    r"KING'S ROCK": "King's Rock",
+    r"CHILD'S PLAY": "Child's Play",
+    r"Diglett'S Cave": "Diglett's Cave",
+
+    # Standard terms
     r"POKéMON": "Pokémon",
     r"POKéDEXES": "Pokédexes",
     r"POKéDEX": "Pokédex",
@@ -13,6 +59,8 @@ STATIC_REPLACEMENTS = {
     r"POKéBALLS": "Poké Balls",
     r"POKé BALL": "Poké Ball",
     r"POKé BALLS": "Poké Balls",
+    r"PREMIER BALL": "Premier Ball",
+    r"PREMIER BALLS": "Premier Balls",
     r"POKéNAV": "Pokénav",
     r"POKéBLOCK": "Pokéblock",
     r"POKéBLOCKS": "Pokéblocks",
@@ -44,6 +92,38 @@ STATIC_REPLACEMENTS = {
     
     r"BAG": "Bag",
     r"COINS": "Coins",
+
+    # Gym Names
+    r"PEWTER GYM": "Pewter Gym",
+    r"CERULEAN GYM": "Cerulean Gym",
+    r"VERMILION GYM": "Vermilion Gym",
+    r"CELADON GYM": "Celadon Gym",
+    r"FUCHSIA GYM": "Fuchsia Gym",
+    r"SAFFRON GYM": "Saffron Gym",
+    r"CINNABAR GYM": "Cinnabar Gym",
+    r"VIRIDIAN GYM": "Viridian Gym",
+    r"GYMS": "Gyms",
+    r"GYM": "Gym",
+
+    # Trainer terms
+    r"TRAINER TIPS": "Trainer Tips",
+    r"Trainer TIPS": "Trainer Tips",
+    r"TRAINERS": "Trainers",
+    r"TRAINER": "Trainer",
+
+    # Key Character Names
+    r"BROCK": "Brock",
+    r"MISTY": "Misty",
+    r"LT. SURGE": "Lt. Surge",
+    r"ERIKA": "Erika",
+    r"KOGA": "Koga",
+    r"SABRINA": "Sabrina",
+    r"BLAINE": "Blaine",
+    r"GIOVANNI": "Giovanni",
+    r"LORELEI": "Lorelei",
+    r"BRUNO": "Bruno",
+    r"AGATHA": "Agatha",
+    r"LANCE": "Lance",
 }
 
 def title_case_map_name(name):
@@ -55,6 +135,7 @@ def title_case_map_name(name):
         return "Silph Co."
     
     res = name.title()
+    res = res.replace("'S", "'s")
     res = res.replace("S.S. ", "S.S. ")
     res = res.replace("S.s. ", "S.S. ")
     res = res.replace("Ss ", "S.S. ")
@@ -102,6 +183,7 @@ def title_case_trainer_name(res):
             new_parts.append(text)
         else:
             t = text.title()
+            t = t.replace("'S", "'s")
             t = t.replace(" And ", " and ")
             t = t.replace(" Of ", " of ")
             t = t.replace(" Or ", " or ")
@@ -126,39 +208,70 @@ def build_replacements(region_map_path):
         replacements.append((re.compile(pattern), v))
         
     # 2. Extract map names from JSON
-    map_names = set()
+    map_names = {}
     if os.path.exists(region_map_path):
         with open(region_map_path, "r", encoding="utf-8") as f:
             data = json.load(f)
             for item in data.get("map_sections", []):
                 name = item.get("name")
-                if name and name.isupper():
-                    map_names.add(name)
+                if name:
+                    upper_name = name.upper().replace("É", "é").replace("é", "é")
+                    title_name = title_case_map_name(name)
+                    map_names[upper_name] = title_name
                     
     # Sort map names by length descending
-    sorted_map_names = sorted(list(map_names), key=len, reverse=True)
+    sorted_map_names = sorted(list(map_names.keys()), key=len, reverse=True)
     for name in sorted_map_names:
         # Avoid overriding static replacements if any overlap
         if name in STATIC_REPLACEMENTS:
             continue
-        # Only process names that are strictly uppercase/spaces/punctuation
+        # Only process names that are strictly uppercase/spaces/punctuation/é
         if not re.match(r'^[A-Z0-9\.\-\x27\s\u00e9\u00c9]+$', name):
             continue
-        title_name = title_case_map_name(name)
+        title_name = map_names[name]
         pattern = r'(?<![a-zA-Z0-9é])' + re.escape(name) + r'(?![a-zA-Z0-9é])'
         replacements.append((re.compile(pattern), title_name))
         
     return replacements
 
-def process_text_content(content,Compiled_replacements):
-    num_replacements = 0
-    new_content = content
-    for pattern, replacement in Compiled_replacements:
-        matches = pattern.findall(new_content)
-        if matches:
-            num_replacements += len(matches)
-            new_content = pattern.sub(replacement, new_content)
-    return new_content, num_replacements
+def process_text_content(content, Compiled_replacements):
+    if not content:
+        return content, 0
+        
+    parts = []
+    current = ""
+    in_bracket = False
+    for char in content:
+        if char == '{':
+            if current:
+                parts.append((current, in_bracket))
+            current = "{"
+            in_bracket = True
+        elif char == '}':
+            current += "}"
+            parts.append((current, in_bracket))
+            current = ""
+            in_bracket = False
+        else:
+            current += char
+    if current:
+        parts.append((current, in_bracket))
+        
+    new_parts = []
+    total_replacements = 0
+    for part_text, is_bracket in parts:
+        if is_bracket:
+            new_parts.append(part_text)
+        else:
+            new_text = part_text
+            for pattern, replacement in Compiled_replacements:
+                matches = pattern.findall(new_text)
+                if matches:
+                    total_replacements += len(matches)
+                    new_text = pattern.sub(replacement, new_text)
+            new_parts.append(new_text)
+            
+    return "".join(new_parts), total_replacements
 
 def decapitalize_dialogue_file(filepath, Compiled_replacements, dry_run=False):
     with open(filepath, "r", encoding="utf-8") as f:
@@ -194,7 +307,7 @@ def decapitalize_c_file(filepath, Compiled_replacements, dry_run=False):
     with open(filepath, "r", encoding="utf-8") as f:
         lines = f.readlines()
         
-    c_string_re = re.compile(r'(_\(")([^"]*)("\))')
+    c_string_re = re.compile(r'((?:_|\bCOMPOUND_STRING)\(")([^"]*)("\))')
     new_lines = []
     file_changes = 0
     
@@ -309,7 +422,8 @@ def main():
     trainers_dir = "data/trainers"
     maps_dir = "data/maps"
     text_dir = "data/text"
-    strings_path = "src/strings.c"
+    scripts_dir = "data/scripts"
+    src_dir = "src"
     battle_main_path = "src/battle_main.c"
     
     print("Loading region map and compiling replacements...")
@@ -324,9 +438,16 @@ def main():
     trainer_changes = decapitalize_trainer_jsons(trainers_dir, dry_run=args.dry_run)
     print(f"Trainer name changes: {trainer_changes}")
     
-    print("\nProcessing strings.c...")
-    strings_changes = decapitalize_c_file(strings_path, replacements, dry_run=args.dry_run)
-    print(f"strings.c changes: {strings_changes}")
+    print("\nProcessing C and H files in src/...")
+    strings_changes = 0
+    for root, dirs, files in os.walk(src_dir):
+        for file in files:
+            if file.endswith((".c", ".h")):
+                filepath = os.path.join(root, file)
+                # Skip certain autogenerated files if any, but in this case let's process all.
+                changes = decapitalize_c_file(filepath, replacements, dry_run=args.dry_run)
+                strings_changes += changes
+    print(f"src/ C/H file changes: {strings_changes}")
     
     print("\nProcessing battle_main.c trainer classes...")
     battle_changes = decapitalize_battle_main_classes(battle_main_path, dry_run=args.dry_run)
@@ -351,8 +472,18 @@ def main():
                 changes = decapitalize_dialogue_file(filepath, replacements, dry_run=args.dry_run)
                 text_changes += changes
     print(f"Global dialogue text changes: {text_changes}")
+
+    print("\nProcessing data/scripts (.inc)...")
+    script_changes = 0
+    for root, dirs, files in os.walk(scripts_dir):
+        for file in files:
+            if file.endswith(".inc"):
+                filepath = os.path.join(root, file)
+                changes = decapitalize_dialogue_file(filepath, replacements, dry_run=args.dry_run)
+                script_changes += changes
+    print(f"data/scripts changes: {script_changes}")
     
-    total = map_changes + trainer_changes + strings_changes + battle_changes + map_script_changes + text_changes
+    total = map_changes + trainer_changes + strings_changes + battle_changes + map_script_changes + text_changes + script_changes
     print(f"\nTotal changes logged: {total} (Dry run: {args.dry_run})")
 
 if __name__ == "__main__":

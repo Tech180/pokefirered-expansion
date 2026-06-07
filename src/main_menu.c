@@ -145,9 +145,9 @@ static const u8 sMenuCursorYMax[] = { 0, 1, 2 };
 
 static const u8 sText_NewGame[] = _("NEW GAME");
 static const u8 sText_Continue[] = _("CONTINUE");
-static const u8 sText_MysteryGift[] = _("MYSTERY GIFT");
+static const u8 sText_MysteryGift[] = _("Mystery Gift");
 static const u8 sText_WirelessNotConnected[] = _("The Wireless Adapter is not\nconnected.");
-static const u8 sText_MysteryGiftCantUse[] = _("MYSTERY GIFT can't be used while\nthe Wireless Adapter is attached.");
+static const u8 sText_MysteryGiftCantUse[] = _("Mystery Gift can't be used while\nthe Wireless Adapter is attached.");
 static const u8 sText_SaveFileCorrupted[] = _("The save file is corrupted.\pThe previous save file will be\nloaded.");
 static const u8 sText_SaveFileHasBeenDeleted[] = _("The save file has been\ndeleted...");
 static const u8 sText_1MSubCircuitBoardNotInstalled[] = _("The 1M sub-circuit board is\nnot installed.");

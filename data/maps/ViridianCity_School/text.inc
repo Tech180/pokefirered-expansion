@@ -15,7 +15,7 @@ ViridianCity_School_Text_NotebookFirstPage::
     .string "Up to six Pokémon can be carried\n"
     .string "in your party.\p"
     .string "People who raise and battle\n"
-    .string "with Pokémon are called TRAINERS.$"
+    .string "with Pokémon are called Trainers.$"
 
 ViridianCity_School_Text_NotebookSecondPage::
     .string "Second page…\p"
@@ -26,19 +26,19 @@ ViridianCity_School_Text_NotebookSecondPage::
 
 ViridianCity_School_Text_NotebookThirdPage::
     .string "Third page…\p"
-    .string "Pokémon TRAINERS seek others to\n"
+    .string "Pokémon Trainers seek others to\n"
     .string "engage in Pokémon battles.\p"
-    .string "To TRAINERS, the taste of victory\n"
+    .string "To Trainers, the taste of victory\n"
     .string "is sweet, indeed.\p"
     .string "Battles are constantly waged at\n"
-    .string "Pokémon GYMS everywhere.$"
+    .string "Pokémon Gyms everywhere.$"
 
 ViridianCity_School_Text_NotebookFourthPage::
     .string "Fourth page…\p"
     .string "The ultimate goal for all Pokémon\n"
-    .string "TRAINERS is simple.\p"
+    .string "Trainers is simple.\p"
     .string "It is to defeat the top eight\n"
-    .string "Pokémon GYM LEADERS.\p"
+    .string "Pokémon Gym Leaders.\p"
     .string "Do so to earn the right to face…\p"
     .string "The ELITE FOUR of the Pokémon\n"
     .string "LEAGUE!$"

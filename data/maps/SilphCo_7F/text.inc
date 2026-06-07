@@ -14,7 +14,7 @@ SilphCo_7F_Text_ExplainLapras::
     .string "It's a very intelligent Pokémon.\p"
     .string "We kept it in our lab, but it will\n"
     .string "be much better off with you.\p"
-    .string "I think you will be a good TRAINER\n"
+    .string "I think you will be a good Trainer\n"
     .string "for LAPRAS!\p"
     .string "It's a good swimmer.\n"
     .string "It'll give you a lift across water!$"
@@ -77,7 +77,7 @@ SilphCo_7F_Text_JoshuaDefeat::
 
 SilphCo_7F_Text_JoshuaPostBattle::
     .string "Despite your age, you are a\n"
-    .string "skilled TRAINER!$"
+    .string "skilled Trainer!$"
 
 SilphCo_7F_Text_Grunt1Intro::
     .string "I am one of the four ROCKET\n"
@@ -132,10 +132,10 @@ SilphCo_7F_Text_RivalPostBattle::
     .string "starting to see what's strong and\l"
     .string "how they evolve!\p"
     .string "Am I a genius or what?\p"
-    .string "I'm going to the Pokémon LEAGUE to\n"
+    .string "I'm going to the Pokémon League to\n"
     .string "boot out the ELITE FOUR.\p"
     .string "I'll become the world's most\n"
-    .string "powerful TRAINER!\p"
+    .string "powerful Trainer!\p"
     .string "{PLAYER}, well, good luck to you!\n"
     .string "Don't sweat it!\l"
     .string "Smell ya!$"

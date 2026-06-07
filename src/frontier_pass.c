@@ -523,8 +523,8 @@ static const struct SpriteTemplate sSpriteTemplate_PlayerHead =
 static const u8 *const sPassAreaDescriptions[CURSOR_AREA_COUNT + 1] =
 {
     [CURSOR_AREA_NOTHING]        = COMPOUND_STRING("There is no Battle Record."), // NOTHING is re-used for CURSOR_AREA_RECORD when no Record is present
-    [CURSOR_AREA_MAP]            = COMPOUND_STRING("Check BATTLE FRONTIER MAP."),
-    [CURSOR_AREA_CARD]           = COMPOUND_STRING("Check TRAINER CARD."),
+    [CURSOR_AREA_MAP]            = COMPOUND_STRING("Check Battle Frontier MAP."),
+    [CURSOR_AREA_CARD]           = COMPOUND_STRING("Check Trainer CARD."),
     [CURSOR_AREA_RECORD]         = COMPOUND_STRING("View recorded battle."),
     [CURSOR_AREA_CANCEL]         = COMPOUND_STRING("Put away the FRONTIER PASS."),
     [CURSOR_AREA_POINTS]         = COMPOUND_STRING("Your current Battle Points."),
@@ -550,9 +550,9 @@ struct
 {
     [FRONTIER_FACILITY_TOWER]   = {gText_BattleTower,   COMPOUND_STRING("KO opponents and aim for the top!\nYour ability will be tested."),       89,  40, MAP_INDICATOR_SQUARE},
     [FRONTIER_FACILITY_DOME]    = {gText_BattleDome,    COMPOUND_STRING("Keep winning at the tournament!\nYour tactics will be tested."),         33,  42, MAP_INDICATOR_SQUARE},
-    [FRONTIER_FACILITY_PALACE]  = {gText_BattlePalace,  COMPOUND_STRING("Watch your POKéMON battle!\nYour spirit will be tested."),               120, 86, MAP_INDICATOR_RECTANGLE},
-    [FRONTIER_FACILITY_ARENA]   = {gText_BattleArena,   COMPOUND_STRING("Win battles with teamed-up POKéMON!\nYour guts will be tested."),        114, 59, MAP_INDICATOR_RECTANGLE},
-    [FRONTIER_FACILITY_FACTORY] = {gText_BattleFactory, COMPOUND_STRING("Aim for victory using rental POKéMON!\nYour knowledge will be tested."), 25,  67, MAP_INDICATOR_RECTANGLE},
+    [FRONTIER_FACILITY_PALACE]  = {gText_BattlePalace,  COMPOUND_STRING("Watch your Pokémon battle!\nYour spirit will be tested."),               120, 86, MAP_INDICATOR_RECTANGLE},
+    [FRONTIER_FACILITY_ARENA]   = {gText_BattleArena,   COMPOUND_STRING("Win battles with teamed-up Pokémon!\nYour guts will be tested."),        114, 59, MAP_INDICATOR_RECTANGLE},
+    [FRONTIER_FACILITY_FACTORY] = {gText_BattleFactory, COMPOUND_STRING("Aim for victory using rental Pokémon!\nYour knowledge will be tested."), 25,  67, MAP_INDICATOR_RECTANGLE},
     [FRONTIER_FACILITY_PIKE]    = {gText_BattlePike,    COMPOUND_STRING("Select one of three paths to battle!\nYour luck will be tested."),       57,  57, MAP_INDICATOR_SQUARE},
     [FRONTIER_FACILITY_PYRAMID] = {gText_BattlePyramid, COMPOUND_STRING("Aim for the top with exploration!\nYour bravery will be tested."),       134, 41, MAP_INDICATOR_SQUARE},
 };

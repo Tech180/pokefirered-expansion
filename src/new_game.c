@@ -82,6 +82,7 @@ static void SetDefaultOptions(void)
     gSaveBlock2Ptr->optionsCustomMainMenu = 0;
     gSaveBlock2Ptr->optionsCustomStartMenu = 0;
     gSaveBlock2Ptr->optionsEnableQuests = 0;
+    gSaveBlock2Ptr->optionsSkipTutorials = 0;
     gSaveBlock2Ptr->optionsVanillaPlusMode = 1;
 }
 

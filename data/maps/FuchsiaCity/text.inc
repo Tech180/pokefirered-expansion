@@ -33,7 +33,7 @@ FuchsiaCity_Text_SafariGameSign::
 
 FuchsiaCity_Text_WardensHomeSign::
     .string "Safari Zone\n"
-    .string "WARDEN'S HOME$"
+    .string "Warden's Home$"
 
 FuchsiaCity_Text_SafariZoneOfficeSign::
     .string "Pokémon PARADISE!\n"
@@ -41,8 +41,8 @@ FuchsiaCity_Text_SafariZoneOfficeSign::
     .string "Safari Zone OFFICE$"
 
 FuchsiaCity_Text_GymSign::
-    .string "Fuchsia City Pokémon GYM\n"
-    .string "LEADER: KOGA\l"
+    .string "Fuchsia City Pokémon Gym\n"
+    .string "LEADER: Koga\l"
     .string "The Poisonous Ninja Master$"
 
 FuchsiaCity_Text_ChanseySign::
@@ -105,7 +105,7 @@ Text_SubstituteTaught::
     .string "a KANGASKHAN belly pouch…$"
 
 FuchsiaCity_Text_MyFatherIsGymLeader::
-    .string "My father is the GYM LEADER of\n"
+    .string "My father is the Gym Leader of\n"
     .string "this town.\p"
     .string "I'm training to use POISON Pokémon\n"
     .string "as well as my father.$"

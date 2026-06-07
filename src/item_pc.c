@@ -107,7 +107,7 @@ static void ItemPc_PrintOnWindow5WithContinueTask(u8 taskId, const u8 *str, Task
 static const u8 sText_WithdrewQuantItem[] = _("Withdrew {STR_VAR_2}\n{STR_VAR_1}(s).");
 static const u8 sText_WithdrawItem[] = _("WITHDRAW\nITEM");
 static const u8 sText_ReturnToPC[] = _("Return to the PC.");
-static const u8 sText_NoMoreRoomInBag[] = _("There is no more\nroom in the BAG.");
+static const u8 sText_NoMoreRoomInBag[] = _("There is no more\nroom in the Bag.");
 static const u8 sText_WithdrawHowMany[] = _("Withdraw how many\n{STR_VAR_1}(s)?");
 
 static const struct BgTemplate sBgTemplates[2] = {

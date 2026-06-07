@@ -5,6 +5,7 @@
 #include "constants/field_effects.h"
 #include "constants/field_weather.h"
 #include "constants/items.h"
+#include "constants/flags.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
 #include "constants/trainer_types.h"
@@ -33,6 +34,7 @@
 #include "pokedex.h"
 #include "pokemon_icon.h"
 #include "quest_menu.h"
+#include "quest_menu_discovery.h"
 #include "scanline_effect.h"
 #include "sound.h"
 #include "string_util.h"
@@ -274,6 +276,12 @@ static const u8 sText_DotSpace[] = _(". ");
 static const u8 sText_Close[] = _("Close");
 static const u8 sText_ColorGreen[] = _("{COLOR}{GREEN}");
 static const u8 sText_AZ[] = _(" A-Z");
+
+// Hidden quest strings (for undiscovered quests)
+static const u8 sText_HiddenQuest[] = _("? ??");
+static const u8 sText_HiddenTitle[] = _("Hidden...");
+static const u8 sText_HiddenDesc[] = _("Discover this quest to learn more.");
+static const u8 sText_HiddenLocation[] = _("???");
 
 #include "data/quests.h"
 ///////////////////////////////////////////////////////////////////////////////
@@ -683,6 +691,11 @@ void ClearModeOnStartup(void) {
 }
 
 static bool8 DoesQuestMatchCategory(u8 questId) {
+  if (questId >= QUEST_COUNT || sSideQuests[questId].name == NULL)
+    return FALSE;
+  // Check if quest is visible in current mode before filtering
+  if (!IsQuestVisibleInCurrentMode(questId))
+    return FALSE;
   if (sStateDataPtr->selectorMainOrSide == 0) // Main
   {
     return !sSideQuests[questId].isSideQuest;
@@ -887,8 +900,9 @@ u8 *DefineQuestOrder() {
   if (IsAlphaMode()) {
     for (c = 0; c < QUEST_COUNT; c++) {
       for (d = c + 1; d < QUEST_COUNT; d++) {
-        if (StringCompare(sSideQuests[sortedList[c]].name,
-                          sSideQuests[sortedList[d]].name) > 0) {
+        const u8 *nameC = sSideQuests[sortedList[c]].name ? sSideQuests[sortedList[c]].name : sText_Empty;
+        const u8 *nameD = sSideQuests[sortedList[d]].name ? sSideQuests[sortedList[d]].name : sText_Empty;
+        if (StringCompare(nameC, nameD) > 0) {
           placeholderVariable = sortedList[c];
           sortedList[c] = sortedList[d];
           sortedList[d] = placeholderVariable;
@@ -1044,6 +1058,9 @@ void QuestMenu_SetQuestState(u8 quest, u8 state) {
   if (quest >= QUEST_COUNT)
     return;
 
+  if (sSideQuests[quest].name == NULL && state != 0)
+    return;
+
   // Clear all 6 bits first
   for (i = 0; i < 6; i++) {
     u8 curIndex = (quest * 6 + i) / 8;
@@ -1105,8 +1122,23 @@ u8 QuestMenu_GetSetQuestState(u8 quest, u8 caseId) {
   u8 bit;
   u8 mask = 0;
 
-  if (quest >= QUEST_COUNT)
-    return 0;
+  if (quest >= QUEST_COUNT || sSideQuests[quest].name == NULL)
+    return FALSE;
+
+  if (IsQuestPostGame(quest) && !FlagGet(FLAG_SYS_GAME_CLEAR))
+    return FALSE;
+
+  switch (caseId) {
+  case FLAG_GET_ACTIVE:
+  case FLAG_GET_REWARD:
+  case FLAG_GET_COMPLETED:
+  case FLAG_GET_FAILED:
+  case FLAG_GET_FAVORITE:
+  case FLAG_GET_INACTIVE:
+    if (!QuestMenu_GetSetQuestState(quest, FLAG_GET_UNLOCKED))
+      return FALSE;
+    break;
+  }
 
   index = quest * 6 / 8;
   bit = quest * 6 % 8;
@@ -1521,7 +1553,10 @@ void SetFavoriteQuest(u8 countQuest) {
 }
 
 void PopulateQuestName(u8 countQuest) {
-  if (QuestMenu_GetSetQuestState(countQuest, FLAG_GET_UNLOCKED)) {
+  if (IsQuestHidden(countQuest)) {
+    questNamePointer = StringAppend(questNameArray[countQuest], sText_HiddenQuest);
+    AddSubQuestButton(countQuest);
+  } else if (QuestMenu_GetSetQuestState(countQuest, FLAG_GET_UNLOCKED)) {
     questNamePointer =
         StringAppend(questNameArray[countQuest], sSideQuests[countQuest].name);
     AddSubQuestButton(countQuest);
@@ -1532,8 +1567,12 @@ void PopulateQuestName(u8 countQuest) {
 
 void PopulateSubquestName(u8 parentQuest, u8 countQuest) {
   if (IsSubquestCompletedState(countQuest)) {
-    questNamePointer = StringAppend(
-        questNamePointer, sSideQuests[parentQuest].subquests[countQuest].name);
+    const u8 *subName = sSideQuests[parentQuest].subquests[countQuest].name;
+    if (subName != NULL) {
+      questNamePointer = StringAppend(questNamePointer, subName);
+    } else {
+      questNamePointer = StringAppend(questNamePointer, sText_Unk);
+    }
   } else {
     questNamePointer = StringAppend(questNamePointer, sText_Unk);
   }
@@ -1633,15 +1672,21 @@ void GenerateAndPrintQuestDetails(s32 questId) {
 }
 void GenerateQuestLocation(s32 questId) {
   if (!IsSubquestMode()) {
-    if (IsQuestInactiveState(questId) && !IsQuestRewardState(questId) &&
+    if (IsQuestHidden(questId)) {
+      StringCopy(gStringVar2, sText_HiddenLocation);
+    } else if (IsQuestInactiveState(questId) && !IsQuestRewardState(questId) &&
         !IsQuestCompletedState(questId)) {
-      StringCopy(gStringVar2, sText_Unk);
+      StringCopy(gStringVar2, sText_Empty);
     } else {
       StringCopy(gStringVar2, GetQuestLocation(questId));
     }
   } else {
-    StringCopy(gStringVar2,
-               sSideQuests[sStateDataPtr->parentQuest].subquests[questId].map);
+    const u8 *subMap = sSideQuests[sStateDataPtr->parentQuest].subquests[questId].map;
+    if (subMap != NULL) {
+      StringCopy(gStringVar2, subMap);
+    } else {
+      StringCopy(gStringVar2, sText_Empty);
+    }
   }
 }
 void PrintQuestLocation(s32 questId) {
@@ -1651,9 +1696,13 @@ void PrintQuestLocation(s32 questId) {
   FillWindowPixelBuffer(1, 0);
 
   if (!IsSubquestMode()) {
-    title = sSideQuests[questId].title;
-    if (title == NULL) {
-      title = sSideQuests[questId].name;
+    if (IsQuestHidden(questId)) {
+      title = sText_HiddenTitle;
+    } else {
+      title = sSideQuests[questId].title;
+      if (title == NULL) {
+        title = sSideQuests[questId].name;
+      }
     }
   } else {
     title = sSideQuests[sStateDataPtr->parentQuest].subquests[questId].title;
@@ -1661,12 +1710,23 @@ void PrintQuestLocation(s32 questId) {
       title = sSideQuests[sStateDataPtr->parentQuest].subquests[questId].name;
     }
   }
+  
+  if (title == NULL) {
+    title = sText_Empty;
+  }
+  
   QuestMenu_AddTextPrinterParameterized(1, 2, title, 2, 3, 2, 0, 0, 4);
 
   locationX = 234 - GetStringWidth(2, gStringVar2, 0);
   QuestMenu_AddTextPrinterParameterized(1, 2, gStringVar2, locationX, 3, 2, 0, 0, 4);
 }
 void GenerateQuestFlavorText(s32 questId) {
+  // Undiscovered quest - show hidden message
+  if (!IsQuestDiscovered(questId) && IsQuestHidden(questId)) {
+    StringCopy(gStringVar1, sText_HiddenDesc);
+    StringExpandPlaceholders(gStringVar3, gStringVar1);
+    return;
+  }
   if (IsSubquestMode() == FALSE) {
     if (IsQuestInactiveState(questId) == TRUE) {
       StringCopy(gStringVar1, sText_StartForMore);
@@ -1682,7 +1742,11 @@ void GenerateQuestFlavorText(s32 questId) {
       }
     }
     if (IsQuestCompletedState(questId) == TRUE) {
-      StringCopy(gStringVar1, sSideQuests[questId].donedesc);
+      if (sSideQuests[questId].donedesc != NULL) {
+        StringCopy(gStringVar1, sSideQuests[questId].donedesc);
+      } else {
+        StringCopy(gStringVar1, sText_Empty);
+      }
     }
     if (IsQuestFailedState(questId) == TRUE) {
       if (sSideQuests[questId].faileddesc != NULL) {
@@ -1693,11 +1757,40 @@ void GenerateQuestFlavorText(s32 questId) {
     }
   } else {
     if (IsSubquestCompletedState(questId) == TRUE) {
-      StringCopy(
-          gStringVar1,
-          sSideQuests[sStateDataPtr->parentQuest].subquests[questId].desc);
+      const u8 *subDesc = sSideQuests[sStateDataPtr->parentQuest].subquests[questId].desc;
+      if (subDesc != NULL) {
+        StringCopy(gStringVar1, subDesc);
+      } else {
+        StringCopy(gStringVar1, sText_Empty);
+      }
     } else {
-      StringCopy(gStringVar1, sText_Empty);
+      StringCopy(gStringVar1, sText_Unk);
+    }
+  }
+
+  // Strip "Claim your..." text if present
+  {
+    static const u8 sText_ClaimYour[] = _("Claim your");
+    u16 i, j;
+    u16 len = StringLength(sText_ClaimYour);
+    u16 destLen = StringLength(gStringVar1);
+    if (destLen >= len) {
+      for (i = 0; i <= destLen - len; i++) {
+        for (j = 0; j < len; j++) {
+          if (gStringVar1[i + j] != sText_ClaimYour[j])
+            break;
+        }
+        if (j == len) {
+          // Found it! strip starting at i.
+          // If the character before is a newline (0xFE) or a prompt (0xFA), strip that too.
+          if (i > 0 && (gStringVar1[i - 1] == 0xFE || gStringVar1[i - 1] == 0xFA)) {
+            gStringVar1[i - 1] = EOS;
+          } else {
+            gStringVar1[i] = EOS;
+          }
+          break;
+        }
+      }
     }
   }
 
@@ -1711,19 +1804,31 @@ void PrintQuestFlavorText(s32 questId) {
 }
 
 static const u8 *GetQuestLocation(s32 questId) {
+  if (questId >= QUEST_COUNT || sSideQuests[questId].name == NULL || IsQuestHidden(questId))
+    return sText_HiddenLocation;
+
   u32 qvar = VarGet(sSideQuests[questId].questVariable);
 
-  if (sSideQuests[questId].map[qvar] == NULL)
+  if (qvar >= MAX_QUEST_STATES || sSideQuests[questId].map[qvar] == NULL)
     qvar = 0;
+
+  if (sSideQuests[questId].map[qvar] == NULL)
+    return sText_Empty;
 
   return sSideQuests[questId].map[qvar];
 }
 
 static const u8 *GetQuestDesc(s32 questId) {
+  if (questId >= QUEST_COUNT || sSideQuests[questId].name == NULL || IsQuestHidden(questId))
+    return sText_HiddenDesc;
+
   u32 qvar = VarGet(sSideQuests[questId].questVariable);
 
-  if (sSideQuests[questId].desc[qvar] == NULL)
+  if (qvar >= MAX_QUEST_STATES || sSideQuests[questId].desc[qvar] == NULL)
     qvar = 0;
+
+  if (sSideQuests[questId].desc[qvar] == NULL)
+    return sText_Empty;
 
   return sSideQuests[questId].desc[qvar];
 }
@@ -1790,7 +1895,7 @@ void DetermineSpriteType(s32 questId) {
   u8 spriteType;
 
   if (IsSubquestMode() == FALSE) {
-    if (!QuestMenu_GetSetQuestState(questId, FLAG_GET_UNLOCKED)) {
+    if (!QuestMenu_GetSetQuestState(questId, FLAG_GET_UNLOCKED) || IsQuestHidden(questId)) {
       QuestMenu_CreateSprite(ITEM_NONE, sStateDataPtr->spriteIconSlot, ITEM);
     } else {
       spriteId = GetQuestSprite(questId);
@@ -1934,7 +2039,7 @@ static void QuestMenu_CreateRewardSprite(u16 itemId, u8 idx) {
   FreeSpriteTilesByTag(102 + idx);
   FreeSpritePaletteByTag(102 + idx);
 
-  decompressed = Alloc(0x120);
+  decompressed = Alloc(0x200);
   if (decompressed == NULL)
     return;
 
@@ -1945,7 +2050,10 @@ static void QuestMenu_CreateRewardSprite(u16 itemId, u8 idx) {
   }
 
   DecompressDataWithHeaderWram(GetItemIconPic(itemId), decompressed);
-  CopyItemIconPicTo4x4Buffer(decompressed, iconBuffer);
+  if (GetDecompressedDataSize(GetItemIconPic(itemId)) >= 0x200)
+    CpuCopy16(decompressed, iconBuffer, 0x200);
+  else
+    CopyItemIconPicTo4x4Buffer(decompressed, iconBuffer);
 
   spriteSheet.data = iconBuffer;
   spriteSheet.size = 0x200;
@@ -1996,7 +2104,7 @@ static void QuestMenu_CreateBottomRightRewardSprite(u16 itemId) {
   FreeSpriteTilesByTag(104);
   FreeSpritePaletteByTag(104);
 
-  decompressed = Alloc(0x120);
+  decompressed = Alloc(0x200);
   if (decompressed == NULL)
     return;
 
@@ -2007,7 +2115,10 @@ static void QuestMenu_CreateBottomRightRewardSprite(u16 itemId) {
   }
 
   DecompressDataWithHeaderWram(GetItemIconPic(itemId), decompressed);
-  CopyItemIconPicTo4x4Buffer(decompressed, iconBuffer);
+  if (GetDecompressedDataSize(GetItemIconPic(itemId)) >= 0x200)
+    CpuCopy16(decompressed, iconBuffer, 0x200);
+  else
+    CopyItemIconPicTo4x4Buffer(decompressed, iconBuffer);
 
   spriteSheet.data = iconBuffer;
   spriteSheet.size = 0x200;
@@ -2169,7 +2280,7 @@ static void QuestMenu_DestroySprite(u8 idx) {
 static u32 GetQuestSprite(s32 questId) {
   u32 qvar = VarGet(sSideQuests[questId].questVariable);
 
-  if (sSideQuests[questId].sprite[qvar] == 0)
+  if (qvar >= MAX_QUEST_STATES || sSideQuests[questId].sprite[qvar] == 0)
     qvar = 0;
 
   return sSideQuests[questId].sprite[qvar];
@@ -2178,7 +2289,7 @@ static u32 GetQuestSprite(s32 questId) {
 static u32 GetQuestSpriteType(s32 questId) {
   u32 qvar = VarGet(sSideQuests[questId].questVariable);
 
-  if (sSideQuests[questId].spritetype[qvar] == 0)
+  if (qvar >= MAX_QUEST_STATES || sSideQuests[questId].spritetype[qvar] == 0)
     qvar = 0;
 
   return sSideQuests[questId].spritetype[qvar];
@@ -2224,6 +2335,11 @@ u8 GenerateSubquestState(u8 questId) {
 }
 
 u8 GenerateQuestState(u8 questId) {
+  if (IsQuestHidden(questId)) {
+    StringCopy(gStringVar4, sText_Empty);
+    return 0;
+  }
+
   if (QuestMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED)) {
     StringCopy(gStringVar4, sText_Complete);
     return 2;
@@ -2754,7 +2870,11 @@ void CB2_OpenQuestMenu(void) {
 }
 
 void QuestMenu_CopyQuestName(u8 *dst, u8 questId) {
-  StringCopy(dst, sSideQuests[questId].name);
+  if (questId >= QUEST_COUNT || sSideQuests[questId].name == NULL) {
+    StringCopy(dst, sText_Empty);
+    return;
+  }
+  StringCopy(dst, GetDisplayedQuestName(questId));
 }
 
 void QuestMenu_CopySubquestName(u8 *dst, u8 parentId, u8 childId) {
@@ -2781,6 +2901,36 @@ static void ClaimQuestReward(u8 taskId, u8 questId) {
       const u8 *pocketMsg;
       // Mark quest completed
       QuestMenu_GetSetQuestState(questId, FLAG_SET_COMPLETED);
+
+      // Calculate new cursor position to prevent jumping to the top
+      {
+        u16 currentIndex = sListMenuState.scroll + sListMenuState.row;
+        u16 new_nItems = sStateDataPtr->nItems - 1; // one item is removed from the active list
+        u16 targetIndex = currentIndex;
+        u16 newScroll = sListMenuState.scroll;
+        u16 newRow = sListMenuState.row;
+
+        if (targetIndex >= new_nItems) {
+          if (new_nItems > 0) {
+            targetIndex = new_nItems - 1;
+          } else {
+            targetIndex = 0;
+          }
+        }
+
+        if (newScroll + newRow >= new_nItems) {
+          if (targetIndex >= newScroll) {
+            newRow = targetIndex - newScroll;
+          } else {
+            newScroll = targetIndex;
+            newRow = 0;
+          }
+        }
+
+        sListMenuState.storedScrollOffset = newScroll;
+        sListMenuState.storedRowPosition = newRow;
+        sStateDataPtr->restoreCursor = TRUE;
+      }
 
       // Copy item name to gStringVar1, appending move name if it is a TM/HM
       if (IsItemTMHM(itemId)) {
@@ -2821,8 +2971,15 @@ static void ClaimQuestReward(u8 taskId, u8 questId) {
 
       // Clear and print to the footer window (window 1)
       FillWindowPixelBuffer(1, 0);
-      QuestMenu_AddTextPrinterParameterized(1, 2, gStringVar4, 2, 3, 2, 4, 0,
-                                            4);
+      
+      // 1. Item Name in the Title
+      QuestMenu_AddTextPrinterParameterized(1, 2, GetItemName(itemId), 2, 3, 2, 0, 0, 4);
+
+      // 2. Item Description in the Description box
+      QuestMenu_AddTextPrinterParameterized(1, 2, GetItemDescription(itemId), 40, 19, 2, 3, 0, 4);
+
+      // 3. Obtained Message at the bottom of the window
+      QuestMenu_AddTextPrinterParameterized(1, 2, gStringVar4, 40, 55, 2, 3, 0, 4);
 
       // Destroy old quest sprite, create reward item sprite and animate it
       {
@@ -2857,6 +3014,11 @@ static void ClaimSubquestReward(u8 taskId, u8 parentQuest, u8 subQuestIndex) {
       const u8 *pocketMsg;
       QuestMenu_GetSetSubquestState(parentQuest, FLAG_SET_REWARD,
                                     subQuestIndex);
+
+      // Keep cursor position for subquests
+      sListMenuState.storedScrollOffset = sListMenuState.scroll;
+      sListMenuState.storedRowPosition = sListMenuState.row;
+      sStateDataPtr->restoreCursor = TRUE;
 
       if (IsItemTMHM(itemId)) {
         u16 moveId = GetItemTMHMMoveId(itemId);
@@ -2894,8 +3056,15 @@ static void ClaimSubquestReward(u8 taskId, u8 parentQuest, u8 subQuestIndex) {
       StringExpandPlaceholders(gStringVar4, pocketMsg);
 
       FillWindowPixelBuffer(1, 0);
-      QuestMenu_AddTextPrinterParameterized(1, 2, gStringVar4, 2, 3, 2, 4, 0,
-                                            4);
+      
+      // 1. Item Name in the Title
+      QuestMenu_AddTextPrinterParameterized(1, 2, GetItemName(itemId), 2, 3, 2, 0, 0, 4);
+
+      // 2. Item Description in the Description box
+      QuestMenu_AddTextPrinterParameterized(1, 2, GetItemDescription(itemId), 40, 19, 2, 3, 0, 4);
+
+      // 3. Obtained Message at the bottom of the window
+      QuestMenu_AddTextPrinterParameterized(1, 2, gStringVar4, 40, 55, 2, 3, 0, 4);
 
       {
         u8 activeSlot = sStateDataPtr->spriteIconSlot ^ 1;
@@ -2920,6 +3089,8 @@ static void ClaimSubquestReward(u8 taskId, u8 parentQuest, u8 subQuestIndex) {
 }
 
 static void QuestMenu_UnlockAndActivateQuest(u8 questId) {
+  if (questId >= QUEST_COUNT || sSideQuests[questId].name == NULL)
+    return;
   if (!QuestMenu_GetSetQuestState(questId, FLAG_GET_UNLOCKED)) {
     QuestMenu_GetSetQuestState(questId, FLAG_SET_UNLOCKED);
     QuestMenu_GetSetQuestState(questId, FLAG_SET_ACTIVE);
@@ -2935,6 +3106,8 @@ void QuestMenu_SetSubquestCompleted(u16 subQuestId) {
   // Find parent quest
   u8 parentId;
   for (parentId = 0; parentId < QUEST_COUNT; parentId++) {
+    if (sSideQuests[parentId].name == NULL)
+      continue;
     if (sSideQuests[parentId].numSubquests > 0) {
       u8 j;
       for (j = 0; j < sSideQuests[parentId].numSubquests; j++) {

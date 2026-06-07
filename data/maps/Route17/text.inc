@@ -106,13 +106,13 @@ Route17_Text_WatchOutForDiscardedItems::
     .string "Watch out for discarded items.$"
 
 Route17_Text_SameSpeciesGrowDifferentRates::
-    .string "TRAINER TIPS\p"
+    .string "Trainer Tips\p"
     .string "All Pokémon are unique.\p"
     .string "Even Pokémon of the same species\n"
     .string "and level grow at different rates.$"
 
 Route17_Text_PressBToStayInPlace::
-    .string "TRAINER TIPS\p"
+    .string "Trainer Tips\p"
     .string "Press the B Button to stay in place\n"
     .string "while on a slope.$"
 

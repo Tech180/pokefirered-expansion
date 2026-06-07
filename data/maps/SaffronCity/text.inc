@@ -70,12 +70,12 @@ SaffronCity_Text_FightingDojo::
     .string "FIGHTING DOJO$"
 
 SaffronCity_Text_GymSign::
-    .string "Saffron City Pokémon GYM\n"
-    .string "LEADER: SABRINA\l"
+    .string "Saffron City Pokémon Gym\n"
+    .string "LEADER: Sabrina\l"
     .string "The Master of PSYCHIC Pokémon!$"
 
 SaffronCity_Text_FullHealCuresStatus::
-    .string "TRAINER TIPS\p"
+    .string "Trainer Tips\p"
     .string "FULL HEAL cures all ailments like\n"
     .string "burns, paralysis, poisoning,\l"
     .string "freezing, and sleep.\p"
@@ -83,7 +83,7 @@ SaffronCity_Text_FullHealCuresStatus::
     .string "convenient than buying other items.$"
 
 SaffronCity_Text_GreatBallImprovedCatchRate::
-    .string "TRAINER TIPS\p"
+    .string "Trainer Tips\p"
     .string "The new GREAT BALL offers improved\n"
     .string "catching rates.\p"
     .string "Try it on those hard-to-catch\n"
@@ -93,23 +93,23 @@ SaffronCity_Text_SilphCoSign::
     .string "Silph Co. OFFICE BUILDING$"
 
 SaffronCity_Text_MrPsychicsHouse::
-    .string "MR. PSYCHIC'S HOUSE$"
+    .string "Mr. Psychic's House$"
 
 SaffronCity_Text_SilphsLatestProduct::
     .string "SILPH's latest product!\n"
     .string "Release to be determined…$"
 
 SaffronCity_Text_TrainerFanClubSign::
-    .string "Pokémon TRAINER FAN CLUB\p"
-    .string "Many TRAINERS have scribbled their\n"
+    .string "Pokémon Trainer FAN CLUB\p"
+    .string "Many Trainers have scribbled their\n"
     .string "names on this sign.$"
 
 SaffronCity_Text_HowCanClubNotRecognizeLance::
     .string "This FAN CLUB…\n"
     .string "No one here has a clue!\p"
     .string "How could they not recognize\n"
-    .string "the brilliance that is LANCE?\p"
+    .string "the brilliance that is Lance?\p"
     .string "He stands for justice!\n"
     .string "He's cool, and yet passionate!\l"
-    .string "He's the greatest, LANCE!$"
+    .string "He's the greatest, Lance!$"
 

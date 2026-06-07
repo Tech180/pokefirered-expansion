@@ -1,5 +1,5 @@
 Route25_Text_JoeyIntro::
-    .string "Local TRAINERS come here to\n"
+    .string "Local Trainers come here to\n"
     .string "practice.$"
 
 Route25_Text_JoeyDefeat::
@@ -19,7 +19,7 @@ Route25_Text_DanDefeat::
     .string "I'm not mad!$"
 
 Route25_Text_DanPostBattle::
-    .string "On the S.S. Anne, I saw TRAINERS\n"
+    .string "On the S.S. Anne, I saw Trainers\n"
     .string "from around the world.$"
 
 Route25_Text_FlintIntro::
@@ -109,7 +109,7 @@ Route25_Text_SeaCottageSign::
 
 Route25_Text_MistyHighHopesAboutThisPlace::
     .string "This cape is a famous date spot.\p"
-    .string "MISTY, the GYM LEADER, has high\n"
+    .string "Misty, the Gym Leader, has high\n"
     .string "hopes about this place.$"
 
 Route25_Text_AreYouHereAlone::

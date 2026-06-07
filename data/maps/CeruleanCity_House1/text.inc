@@ -1,5 +1,5 @@
 CeruleanCity_House1_Text_BadgesHaveAmazingSecrets::
-    .string "Only skilled TRAINERS can collect\n"
+    .string "Only skilled Trainers can collect\n"
     .string "Pokémon BADGES.\p"
     .string "I see you have at least one.\p"
     .string "Those BADGES have amazing secrets,\n"

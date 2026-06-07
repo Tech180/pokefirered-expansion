@@ -222,6 +222,8 @@ ViridianCity_EventScript_TutorialTriggerRight::
 	end
 
 ViridianCity_EventScript_DoTutorialBattle::
+	special CheckSkipTutorials
+	goto_if_eq VAR_RESULT, TRUE, ViridianCity_EventScript_SkipTutorial
 	msgbox ViridianCity_Text_ShowYouHowToCatchMons
 	closemessage
 	goto_if_questlog EventScript_ReleaseEnd
@@ -235,3 +237,11 @@ ViridianCity_EventScript_DoTutorialBattle::
 	giveitem ITEM_TEACHY_TV
 	msgbox ViridianCity_Text_WatchThatToLearnBasics
 	return
+
+ViridianCity_EventScript_SkipTutorial::
+	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 2
+	msgbox ViridianCity_Text_ThatWasEducationalTakeThis
+	giveitem ITEM_TEACHY_TV
+	msgbox ViridianCity_Text_WatchThatToLearnBasics
+	release
+	end

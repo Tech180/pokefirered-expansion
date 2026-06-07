@@ -174,9 +174,9 @@ const struct FieldMoveInfo gFieldMovesInfo[FIELD_MOVE_COUNT] =
         .isUnlockedFunc = NULL,
         .moveId = MOVE_SWEET_SCENT,
         .partyMessageId = PARTY_MSG_CANT_USE_HERE,
-        .description = COMPOUND_STRING("Lure wild POKéMON."),
+        .description = COMPOUND_STRING("Lure wild Pokémon."),
         .setUpFunc = FieldMove_SetUpSweetScent,
-        .questLogText = COMPOUND_STRING("{STR_VAR_1} used SWEET SCENT to attract\nwild POKéMON."),
+        .questLogText = COMPOUND_STRING("{STR_VAR_1} used SWEET SCENT to attract\nwild Pokémon."),
     },
     [FIELD_MOVE_DEFOG] =
     {

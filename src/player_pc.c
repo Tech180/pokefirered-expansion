@@ -76,12 +76,12 @@ static void Task_Error_NoPokemon(u8 taskId);
 static void Task_PlayerPcExitMailSubmenu(u8 taskId);
 
 static const u8 sText_ThereAreNoItems[] = _("There are no items.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_MoveToBag[] = _("MOVE TO BAG");
+static const u8 sText_MoveToBag[] = _("MOVE TO Bag");
 static const u8 sText_TheresNoMailHere[] = _("There's no MAIL here.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_WhatWouldYouLikeToDoWithPlayersMail[] = _("What would you like to do with\n{STR_VAR_1}'s MAIL?");
 static const u8 sText_MessageWillBeLost[] = _("The message will be lost.\nIs that okay?");
-static const u8 sText_BagIsFull[] = _("The BAG is full.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_MailReturnedToBagMessageErased[] = _("The MAIL was returned to the BAG\nwith its message erased.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_BagIsFull[] = _("The Bag is full.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_MailReturnedToBagMessageErased[] = _("The MAIL was returned to the Bag\nwith its message erased.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_Mailbox[] = _("MAILBOX");
 static const u8 sText_WhatWouldYouLikeToDo[] = _("What would you like to do?");
 

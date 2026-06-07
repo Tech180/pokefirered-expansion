@@ -17,6 +17,7 @@
 #define QUEST_MENU_CHECK_SUBQUEST_COMPLETE 12 // checks if a subquest is completed
 #define QUEST_MENU_SET_FAILED 13        // questId = QUEST_X (0-indexed)
 #define QUEST_MENU_CHECK_FAILED 14      // checks if questId is in Failed state. Returns result to gSpecialVar_Result
+#define QUEST_MENU_UNLOCK_DISCOVERY 15  // unlocks quest discovery flag
 
 // quest number defines
 #define QUEST_NONE                      0xFFFF
@@ -58,7 +59,95 @@
 
 #define QUEST_SEVII_ISLANDS             25
 #define QUEST_ROUTE22_RIVAL             26
-#define QUEST_COUNT                     27
+#define QUEST_THE_TREASURE_HUNTER      27
+#define QUEST_SLEEPING_ON_THE_JOB      28
+#define QUEST_REST_IN_PEACE            29
+#define QUEST_THE_GYM_INSPECTOR        30
+#define QUEST_VENDING_MACHINE_ROULETTE 31
+#define QUEST_THE_GRAND_BLUE_MILE      32
+#define QUEST_ROCK_AND_STONE           33
+#define QUEST_THE_SAFARI_PURIST        34
+#define QUEST_MUTUAL_ASSURANCE         35
+#define QUEST_THE_FOSSIL_FANATIC       36
+#define QUEST_THE_HOARDER              37
+#define QUEST_THE_SEASICK_SAILOR       38
+#define QUEST_FUCHSIA_ZOO_SIGNAGE      39
+#define QUEST_EMF_LEVEL_5              40
+#define QUEST_SPACE_EXHIBIT_VANDALISM  41
+#define QUEST_COMPREHENSIVE_COVERAGE   42
+#define QUEST_THE_S_S_ANNE_TRUCK       43
+#define QUEST_ROUTE_1_LEDGE_MASTER     44
+#define QUEST_CYCLING_ROAD_SPEED_TRAP  45
+#define QUEST_THE_REPEL_MASTER         46
+#define QUEST_THE_EEVEE_SCHOLAR        47
+#define QUEST_SILPH_CO_NAPTIME         48
+#define QUEST_SCAVENGER                49
+#define QUEST_BIKE_SHOP_REBELLION      50
+#define QUEST_SAFARI_SPEEDRUNNER       51
+#define QUEST_FUCHSIA_INVISIBLE_WALLS  52
+#define QUEST_THE_COUCH_POTATO         53
+#define QUEST_CONSOLE_WARS             54
+#define QUEST_DEFORESTATION            55
+#define QUEST_BOULDER_BUSTER           56
+#define QUEST_THIRSTY_WORK             57
+#define QUEST_PLUSH_COLLECTOR          58
+#define QUEST_BIRD_WATCHER             59
+#define QUEST_BROKE_DESPERATE          60
+#define QUEST_CERULEAN_BIKE_LOOPHOLE   61
+#define QUEST_SCIENCE_IS_AMAZING       62
+#define QUEST_THE_JACKPOT              63
+#define QUEST_DUMPSTER_DIVER           64
+#define QUEST_LORE_HISTORIAN           65
+#define QUEST_PARANORMAL_INVESTIGATOR  66
+#define QUEST_PIKACHU_S_BEACH          67
+#define QUEST_FISHING_GURU_REUNION     68
+#define QUEST_THE_COPYCAT_S_MIMIC      69
+#define QUEST_BERRY_BLENDER            70
+#define QUEST_LORELEI_S_MENAGERIE      71
+#define QUEST_THE_TANOBY_DECIPHERER    72
+#define QUEST_LOST_IN_THE_FOG          73
+#define QUEST_THE_TIME_TRAVELER        74
+#define QUEST_GENETIC_MEMORY           75
+#define QUEST_DE_EXTINCTION_EXPERT     76
+#define QUEST_THE_PERFECTIONIST        77
+#define QUEST_THE_PACIFIST             78
+#define QUEST_THE_INVISIBLE_PC         79
+#define QUEST_RUBBER_DUCK_DEBUGGING    80
+#define QUEST_THE_MAGIKARP_SWINDLE     81
+#define QUEST_THE_UNUSED_BED           82
+#define QUEST_LEAVE_NO_DWARF_BEHIND    83
+#define QUEST_VERMILION_CONSTRUCTION   84
+#define QUEST_THE_WARDEN_S_MESS        85
+#define QUEST_GIOVANNI_S_THRONE        86
+#define QUEST_THE_HYPNOTIZED_PATIENT   87
+#define QUEST_THE_THIRSTY_GUARDS       88
+#define QUEST_SAFFRON_CLUB_NATURES     89
+#define QUEST_THE_FOSSILIZED_MUD       90
+#define QUEST_CINNABAR_TRADE_REGRET    91
+#define QUEST_CINNABAR_COASTLINE       92
+#define QUEST_BILL_S_GARDEN_RUMOR      93
+#define QUEST_SS_ANNE_DEPARTURE_SKIP   94
+#define QUEST_THE_BLANK_SLATE          95
+#define QUEST_THE_ALCHEMIST_S_TRASH    96
+#define QUEST_THE_WITCHING_HOUR        97
+#define QUEST_MORNING_DEW              98
+#define QUEST_HIGH_TIDE_AT_SEAFOAM     99
+#define QUEST_THIRSTY_GIRL_S_SECRET    100
+#define QUEST_THE_SCULPTOR_S_MUSE      101
+#define QUEST_THE_IMPOSTER_SYNDROME    102
+#define QUEST_THE_ICE_SKATER           103
+#define QUEST_THE_PEWTER_GEOLOGIST     104
+#define QUEST_OAK_S_INBOX              105
+#define QUEST_CINNABAR_ARCHIVIST       106
+#define QUEST_PERFECT_FRIENDSHIP       107
+#define QUEST_TRAINER_TOWER_PACIFISM   108
+#define QUEST_THE_TANOBY_CIPHER        109
+#define QUEST_MT_EMBER_S_CORE          110
+#define QUEST_ICEFALL_WATERFALL        111
+#define QUEST_THE_MANIAC_ON_THE_CAPE   112
+#define QUEST_SIBLING_RIVALRY           113
+
+#define QUEST_COUNT                     114
 
 // Subquests for Gym Challenges
 #define SUB_QUEST_GYM_BROCK             0

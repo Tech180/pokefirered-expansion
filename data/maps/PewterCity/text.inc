@@ -28,10 +28,10 @@ PewterCity_Text_ClefairyCameFromMoon::
 
 PewterCity_Text_BrockOnlySeriousTrainerHere::
     .string "There aren't many serious Pokémon\n"
-    .string "TRAINERS here.\p"
-    .string "They're all like BUG CATCHERS,\n"
+    .string "Trainers here.\p"
+    .string "They're all like Bug Catchers,\n"
     .string "you know, just hobbyists.\p"
-    .string "But PEWTER GYM's BROCK isn't like\n"
+    .string "But Pewter Gym's Brock isn't like\n"
     .string "that, not one bit.$"
 
 PewterCity_Text_DidYouCheckOutMuseum::
@@ -63,16 +63,16 @@ PewterCity_Text_SprayingRepelToKeepWildMonsOut::
     .string "Pokémon out of my garden!$"
 
 PewterCity_Text_BrocksLookingForChallengersFollowMe::
-    .string "You're a TRAINER, right?\p"
-    .string "BROCK's looking for new\n"
+    .string "You're a Trainer, right?\p"
+    .string "Brock's looking for new\n"
     .string "challengers. Follow me!$"
 
 PewterCity_Text_GoTakeOnBrock::
     .string "If you have the right stuff,\n"
-    .string "go take on BROCK!$"
+    .string "go take on Brock!$"
 
 PewterCity_Text_TrainerTipsEarningEXP::
-    .string "TRAINER TIPS\p"
+    .string "Trainer Tips\p"
     .string "All Pokémon that appear in battle,\n"
     .string "however briefly, earn EXP Points.$"
 
@@ -87,9 +87,9 @@ PewterCity_Text_MuseumOfScience::
     .string "PEWTER MUSEUM OF SCIENCE$"
 
 PewterCity_Text_GymSign::
-    .string "Pewter City Pokémon GYM\n"
-    .string "LEADER: BROCK\l"
-    .string "The Rock-Solid Pokémon TRAINER!$"
+    .string "Pewter City Pokémon Gym\n"
+    .string "LEADER: Brock\l"
+    .string "The Rock-Solid Pokémon Trainer!$"
 
 PewterCity_Text_CitySign::
     .string "Pewter City\n"

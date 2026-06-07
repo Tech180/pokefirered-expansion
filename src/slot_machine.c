@@ -224,7 +224,7 @@ static void SetReelButtonPressed(u8 reel);
 static void ReleaseReelButtons(void);
 static void PressReelButton(u8 reel, u8 taskId);
 
-static const u8 sText_OutOfCoins[] = _("You've run out of COINS.\nGame over!");
+static const u8 sText_OutOfCoins[] = _("You've run out of Coins.\nGame over!");
 static const u8 sText_QuitPlaying[] = _("Quit playing?");
 static const u8 sText_SlotMachineControls[] = _("{DPAD_LEFTRIGHT}COMBOS {DPAD_DOWN}WAGER {A_BUTTON}STOP {B_BUTTON}EXIT");
 

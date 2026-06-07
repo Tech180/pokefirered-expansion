@@ -452,7 +452,7 @@ enum {
 
 static const u8 sText_SpacePoints2[] = _(" points");
 static const u8 sText_SpaceTimes3[] = _(" time(s)");
-static const u8 sText_PkmnJumpRecords[] = _("POKéMON JUMP RECORDS");
+static const u8 sText_PkmnJumpRecords[] = _("Pokémon JUMP RECORDS");
 static const u8 sText_JumpsInARow[] = _("Jumps in a row:");
 static const u8 sText_BestScore2[] = _("Best score:");
 static const u8 sText_ExcellentsInARow[] = _("EXCELLENTS in a row:");

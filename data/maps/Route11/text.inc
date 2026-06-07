@@ -42,7 +42,7 @@ Route11_Text_BraxtonPostBattle::
     .string "Spread the word to save energy!$"
 
 Route11_Text_DillonIntro::
-    .string "I just became a TRAINER.\n"
+    .string "I just became a Trainer.\n"
     .string "But, I think I can win.$"
 
 Route11_Text_DillonDefeat::
@@ -109,5 +109,5 @@ Route11_Text_DavePostBattle::
     .string "I better go find stronger ones!$"
 
 Route11_Text_DiglettsCave::
-    .string "Diglett'S Cave$"
+    .string "Diglett's Cave$"
 

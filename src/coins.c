@@ -8,7 +8,7 @@
 
 EWRAM_DATA static u8 sCoinsWindowId = 0;
 
-const u8 sText_XCoins[] = _("{STR_VAR_1} COINS");
+const u8 sText_XCoins[] = _("{STR_VAR_1} Coins");
 
 u16 GetCoins(void)
 {

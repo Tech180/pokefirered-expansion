@@ -18,7 +18,7 @@ Route13_Text_SusieDefeat::
     .string "I lost!$"
 
 Route13_Text_SusiePostBattle::
-    .string "I want to become a good TRAINER.\n"
+    .string "I want to become a good Trainer.\n"
     .string "I'll train hard, just watch.$"
 
 Route13_Text_ValerieIntro::
@@ -29,7 +29,7 @@ Route13_Text_ValerieDefeat::
     .string "Not enough!$"
 
 Route13_Text_ValeriePostBattle::
-    .string "You got those BADGES from GYM\n"
+    .string "You got those BADGES from Gym\n"
     .string "LEADERS. I know!$"
 
 Route13_Text_GwenIntro::
@@ -113,12 +113,12 @@ Route13_Text_RobertPostBattle::
     .string "PIDGEOTTO…$"
 
 Route13_Text_LookToLeftOfThatPost::
-    .string "TRAINER TIPS\p"
+    .string "Trainer Tips\p"
     .string "Look, look!\n"
     .string "Look to the left of that post!$"
 
 Route13_Text_SelectToSwitchItems::
-    .string "TRAINER TIPS\p"
+    .string "Trainer Tips\p"
     .string "Use SELECT to switch items in the\n"
     .string "ITEMS window.$"
 

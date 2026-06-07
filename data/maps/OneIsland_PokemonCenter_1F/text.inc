@@ -174,7 +174,7 @@ OneIsland_PokemonCenter_1F_Text_YoullBeTradingFromTrainersFarAway::
     .string "trades over long distances.\p"
     .string "When I get finished, you'll be\n"
     .string "trading for exotic Pokémon from\l"
-    .string "TRAINERS far away.$"
+    .string "Trainers far away.$"
 
 OneIsland_PokemonCenter_1F_Text_NeedsSpecialGemstone::
     .string "But, there is a slight catch.\p"
@@ -266,7 +266,7 @@ OneIsland_PokemonCenter_1F_Text_ManagedToLinkWithHoennThankYou::
     .string "{PLAYER}…\n"
     .string "{PLAYER}, I did it!\p"
     .string "I've managed to link up with\n"
-    .string "TRAINERS in the HOENN region!\p"
+    .string "Trainers in the HOENN region!\p"
     .string "Finally, the Network Machine is\n"
     .string "fully operational!\p"
     .string "{PLAYER}, I owe it all to you!\p"

@@ -5,7 +5,7 @@ RocketHideout_B4F_Text_GiovanniIntro::
     .string "around the world.\p"
     .string "They're important tools for keeping\n"
     .string "our criminal enterprise going.\p"
-    .string "I am the leader, GIOVANNI!\p"
+    .string "I am the leader, Giovanni!\p"
     .string "For your insolence, you will feel a\n"
     .string "world of pain!$"
 

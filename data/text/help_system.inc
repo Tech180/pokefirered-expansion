@@ -122,10 +122,10 @@ Help_Text_CanIBuyPokeBalls::
 	.string "Can I buy Poké Balls?$"
 
 Help_Text_WhatsATrainer::
-	.string "What's a TRAINER?$"
+	.string "What's a Trainer?$"
 
 Help_Text_HowDoIWinAgainstTrainer::
-	.string "How do I win against a TRAINER?$"
+	.string "How do I win against a Trainer?$"
 
 Help_Text_WhereDoMonsAppear::
 	.string "Where do Pokémon appear?$"
@@ -155,10 +155,10 @@ Help_Text_NothingIWantToKnow::
 	.string "There's nothing that I want to know!$"
 
 Help_Text_WhatsPokemonCenter::
-	.string "What's a Pokémon CENTER?$"
+	.string "What's a Pokémon Center?$"
 
 Help_Text_WhatsPokemonMart::
-	.string "What's a Pokémon MART?$"
+	.string "What's a Pokémon Mart?$"
 
 Help_Text_WantToEndGame::
 	.string "I want to end the game.$"
@@ -182,7 +182,7 @@ Help_Text_WantToEndSafari::
 	.string "I want to end this SAFARI GAME!$"
 
 Help_Text_WhatIsAGym::
-	.string "What is a GYM?$"
+	.string "What is a Gym?$"
 
 Help_Text_AnswerPlayingForFirstTime::
 	.string "You become the main character,\n"
@@ -255,12 +255,12 @@ Help_Text_AnswerWhatHappenedToItemIGot::
 
 Help_Text_AnswerWhatAreMyAdventureBasics::
 	.string "If Pokémon are hurt in battle,\n"
-	.string "take them to a Pokémon CENTER and\l"
+	.string "take them to a Pokémon Center and\l"
 	.string "have them healed by the staff.\l"
 	.string "Get in the habit of saving your\l"
 	.string "game and recording your progress.\l"
 	.string "Stock up on healing items at\l"
-	.string "Pokémon MARTS before traveling far.$"
+	.string "Pokémon Marts before traveling far.$"
 
 Help_Text_AnswerHowAreRoadsForestsDifferent::
 	.string "Forests are basically the same as\n"
@@ -272,7 +272,7 @@ Help_Text_AnswerHowAreCavesDifferent::
 	.string "Caves are dark and dangerous. Wild\n"
 	.string "Pokémon can appear anywhere in them.\l"
 	.string "If there is an emergency, rush to a\l"
-	.string "Pokémon CENTER or use items.\l"
+	.string "Pokémon Center or use items.\l"
 	.string "New towns await discovery beyond some\l"
 	.string "caves, so don't give up.$"
 
@@ -305,9 +305,9 @@ Help_Text_AnswerWhatsABattle::
 Help_Text_AnswerHowDoIPrepareForBattle::
 	.string "First, fully heal the Pokémon in your\n"
 	.string "party (the Pokémon with you) at any\l"
-	.string "Pokémon CENTER.\l"
+	.string "Pokémon Center.\l"
 	.string "You should also buy healing items for\l"
-	.string "emergencies at a Pokémon MART.$"
+	.string "emergencies at a Pokémon Mart.$"
 
 Help_Text_AnswerWhatIsAMonsVitality::
 	.string "A Pokémon's vitality is expressed in HP.\n"
@@ -315,10 +315,10 @@ Help_Text_AnswerWhatIsAMonsVitality::
 	.string "subtracted. If its HP drops to zero,\l"
 	.string "the Pokémon faints.\l"
 	.string "Heal hurt or fainted Pokémon at a\l"
-	.string "Pokémon CENTER or by using items.$"
+	.string "Pokémon Center or by using items.$"
 
 Help_Text_AnswerMyMonsAreHurt::
-	.string "A Pokémon CENTER is like an inn for\n"
+	.string "A Pokémon Center is like an inn for\n"
 	.string "Pokémon. It will fully heal Pokémon of\l"
 	.string "any status problems and fully restore\l"
 	.string "their HP using a special machine.\l"
@@ -331,7 +331,7 @@ Help_Text_AnswerWhatIsStatusProblem::
 	.string "foe's attack. These include burns,\l"
 	.string "paralysis, poisoning, sleep, and\l"
 	.string "freezing. These can be healed by\l"
-	.string "visiting a Pokémon CENTER or using\l"
+	.string "visiting a Pokémon Center or using\l"
 	.string "the appropriate item.$"
 
 Help_Text_AnswerWhatHappensIfAllMyMonsFaint::
@@ -340,7 +340,7 @@ Help_Text_AnswerWhatHappensIfAllMyMonsFaint::
 	.string "lose some MONEY, and you are\l"
 	.string "returned home or to a Pokémon\l"
 	.string "CENTER. To reduce that chance, visit\l"
-	.string "Pokémon CENTERS often. Also, get\l"
+	.string "Pokémon Centers often. Also, get\l"
 	.string "in the habit of saving often.$"
 
 Help_Text_AnswerCantCatchMons::
@@ -355,30 +355,30 @@ Help_Text_AnswerCantCatchMons::
 Help_Text_AnswerRanOutOfPotions::
 	.string "There are shops, known as Pokémon\n"
 	.string "MARTS, that sell items.\l"
-	.string "You will not find Pokémon MARTS on\l"
+	.string "You will not find Pokémon Marts on\l"
 	.string "roads, in forests, or in caves.\l"
 	.string "Stock up on needed items while you are\l"
-	.string "visiting a town with a Pokémon MART.$"
+	.string "visiting a town with a Pokémon Mart.$"
 
 Help_Text_AnswerCanIBuyPokeBalls::
 	.string "You may buy Poké Balls at any\n"
-	.string "Pokémon MART in any town.\l"
-	.string "You will not find Pokémon MARTS on\l"
+	.string "Pokémon Mart in any town.\l"
+	.string "You will not find Pokémon Marts on\l"
 	.string "roads, in forests, or in caves.\l"
 	.string "Stock up on Poké Balls while you are\l"
-	.string "visiting a town with a Pokémon MART.$"
+	.string "visiting a town with a Pokémon Mart.$"
 
 Help_Text_AnswerWhatsATrainer::
-	.string "A TRAINER is a person who raises\n"
+	.string "A Trainer is a person who raises\n"
 	.string "Pokémon through battling.\l"
-	.string "TRAINERS will challenge you \l"
+	.string "Trainers will challenge you \l"
 	.string "wherever they are - it could be on\l"
 	.string "a road, in forests, caves, anywhere.\l"
 	.string "If your eyes meet, you have to accept\l"
 	.string "their challenge. So be careful!$"
 
 Help_Text_AnswerHowDoIWinAgainstTrainer::
-	.string "To beat a TRAINER in battle, use\n"
+	.string "To beat a Trainer in battle, use\n"
 	.string "Pokémon that have type advantages\l"
 	.string "over the foe's Pokémon. You may also\l"
 	.string "use highly trained Pokémon with\l"
@@ -390,7 +390,7 @@ Help_Text_AnswerWhereDoMonsAppear::
 	.string "Wild Pokémon will appear in tall grass,\n"
 	.string "on roads, and in forests. They will\l"
 	.string "appear anywhere in dark caves.\l"
-	.string "There are no wild Pokémon or TRAINERS\l"
+	.string "There are no wild Pokémon or Trainers\l"
 	.string "in towns, so they are safe places.$"
 
 Help_Text_AnswerWhatAreMoves::
@@ -442,14 +442,14 @@ Help_Text_AnswerFoeMonsTooStrong::
 	.string "leveling up your Pokémon some more.\l"
 	.string "Go back the way you came and battle\l"
 	.string "wild Pokémon to level up your party.\l"
-	.string "You may also battle TRAINERS whom you\l"
+	.string "You may also battle Trainers whom you\l"
 	.string "have not battled before.$"
 
 Help_Text_AnswerWhatDoIDoInCave::
 	.string "Unlike roads and forests, wild Pokémon\n"
 	.string "can appear anywhere in caves.\l"
 	.string "If your Pokémon are hurt in a cave,\l"
-	.string "rush to a Pokémon CENTER or use items\l"
+	.string "rush to a Pokémon Center or use items\l"
 	.string "to heal them right away. It is very\l"
 	.string "dangerous to force your luck in caves.$"
 
@@ -458,19 +458,19 @@ Help_Text_AnswerNothingIWantToKnow::
 	.string "Believe in yourself and find your way!$"
 
 Help_Text_AnswerWhatsPokemonCenter::
-	.string "A Pokémon CENTER is identified by its\n"
+	.string "A Pokémon Center is identified by its\n"
 	.string "red roof and a “P.C” sign. Every\l"
-	.string "Pokémon CENTER offers such services as\l"
+	.string "Pokémon Center offers such services as\l"
 	.string "fully healing Pokémon and free PC use,\l"
 	.string "making it essential for your travels.\l"
 	.string "On the upper floor are facilities for\l"
 	.string "linking with friends and others.$"
 
 Help_Text_AnswerWhatsPokemonMart::
-	.string "A Pokémon MART is identified by its\n"
+	.string "A Pokémon Mart is identified by its\n"
 	.string "blue roof and a “MART” sign.\l"
 	.string "Items can be bought and sold at any\l"
-	.string "Pokémon MART. Some MARTS carry items\l"
+	.string "Pokémon Mart. Some MARTS carry items\l"
 	.string "that are available only in their towns.$"
 
 Help_Text_AnswerWantToEndGame::
@@ -486,7 +486,7 @@ Help_Text_AnswerWhatsAMon::
 	.string "many mysteries still remain. You may\l"
 	.string "see them in grass, the sea, and caves.\l"
 	.string "They appear to obey the wishes of the\l"
-	.string "TRAINERS that caught them.$"
+	.string "Trainers that caught them.$"
 
 Help_Text_AnswerWhatIsThatPersonLike::
 	.string "Use the Fame Checker among the\n"
@@ -520,12 +520,12 @@ Help_Text_AnswerWantToEndSafari::
 	.string "“RETIRE” at the top of the list.$"
 
 Help_Text_AnswerWhatIsAGym::
-	.string "Pokémon GYMS are operated by the\n"
-	.string "Pokémon LEAGUE and are training\l"
-	.string "facilities for TRAINERS. They are all\l"
+	.string "Pokémon Gyms are operated by the\n"
+	.string "Pokémon League and are training\l"
+	.string "facilities for Trainers. They are all\l"
 	.string "across the land in cities and towns.\l"
 	.string "Each one is headed by a LEADER, who\l"
-	.string "is a very skilled TRAINER. Beat the\l"
+	.string "is a very skilled Trainer. Beat the\l"
 	.string "LEADER to collect a BADGE.$"
 
 Help_Text_UsingPokedex::
@@ -616,7 +616,7 @@ Help_Text_UsingMailbox::
 	.string "  Using “MAILBOX”$"
 
 Help_Text_UsingProfOaksPC::
-	.string " Using “PROF. OAK'S PC”$"
+	.string " Using “PROF. Oak's PC”$"
 
 Help_Text_OpeningMenu::
 	.string "Opening the MENU$"
@@ -748,7 +748,7 @@ Help_Text_HowToUsePokeBall::
 
 Help_Text_HowToUsePlayer::
 	.string "{CIRCLE_1} Select “{PLAYER}” on the MENU.\n"
-	.string "{CIRCLE_2} Your TRAINER CARD is displayed face\n"
+	.string "{CIRCLE_2} Your Trainer CARD is displayed face\n"
 	.string "   up with basic information. Press the\n"
 	.string "   A Button to turn the CARD over.\n"
 	.string "{CIRCLE_3} A variety of data can be found on\n"
@@ -835,7 +835,7 @@ Help_Text_HowToEnterName::
 	.string "{CIRCLE_4} Press the A Button on “OK.”$"
 
 Help_Text_HowToUsePC::
-	.string "{CIRCLE_1} Go to any Pokémon CENTER, go up\n"
+	.string "{CIRCLE_1} Go to any Pokémon Center, go up\n"
 	.string "   to the PC, then press the A Button.$"
 
 Help_Text_HowToUseBillsPC::
@@ -917,7 +917,7 @@ Help_Text_HowToUseMailbox::
 	.string "   make a Pokémon hold MAIL.$"
 
 Help_Text_HowToUseProfOaksPC::
-	.string "{CIRCLE_1} Select “PROF. OAK'S PC” on the PC.\n"
+	.string "{CIRCLE_1} Select “PROF. Oak's PC” on the PC.\n"
 	.string "{CIRCLE_2} PROF. OAK will evaluate your\n"
 	.string "   Pokédex.\n"
 	.string "His evaluations should give you hints\n"
@@ -1016,7 +1016,7 @@ Help_Text_HowToUseMailbox2::
 	.string "   make a Pokémon hold it.$"
 
 Help_Text_HowToUseRun::
-	.string "You may not “RUN” from a TRAINER\n"
+	.string "You may not “RUN” from a Trainer\n"
 	.string "battle!\n"
 	.string "{CIRCLE_1} You may “RUN” from a wild Pokémon.\n"
 	.string "{CIRCLE_2} Your chance of escape is improved\n"
@@ -1191,7 +1191,7 @@ Help_Text_DefineHP::
 	.string "So, the key in battle is to try to\l"
 	.string "reduce the foe's HP to zero.\l"
 	.string "If your Pokémon are hurt, restore their\l"
-	.string "HP at a Pokémon CENTER or use items.$"
+	.string "HP at a Pokémon Center or use items.$"
 
 Help_Text_DefineEXP::
 	.string "EXP. Points stands for “Experience\n"
@@ -1267,8 +1267,8 @@ Help_Text_DefineType::
 	.string "against the GRASS type.$"
 
 Help_Text_DefineOT::
-	.string "OT stands for “Original TRAINER,”\n"
-	.string "the first TRAINER to have caught the\l"
+	.string "OT stands for “Original Trainer,”\n"
+	.string "the first Trainer to have caught the\l"
 	.string "selected Pokémon.\l"
 	.string "Even if the Pokémon is traded, the OT\l"
 	.string "name will remain unchanged.$"
@@ -1291,9 +1291,9 @@ Help_Text_DefineAbility::
 
 Help_Text_DefineMoney::
 	.string "Whenever you win a battle against a\n"
-	.string "TRAINER, you are given prize money.\l"
+	.string "Trainer, you are given prize money.\l"
 	.string "Save up your prize money so you can\l"
-	.string "enjoy shopping at Pokémon MARTS!$"
+	.string "enjoy shopping at Pokémon Marts!$"
 
 Help_Text_DefineMoveType::
 	.string "Moves are also classified by types.\n"
@@ -1312,10 +1312,10 @@ Help_Text_DefineNature::
 
 Help_Text_DefineIDNo::
 	.string "The ID No. is a special number assigned\n"
-	.string "specifically to you as a TRAINER.\l"
+	.string "specifically to you as a Trainer.\l"
 	.string "Together with the OT name, the ID No.\l"
 	.string "is used to precisely identify the\l"
-	.string "Original TRAINER.\l"
+	.string "Original Trainer.\l"
 	.string "The ID No. does not change even if the\l"
 	.string "Pokémon is traded.$"
 
@@ -1324,7 +1324,7 @@ Help_Text_DefinePP::
 	.string "It indicates the number of times a\l"
 	.string "certain move can be used in battle.\l"
 	.string "Like HP, PP can be restored by visiting\l"
-	.string "a Pokémon CENTER or using certain\l"
+	.string "a Pokémon Center or using certain\l"
 	.string "items.$"
 
 Help_Text_DefinePower::
@@ -1383,9 +1383,9 @@ Help_Text_DefinePlayTime::
 	.string "you have played this game.$"
 
 Help_Text_DefineBadges::
-	.string "The Pokémon LEAGUE BADGES that you\n"
+	.string "The Pokémon League BADGES that you\n"
 	.string "have won are registered and shown.\l"
-	.string "Earn BADGES by defeating GYM LEADERS\l"
+	.string "Earn BADGES by defeating Gym Leaders\l"
 	.string "in various cities and towns.$"
 
 Help_Text_DefineTextSpeed::
@@ -1399,7 +1399,7 @@ Help_Text_DefineBattleScene::
 
 Help_Text_DefineBattleStyle::
 	.string "You can choose whether or not a\n"
-	.string "TRAINER can switch a Pokémon after\l"
+	.string "Trainer can switch a Pokémon after\l"
 	.string "it has made its foe faint.\l"
 	.string "Set to “SHIFT” if you would like the\l"
 	.string "chance to switch a Pokémon after it\l"
@@ -1481,23 +1481,23 @@ Help_Text_DefinePokemon::
 
 Help_Text_DefineIDNo2::
 	.string "The ID No. is a special number assigned\n"
-	.string "specifically to you as a TRAINER.\l"
+	.string "specifically to you as a Trainer.\l"
 	.string "Together with the OT name, the ID No.\l"
 	.string "is used to precisely identify the\l"
-	.string "Original TRAINER.\l"
+	.string "Original Trainer.\l"
 	.string "The ID No. does not change even if the\l"
 	.string "Pokémon is traded.$"
 
 Help_Text_DefineMoney2::
 	.string "Whenever you win a battle against a\n"
-	.string "TRAINER, you are given prize money.\l"
+	.string "Trainer, you are given prize money.\l"
 	.string "Save up your prize money so you can\l"
-	.string "enjoy shopping at Pokémon MARTS!$"
+	.string "enjoy shopping at Pokémon Marts!$"
 
 Help_Text_DefineBadges2::
 	.string "This indicates the number of Pokémon\n"
 	.string "LEAGUE BADGES that you have won.\l"
-	.string "Earn BADGES by defeating GYM LEADERS\l"
+	.string "Earn BADGES by defeating Gym Leaders\l"
 	.string "in various cities and towns.$"
 
 Help_Text_TheHelpSystem::
@@ -1549,7 +1549,7 @@ Help_Text_DescGameFundamentals1::
 	.string "Visit every city and town, travel every\n"
 	.string "road, explore every cave, and face\l"
 	.string "every challenge as you strive to\l"
-	.string "become the greatest TRAINER of\l"
+	.string "become the greatest Trainer of\l"
 	.string "Pokémon!$"
 
 Help_Text_DescGameFundamentals2::
@@ -1571,7 +1571,7 @@ Help_Text_DescWhatArePokemon::
 	.string "them all over the world…in tall\l"
 	.string "grass, caves, the sea, and more.\l"
 	.string "They appear to grow obedient to the\l"
-	.string "TRAINERS that caught them.$"
+	.string "Trainers that caught them.$"
 
 Help_Text_UsingTypeMatchupList::
 	.string "Using the Type Matchup List$"

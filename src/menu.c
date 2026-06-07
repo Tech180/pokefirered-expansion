@@ -76,7 +76,7 @@ static u8 MultichoiceGrid_MoveCursor(s8 deltaX, s8 deltaY);
 static void TaskFreeBufAfterCopyingTileDataToVram(u8 taskId);
 static u16 CopyDecompressedTileDataToVram(u8 bgId, const void *src, u16 size, u16 offset, u8 mode);
 
-static const u8 sText_YesNo[] = _("YES\nNO");
+static const u8 sText_YesNo[] = _("Yes\nNo");
 
 static const u16 sUnusedWindow_Gfx[] = INCBIN_U16("graphics/text_window/unused.4bpp");
 

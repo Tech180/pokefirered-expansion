@@ -41,6 +41,7 @@
 #include "constants/new_shop.h"
 #include "quest_log.h"
 #include "quest_menu.h"
+#include "quest_menu_discovery.h"
 #include "random.h"
 #include "rtc.h"
 #include "script_menu.h"
@@ -3220,6 +3221,9 @@ bool8 ScrCmd_questmenu(struct ScriptContext *ctx)
             break;
         case QUEST_MENU_CHECK_SUBQUEST_COMPLETE:
             gSpecialVar_Result = QuestMenu_IsSubquestCompleted(questId);
+            break;
+        case QUEST_MENU_UNLOCK_DISCOVERY:
+            UnlockQuestDiscovery(questId);
             break;
     }
     return FALSE;

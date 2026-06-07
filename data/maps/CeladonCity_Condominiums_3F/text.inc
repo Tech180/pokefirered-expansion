@@ -8,9 +8,9 @@ CeladonCity_Condominiums_3F_Text_ImTheGraphicArtist::
 
 CeladonCity_Condominiums_3F_Text_IWroteTheStory::
     .string "I wrote the story!\n"
-    .string "Isn't ERIKA cute?\p"
-    .string "I like MISTY a lot, too!\n"
-    .string "Oh, and SABRINA, I like her!$"
+    .string "Isn't Erika cute?\p"
+    .string "I like Misty a lot, too!\n"
+    .string "Oh, and Sabrina, I like her!$"
 
 CeladonCity_Condominiums_3F_Text_ImGameDesignerShowMeFinishedPokedex::
     .string "Is that right?\p"

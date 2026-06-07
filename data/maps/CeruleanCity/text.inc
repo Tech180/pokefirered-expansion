@@ -76,7 +76,7 @@ CeruleanCity_Text_MakeRoomForThisCantRun::
     .string "I can't run until I give it to you!$"
 
 CeruleanCity_Text_TrainerLifeIsToughIsntIt::
-    .string "You're a TRAINER, too?\p"
+    .string "You're a Trainer, too?\p"
     .string "Collecting, battling…\n"
     .string "It's a tough life, isn't it?$"
 
@@ -128,7 +128,7 @@ CeruleanCity_Text_HardToControlMonsObedience::
     .string "No! That's wrong!\n"
     .string "It's so hard to control Pokémon!\p"
     .string "Your Pokémon's obedience depends\n"
-    .string "on your abilities as a TRAINER.$"
+    .string "on your abilities as a Trainer.$"
 
 CeruleanCity_Text_SlowbroTookSnooze::
     .string "SLOWBRO took a snooze…$"
@@ -151,10 +151,10 @@ CeruleanCity_Text_ThisIsCeruleanCave::
     .string "This is Cerulean Cave.\p"
     .string "Horribly strong Pokémon live inside\n"
     .string "there.\p"
-    .string "It takes a very special TRAINER to\n"
+    .string "It takes a very special Trainer to\n"
     .string "be allowed inside there.\p"
     .string "You'd have to be strong enough to\n"
-    .string "become the Pokémon LEAGUE\l"
+    .string "become the Pokémon League\l"
     .string "CHAMPION for starters.\p"
     .string "And, you would have to have\n"
     .string "made a great achievement.$"
@@ -165,7 +165,7 @@ CeruleanCity_Text_CitySign::
     .string "It$"
 
 CeruleanCity_Text_TrainerTipsHeldItems::
-    .string "TRAINER TIPS\p"
+    .string "Trainer Tips\p"
     .string "A Pokémon can be made to hold\n"
     .string "an item.\p"
     .string "Some items can even be used by\n"
@@ -173,10 +173,10 @@ CeruleanCity_Text_TrainerTipsHeldItems::
 
 CeruleanCity_Text_BikeShopSign::
     .string "Grass and caves handled easily!\n"
-    .string "BIKE SHOP$"
+    .string "Bike Shop$"
 
 CeruleanCity_Text_GymSign::
-    .string "Cerulean City Pokémon GYM\n"
-    .string "LEADER: MISTY\l"
+    .string "Cerulean City Pokémon Gym\n"
+    .string "LEADER: Misty\l"
     .string "The Tomboyish Mermaid!$"
 

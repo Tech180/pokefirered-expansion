@@ -4,12 +4,12 @@ VSSeeker_Text_BatteryNotChargedNeedXSteps::
 	.string "charge the battery: {STR_VAR_1}{PAUSE_UNTIL_PRESS}$"
 
 VSSeeker_Text_NoTrainersWithinRange::
-	.string "There are no TRAINERS within range\n"
+	.string "There are no Trainers within range\n"
 	.string "who can battle…\p"
 	.string "The VS Seeker was turned off.{PAUSE_UNTIL_PRESS}$"
 
 VSSeeker_Text_TrainersNotReady::
-	.string "The other TRAINERS don't appear\n"
+	.string "The other Trainers don't appear\n"
 	.string "to be ready for battle.\p"
 	.string "Let's wait till later.{PAUSE_UNTIL_PRESS}$"
 
@@ -27,7 +27,7 @@ Route3_Text_JaniceRematchIntro::
 	.string "You keep looking at me, don't you?$"
 
 Route3_Text_GregRematchIntro::
-	.string "You're a TRAINER, aren't you?\n"
+	.string "You're a Trainer, aren't you?\n"
 	.string "Let's get with it right away!$"
 
 Route3_Text_SallyRematchIntro::
@@ -179,7 +179,7 @@ Route10_Text_HermanRematchIntro::
 	.string "Did I show you my Pokémon?$"
 
 Route10_Text_HeidiRematchIntro::
-	.string "I went out to a Pokémon GYM again.\p"
+	.string "I went out to a Pokémon Gym again.\p"
 	.string "…But I lost as usual.$"
 
 Route10_Text_TrentRematchIntro::
@@ -209,7 +209,7 @@ Route11_Text_BraxtonRematchIntro::
 	.string "I'm still laying down some cables!$"
 
 Route11_Text_DillonRematchIntro::
-	.string "I became a TRAINER a while ago.\n"
+	.string "I became a Trainer a while ago.\n"
 	.string "But, I think I can win.$"
 
 Route11_Text_DirkRematchIntro::
@@ -281,7 +281,7 @@ Route13_Text_SebastianRematchIntro::
 	.string "My bird Pokémon remember you!$"
 
 Route13_Text_SusieRematchIntro::
-	.string "I want to be the best TRAINER \n"
+	.string "I want to be the best Trainer \n"
 	.string "while I'm a kid!$"
 
 Route13_Text_ValerieRematchIntro::
@@ -383,7 +383,7 @@ Route15_Text_EdwinRematchIntro::
 
 Route15_Text_ChesterRematchIntro::
 	.string "Hmm? My birds are shivering!\n"
-	.string "Wait, aren't you that TRAINER…$"
+	.string "Wait, aren't you that Trainer…$"
 
 Route15_Text_GraceRematchIntro::
 	.string "Oh, you're a little cutie!\n"
@@ -550,7 +550,7 @@ Route19_Text_ConnieRematchIntro::
 
 Route19_Text_LiaRematchIntro::
 	.string "LIA: You know my brother just\n"
-	.string "became a TRAINER, right?\p"
+	.string "became a Trainer, right?\p"
 	.string "I want to make him better, so I\n"
 	.string "need your help again.$"
 

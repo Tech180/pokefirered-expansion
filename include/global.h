@@ -668,7 +668,9 @@ struct SaveBlock2
     u8 optionsEnableQuests:1; // ENABLE_QUESTS_[OFF/ON]
 
     u8 optionsVanillaPlusMode:1; // GAME_MODE_[VANILLA/VANILLA_PLUS]
-    u8 unused1:7;
+    u8 optionsSkipTutorials:1;   // TUTORIALS_[ON/OFF] — 0 = show, 1 = skip
+    u8 optionsSeasons:1;         // SEASONS_[OFF/ON] — 0 = off, 1 = on
+    u8 unused1:5;
 
 #if FREE_POKEMON_JUMP == FALSE
     struct PokemonJumpRecords pokeJump;

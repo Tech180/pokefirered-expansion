@@ -11,7 +11,7 @@ static void Task_DisplayHPRestoredMessage(u8 taskId);
 static void Task_FinishSoftboiled(u8 taskId);
 static void CantUseSoftboiledOnMon(u8 taskId);
 
-static const u8 sText_CantBeUsedOnPkmn[] = _("This can't be used on\nthat POKéMON.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_CantBeUsedOnPkmn[] = _("This can't be used on\nthat Pokémon.{PAUSE_UNTIL_PRESS}");
 
 bool32 FieldMove_SetUpSoftBoiled(void)
 {

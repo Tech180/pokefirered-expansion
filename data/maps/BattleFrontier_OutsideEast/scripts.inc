@@ -234,7 +234,7 @@ BattleFrontier_OutsideEast_EventScript_Camper::
 BattleFrontier_OutsideEast_Text_BattleTowerSign:
 	.string "This is the BATTLE TOWER!\n"
 	.string "Keep the win streak as the toughest\l"
-	.string "TRAINER!$"
+	.string "Trainer!$"
 
 BattleFrontier_OutsideEast_Text_BattlePalaceSign:
 	.string "This is the BATTLE PALACE!\n"
@@ -293,7 +293,7 @@ BattleFrontier_OutsideEast_Text_DidScottBringYouHere:
 	.string "Did SCOTT bring you here, too?\n"
 	.string "What is it with that guy?\p"
 	.string "It sounds like he really does know\n"
-	.string "how to spot talented TRAINERS, but…\p"
+	.string "how to spot talented Trainers, but…\p"
 	.string "I've never seen him battling in person\n"
 	.string "ever.$"
 
@@ -317,7 +317,7 @@ BattleFrontier_OutsideEast_Text_PeopleCallMeBusybody:
 
 BattleFrontier_OutsideEast_Text_OnceBeatGymLeader:
 	.string "I may not look that impressive now,\n"
-	.string "but I once beat a GYM LEADER.\p"
+	.string "but I once beat a Gym Leader.\p"
 	.string "Who knows, maybe I should give it\n"
 	.string "another shot at glory.$"
 
@@ -355,7 +355,7 @@ BattleFrontier_OutsideEast_Text_SometimesImportantOldManInThere:
 BattleFrontier_OutsideEast_Text_LegendOfBattlePyramid:
 	.string "Do you know it?\n"
 	.string "The legend of the BATTLE PYRAMID?\p"
-	.string "When there comes a confident TRAINER\n"
+	.string "When there comes a confident Trainer\n"
 	.string "reaching for the golden pinnacle,\l"
 	.string "there shall appear a man among men.\p"
 	.string "Don't know that legend?\n"
@@ -374,7 +374,7 @@ BattleFrontier_OutsideEast_Text_GotWipedOut:
 
 BattleFrontier_OutsideEast_Text_ToughTrainerInBattleTower:
 	.string "This guy ran into a horribly tough\n"
-	.string "TRAINER while he was on the BATTLE\l"
+	.string "Trainer while he was on the BATTLE\l"
 	.string "TOWER challenge.\p"
 	.string "Now look at him…\p"
 	.string "You need to be cautious if you ever\n"
@@ -409,7 +409,7 @@ BattleFrontier_OutsideEast_Text_PowerOfOurLoveWillOvercome:
 
 BattleFrontier_OutsideEast_Text_FrontierNotExclusivelyForToughTrainers:
 	.string "The Battle Frontier isn't exclusively\n"
-	.string "for tough TRAINERS.\p"
+	.string "for tough Trainers.\p"
 	.string "Many people with special abilities\n"
 	.string "have been invited, it seems.\p"
 	.string "That man SCOTT…\p"

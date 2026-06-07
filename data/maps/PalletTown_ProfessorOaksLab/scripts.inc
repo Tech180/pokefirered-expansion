@@ -656,6 +656,7 @@ PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene::
 	setflag FLAG_SYS_POKEDEX_GET
 	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_THE_ULTIMATE_COLLECTOR
 	questmenu QUEST_MENU_SET_ACTIVE, QUEST_THE_ULTIMATE_COLLECTOR
+	questmenu QUEST_MENU_SET_REWARD, QUEST_THE_JOURNEY_BEGINS
 	special SetUnlockedPokedexFlags
 	setvar VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 1
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese

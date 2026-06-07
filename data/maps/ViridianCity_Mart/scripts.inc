@@ -29,6 +29,8 @@ ViridianCity_Mart_EventScript_ParcelScene::
 	msgbox ViridianCity_Mart_Text_TakeThisToProfOak
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 1
 	giveitem_msg ViridianCity_Mart_Text_ReceivedOaksParcelFromClerk, ITEM_OAKS_PARCEL, 1, MUS_OBTAIN_KEY_ITEM
+	questmenu QUEST_MENU_UNLOCK_QUEST, QUEST_THE_JOURNEY_BEGINS
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_THE_JOURNEY_BEGINS
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 5
 	releaseall
 	end

@@ -71,6 +71,7 @@
 #include "load_save.h"
 #include "battle_partner.h"
 #include "quest_menu.h"
+#include "quest_menu_discovery.h"
 
 enum FollowerNPCCreateDebugMenu
 {
@@ -101,6 +102,7 @@ enum FlagsVarsDebugMenu
     DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_TRAINER_SEE,
     DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_CATCHING,
     DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_BAG_USE,
+    DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_VANILLA_PLUS,
 };
 
 enum DebugBattleType
@@ -314,6 +316,7 @@ static void DebugAction_FlagsVars_EncounterOnOff(u8 taskId);
 static void DebugAction_FlagsVars_TrainerSeeOnOff(u8 taskId);
 static void DebugAction_FlagsVars_BagUseOnOff(u8 taskId);
 static void DebugAction_FlagsVars_CatchingOnOff(u8 taskId);
+static void DebugAction_FlagsVars_ToggleVanillaPlus(u8 taskId);
 static void DebugAction_FlagsVars_RunningShoes(u8 taskId);
 
 static void DebugAction_Give_Item(u8 taskId);
@@ -345,6 +348,9 @@ static void DebugAction_Quests_FailAll(u8 taskId);
 static void DebugAction_Quests_LockAll(u8 taskId);
 static void DebugAction_Quests_ClaimAllRewards(u8 taskId);
 static void DebugAction_Quests_Editor(u8 taskId);
+static void DebugAction_Quests_ToggleVanillaPlus(u8 taskId);
+static void DebugAction_Quests_SetAllDiscoveryFlags(u8 taskId);
+static void DebugAction_Quests_ToggleGameClear(u8 taskId);
 
 static void DebugAction_Sound_SE(u8 taskId);
 static void DebugAction_Sound_SE_SelectId(u8 taskId);
@@ -397,6 +403,7 @@ extern const u8 Debug_CheckROMSpace[];
 extern const u8 Debug_BoxFilledMessage[];
 extern const u8 Debug_ShowExpansionVersion[];
 extern const u8 Debug_EventScript_EWRAMCounters[];
+extern const u8 Debug_EventScript_QuestStatus[];
 extern const u8 Debug_Follower_NPC_Event_Script[];
 extern const u8 Debug_Follower_NPC_Not_Enabled[];
 extern const u8 Debug_EventScript_Steven_Multi[];
@@ -643,6 +650,10 @@ static const struct DebugMenuOption sDebugMenu_Actions_Quests[] =
     { COMPOUND_STRING("Lock All Quests"),     DebugAction_Quests_LockAll },
     { COMPOUND_STRING("Claim All Rewards"),   DebugAction_Quests_ClaimAllRewards },
     { COMPOUND_STRING("Quest Editor"),        DebugAction_Quests_Editor },
+    { COMPOUND_STRING("Toggle Vanilla+"),     DebugAction_Quests_ToggleVanillaPlus },
+    { COMPOUND_STRING("Toggle Game Clear"),   DebugAction_Quests_ToggleGameClear },
+    { COMPOUND_STRING("Set All Discovery"),   DebugAction_Quests_SetAllDiscoveryFlags },
+    { COMPOUND_STRING("Quest Status…"),       DebugAction_ExecuteScript, Debug_EventScript_QuestStatus },
     { NULL }
 };
 
@@ -715,6 +726,7 @@ static const struct DebugMenuOption sDebugMenu_Actions_Flags[] =
     [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_TRAINER_SEE]   = { COMPOUND_STRING("Toggle {STR_VAR_1}Trainer See OFF"), DebugAction_ToggleFlag, DebugAction_FlagsVars_TrainerSeeOnOff },
     [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_CATCHING]      = { COMPOUND_STRING("Toggle {STR_VAR_1}Catching OFF"),    DebugAction_ToggleFlag, DebugAction_FlagsVars_CatchingOnOff },
     [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_BAG_USE]       = { COMPOUND_STRING("Toggle {STR_VAR_1}Bag Use OFF"),     DebugAction_ToggleFlag, DebugAction_FlagsVars_BagUseOnOff },
+    [DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_VANILLA_PLUS]  = { COMPOUND_STRING("Toggle {STR_VAR_1}Vanilla+ Mode"),  DebugAction_ToggleFlag, DebugAction_FlagsVars_ToggleVanillaPlus },
     { NULL }
 };
 
@@ -1231,6 +1243,9 @@ static u32 Debug_CheckToggleFlags(u8 id)
         result = VarGet(B_VAR_NO_BAG_USE);
         if (result >= NO_BAG_INVALID_VALUE)
             result = NO_BAG_INVALID_VALUE;
+        break;
+    case DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_VANILLA_PLUS:
+        result = gSaveBlock2Ptr->optionsVanillaPlusMode;
         break;
     default:
         result = 0xFF;
@@ -2627,6 +2642,16 @@ static void DebugAction_FlagsVars_CatchingOnOff(u8 taskId)
         PlaySE(SE_PC_LOGIN);
     FlagToggle(B_FLAG_NO_CATCHING);
 #endif
+}
+
+static void DebugAction_FlagsVars_ToggleVanillaPlus(u8 taskId)
+{
+    gSaveBlock2Ptr->optionsVanillaPlusMode ^= 1;
+    if (gSaveBlock2Ptr->optionsVanillaPlusMode)
+        PlaySE(SE_PC_LOGIN);
+    else
+        PlaySE(SE_PC_OFF);
+    Debug_DestroyMenu_Full_Script(taskId, Debug_FlagsNotSetBattleConfigMessage);
 }
 
 // *******************************
@@ -4856,8 +4881,11 @@ extern const struct SideQuest sSideQuests[QUEST_COUNT];
 
 static void DebugAction_Quests_UnlockAll(u8 taskId) {
     u8 i;
-    for (i = 0; i < QUEST_COUNT; i++)
-        QuestMenu_GetSetQuestState(i, FLAG_SET_UNLOCKED);
+    for (i = 0; i < QUEST_COUNT; i++) {
+        if (sSideQuests[i].name != NULL) {
+            QuestMenu_GetSetQuestState(i, FLAG_SET_UNLOCKED);
+        }
+    }
     PlaySE(SE_SELECT);
     ScriptContext_Enable();
     Debug_DestroyMenu_Full(taskId);
@@ -4866,10 +4894,12 @@ static void DebugAction_Quests_UnlockAll(u8 taskId) {
 static void DebugAction_Quests_CompleteAll(u8 taskId) {
     u8 i;
     for (i = 0; i < QUEST_COUNT; i++) {
-        if (sSideQuests[i].rewardItem != ITEM_NONE) {
-            QuestMenu_GetSetQuestState(i, FLAG_SET_REWARD);
-        } else {
-            QuestMenu_GetSetQuestState(i, FLAG_SET_COMPLETED);
+        if (sSideQuests[i].name != NULL) {
+            if (sSideQuests[i].rewardItem != ITEM_NONE) {
+                QuestMenu_GetSetQuestState(i, FLAG_SET_REWARD);
+            } else {
+                QuestMenu_GetSetQuestState(i, FLAG_SET_COMPLETED);
+            }
         }
     }
     for (i = 0; i < SUB_FLAGS_COUNT; i++) {
@@ -4899,7 +4929,7 @@ static void DebugAction_Quests_LockAll(u8 taskId) {
 static void DebugAction_Quests_FailAll(u8 taskId) {
     u8 i;
     for (i = 0; i < QUEST_COUNT; i++) {
-        if (sSideQuests[i].faileddesc != NULL) {
+        if (sSideQuests[i].name != NULL && sSideQuests[i].faileddesc != NULL) {
             QuestMenu_SetQuestState(i, 4); // 4 = Failed state
         }
     }
@@ -4911,16 +4941,110 @@ static void DebugAction_Quests_FailAll(u8 taskId) {
 static void DebugAction_Quests_ClaimAllRewards(u8 taskId) {
     u8 i;
     for (i = 0; i < QUEST_COUNT; i++) {
-        u16 itemId = sSideQuests[i].rewardItem;
-        if (itemId != ITEM_NONE && !QuestMenu_GetSetQuestState(i, FLAG_GET_COMPLETED)) {
-            if (!QuestMenu_GetSetQuestState(i, FLAG_GET_REWARD)) {
-                QuestMenu_GetSetQuestState(i, FLAG_SET_REWARD);
+        if (sSideQuests[i].name != NULL) {
+            u16 itemId = sSideQuests[i].rewardItem;
+            if (itemId != ITEM_NONE && !QuestMenu_GetSetQuestState(i, FLAG_GET_COMPLETED)) {
+                if (!QuestMenu_GetSetQuestState(i, FLAG_GET_REWARD)) {
+                    QuestMenu_GetSetQuestState(i, FLAG_SET_REWARD);
+                }
             }
         }
     }
     PlaySE(SE_SELECT);
     ScriptContext_Enable();
     Debug_DestroyMenu_Full(taskId);
+}
+
+static void DebugAction_Quests_ToggleVanillaPlus(u8 taskId) {
+    ToggleVanillaPlusMode();
+    PlaySE(SE_SELECT);
+    ScriptContext_Enable();
+    Debug_DestroyMenu_Full(taskId);
+}
+
+static void DebugAction_Quests_ToggleGameClear(u8 taskId) {
+    if (FlagGet(FLAG_SYS_GAME_CLEAR)) {
+        FlagClear(FLAG_SYS_GAME_CLEAR);
+    } else {
+        FlagSet(FLAG_SYS_GAME_CLEAR);
+    }
+    PlaySE(SE_SELECT);
+    ScriptContext_Enable();
+    Debug_DestroyMenu_Full(taskId);
+}
+
+static void DebugAction_Quests_SetAllDiscoveryFlags(u8 taskId) {
+    u8 i;
+    for (i = 0; i < QUEST_COUNT; i++) {
+        if (sSideQuests[i].name != NULL && sSideQuests[i].discoveryFlag != 0) {
+            FlagSet(sSideQuests[i].discoveryFlag);
+        }
+    }
+    PlaySE(SE_SELECT);
+    ScriptContext_Enable();
+    Debug_DestroyMenu_Full(taskId);
+}
+
+void CheckQuestCounters(struct ScriptContext *ctx) {
+    extern u32 CountFoundHiddenItems(void);
+    u32 unlocked = 0;
+    u32 completed = 0;
+    u32 active = 0;
+    u32 discovered = 0;
+    u32 total = 0;
+    u32 i;
+    u32 hiddenItemsFound = 0;
+
+    for (i = 0; i < QUEST_COUNT; i++) {
+        if (sSideQuests[i].name != NULL) {
+            total++;
+            if (QuestMenu_GetSetQuestState(i, FLAG_GET_UNLOCKED)) {
+                unlocked++;
+            }
+            if (QuestMenu_GetSetQuestState(i, FLAG_GET_ACTIVE)) {
+                active++;
+            }
+            if (QuestMenu_GetSetQuestState(i, FLAG_GET_COMPLETED)) {
+                completed++;
+            }
+            if (sSideQuests[i].discoveryFlag != 0 && FlagGet(sSideQuests[i].discoveryFlag)) {
+                discovered++;
+            }
+        }
+    }
+
+    hiddenItemsFound = CountFoundHiddenItems();
+
+    ConvertIntToDecimalStringN(gStringVar1, unlocked, STR_CONV_MODE_LEFT_ALIGN, 3);
+    StringAppend(gStringVar1, COMPOUND_STRING("/"));
+    ConvertIntToDecimalStringN(gStringVar3, total, STR_CONV_MODE_LEFT_ALIGN, 3);
+    StringAppend(gStringVar1, gStringVar3);
+    StringAppend(gStringVar1, COMPOUND_STRING(" Unlocked, "));
+    ConvertIntToDecimalStringN(gStringVar3, completed, STR_CONV_MODE_LEFT_ALIGN, 3);
+    StringAppend(gStringVar1, gStringVar3);
+    StringAppend(gStringVar1, COMPOUND_STRING(" Comp"));
+
+    ConvertIntToDecimalStringN(gStringVar2, active, STR_CONV_MODE_LEFT_ALIGN, 3);
+    StringAppend(gStringVar2, COMPOUND_STRING(" Active, "));
+    ConvertIntToDecimalStringN(gStringVar3, discovered, STR_CONV_MODE_LEFT_ALIGN, 3);
+    StringAppend(gStringVar2, gStringVar3);
+    StringAppend(gStringVar2, COMPOUND_STRING(" Disc"));
+
+    if (GetVanillaPlusMode()) {
+        StringCopy(gStringVar3, COMPOUND_STRING("Vanilla+: On, "));
+    } else {
+        StringCopy(gStringVar3, COMPOUND_STRING("Vanilla+: Off, "));
+    }
+
+    if (FlagGet(FLAG_SYS_GAME_CLEAR)) {
+        StringAppend(gStringVar3, COMPOUND_STRING("HOF: Clear\n"));
+    } else {
+        StringAppend(gStringVar3, COMPOUND_STRING("HOF: Not Clear\n"));
+    }
+
+    StringAppend(gStringVar3, COMPOUND_STRING("Items: "));
+    ConvertIntToDecimalStringN(gStringVar4, hiddenItemsFound, STR_CONV_MODE_LEFT_ALIGN, 3);
+    StringAppend(gStringVar3, gStringVar4);
 }
 
 #define tWindowId     data[1]

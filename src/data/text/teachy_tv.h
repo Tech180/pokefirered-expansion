@@ -1,7 +1,7 @@
 static const u8 sTeachyTvString_TeachBattle[] = _("Teach me how to battle.");
 static const u8 sTeachyTvString_StatusProblems[] = _("What are status problems?");
 static const u8 sTeachyTvString_TypeMatchups[] = _("What are type matchups?");
-static const u8 sTeachyTvString_CatchPkmn[] = _("I want to catch POKéMON.");
+static const u8 sTeachyTvString_CatchPkmn[] = _("I want to catch Pokémon.");
 
 static const u8 sTeachyTvText_PokedudeSaysHello[] = _(
     "Hey, all you TRAINERS out there!\n"

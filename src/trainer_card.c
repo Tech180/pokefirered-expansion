@@ -164,14 +164,14 @@ static const u8 sText_TrainerCardName[] = _("NAME: ");
 static const u8 sText_TrainerCardIDNo[] = _("IDNo.");
 static const u8 sText_TrainerCardYen[] = _("¥");
 static const u8 sText_TrainerCardNull[] = _("");
-static const u8 sText_Var1sTrainerCard[] = _("'s TRAINER CARD");
+static const u8 sText_Var1sTrainerCard[] = _("'s Trainer CARD");
 static const u8 sText_HallOfFameDebut[] = _("HALL OF FAME DEBUT  ");
 static const u8 sText_LinkBattles[] = _("LINK BATTLES");
 static const u8 sText_LinkCableBattles[] = _("LINK CABLE BATTLES");
 static const u8 sText_WinLossRatio[] = _("W:{CLEAR_TO 0x30}L:");
-static const u8 sText_PokemonTrades[] = _("POKéMON TRADES");
+static const u8 sText_PokemonTrades[] = _("Pokémon TRADES");
 static const u8 sText_UnionRoomTradesBattles[] = _("UNION TRADES & BATTLES");
-static const u8 sText_WaitingTrainerFinishReading[] = _("Waiting for the other TRAINER to\nfinish reading your TRAINER CARD.");
+static const u8 sText_WaitingTrainerFinishReading[] = _("Waiting for the other Trainer to\nfinish reading your Trainer CARD.");
 
 static const u32 sTrainerCardStickers_Gfx[]           = INCBIN_U32("graphics/trainer_card/stickers.4bpp.smol");
 static const u32 sHoennTrainerCardFront_Tilemap[]     = INCBIN_U32("graphics/trainer_card/rse/front.bin.smolTM");

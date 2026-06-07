@@ -89,5 +89,5 @@ FiveIsland_ResortGorgeous_Text_SelphyThanksYouMayGoNow::
     .string "You may go now.$"
 
 FiveIsland_ResortGorgeous_Text_SelphysHouse::
-    .string "SELPHY'S HOUSE$"
+    .string "Selphy's House$"
 

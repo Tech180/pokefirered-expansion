@@ -22,7 +22,7 @@ CeladonCity_Condominiums_RoofRoom_Text_ReadWhichHeading::
 
 CeladonCity_Condominiums_RoofRoom_Text_ExplainWirelessClub::
     .string "The Pokémon WIRELESS CLUB is\n"
-    .string "upstairs at any Pokémon CENTER.\p"
+    .string "upstairs at any Pokémon Center.\p"
     .string "Visit one to link up with friend(s)\n"
     .string "using your Wireless Adapter.$"
 
@@ -40,7 +40,7 @@ CeladonCity_Condominiums_RoofRoom_Text_ExplainUnionRoom::
     .string "It is the left counter at the\n"
     .string "Pokémon WIRELESS CLUB.\p"
     .string "Go to the UNION ROOM and enjoy\n"
-    .string "meeting other TRAINERS.$"
+    .string "meeting other Trainers.$"
 
 CeladonCity_Condominiums_RoofRoom_Text_PamphletOnTMs::
     .string "It's a pamphlet on TMs.\p"

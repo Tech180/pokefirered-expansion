@@ -36,8 +36,8 @@ static void UpdateTrainerFansAfterLinkBattle(struct TrainerFanClub *);
 static bool8 DidPlayerGetFirstFans(struct TrainerFanClub * );
 static void SetPlayerGotFirstFans(struct TrainerFanClub *);
 
-static const u8 sText_LtSurge[] = _("LT. SURGE");
-static const u8 sText_Koga[] = _("KOGA");
+static const u8 sText_LtSurge[] = _("Lt. Surge");
+static const u8 sText_Koga[] = _("Koga");
 
 void ResetTrainerFanClub(void)
 {

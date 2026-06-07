@@ -1,7 +1,7 @@
 SixIsland_Mart_Text_AgathaOldestEverEliteFourMember::
     .string "Play with Pokémon lots and live\n"
     .string "a long life!\p"
-    .string "Take AGATHA, for example.\p"
+    .string "Take Agatha, for example.\p"
     .string "She set a record for being the\n"
     .string "oldest-ever ELITE FOUR member.\p"
     .string "She spurs me to do bigger things.$"

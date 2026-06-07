@@ -2,7 +2,7 @@ CinnabarIsland_Text_DoorIsLocked::
     .string "The door is locked…$"
 
 CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab::
-    .string "CINNABAR GYM's BLAINE is quite the\n"
+    .string "Cinnabar Gym's Blaine is quite the\n"
     .string "odd fellow.\p"
     .string "He's lived on the island since way\n"
     .string "before the LAB was built.$"
@@ -11,7 +11,7 @@ CinnabarIsland_Text_ScientistsExperimentInMansion::
     .string "Scientists conduct experiments \n"
     .string "in the burned-out building.\p"
     .string "You know, the one they call the\n"
-    .string "Pokémon MANSION.$"
+    .string "Pokémon Mansion.$"
 
 CinnabarIsland_Text_IslandSign::
     .string "Cinnabar Island\n"
@@ -21,8 +21,8 @@ CinnabarIsland_Text_PokemonLab::
     .string "Pokémon LAB$"
 
 CinnabarIsland_Text_GymSign::
-    .string "Cinnabar Island Pokémon GYM\n"
-    .string "LEADER: BLAINE\l"
+    .string "Cinnabar Island Pokémon Gym\n"
+    .string "LEADER: Blaine\l"
     .string "The Hotheaded Quiz Master!$"
 
 CinnabarIsland_Text_HeyIfItIsntPlayer::

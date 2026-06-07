@@ -5,11 +5,11 @@ ViridianCity_Text_CanCarryMonsAnywhere::
     .string "use Pokémon anytime, anywhere.$"
 
 ViridianCity_Text_GymClosedWonderWhoLeaderIs::
-    .string "This Pokémon GYM is always closed.\p"
+    .string "This Pokémon Gym is always closed.\p"
     .string "I wonder who the LEADER is?$"
 
 ViridianCity_Text_ViridiansGymLeaderReturned::
-    .string "VIRIDIAN GYM's LEADER returned!$"
+    .string "Viridian Gym's LEADER returned!$"
 
 ViridianCity_Text_WantToKnowAboutCaterpillarMons::
     .string "You want to know about the two\n"
@@ -67,7 +67,7 @@ ViridianCity_Text_WatchThatToLearnBasics::
     .string "If there's something you don't\n"
     .string "understand, watch that.\p"
     .string "It will teach you about the basics\n"
-    .string "of being a Pokémon TRAINER.$"
+    .string "of being a Pokémon Trainer.$"
 
 ViridianCity_Text_WeakenMonsFirstToCatch::
     .string "Well, now, I've had my coffee, and\n"
@@ -104,22 +104,22 @@ ViridianCity_Text_CitySign::
     .string "The Eternally Green Paradise$"
 
 ViridianCity_Text_CatchMonsForEasierBattles::
-    .string "TRAINER TIPS\p"
+    .string "Trainer Tips\p"
     .string "Catch Pokémon and expand your\n"
     .string "collection.\p"
     .string "The more you have, the easier it\n"
     .string "is to battle.$"
 
 ViridianCity_Text_MovesLimitedByPP::
-    .string "TRAINER TIPS\p"
+    .string "Trainer Tips\p"
     .string "The battle moves of Pokémon are\n"
     .string "limited by their POWER POINTS, PP.\p"
     .string "To replenish PP, rest your tired\n"
-    .string "Pokémon at a Pokémon CENTER.$"
+    .string "Pokémon at a Pokémon Center.$"
 
 ViridianCity_Text_GymSign::
-    .string "Viridian City Pokémon GYM$"
+    .string "Viridian City Pokémon Gym$"
 
 ViridianCity_Text_GymDoorsAreLocked::
-    .string "VIRIDIAN GYM's doors are locked…$"
+    .string "Viridian Gym's doors are locked…$"
 
